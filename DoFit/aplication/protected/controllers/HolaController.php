@@ -13,7 +13,7 @@ class HolController extends Controller
      */
     public function actionHol(){
         //$mensaje = "primer mensaje";
-        $this->render('hol');
+        $this->render('hola');
     }
 }
 ?>
