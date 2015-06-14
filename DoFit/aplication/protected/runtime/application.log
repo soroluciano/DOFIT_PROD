@@ -819,3 +819,19 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/admin
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
 >>>>>>> 6ba62be06375680b5bc10083e0b5ceafe9430782
 ---
+2015/06/14 19:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "config/main.php".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('config/main.php')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/config/main.php
+---
+2015/06/14 19:59:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "main.php".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('main.php')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/main.php
+---
