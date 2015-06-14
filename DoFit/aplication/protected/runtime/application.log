@@ -411,6 +411,7 @@ Stack trace:
 REQUEST_URI=/DoFit/aplication/css/gridViewStyle/images/gr-delete.png
 HTTP_REFERER=http://localhost/DoFit/aplication/site/hol
 ---
+<<<<<<< HEAD
 2015/06/09 05:14:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('view')
@@ -451,4 +452,370 @@ Stack trace:
 #2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/r=gii
+=======
+2015/06/13 06:34:57 [error] [php] include(Usuario.php): failed to open stream: No such file or directory (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php(20): spl_autoload_call()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(94): LoginForm->validate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/login
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php (20)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (94)
+2015/06/13 07:02:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (144)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/13 07:02:45 [error] [exception.CDbException] exception 'CDbException' with message 'The table "df_user" for active record class "User" cannot be found in the database.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(144): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('hol')
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/hol')
+#18 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/06/13 07:05:37 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php:2798)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\login.php(51): link()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(98): SiteController->render()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/login
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\login.php (51)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (98)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/13 07:05:43 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php:2798)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\login.php(51): link()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(98): SiteController->render()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/login
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\login.php (51)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (98)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/13 07:14:15 [error] [exception.CException] exception 'CException' with message 'Usuario and its behaviors do not have a method or closure named "disableDefaultScope".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(227): CComponent->__call('disableDefaultS...', Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php(20): CActiveRecord->__call('disableDefaultS...', Array)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php(20): Usuario->disableDefaultScope()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(94): CModel->validate()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/login
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:15:31 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.email" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php(20): CComponent->__get('email')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/login
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:16:02 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._id" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php(27): CComponent->__set('_id', '1')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/login
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:34:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (144)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/13 07:34:45 [error] [exception.CDbException] exception 'CDbException' with message 'The table "df_user" for active record class "User" cannot be found in the database.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(144): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('hol')
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/hol')
+#18 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/usuario
+---
+2015/06/13 07:36:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario/in...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/usuario/index
+---
+2015/06/13 07:41:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create.php".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('create.php')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create.php')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create.php
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:47:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aplication/usuario/create".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('aplication/usua...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:48:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aplication/usuario/create".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('aplication/usua...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:50:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (144)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/13 07:50:12 [error] [exception.CDbException] exception 'CDbException' with message 'The table "df_user" for active record class "User" cannot be found in the database.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(144): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('hol')
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/hol')
+#18 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/06/13 07:51:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario/in...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/usuario/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 07:51:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario/in...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/usuario/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 19:08:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/admin
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/index
+---
+2015/06/13 19:08:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/admin
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/index
+---
+2015/06/13 19:10:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/admin
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/13 19:33:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/admin
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/13 19:35:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/admin
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+>>>>>>> 6ba62be06375680b5bc10083e0b5ceafe9430782
 ---
