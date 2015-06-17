@@ -1,7 +1,6 @@
 <?php
 
-
-class UsuarioController extends Controller
+class FichaUsuarioController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -29,11 +28,11 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				/*'actions'=>array('create','update'),*/
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -47,7 +46,7 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Displays a particular usuario.
+	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
@@ -63,70 +62,23 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Usuario;
-        $ficha_usuario = new FichaUsuario;
-	    $localidad = new Localidad;
-	
-		
+		$model=new FichaUsuario;
+
 		// Uncomment the following line if AJAX validation is needed
-		//$this->performAjaxValidation(array($model,$ficha_usuario,$localidad,$provincia));
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad']))
+		if(isset($_POST['FichaUsuario']))
 		{
-		
-          
-			$model->attributes = $_POST['Usuario'];
-			$ficha_usuario->attributes = $_POST['FichaUsuario'];
-			$localidad->attributes = $_POST['Localidad'];
+			$model->attributes=$_POST['FichaUsuario'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id_ficha));
+		}
 
-		   $model->fhcreacion = date("d-m-y H:i:s");
-	       $model->fhultmod = date("d-m-y H:i:s");
-	       $model->cusuario = $model->email;
-		   $localidad->fhcreacion = date("d-m-y H:i:s");           
-		   $localidad->fhultmod = date("d-m-y H:i:s");
-           $localidad->cusuario = $model->email;	
-		   $ficha_usuario->fhcreacion = date("d-m-y H:i:s");           
-	       $ficha_usuario->fhultmod = date("d-m-y H:i:s");
-           $ficha_usuario->cusuario = $model->email;	
-                
-				
-		    $ficha_usuario->id_usuario = $model->id_usuario;
-		    $ficha_usuario->id_localidad = $localidad->id_localidad; 	
-		   $mail = $model->email;
-		   
-			// valido los modelos
-			$validarusuario = $model->validate();			
-		    $validarficha = $ficha_usuario->validate();
-            $validarlocalidad = $localidad->validate();
-	        
-			
-	   if($validarusuario) {		 
-			if($model->save()){
-              	 
-	      if($validarlocalidad){
-	      	    
-				if($localidad->save()){
-			     $usuario = Usuario::model()->find('email=:email',array(':email'=>$mail));
-		   	    
-				 $ficha_usuario->id_usuario = $usuario->id_usuario;
-		        $ficha_usuario->id_localidad = $localidad->id_localidad;       
-		       if($validarficha){
-				   
-			      if($ficha_usuario->save())
-			            $this->redirect(array('view','id'=>$model->id_usuario));
-		        }
-			}	
-		 }
-	  }
-	 }
-    }	 
 		$this->render('create',array(
 			'model'=>$model,
-			'ficha_usuario'=>$ficha_usuario,
-			'localidad'=>$localidad
 		));
-	
-  }
+	}
+
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -139,11 +91,11 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuario']))
+		if(isset($_POST['FichaUsuario']))
 		{
-			$model->attributes=$_POST['Usuario'];
+			$model->attributes=$_POST['FichaUsuario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_usuario));
+				$this->redirect(array('view','id'=>$model->id_ficha));
 		}
 
 		$this->render('update',array(
@@ -170,7 +122,7 @@ class UsuarioController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Usuario');
+		$dataProvider=new CActiveDataProvider('FichaUsuario');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -181,10 +133,10 @@ class UsuarioController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Usuario('search');
+		$model=new FichaUsuario('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Usuario']))
-			$model->attributes=$_GET['Usuario'];
+		if(isset($_GET['FichaUsuario']))
+			$model->attributes=$_GET['FichaUsuario'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -195,12 +147,12 @@ class UsuarioController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Usuario the loaded model
+	 * @return FichaUsuario the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Usuario::model()->findByPk($id);
+		$model=FichaUsuario::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -208,11 +160,11 @@ class UsuarioController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Usuario $model the model to be validated
+	 * @param FichaUsuario $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='usuario-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='ficha-usuario-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
