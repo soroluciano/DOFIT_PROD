@@ -145,8 +145,6 @@ class SiteController extends Controller
 
     }
 
-
-
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */

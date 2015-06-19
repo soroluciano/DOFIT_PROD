@@ -835,3 +835,205 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/main.php
 ---
+2015/06/16 03:33:42 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(104): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (104)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/16 03:49:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario/pe...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/usuario/perfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/06/16 03:49:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "perfilUsuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('perfilUsuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('perfilUsuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/perfilU...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/perfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/06/16 03:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PerfilUsuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('PerfilUsuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('PerfilUsuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/PerfilU...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/PerfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/06/16 03:50:09 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(104): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (104)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/16 03:50:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PerfilUsuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('PerfilUsuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('PerfilUsuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/PerfilU...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/PerfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/hol
+---
+2015/06/16 03:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PerfilUsuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('PerfilUsuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('PerfilUsuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/PerfilU...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/PerfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/16 03:50:15 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(104): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (104)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/16 03:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PerfilUsuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('PerfilUsuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('PerfilUsuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/PerfilU...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/PerfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/hol
+---
+2015/06/16 03:54:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PerfilUsuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('PerfilUsuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('PerfilUsuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/PerfilU...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/PerfilUsuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/hol
+---
+2015/06/16 03:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "perfilusuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('perfilusuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('perfilusuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/perfilu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/perfilusuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/06/16 05:01:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "perfilusuario".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('perfilusuario')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('perfilusuario')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/perfilu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/perfilusuario
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/perfilusuario
+---
+2015/06/16 05:08:45 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(104): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (104)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/19 02:58:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`perfil_social`, CONSTRAINT `perfil_social_usuario_fk` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)). The SQL statement executed was: INSERT INTO `perfil_social` (`fhultmod`, `id_usuario`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `descripcion`, `fhcreacion`, `cusuario`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (74)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/19 02:58:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`perfil_social`, CONSTRAINT `perfil_social_usuario_fk` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)). The SQL statement executed was: INSERT INTO `perfil_social` (`fhultmod`, `id_usuario`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `descripcion`, `fhcreacion`, `cusuario`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php(74): CActiveRecord->save()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): PerfilSocialController->actionCreate()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/cr...')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/create
+---
+2015/06/19 04:24:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "perfilSocial".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('perfilSocial')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('perfilSocial')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/perfilSoci...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/perfilSocial
+---
