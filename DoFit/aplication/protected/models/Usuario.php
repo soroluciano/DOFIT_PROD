@@ -1,5 +1,7 @@
 <?php
 
+
+
 /**
  * This is the model class for table "usuario".
  *
@@ -22,6 +24,7 @@
  */
 class Usuario extends CActiveRecord
 {
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -35,6 +38,7 @@ class Usuario extends CActiveRecord
 	 */
 	public function rules()
 	{
+		
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
@@ -56,7 +60,7 @@ class Usuario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'actividads' => array(self::MANY_MANY, 'Actividad', 'actividad_alumno(id_usuario, id_actividad)'),
+			'actividades' => array(self::MANY_MANY, 'Actividad', 'actividad_alumno(id_usuario, id_actividad)'),
 			'fichaUsuarios' => array(self::HAS_MANY, 'FichaUsuario', 'id_usuario'),
 			'perfilSocial' => array(self::HAS_ONE, 'PerfilSocial', 'id_usuario'),
 			'institucions' => array(self::MANY_MANY, 'Institucion', 'profesor_institucion(id_usuario, id_institucion)'),
@@ -71,10 +75,10 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_usuario' => 'Id Usuario',
+			'id_usuario' => 'Usuario',
 			'email' => 'Email',
 			'password' => 'Password',
-			'id_perfil' => 'Id Perfil',
+			'id_perfil' => 'Perfil',
 			'fhcreacion' => 'Fhcreacion',
 			'fhultmod' => 'Fhultmod',
 			'cusuario' => 'Cusuario',
