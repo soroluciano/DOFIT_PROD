@@ -1407,7 +1407,7 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (114)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
-2015/06/18 05:09:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2015/06/18 05:09:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
 ' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbConnection.php:399
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbConnection.php(347): CDbConnection->open()
@@ -1435,7 +1435,7 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
 ---
-2015/06/18 05:09:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2015/06/18 05:09:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
 ' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbConnection.php:399
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbConnection.php(347): CDbConnection->open()
@@ -1526,10 +1526,17 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
 ---
+<<<<<<< HEAD
 2015/06/20 05:34:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (144)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
 2015/06/20 05:34:41 [error] [exception.CDbException] exception 'CDbException' with message 'The table "df_user" for active record class "User" cannot be found in the database.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php:2385
+=======
+2015/06/20 05:34:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (144)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 05:34:57 [error] [exception.CDbException] exception 'CDbException' with message 'The table "df_user" for active record class "User" cannot be found in the database.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php:2385
+>>>>>>> 59ce1f70a850bde8490c1437b5b8290736b704af
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
 #1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
@@ -1553,6 +1560,7 @@ Stack trace:
 #19 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
 #20 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+<<<<<<< HEAD
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
 ---
 2015/06/20 05:34:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
@@ -1607,4 +1615,7 @@ Stack trace:
 #2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/
+=======
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/index
+>>>>>>> 59ce1f70a850bde8490c1437b5b8290736b704af
 ---

@@ -341,7 +341,7 @@ INSERT INTO `Perfil`(perfil    , fhcreacion, fhultmod, cusuario )
              VALUES ('Alumno'  , now()     , now()   , 'sysadmin'),
 			        ('Profesor', now()     , now()   , 'sysadmin');
  			 
-INSERT INTO `Estado`(estado      , fhcreacion, fhultmod, cusuario)
-             VALUES ('En espera', now()      , now()   , sysadmin),
-			        ('Confirmado', now()     , now()   , sysadmin);
+INSERT INTO `Estado`(id_estado, estado      , fhcreacion, fhultmod, cusuario)
+             VALUES (0, 'En espera', now()      , now()   , 'sysadmin'),
+			        (1, 'Confirmado', now()     , now()   , 'sysadmin');
 					   

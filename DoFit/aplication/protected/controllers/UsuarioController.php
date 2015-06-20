@@ -66,7 +66,7 @@ class UsuarioController extends Controller
 		$model= new Usuario;
         $ficha_usuario = new FichaUsuario;
 	    $localidad = new Localidad;
-	
+	    $estado = new Estado;
 		
 		// Uncomment the following line if AJAX validation is needed
 		//$this->performAjaxValidation(array($model,$ficha_usuario,$localidad,$provincia));
@@ -79,10 +79,14 @@ class UsuarioController extends Controller
 			$ficha_usuario->attributes = $_POST['FichaUsuario'];
 			$localidad->attributes = $_POST['Localidad'];
 
-		   $model->id_estado = 0;
+		   
 		   $model->fhcreacion = date("d-m-y H:i:s");
 	       $model->fhultmod = date("d-m-y H:i:s");
 	       $model->cusuario = $model->email;
+		   
+		   $estado = Estado::model()->findByPk(0);
+           $model->id_estado = $estado->id_estado; 
+		   
 		   
 		   $localidad->fhcreacion = date("d-m-y H:i:s");           
 		   $localidad->fhultmod = date("d-m-y H:i:s");
