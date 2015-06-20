@@ -108,21 +108,29 @@
 	  echo $form->error($ficha_usuario,'depto');
      ?>
     </div>
-    
-	 <div class="row">
-	  <?php
-	  echo $form->labelEx($ficha_usuario,'id_localidad');
-	  echo $form->dropDownList($ficha_usuario,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'--Seleccione una Localidad --'));
-	  echo $form->error($ficha_usuario,'id_localidad');
-	 ?>
-    </div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($localidad,'Provincia'); ?>
-		 <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),array('empty'=>'--Seleccione una Provincia --'));?>
+		 <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
+		                                array(
+										'ajax'=>array(
+		                                              'type'=>'POST',
+													  'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
+													  'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
+													  
+													  ),'prompt'=>'Seleccione una Provincia'
+													)
+									);?>
 		<?php echo $form->error($localidad,'id_provincia'); ?>
 	</div>
-
+    
+	<div class="row">
+	  <?php
+	  echo $form->labelEx($localidad,'Localidad');
+	  echo $form->dropDownList($localidad,'id_localidad',array(''));
+	  echo $form->error($localidad,'id_localidad');
+	 ?>
+    </div>
    <!-- 
 	<div class="row">
 		<?//php echo $form->labelEx($model,'fhcreacion');// ?>

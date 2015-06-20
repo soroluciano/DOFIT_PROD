@@ -1555,3 +1555,367 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/index
 ---
+2015/06/20 06:32:31 [error] [php] Use of undefined constant Usuario - assumed 'Usuario' (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\_form.php:117)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): UsuarioController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\create.php(18): UsuarioController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): UsuarioController->renderInternal()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): UsuarioController->renderFile()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): UsuarioController->renderPartial()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(126): UsuarioController->render()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\_form.php (117)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\create.php (18)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (126)
+2015/06/20 06:33:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "SeleccionarLocalidad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('SeleccionarLoca...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('SeleccionarLoca...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Usuario/Selecci...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 07:09:21 [error] [php] Undefined index: id_provincia (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php:223)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (223)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:09:25 [error] [php] Undefined index: id_provincia (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php:223)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (223)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:10:26 [error] [php] Undefined index: id_provincia (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php:223)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (223)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:10:31 [error] [php] Undefined index: id_provincia (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php:223)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (223)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:15:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "SeleccionarLocalidad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('SeleccionarLoca...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('SeleccionarLoca...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Usuario/Selecci...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 07:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "SeleccionarLocalidad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('SeleccionarLoca...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('SeleccionarLoca...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Usuario/Selecci...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 07:23:31 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(230): tag()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionSeleccionarLocalidad()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (230)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:23:51 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(230): tag()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionSeleccionarLocalidad()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (230)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:24:14 [error] [php] Undefined index: id_provincia (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php:224)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (224)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:29:59 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(230): tag()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionSeleccionarLocalidad()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Usuario/SeleccionarLocalidad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (230)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:56:23 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:56:23 [error] [exception.CException] exception 'CException' with message 'Property "Usuario.id_localidad" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(161): CComponent->__set('id_localidad', NULL)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(89): CActiveRecord->__set('id_localidad', NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 07:59:13 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 07:59:13 [error] [exception.CException] exception 'CException' with message 'Property "Usuario.id_localidad" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(161): CComponent->__set('id_localidad', NULL)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(91): CActiveRecord->__set('id_localidad', NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 08:00:15 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 08:00:15 [error] [exception.CException] exception 'CException' with message 'Property "Usuario.id_localidad" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(161): CComponent->__set('id_localidad', NULL)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(91): CActiveRecord->__set('id_localidad', NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 03:02:57 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:02:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`ficha_usuario`, CONSTRAINT `ficha_localidad_fk` FOREIGN KEY (`id_localidad`) REFERENCES `localidad` (`id_localidad`)). The SQL statement executed was: INSERT INTO `ficha_usuario` (`fhultmod`, `dni`, `sexo`, `fechanac`, `telfijo`, `conemer`, `telemer`, `direccion`, `piso`, `depto`, `fhcreacion`, `cusuario`, `id_usuario`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (113)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:02:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`ficha_usuario`, CONSTRAINT `ficha_localidad_fk` FOREIGN KEY (`id_localidad`) REFERENCES `localidad` (`id_localidad`)). The SQL statement executed was: INSERT INTO `ficha_usuario` (`fhultmod`, `dni`, `sexo`, `fechanac`, `telfijo`, `conemer`, `telemer`, `direccion`, `piso`, `depto`, `fhcreacion`, `cusuario`, `id_usuario`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(113): CActiveRecord->save()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 03:07:25 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:07:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12349612' for key 'dni'. The SQL statement executed was: INSERT INTO `ficha_usuario` (`fhultmod`, `dni`, `sexo`, `fechanac`, `telfijo`, `conemer`, `telemer`, `direccion`, `piso`, `depto`, `fhcreacion`, `cusuario`, `id_usuario`, `id_localidad`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (113)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:07:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12349612' for key 'dni'. The SQL statement executed was: INSERT INTO `ficha_usuario` (`fhultmod`, `dni`, `sexo`, `fechanac`, `telfijo`, `conemer`, `telemer`, `direccion`, `piso`, `depto`, `fhcreacion`, `cusuario`, `id_usuario`, `id_localidad`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(113): CActiveRecord->save()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 03:07:58 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:08:15 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:08:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'rober12@gmail.com' for key 'email'. The SQL statement executed was: INSERT INTO `usuario` (`fhultmod`, `email`, `password`, `id_perfil`, `fhcreacion`, `cusuario`, `id_estado`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (108)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:08:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'rober12@gmail.com' for key 'email'. The SQL statement executed was: INSERT INTO `usuario` (`fhultmod`, `email`, `password`, `id_perfil`, `fhcreacion`, `cusuario`, `id_estado`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(108): CActiveRecord->save()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
+---
+2015/06/20 03:09:10 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 03:10:46 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (80)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
