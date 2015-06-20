@@ -1526,3 +1526,32 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/create
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/create
 ---
+2015/06/20 05:34:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.df_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `df_user`.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (144)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/20 05:34:57 [error] [exception.CDbException] exception 'CDbException' with message 'The table "df_user" for active record class "User" cannot be found in the database.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(147): CGridView->init()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(144): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionHol()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('hol')
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/hol')
+#18 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/hol
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/index
+---
