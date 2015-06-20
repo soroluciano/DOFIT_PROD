@@ -17,7 +17,7 @@
 
 	<p class="note">Campos con<span class="required">*</span> son requeridos.</p>
 
-	<?php echo $form->errorSummary(array($model,$ficha_usuario,$localidad)); ?>
+	<?php echo $form->errorSummary(array($model,$ficha_usuario)); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
@@ -111,9 +111,9 @@
     
 	 <div class="row">
 	  <?php
-	  echo $form->labelEx($localidad,'localidad');
-	  echo $form->textField($localidad,'localidad');
-	  echo $form->error($localidad,'localidad');
+	  echo $form->labelEx($ficha_usuario,'id_localidad');
+	  echo $form->dropDownList($ficha_usuario,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'--Seleccione una Localidad --'));
+	  echo $form->error($ficha_usuario,'id_localidad');
 	 ?>
     </div>
 	

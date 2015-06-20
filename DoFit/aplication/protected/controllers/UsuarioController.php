@@ -63,7 +63,7 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Usuario;
+		$model= new Usuario;
         $ficha_usuario = new FichaUsuario;
 	    $localidad = new Localidad;
 	
@@ -79,47 +79,47 @@ class UsuarioController extends Controller
 			$ficha_usuario->attributes = $_POST['FichaUsuario'];
 			$localidad->attributes = $_POST['Localidad'];
 
+		   $model->id_estado = 0;
 		   $model->fhcreacion = date("d-m-y H:i:s");
 	       $model->fhultmod = date("d-m-y H:i:s");
 	       $model->cusuario = $model->email;
+		   
 		   $localidad->fhcreacion = date("d-m-y H:i:s");           
 		   $localidad->fhultmod = date("d-m-y H:i:s");
            $localidad->cusuario = $model->email;	
+		   
 		   $ficha_usuario->fhcreacion = date("d-m-y H:i:s");           
 	       $ficha_usuario->fhultmod = date("d-m-y H:i:s");
-           $ficha_usuario->cusuario = $model->email;	
-                
-				
-		    $ficha_usuario->id_usuario = $model->id_usuario;
-		    $ficha_usuario->id_localidad = $localidad->id_localidad; 	
+           $ficha_usuario->cusuario = $model->email;
+            		   
+	
 		   $mail = $model->email;
+		   
 		   
 			// valido los modelos
 			$validarusuario = $model->validate();			
 		    $validarficha = $ficha_usuario->validate();
-            $validarlocalidad = $localidad->validate();
 	        
-			
-	   if($validarusuario) {		 
-			if($model->save()){
-              	 
-	      if($validarlocalidad){
-	      	    
-				if($localidad->save()){
-			     $usuario = Usuario::model()->find('email=:email',array(':email'=>$mail));
-		   	    
-				 $ficha_usuario->id_usuario = $usuario->id_usuario;
-		        $ficha_usuario->id_localidad = $localidad->id_localidad;       
-		       if($validarficha){
+			//if(!validarusuario){ $error == true}
+			//if
+			//
+			//if($error)
+
+		
+	   if($validarusuario && $validarficha){		 
+		   if($model->save()){
+	      	
+			       $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
+			       $ficha_usuario->id_usuario = $usuario->id_usuario;
 				   
 			      if($ficha_usuario->save())
 			            $this->redirect(array('view','id'=>$model->id_usuario));
-		        }
+		        
 			}	
 		 }
 	  }
-	 }
-    }	 
+	 
+    	 
 		$this->render('create',array(
 			'model'=>$model,
 			'ficha_usuario'=>$ficha_usuario,
