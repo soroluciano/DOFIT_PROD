@@ -4,7 +4,7 @@
 /* @var $form CActiveForm  */
 
 ?>
-
+<div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,
@@ -30,10 +30,10 @@
 		                 <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?>
 		                 <?php echo $form->error($model,'password'); ?>
                      </div>
-                       <br>  
+                      <br> 
                       <div class="form-group">
 					  <?php echo $form->checkBox($model,'rememberMe');?>
-		              <?php echo $form->label($model,'No cerrar Sesi&oacute;n'); ?>
+		              <?php echo "<b>No cerrar Sesi&oacute;n</b>"; ?>
 		              <?php echo $form->error($model,'rememberMe'); ?>
                       </div> 
                
@@ -50,5 +50,5 @@
         </div>
       </div>
  </div>
-
+</div>
 

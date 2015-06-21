@@ -71,13 +71,10 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		//$this->performAjaxValidation(array($model,$ficha_usuario,$localidad,$provincia));
 
-		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad']))
-		{
-		
-          
-			$model->attributes = $_POST['Usuario'];
-			$ficha_usuario->attributes = $_POST['FichaUsuario'];
-			$localidad->attributes = $_POST['Localidad'];
+		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
+		   $model->attributes = $_POST['Usuario'];
+		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
+		   $localidad->attributes = $_POST['Localidad'];
 		   
 		   $model->password = md5($model->password);
 		   $model->fhcreacion = date("d-m-y H:i:s");
@@ -87,7 +84,6 @@ class UsuarioController extends Controller
 		   $estado = Estado::model()->findByPk(0);
            $model->id_estado = $estado->id_estado;
            
-			
 		   $localidad->fhcreacion = date("d-m-y H:i:s");           
 		   $localidad->fhultmod = date("d-m-y H:i:s");
            $localidad->cusuario = $model->email;	
@@ -95,9 +91,8 @@ class UsuarioController extends Controller
 		   $ficha_usuario->fhcreacion = date("d-m-y H:i:s");           
 	       $ficha_usuario->fhultmod = date("d-m-y H:i:s");
            $ficha_usuario->cusuario = $model->email;
-          $ficha_usuario->id_localidad = $_POST['Localidad']['id_localidad']; 	   
-	
-		   $mail = $model->email;
+           $ficha_usuario->id_localidad = $_POST['Localidad']['id_localidad']; 	   
+	       $mail = $model->email;
 		   
 		   
 			// valido los modelos
@@ -105,16 +100,14 @@ class UsuarioController extends Controller
 		    $validarficha = $ficha_usuario->validate();
 	   
 		
-	   if($validarusuario && $validarficha){		 
-		   if($model->save()){
-	      	       
-			       $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
-			       $ficha_usuario->id_usuario = $usuario->id_usuario;
-			      if($ficha_usuario->save())
-			            $this->redirect(array('view','id'=>$model->id_usuario));
-		        
-			}	
-		 }
+	    if($validarusuario && $validarficha){		 
+		    if($model->save()){
+	      	   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
+			   $ficha_usuario->id_usuario = $usuario->id_usuario;
+			  if($ficha_usuario->save())
+			      $this->redirect(array('view','id'=>$model->id_usuario));
+		    }	
+		}
 	  }
 	 
     	 
