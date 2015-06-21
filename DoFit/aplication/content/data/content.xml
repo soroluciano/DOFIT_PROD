@@ -1,0 +1,277 @@
+<zuiprezi><version>10</version><zui-table><settings>
+									<autoplay>
+										<delay>4000</delay>
+									</autoplay>
+								<bounds x="-61743.281485393854" y="-27356.72063908288" width="101819.38689666578" height="53304.09556881484"/><aspectratio>off</aspectratio><mode type="normal"/></settings><object id="0_13415665" type="button" x="-10833.588037060968" y="-704.6728546754603" r="3.909118133071853e-30" s="60.31239598191315" class="invisible"><type>invisible</type><size><w>1690.608217548001</w><h>886.2088651261778</h></size><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta><layout><frametype value="OVERVIEW"/></layout></object><object id="15_30863873" type="button" x="-3037.2682373100106" y="-6520.698789162592" r="2.1599675835130405e-15" s="9.806274212143604" class="circle"><type>circle</type><size><w>800</w><h>800</h></size><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta><layout><frametype value="SECTION"/></layout></object><object id="17_30863873" type="button" x="-49015.254052391305" y="11950.929129958316" r="8.142012440897286e-30" s="7.1385003119405965" class="circle"><type>circle</type><size><w>800</w><h>800</h></size><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta><layout><frametype value="SECTION"/></layout></object><object id="18_30863873" type="button" x="-33794.68394107026" y="8532.846780764294" r="4.240071051037132e-30" s="7.608463242696525" class="circle"><type>circle</type><size><w>800</w><h>800</h></size><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta><layout><frametype value="SECTION"/></layout></object><object id="19_30863873" type="button" x="-22639.749880325893" y="-2977.7639591599645" r="6.672069328168486e-30" s="8.20223970761268" class="circle"><type>circle</type><size><w>800</w><h>800</h></size><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta><layout><frametype value="SECTION"/></layout></object><object id="21_30863873" type="shape" x="-41931.26642237323" y="8711.137119218201" r="-12.009978945269117" s="33.7015195700378" class="line3"><geom type="arrow"><sp>-121.45413137623387 15.07925867644764</sp><ep>121.45413137623387 15.07925867644764</ep><b>-30.15851735289528</b><t>8</t></geom><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta></object><object id="22_30863873" type="shape" x="-26428.46557257032" y="4586.361626224112" r="-45" s="33.7015195700378" class="line3"><geom type="arrow"><sp>-134.68275083230833 -24.3600496958934</sp><ep>134.68275083230833 -24.3600496958934</ep><b>48.7200993917868</b><t>8</t></geom><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta></object><object id="23_30863873" type="shape" x="-13442.401070019841" y="-7947.027162660834" r="-12.363402390633826" s="33.701519570037796" class="line3"><geom type="arrow"><sp>-178.88127511403948 30.03491609658506</sp><ep>178.88127511403945 30.03491609658506</ep><b>-60.06983219317012</b><t>8</t></geom><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta></object><object id="25_30863873" type="text" x="-48938.76170541723" y="11892.141235978486" r="1.3470504659466516e-15" s="38.48137193724573" class="body"><height>29.16</height><width>269.68153179687033</width><p align="center"><text weight="bold"><![CDATA[¿Qué es?]]></text></p><layout><layout-element role="body"/></layout></object><object id="28_30863873" type="text" x="-33753.69485695216" y="8592.057583227512" r="-2.2341883055488386e-15" s="53.87392071214403" class="body"><height>29.16</height><width>310.132272451288</width><p align="center"><text weight="bold"><![CDATA[ALUMNO]]></text></p><layout><layout-element role="body"/></layout></object><object id="30_30863873" type="text" x="-22739.63554897724" y="-2802.302450650959" r="4.972785957079349e-30" s="35.29012669469149" class="body"><height>29.16</height><width>159.93227245128796</width><p align="center"><text weight="bold"><![CDATA[INSTRUCTOR]]></text></p><layout><layout-element role="body"/></layout></object><object id="32_30863873" type="text" x="-2868.5952438341737" y="-6636.424326834389" r="6.552130524924015e-30" s="35.29012669469149" class="body"><height>29.16</height><width>237.1457044894187</width><p align="center"><text weight="bold"><![CDATA[INSTITUCIÓN]]></text></p><layout><layout-element role="body"/></layout></object><object id="0" type="button" x="17285.200000000004" y="-11672.3" r="2.10669263732182e-15" s="11.088994503942333" class="circle"><type>circle</type><size><w>800</w><h>800</h></size></object><object id="1" type="shape" x="6605.46827210699" y="-14804.014882795433" r="-19.03165777294349" s="33.701519570037796" class="line3"><geom type="arrow"><sp>-231.91130075925284 49.814299608138896</sp><ep>231.9113007592528 49.814299608138896</ep><b>-99.62859921627779</b><t>8</t></geom><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta></object><object id="2" type="text" x="17357.85" y="-11861.73288650077" r="6.552130524924012e-30" s="65.78075666154537" class="body"><height>29.16</height><width>237.1457044894187</width><p align="center"><text weight="bold"><![CDATA[APP FREE]]></text></p><layout><layout-element role="body"/></layout></object><object id="3" type="button" x="27659.35" y="5531.9" r="2.10669263732182e-15" s="13.692735297318274" class="circle"><type>circle</type><size><w>800</w><h>800</h></size></object><object id="4" type="shape" x="27339.10047344205" y="-6327.2676336382965" r="54.34470089212198" s="33.701519570037796" class="line3"><geom type="arrow"><sp>-198.65578239406523 49.814299608138896</sp><ep>198.65578239406523 49.814299608138896</ep><b>-99.6285992162778</b><t>8</t></geom><meta><parentTemplate>above-the-clouds3-light</parentTemplate><notModifiedByUser>from-template</notModifiedByUser></meta></object><object id="5" type="text" x="27880.95" y="5728.7" r="6.552130524924012e-30" s="92.09305932616351" class="body"><height>29.16</height><width>237.1457044894187</width><p align="center"><text weight="bold"><![CDATA[FUTURO]]></text></p><layout><layout-element role="body"/></layout></object><object id="7" type="image" x="1367" y="17868.1" r="-2.2341883055488386e-15" s="7.7214537790983195"><source w="2808" h="1301">px4Y0d7kXfRbJur.jpg<url>px4Y0d7kXfRbJur.jpg</url></source><sourceUrl>Dofit1.jpg</sourceUrl></object></zui-table><path><s><eagle o="0_13415665"/></s><s><eagle o="7"/></s><s><eagle o="17_30863873"/></s><s><eagle o="18_30863873"/></s><s><eagle o="19_30863873"/></s><s><eagle o="15_30863873"/></s><s><eagle o="0"/></s><s><eagle o="3"/></s><s><eagle o="0_13415665"/></s></path><style type="text/css"><![CDATA[
+@font-face
+{
+	src: url('Cabin-Regular.keg');
+	fontFamily: body;
+	font-class: body;
+	font-style: normal;
+	font-weight: normal;
+	font-family: Cabin;
+}
+
+@font-face
+{
+	src: url('Cabin-Bold.keg');
+	fontFamily: head;
+	font-class: head;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Cabin;
+}
+
+@font-face
+{
+	src: url('Cabin-BoldItalic.keg');
+	fontFamily: strong;
+	font-class: strong;
+	font-style: italic;
+	font-weight: bold;
+	font-family: Cabin;
+}
+
+@font-face
+{
+	src: url('Cabin-Italic.keg');
+	font-style: italic;
+	font-weight: normal;
+	font-family: Cabin;
+}
+
+.line1
+{
+	color: #737373;
+	gradEndColor: #737373;
+	gradStartColor: #737373;
+}
+
+.line2
+{
+	color: #595959;
+	gradEndColor: #595959;
+	gradStartColor: #595959;
+}
+
+.line3
+{
+	color: #fc6a4b;
+	gradEndColor: #fc6a4b;
+	gradStartColor: #fc6a4b;
+}
+
+.line4
+{
+	color: #333;
+	gradEndColor: #333;
+	gradStartColor: #333;
+}
+
+.line5
+{
+	color: #191919;
+	gradEndColor: #191919;
+	gradStartColor: #191919;
+}
+
+.poly1
+{
+	gradEndColor: #737373;
+	gradStartColor: #737373;
+}
+
+.poly2
+{
+	gradEndColor: #595959;
+	gradStartColor: #595959;
+}
+
+.poly3
+{
+	gradEndColor: #fc6a4b;
+	gradStartColor: #fc6a4b;
+}
+
+.poly4
+{
+	gradEndColor: #333;
+	gradStartColor: #333;
+}
+
+.poly5
+{
+	gradEndColor: #191919;
+	gradStartColor: #191919;
+}
+
+Background
+{
+	gradEnd: #000;
+	gradStart: #000;
+}
+
+Grid
+{
+	color: #464646;
+}
+
+ZArrow
+{
+	borderColor: #f6f6f6;
+	borderThickness: 1;
+	gradEndColor: #737373;
+	gradStartColor: #737373;
+	lockTintAlpha: 0;
+	thickness: 7;
+}
+
+ZCircle
+{
+	borderAlpha: 1;
+	borderColor: #f6f6f6;
+	borderThickness: 1;
+	gradEndAlpha: 1;
+	gradStartAlpha: 1;
+	lockTintAlpha: 0;
+	radius: 0;
+	thickness: 100;
+}
+
+ZCurveLine
+{
+	color: #333;
+}
+
+ZFrame.bracket
+{
+	borderColor: #737373;
+	borderThickness: 0;
+	gradEndAlpha: .8;
+	gradEndColor: #737373;
+	gradStartAlpha: .8;
+	gradStartColor: #737373;
+	padding: 1.03;
+	radius: 10;
+	thickness: 8;
+}
+
+ZFrame.circle
+{
+	borderColor: #999;
+	borderThickness: 0;
+	gradEndAlpha: .8;
+	gradEndColor: #999;
+	gradStartAlpha: .8;
+	gradStartColor: #999;
+	padding: 1.03;
+	thickness: 8;
+}
+
+ZFrame.roundrect
+{
+	borderAlpha: 0.8;
+	borderColor: #737373;
+	borderThickness: 20;
+	gradEndAlpha: 0.8;
+	gradEndColor: #333;
+	gradStartAlpha: 0.8;
+	gradStartColor: #333;
+	padding: 1.03;
+	radius: 3;
+}
+
+ZLabel
+{
+	lockTintAlpha: 0.15;
+	padding: 1.2;
+}
+
+ZLabel.body
+{
+	color: #f6f6f6;
+	fontFamily: body;
+}
+
+ZLabel.body-background
+{
+	background-alpha: 0.9;
+	background-color: #404040;
+	background-padding: 5;
+}
+
+ZLabel.head
+{
+	color: #f6f6f6;
+	fontFamily: head;
+}
+
+ZLabel.head-background
+{
+	background-alpha: 0.9;
+	background-color: #404040;
+	background-padding: 5;
+}
+
+ZLabel.strong
+{
+	color: #f6f6f6;
+	fontFamily: strong;
+}
+
+ZLabel.strong-background
+{
+	background-alpha: 0.9;
+	background-color: #404040;
+	background-padding: 5;
+}
+
+ZLine
+{
+	borderColor: #f6f6f6;
+	borderThickness: 1;
+	color: #333;
+	lockTintAlpha: 0;
+}
+
+ZMarker
+{
+	alpha: 0.5;
+	color: #318bff;
+}
+
+ZPath
+{
+	alpha: 1;
+	color: #40abe6;
+	textColor: #fff;
+	thickness: 3;
+}
+
+ZPath Ball.base
+{
+	alpha: 1;
+	fillColor: #40abe6;
+	radius: 12;
+}
+
+ZPath Ball.mid
+{
+	alpha: .5;
+	fillColor: #40abe6;
+	radius: 8;
+}
+
+ZPoly
+{
+	borderAlpha: 1;
+	borderColor: #f6f6f6;
+	borderThickness: 1;
+	gradEndAlpha: 1;
+	gradStartAlpha: 1;
+	lockTintAlpha: 0;
+	radius: 30;
+}
+
+]]></style><hash>12a3910c</hash><config>hcHPxXq7s+GqdgAbC6UBR5ZapNFG1tVGvw==</config></zuiprezi>
