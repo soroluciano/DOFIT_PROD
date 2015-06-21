@@ -79,13 +79,14 @@ class UsuarioController extends Controller
 			$ficha_usuario->attributes = $_POST['FichaUsuario'];
 			$localidad->attributes = $_POST['Localidad'];
 		   
+		   $model->password = md5($model->password);
 		   $model->fhcreacion = date("d-m-y H:i:s");
 	       $model->fhultmod = date("d-m-y H:i:s");
-	       $model->cusuario = $model->email;
+		   $model->cusuario = $model->email;
 		   
 		   $estado = Estado::model()->findByPk(0);
            $model->id_estado = $estado->id_estado;
-          
+           
 			
 		   $localidad->fhcreacion = date("d-m-y H:i:s");           
 		   $localidad->fhultmod = date("d-m-y H:i:s");
