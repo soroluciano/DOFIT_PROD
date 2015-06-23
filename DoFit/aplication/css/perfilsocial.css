@@ -1,0 +1,71 @@
+#content_perfil{
+    background-color:#fff;
+    width:820px;
+    height:800px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #212121;
+    border-radius: 5px;}
+
+.size_1
+{
+    font-size: 14,5px;
+}
+.size_2{
+    font-size: 2em;
+}
+.size_3{
+    font-size: 3em;
+}
+.size_4{
+    font-size: 4em;
+}
+.size_5{
+    font-size: 5em;
+}
+#p_agregar_foto
+{
+    width:160px;
+    background-color: #3f4752;
+    height: 160px;
+    position:relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+}
+.p_foto_1{
+    width:90px;
+    background-color: #3f4752;
+    height: 160px;
+    position:relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+}
+.p_foto_2{
+    width:120px;
+    background-color: #3f4752;
+    height: 160px;
+    position:relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+}
+.p_foto_3{
+    width:213px;
+    background-color: #3f4752;
+    height: 160px;
+    position:relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+}
+.p_foto_4{
+    width:213px;
+    background-color: #3f4752;
+    height: 160px;
+    position:relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+}

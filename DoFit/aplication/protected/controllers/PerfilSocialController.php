@@ -129,6 +129,13 @@ class PerfilSocialController extends Controller
 		));
 	}
 
+    public function actionPerfilSocialA()
+    {
+
+        $this->render('indexA');
+
+    }
+
 	/**
 	 * Manages all models.
 	 */
@@ -171,4 +178,8 @@ class PerfilSocialController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+
+
+
 }
