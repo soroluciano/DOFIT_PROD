@@ -42,7 +42,6 @@ echo "
 
 ?>
 <?php
-    $gallery = 
-    echo $form->fileField($gallery,'forum_image',array('id'=>'forum_image',)); // image file select when clicks on upload photo
+  
 ?>
 <?php $this->endWidget(); ?>
