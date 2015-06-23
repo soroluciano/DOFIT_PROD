@@ -1,7 +1,5 @@
 <?php
 
-
-
 /**
  * This is the model class for table "usuario".
  *
@@ -10,6 +8,7 @@
  * @property string $email
  * @property string $password
  * @property integer $id_perfil
+ * @property integer $id_estado
  * @property string $fhcreacion
  * @property string $fhultmod
  * @property string $cusuario
@@ -20,11 +19,11 @@
  * @property PerfilSocial $perfilSocial
  * @property Institucion[] $institucions
  * @property Respuesta[] $respuestas
+ * @property Estado $idEstado
  * @property Perfil $idPerfil
  */
 class Usuario extends CActiveRecord
 {
-	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -38,17 +37,16 @@ class Usuario extends CActiveRecord
 	 */
 	public function rules()
 	{
-		
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email, password, id_perfil, fhcreacion, cusuario', 'required'),
-			array('id_perfil', 'numerical', 'integerOnly'=>true),
+			array('email, password, id_perfil, id_estado, fhcreacion, cusuario', 'required'),
+			array('id_perfil, id_estado', 'numerical', 'integerOnly'=>true),
 			array('email, password, cusuario', 'length', 'max'=>60),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_usuario, email, password, id_perfil, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
+			array('id_usuario, email, password, id_perfil, id_estado, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,11 +58,12 @@ class Usuario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'actividades' => array(self::MANY_MANY, 'Actividad', 'actividad_alumno(id_usuario, id_actividad)'),
+			'actividads' => array(self::MANY_MANY, 'Actividad', 'actividad_alumno(id_usuario, id_actividad)'),
 			'fichaUsuarios' => array(self::HAS_MANY, 'FichaUsuario', 'id_usuario'),
 			'perfilSocial' => array(self::HAS_ONE, 'PerfilSocial', 'id_usuario'),
 			'institucions' => array(self::MANY_MANY, 'Institucion', 'profesor_institucion(id_usuario, id_institucion)'),
 			'respuestas' => array(self::HAS_MANY, 'Respuesta', 'id_usuario'),
+			'idEstado' => array(self::BELONGS_TO, 'Estado', 'id_estado'),
 			'idPerfil' => array(self::BELONGS_TO, 'Perfil', 'id_perfil'),
 		);
 	}
@@ -75,10 +74,11 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_usuario' => 'Usuario',
+			'id_usuario' => 'Id Usuario',
 			'email' => 'Email',
 			'password' => 'Password',
-			'id_perfil' => 'Perfil',
+			'id_perfil' => 'Id Perfil',
+			'id_estado' => 'Id Estado',
 			'fhcreacion' => 'Fhcreacion',
 			'fhultmod' => 'Fhultmod',
 			'cusuario' => 'Cusuario',
@@ -107,6 +107,7 @@ class Usuario extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('id_perfil',$this->id_perfil);
+		$criteria->compare('id_estado',$this->id_estado);
 		$criteria->compare('fhcreacion',$this->fhcreacion,true);
 		$criteria->compare('fhultmod',$this->fhultmod,true);
 		$criteria->compare('cusuario',$this->cusuario,true);

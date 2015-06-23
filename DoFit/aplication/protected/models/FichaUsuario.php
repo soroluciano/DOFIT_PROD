@@ -30,7 +30,7 @@ class FichaUsuario extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
-	public function tableName()
+	public function tableName()	
 	{
 		return 'ficha_usuario';
 	}
@@ -43,7 +43,7 @@ class FichaUsuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_usuario, dni, sexo, fechanac, id_localidad, direccion, fhcreacion, cusuario', 'required'),
+			array('dni, sexo, fechanac, direccion, fhcreacion, cusuario', 'required'),
 			array('id_usuario, id_localidad', 'numerical', 'integerOnly'=>true),
 			array('dni, conemer, direccion, cusuario', 'length', 'max'=>60),
 			array('sexo', 'length', 'max'=>1),
