@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
+session_start();
 class UsuarioController extends Controller
 {
 	/**
@@ -69,13 +70,14 @@ class UsuarioController extends Controller
 	    $estado = new Estado;
 		
 		// Uncomment the following line if AJAX validation is needed
-		//$this->performAjaxValidation(array($model,$ficha_usuario,$localidad,$provincia));
+	    $this->performAjaxValidation(array($model,$ficha_usuario));
 
 		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
 		   $model->attributes = $_POST['Usuario'];
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
-		   
+		   $passoriginal = $model->password;
+		   $_SESSION['passoriginal'] = $passoriginal;
 		   $model->password = md5($model->password);
 		   $model->fhcreacion = date("d-m-y H:i:s");
 	       $model->fhultmod = date("d-m-y H:i:s");
