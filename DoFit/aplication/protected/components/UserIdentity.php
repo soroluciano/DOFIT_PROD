@@ -31,4 +31,22 @@ class UserIdentity extends CUserIdentity
 		}
 		return !$this->errorCode;
 	}
+
+
+    public function valid()
+    {
+        $usuario = Usuario::model()->findByAttributes(array('email' => $this->username));
+
+        if ($usuario->id_estado == 0)
+            $this->errorCode = self::ERROR_USERNAME_INACTIVE;
+        else
+            $this->errorCode = self::ERROR_NONE;
+
+        return !$this->errorCode;
+    }
+
+    public function getId()
+    {
+        return $this->_id;
+    }
 }
