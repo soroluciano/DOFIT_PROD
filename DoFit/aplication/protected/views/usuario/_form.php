@@ -3,9 +3,7 @@
 /* @var $model Usuario */
 /* @var $form CActiveForm */
 ?>
-
 <div class="form">
-
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
@@ -20,21 +18,13 @@
 ));?>
 
 	<!--<p class="note">Campos con<span class="required">*</span> son requeridos.</p>-->
-
-	<?php echo $form->errorSummary(array($model,$ficha_usuario)); ?>
-  <div class="container">	
-	<!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
-			<div class="row">
-				<div class="col-md-6">
-	                <br>
-						<div class="form-group">  
+   
+                         <div class="row">
 		                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
 		                 <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
 		                 <?php echo $form->error($model,'email'); ?>
-	                    </div>
-               </div>
-			</div>
-	</div>		
+	                     </div>
+		
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password');?>
