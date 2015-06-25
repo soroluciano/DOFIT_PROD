@@ -16,3 +16,4 @@ $this->menu=array(
 <h1>Registrar Usuario</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model,'ficha_usuario'=>$ficha_usuario,'localidad'=>$localidad)); ?>
+

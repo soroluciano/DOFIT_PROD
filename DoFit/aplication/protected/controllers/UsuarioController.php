@@ -65,6 +65,7 @@ class UsuarioController extends Controller
 	public function actionCreate()
 	{
 		$model= new Usuario;
+        $send = new SendEmailService;
         $ficha_usuario = new FichaUsuario;
 	    $localidad = new Localidad;
 	    $estado = new Estado;
@@ -76,8 +77,11 @@ class UsuarioController extends Controller
 		   $model->attributes = $_POST['Usuario'];
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
+<<<<<<< HEAD
 		   $passoriginal = $model->password;
 		   $_SESSION['passoriginal'] = $passoriginal;
+=======
+>>>>>>> d797b490115053c867f9cf0205dcec41b5e98586
 		   $model->password = md5($model->password);
 		   $model->fhcreacion = date("d-m-y H:i:s");
 	       $model->fhultmod = date("d-m-y H:i:s");
@@ -107,9 +111,11 @@ class UsuarioController extends Controller
 	      	   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
 			   $ficha_usuario->id_usuario = $usuario->id_usuario;
 			  if($ficha_usuario->save())
+                  $send->Send($model->email);
 			      $this->redirect(array('view','id'=>$model->id_usuario));
 		    }	
 		}
+
 	  }
 	 
     	 
