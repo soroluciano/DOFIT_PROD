@@ -45,11 +45,12 @@ class FichaUsuario extends CActiveRecord
 		return array(
 			array('dni, sexo, fechanac, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
 			array('id_usuario, id_localidad', 'numerical', 'integerOnly'=>true),
+			array('id_localidad','required','message'=>'Seleccione una localidad'),
 			array('conemer, direccion, cusuario', 'length', 'max'=>60),
 			array('dni', 'length', 'max'=>8),
 			array('sexo', 'length', 'max'=>1),
 			array('telfijo, celular, telemer', 'length', 'max'=>30),
-			array('telfijo, celular, telemer', 'numerical', 'integerOnly'=>true, 'message'=>'El dato debe ser númerico'),
+			array('telfijo, celular, telemer, dni', 'numerical', 'integerOnly'=>true, 'message'=>'El dato debe ser númerico'),
 			array('piso, depto', 'length', 'max'=>10),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().

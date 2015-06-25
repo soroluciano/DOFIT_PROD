@@ -41,11 +41,13 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email, password, id_perfil, id_estado, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
+			array('email, password, id_estado, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
+			array('id_perfil', 'required', 'message'=>'Seleccione un perfil'),
 			array('id_perfil, id_estado', 'numerical', 'integerOnly'=>true),
 			array('email, cusuario', 'length', 'max'=>60),
 			array('email','email','message'=>'Ingrese una dirección de correo válida'),
 			array('password', 'validarexpregContraseña'),
+			array('email','unique','className'=>'Usuario','attributeName'=>'email','message'=>'El mail ya se encuentra registrado'),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -55,19 +57,17 @@ class Usuario extends CActiveRecord
 
 	public function validarexpregContraseña($attribute,$params)
 	{
-
 	  $expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
 	  $password = $_SESSION['passoriginal'];
+	
 	  if(strlen($password) < 6  || strlen($password) > 15){
-	  $this->addError('password','La contraseña debe estar entre 6 y 15 caracteres');
+	  $this->addError('password','La contraseña debe tener entre 6 y 15 caracteres');
 	  }
 	  
-	  if(!preg_match($expr_regular,$password))
-		  {
+	  if(!preg_match($expr_regular,$password)){
 		  $this->addError('password',' La contraseña debe tener al menos una mayúscula y dos números');
-		  }
+	  }
 	  
-       unset($_SESSION['passoriginal']);
        
 	}
 	

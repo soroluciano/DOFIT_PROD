@@ -1,7 +1,6 @@
 <?php
-date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-session_start();
+
 class UsuarioController extends Controller
 {
 	/**
@@ -64,6 +63,7 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
+	  date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
         $send = new SendEmailService;
         $ficha_usuario = new FichaUsuario;
@@ -77,40 +77,38 @@ class UsuarioController extends Controller
 		   $model->attributes = $_POST['Usuario'];
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
-<<<<<<< HEAD
-		   $passoriginal = $model->password;
+
+		   $passoriginal = $_POST['Usuario']['password'];
 		   $_SESSION['passoriginal'] = $passoriginal;
-=======
->>>>>>> d797b490115053c867f9cf0205dcec41b5e98586
+
 		   $model->password = md5($model->password);
-		   $model->fhcreacion = date("d-m-y H:i:s");
-	       $model->fhultmod = date("d-m-y H:i:s");
+		   $model->fhcreacion = new CDbExpression('NOW()');
+	       $model->fhultmod = new CDbExpression('NOW()');
 		   $model->cusuario = $model->email;
 		   
 		   $estado = Estado::model()->findByPk(0);
            $model->id_estado = $estado->id_estado;
            
-		   $localidad->fhcreacion = date("d-m-y H:i:s");           
-		   $localidad->fhultmod = date("d-m-y H:i:s");
+		   $localidad->fhcreacion = new CDbExpression('NOW()');          
+		   $localidad->fhultmod = new CDbExpression('NOW()');
            $localidad->cusuario = $model->email;	
 		   
-		   $ficha_usuario->fhcreacion = date("d-m-y H:i:s");           
-	       $ficha_usuario->fhultmod = date("d-m-y H:i:s");
+		   $ficha_usuario->fhcreacion = new CDbExpression('NOW()');           
+	       $ficha_usuario->fhultmod = new CDbExpression('NOW()');
            $ficha_usuario->cusuario = $model->email;
            $ficha_usuario->id_localidad = $_POST['Localidad']['id_localidad']; 	   
 	       $mail = $model->email;
 		   
-		   
 			// valido los modelos
 			$validarusuario = $model->validate();			
 		    $validarficha = $ficha_usuario->validate();
-	   
 		
 	    if($validarusuario && $validarficha){		 
 		    if($model->save()){
 	      	   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
 			   $ficha_usuario->id_usuario = $usuario->id_usuario;
 			  if($ficha_usuario->save())
+				  unset($_SESSION['passoriginal']);
                   $send->Send($model->email);
 			      $this->redirect(array('view','id'=>$model->id_usuario));
 		    }	
