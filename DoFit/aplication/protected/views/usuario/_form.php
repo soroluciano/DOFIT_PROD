@@ -1,36 +1,37 @@
-<?php
+﻿<?php
 /* @var $this UsuarioController */
 /* @var $model Usuario */
 /* @var $form CActiveForm */
 ?>
-
 <div class="form">
-
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+	'enableAjaxValidation'=>true,
+	'enableClientValidation'=>false,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+));?>
 
-	<p class="note">Campos con<span class="required">*</span> son requeridos.</p>
-
-	<?php echo $form->errorSummary(array($model,$ficha_usuario)); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>60)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
+	<!--<p class="note">Campos con<span class="required">*</span> son requeridos.</p>-->
+   
+                         <div class="row">
+		                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
+		                 <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
+		                 <?php echo $form->error($model,'email'); ?>
+	                     </div>
+		
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>60)); ?>
+		<?php echo $form->passwordField($model,'password');?>
 		<?php echo $form->error($model,'password'); ?>
+		
 	</div>
-
+    
 	<div class="row">
 		<?php echo $form->labelEx($model,'Perfil'); ?>
 		 <?php echo $form->dropDownList($model,'id_perfil',CHtml::listData(Perfil::model()->findAll(),'id_perfil','perfil'),array('empty'=>'--Seleccione un Perfil --'));?>
@@ -153,7 +154,7 @@
 	</div>
      -->
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
