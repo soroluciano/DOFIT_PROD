@@ -48,6 +48,7 @@ class FichaUsuario extends CActiveRecord
 			array('id_localidad','required','message'=>'Seleccione una localidad'),
 			array('conemer, direccion, cusuario', 'length', 'max'=>60),
 			array('dni', 'length', 'max'=>8),
+			array('dni','unique','className'=>'FichaUsuario','attributeName'=>'dni','message'=>'El dni ya se encuentra registrado'),
 			array('sexo', 'length', 'max'=>1),
 			array('telfijo, celular, telemer', 'length', 'max'=>30),
 			array('telfijo, celular, telemer, dni', 'numerical', 'integerOnly'=>true, 'message'=>'El dato debe ser númerico'),
