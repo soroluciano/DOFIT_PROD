@@ -29,7 +29,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','SeleccionarLocalidad'),
+				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -232,5 +232,10 @@ class UsuarioController extends Controller
 	
     } 
 	
+	public function actionRecuperarpassword()
+	{
+	 $user = new Usuario;
+	 $this->render("Recuperarpassword");		
+	}
 	
 }

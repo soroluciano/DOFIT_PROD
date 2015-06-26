@@ -40,7 +40,7 @@
 			      <?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?>
 				  <br><br>
 						<div>
-							<a href="#">¿Olvidaste tu contraseña?</a>
+						 <?php echo CHtml::link('¿Olvidaste tu contraseña?',array('usuario/Recuperarpassword'));?>
 						</div>
 
       <br>

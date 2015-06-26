@@ -7,13 +7,13 @@ $this->breadcrumbs=array(
 	'Create',
 );
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'List Usuario', 'url'=>array('index')),
 	array('label'=>'Manage Usuario', 'url'=>array('admin')),
 );
+*/
 ?>
+    <h1> Registrar Usuario </h1>
 
-<h1>Registrar Usuario</h1>
-
-<?php $this->renderPartial('_form', array('model'=>$model,'ficha_usuario'=>$ficha_usuario,'localidad'=>$localidad)); ?>
+<?php $this->renderPartial('CrearUsuario', array('model'=>$model,'ficha_usuario'=>$ficha_usuario,'localidad'=>$localidad)); ?>
 
