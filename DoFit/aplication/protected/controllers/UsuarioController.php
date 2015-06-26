@@ -234,7 +234,6 @@ class UsuarioController extends Controller
 	
 	public function actionRecuperarpassword()
 	{
-	 $user = new Usuario;
 	 $this->render("Recuperarpassword");		
 	}
 	

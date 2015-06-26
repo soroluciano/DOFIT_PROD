@@ -8,7 +8,7 @@
                    <div class="form-group">
 					<form action="recuperarpassword2.php" method="post">
 					<input type="text" name="email" class="form-control" placeholder="email" id="exampleInputEmail1"></input>
-                    <input type="submit" value="enviar" class="btn btn-primary">
+                    <input type="submit" value="enviar" class="btn btn-primary"></input>
 					</div>
 					</div>
 				
