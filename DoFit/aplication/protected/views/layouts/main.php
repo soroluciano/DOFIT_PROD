@@ -22,12 +22,12 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-doc.css" rel="stylesheet">
-		<!-- CSS propio -->
-        <link href="css/propio.css" rel="stylesheet">
+        <link href="css/carrousel.css" rel="stylesheet">
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/jquery.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/ie10.js"></script>
 
 
         <script type="text/javascript">
@@ -85,24 +85,8 @@
 </head>
 
 
-<body class="bs-docs-home" data-twttr-rendered="true">
 
-<div id="page">
 
-	<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-			<div class="container">
-				<div class="navbar-header">
-					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<span class="navbar-brand"-bar">DoFit!</span>
-				</div>
-			</div>
-		</header>
-		
 	<!-- header -->
 
     <!--  <div id="mainmenu">
@@ -127,13 +111,6 @@
 
 	<div class="clear"></div>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
 
 </body>
 </html>

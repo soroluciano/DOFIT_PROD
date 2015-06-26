@@ -13,37 +13,50 @@
     ),
 )); ?>
 
+
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">DoFit!</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <div class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?>
-                    </div>
-                    <?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?>
-                    <div class="form-group">
-                        <?php echo $form->error($model,'password'); ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo $form->error($model,'username'); ?>
-                    </div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <div class="form">
+                            <div clas="form-group">
+                                <li><?php echo $form->labelEx($model,'username',array('for'=>"exampleInputEmail1")); ?></li>
+                                <li><?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?></li>
+                                <li></li><?php echo $form->labelEx($model,'password',array('for'=>"exampleInputPassword1")); ?></li>
+                                <li><?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?></li>
+                                <li><?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?></li>
+                                <li><?php echo $form->error($model,'password'); ?></li>
+                                <li><?php echo $form->error($model,'username'); ?></li>
+                            </div>
+                        </div>
+                        <!--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
                 </div>
             </div>
         </nav>
+
     </div>
 </div>
 
