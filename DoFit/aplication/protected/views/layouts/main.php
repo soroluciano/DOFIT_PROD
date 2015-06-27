@@ -9,26 +9,24 @@
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
 	<![endif]-->
-
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
-	
-	
-	
-     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>DoFit - entrená fácil</title>
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/bootstrap-doc.css" rel="stylesheet">
-        <link href="css/carrousel.css" rel="stylesheet">
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/ie10.js"></script>
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DoFit - entrená fácil</title>
+	<!-- Bootstrap -->
+	<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-doc.css" rel="stylesheet">
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie10.js"></script>
+    <!-- el pelotudo de luciano -->
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" media="screen, projection">
 
         <script type="text/javascript">
             var popupWindow = null;
@@ -79,28 +77,8 @@
                 }
             }
         </script>
-
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" media="screen, projection">
-
 </head>
-
-
-
-
-	<!-- header -->
-
-    <!--  <div id="mainmenu">
-                $this->widget('zii.widgets.CMenu',array(
-              'items'=>array(
-                  array('label'=>'Home', 'url'=>array('/site/index')),
-                  array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                  array('label'=>'Contact', 'url'=>array('/site/contact')),
-                  array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                  array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-                  array('label'=>'Prueba', 'url'=>array('/site/hol'))
-              ),
-          ));
-      </div><!-- mainmenu -->
+<body>
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -110,7 +88,6 @@
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
-
 
 </body>
 </html>

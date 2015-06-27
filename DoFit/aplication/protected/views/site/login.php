@@ -13,6 +13,7 @@
     ),
 )); ?>
 
+
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -58,7 +59,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="img/4.jpg" alt="First slide">
+            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/4.jpg" alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>¿Qué es DoFit?</h1>
@@ -68,7 +69,7 @@
             </div>
         </div>
         <div class="item">
-            <img class="second-slide" src="img/5.jpg" alt="Second slide">
+            <img class="second-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/5.jpg" alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>¿Cómo funciona?</h1>
@@ -78,7 +79,7 @@
             </div>
         </div>
         <div class="item">
-            <img class="third-slide" src="img/6.jpg" alt="Third slide">
+            <img class="third-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/6.jpg" alt="Third slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Red Social</h1>
@@ -107,19 +108,19 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4">
-            <img class="img-circle" src="img/1.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>¿Tenés un gimnasio?</h2>
             <p>Hacé click <a href="#">acá</a>, dejanos tu solicitud y nos comunicaremos con vos a la brevedad para darte de alta en DoFit.</a></p>
             <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <img class="img-circle" src="img/2.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>¿Sos profesor o alumno?</h2>
             <p>Hacé click <a href="#">acá</a> y registrate de forma gratuita, como profesor podrás darte de alta en los gimnasios que des clases y como alumno podrás anotarte en las actividades que quieras.</p>
             <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <img class="img-circle" src="img/3.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/3.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>¿No sabés cómo funciona?</h2>
             <p>Hacé click <a href="#">acá</a> para ver como funciona de DoFit. </p>
             <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
@@ -135,7 +136,7 @@
             <p class="lead">En DoFit hay registradas más de 500 instituciones, con cientos de actividades cada una.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="img/7.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="<?php echo Yii::app()->request->baseUrl; ?>/img/7.jpg" alt="Generic placeholder image">
         </div>
     </div>
     <!-- /END THE FEATURETTES -->
