@@ -29,7 +29,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword'),
+				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword','Recuperarpassword2'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -234,7 +234,31 @@ class UsuarioController extends Controller
 	
 	public function actionRecuperarpassword()
 	{
-	 $this->render("Recuperarpassword");		
+	  $this->render("Recuperarpassword");	
 	}
 	
+	public function actionRecuperarpassword2()
+	{
+	  $encontro = 0;
+	  $email = $_POST['email'];
+      $usuarios = Usuario::model()->findAll();
+      foreach($usuarios as $user)
+	  {
+	
+	   if($user->email == $email){
+		$encontro =1;
+		$this->render("Recuperarpassword2");
+	   }
+	  }
+	  if($encontro == 0)
+	  {
+	   ?>
+	    <script>
+		 alert("El usuario no se encuentra en la base");
+		 </script>	
+	<?php
+        $this->render("Recuperarpassword");	
+	  }
+		   
+	}
 }

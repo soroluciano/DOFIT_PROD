@@ -6,9 +6,14 @@
 					<h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
 	                <br>
                    <div class="form-group">
-					<form action="recuperarpassword2.php" method="post">
-					<input type="text" name="email" class="form-control" placeholder="email" id="exampleInputEmail1"></input>
-                    <input type="submit" value="enviar" class="btn btn-primary"></input>
+				    <div> Ingrese el mail de cual desea recuperar la contraseña</div>
+					<br/>
+					<form action="Recuperarpassword2" method="post">
+                       <input type="text" id="email" name="email" class="form-control" placeholder="email"></input>
+					   <br>
+					   <br>
+                      <input type="submit" value="Recuperar contraseña"></input>
+              		</form>			 
 					</div>
 					</div>
 				
