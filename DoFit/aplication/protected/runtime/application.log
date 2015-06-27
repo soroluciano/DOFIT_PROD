@@ -37204,6 +37204,7 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
 ---
+<<<<<<< HEAD
 2015/06/25 01:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexA".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('indexA')
@@ -38793,4 +38794,1656 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/js/bootstrap.min.js
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/perfilSocialA
+=======
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 00:45:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:11:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/jquery.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap-doc.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/carrou...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/carrousel.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/1.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/1.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/5.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/5.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/6.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/6.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/2.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/2.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/3.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/3.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/css/bootst...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/bootstr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/7.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/7.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/js/ie10.js')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/js/ie10.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/5.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/5.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/2.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/2.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/6.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/6.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/1.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/1.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/3.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/3.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:21:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/7.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/7.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/1.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/1.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/6.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/6.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/5.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/5.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/2.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/2.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/3.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/3.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/7.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/7.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/2.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/2.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/1.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/1.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/6.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/6.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/5.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/5.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/3.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/3.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/7.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/7.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/5.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/5.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/6.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/6.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/1.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/1.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/3.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/3.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/2.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/2.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/login
+---
+2015/06/27 01:33:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:33:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:33:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:33:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:35:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 01:35:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/06/27 02:00:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginadmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('loginadmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('loginadmin')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginadmin')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginAdmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('loginAdmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('loginAdmin')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginAdmin')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/loginAdmin
+---
+2015/06/27 02:00:56 [error] [php] Undefined variable: model (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(43): SiteController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginAdmin()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/loginAdmin
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php (34)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/27 02:01:26 [error] [php] Undefined variable: model (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(43): SiteController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginAdmin()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/loginAdmin
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php (34)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/27 02:01:34 [error] [php] Undefined variable: form (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(43): SiteController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginAdmin()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/loginAdmin
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php (27)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/27 02:01:35 [error] [php] Undefined variable: form (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php(43): SiteController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginAdmin()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/loginAdmin
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\loginAdmin.php (27)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/06/27 02:19:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginAdmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('loginAdmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('loginAdmin')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/loginAd...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/loginAdmin
+---
+2015/06/27 02:27:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginadmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginadmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginadmin
+---
+2015/06/27 02:27:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginAdmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginAdmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginAdmin
+---
+2015/06/27 02:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/06/27 02:30:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/06/27 02:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/06/27 02:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/06/27 02:31:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:31:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/4.jpg')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/img/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:31:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "4.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('4.jpg')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:31:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "4.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('4.jpg')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:31:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "4.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('4.jpg')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:31:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "4.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('4.jpg')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:32:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "4.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('4.jpg')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/4.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/loginadmin
+---
+2015/06/27 02:32:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+>>>>>>> ffce6da102cb24264b2202c9a9e892e11b108cd1
 ---
