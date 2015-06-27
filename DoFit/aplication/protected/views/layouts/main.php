@@ -12,62 +12,11 @@
 		<link href="css/bootstrap-doc.css" rel="stylesheet">
 		<!-- CSS propio -->
         <link href="css/propio.css" rel="stylesheet">
+        <link href="css/jquery.fileupload-ui.css" rel="stylesheet">
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-
-
-        <script type="text/javascript">
-            var popupWindow = null;
-            var popupIsShown = false;
-
-            function MakePopup (event) {
-                if (window.createPopup) {        //Internet Explorer
-                    if (!popupWindow) {
-                        popupWindow = window.createPopup ();
-                        var popupBody = popupWindow.document.body;
-                        popupBody.style.backgroundColor = "lightblue";
-                        popupBody.style.border = "solid black 1px";
-                        popupBody.innerHTML = "Click outside or move the mouse over to close.";
-                        popupBody.onmouseover = function () {popupWindow.hide ();};
-                    }
-                    popupWindow.show (100, 100, 150, 50, document.body);
-                }
-                else {
-                    if (!popupIsShown) {
-                        if (!popupWindow) {
-                            popupWindow = document.createElement ("DIV");
-                            popupWindow.style.backgroundColor = "lightblue";
-                            popupWindow.style.border = "solid black 1px";
-                            popupWindow.style.position = "absolute";
-                            popupWindow.style.width = "150px";
-                            popupWindow.style.height = "50px";
-                            popupWindow.style.top = "100px";
-                            popupWindow.style.left = "100px";
-                            popupWindow.innerHTML = "Click outside or move the mouse over to close.";
-                            popupWindow.addEventListener ('mouseover', RemovePopup, false);
-                        }
-
-                        document.body.appendChild (popupWindow);
-                        window.addEventListener ('click', RemovePopup, true);
-                        popupIsShown = true;
-
-                        // to avoid that the current click event propagates up
-                        event.stopPropagation ();
-                    }
-                }
-            }
-
-            function RemovePopup (event) {
-                if (popupIsShown) {
-                    document.body.removeChild (popupWindow);
-                    window.removeEventListener ('click', RemovePopup, true);
-                    popupIsShown = false;
-                }
-            }
-        </script>
-
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" media="screen, projection">
 
 </head>

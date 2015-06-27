@@ -7,7 +7,7 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-		return array(
+	/*	return array(
 			// captcha action renders the CAPTCHA image displayed on the contact page
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
@@ -18,7 +18,14 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
-		);
+		);*/
+        return array(
+            'upload'=>array(
+                'class'=>'xupload.actions.XUploadAction',
+                'path' =>Yii::app() -> getBasePath() . "/../uploads",
+                'publicPath' => Yii::app() -> getBaseUrl() . "/uploads",
+            ),
+        );
 	}
 
 	/**

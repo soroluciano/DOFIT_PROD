@@ -1,10 +1,9 @@
 
-<?php
-//<img src='/DOFIT_FINAL/DoFit/aplication/images/pat2.jpg'><a href=''></a></img>
-echo "
-    <h1 xmlns=\"http://www.w3.org/1999/html\">Pagina inicial Perfil Social</h1>
-    <div id='content_perfil'>
 
+<!--<img src='/DOFIT_FINAL/DoFit/aplication/images/pat2.jpg'><a href=''></a></img>-->
+
+    <h1 xmlns=\'http://www.w3.org/1999/html\'>Pagina inicial Perfil Social</h1>
+    <div id='content_perfil'>
 
                 <p>Completa tu perfil</p>
                 <div class='p_datos'>
@@ -34,9 +33,9 @@ echo "
                     <div class=''></div>
                 </div>
 
-    </div>"
+    </div>
 
 
-;
 
-?>
+
+

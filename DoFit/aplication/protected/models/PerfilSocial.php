@@ -26,6 +26,7 @@ class PerfilSocial extends CActiveRecord
 	public function tableName()
 	{
 		return 'perfil_social';
+
 	}
 
 	/**
