@@ -24,6 +24,7 @@
  */
 class Usuario extends CActiveRecord
 {
+    
 	/**
 	 * @return string the associated database table name
 	 */
@@ -40,9 +41,13 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email, password, id_perfil, id_estado, fhcreacion, cusuario', 'required'),
+			array('email, password, id_estado, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
+			array('id_perfil', 'required', 'message'=>'Seleccione un perfil'),
 			array('id_perfil, id_estado', 'numerical', 'integerOnly'=>true),
-			array('email, password, cusuario', 'length', 'max'=>60),
+			array('email, cusuario', 'length', 'max'=>60),
+			array('email','email','message'=>'Ingrese una dirección de correo válida'),
+			array('password', 'validarexpregContraseña'),
+			array('email','unique','className'=>'Usuario','attributeName'=>'email','message'=>'El mail ya se encuentra registrado'),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -50,6 +55,22 @@ class Usuario extends CActiveRecord
 		);
 	}
 
+	public function validarexpregContraseña($attribute,$params)
+	{
+	  $expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
+	  $password = $_SESSION['passoriginal'];
+	
+	  if(strlen($password) < 6  || strlen($password) > 15){
+	  $this->addError('password','La contraseña debe tener entre 6 y 15 caracteres');
+	  }
+	  
+	  if(!preg_match($expr_regular,$password)){
+		  $this->addError('password',' La contraseña debe tener al menos una mayúscula y dos números');
+	  }
+	  
+       
+	}
+	
 	/**
 	 * @return array relational rules.
 	 */
@@ -74,10 +95,10 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_usuario' => 'Id Usuario',
+			'id_usuario' => 'Usuario',
 			'email' => 'Email',
 			'password' => 'Password',
-			'id_perfil' => 'Id Perfil',
+			'id_perfil' => 'Perfil',
 			'id_estado' => 'Id Estado',
 			'fhcreacion' => 'Fhcreacion',
 			'fhultmod' => 'Fhultmod',

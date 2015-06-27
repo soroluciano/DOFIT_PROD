@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Argentina/Buenos_Aires');
+
 
 class UsuarioController extends Controller
 {
@@ -29,7 +29,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','SeleccionarLocalidad'),
+				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -63,51 +63,57 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
+	  date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
+        $send = new SendEmailService;
         $ficha_usuario = new FichaUsuario;
 	    $localidad = new Localidad;
 	    $estado = new Estado;
 		
 		// Uncomment the following line if AJAX validation is needed
-		//$this->performAjaxValidation(array($model,$ficha_usuario,$localidad,$provincia));
+	    $this->performAjaxValidation(array($model,$ficha_usuario));
 
 		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
 		   $model->attributes = $_POST['Usuario'];
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
-		   
+
+		   $passoriginal = $_POST['Usuario']['password'];
+		   $_SESSION['passoriginal'] = $passoriginal;
+
 		   $model->password = md5($model->password);
-		   $model->fhcreacion = date("d-m-y H:i:s");
-	       $model->fhultmod = date("d-m-y H:i:s");
+		   $model->fhcreacion = new CDbExpression('NOW()');
+	       $model->fhultmod = new CDbExpression('NOW()');
 		   $model->cusuario = $model->email;
 		   
 		   $estado = Estado::model()->findByPk(0);
            $model->id_estado = $estado->id_estado;
            
-		   $localidad->fhcreacion = date("d-m-y H:i:s");           
-		   $localidad->fhultmod = date("d-m-y H:i:s");
+		   $localidad->fhcreacion = new CDbExpression('NOW()');          
+		   $localidad->fhultmod = new CDbExpression('NOW()');
            $localidad->cusuario = $model->email;	
 		   
-		   $ficha_usuario->fhcreacion = date("d-m-y H:i:s");           
-	       $ficha_usuario->fhultmod = date("d-m-y H:i:s");
+		   $ficha_usuario->fhcreacion = new CDbExpression('NOW()');           
+	       $ficha_usuario->fhultmod = new CDbExpression('NOW()');
            $ficha_usuario->cusuario = $model->email;
            $ficha_usuario->id_localidad = $_POST['Localidad']['id_localidad']; 	   
 	       $mail = $model->email;
 		   
-		   
 			// valido los modelos
 			$validarusuario = $model->validate();			
 		    $validarficha = $ficha_usuario->validate();
-	   
 		
 	    if($validarusuario && $validarficha){		 
 		    if($model->save()){
 	      	   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
 			   $ficha_usuario->id_usuario = $usuario->id_usuario;
 			  if($ficha_usuario->save())
+				  unset($_SESSION['passoriginal']);
+                  $send->Send($model->email);
 			      $this->redirect(array('view','id'=>$model->id_usuario));
 		    }	
 		}
+
 	  }
 	 
     	 
@@ -226,5 +232,9 @@ class UsuarioController extends Controller
 	
     } 
 	
+	public function actionRecuperarpassword()
+	{
+	 $this->render("Recuperarpassword");		
+	}
 	
 }
