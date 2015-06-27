@@ -84,7 +84,7 @@
             }
         </script>
 
->>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
+
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" media="screen, projection">
 
 </head>

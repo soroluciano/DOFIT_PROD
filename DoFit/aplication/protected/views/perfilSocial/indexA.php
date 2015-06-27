@@ -1,7 +1,7 @@
 
 
 <!--<img src='/DOFIT_FINAL/DoFit/aplication/images/pat2.jpg'><a href=''></a></img>-->
-
+<!--
     <h1 xmlns=\'http://www.w3.org/1999/html\'>Pagina inicial Perfil Social</h1>
     <div id='content_perfil'>
 
@@ -34,6 +34,34 @@
                 </div>
 
     </div>
+    -->
+
+
+
+<div id="imagen1">
+
+</div>
+<div id="imagen2">
+
+</div>
+<div id="imagen3">
+
+</div>
+<div id="imagen4">
+
+</div>
+<div id="imagen5">
+
+</div>
+
+<form>
+
+
+    <input type="button" id="subirimagenbutton" value="Subir imagen" style="cursor:pointer;width: 100px; float: left; border: 0px none; background-color: rgb(255, 255, 255); margin-top: 10px;" />
+
+    <input type="button" class="button buttonregistrarme" value="Grabar" onclick="guardarPerfil();" />
+
+</form>
 
 
 
