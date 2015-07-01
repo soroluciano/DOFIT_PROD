@@ -9,7 +9,7 @@ class SendEmailService
 					<br>
 					Confirmá tu registración, pegando la siguiente URL en el navegador que quieras:
 					<br>
-					http://www.google.com.ar
+					http://localhost/DOFIT_FINAL/DoFit/aplication/?activo=1
 					<br>
 					¡Gracias por registrarte! Que disfrutes de la web
 					<br>
@@ -26,7 +26,7 @@ class SendEmailService
         $mailer->From = 'dofit@noreply.com';
         $mailer->Username = 'programacionweb3@gmail.com';
         $mailer->Password = 'montoto123';
-        $mailer->AddAddress('monti.rober9@gmail.com');
+        $mailer->AddAddress($email_destino);
         $mailer->FromName = 'Dofit!';
         $mailer->CharSet = 'UTF-8';
         $mailer->Subject = 'Confirmá tu registración a DoFit!';

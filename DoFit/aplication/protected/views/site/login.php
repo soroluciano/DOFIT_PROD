@@ -149,17 +149,7 @@
         <p>&copy; 2015 DoFit. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
     </footer>
 </div><!-- /.container -->
-
-
-
-
-
-
-
-
-
                
-
 						<div>
 						 <?php echo CHtml::link('¿Olvidaste tu contraseña?',array('usuario/Recuperarpassword'));?>
 						</div>

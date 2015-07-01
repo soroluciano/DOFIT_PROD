@@ -28,7 +28,7 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/palermo.jpg" alt="First slide">
+            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/estadio-futbol.jpg" alt="First slide">
         </div>
     </div>
 </div>
@@ -46,7 +46,7 @@
                          <input type="password" id="pass" name="pass" class="form-control" placeholder="password"></input>  
 					   <br>
 					   <br>
-                      <input type="submit" value="Enviar"></input>					
+                      <input type="submit" value="Enviar" class="btn btn-primary"></input>					
 					<br/>
 				  </div>
 			</div>	  
