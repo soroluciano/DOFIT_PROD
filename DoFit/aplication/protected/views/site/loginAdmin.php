@@ -1,0 +1,40 @@
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/cover.css" rel="stylesheet">
+
+
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h2 class="masthead-brand">DoFit!</h2>
+                </div>
+            </div>
+            <div class="inner cover">
+                <h1 class="cover-heading">Administración</h1>
+                <p class="lead"><a>
+                        <?php $form=$this->beginWidget('CActiveForm', array(
+                            'id'=>'login-form',
+                            'enableClientValidation'=>true,
+                            'clientOptions'=>array('validateOnSubmit'=>true,),)); ?>
+                        <div class="form-group">
+                            <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Usuario",'id'=>"inputEmail")); ?>
+                        </div>
+                        <div class="form-group">
+                            <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"inputPassword")); ?>
+                        </div>
+                        <div class="form-group">
+                            <?php echo $form->error($model,'password');?>
+                        </div>
+                        <?php echo CHtml::submitButton('Ingresar',array("class"=>"btn btn-primary")); ?>
+                        <?php $this->endWidget(); ;?>
+                    </a></p>
+            </div>
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>DoFit!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

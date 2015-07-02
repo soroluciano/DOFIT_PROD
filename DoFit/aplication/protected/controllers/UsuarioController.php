@@ -29,7 +29,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','SeleccionarLocalidad'),
+				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword','Recuperarpassword2'.'Recuperarpassword3'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -232,5 +232,65 @@ class UsuarioController extends Controller
 	
     } 
 	
+	public function actionRecuperarpassword()
+	{
+	  $usuario = new Usuario;
+	  $this->render("Recuperarpassword",array('usuario'=>$usuario));
+	}
 	
+	public function actionRecuperarpassword2()
+	{  
+	   if(isset($_GET['email'])){
+		    $this->render("Recuperarpassword2");
+	   }
+       else{	   
+	   $usuario = new Usuario;
+	   $send = new SendEmailService;
+	   $usuario->attributes = $_POST['Usuario'];
+	   $email = $_POST['Usuario']['email'];
+	   $encontro = 0; 		 
+	  if(isset($email)){ 
+	     $usuarios = Usuario::model()->findAll();
+	     foreach($usuarios as $user){
+	           if($user->email == $email){	 
+		           $encontro =1;
+				   $send->Reestablecerpassword($email);
+                   ?>
+                    <script>
+                     alert("Se envio un mail a su cuenta para activarla");
+                    </script>
+                  <?php					
+		           $this->render("Recuperarpassword",array('usuario'=>$usuario));
+	           }
+	      }
+	  if($encontro == 0){
+	   ?>
+	    <script>
+		 alert("El usuario no se encuentra en la base");
+		 </script>	
+	<?php
+        $this->render("Recuperarpassword",array('usuario'=>$usuario));
+	   } 
+	  }
+	  }	 
+	}
+
+	public function actionRecuperarpassword3()
+	{
+	 $email = $_GET['email'];
+	 $pass  = $_POST['pass'];		 
+	 $userup = Usuario::model()->find('email=:email',array(':email'=>$email));
+	  echo $userup->password;
+	  if(isset($pass)){
+		 $userup->password = md5($pass);
+		 $userup->save();
+		 
+		 ?>
+		 <script>
+		  alert("Se actualizo correctamente la contraseña de su cuenta");
+		 </script>
+       <?php 
+	    }		 
+	  }		 
+    
 }
