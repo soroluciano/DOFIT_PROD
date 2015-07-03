@@ -25,16 +25,18 @@ class UsuarioController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
+
+	 
 	public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword','Recuperarpassword2'.'Recuperarpassword3'),
+				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword','Recuperarpassword2','Recuperarpassword3'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				/*'actions'=>array('create','update'),*/
-				'users'=>array('@'),
+			'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -42,10 +44,10 @@ class UsuarioController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
+			)
 		);
 	}
-
+   
 	/**
 	 * Displays a particular usuario.
 	 * @param integer $id the ID of the model to be displayed
@@ -78,13 +80,11 @@ class UsuarioController extends Controller
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
 
-		   $passoriginal = $_POST['Usuario']['password'];
-		   $_SESSION['passoriginal'] = $passoriginal;
-
-		   $model->password = md5($model->password);
+		   
 		   $model->fhcreacion = new CDbExpression('NOW()');
 	       $model->fhultmod = new CDbExpression('NOW()');
 		   $model->cusuario = $model->email;
+		   $passencr = md5($model->password);
 		   
 		   $estado = Estado::model()->findByPk(0);
            $model->id_estado = $estado->id_estado;
@@ -103,12 +103,13 @@ class UsuarioController extends Controller
 			$validarusuario = $model->validate();			
 		    $validarficha = $ficha_usuario->validate();
 		
-	    if($validarusuario && $validarficha){		 
+	    if($validarusuario && $validarficha){		
 		    if($model->save()){
-	      	   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));		 
+	      	   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));      
+			   $model->password = $passencr; 
+			   $model->save();
 			   $ficha_usuario->id_usuario = $usuario->id_usuario;
 			  if($ficha_usuario->save())
-				  unset($_SESSION['passoriginal']);
                   $send->Send($model->email);
 			      $this->redirect(array('view','id'=>$model->id_usuario));
 		    }	
@@ -291,6 +292,11 @@ class UsuarioController extends Controller
 		 </script>
        <?php 
 	    }		 
-	  }		 
+	}
+
+    public function actionValidarUsuario()
+	{
+     $this->render('ValidarUsuario');
+    }	 
     
 }
