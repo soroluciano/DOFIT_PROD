@@ -16,25 +16,25 @@
                     <div class=''></div>
 
                 </div>
-                <div class='p_foto_1'>
+                <div class='p_foto_1' id="imagen1">
                     <img src='/DOFIT_FINAL/DoFit/aplication/images/pat1.jpg'><a href=''></a></img>
                     <div class=''></div>
                 </div>
-                <div class='p_foto_2'>
+                <div class='p_foto_2' id='imagen2'>
 
                     <div class=''><input type='button' value='Create a popup window!' onclick='MakePopup(event)'/></div>
                 </div>
-                <div class='p_foto_3'>
+                <div class='p_foto_3' id='imagen2'>
                     <img src='/DOFIT_FINAL/DoFit/aplication/images/pat3.jpg'><a href=''></a></img>
                     <div class=''></div>
                 </div>
-                <div class='p_foto_4'>
+                <div class='p_foto_4' id='imagen3'>
                     <img src='/DOFIT_FINAL/DoFit/aplication/images/pat4.jpg'><a href=''></a></img>
                     <div class=''></div>
                 </div>
 
     </div>
-    -->
+
 
 
 
@@ -56,14 +56,10 @@
 
 <form>
 
-
-    <input type="button" id="subirimagenbutton" value="Subir imagen" style="cursor:pointer;width: 100px; float: left; border: 0px none; background-color: rgb(255, 255, 255); margin-top: 10px;" />
-
+  <!--  <input type="button" id="subirimagenbutton" value="Subir imagen" style="cursor:pointer;width: 100px; float: left; border: 0px none; background-color: rgb(255, 255, 255); margin-top: 10px;" />-->
+<!--
     <input type="button" class="button buttonregistrarme" value="Grabar" onclick="guardarPerfil();" />
 
-</form>
-
-
-
+</form>-->
 
 
