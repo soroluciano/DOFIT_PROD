@@ -132,7 +132,10 @@ class PerfilSocialController extends Controller
     public function actionPerfilSocialA()
     {
 
-        $this->render('indexA');
+		$model = new FileUpload();
+		$form = new CForm('application.views.UploadForm', $model);
+
+        $this->render('indexA',array('form'=>$form));
 
     }
 
@@ -179,7 +182,20 @@ class PerfilSocialController extends Controller
 		}
 	}
 
+	public function actionUpload() {
+		$model = new UploadForm;
+		$form = new CForm('application.views.uploadForm', $model);
+			if ($form->submitted('submit') && $form->validate()) {
+				$form->model->image = CUploadedFile::getInstance($form->model, 'image');
+				
 
+
+				Yii::app()->user->setFlash('success', 'File Uploaded');
+				$this->redirect(array('perfilSocial/indexA'));
+			}
+			$this->render('perfilSocial/perfilSocialA', array('form' => $form));
+	}
+	
 
 
 }
