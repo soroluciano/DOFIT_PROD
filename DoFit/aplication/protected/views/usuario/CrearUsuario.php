@@ -77,6 +77,22 @@
 	
 	<div class="row">
 	<?php 
+	  echo $form->labelEx($ficha_usuario,'nombre');
+	  echo $form->textField($ficha_usuario,'nombre');
+	  echo $form->error($ficha_usuario,'nombre');
+	 ?>
+	 </div>
+	
+   	<div class="row">
+	<?php 
+	  echo $form->labelEx($ficha_usuario,'apellido');
+	  echo $form->textField($ficha_usuario,'apellido');
+	  echo $form->error($ficha_usuario,'apellido');
+	 ?>
+	 </div>	
+	 
+	<div class="row">
+	<?php 
 	  echo $form->labelEx($ficha_usuario,'dni');
 	  echo $form->textField($ficha_usuario,'dni',array('size'=>8,'maxlength'=>8));
 	  echo $form->error($ficha_usuario,'dni');

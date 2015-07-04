@@ -43,7 +43,8 @@ class FichaUsuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('dni, sexo, fechanac, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
+			array('nombre, apellido, dni, sexo', 'required','message'=>'Ingrese un {attribute}'),
+			array('fechanac, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese una {attribute}'),
 			array('id_usuario, id_localidad', 'numerical', 'integerOnly'=>true),
 			array('id_localidad','required','message'=>'Seleccione una localidad'),
 			array('conemer, direccion, cusuario', 'length', 'max'=>60),
@@ -56,7 +57,7 @@ class FichaUsuario extends CActiveRecord
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_ficha, id_usuario, dni, sexo, fechanac, telfijo, celular, conemer, telemer, id_localidad, direccion, piso, depto, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
+			array('id_ficha, id_usuario, nombre, apellido, dni, sexo, fechanac, telfijo, celular, conemer, telemer, id_localidad, direccion, piso, depto, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,6 +82,8 @@ class FichaUsuario extends CActiveRecord
 		return array(
 			'id_ficha' => 'Id Ficha',
 			'id_usuario' => 'Id Usuario',
+			'nombre'=>'Nombre',
+			'apellido'=>'Apellido',
 			'dni' => 'Dni',
 			'sexo' => 'Sexo',
 			'fechanac' => 'Fecha nacimiento',
@@ -118,6 +121,8 @@ class FichaUsuario extends CActiveRecord
 
 		$criteria->compare('id_ficha',$this->id_ficha);
 		$criteria->compare('id_usuario',$this->id_usuario);
+		$criteria->compare('nombre',$this->nombre);
+		$criteria->compare('apellido',$this->apellido);
 		$criteria->compare('dni',$this->dni,true);
 		$criteria->compare('sexo',$this->sexo,true);
 		$criteria->compare('fechanac',$this->fechanac,true);
