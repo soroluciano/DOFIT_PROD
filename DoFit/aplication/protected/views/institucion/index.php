@@ -14,7 +14,13 @@ $this->menu=array(
 
 <h1>Institucions</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+    <table border="1">
+    <tr><th>Nombre</th><th>Título</th><th>Acción</th></tr>
+<?php foreach ($institucion as $ins) { ?>
+   <tr><td><?php echo $ins->password ?></td>
+   <td><?php echo $ins->email ?></td>
+   <td><a href="?r=profesor/consulta&id=<?php
+    echo $ins->id_institucion ?>"/>
+     Detalle</a></td>
+   </tr>
+ <?php } ?>
