@@ -102,7 +102,6 @@ class UsuarioController extends Controller
 			// valido los modelos
 			$validarusuario = $model->validate();			
 		    $validarficha = $ficha_usuario->validate();
-		
 	    if($validarusuario && $validarficha){
 			if($model->save()){
 			   Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
@@ -273,7 +272,7 @@ class UsuarioController extends Controller
 	  if($encontro == 0){
 	   ?>
 	    <script>
-		 alert("El usuario no se encuentra en la base");
+		 alert("El no esta registrado");
 		 </script>	
 	<?php
         $this->render("Recuperarpassword",array('usuario'=>$usuario));
@@ -295,7 +294,8 @@ class UsuarioController extends Controller
 		  alert("Se actualizo correctamente la contraseña de su cuenta");
 		 </script>
        <?php 
-	    }		 
+	    // $this->render('../site/login');
+		}		 
 	}
 
     public function actionValidarUsuario()

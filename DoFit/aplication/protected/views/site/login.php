@@ -30,8 +30,8 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
                     <div class="form-group">
-                        <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-                    </div>
+                        <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>          
+					</div>
                     <div class="form-group">
                         <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?>
                     </div>

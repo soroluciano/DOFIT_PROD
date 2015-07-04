@@ -185,27 +185,7 @@
 	  echo $form->error($localidad,'id_localidad');
 	 ?>
     </div>
-   <!-- 
-	<div class="row">
-		<?//php echo $form->labelEx($model,'fhcreacion');// ?>
-		<?//php echo $form->textField($model,'fhcreacion'); //?>
-		<?//php echo $form->error($model,'fhcreacion'); //?>
-	</div>
-	-->
-   <!--
-	<div class="row">
-	    
-        <?//php echo $form->labelEx($model,'fhultmod'); //?>
-		<?//php echo $form->textField($model,'fhultmod');//?>
-		<?//php echo $form->error($model,'fhultmod'); //?>
-	</div>
-  
-	<div class="row">
-		<?//php echo $form->labelEx($model,'cusuario'); //?>
-		<?//php echo $form->textField($model,'cusuario',array('size'=>60,'maxlength'=>60));// ?>
-		<?//php echo $form->error($model,'cusuario'); //?>
-	</div>
-     -->
+   
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
 	</div>

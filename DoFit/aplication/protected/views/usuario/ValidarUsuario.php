@@ -9,7 +9,8 @@ if(!Yii::app()->user->isGuest){
 		
 		//Existe el código, activo el usuario.
 		$usuario->id_estado = 1;
-		$usuario->save(false);
+	    $usuario->saveAttributes(array('id_estado'=>$usuario->id_estado));
+
 ?>
    <div class="containleft left">
         <div class="table">
@@ -27,7 +28,7 @@ if(!Yii::app()->user->isGuest){
         <div class="table">
             <div class="tr">
                 <div class="login">
-                     <?//php echo $this->renderPartial('login'); ?>
+                  <?php echo CHtml::link('Volver al Login de DoFit!',array('../aplication'));?><br/><br/>
                 </div>
             </div>
         </div>
@@ -51,7 +52,7 @@ if(!Yii::app()->user->isGuest){
         <div class="table">
             <div class="tr">
                 <div class="login">
-                     <?//php echo $this->renderPartial('login'); ?>
+                     
                 </div>
             </div>
         </div>
