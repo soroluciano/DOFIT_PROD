@@ -50,93 +50,66 @@
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($model,'password'); ?>
-                <?php echo $form->passwordField($model,'password');?>
+                <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password"));?>
                 <?php echo $form->error($model,'password'); ?>
             </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'nombre');
-        echo $form->textField($ficha_institucion,'nombre',array('size'=>200,'maxlength'=>200));
-        echo $form->error($ficha_institucion,'nombre');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'cuit');
-        echo $form->textField($ficha_institucion,'cuit',array('size'=>11,'maxlength'=>11));
-        echo $form->error($ficha_institucion,'cuit');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'telfijo');
-        echo $form->textField($ficha_institucion,'telfijo');
-        echo $form->error($ficha_institucion,'telfijo');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'celular');
-        echo $form->textField($ficha_institucion,'celular');
-        echo $form->error($ficha_institucion,'celular');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'direccion');
-        echo $form->textField($ficha_institucion,'direccion');
-        echo $form->error($ficha_institucion,'direccion');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'piso');
-        echo $form->textField($ficha_institucion,'piso');
-        echo $form->error($ficha_institucion,'piso');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($ficha_institucion,'depto');
-        echo $form->textField($ficha_institucion,'depto');
-        echo $form->error($ficha_institucion,'depto');
-        ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($localidad,'Provincia'); ?>
-        <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
-            array(
-                'ajax'=>array(
-                    'type'=>'POST',
-                    'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
-                    'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
-
-                ),'prompt'=>'Seleccione una Provincia'
-            )
-        );?>
-        <?php echo $form->error($localidad,'id_provincia'); ?>
-    </div>
-
-    <div class="row">
-        <?php
-        echo $form->labelEx($localidad,'Localidad');
-        echo $form->dropDownList($localidad,'id_localidad',array(''));
-        echo $form->error($localidad,'id_localidad');
-        ?>
-    </div>
-
-    <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
-    </div>
-
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'nombre'); ?>
+                <?php echo $form->textField($ficha_institucion,'nombre',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Gimnasio")); ?>
+                <?php echo $form->error($ficha_institucion,'nombre'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'cuit'); ?>
+                <?php echo $form->textField($ficha_institucion,'cuit',array('size'=>11,'maxlength'=>11,'class'=>"form-control",'placeholder'=>"Cuit")); ?>
+                <?php echo $form->error($ficha_institucion,'cuit'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'telfijo'); ?>
+                <?php echo $form->textField($ficha_institucion,'telfijo',array('class'=>"form-control",'placeholder'=>"Telefono")); ?>
+                <?php echo $form->error($ficha_institucion,'telfijo'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'celular'); ?>
+                <?php echo $form->textField($ficha_institucion,'celular',array('class'=>"form-control",'placeholder'=>"Celular")); ?>
+                <?php echo $form->error($ficha_institucion,'celular'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'direccion'); ?>
+                <?php echo $form->textField($ficha_institucion,'direccion',array('class'=>"form-control",'placeholder'=>"Dirección")); ?>
+                <?php echo $form->error($ficha_institucion,'direccion'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'piso'); ?>
+                <?php echo $form->textField($ficha_institucion,'piso',array('class'=>"form-control",'placeholder'=>"Piso")); ?>
+                <?php echo $form->error($ficha_institucion,'piso'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($ficha_institucion,'depto'); ?>
+                <?php echo $form->textField($ficha_institucion,'depto',array('class'=>"form-control",'placeholder'=>"Departamento")); ?>
+                <?php echo $form->error($ficha_institucion,'depto'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($localidad,'Provincia'); ?>
+                <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
+                                                array('ajax'=>array('type'=>'POST',
+                                                                    'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
+                                                                    'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
+                                                                    ),'prompt'=>'Seleccione una Provincia','class'=>"form-control"));?>
+                <?php echo $form->error($localidad,'id_provincia'); ?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($localidad,'Localidad'); ?>
+                <div>
+                    <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control")); ?>
+                </div>
+                <?php echo $form->error($localidad,'id_localidad'); ?>
+            </div>
+            <div class="form-group">
+                <br>
+                <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
+            </div>
+        </div>
+        </form>
     <?php $this->endWidget(); ?>
-
 </div>
+<a href="#">Volver</a>

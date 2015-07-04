@@ -40,12 +40,14 @@ class FichaInstitucion extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nombre, cuit, id_localidad, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
+            array('nombre, cuit, id_localidad, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
             array('id_institucion, cuit, id_localidad', 'numerical', 'integerOnly'=>true),
             array('telfijo, celular', 'length', 'max'=>30),
             array('direccion, cusuario', 'length', 'max'=>60),
+            array('cuit','unique','className'=>'FichaInstitucion','attributeName'=>'cuit','message'=>'El cuit ya se encuentra registrado'),
             array('nombre', 'length', 'max'=>200),
             array('piso, depto', 'length', 'max'=>10),
+            array('telfijo, celular, telemer, cuit', 'numerical', 'integerOnly'=>true, 'message'=>'El dato debe ser númerico'),
             array('fhultmod', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -76,10 +78,10 @@ class FichaInstitucion extends CActiveRecord
             'id_institucion' => 'Id Institucion',
             'nombre' => 'Nombre',
             'cuit' => 'Cuit',
-            'telfijo' => 'Telfijo',
+            'telfijo' => 'Teléfono Fijo',
             'celular' => 'Celular',
-            'id_localidad' => 'Id Localidad',
-            'direccion' => 'Direccion',
+            'id_localidad' => 'Localidad',
+            'direccion' => 'Dirección',
             'piso' => 'Piso',
             'depto' => 'Depto',
             'fhcreacion' => 'Fhcreacion',
