@@ -33,14 +33,31 @@ class Institucion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email, password, fhcreacion, cusuario', 'required'),
+            array('email, password, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
 			array('email, password, cusuario', 'length', 'max'=>60),
+            array('password', 'validarexpregContraseña'),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_institucion, email, password, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
 		);
 	}
+
+    public function validarexpregContraseña($attribute,$params)
+    {
+        $expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
+        $password = $_SESSION['passoriginal'];
+
+        if(strlen($password) < 6  || strlen($password) > 15){
+            $this->addError('password','La contraseña debe tener entre 6 y 15 caracteres');
+        }
+
+        if(!preg_match($expr_regular,$password)){
+            $this->addError('password',' La contraseña debe tener al menos una mayúscula y dos números');
+        }
+
+
+    }
 
 	/**
 	 * @return array relational rules.

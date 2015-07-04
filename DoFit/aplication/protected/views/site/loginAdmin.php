@@ -14,7 +14,7 @@
                 <h1 class="cover-heading">Administración</h1>
                 <p class="lead"><a>
                         <?php $form=$this->beginWidget('CActiveForm', array(
-                            'id'=>'login-form',
+                            'id'=>'loginformadmin',
                             'enableClientValidation'=>true,
                             'clientOptions'=>array('validateOnSubmit'=>true,),)); ?>
                         <div class="form-group">
