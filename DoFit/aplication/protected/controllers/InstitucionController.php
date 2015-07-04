@@ -30,7 +30,6 @@ class InstitucionController extends Controller
         $send = new SendEmailService;
         $ficha_institucion = new FichaInstitucion;
         $localidad = new Localidad;
-        $estado = new Estado;
 
         // Uncomment the following line if AJAX validation is needed
         $this->performAjaxValidation(array($model,$ficha_institucion));
@@ -43,13 +42,11 @@ class InstitucionController extends Controller
             // WTF   $passoriginal = $_POST['Usuario']['password'];
             // WTF   $_SESSION['passoriginal'] = $passoriginal;
 
+
             $model->password = md5($model->password);
             $model->fhcreacion = new CDbExpression('NOW()');
             $model->fhultmod = new CDbExpression('NOW()');
             $model->cusuario = "sysadmin";
-
-            $estado = Estado::model()->findByPk(0);
-            $model->id_estado = $estado->id_estado;
 
             $localidad->fhcreacion = new CDbExpression('NOW()');
             $localidad->fhultmod = new CDbExpression('NOW()');
@@ -65,12 +62,13 @@ class InstitucionController extends Controller
             if ($model->validate() && $ficha_institucion->validate())
             {
                 if($model->save()){
-                    $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
-                    $ficha_institucion->id_usuario = $usuario->id_usuario;
-                    if($ficha_usuario->save())
-                        unset($_SESSION['passoriginal']);
-                    $send->Send($model->email);
-                    $this->redirect(array('view','id'=>$model->id_usuario));
+                    $institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
+                    $ficha_institucion->id_institucion = $institucion->id_institucion;
+                    if($ficha_institucion->save())
+                    //    unset($_SESSION['passoriginal']);
+                    //$send->Send($model->email);
+                   // $this->redirect(array('view','id'=>$model->id_usuario));
+                    echo "123";
                 }
             }
 
