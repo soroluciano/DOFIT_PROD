@@ -57,7 +57,9 @@
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($model,'Perfil'); ?>
-		        <div></div><?php echo $form->dropDownList($model,'id_perfil',CHtml::listData(Perfil::model()->findAll(),'id_perfil','perfil'),array('empty'=>'¿Sos alumno o profesor?'));?>
+		        <div>
+                    <?php echo $form->dropDownList($model,'id_perfil',CHtml::listData(Perfil::model()->findAll(),'id_perfil','perfil'),array('empty'=>'¿Sos alumno o profesor?','class'=>"form-control"));?>
+                </div>
 		        <?php echo $form->error($model,'id_perfil'); ?>
             </div>
             <div class="form-group">
@@ -77,7 +79,9 @@
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'sexo'); ?>
-	            <?php echo $form->dropDownList($ficha_usuario,'sexo',array('empty'=>'¿Mujer u Hombre?','M'=>'Masculino','F'=>'Femenino','O'=>'Otro')); ?>
+	            <div>
+                        <?php echo $form->dropDownList($ficha_usuario,'sexo',array('empty'=>'¿Mujer u Hombre?','M'=>'Masculino','F'=>'Femenino','O'=>'Otro'),array('class'=>"form-control")); ?>
+                </div>
 	            <?php echo $form->error($ficha_usuario,'sexo'); ?>
             </div>
             <div class="form-group">
@@ -92,7 +96,7 @@
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'conemer'); ?>
-	            <?php echo $form->textField($ficha_usuario,'conemer',array('class'=>"form-control",'placeholder'=>"Nombre de contacto por emergencia")); ?>
+	            <?php echo $form->textField($ficha_usuario,'conemer',array('class'=>"form-control",'placeholder'=>"Nombre del contacto por emergencia")); ?>
 	            <?php echo $form->error($ficha_usuario,'conemer'); ?>
             </div>
             <div class="form-group">
@@ -126,11 +130,14 @@
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($localidad,'Localidad'); ?>
-	            <?php echo $form->dropDownList($localidad,'id_localidad',array('class'=>"form-control")); ?>
-	            <?php echo $form->error($localidad,'id_localidad'); ?>
+	            <div>
+                    <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control")); ?>
+                </div>
+                <?php echo $form->error($localidad,'id_localidad'); ?>
             </div>
             <div class="form-group">
-		        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
+                <br>
+		        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrate!': 'Save',array('class'=>'btn btn-primary')); ?>
 	        </div>
         </div>
         </form>
