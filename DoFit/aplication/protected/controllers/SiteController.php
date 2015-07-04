@@ -7,7 +7,7 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-	/*	return array(
+		return array(
 			// captcha action renders the CAPTCHA image displayed on the contact page
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
@@ -18,14 +18,7 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
-		);*/
-        return array(
-            'upload'=>array(
-                'class'=>'xupload.actions.XUploadAction',
-                'path' =>Yii::app() -> getBasePath() . "/../uploads",
-                'publicPath' => Yii::app() -> getBaseUrl() . "/uploads",
-            ),
-        );
+		);
 	}
 
 	/**
@@ -45,9 +38,43 @@ class SiteController extends Controller
      */
     public function actionLoginAdmin()
     {
-        // renders the view file 'protected/views/site/index.php'
-        // using the default layout 'protected/views/layouts/main.php'
-        $this->render('loginAdmin');
+        $model = new LoginForm;
+        $errorCode = "";
+
+        // if it is ajax validation request
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        // validate user input and redirect to the previous page if valid
+        if(isset($_POST['LoginForm']))
+        {
+            $model->attributes=$_POST['LoginForm'];
+            if ($model->login() && $model->validate())
+            {
+                $usu = Usuario::model()->findByPK(Yii::app()->user->id);
+                if ($usu->id_perfil == 3)
+                {
+                    // ...log in the user and redirect
+                    $this->redirect(array('/site/index'));
+                }
+                else
+                {
+                    echo "Datos incorrectos";
+                    Yii::app()->user->logout();
+                }
+            }
+            else
+            {
+                echo "Datos incorrectos";
+            }
+
+        }
+        else
+        {
+            $this->render('loginAdmin',array('model'=>$model));
+        }
     }
 
 	/**
@@ -64,31 +91,6 @@ class SiteController extends Controller
 		}
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
 
 	/**
 	 * Displays the login page
@@ -116,53 +118,6 @@ class SiteController extends Controller
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
-
-    public function actionHol()
-    {
-
-        $dataProvider=new CActiveDataProvider('User');
-        //$model=CActiveRecord::model("User")->findAll();
-        //$this->render('backendUsers',array('model'=>$model));
-
-    /*     $this->widget('zii.widgets.grid.CGridView', array(
-        'dataProvider'=>$dataProvider
-    ));*/
-
-        $this->widget('zii.widgets.grid.CGridView', array(
-            'dataProvider' => $dataProvider,
-           // 'filter' => $model,
-            //lets tell the pager to use our own css file
-            'pager' => array('cssFile' => Yii::app()->baseUrl . '/css/gridViewStyle/gridView.css'),
-            //the same for our entire grid. Note that this value can be set to "false"
-            //if you set this to false, you'll have to include the styles for grid in some of your css files
-            //'cssFile'=>false,
-            'cssFile' => Yii::app()->baseUrl . '/css/gridViewStyle/gridView.css',
-            //changing the text above the grid can be fun
-            'summaryText' => 'Yiiplayground is showing you {start} - {end} of {count} cool records',
-            //and you can even set your own css class to the grid container
-            'htmlOptions' => array('class' => 'grid-view rounded'),
-            'columns' => array(
-                array(
-                    'name' => 'username',
-                    'type' => 'raw',
-                    'value' => 'CHtml::encode($data->username)'
-                ),
-                array(
-                    'name' => 'email',
-                    'type' => 'raw',
-                    'value' => 'CHtml::link(CHtml::encode($data->email), "mailto:".CHtml::encode($data->email))',
-                ),
-                //styling default buttons
-                array(
-                    'header' => '(fake) Actions',
-                    'class' => 'CButtonColumn',
-                    'viewButtonImageUrl' => Yii::app()->baseUrl . '/images/' . 'gr-view.png',
-                    'updateButtonImageUrl' => Yii::app()->baseUrl . '/images/' . 'gr-update.png',
-                ),
-            ),
-        ));
-
-    }
 
 	/**
 	 * Logs out the current user and redirect to homepage.

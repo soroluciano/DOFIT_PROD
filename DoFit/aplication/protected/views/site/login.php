@@ -37,7 +37,7 @@
                     </div>
                     <?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?>
                     <div class="form-group">
-                        <?php echo $form->error($model,'password'); ?>
+                        <?php echo $form->error($model,'password');?>
                     </div>
                     <div class="form-group">
                         <?php echo $form->error($model,'username'); ?>
@@ -87,7 +87,9 @@
                     <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
                 </div>
             </div>
+			
         </div>
+		
     </div>
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -147,17 +149,7 @@
         <p>&copy; 2015 DoFit. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
     </footer>
 </div><!-- /.container -->
-
-
-
-
-
-
-
-
-
                
-
 						<div>
 						 <?php echo CHtml::link('¿Olvidaste tu contraseña?',array('usuario/Recuperarpassword'));?>
 						</div>

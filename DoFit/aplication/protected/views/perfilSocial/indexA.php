@@ -1,8 +1,9 @@
 
-
-<!--<img src='/DOFIT_FINAL/DoFit/aplication/images/pat2.jpg'><a href=''></a></img>-->
-<!--
-    <h1 xmlns=\'http://www.w3.org/1999/html\'>Pagina inicial Perfil Social</h1>
+<?php
+//<img src='/DOFIT_FINAL/DoFit/aplication/images/pat2.jpg'><a href=''></a></img>
+/*
+echo "
+    <h1 xmlns=\"http://www.w3.org/1999/html\">Pagina inicial Perfil Social</h1>
     <div id='content_perfil'>
 
                 <p>Completa tu perfil</p>
@@ -61,5 +62,28 @@
     <input type="button" class="button buttonregistrarme" value="Grabar" onclick="guardarPerfil();" />
 
 </form>-->
+
+;*/
+
+
+
+
+?>
+
+
+ 
+<h1>Image Upload</h1>
+ 
+<div class="form">
+<?php
+
+
+
+ echo $form->render(); ?>
+</div>
+
+
+<div id="p_agregar_foto">oisdfjsidjfsid</div><br>
+<input type="file" onclick="subirImagen();" value="subir imagen">
 
 
