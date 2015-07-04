@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DOFIT_FINAL.iml" filepath="$PROJECT_DIR$/.idea/DOFIT_FINAL.iml" />
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/../DoFit/.idea/DoFit.iml" filepath="$PROJECT_DIR$/../DoFit/.idea/DoFit.iml" />
+=======
+>>>>>>> 0f39d631e9bf12f9c728b3b7484445de348ba749
     </modules>
   </component>
 </project>
+

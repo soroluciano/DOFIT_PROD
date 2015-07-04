@@ -26,7 +26,7 @@
 #p_agregar_foto
 {
     width:160px;
-    background-color: #3f4752;
+    /*background-color: #3f4752;*/
     height: 160px;
     position:relative;
     display: inline-block;
@@ -35,12 +35,12 @@
 }
 .p_foto_1{
     width:90px;
-    background-color: #3f4752;
+   /* background-color: #3f4752;*/
     height: 160px;
     position:relative;
     display: inline-block;
     overflow: hidden;
-    color: #fff;
+    color: #CCD9FF;
 }
 .p_foto_2{
     width:120px;
@@ -72,4 +72,14 @@
 #pop_up_form{
     display:hidden;
 
+}
+
+body{padding-top:30px;}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
 }

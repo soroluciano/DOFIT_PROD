@@ -19,6 +19,10 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
+    'aliases' => array(
+
+        'xupload' => 'ext.xupload',
+    ),
     'theme'=>"classic",
 
 	'modules'=>array(

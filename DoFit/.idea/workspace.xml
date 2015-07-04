@@ -58,9 +58,14 @@
       <file leaf-file-name="PerfilSocialController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/PerfilSocialController.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-54.423077" vertical-offset="1543" max-vertical-offset="3247">
+              <caret line="174" column="67" selection-start-line="174" selection-start-column="61" selection-end-line="174" selection-end-column="67" />
+=======
             <state vertical-scroll-proportion="-107.88461" vertical-offset="255" max-vertical-offset="3247">
               <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
               <folding />
             </state>
           </provider>
@@ -76,40 +81,9 @@
       <file leaf-file-name="indexA.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aplication/protected/views/perfilSocial/indexA.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="816">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding>
-                <marker date="1435113794543" expanded="true" signature="203:204" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:206" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:207" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:275" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:502" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:553" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:561" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="203:1497" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="285:368" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="285:369" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="285:378" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="285:397" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="285:502" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="576:577" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="576:617" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="576:695" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:764" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="734:897" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="936:938" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="936:1081" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="1120:1150" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="1120:1283" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="1322:1352" placeholder="..." />
-                <marker date="1435113794543" expanded="true" signature="1322:1485" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="799">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,16 +91,20 @@
       <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aplication/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="1853">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state vertical-scroll-proportion="37.115383" vertical-offset="1339" max-vertical-offset="1921">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aplication/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.17926186" vertical-offset="204" max-vertical-offset="1394">
+              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+=======
             <state vertical-scroll-proportion="-14.384615" vertical-offset="357" max-vertical-offset="2261">
               <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
               <folding />
@@ -150,6 +128,7 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="701" max-vertical-offset="1377">
               <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
               <folding />
             </state>
           </provider>
@@ -178,14 +157,15 @@
         <option value="$PROJECT_DIR$/aplication/protected/controllers/UsuarioController.php" />
 =======
         <option value="$PROJECT_DIR$/aplication/protected/controllers/PerfilController.php" />
-        <option value="$PROJECT_DIR$/aplication/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/aplication/protected/views/perfilSocial/_form.php" />
-        <option value="$PROJECT_DIR$/aplication/protected/config/main.php" />
         <option value="$PROJECT_DIR$/aplication/protected/runtime/application.log" />
         <option value="$PROJECT_DIR$/aplication/protected/views/fichaUsuario/indexA.php" />
-        <option value="$PROJECT_DIR$/aplication/protected/controllers/PerfilSocialController.php" />
         <option value="$PROJECT_DIR$/aplication/protected/views/layouts/perfilSocial.php" />
         <option value="$PROJECT_DIR$/aplication/css/perfilsocial.css" />
+        <option value="$PROJECT_DIR$/aplication/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/aplication/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/aplication/protected/models/PerfilSocial.php" />
+        <option value="$PROJECT_DIR$/aplication/protected/controllers/PerfilSocialController.php" />
         <option value="$PROJECT_DIR$/aplication/protected/views/perfilSocial/indexA.php" />
         <option value="$PROJECT_DIR$/aplication/protected/views/layouts/main.php" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
@@ -316,6 +296,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="js" />
+=======
               <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -577,6 +560,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -592,12 +576,20 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
 <<<<<<< HEAD
+      <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\css" />
+      <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\img" />
+      <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\js" />
+      <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\css\bootstrap-3.3.4-dist" />
+      <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\layouts" />
+=======
+<<<<<<< HEAD
       <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models" />
 =======
       <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\css\bootstrap-3.3.4-dist" />
       <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\layouts" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
       <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers" />
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\css" />
@@ -620,6 +612,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -627,9 +622,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -652,29 +644,37 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
 =======
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
+<<<<<<< HEAD
+    <editor active="false" />
+=======
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
     <editor active="true" />
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -698,14 +698,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/aplication/protected/views/perfilSocial/indexA.php</url>
-          <line>2</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/aplication/protected/components/UserIdentity_original.php">
 =======
@@ -747,6 +748,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
     <entry file="file://$PROJECT_DIR$/aplication/protected/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
@@ -770,13 +772,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/HolaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -843,6 +838,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -855,6 +852,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
     <entry file="file://$PROJECT_DIR$/aplication/protected/views/perfilSocial/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
@@ -930,7 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2890">
           <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,20 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="3859">
-          <caret line="84" column="33" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/FichaUsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-78.46154" vertical-offset="0" max-vertical-offset="3043">
-          <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1029,7 +1012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3393" max-vertical-offset="3978">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58981234" vertical-offset="1" max-vertical-offset="476">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,7 +1084,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="442">
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,8 +1110,11 @@
 =======
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="442">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="2" />
+<<<<<<< HEAD
+=======
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
           <folding />
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
         </state>
       </provider>
     </entry>
@@ -1145,8 +1128,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication/assets/37db6457/pager.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2861842" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/HolaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39534885" vertical-offset="0" max-vertical-offset="559">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.470483" vertical-offset="2314" max-vertical-offset="2873">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+=======
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
           <folding />
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
         </state>
       </provider>
     </entry>
@@ -1158,8 +1165,28 @@
 =======
     <entry file="file://$PROJECT_DIR$/aplication/css/perfilsocial.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="701" max-vertical-offset="1377">
+        <state vertical-scroll-proportion="1.6786325" vertical-offset="242" max-vertical-offset="1377">
           <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/UsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4398625" vertical-offset="3430" max-vertical-offset="4012">
+          <caret line="84" column="33" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/FichaUsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7233677" vertical-offset="2461" max-vertical-offset="3043">
+          <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication/protected/models/PerfilSocial.php">
+=======
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
           <folding />
         </state>
@@ -1180,53 +1207,33 @@
           <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
 =======
     <entry file="file://$PROJECT_DIR$/aplication/protected/views/perfilSocial/indexA.php">
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="816">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <marker date="1435113794543" expanded="true" signature="203:204" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:206" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:207" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:275" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:502" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:553" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:561" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="203:1497" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="285:368" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="285:369" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="285:378" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="285:397" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="285:502" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="576:577" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="576:617" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="576:695" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:764" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:874" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="734:897" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="936:938" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="936:1081" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="1120:1150" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="1120:1283" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="1322:1352" placeholder="..." />
-            <marker date="1435113794543" expanded="true" signature="1322:1485" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-2.3462214" vertical-offset="1675" max-vertical-offset="2244">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/PerfilSocialController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="-54.423077" vertical-offset="1543" max-vertical-offset="3247">
+          <caret line="174" column="67" selection-start-line="174" selection-start-column="61" selection-end-line="174" selection-end-column="67" />
+=======
         <state vertical-scroll-proportion="-107.88461" vertical-offset="255" max-vertical-offset="3247">
           <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/aplication/protected/views/perfilSocial/indexA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="799">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+=======
     <entry file="file://$PROJECT_DIR$/aplication/protected/models/SendEmailService.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -1247,10 +1254,17 @@
         <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="1853">
           <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/aplication/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="37.115383" vertical-offset="1339" max-vertical-offset="1921">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/aplication/protected/views/site/login.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1262,10 +1276,17 @@
         <state vertical-scroll-proportion="-14.384615" vertical-offset="357" max-vertical-offset="2261">
           <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/aplication/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17926186" vertical-offset="204" max-vertical-offset="1394">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/aplication/protected/controllers/UsuarioController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1277,6 +1298,7 @@
         <state vertical-scroll-proportion="0.44078946" vertical-offset="599" max-vertical-offset="1207">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
 >>>>>>> 556e40655463163a03b45b7b4860708295b3132b
+>>>>>>> 843fca2c5e4bc2ab39a0ea66aadaae83e7fb08fe
           <folding />
         </state>
       </provider>
