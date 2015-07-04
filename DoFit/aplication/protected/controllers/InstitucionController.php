@@ -123,10 +123,11 @@ class InstitucionController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider=new CActiveDataProvider('Institucion');
+        $institucion =Institucion::model()->findAll();
         $this->render('index',array(
-            'dataProvider'=>$dataProvider,
+            'institucion'=>$institucion,
         ));
+
     }
 
     /**

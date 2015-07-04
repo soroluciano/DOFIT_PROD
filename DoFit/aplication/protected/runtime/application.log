@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2015/07/04 19:02:00 [error] [exception.CException] exception 'CException' with message 'UsuarioController and its behaviors do not have a method or closure named "getErrors".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:266
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\ValidarUsuario.php(12): CComponent->__call('getErrors', Array)
@@ -573,3 +574,5 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/create
 ---
 >>>>>>> 90488ca3f54e18352714ca3097f451de8a5ce6f8
+=======
+>>>>>>> cd34eb21a99a750e6099703d1db2624bb5568e63
