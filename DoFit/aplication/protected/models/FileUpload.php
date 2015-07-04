@@ -3,7 +3,7 @@
  
 class FileUpload extends CFormModel {
  
-    public $image;
+    public $foto;
  
     /**
      * @return array validation rules for model attributes.
@@ -11,9 +11,15 @@ class FileUpload extends CFormModel {
     public function rules() {
         return array(
             //note you wont need a safe rule here
-            array('image', 'file', 'allowEmpty' => true, 'types' => 'jpg, jpeg, gif, png'),
+            array('foto', 'file', 'allowEmpty' => true, 'types' => 'jpg, jpeg, gif, png'),
         );
     }
+ 
+	/* public function attributeLabels(){
+		return array(
+                        'foto'=>'Foto',			
+		);
+	}*/
  
 }
 

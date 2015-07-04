@@ -45,16 +45,41 @@ class PerfilSocialController extends Controller
     //public function actionUpdateImages(){
 
 	public function actionUpload() {
-		$model = new UploadForm;
+		$model = new UploadForm();
 		$form = new CForm('application.views.uploadForm', $model);
 			if ($form->submitted('submit') && $form->validate()) {
-				$form->model->image = CUploadedFile::getInstance($form->model, 'image');
-				
+				$form->model->image = CUploadedFile::getInstance($form->model, 'foto');
+				$form->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
 				Yii::app()->user->setFlash('success', 'File Uploaded');
 				$this->redirect(array('perfilSocial/indexA'));
 			}
 			$this->render('perfilSocial/perfilSocialA', array('form' => $form));
 	}
+	/*
+	 public function actionImagen(){
+            $model = new ImagenForm();
+             if(isset($_POST['ImagenForm']))
+            {                
+                if(isset($_FILES) and $_FILES['ImagenForm']['error']['foto']==0)
+                 {
+                    $uf = CUploadedFile::getInstance($model, 'foto');
+                    if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+                        $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+                    {
+                          $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
+                        
+                          Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+                          Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+                          $this->refresh();
+                    }else{
+                        Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+                    }
+                    
+                 }
+            }
+            $this->render('imagen',array('model'=>$model));
+        }
+	*/
 	
 
 
