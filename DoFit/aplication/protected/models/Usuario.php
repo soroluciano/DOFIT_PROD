@@ -41,11 +41,8 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-<<<<<<< HEAD
 			array('email, password, fhcreacion, cusuario', 'required','message'=>'Ingrese un {attribute}'),
-=======
 			array('email, password, id_estado, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
->>>>>>> 90488ca3f54e18352714ca3097f451de8a5ce6f8
 			array('id_perfil', 'required', 'message'=>'Seleccione un perfil'),
 			array('id_perfil, id_estado', 'numerical', 'integerOnly'=>true),
 			array('email, cusuario', 'length', 'max'=>60),

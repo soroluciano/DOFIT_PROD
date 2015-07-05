@@ -216,12 +216,7 @@ class UsuarioController extends Controller
 		}
 	}
 	
-	public function Encriptarpassusuario($mail,$pass)
-	{
-      $user = Usuario::model()->findByAttributes(array('email'=>$mail));  
-	  $user->password = $pass;
-	  $user->save();
-	} 
+
 	public function actionSeleccionarLocalidad()
 	{
 
