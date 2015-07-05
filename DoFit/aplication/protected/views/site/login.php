@@ -37,10 +37,10 @@
                     </div>
                     <?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?>
                     <div class="form-group">
-                        <?php echo $form->error($model,'password');?>
+                        <?php echo $form->error($model,'username');?>
                     </div>
                     <div class="form-group">
-                        <?php echo $form->error($model,'username'); ?>
+                        <?php echo $form->error($model,'password'); ?>
                     </div>
                 </div>
             </div>

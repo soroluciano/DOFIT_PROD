@@ -73,7 +73,7 @@ class UsuarioController extends Controller
 	    $estado = new Estado;
 		
 		// Uncomment the following line if AJAX validation is needed
-	    $this->performAjaxValidation(array($model,$ficha_usuario));
+	    //$this->performAjaxValidation(array($model,$ficha_usuario));
 
 		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
 		   $model->attributes = $_POST['Usuario'];
@@ -283,13 +283,13 @@ class UsuarioController extends Controller
 	  if(isset($pass)){
 		 $passencr = md5($pass); 
 		 Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
-		 
+	
 		 ?>
 		 <script>
 		  alert("Se actualizo correctamente la contraseña de su cuenta");
 		 </script>
        <?php 
-	    // $this->render('../site/login');
+	 
 		}		 
 	}
 
