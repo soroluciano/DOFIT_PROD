@@ -47,7 +47,7 @@ class FichaInstitucion extends CActiveRecord
             array('cuit','unique','className'=>'FichaInstitucion','attributeName'=>'cuit','message'=>'El cuit ya se encuentra registrado'),
             array('nombre', 'length', 'max'=>200),
             array('piso, depto', 'length', 'max'=>10),
-            array('telfijo, celular, telemer, cuit', 'numerical', 'integerOnly'=>true, 'message'=>'El dato debe ser númerico'),
+            array('telfijo, celular, cuit', 'numerical', 'integerOnly'=>true, 'message'=>'El dato debe ser númerico'),
             array('fhultmod', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.

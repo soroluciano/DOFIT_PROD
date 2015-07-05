@@ -39,16 +39,12 @@ class InstitucionController extends Controller
             $ficha_institucion->attributes = $_POST['FichaInstitucion'];
             $localidad->attributes = $_POST['Localidad'];
 
-            // WTF   $passoriginal = $_POST['Usuario']['password'];
-            // WTF   $_SESSION['passoriginal'] = $passoriginal;
-
-
-            $model->password = md5($model->password);
             $model->fhcreacion = new CDbExpression('NOW()');
             $model->fhultmod = new CDbExpression('NOW()');
             $model->cusuario = "sysadmin";
-
-            $localidad->fhcreacion = new CDbExpression('NOW()');
+            $passencr = md5($model->password); // encripto la password en MD5
+            
+			$localidad->fhcreacion = new CDbExpression('NOW()');
             $localidad->fhultmod = new CDbExpression('NOW()');
             $localidad->cusuario = $model->email;
 
@@ -62,17 +58,17 @@ class InstitucionController extends Controller
             if ($model->validate() && $ficha_institucion->validate())
             {
                 if($model->save()){
-                    $institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
+                    Institucion::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
+					$institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
                     $ficha_institucion->id_institucion = $institucion->id_institucion;
-                    if($ficha_institucion->save())
-                    //    unset($_SESSION['passoriginal']);
-                    //$send->Send($model->email);
-                   // $this->redirect(array('view','id'=>$model->id_usuario));
-                    echo "123";
+                    if($ficha_institucion->save()){
+                      $send->Send($model->email);
+			          $this->redirect(array('view','id'=>$model->id_institucion));
                 }
             }
 
         }
+	}	
         $this->render('create',array(
             'model'=>$model,
             'ficha_institucion'=>$ficha_institucion,

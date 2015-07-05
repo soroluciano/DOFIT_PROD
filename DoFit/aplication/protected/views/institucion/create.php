@@ -40,7 +40,7 @@
 </div>
 
 <div class="container">
-    <form>
+    <div class="form">
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'InstitucionForm', 'enableAjaxValidation'=>true, 'enableClientValidation'=>false, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
         <div class="col-md-8">
             <div class="form-group">
@@ -109,7 +109,7 @@
                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
             </div>
         </div>
-        </form>
+        </div>
     <?php $this->endWidget(); ?>
 </div>
 <a href="#">Volver</a>

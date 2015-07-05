@@ -35,6 +35,7 @@
 
 
 <div class="form">
+   <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
  <div class="container">	
 	<!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
 			<div class="row">
@@ -46,7 +47,7 @@
                    <div class="form-group">
                        <?php echo CHtml::beginForm('Recuperarpassword2','post'); ?>
 					  <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-					  <?php echo CHtml::error($usuario,'email'); ?> 	
+					  <?php echo $form->error($usuario,'email'); ?> 	
 					  <?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-primary')); ?>                     
 					 <?php echo CHtml::endForm(); ?>      					  
                    </div>

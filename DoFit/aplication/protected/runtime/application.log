@@ -291,3 +291,313 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword3?email=monto_rober@yahoo.com.ar
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (282)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 23:11:13 [error] [exception.CException] exception 'CException' with message 'UsuarioController cannot find the requested view "IraPantallaPrincipal".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('IraPantallaPrin...', NULL, true)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(286): CController->render('IraPantallaPrin...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionRecuperarpassword3()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Recuperarpasswo...')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/Recuper...')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword3?email=monti.rober9@gmail.com
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword2/?email=monti.rober9@gmail.com
+---
+2015/07/05 23:12:17 [error] [exception.CException] exception 'CException' with message 'UsuarioController cannot find the requested view "Irpantallaprincipal".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('Irpantallaprinc...', NULL, true)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(286): CController->render('Irpantallaprinc...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionRecuperarpassword3()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Recuperarpasswo...')
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/Recuper...')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword3?email=monti.rober9@gmail.com
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword2/?email=monti.rober9@gmail.com
+---
+2015/07/05 23:13:45 [error] [php] Undefined variable: model (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\login.php:33)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): UsuarioController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): UsuarioController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(286): UsuarioController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionRecuperarpassword3()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): UsuarioController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword3?email=monti.rober9@gmail.com
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\site\login.php (33)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (286)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 23:30:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfilsocail/create".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilsocail/cr...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilsocail/create
+---
+2015/07/05 23:30:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilsocial/cr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilsocial/create
+---
+2015/07/05 23:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilsocial')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilsocial
+---
+2015/07/05 23:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial
+---
+2015/07/05 23:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial
+---
+2015/07/05 23:35:20 [error] [exception.CException] exception 'CException' with message 'UsuarioController contains improperly nested widget tags in its view "C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\Recuperarpassword.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('Recuperarpasswo...', Array, true)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php(239): CController->render('Recuperarpasswo...', Array)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): UsuarioController->actionRecuperarpassword()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Recuperarpasswo...')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/Recuper...')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/usuario/Recuperarpassword
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/07/05 18:37:29 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:37:29 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\Institucion.php:49)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CInlineValidator->validate()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(62): Institucion->validate()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\Institucion.php (49)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (62)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:43:48 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:43:48 [error] [php] Undefined variable: _SESSION (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\Institucion.php:49)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CInlineValidator->validate()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(60): Institucion->validate()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\Institucion.php (49)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (60)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:45:57 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:46:39 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:46:48 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:47:18 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:48:12 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:48:53 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:49:21 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:49:38 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:49:51 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:49:51 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.telemer" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('telemer')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CNumberValidator.php(78): CActiveRecord->__get('telemer')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CNumberValidator->validateAttribute(Object(FichaInstitucion), 'telemer')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(FichaInstitucion), NULL)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(58): CModel->validate()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+---
+2015/07/05 18:52:34 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:52:34 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.telemer" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('telemer')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CNumberValidator.php(78): CActiveRecord->__get('telemer')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CNumberValidator->validateAttribute(Object(FichaInstitucion), 'telemer')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(FichaInstitucion), NULL)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(58): CModel->validate()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+---
+2015/07/05 18:57:51 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 18:57:51 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.telemer" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('telemer')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CNumberValidator.php(78): CActiveRecord->__get('telemer')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CNumberValidator->validateAttribute(Object(FichaInstitucion), 'telemer')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(FichaInstitucion), NULL)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(58): CModel->validate()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+---
+2015/07/05 19:00:05 [error] [php] Undefined index: id_localidad (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (54)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 19:00:15 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 19:00:23 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/05 19:00:23 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.telemer" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('telemer')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CNumberValidator.php(78): CActiveRecord->__get('telemer')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\validators\CValidator.php(201): CNumberValidator->validateAttribute(Object(FichaInstitucion), 'telemer')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CModel.php(159): CValidator->validate(Object(FichaInstitucion), NULL)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(58): CModel->validate()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/create?Institucion%5Bemail%5D=monti_rober%40yahoo.com.ar&Institucion%5Bpassword%5D=&FichaInstitucion%5Bnombre%5D=&FichaInstitucion%5Bcuit%5D=&FichaInstitucion%5Btelfijo%5D=&FichaInstitucion%5Bcelular%5D=&FichaInstitucion%5Bdireccion%5D=&FichaInstitucion%5Bpiso%5D=&FichaInstitucion%5Bdepto%5D=&Localidad%5Bid_provincia%5D=&Localidad%5Bid_localidad%5D=empty&yt0=Registrarse
+---
+2015/07/05 19:03:09 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/06 00:03:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "profesor/consulta".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('profesor/consul...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/index?r=profesor/consulta&id=1
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---

@@ -31,7 +31,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword','Recuperarpassword2','Recuperarpassword3','ValidarUsuario'),
+				'actions'=>array('index','view','create','update','SeleccionarLocalidad','Recuperarpassword','Recuperarpassword2','Recuperarpassword3','ValidarUsuario','Irpantallaprincipal'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -79,8 +79,7 @@ class UsuarioController extends Controller
 		   $model->attributes = $_POST['Usuario'];
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
-
-		   
+ 
 		   $model->fhcreacion = new CDbExpression('NOW()');
 	       $model->fhultmod = new CDbExpression('NOW()');
 		   $model->cusuario = $model->email;
@@ -267,7 +266,7 @@ class UsuarioController extends Controller
 	  if($encontro == 0){
 	   ?>
 	    <script>
-		 alert("El no esta registrado");
+		 alert("El no usuario esta registrado");
 		 </script>	
 	<?php
         $this->render("Recuperarpassword",array('usuario'=>$usuario));
@@ -283,13 +282,12 @@ class UsuarioController extends Controller
 	  if(isset($pass)){
 		 $passencr = md5($pass); 
 		 Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
-	
 		 ?>
 		 <script>
 		  alert("Se actualizo correctamente la contraseña de su cuenta");
 		 </script>
        <?php 
-	 
+	     echo "<b>".CHtml::link('Volver al Login de DoFit!',array('../aplication'))."</b>";
 		}		 
 	}
 
@@ -298,4 +296,5 @@ class UsuarioController extends Controller
      $this->render('ValidarUsuario');
     }	 
     
+	
 }
