@@ -9,7 +9,8 @@ class ActividadesController extends Controller
     
 	public function actionInscripcion()
 	{
-	   $this->render('Inscripcion');
+	   $deporte = new Deporte;
+	   $this->render('Inscripcion',array('deporte'=>$deporte));
 	}   
 
 }

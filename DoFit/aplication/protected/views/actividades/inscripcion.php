@@ -34,7 +34,20 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/11.jpg" alt="First slide">
+            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/12.jpg" alt="First slide">
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="form">
+	<?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
+	<div class="col-md-8">
+            <div class="form-group">
+			  <?php echo $form->labelEx($deporte,'Deporte'); ?>
+			   <?php echo $form->dropDownList($deporte,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione una actividad','class'=>"form-control"));?> 
+            </div>
+   </div>
+   </div>
+</div>   
+<?php $this->endWidget(); ?>
