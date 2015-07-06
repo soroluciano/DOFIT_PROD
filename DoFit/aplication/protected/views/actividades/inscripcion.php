@@ -1,3 +1,9 @@
+<?php
+/* @var $this UsuarioController */
+/* @var $model Usuario */
+/* @var $form CActiveForm */
+?>
+
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -28,28 +34,7 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/nadar.jpg" alt="First slide">
+            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/11.jpg" alt="First slide">
         </div>
     </div>
 </div>
-
-
-<div class="form">
- <div class="container">	
-	<!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
-			<div class="row">
-				<div class="col-md-6">
-					<h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
-	                <br>
-					<div> Ingrese el mail de cual desea recuperar la contraseña</div>
-					<br>
-                   <div class="form-group">
-                       <?php echo CHtml::beginForm('Recuperarpassword2','post'); ?>
-					  <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-					  <?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-primary')); ?>                     
-					 <?php echo CHtml::endForm(); ?>      					  
-                   </div>
-				</div> 
-		</div>		
-</div>				
-			

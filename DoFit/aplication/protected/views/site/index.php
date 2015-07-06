@@ -23,7 +23,7 @@ $this->pageTitle=Yii::app()->name;
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active"><a>Hola!  <?php echo Yii::app()->user->getName(); ?></a></li>
-                            <li class="dropdown">
+							<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -54,6 +54,9 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 <div>
-    El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
+   El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
     <?php if(Yii::app()->user->isGuest == false): ?>
 <?php endif; ?>
+<br>
+<br>
+<?php echo "<b>".CHtml::link('Inscribite a una Actividad!',array('actividades/inscripcion'));"</b>"?>

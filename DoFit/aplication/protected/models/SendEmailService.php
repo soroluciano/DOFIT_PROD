@@ -61,7 +61,7 @@ class SendEmailService
         $mailer->AddAddress($email);
         $mailer->FromName = 'Dofit!';
         $mailer->CharSet = 'UTF-8';
-        $mailer->Subject = 'Confirmá tu registración a DoFit!';
+        $mailer->Subject = 'Reestabler contraseña de DoFit!';
         $mailer->Body = $message;
         $mailer->Send();
     }
