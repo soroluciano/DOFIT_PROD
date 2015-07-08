@@ -43,11 +43,29 @@
     <div class="form">
 	<?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
 	<div class="col-md-8">
-            <div class="form-group">
+             <?php echo CHtml::beginForm('Inscripcion','post'); ?>
+			<div class="form-group">
 			  <?php echo $form->labelEx($deporte,'Deporte'); ?>
-			   <?php echo $form->dropDownList($deporte,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione una actividad','class'=>"form-control"));?> 
+			   <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione una actividad','class'=>"form-control"));?> 
             </div>
-   </div>
+			
+			<div class="form-group">
+			 <?php echo $form->labelEx($actividad,'Institucion');?>
+			 <?php echo $form->dropDownList($actividad,'id_institucion',CHtml::listData(FichaInstitucion::model()->findAll(),'id_institucion','nombre'),array('empty'=>'Seleccione una Institucion','class'=>"form-control"));?> 
+            </div>
+			
+			<div class="form-group">
+			 <?php echo $form->labelEx($actividad_horario,'Hora');?>
+			 <?php echo $form->textField($actividad_horario,'hora',array('class'=>"form-control",'placeholder'=>"Horario"));?>
+		    </div>
+            
+            <div class="form-group">
+             <?php echo $form->labelEx($actividad_horario,'Minutos');?>			
+			 <?php echo $form->textField($actividad_horario,'minutos',array('class'=>"form-control",'placeholder'=>"Minutos"));?> 
+            </div>
+           <?php echo CHtml::submitButton('Inscribirse',array('class'=>'btn btn-primary')); ?> 		   
+           <?php echo CHtml::endForm(); ?>
+   </div> 			
    </div>
 </div>   
 <?php $this->endWidget(); ?>
