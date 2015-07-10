@@ -156,6 +156,8 @@
 
       <br>
 	 <?php echo CHtml::link('Registrate en Do Fit!',array('usuario/create'));?><br/><br/>
+	 
+	  <?php echo CHtml::link('Ver Instituciones que utilizan DoFit!',array('../aplication/fichaInstitucion'));?><br/><br/>
 
 <?php $this->endWidget(); ?>
         </div>

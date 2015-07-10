@@ -73,4 +73,4 @@ $this->pageTitle=Yii::app()->name;
 <?php endif; ?>
 <br>
 <br>
-<?php echo "<b>".CHtml::link('Inscribite a una Actividad!',array('actividades/inscripcion'));"</b>"?>
+<?php echo "<b>".CHtml::link('¿Querés anotarte en una actividad?',array('actividades/inscripcion'));"</b>"?>
