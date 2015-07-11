@@ -6,12 +6,13 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-  <?php if(!Yii::app()->user->isGuest){
+<?php if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
-	      $usuario = Usuario::model()->findByPk(Yii::app()->user->id); 
-	      $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
   }
   ?>
+
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -23,7 +24,7 @@ $this->pageTitle=Yii::app()->name;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">DoFit!</a>
+                    <img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">

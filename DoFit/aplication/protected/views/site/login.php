@@ -25,8 +25,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">DoFit!</a>
+                    <br>
+                    <img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
             </div>
+            <br>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
                     <div class="form-group">
@@ -36,11 +38,12 @@
                         <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?>
                     </div>
                     <?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?>
+                    <br>
                     <div class="form-group">
-                        <?php echo $form->error($model,'username');?>
+                        <?php echo $form->error($model,'username',array("class"=>"error_pw"));?>
                     </div>
                     <div class="form-group">
-                        <?php echo $form->error($model,'password'); ?>
+                        <?php echo $form->error($model,'password',array("class"=>"error_pw")); ?>
                     </div>
                 </div>
             </div>

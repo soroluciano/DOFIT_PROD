@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2015/07/04 21:29:35 [error] [exception.CException] exception 'CException' with message 'UsuarioController contains improperly nested widget tags in its view "C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\usuario\CrearUsuario.php". A CActiveForm widget does not have an endWidget() call.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php:101
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
@@ -3566,3 +3567,5 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/css/screen.css
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Megatlon&direccion=Lanus+340&localidad=Mor%C3%B3n&provincia=Buenos+Aires
 ---
+=======
+>>>>>>> 3cd4149d3b0ce6878cfbedfaa6787779ca5caaa5

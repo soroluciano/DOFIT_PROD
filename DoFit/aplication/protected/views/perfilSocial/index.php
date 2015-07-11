@@ -1,3 +1,6 @@
+<!-- el pelotudo de luciano -->
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" media="screen, projection">
+
 <?php
 /* @var $this PerfilSocialController */
 /* @var $dataProvider CActiveDataProvider */

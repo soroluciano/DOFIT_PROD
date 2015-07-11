@@ -7,7 +7,7 @@
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h2 class="masthead-brand">DoFit!</h2>
+                    <h2 class="masthead-brand"><img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></h2>
                 </div>
             </div>
             <div class="inner cover">

@@ -32,6 +32,13 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
+    public function actionIndexAdmin()
+    {
+        // renders the view file 'protected/views/site/index.php'
+        // using the default layout 'protected/views/layouts/main.php'
+        $this->render('indexAdmin');
+    }
+
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
@@ -53,7 +60,7 @@ class SiteController extends Controller
             $model->attributes=$_POST['LoginFormAdmin'];
             if ($model->login() && $model->validate())
             {
-                $this->redirect(array('/institucion/index'));
+                $this->redirect(array('/site/indexAdmin'));
 
             }
             else
