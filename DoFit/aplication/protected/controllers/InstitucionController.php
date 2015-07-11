@@ -175,8 +175,5 @@ class InstitucionController extends Controller
         }
     }
 	
-	public function actionLogin()
-	{
-     $this->render('login');
-	}
+	
 }

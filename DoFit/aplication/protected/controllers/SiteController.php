@@ -127,6 +127,34 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
+	
+	public function actionLoginInstitucion()
+	{
+		$model=new LoginFormInstitucion;
+     
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);  
+			Yii::app()->end();
+		}
+         
+		// collect user input data
+		if(isset($_POST['LoginFormInstitucion']))
+		{
+			$model->attributes=$_POST['LoginFormInstitucion'];
+			   
+		// validate user input and redirect to the previous page if valid
+	    if($model->validate() && $model->login()){
+            // ...log in the user and redirect
+          $this->redirect(array('/institucion/index'));
+		 }
+		}
+		// display the login form
+		$this->render('loginInstitucion',array('model'=>$model));
+	}
+
+	 
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
