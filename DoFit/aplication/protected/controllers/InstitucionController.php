@@ -174,4 +174,9 @@ class InstitucionController extends Controller
             Yii::app()->end();
         }
     }
+	
+	public function actionLogin()
+	{
+     $this->render('login');
+	}
 }
