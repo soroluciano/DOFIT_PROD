@@ -84,19 +84,25 @@ class InstitucionController extends Controller
     public function actionUpdate($id)
     {
         $model=$this->loadModel($id);
-
+        $ficha_institucion = new FichaInstitucion;
+        $ficha_institucion = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$id));
+        $localidad = new Localidad;
+        $localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$ficha_institucion->id_localidad));
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
-        if(isset($_POST['Institucion']))
+        if(isset($_POST['Institucion'],$_POST['FichaInstitucion'],$_POST['Localidad']))
         {
-            $model->attributes=$_POST['Institucion'];
-            if($model->save())
-                $this->redirect(array('view','id'=>$model->id_institucion));
+            $model->attributes = $_POST['Institucion'];
+            $ficha_institucion->attributes = $_POST['FichaInstitucion'];
+            if($model->save()){
+                if($ficha_institucion->save()){
+                    $this->redirect('../index');
+                }
+            }
         }
 
         $this->render('update',array(
-            'model'=>$model,
+            'model'=>$model,'ficha_institucion'=>$ficha_institucion,'localidad'=>$localidad
         ));
     }
 

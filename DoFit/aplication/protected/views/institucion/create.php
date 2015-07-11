@@ -15,7 +15,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">DoFit!</a>
+                    <img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
@@ -108,8 +108,10 @@
                 <br>
                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
             </div>
+            <div class="form-group">
+                <a href="../institucion/index">Volver</a>
+            </div>
         </div>
-        </div>
+    </div>
     <?php $this->endWidget(); ?>
 </div>
-<a href="#">Volver</a>

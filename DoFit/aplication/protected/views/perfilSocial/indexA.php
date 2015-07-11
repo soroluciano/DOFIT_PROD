@@ -1,3 +1,5 @@
+<!-- el pelotudo de luciano -->
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" media="screen, projection">
 
 <?php
 //<img src='/DOFIT_FINAL/DoFit/aplication/images/pat2.jpg'><a href=''></a></img>
