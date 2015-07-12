@@ -132,6 +132,14 @@ class InstitucionController extends Controller
 
     }
 
+    public function actionHome()
+    {
+        $institucion =Institucion::model()->findAll();
+        $this->render('home',array(
+            'institucion'=>$institucion,
+        ));
+
+    }
     /**
      * Manages all models.
      */

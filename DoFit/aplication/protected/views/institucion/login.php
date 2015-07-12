@@ -16,8 +16,7 @@
                             'enableClientValidation'=>true,
                             'clientOptions'=>array('validateOnSubmit'=>true,),)); ?>
                         <div class="form-group">
-                            <?php $model = new Usuario; 
-							 echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"E-Mail",'id'=>"inputEmail")); ?>
+							 <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"E-Mail",'id'=>"inputEmail")); ?>
                         </div>
                         <div class="form-group">
                             <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"inputPassword")); ?>

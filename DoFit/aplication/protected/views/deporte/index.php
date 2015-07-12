@@ -35,10 +35,10 @@
 
 <!-- Carousel
 ================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
+<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
+    <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/10.jpg" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/10.jpg" alt="First slide">
         </div>
     </div>
 </div>

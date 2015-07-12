@@ -147,11 +147,11 @@ class SiteController extends Controller
 		// validate user input and redirect to the previous page if valid
 	    if($model->validate() && $model->login()){
             // ...log in the user and redirect
-          $this->redirect(array('/institucion/index'));
+          $this->redirect(array('/institucion/home'));
 		 }
 		}
 		// display the login form
-		$this->render('loginInstitucion',array('model'=>$model));
+		$this->render('/site/logininstitucion',array('model'=>$model));
 	}
 
 	 
