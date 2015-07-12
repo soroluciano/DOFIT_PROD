@@ -36,7 +36,12 @@ class ActividadController extends Controller
 	 */
 	public function actionCrearActividad()
 	{
-        $actividad = new Actividad;
+        if(!Yii::app()->user->isGuest){
+	  //Es un usuario logueado.
+     	$usuario = Institucion::model()->findByPk(Yii::app()->user->id);
+       echo "3";
+     }
+		$actividad = new Actividad;
 	    $deporte = new Deporte;
 	    $actividad_horario = new ActividadHorario;
 	    if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){	   
@@ -52,8 +57,11 @@ class ActividadController extends Controller
 		$actividad->id_usuario = $usuario->id_usuario;
 	    $actividad->fhcreacion = new CDbExpression('NOW()');
 	    $actividad->fhultmod = new CDbExpression('NOW()');
-	    $actividad->cusuario = $usuario->email;
-		}
+        if($actividad->save() && $actividad_horario->save()){
+          echo "Se creo la actividad correctamente";
+		}		  
+
+     }
 	    $this->render('CrearActividad',array('deporte'=>$deporte,'actividad'=>$actividad,'actividad_horario'=>$actividad_horario));
 	   
 	}		

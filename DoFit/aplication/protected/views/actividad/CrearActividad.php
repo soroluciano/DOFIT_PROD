@@ -2,6 +2,8 @@
 /* @var $this UsuarioController */
 /* @var $model Usuario */
 /* @var $form CActiveForm */
+
+
 ?>
 
 <div class="navbar-wrapper">
@@ -44,16 +46,21 @@
 	<?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
 	<div class="col-md-8">
              <?php echo CHtml::beginForm('Inscripcion','post'); ?>
+
+			<div class="form-group">
+			 <?php echo $form->labelEx($actividad,'Institucion');?>
+			 <?php echo $form->dropDownList($actividad,'id_institucion',CHtml::listData(FichaInstitucion::model()->findAll(),'id_institucion','nombre'),array('empty'=>'Seleccione una Institucion','class'=>"form-control"));?> 
+            </div>
+			
 			<div class="form-group">
 			  <?php echo $form->labelEx($deporte,'Deporte'); ?>
 			   <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione una actividad','class'=>"form-control"));?> 
             </div>
 			
 			<div class="form-group">
-			 <?php echo $form->labelEx($actividad,'Institucion');?>
-			 <?php echo $form->dropDownList($actividad,'id_institucion',CHtml::listData(FichaInstitucion::model()->findAll(),'id_institucion','nombre'),array('empty'=>'Seleccione una Institucion','class'=>"form-control"));?> 
-            </div>
-			
+			 <?php echo $form->labelEx($actividad,'valor_actividad');?>
+			 <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Valoractividad"));?>
+			</div>
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad_horario,'Hora');?>
 			 <?php echo $form->textField($actividad_horario,'hora',array('class'=>"form-control",'placeholder'=>"Horario"));?>
