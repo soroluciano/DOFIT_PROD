@@ -45,8 +45,6 @@ class ActividadController extends Controller
 	    $deporte = new Deporte;
 	    $actividad_horario = new ActividadHorario;
 	    if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){	   
-	    $actividad_alumno = new ActividadAlumno;
-		
 		$deportesel = $_POST['Actividad']['id_deporte'];
 		$institucionsel = $_POST['Actividad']['id_institucion'];
 		$horasel = $_POST['ActividadHorario']['hora'];

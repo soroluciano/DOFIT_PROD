@@ -5,10 +5,10 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <?php if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-}
+      //Es un usuario logueado.
+	$ins = Institucion::model()->findByPk(Yii::app()->user->id);
+    $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
+	}
 ?>
 
     <div class="navbar-wrapper">
@@ -27,7 +27,7 @@ $this->pageTitle=Yii::app()->name;
                     <div id="navbar" class="navbar-collapse collapse">
                         <div class="navbar-form navbar-right">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+                                <li class="active"><a>Hola!  <?php echo $fichains->nombre; ?></a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -59,17 +59,10 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     <div>
-    El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
-    <?php if(!Yii::app()->user->isGuest){
-        //Es un usuario logueado.
-        $Us = Usuario::model()->findByPk(Yii::app()->user->id);
-        $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-        echo $ficha->nombre;
-    }
-
-    ?>
     <?php if(Yii::app()->user->isGuest == false): ?>
     <?php endif; ?>
-    <br>
-    <br>
-<?php echo "<b>".CHtml::link('¿Querés anotarte en una actividad?',array('actividades/inscripcion'));"</b>"?>
+    <div class="form-group">
+    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+	<?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>                     
+    <?php echo CHtml::endForm(); ?>      
+	</div>

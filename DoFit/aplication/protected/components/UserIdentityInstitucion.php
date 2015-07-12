@@ -18,17 +18,21 @@ class UserIdentityInstitucion extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-	     $Institucion = Institucion::model()->findByAttributes(array('email' => $this->username));
+	  
+	   $Institucion = Institucion::model()->findByAttributes(array('email' => $this->username));
 		if($Institucion == null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
+	
 		elseif(md5($this->password) != $Institucion->password)
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
+	
 		else
-		{
-            $this->setState("usuario",$Institucion->email);
+		{  
+            $this->_id = $Institucion->id_institucion;
+   		    $this->setState("email",$Institucion->email);
 			$this->errorCode=self::ERROR_NONE;
 		}
-		return !$this->errorCode;
+		return  !$this->errorCode;
 	}
 
 

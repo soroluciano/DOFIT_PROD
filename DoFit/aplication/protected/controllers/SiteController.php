@@ -131,7 +131,7 @@ class SiteController extends Controller
 	public function actionLoginInstitucion()
 	{
 		$model=new LoginFormInstitucion;
-     
+       
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
@@ -146,7 +146,8 @@ class SiteController extends Controller
 			   
 		// validate user input and redirect to the previous page if valid
 	    if($model->validate() && $model->login()){
-            // ...log in the user and redirect
+            echo "2";            
+		   // ...log in the user and redirect
           $this->redirect(array('/institucion/home'));
 		 }
 		}

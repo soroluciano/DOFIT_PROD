@@ -38,7 +38,7 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/15.jpg" alt="First slide">
         </div>
     </div>
 </div>

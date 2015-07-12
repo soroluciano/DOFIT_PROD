@@ -59,13 +59,18 @@ class LoginFormInstitucion extends CFormModel
      */
     public function login()
     {
-        if($this->_identity===null)
+		if($this->_identity===null)
         {
             $this->_identity=new UserIdentityInstitucion($this->username,$this->password);
             $this->_identity->authenticate();
-            return true;
+			
         }
-
+		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
+		{
+			Yii::app()->user->login($this->_identity);
+			return true;
+		}
+  
         else
             return false;
     }

@@ -2,7 +2,11 @@
 /* @var $this UsuarioController */
 /* @var $model Usuario */
 /* @var $form CActiveForm */
-
+if(!Yii::app()->user->isGuest){
+	  //Es un usuario logueado.
+     	$usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
+       echo "3";
+ }
 
 ?>
 
@@ -45,7 +49,7 @@
     <div class="form">
 	<?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
 	<div class="col-md-8">
-             <?php echo CHtml::beginForm('Inscripcion','post'); ?>
+             <?php echo CHtml::beginForm('CrearActividad','post'); ?>
 
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'Institucion');?>
@@ -58,12 +62,18 @@
             </div>
 			
 			<div class="form-group">
+			 <?php echo $form->labelEx($actividad,'Profesor');
+			  $id_institucion = $usuarioins->id_institucion;
+			  echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(ProfesorInstitucion::model()->findAll(),'id_institucion',$id_institucion),array('empty'=>'Seleccione un Profesor','class'=>"form-control"));?>   
+			</div>			 
+			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'valor_actividad');?>
 			 <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Valoractividad"));?>
 			</div>
+			
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad_horario,'Hora');?>
-			 <?php echo $form->textField($actividad_horario,'hora',array('class'=>"form-control",'placeholder'=>"Horario"));?>
+			 <?php echo $form->textField($actividad_horario,'hora',array('class'=>"form-control",'placeholder'=>"Hora"));?>
 		    </div>
             
             <div class="form-group">
