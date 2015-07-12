@@ -59,44 +59,6 @@
         </div>
     </div>
 
-    <?php
-        if($institucion != null){
-            echo  "<div><h2>Instituciones</h2></div>";
-            echo    "<table class='table table-hover'>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nombre</th>
-                                <th>Email</th>
-                                <th>Id</th>
-                                <th>.</th>
-                                <th>.</th>
-                            </tr>
-                        </thead>";
-                    $number = 0;
-                    foreach($institucion as $i){
-                        $number++;
-                        echo "<tbody>
-                                <tr>
-                                    <td>$number</td>
-                                    <td>$i->email</td>
-                                    <td>$i->password</td>
-                                    <td>$i->id_institucion</td>
-                                    <td><a href='../institucion/update/$i->id_institucion' class='btn btn-default'>Modificar<a/></td>
-                                    <td><a href='../institucion/delete/$i->id_institucion' class='btn btn-default'>Borrar<a/></td>";
-                    }
-                    echo "</tr></tbody>";
-
-        }
-        else
-        {
-            echo    "<div class='row'>
-                        <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay gimnasios creados aun</h2>
-                        </div>
-                    </div>";
-        }
-    ?>
     <div class="form-group">
         <a href="../site/indexAdmin">Volver</a>
     </div>
