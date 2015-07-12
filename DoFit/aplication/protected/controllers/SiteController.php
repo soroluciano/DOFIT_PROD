@@ -151,7 +151,7 @@ class SiteController extends Controller
 		 }
 		}
 		// display the login form
-		$this->render('loginInstitucion',array('model'=>$model));
+		$this->render('/institucion/home',array('model'=>$model));
 	}
 
 	 
