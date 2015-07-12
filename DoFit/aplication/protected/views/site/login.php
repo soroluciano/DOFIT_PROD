@@ -25,10 +25,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <br>
-                    <img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
             </div>
-            <br>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
                     <div class="form-group">
