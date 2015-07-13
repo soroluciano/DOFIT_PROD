@@ -38,28 +38,30 @@ class ActividadController extends Controller
 	{
         if(!Yii::app()->user->isGuest){
 	  //Es un usuario logueado.
-     	$usuario = Institucion::model()->findByPk(Yii::app()->user->id);
-       echo "3";
+     	$usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
+ 
      }
 		$actividad = new Actividad;
 	    $deporte = new Deporte;
-	    $actividad_horario = new ActividadHorario;
-	    if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){	   
-		$deportesel = $_POST['Actividad']['id_deporte'];
-		$institucionsel = $_POST['Actividad']['id_institucion'];
-		$horasel = $_POST['ActividadHorario']['hora'];
-		$minutosel = $_POST['ActividadHorario']['minutos'];
-		
-		$actividad->id_deporte = $deportesel;
-		$actividad->id_institucion = $institucionsel;
-		$actividad->id_usuario = $usuario->id_usuario;
-	    $actividad->fhcreacion = new CDbExpression('NOW()');
-	    $actividad->fhultmod = new CDbExpression('NOW()');
-        if($actividad->save() && $actividad_horario->save()){
-          echo "Se creo la actividad correctamente";
-		}		  
-
-     }
+	    $actividad_horario = new ActividadHorario;   
+	   if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){	   
+	     $actividad->attributes = $_POST['Actividad'];
+		 $actividad_horario->attributes = $_POST['ActividadHorario'];
+		 $actividad->id_institucion = $usuarioins->id_institucion;
+	     $actividad->fhcreacion = new CDbExpression('NOW()');
+	     $actividad->fhultmod = new CDbExpression('NOW()');
+         $actividad->cusuario = $usuarioins->email;
+				
+		if($actividad->save()){
+          $actividad_horario->id_actividad = $actividad->id_actividad;
+		  $actividad_horario->fhcreacion = new CDbExpression('NOW()');
+	      $actividad_horario->fhultmod = new CDbExpression('NOW()');
+          $actividad_horario->cusuario = $usuarioins->email;
+		  if($actividad_horario->save()){
+		  echo "Se creo la actividad correctamente";
+		 }		  
+	   }
+    }
 	    $this->render('CrearActividad',array('deporte'=>$deporte,'actividad'=>$actividad,'actividad_horario'=>$actividad_horario));
 	   
 	}		

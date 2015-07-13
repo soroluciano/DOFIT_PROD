@@ -59,6 +59,7 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     <div>
+	 El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
     <?php if(Yii::app()->user->isGuest == false): ?>
     <?php endif; ?>
     <div class="form-group">

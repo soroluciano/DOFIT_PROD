@@ -5,8 +5,7 @@
 if(!Yii::app()->user->isGuest){
 	  //Es un usuario logueado.
      	$usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
-       echo "3";
- }
+}
 
 ?>
 
@@ -52,23 +51,30 @@ if(!Yii::app()->user->isGuest){
              <?php echo CHtml::beginForm('CrearActividad','post'); ?>
 
 			<div class="form-group">
-			 <?php echo $form->labelEx($actividad,'Institucion');?>
-			 <?php echo $form->dropDownList($actividad,'id_institucion',CHtml::listData(FichaInstitucion::model()->findAll(),'id_institucion','nombre'),array('empty'=>'Seleccione una Institucion','class'=>"form-control"));?> 
-            </div>
-			
-			<div class="form-group">
 			  <?php echo $form->labelEx($deporte,'Deporte'); ?>
 			   <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione una actividad','class'=>"form-control"));?> 
             </div>
 			
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'Profesor');
-			  $id_institucion = $usuarioins->id_institucion;
-			  echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(ProfesorInstitucion::model()->findAll(),'id_institucion',$id_institucion),array('empty'=>'Seleccione un Profesor','class'=>"form-control"));?>   
-			</div>			 
+			   $id_institucion = $usuarioins->id_institucion;
+			   $profeins = ProfesorInstitucion::model()->findAll('id_institucion = :id_institucion',array(':id_institucion'=>$id_institucion)); 
+			   foreach ($profeins as $ins){
+			    $usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$ins->id_usuario));
+				echo $form->checkBoxList($actividad,'id_usuario',array('valor'=>$usuario->nombre));				
+			   }
+			  ?>
+			</div>
+             		
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'valor_actividad');?>
 			 <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Valoractividad"));?>
+			</div>
+					
+		    <div class="form-group">
+            <?php echo $form->labelEx($actividad_horario,'D&iacute;a');
+            echo $form->dropDownList($actividad_horario,'id_dia',array('empty'=>'Seleccione un Día',1=>'Lunes',2=>'Martes',3=>'Miercoles',4=>'Jueves',5=>'Viernes',6=>'Sabado'),array('class'=>"form-control")); 		
+			?>
 			</div>
 			
 			<div class="form-group">
