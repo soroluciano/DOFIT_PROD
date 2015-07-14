@@ -811,3 +811,69 @@ in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
 2015/07/13 06:25:18 [warning] [application] Failed to set unsafe attribute "valor_actividad" of "Actividad".
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (48)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/14 02:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/css/screen.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Montoto&direccion=Arenas+1151&localidad=Mor%C3%B3n&provincia=Buenos+Aires
+---
+2015/07/14 02:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/js/jquery-1.4.2.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Montoto&direccion=Arenas+1151&localidad=Mor%C3%B3n&provincia=Buenos+Aires
+---
+2015/07/14 02:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/css/screen.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Megatlon&direccion=Alem+475&localidad=Ramos+Mej%C3%ADa&provincia=Buenos+Aires
+---
+2015/07/14 02:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/js/jquery-1.4.2.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Megatlon&direccion=Alem+475&localidad=Ramos+Mej%C3%ADa&provincia=Buenos+Aires
+---
+2015/07/14 02:02:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/js/jquery-1.4.2.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Megatlon&direccion=Alem+475&localidad=Ramos+Mej%C3%ADa&provincia=Buenos+Aires
+---
+2015/07/14 02:02:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/css/screen.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Megatlon&direccion=Alem+475&localidad=Ramos+Mej%C3%ADa&provincia=Buenos+Aires
+---

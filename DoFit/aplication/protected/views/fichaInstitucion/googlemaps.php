@@ -23,12 +23,16 @@
 </script>
 
 <script>
-    $(document).ready(function(){
+    /*$(document).ready(function(){
         initialize('Cordoba Argentina');
         $('#search').bind('click',function(){
             initialize($('#address').val());    
         })
     })
+	*/
+	function mostrarDireccion(val){
+	  initialize($('#address').val());
+	}
 </script>
 <style type="text/css">
   html { height: 100% }
@@ -72,7 +76,7 @@
 </style>
 <title>jQueryLoad.com</title>
 </head>
-    <body>
+    <body onload="mostrarDireccion(this.value)">
         <div class="container">
             <div class="span-24">
                 <div class="push-5 span-14">
@@ -93,7 +97,6 @@
             <div class="push-5 span-14">
                 <div class="search">			   
                    <input id="address" value="<?php echo $lugargimnasio;?>"  placeholder="Ingrese su direccion" type ="text" />
-                    <input id="search" type="button" value= "Buscar" />
                     <div class="clear"></div>
                 </div>
                 <div class="box">
