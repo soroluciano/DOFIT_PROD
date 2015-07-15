@@ -24,7 +24,7 @@
 	<div class="td_info"><span class="bold text_right">Sexo </span>
 	<?php 		
 		$sexo = $fichaUsuario->sexo;
-		if($sexo=="m"){
+		if($sexo=="M"){
 			echo "Masculino";
 		}else{
 			echo "Femenino";

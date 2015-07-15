@@ -58,7 +58,7 @@ if(!Yii::app()->user->isGuest){
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'Profesor');
 			   $id_institucion = $usuarioins->id_institucion;
-			   echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(ProfesorInstitucion::model()->findAll(),'id_institucion','id_usuario'),array('empty'=>'Seleccione un Profesor'));				
+			   echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(ProfesorInstitucion::model()->findAll(),'id_institucion','id_usuario'),array('empty'=>'Seleccione un Profesor','class'=>"form-control"));				
 			  ?>
 			</div>
              		
