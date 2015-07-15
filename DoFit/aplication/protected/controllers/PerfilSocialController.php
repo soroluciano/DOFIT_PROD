@@ -52,8 +52,6 @@ class PerfilSocialController extends Controller
 			$model->save();
 		}
 
-
-		
 		//Modelos utilizados
 		//$model=new PerfilSocial;
 		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
@@ -93,7 +91,7 @@ class PerfilSocialController extends Controller
 			'fuModel'=>$fuModel,
 			'Us'=>$Us,
 			'fichaUsuario'=>$fichaUsuario,
-			'localidad'=>$localidad
+			'localidad'=>$localidad,
 			//'usuarioService'=>$usuarioService
 			
 		));	
