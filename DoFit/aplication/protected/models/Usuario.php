@@ -24,7 +24,7 @@
  */
 class Usuario extends CActiveRecord
 {
-    
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -59,18 +59,18 @@ class Usuario extends CActiveRecord
 	{
 	  $expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
 	  $password = $_SESSION['passoriginal'];
-	
+
 	  if(strlen($password) < 6  || strlen($password) > 15){
 	  $this->addError('password','La contraseña debe tener entre 6 y 15 caracteres');
 	  }
-	  
+
 	  if(!preg_match($expr_regular,$password)){
 		  $this->addError('password',' La contraseña debe tener al menos una mayúscula y dos números');
 	  }
-	  
-       
+
+
 	}
-	
+
 	/**
 	 * @return array relational rules.
 	 */

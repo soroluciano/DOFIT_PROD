@@ -38,7 +38,7 @@ class SiteController extends Controller
      */
     public function actionLoginAdmin()
     {
-        $model = new LoginForm;
+        $model = new LoginFormAdmin;
         $errorCode = "";
 
         // if it is ajax validation request
@@ -48,22 +48,13 @@ class SiteController extends Controller
             Yii::app()->end();
         }
         // validate user input and redirect to the previous page if valid
-        if(isset($_POST['LoginForm']))
+        if(isset($_POST['LoginFormAdmin']))
         {
-            $model->attributes=$_POST['LoginForm'];
+            $model->attributes=$_POST['LoginFormAdmin'];
             if ($model->login() && $model->validate())
             {
-                $usu = Usuario::model()->findByPK(Yii::app()->user->id);
-                if ($usu->id_perfil == 3)
-                {
-                    // ...log in the user and redirect
-                    $this->redirect(array('/site/index'));
-                }
-                else
-                {
-                    echo "Datos incorrectos";
-                    Yii::app()->user->logout();
-                }
+                $this->redirect(array('/institucion/index'));
+
             }
             else
             {
@@ -98,18 +89,28 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		$model=new LoginForm;
-
+     
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
-			echo CActiveForm::validate($model);
+			echo CActiveForm::validate($model);  
 			Yii::app()->end();
 		}
-
+         
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
 			$model->attributes=$_POST['LoginForm'];
+			  if(isset($_GET['activo'])){
+                 $activo = $_GET['activo'];
+		     if( $activo == 1){
+               $mail = $model->username;
+	           $usuario = Usuario::model()->find('email=:email',array(':email'=>$mail));
+			   $usuario->id_estado = 1;
+               $usuario->save();			   
+             }		   
+ 		  }
+			
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
                 // ...log in the user and redirect

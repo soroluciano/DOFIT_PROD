@@ -19,6 +19,10 @@ return array(
             'type' => 'reset',
             'label' => 'Reset',
         ),
+		'subir' => array(
+            'type' => 'file',
+            'label' => 'Upload',
+        ),
         'submit' => array(
             'type' => 'submit',
             'label' => 'Upload',

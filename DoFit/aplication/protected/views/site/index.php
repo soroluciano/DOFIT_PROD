@@ -6,7 +6,6 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -46,6 +45,7 @@ $this->pageTitle=Yii::app()->name;
 
 <!-- Carousel
 ================================================== -->
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <div class="item active">
@@ -57,4 +57,3 @@ $this->pageTitle=Yii::app()->name;
     El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
     <?php if(Yii::app()->user->isGuest == false): ?>
 <?php endif; ?>
-
