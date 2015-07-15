@@ -58,11 +58,7 @@ if(!Yii::app()->user->isGuest){
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'Profesor');
 			   $id_institucion = $usuarioins->id_institucion;
-			   $profeins = ProfesorInstitucion::model()->findAll('id_institucion = :id_institucion',array(':id_institucion'=>$id_institucion)); 
-			   foreach ($profeins as $ins){
-			    $usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$ins->id_usuario));
-				echo $form->checkBoxList($actividad,'id_usuario',array('valor'=>$usuario->nombre));				
-			   }
+			   echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(ProfesorInstitucion::model()->findAll(),'id_institucion','id_usuario'),array('empty'=>'Seleccione un Profesor'));				
 			  ?>
 			</div>
              		
