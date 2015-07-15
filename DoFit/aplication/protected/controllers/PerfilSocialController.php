@@ -8,8 +8,8 @@ class PerfilSocialController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+			array('deny',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('indexA','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -26,37 +26,162 @@ class PerfilSocialController extends Controller
 		);
 	}*/
 
+	/*
+	public function findPerfilByUserId(){
+
+	  $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
+	  $perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+
+		
+	}
+	*/
 
 
-    public function actionPerfilSocialIndex(){
-        $this->render('indexA');
+    public function actionIndex(){
+		
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+		
+		if($model == null){ // se crea un nuevo perfil social si el usuario es nuevo
+			$model = new PerfilSocial();
+			$model->id_usuario=$Us->id_usuario;
+			$model->fhcreacion= new CDbExpression('NOW()');
+			$model->cusuario=$Us->id_usuario;
+			$model->save();
+		}
+
+		//Modelos utilizados
+		//$model=new PerfilSocial;
+		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
+		
+		 if(isset($_POST['FileUpload'])) 
+            {                
+                if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
+                 {
+                    $uf = CUploadedFile::getInstance($fuModel, 'foto');
+                    if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+                        $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+                    {
+                          $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
+						  if($model->foto1!=null){
+							$model->foto1 = $uf->getName();
+							$model->update();
+						
+						  }else{
+							$model->foto1 = $uf->getName();
+							$model->save();
+						
+						  }
+						  
+                          Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+                          Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+                          $this->refresh();
+                    }else{
+                        Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+                    }
+                    
+                 }
+            }
+		
+			
+		$this->render('index',array(
+			'model'=>$model,
+			'fuModel'=>$fuModel,
+			'Us'=>$Us,
+			'fichaUsuario'=>$fichaUsuario,
+			'localidad'=>$localidad,
+			//'usuarioService'=>$usuarioService
+			
+		));	
     }
-
-
-    public function actionUpdatePerfilSocial(){
-            //echo "hola yo soy el callback de perfil social";
-		$model = new FileUpload();
-		$form = new CForm('application.views.UploadForm', $model);
-
-        $this->render('indexA',array('form'=>$form));
-
-    }
-
-    //public function actionUpdateImages(){
-
-	public function actionUpload() {
-		$model = new UploadForm;
-		$form = new CForm('application.views.uploadForm', $model);
-			if ($form->submitted('submit') && $form->validate()) {
-				$form->model->image = CUploadedFile::getInstance($form->model, 'image');
-				
-				Yii::app()->user->setFlash('success', 'File Uploaded');
-				$this->redirect(array('perfilSocial/indexA'));
-			}
-			$this->render('perfilSocial/perfilSocialA', array('form' => $form));
+	
+	public function actionEdicion(){
+		
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
+		
+		if($model == null){ // se crea un nuevo perfil social si el usuario nuevo
+			$model = new PerfilSocial();
+			$model->id_usuario=$Us->id_usuario;
+			$model->fhcreacion= new CDbExpression('NOW()');
+			$model->cusuario=$Us->id_usuario;
+			$model->save();
+		}
+	
+	
+		$this->render('edicion',array(
+			'model'=>$model,
+			'fuModel'=>$fuModel,
+			'Us'=>$Us,
+			'fichaUsuario'=>$fichaUsuario,
+			'localidad'=>$localidad
+			//'usuarioService'=>$usuarioService
+			
+		));	
+	
 	}
 	
+	public function actionEdicionInfo(){
+		
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$model = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$this->render('edicionInfo',array(
+			'model'=>$model,
+			
+			//'usuarioService'=>$usuarioService
+			
+		));	
+	}
+	
+	
+	public function actionInformacion(){
+		
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+		
+		
+		if($model == null){ // se crea un nuevo perfil social si el usuario nuevo
+			$model = new PerfilSocial();
+			$model->id_usuario=$Us->id_usuario;
+			$model->fhcreacion= new CDbExpression('NOW()');
+			$model->cusuario=$Us->id_usuario;
+			$model->save();
+		}
+	
+	
+		$this->render('informacion',array(
+			'model'=>$model,
+			'Us'=>$Us,
+			'fichaUsuario'=>$fichaUsuario,
+			'localidad'=>$localidad
+			//'usuarioService'=>$usuarioService
+			
+		));	
+		
 
+	}
 
+	public function actionGaleria(){
+		
+		
+		$this->render('galeria');
 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

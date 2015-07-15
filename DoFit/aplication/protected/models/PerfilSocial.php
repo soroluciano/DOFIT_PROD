@@ -39,7 +39,7 @@ class PerfilSocial extends CActiveRecord
 		return array(
 			array('id_usuario, fhcreacion, cusuario', 'required'),
 			array('id_usuario', 'numerical', 'integerOnly'=>true),
-			array('foto1, foto2, foto3, foto4, foto5, cusuario', 'length', 'max'=>60),
+			array('foto1, foto2, foto3, foto4, foto5,cusuario','length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>3000),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
@@ -108,6 +108,7 @@ class PerfilSocial extends CActiveRecord
 		$criteria->compare('fhultmod',$this->fhultmod,true);
 		$criteria->compare('cusuario',$this->cusuario,true);
 
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
