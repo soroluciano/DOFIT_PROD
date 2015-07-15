@@ -4,8 +4,6 @@
 /* @var $form CActiveForm */
 ?>
 
-
-
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -41,9 +39,10 @@
     </div>
 </div>
 
+
 <div class="container">
-    <form>
-        <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>true, 'enableClientValidation'=>false, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
+    <div class="form">
+        <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
         <div class="col-md-8">
             <div class="form-group">
                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
@@ -140,7 +139,8 @@
 		        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrate!': 'Save',array('class'=>'btn btn-primary')); ?>
 	        </div>
         </div>
-        </form>
+        </div>
+
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

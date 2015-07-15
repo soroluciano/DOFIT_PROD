@@ -6,6 +6,13 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
+<?php if(!Yii::app()->user->isGuest){
+	//Es un usuario logueado.
+     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+  }
+  ?>
+
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -17,13 +24,13 @@ $this->pageTitle=Yii::app()->name;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">DoFit!</a>
+                    <img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a>Hola!  <?php echo Yii::app()->user->getName(); ?></a></li>
-                            <li class="dropdown">
+                            <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+							<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -46,14 +53,40 @@ $this->pageTitle=Yii::app()->name;
 <!-- Carousel
 ================================================== -->
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
+<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
+    <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.jpg" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">
         </div>
     </div>
 </div>
 <div>
-    El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
+   El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
+  <?php if(!Yii::app()->user->isGuest){
+	//Es un usuario logueado.
+	      $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
+	   $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+  echo $ficha->nombre;
+  }
+	  
+  ?>	   
     <?php if(Yii::app()->user->isGuest == false): ?>
 <?php endif; ?>
+<br>
+<br>
+
+<?php 
+   echo "<div class='form-group'>";
+      echo CHtml::beginForm('../actividad/inscripcion','post'); 
+      echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
+      echo CHtml::endForm();      
+   echo "</div>";
+
+if($Us->id_perfil == 2){
+   echo "<div class='form-group'>";
+      echo CHtml::beginForm('../ProfesorInscricion/inscripcion','post'); 
+      echo CHtml::submitButton('Asociate a un gimnasio como Profesor',array('class'=>'btn btn-primary'));                      
+      echo CHtml::endForm();      
+   echo "</div>";
+}
+?>

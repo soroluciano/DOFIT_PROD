@@ -1,13 +1,11 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/cover.css" rel="stylesheet">
 
-
-
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h2 class="masthead-brand">DoFit!</h2>
+                    <h2 class="masthead-brand"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></h2>
                 </div>
             </div>
             <div class="inner cover">

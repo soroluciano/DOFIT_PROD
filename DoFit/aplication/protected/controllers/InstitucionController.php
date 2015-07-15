@@ -39,16 +39,12 @@ class InstitucionController extends Controller
             $ficha_institucion->attributes = $_POST['FichaInstitucion'];
             $localidad->attributes = $_POST['Localidad'];
 
-            // WTF   $passoriginal = $_POST['Usuario']['password'];
-            // WTF   $_SESSION['passoriginal'] = $passoriginal;
-
-
-            $model->password = md5($model->password);
             $model->fhcreacion = new CDbExpression('NOW()');
             $model->fhultmod = new CDbExpression('NOW()');
             $model->cusuario = "sysadmin";
-
-            $localidad->fhcreacion = new CDbExpression('NOW()');
+            $passencr = md5($model->password); // encripto la password en MD5
+            
+			$localidad->fhcreacion = new CDbExpression('NOW()');
             $localidad->fhultmod = new CDbExpression('NOW()');
             $localidad->cusuario = $model->email;
 
@@ -62,17 +58,17 @@ class InstitucionController extends Controller
             if ($model->validate() && $ficha_institucion->validate())
             {
                 if($model->save()){
-                    $institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
+                    Institucion::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
+					$institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
                     $ficha_institucion->id_institucion = $institucion->id_institucion;
-                    if($ficha_institucion->save())
-                    //    unset($_SESSION['passoriginal']);
-                    //$send->Send($model->email);
-                   // $this->redirect(array('view','id'=>$model->id_usuario));
-                    echo "123";
+                    if($ficha_institucion->save()){
+                      $send->Send($model->email);
+			          $this->redirect(array('view','id'=>$model->id_institucion));
                 }
             }
 
         }
+	}	
         $this->render('create',array(
             'model'=>$model,
             'ficha_institucion'=>$ficha_institucion,
@@ -88,19 +84,25 @@ class InstitucionController extends Controller
     public function actionUpdate($id)
     {
         $model=$this->loadModel($id);
-
+        $ficha_institucion = new FichaInstitucion;
+        $ficha_institucion = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$id));
+        $localidad = new Localidad;
+        $localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$ficha_institucion->id_localidad));
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
-        if(isset($_POST['Institucion']))
+        if(isset($_POST['Institucion'],$_POST['FichaInstitucion'],$_POST['Localidad']))
         {
-            $model->attributes=$_POST['Institucion'];
-            if($model->save())
-                $this->redirect(array('view','id'=>$model->id_institucion));
+            $model->attributes = $_POST['Institucion'];
+            $ficha_institucion->attributes = $_POST['FichaInstitucion'];
+            if($model->save()){
+                if($ficha_institucion->save()){
+                    $this->redirect('../index');
+                }
+            }
         }
 
         $this->render('update',array(
-            'model'=>$model,
+            'model'=>$model,'ficha_institucion'=>$ficha_institucion,'localidad'=>$localidad
         ));
     }
 
@@ -123,12 +125,21 @@ class InstitucionController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider=new CActiveDataProvider('Institucion');
+        $institucion =Institucion::model()->findAll();
         $this->render('index',array(
-            'dataProvider'=>$dataProvider,
+            'institucion'=>$institucion,
         ));
+
     }
 
+    public function actionHome()
+    {
+        $institucion =Institucion::model()->findAll();
+        $this->render('home',array(
+            'institucion'=>$institucion,
+        ));
+
+    }
     /**
      * Manages all models.
      */
@@ -171,4 +182,6 @@ class InstitucionController extends Controller
             Yii::app()->end();
         }
     }
+	
+	
 }

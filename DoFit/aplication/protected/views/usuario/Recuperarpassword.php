@@ -46,7 +46,6 @@
                    <div class="form-group">
                        <?php echo CHtml::beginForm('Recuperarpassword2','post'); ?>
 					  <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-					  <?php echo CHtml::error($usuario,'email'); ?> 	
 					  <?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-primary')); ?>                     
 					 <?php echo CHtml::endForm(); ?>      					  
                    </div>

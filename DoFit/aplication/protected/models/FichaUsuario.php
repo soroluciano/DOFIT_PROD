@@ -45,8 +45,9 @@ class FichaUsuario extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nombre, apellido, dni, sexo, fechanac, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
-            array('id_usuario, id_localidad', 'numerical', 'integerOnly'=>true),
+            array('nombre, apellido, dni, sexo', 'required','message'=>'Ingrese un {attribute}'),
+            array('fechanac, direccion, fhcreacion, cusuario','required','message'=>'Ingrese una {attribute}'),
+			array('id_usuario, id_localidad', 'numerical', 'integerOnly'=>true),
             array('id_localidad','required','message'=>'Seleccione una localidad'),
             array('conemer, direccion, cusuario', 'length', 'max'=>60),
             array('nombre, apellido','length', 'max'=>200),

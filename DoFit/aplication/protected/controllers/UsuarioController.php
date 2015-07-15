@@ -73,14 +73,13 @@ class UsuarioController extends Controller
 	    $estado = new Estado;
 		
 		// Uncomment the following line if AJAX validation is needed
-	    $this->performAjaxValidation(array($model,$ficha_usuario));
+	    //$this->performAjaxValidation(array($model,$ficha_usuario));
 
 		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
 		   $model->attributes = $_POST['Usuario'];
 		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
-
-		   
+ 
 		   $model->fhcreacion = new CDbExpression('NOW()');
 	       $model->fhultmod = new CDbExpression('NOW()');
 		   $model->cusuario = $model->email;
@@ -102,7 +101,6 @@ class UsuarioController extends Controller
 			// valido los modelos
 			$validarusuario = $model->validate();			
 		    $validarficha = $ficha_usuario->validate();
-		
 	    if($validarusuario && $validarficha){
 			if($model->save()){
 			   Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
@@ -217,12 +215,7 @@ class UsuarioController extends Controller
 		}
 	}
 	
-	public function Encriptarpassusuario($mail,$pass)
-	{
-      $user = Usuario::model()->findByAttributes(array('email'=>$mail));  
-	  $user->password = $pass;
-	  $user->save();
-	} 
+
 	public function actionSeleccionarLocalidad()
 	{
 
@@ -273,7 +266,7 @@ class UsuarioController extends Controller
 	  if($encontro == 0){
 	   ?>
 	    <script>
-		 alert("El usuario no se encuentra en la base");
+		 alert("El no usuario esta registrado");
 		 </script>	
 	<?php
         $this->render("Recuperarpassword",array('usuario'=>$usuario));
@@ -289,13 +282,13 @@ class UsuarioController extends Controller
 	  if(isset($pass)){
 		 $passencr = md5($pass); 
 		 Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
-		 
 		 ?>
 		 <script>
 		  alert("Se actualizo correctamente la contraseña de su cuenta");
 		 </script>
        <?php 
-	    }		 
+	     echo "<b>".CHtml::link('Volver al Login de DoFit!',array('../aplication'))."</b>";
+		}		 
 	}
 
     public function actionValidarUsuario()
@@ -303,4 +296,5 @@ class UsuarioController extends Controller
      $this->render('ValidarUsuario');
     }	 
     
+	
 }

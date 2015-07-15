@@ -15,7 +15,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">DoFit!</a>
+                    <img class="navbar-brand" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
@@ -31,16 +31,16 @@
 
 <!-- Carousel
 ================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
+<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
+    <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="<?php echo Yii::app()->request->baseUrl; ?>/img/10.jpg" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/10.jpg" alt="First slide">
         </div>
     </div>
 </div>
 
 <div class="container">
-    <form>
+    <div class="form">
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'InstitucionForm', 'enableAjaxValidation'=>true, 'enableClientValidation'=>false, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
         <div class="col-md-8">
             <div class="form-group">
@@ -108,8 +108,10 @@
                 <br>
                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrarse': 'Save',array('class'=>'btn btn-primary')); ?>
             </div>
+            <div class="form-group">
+                <a href="../institucion/index">Volver</a>
+            </div>
         </div>
-        </form>
+    </div>
     <?php $this->endWidget(); ?>
 </div>
-<a href="#">Volver</a>
