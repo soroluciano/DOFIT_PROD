@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2015/07/15 05:44:29 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
@@ -962,3 +963,5 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (68)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (65)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+=======
+>>>>>>> 77b02848a4763c38154840333ff4bf3beeb92c4e
