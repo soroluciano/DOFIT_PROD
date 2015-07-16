@@ -35,7 +35,8 @@
                     <div class="form-group">
                         <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?>
                     </div>
-                    <?php echo CHtml::submitButton('Ingresar a Do Fit!',array("class"=>"btn btn-primary")); ?>
+                    <?php echo CHtml::submitButton('Ingresar!',array("class"=>"btn btn-primary")); ?>
+                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/create" class="btn btn-primary">Registrate!</a>
                     <br>
                     <div class="form-group">
                         <?php echo $form->error($model,'username',array("class"=>"error_pw"));?>
@@ -156,7 +157,6 @@
 						</div>
 
       <br>
-	 <?php echo CHtml::link('Registrate en Do Fit!',array('usuario/create'));?><br/><br/>
 	 
 	  <?php echo CHtml::link('Ver Instituciones que utilizan DoFit!',array('../aplication/fichaInstitucion'));?><br/><br/>
 
