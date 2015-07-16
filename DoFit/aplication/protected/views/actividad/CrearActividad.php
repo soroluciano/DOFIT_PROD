@@ -57,8 +57,16 @@ if(!Yii::app()->user->isGuest){
 			
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'Profesor');
-			   $id_institucion = $usuarioins->id_institucion;
-			   echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(ProfesorInstitucion::model()->findAll(),'id_institucion','id_usuario'),array('empty'=>'Seleccione un Profesor','class'=>"form-control"));				
+			    $id_institucion = $usuarioins->id_institucion;
+				$profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$id_institucion));
+				foreach ( $profeins as $proins){
+				 $profesores = array();
+                 $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
+                 array_push($profesores,$fu->nombre);				 
+				}
+				$criteria = new CDbCriteria();
+                $criteria->addInCondition("nombre",$fu->nombre);
+			echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(FichaUsuario::model()->findAll($criteria),'id_usuario','nombre',array('empty'=>'Seleccione un Profesor','class'=>"form-control"))); 
 			  ?>
 			</div>
              		
