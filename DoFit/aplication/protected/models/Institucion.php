@@ -35,6 +35,7 @@ class Institucion extends CActiveRecord
             array('email, password, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
 			array('email, password, cusuario', 'length', 'max'=>60),
             array('email','email','message'=>'Ingrese una dirección de correo válida'),
+            array('email','unique','className'=>'Institucion','attributeName'=>'email','message'=>'El email ya se encuentra registrado'),
 			array('password', 'validarexpregContraseña'),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().

@@ -2,6 +2,21 @@
 
 class UsuarioService
 {
+
+    public function createPerfilVacio($UsuId){
+        $perfil = new perfilSocial();
+        $perfil->id_usuario = $UsuId;
+        $perfil->foto1 = '1.png';
+        $perfil->descripcion = '¡Escribe algo acerca de tí!';
+        $perfil->fhcreacion = new CDbExpression('NOW()');
+        $perfil->fhultmod = new CDbExpression('NOW()');
+        $perfil->cusuario = $UsuId;
+        $perfil->save();
+
+
+    }
+
+
 	public function getPerfilFoto1($UsuId){
     	
 	  $Us = Usuario::model()->findByPk($UsuId); 

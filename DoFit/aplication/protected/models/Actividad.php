@@ -77,7 +77,7 @@ class Actividad extends CActiveRecord
 			'id_deporte' => 'Id Deporte',
 			'id_institucion' => 'Institucion',
 			'id_usuario' => 'Profesor',
-			'valor_actividad' => 'Valor Actividad',
+			'valor_actividad' => 'Precio de la Actividad',
 			'fhcreacion' => 'Fhcreacion',
 			'fhultmod' => 'Fhultmod',
 			'cusuario' => 'Cusuario',
