@@ -8,6 +8,7 @@
  * @property integer $id_deporte
  * @property integer $id_institucion
  * @property integer $id_usuario
+ * @property string $valor_actividad
  * @property string $fhcreacion
  * @property string $fhultmod
  * @property string $cusuario
@@ -38,13 +39,14 @@ class Actividad extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_deporte, id_institucion, id_usuario, fhcreacion, cusuario', 'required'),
+			array('id_deporte, id_institucion, id_usuario, valor_actividad, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
 			array('id_deporte, id_institucion, id_usuario', 'numerical', 'integerOnly'=>true),
+			array('valor_actividad', 'length', 'max'=>15),
 			array('cusuario', 'length', 'max'=>60),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_actividad, id_deporte, id_institucion, id_usuario, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
+			array('id_actividad, id_deporte, id_institucion, id_usuario, valor_actividad, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,8 +75,9 @@ class Actividad extends CActiveRecord
 		return array(
 			'id_actividad' => 'Id Actividad',
 			'id_deporte' => 'Id Deporte',
-			'id_institucion' => 'Id Institucion',
-			'id_usuario' => 'Id Usuario',
+			'id_institucion' => 'Institucion',
+			'id_usuario' => 'Profesor',
+			'valor_actividad' => 'Valor Actividad',
 			'fhcreacion' => 'Fhcreacion',
 			'fhultmod' => 'Fhultmod',
 			'cusuario' => 'Cusuario',
@@ -103,6 +106,7 @@ class Actividad extends CActiveRecord
 		$criteria->compare('id_deporte',$this->id_deporte);
 		$criteria->compare('id_institucion',$this->id_institucion);
 		$criteria->compare('id_usuario',$this->id_usuario);
+		$criteria->compare('valor_actividad',$this->valor_actividad,true);
 		$criteria->compare('fhcreacion',$this->fhcreacion,true);
 		$criteria->compare('fhultmod',$this->fhultmod,true);
 		$criteria->compare('cusuario',$this->cusuario,true);
