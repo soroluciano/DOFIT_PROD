@@ -88,6 +88,10 @@
                 <?php echo $form->textField($ficha_institucion,'depto',array('class'=>"form-control",'placeholder'=>"Departamento")); ?>
                 <?php echo $form->error($ficha_institucion,'depto'); ?>
             </div>
+			<div class="form-group">
+			  <?php echo $form->labelEx($ficha_institucion,'acepta_mp'); echo $form->radioButtonList($ficha_institucion,'acepta_mp',array('S'=>'SI','N'=>'NO'),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));?>
+			</div>
+			  
             <div class="form-group">
                 <?php echo $form->labelEx($localidad,'Provincia'); ?>
                 <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),

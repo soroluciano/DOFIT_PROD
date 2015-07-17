@@ -34,7 +34,8 @@ class Institucion extends CActiveRecord
 		return array(
             array('email, password, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
 			array('email, password, cusuario', 'length', 'max'=>60),
-            array('password', 'validarexpregContraseña'),
+            array('email','email','message'=>'Ingrese una dirección de correo válida'),
+			array('password', 'validarexpregContraseña'),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
