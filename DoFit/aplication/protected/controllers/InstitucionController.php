@@ -56,8 +56,7 @@ class InstitucionController extends Controller
              
             if ($model->validate() && $ficha_institucion->validate())
             {
-               
-				if($model->save()){
+               if($model->save()){
                     Institucion::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
 					$institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
                     $ficha_institucion->id_institucion = $institucion->id_institucion;

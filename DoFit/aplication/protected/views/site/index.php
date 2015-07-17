@@ -77,14 +77,14 @@ $this->pageTitle=Yii::app()->name;
 
 <?php 
    echo "<div class='form-group'>";
-      echo CHtml::beginForm('../actividad/inscripcion','post'); 
+	  echo CHtml::beginForm('../actividad/inscripcion','post'); 
       echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
 
 if($Us->id_perfil == 2){
    echo "<div class='form-group'>";
-      echo CHtml::beginForm('../ProfesorInscricion/inscripcion','post'); 
+      echo CHtml::beginForm('../ProfesorInstitucion/Adhesiongimnasio','post'); 
       echo CHtml::submitButton('Asociate a un gimnasio como Profesor',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
