@@ -53,7 +53,7 @@
                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear Deporte': 'Save',array('class'=>'btn btn-primary')); ?>
             </div>
             <div class="form-group">
-                <a href="../institucion/index">Volver</a>
+                <a href="../deporte/index">Volver</a>
             </div>
         </div>
     </div>
