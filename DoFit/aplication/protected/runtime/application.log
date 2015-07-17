@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 2015/07/15 05:44:29 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
@@ -2191,6 +2193,7 @@ Stack trace:
 #24 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
 ---
+<<<<<<< HEAD
 2015/07/17 18:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ProfesorInscricion/inscripcion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInscric...')
@@ -2558,3 +2561,6 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (8)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+=======
+>>>>>>> 4e864743efc5fe4b2c0a34cf5a13cdcc1b590232
+>>>>>>> 08b8b900a7cd7b66e7c06262c084081c5f133e99
