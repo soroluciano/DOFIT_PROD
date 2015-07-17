@@ -168,7 +168,9 @@
 				<div style="text-align:right">
 					<input type="button" class="btn btn-info" value="Editar"/>
 				</div>
-								
+                <a href="../site/index" class="btn btn-default text-center">
+                    Continuar
+                </a>
 				
 			</div>
 		</div>
@@ -186,7 +188,8 @@
 	<div id="respuesta_ajax">
 		<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
 	</div>
-		
+
+
 
 </body>
 </html>
