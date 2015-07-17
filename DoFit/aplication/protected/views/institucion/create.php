@@ -100,7 +100,7 @@
             </div>
 			<div class="form-group">
 			  <?php echo $form->labelEx($ficha_institucion,'acepta_mp');  ?>
-              <?php echo $form->radioButtonList($ficha_institucion,'acepta_mp',array('SI'=>'S','NO'=>'N'),array('separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));?>
+              <?php echo $form->dropDownList($ficha_institucion,'acepta_mp',array('S'=>'SI','N'=>'NO'),array('class'=>"form-control"));?>
 			</div>
 			  
             <div class="form-group">
