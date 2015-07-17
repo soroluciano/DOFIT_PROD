@@ -59,17 +59,16 @@ if(!Yii::app()->user->isGuest){
 			 <?php echo $form->labelEx($actividad,'Profesor');
 			    $id_institucion = $usuarioins->id_institucion;
 				$profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$id_institucion));
-			
 				foreach ( $profeins as $proins){
 				 $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
-				 echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre));
+				 echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));
 				}
 			  ?>
 			</div>
              		
 			<div class="form-group">
 			 <?php echo $form->labelEx($actividad,'valor_actividad');?>
-			 <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Valoractividad"));?>
+			 <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Valor Actividad"));?>
 			</div>
 					
 		    <div class="form-group">
