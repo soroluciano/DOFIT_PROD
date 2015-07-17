@@ -117,11 +117,11 @@ class SiteController extends Controller
                $usuario->save();			   
              }		   
  		  }
-			
+
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
                 // ...log in the user and redirect
-                $this->redirect(array('/site/index'));
+                $this->redirect(array('/perfilSocial/index'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
