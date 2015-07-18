@@ -20,8 +20,9 @@
 		$profins->fhultmod = new CDbExpression('NOW()');
 		$profins->cusuario = $usuario->email;
 	    if($profins->validate()){
-			 if($profins->save()){
-				 echo "Se adhirio la institucion correctamente";
+			 if($profins->save()){?>
+				 <script>alert("Se envio la solicitud para adherirse correctamente");</script>
+			<?php	 
 			}
 		 }		
       }
