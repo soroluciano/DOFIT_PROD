@@ -36,28 +36,32 @@ class ActividadController extends Controller
 	 */
 	public function actionCrearActividad()
 	{
-        if(!Yii::app()->user->isGuest){
-	  //Es un usuario logueado.
-     	$usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
- 
-     }
-		$actividad = new Actividad;
+        $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
+        $actividad = new Actividad;
 	    $deporte = new Deporte;
 	    $actividad_horario = new ActividadHorario;   
-	   if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){	   
-	     $actividad->attributes = $_POST['Actividad'];
-		 $actividad_horario->attributes = $_POST['ActividadHorario'];
-		 $actividad->id_institucion = $usuarioins->id_institucion;
-	     $actividad->fhcreacion = new CDbExpression('NOW()');
-	     $actividad->fhultmod = new CDbExpression('NOW()');
-         $actividad->cusuario = $usuarioins->email;	
-		if($actividad->save()){
-		  $actividad_horario->id_actividad = $actividad->id_actividad;
-		  $actividad_horario->fhcreacion = new CDbExpression('NOW()');
-	      $actividad_horario->fhultmod = new CDbExpression('NOW()');
-          $actividad_horario->cusuario = $usuarioins->email;
-		  if($actividad_horario->save()){
-		  echo "Se creo la actividad correctamente";
+
+        if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){
+            $actividad->attributes = $_POST['Actividad'];
+            //$actividad_horario->attributes = $_POST['ActividadHorario'];
+            $actividad->id_institucion = $usuarioins->id_institucion;
+            $actividad->fhcreacion = new CDbExpression('NOW()');
+            $actividad->fhultmod = new CDbExpression('NOW()');
+            $actividad->cusuario = $usuarioins->email;
+
+            if($actividad->save()){
+
+              $dias = implode(",",$_POST['ActividadHorario']);
+                $actividad_horario->attributes = $_POST['ActividadHorario'];
+                $actividad_horario->id_dia = $dias;
+                echo $dias;
+
+                $actividad_horario->id_actividad = $actividad->id_actividad;
+                $actividad_horario->fhcreacion = new CDbExpression('NOW()');
+                $actividad_horario->fhultmod = new CDbExpression('NOW()');
+                $actividad_horario->cusuario = $usuarioins->email;
+                if($actividad_horario->save()){
+                    echo "Se creo la actividad correctamente";
 		 }		  
 	   }
     }
