@@ -59,7 +59,6 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     <div>
-<<<<<<< HEAD
 
      <?php
      echo  "<div><h2>Profesores</h2></div>";
@@ -98,18 +97,10 @@ $this->pageTitle=Yii::app()->name;
         }
      ?>
 
-
-=======
     <?php if(Yii::app()->user->isGuest == false): ?>
     <?php endif; ?>
->>>>>>> 7581170538b233dd5c09df355cad217dba9273f9
     <div class="form-group">
     <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
 	<?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>                     
     <?php echo CHtml::endForm(); ?>      
-	</div>
-	<div class="form-group">
-	<?php echo CHtml::beginForm('../ProfesorInstitucion/VerSolicitudes','post'); ?>
-	<?php echo CHtml::submitButton('Ver solicitudes de Adhesion',array('class'=>'btn btn-primary')); ?>                     
-    <?php echo CHtml::endForm(); ?>    
 	</div>
