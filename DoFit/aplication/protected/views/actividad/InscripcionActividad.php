@@ -24,7 +24,7 @@ $this->pageTitle=Yii::app()->name;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+                    <a href='../site/index'><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
@@ -56,7 +56,7 @@ $this->pageTitle=Yii::app()->name;
 <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
     <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
+          <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
         </div>
     </div>
 </div>
@@ -127,5 +127,5 @@ else
 ?>
 </div>
  <br/>
- <?php echo CHtml::link('Volver!',array('site/index'));?>
+
 	

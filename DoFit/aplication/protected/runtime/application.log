@@ -140,3 +140,51 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/FichaInstitucion/js/jquery-1.4.2.min.js
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/FichaInstitucion/GoogleMaps?nombre=Torre+Vado&direccion=Bariloche+y+Catriel++8521&localidad=Las+Grutas&provincia=Rio+Negro
 ---
+2015/07/18 23:45:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('site')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('site')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/site/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+---
+2015/07/19 00:17:20 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(149): InstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionHome()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/home
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php (10)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (149)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/19 00:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('site')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('site')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/site/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio/?id_institucion=1
+---
+2015/07/19 00:21:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aplication".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('aplication')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/aplication
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
