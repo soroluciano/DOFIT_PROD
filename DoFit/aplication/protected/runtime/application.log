@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2015/07/17 21:28:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Ediicion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
 Stack trace:
 #0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('Ediicion')
@@ -1503,3 +1504,5 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/InsertarAdhesion
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
 ---
+=======
+>>>>>>> 6cc9714a0e423202d00938dec1dbd3209802bb88
