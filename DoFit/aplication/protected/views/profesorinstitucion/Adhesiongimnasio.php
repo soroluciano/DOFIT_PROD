@@ -64,7 +64,9 @@ $this->pageTitle=Yii::app()->name;
 <div>
 
 <?php
-if($ficinstituciones !=NULL){
+$cantinstituciones = Institucion::model()->count();
+if($cantinstituciones > 0){
+     if($ficinstituciones !=NULL){
 	 echo  "<div><h2>Adherirte a un gimnasio como profesor!</h2></div>";
         echo    "<table class='table table-hover'>
                         <thead>
@@ -90,6 +92,7 @@ foreach ($ficinstituciones as $ficins){ ?>
    <td><?php echo CHtml::link('Ver ubicacion en Google Maps!',array('FichaInstitucion/GoogleMaps','nombre'=>$ficins->nombre,'direccion'=>$ficins->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia));?></td>
    </tbody>
 <?php }
+  echo "</table>";
 }
 else
 {
@@ -100,5 +103,17 @@ else
 						</div>
                     </div>";	
 }
+}
+else
+{
+   echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>No se registraron Instituciones en DoFit!</h2>
+						</div>
+                    </div>";
+}					
 ?>
-</div>
+ </div>
+ <br/>
+ <?php echo CHtml::link('Volver!',array('site/index'));?>
+

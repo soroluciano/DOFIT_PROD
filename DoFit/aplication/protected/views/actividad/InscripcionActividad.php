@@ -62,6 +62,8 @@ $this->pageTitle=Yii::app()->name;
 </div>
 <div id="body">
   <?php 
+    $cantactividades = Actividad::model()->count();
+if($cantactividades > 0){
     if($actividades != NULL){
 		echo  "<div><h2>Inscribite a las Actividades de DoFit!</h2></div>";
         echo    "<table class='table table-hover'>
@@ -100,6 +102,7 @@ $this->pageTitle=Yii::app()->name;
 			 echo "<td>$ac->valor_actividad</td>";?>
 			 <td> <?php echo CHtml::link('Ver ubicacion!',array('FichaInstitucion/GoogleMaps','nombre'=>$institucion->nombre,'direccion'=>$institucion->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia));?></td>
              <td><?php echo "<a href='InscripcionActividad/?id_actividad=$ac->id_actividad' class='btn btn-default'>Inscribirme!</a>"?></td>  
+    </table>
 <?php		
 }
 	}
@@ -110,6 +113,19 @@ else
                             <h2 class='text-center'>Ya se encuentra inscripto a todas las actividades de DoFit!</h2>
                         </div>
                     </div>";
-}					
+}
+ }
+else
+{
+ 
+  echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>No se encuentran actividades creadas!</h2>
+                        </div>
+                   </div>";	
+}				   
 ?>
-</div>	
+</div>
+ <br/>
+ <?php echo CHtml::link('Volver!',array('site/index'));?>
+	
