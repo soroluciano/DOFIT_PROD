@@ -50,10 +50,9 @@ class ActividadController extends Controller
 		 $actividad->id_institucion = $usuarioins->id_institucion;
 	     $actividad->fhcreacion = new CDbExpression('NOW()');
 	     $actividad->fhultmod = new CDbExpression('NOW()');
-         $actividad->cusuario = $usuarioins->email;
-				
+         $actividad->cusuario = $usuarioins->email;	
 		if($actividad->save()){
-          $actividad_horario->id_actividad = $actividad->id_actividad;
+		  $actividad_horario->id_actividad = $actividad->id_actividad;
 		  $actividad_horario->fhcreacion = new CDbExpression('NOW()');
 	      $actividad_horario->fhultmod = new CDbExpression('NOW()');
           $actividad_horario->cusuario = $usuarioins->email;

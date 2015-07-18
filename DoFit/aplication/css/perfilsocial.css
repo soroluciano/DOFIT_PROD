@@ -1,21 +1,32 @@
+<style>
+body{
+    color:#000000;
+}
 #content_perfil{
-    background-color:#fff;
-    width:820px;
-    height:800px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #212121;
-    border-radius: 5px;}
+    height:300px;
+    /* border-style: solid;
+     border-width: 1px;
+     border-color: #212121;
+     border-radius: 5px;*/
+    padding-top:110px;
+    padding-left:15%;
+    padding-right:15%;
+}
 
-.size_1
-{
+
+#perfil{
+    height:250px;
+}
+
+.size_1{
     font-size: 14,5px;
 }
 .size_2{
     font-size: 2em;
 }
 .size_3{
-    font-size: 3em;
+    font-size: 18px;
+    color:black;
 }
 .size_4{
     font-size: 4em;
@@ -23,63 +34,190 @@
 .size_5{
     font-size: 5em;
 }
-#p_agregar_foto
-{
-    width:160px;
-    /*background-color: #3f4752;*/
-    height: 160px;
-    position:relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #fff;
-}
-.p_foto_perfil{
-    width:90px;
-   /* background-color: #3f4752;*/
-    height: 160px;
-    position:relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #CCD9FF;
-}
-.p_foto_2{
-    width:120px;
-    background-color: #3f4752;
-    height: 160px;
-    position:relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #fff;
-}
-.p_foto_3{
-    width:213px;
-    background-color: #3f4752;
-    height: 160px;
-    position:relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #fff;
-}
-.p_foto_4{
-    width:213px;
-    background-color: #3f4752;
-    height: 160px;
-    position:relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #fff;
-}
+
 #pop_up_form{
     display:hidden;
 
 }
+.navbar-wrapper{
 
-body{padding-top:30px;}
-
-.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
-
-small {
-    display: block;
-    line-height: 1.428571429;
-    color: #999;
+    margin-bottom:30px;
 }
+#p_datos{
+    float:left;
+    width:60%;
+
+}
+#imagen_perfil{
+    float:left;
+    width:30%;
+}
+.img1{
+    width:320px;
+    height:320px;
+}
+.img2{
+    width:320px;
+    height:320px;
+}
+
+.img3{
+    width:320px;
+    height:320px;
+}
+
+.img4{
+    width:320px;
+    height:320px;
+}
+
+.img1:hover{
+    opacity: 0.8;
+}
+.img2:hover{
+    opacity: 0.8;
+}
+.img3:hover{
+    opacity: 0.8;
+}
+.img4:hover{
+    opacity: 0.8;
+}
+
+#seccion_imagenes{
+    margin-top:80px;
+}
+.imagenes{
+    float:left;
+    padding-right:25px;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+.img_p{
+    width:60%;
+    border:0.2;
+    border-style:solid;
+    border-color:
+}
+
+.italic{
+    font-style:italic;
+}
+.text_left{
+    text-align:left;
+}
+.text_right{
+    text-align:right;
+}
+
+@media only screen and (max-width: 500px) {
+    #content_perfil{
+        padding-left:5%;
+        padding-right:5%;
+    }
+    #imagen_perfil{
+        float:left;
+    }
+    .img_p{
+        width:60%;
+    }
+    .btn_pfl{
+        width:60%;
+    }
+
+}
+
+hr.fancy-line {
+    border: 0;
+    height: 2px;
+    background-color:#80E680;
+
+}
+hr.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.fancy-line:after {
+    content:'';
+    height: 0.5em;
+    top: 1px;
+}
+
+hr.fancy-line:before, hr.fancy-line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+
+hr.fancy-line, hr.fancy-line:before {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+hr.fancy-line:after {
+    background: #f4f4f4;
+}
+#separador{
+    padding-top:2%;
+    padding-left:12.5%;
+    padding-right:12.5%;
+}
+#seccion_botones{
+    padding-top:2%;
+    padding-left:12.4%;
+    padding-right:12.5%;
+}
+#respuesta_ajax{
+    padding-top:2%;
+    padding-left:12.5%;
+    padding-right:12.5%;
+}
+#loadingImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.td{
+    width:100%;
+    height:40px;
+    /*	border-style:solid;
+        border-bottom-width:1px;
+        border-bottom-color:#CECEBF;*/
+    text-align:left;
+    vertical-align:middle;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+
+}
+.td_info{
+    width:100%;
+    height:40px;
+    text-align:left;
+    vertical-align:middle;
+    padding-top:24px;
+    padding-left:125px;
+    padding-right:10px;
+}
+
+
+#info_table{
+    padding-top:20px;
+}
+#descripcion:hover{
+    background-color:#E6E6E6;
+}
+.bold {
+    font-weight:bold;
+}
+.editar_datos{
+    padding-top:20px;
+}
+
+.light_green{
+    color:#5CE62E;
+}
+.grey_color{
+    color:#afb2b5;
+}
+
+</style>

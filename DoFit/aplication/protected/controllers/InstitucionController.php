@@ -38,7 +38,6 @@ class InstitucionController extends Controller
             $model->attributes = $_POST['Institucion'];
             $ficha_institucion->attributes = $_POST['FichaInstitucion'];
             $localidad->attributes = $_POST['Localidad'];
-
             $model->fhcreacion = new CDbExpression('NOW()');
             $model->fhultmod = new CDbExpression('NOW()');
             $model->cusuario = "sysadmin";
@@ -52,12 +51,13 @@ class InstitucionController extends Controller
             $ficha_institucion->fhultmod = new CDbExpression('NOW()');
             $ficha_institucion->cusuario = $model->email;
             $ficha_institucion->id_localidad = $_POST['Localidad']['id_localidad'];
-            $mail = $model->email;
-
-
+			
+			$mail = $model->email;
+             
             if ($model->validate() && $ficha_institucion->validate())
             {
-                if($model->save()){
+               
+				if($model->save()){
                     Institucion::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
 					$institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
                     $ficha_institucion->id_institucion = $institucion->id_institucion;
