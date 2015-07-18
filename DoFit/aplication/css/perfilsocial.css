@@ -1,4 +1,4 @@
-<style>
+
 body{
     color:#000000;
 }
@@ -165,6 +165,7 @@ hr.fancy-line:after {
     padding-top:2%;
     padding-left:12.4%;
     padding-right:12.5%;
+	margin-top:10%;
 }
 #respuesta_ajax{
     padding-top:2%;
@@ -219,5 +220,15 @@ hr.fancy-line:after {
 .grey_color{
     color:#afb2b5;
 }
+#descripcion_inpt{
+width:100%;
+height:80%;
+resize:none;
+}
 
-</style>
+.upload_div{
+    width:320px;
+    height:320px;
+}
+
+

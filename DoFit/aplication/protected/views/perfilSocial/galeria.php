@@ -2,25 +2,85 @@
 			<div class="text-left grey_color"><h2>Mis Fotos</h2></div>
 			
 			<div class="imagenes">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/5526842873_055399282d_z.jpg" ?>" class="img-rounded img1">
+			
+			
+			<?php
+				if(isset($perfilSocial->foto1)){	
+			?>
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1 ?>" class="img-rounded img1">
+			<?php		
+				}
+				
+			?>
+						<?php
+				if(isset($perfilSocial->foto2)){	
+			?>
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto2 ?>" class="img-rounded img2">
+			<?php		
+				}
+				
+			?>
+			<?php
+				if(isset($perfilSocial->foto3)){	
+			?>
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto3 ?>" class="img-rounded img3">
+			<?php		
+				}
+				
+			?>
+			<?php
+				if(isset($perfilSocial->foto4)){	
+			?>
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto4 ?>" class="img-rounded img4">
+			<?php		
+				}
+				
+			?>
+			<?php
+				if(isset($perfilSocial->foto5)){	
+			?>
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto5 ?>" class="img-rounded img5">
+			<?php		
+				}
+				
+			?>
+			<?php
+				if(isset($perfilSocial->foto6)){	
+			?>
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto6 ?>" class="img-rounded img6">
+			<?php		
+				}
+				
+			?>
+			
+
 			</div>
-			<div class="imagenes">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/17965681236_68bfc14014_z.jpg"?>" class="img-rounded img2">
-			</div>
-			<div class="imagenes">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/18218617986_4e6e6deddf_z.jpg"?>" class="img-rounded img3">
-			</div>
+			<input type='button' class='btn btn-success text-right' onclick='indexSaveFotos();' value='Agregar foto'/>
 		
-			<div class="imagenes">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/5526842873_055399282d_z.jpg"?>" class="img-rounded img4">
-			</div>
-			
-			<div class="imagenes">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/5526842873_055399282d_z.jpg"?>" class="img-rounded img4">
-			</div>
-			
-			<div class="imagenes">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/5526842873_055399282d_z.jpg"?>" class="img-rounded img4">
-			</div>
+		
+			<div class="col-md-8">
+
+			<?php $formUp=$this->beginWidget('CActiveForm', array(
+				'id'=>'imagen-form',
+				'enableClientValidation'=>true,
+				'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+				'clientOptions'=>array(
+				'validateOnSubmit'=>true,
+				),
+			)); 
+			?>
+
+				<div class="form-group">
+					<?php echo $formUp->labelEx($fuModel,'foto'); ?>
+					<?php echo $formUp->fileField($fuModel,'foto'); ?>
+					<?php echo $formUp->error($fuModel,'foto'); ?>
+					
+				</div>
+				<div class="row buttons">
+					<?php echo CHtml::submitButton('Subir Imagen'); ?>
+				</div>
+
+			<?php $this->endWidget(); ?>
+			</div><!-- form -->
 	
 </div>

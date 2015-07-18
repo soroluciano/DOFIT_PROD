@@ -1,7 +1,10 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" rel="stylesheet">
-
+<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.1/uploadfile.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://hayageek.github.io/jQuery-Upload-File/4.0.1/jquery.uploadfile.min.js"></script>
 <script type="text/javascript">
     var showLoader;
+	var i = 0;
     $(window).load(function(){
 
         info();
@@ -18,7 +21,7 @@
         $.ajax({
             url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/galeria ';?>',
             type: 'post',
-            data: { /*raza: valor, sexo: sx */},
+            //data: { },
             success:function(response){
                 $('#respuesta_ajax').html(response);
 
@@ -80,6 +83,96 @@
         });
     }
 
+	function edicionDescripcionForm(){	
+       <?php
+			$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+			$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		?>
+		$("#descripcion").html("<form><textarea id='descripcion_inpt' maxlength='500'><?php echo $perfilSocial->descripcion;?></textarea><br><input type='button' class='btn btn-default' id ='btn_save_edicion' value='Guardar' onclick='saveEdicionInfo();'/><input type='button' id='btn_close' class='btn btn-warning' value='Cancelar' onclick='cancelEdit();'/></form>");
+
+	} 
+	
+	function saveEdicionInfo(){
+		debugger;
+		var descripcion = $("#descripcion_inpt").val();
+		
+		showLoader = setTimeout("$('#loadingImage').show()", 300);
+        $.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/saveInfo ';?>',
+            type: 'post',
+            data: { descripcion:descripcion},
+            success:function(response){
+	
+				$("#descripcion").html("<div id='descripcion_inpt' onclick='edicionDescripcionForm();'>"+response+"</div>");
+				
+				//$("#descripcion_inpt").append(res);
+            },
+            error: function(e){
+                $('#logger').html(e.responseText);
+            }
+        });
+		
+		
+	
+	}
+	
+	function cancelEdit(){
+		$("#descripcion").html("<div id='descripcion_inpt' onclick='edicionDescripcionForm();'><?php echo $model->descripcion; ?></div>");	
+	}
+		
+	function saveFotos(){
+	
+		/*$.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/saveInfo ';?>',
+            type: 'post',
+            data: { descripcion:descripcion},
+            success:function(response){
+	
+				//$("#descripcion").html("<div id='descripcion_inpt' onclick='edicionDescripcionForm();'>"+response+"</div>");
+				
+				//$("#descripcion_inpt").append(res);
+            },
+            error: function(e){
+                $('#logger').html(e.responseText);
+            }
+        });
+	*/
+		
+	}
+		
+	function indexSaveFotos(){
+		debugger;
+		$.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/indexSaveFotos ';?>',
+            type: 'post',
+            data:{},
+            success:function(response){
+				$('#subir_foto').html(response);
+            },
+            error: function(e){
+                $('#logger').html(e.responseText);
+            }
+        });
+	}	
+	
+	 function edicion(){
+        debugger;
+        showLoader = setTimeout("$('#loadingImage').show()", 300);
+        $.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/edicion ';?>',
+            type: 'post',
+            data: { /*raza: valor, sexo: sx */},
+            success:function(response){
+                $('#respuesta_ajax').html(response);
+
+            },
+            error: function(e){
+                $('#logger').html(e.responseText);
+            }
+        });
+    }
+		
+		
 
 </script>
 
@@ -151,28 +244,35 @@
  */
  ?>
  
-    <div id="content_perfil">
+	<div id="content_perfil">
 		<div id="perfil">			
 			<div id="imagen_perfil">
 				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$model->foto1 ?>" class="img-circle img_p">
 			</div>	
-				
+
 			<div id="p_datos"> 
 				<p><span class='size_2'><?php echo $nombre." ".$apellido; ?></span>, <span class='size_1'>25</span>&nbsp;&nbsp;</p>
-				
+
 				<p><span class='size_2'>2 </span><span class='size_1'>Deportes</span></p>	
-				
+
 				<div id="descripcion" class="size_3 italic">
-					<?php echo $model->descripcion;?>
+					<?php echo "<div id='descripcion_inpt' onclick='edicionDescripcionForm();'>";
+						  echo $model->descripcion; 
+						  echo  "</div>"; 
+					?>
+					
+					
 				</div>
-				<div style="text-align:right">
+				<!--	<div style="text-align:right">
 					<input type="button" class="btn btn-info" value="Editar"/>
-				</div>
-                <a href="../site/index" class="btn btn-default text-center">
-                    Continuar
-                </a>
-				
+				</div>-->
+
+				<br>
+				<a href="../site/index" class="btn btn-default text-center">
+					Continuar
+				</a>
 			</div>
+
 		</div>
 	</div>	
 <!--<div id="separador">
@@ -188,6 +288,8 @@
 	<div id="respuesta_ajax">
 		<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
 	</div>
+	
+	
 
 
 

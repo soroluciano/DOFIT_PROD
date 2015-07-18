@@ -8,31 +8,8 @@
 		
 ?>
 
-<div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'perfil-social-form',
-)); ?>
-	
-
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>3000)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
-
-	
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
-
-<div class="form">
+<div class="col-md-8">
 
 <?php $formUp=$this->beginWidget('CActiveForm', array(
 	'id'=>'imagen-form',
@@ -44,11 +21,10 @@
 )); 
 ?>
 
-	<div class="row">
+	<div class="upload_div">
 		<?php echo $formUp->labelEx($fuModel,'foto'); ?>
 		<?php echo $formUp->fileField($fuModel,'foto'); ?>
 		<?php echo $formUp->error($fuModel,'foto'); ?>
-		<?php echo $Us->id_usuario ?>
 		
 	</div>
 	<div class="row buttons">

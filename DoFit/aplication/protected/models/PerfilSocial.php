@@ -14,6 +14,8 @@
  * @property string $fhcreacion
  * @property string $fhultmod
  * @property string $cusuario
+ * @property string $fotoPerfil
+ * @property string $foto6
  *
  * The followings are the available model relations:
  * @property Usuario $idUsuario
@@ -26,7 +28,6 @@ class PerfilSocial extends CActiveRecord
 	public function tableName()
 	{
 		return 'perfil_social';
-
 	}
 
 	/**
@@ -39,12 +40,12 @@ class PerfilSocial extends CActiveRecord
 		return array(
 			array('id_usuario, fhcreacion, cusuario', 'required'),
 			array('id_usuario', 'numerical', 'integerOnly'=>true),
-			array('foto1, foto2, foto3, foto4, foto5,cusuario','length', 'max'=>60),
+			array('foto1, foto2, foto3, foto4, foto5, cusuario, fotoPerfil, foto6', 'length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>3000),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_usuario, foto1, foto2, foto3, foto4, foto5, descripcion, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
+			array('id_usuario, foto1, foto2, foto3, foto4, foto5, descripcion, fhcreacion, fhultmod, cusuario, fotoPerfil, foto6', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,6 +77,8 @@ class PerfilSocial extends CActiveRecord
 			'fhcreacion' => 'Fhcreacion',
 			'fhultmod' => 'Fhultmod',
 			'cusuario' => 'Cusuario',
+			'fotoPerfil' => 'Foto Perfil',
+			'foto6' => 'Foto6',
 		);
 	}
 
@@ -107,8 +110,9 @@ class PerfilSocial extends CActiveRecord
 		$criteria->compare('fhcreacion',$this->fhcreacion,true);
 		$criteria->compare('fhultmod',$this->fhultmod,true);
 		$criteria->compare('cusuario',$this->cusuario,true);
+		$criteria->compare('fotoPerfil',$this->fotoPerfil,true);
+		$criteria->compare('foto6',$this->foto6,true);
 
-		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
