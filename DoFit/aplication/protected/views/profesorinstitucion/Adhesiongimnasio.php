@@ -53,6 +53,7 @@ $this->pageTitle=Yii::app()->name;
 <!-- Carousel
 ================================================== -->
 
+
 <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
     <div class="carousel-inner_min" role="listbox">
         <div class="item active">
