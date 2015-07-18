@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1145,3 +1146,23 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (67)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (34)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+=======
+2015/07/18 13:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pago/index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('pago/index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/pago/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/home
+---
+2015/07/18 13:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pago/index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('pago/index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/pago/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/home
+---
+>>>>>>> c317437255bad33229c2562bd4cb3386237c41d4
