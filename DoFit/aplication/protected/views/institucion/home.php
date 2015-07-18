@@ -63,7 +63,7 @@ $this->pageTitle=Yii::app()->name;
             <label>
                 Pagos
             </label>
-            <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+            <?php echo CHtml::beginForm('../pago/index','post'); ?>
             <?php echo CHtml::submitButton('Generar pagos',array('class'=>'btn btn-primary')); ?>
             <?php echo CHtml::endForm(); ?>
 
@@ -111,7 +111,7 @@ $this->pageTitle=Yii::app()->name;
         }
      ?>
      <?php
-        echo  "<div><label>Inscripción de alumnos a actividades</label>></div>";
+        echo  "<div><label>Inscripción de alumnos a actividades</label></div>";
         if($actividades_pen != null){
             echo    "<table class='table table-hover'>
                         <thead>
