@@ -266,7 +266,7 @@ class UsuarioController extends Controller
 	  if($encontro == 0){
 	   ?>
 	    <script>
-		 alert("El no usuario esta registrado");
+		 alert("El usuario no esta registrado");
 		 </script>	
 	<?php
         $this->render("Recuperarpassword",array('usuario'=>$usuario));

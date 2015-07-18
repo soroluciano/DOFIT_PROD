@@ -75,7 +75,7 @@ $this->pageTitle=Yii::app()->name;
             <?php echo CHtml::endForm(); ?></div>
 
             <?php
-     echo  "<div><label>Profesores</label></div>";
+     echo  "<div><label> Solicitud de adhesion a Profesores</label></div>";
         if($profesor_pen != null){
             echo    "<table class='table table-hover'>
                         <thead>
@@ -99,7 +99,7 @@ $this->pageTitle=Yii::app()->name;
 
             }
             echo "</tr></tbody>";
-
+            echo "</table>";
         }
         else
         {
@@ -135,7 +135,7 @@ $this->pageTitle=Yii::app()->name;
 
             }
             echo "</tr></tbody>";
-
+            echo "</table>"; 
         }
         else
         {
