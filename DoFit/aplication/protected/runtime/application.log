@@ -719,3 +719,25 @@
   </body>
 </html>
 
+2015/07/18 10:04:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "VerSolicitudes".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('VerSolicitudes')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('VerSolicitudes')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/VerSolicitudes
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/home
+---
+2015/07/18 10:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "VerSolicitudes".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('VerSolicitudes')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('VerSolicitudes')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/VerSolicitudes
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/home
+---
