@@ -99,7 +99,7 @@ else
    echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
                             <h2 class='text-center'>Ya enviaste solicitudes a todas las instituciones de DoFit!</h2>
-                             <h2 class='text-center'>Dirigete a cada una de ellas y consulta su estado!</h2>
+                             <h2 class='text-center'>Dirigite a cada una de ellas y consulta su estado!</h2>
 						</div>
                     </div>";	
 }
