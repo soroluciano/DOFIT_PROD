@@ -76,7 +76,7 @@ $this->pageTitle=Yii::app()->name;
 
 <?php 
    echo "<div class='form-group'>";
-	  echo CHtml::beginForm('../actividad/inscripcion','post'); 
+	  echo CHtml::beginForm('../actividad/InscripcionActividad','post'); 
 
     echo "<div class='form-group'>";
       echo CHtml::beginForm('../actividad/inscripcion','post'); 

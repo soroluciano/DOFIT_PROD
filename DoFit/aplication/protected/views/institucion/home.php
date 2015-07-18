@@ -59,11 +59,15 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     <div>
-	 El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
     <?php if(Yii::app()->user->isGuest == false): ?>
     <?php endif; ?>
     <div class="form-group">
     <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
 	<?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>                     
     <?php echo CHtml::endForm(); ?>      
+	</div>
+	<div class="form-group">
+	<?php echo CHtml::beginForm('../ProfesorInstitucion/VerSolicitudes','post'); ?>
+	<?php echo CHtml::submitButton('Ver solicitudes de Adhesion',array('class'=>'btn btn-primary')); ?>                     
+    <?php echo CHtml::endForm(); ?>    
 	</div>

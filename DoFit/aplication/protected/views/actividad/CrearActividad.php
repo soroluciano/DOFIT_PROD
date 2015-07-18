@@ -52,7 +52,8 @@ if(!Yii::app()->user->isGuest){
             <div class="form-group">
 			  <?php echo $form->labelEx($deporte,'Deporte'); ?>
 			  <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
-            </div>
+              <?php echo $form->error($deporte,'deporte')?>
+			</div>
 			<div class="form-group">
                 <?php echo $form->labelEx($actividad,'Profesor');
 			    $id_institucion = $usuarioins->id_institucion;
@@ -68,6 +69,7 @@ if(!Yii::app()->user->isGuest){
 			<div class="form-group">
                 <?php echo $form->labelEx($actividad,'valor_actividad');?>
 			    <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Precio"));?>
+                <?php echo $form->error($actividad,'valor_actividad')?> 			
 			</div>
 
             <div class="row">
