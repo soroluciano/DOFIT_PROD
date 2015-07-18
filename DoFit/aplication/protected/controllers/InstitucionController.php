@@ -145,7 +145,8 @@ class InstitucionController extends Controller
     public function actionHome()
     {
         $profesor_pen =ProfesorInstitucion::model()->findAll('id_estado = 0 and id_institucion = :id_institucion',array(':id_institucion'=>Yii::app()->user->id));
-        $this->render('home',array('profesor_pen'=>$profesor_pen));
+        $actividades_pen = ActividadAlumno::model()->findAll('id_estado = 0 and id_actividad in (select id_actividad from actividad where id_institucion = :id_institucion)',array(':id_institucion'=>Yii::app()->user->id));
+        $this->render('home',array('profesor_pen'=>$profesor_pen,'actividades_pen'=>$actividades_pen));
     }
     /**
      * Manages all models.
