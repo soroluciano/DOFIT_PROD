@@ -6,7 +6,9 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<?php if(!Yii::app()->user->isGuest){
+<?php 
+
+if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
      $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
      $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
@@ -91,4 +93,5 @@ if($Us->id_perfil == 2){
       echo CHtml::endForm();      
    echo "</div>";
 }
+    
 ?>

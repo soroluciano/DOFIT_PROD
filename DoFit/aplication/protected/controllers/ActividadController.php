@@ -182,7 +182,7 @@ class ActividadController extends Controller
 		$actialum->cusuario = $usuario->email;
 	    if($actialum->validate()){
 			 if($actialum->save()){
-				 ?><script> alert("Se envio la solicitud  de inscripcion correctamente");</script><?php
+				 ?><script> alert("Se envio la solicitud de inscripcion correctamente");</script><?php
 			}
 		 }		
       }
