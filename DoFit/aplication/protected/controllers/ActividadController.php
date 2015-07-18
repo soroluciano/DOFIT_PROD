@@ -115,10 +115,8 @@ class ActividadController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Actividad');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+
+        $this->render('index');
 	}
 
 	/**

@@ -124,20 +124,28 @@ class InstitucionController extends Controller
      */
     public function actionIndex()
     {
-        $institucion =Institucion::model()->findAll();
-        $this->render('index',array(
-            'institucion'=>$institucion,
-        ));
+        $this->render('index');
+    }
 
+    public function actionAceptar($id)
+    {
+        $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
+        $pi->id_estado = 1;
+        $pi->update();
+        $this->redirect('../home');
+    }
+
+    public function actionCancelar($id)
+    {
+        $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
+        $pi->delete();
+        $this->redirect('../home');
     }
 
     public function actionHome()
     {
-        $institucion =Institucion::model()->findAll();
-        $this->render('home',array(
-            'institucion'=>$institucion,
-        ));
-
+        $profesor_pen =ProfesorInstitucion::model()->findAll('id_estado = 0 and id_institucion = :id_institucion',array(':id_institucion'=>Yii::app()->user->id));
+        $this->render('home',array('profesor_pen'=>$profesor_pen));
     }
     /**
      * Manages all models.

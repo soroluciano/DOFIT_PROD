@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -1017,3 +1018,5 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentity.php (42)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php (56)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (121)
+=======
+>>>>>>> 6404a45afa4f23abb7f231dc4cb1269fee249ed9
