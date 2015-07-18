@@ -914,3 +914,592 @@ in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\components\UserIdentit
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\models\LoginForm.php (56)
 in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\SiteController.php (122)
 >>>>>>> 98371fcb381965e9c1e5b9ea42d5e0e18ee6b2b7
+2015/07/18 00:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/css/screen.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Torre+Vado&direccion=Bariloche+y+Catriel++8521&localidad=Las+Grutas&provincia=Rio+Negro
+---
+2015/07/18 00:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/js/jquery-1.4.2.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Torre+Vado&direccion=Bariloche+y+Catriel++8521&localidad=Las+Grutas&provincia=Rio+Negro
+---
+2015/07/17 19:50:01 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (81)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/17 19:55:13 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\UsuarioController.php (81)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 01:50:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "inscripcion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('inscripcion')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('inscripcion')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('actividad/inscr...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/inscripcion
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:33:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.profesorinstitucion' doesn't exist. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN ProfesorInstitucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.usuario_id != :value.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (23)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:33:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.profesorinstitucion' doesn't exist. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN ProfesorInstitucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.usuario_id != :value' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:34:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.usuario_id != :value.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (23)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:34:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.usuario_id != :value' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:36:28 [error] [php] Undefined variable: id_usuario (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (21)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:36:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.usuario_id != 2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:36:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.usuario_id != 2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:37:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pi.usuario_id' in 'where clause'. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = t.id_institucion WHERE pi.usuario_id != 2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:37:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pi.usuario_id' in 'where clause'. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = t.id_institucion WHERE pi.usuario_id != 2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:38:36 [error] [php] Object of class CDbCriteria could not be converted to string (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:39:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pi.usuario_id' in 'where clause'. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = t.id_institucion WHERE pi.usuario_id !=2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:39:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pi.usuario_id' in 'where clause'. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = t.id_institucion WHERE pi.usuario_id !=2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:44:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.id_usuario !=2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:44:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  pi.id_institucion = ins.id_institucion WHERE pi.id_usuario !=2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:46:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  ficha_institucion.id_institucion = ins.id_institucion WHERE pi.id_usuario !=2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:46:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  ficha_institucion.id_institucion = ins.id_institucion WHERE pi.id_usuario !=2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:46:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  ficha_institucion.id_institucion = ins.id_institucion WHERE pi.id_usuario !=2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:46:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ins.nombre' in 'field list'. The SQL statement executed was: SELECT ins.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  ficha_institucion.id_institucion = ins.id_institucion WHERE pi.id_usuario !=2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:48:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.id_usuario' in 'where clause'. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  t.id_institucion = pi.id_institucion WHERE t.id_usuario !=2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 02:48:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.id_usuario' in 'where clause'. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` LEFT JOIN profesor_institucion AS pi ON  t.id_institucion = pi.id_institucion WHERE t.id_usuario !=2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 02:51:41 [error] [exception.CException] exception 'CException' with message 'Property "Usuario.id" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(18): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 03:07:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` WHERE t.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario =2.
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (22)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:07:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT t.nombre FROM `ficha_institucion` `t` WHERE t.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario =2' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 03:28:26 [error] [php] Undefined variable: ficinstituciones (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (50)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:29:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:64)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (64)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:30:42 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:64)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (64)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:35:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:64)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (64)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:38:02 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:64)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (64)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:41:08 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (65)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:44:10 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (65)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:48:45 [error] [php] Undefined variable: localidad (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:50:24 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (65)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:52:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (65)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:56:57 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (65)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:58:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.id_provincia' in 'field list'. The SQL statement executed was: SELECT t.nombre,t.cuit,t.direccion,t.id_localidad,t.id_provincia,t.telfijo,t.celular,t.depto,t.piso FROM `ficha_institucion` `t` WHERE t.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario =2).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (16)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 03:58:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.id_provincia' in 'field list'. The SQL statement executed was: SELECT t.nombre,t.cuit,t.direccion,t.id_localidad,t.id_provincia,t.telfijo,t.celular,t.depto,t.piso FROM `ficha_institucion` `t` WHERE t.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario =2)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(16): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adhesiongimnasi...')
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/07/18 03:59:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GoogleMaps".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('GoogleMaps')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('GoogleMaps')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('profesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/profesorInstitucion/GoogleMaps?nombre=Megatlon&direccion=Lanus+340&localidad=Viedma&provincia=Rio+Negro
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+---
+2015/07/18 04:00:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/js/jquery-1.4.2.min.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Torre+Vado&direccion=Bariloche+y+Catriel++8521&localidad=Las+Grutas&provincia=Rio+Negro
+---
+2015/07/18 04:00:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('fichaInstitucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/css/screen.css
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/GoogleMaps?nombre=Torre+Vado&direccion=Bariloche+y+Catriel++8521&localidad=Las+Grutas&provincia=Rio+Negro
+---
+2015/07/18 04:02:11 [error] [php] Undefined variable: ficha (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php:17)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ProfesorInstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ProfesorInstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php(17): ProfesorInstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ProfesorInstitucionController->actionAdhesiongimnasio()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ProfesorInstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ProfesorInstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ProfesorInstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\profesorinstitucion\Adhesiongimnasio.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ProfesorInstitucionController.php (17)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/07/18 04:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Adherirme".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('Adherirme')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('Adherirme')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adherirme?id_institucion=
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+---
+2015/07/18 04:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "InsertarAdhesion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('InsertarAdhesio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('InsertarAdhesio...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/InsertarAdhesion/?id_institucion=
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+---
+2015/07/18 04:40:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "InsertarAdhesion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('InsertarAdhesio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('InsertarAdhesio...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/InsertarAdhesion?id_institucion
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+---
+2015/07/18 04:40:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "InsertarAdhesion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('InsertarAdhesio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('InsertarAdhesio...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('ProfesorInstitu...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/InsertarAdhesion
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/ProfesorInstitucion/Adhesiongimnasio
+---

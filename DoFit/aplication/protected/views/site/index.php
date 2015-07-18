@@ -61,7 +61,6 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 <div>
-   El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
   <?php if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
 	      $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
@@ -75,16 +74,12 @@ $this->pageTitle=Yii::app()->name;
 <br>
 <br>
 
-<<<<<<< HEAD
 <?php 
    echo "<div class='form-group'>";
 	  echo CHtml::beginForm('../actividad/inscripcion','post'); 
-=======
-<?php
 
     echo "<div class='form-group'>";
       echo CHtml::beginForm('../actividad/inscripcion','post'); 
->>>>>>> 98371fcb381965e9c1e5b9ea42d5e0e18ee6b2b7
       echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
