@@ -6,9 +6,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<?php 
-
-if(!Yii::app()->user->isGuest){
+<?php if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
      $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
      $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
@@ -55,43 +53,67 @@ if(!Yii::app()->user->isGuest){
 <!-- Carousel
 ================================================== -->
 
+
 <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
     <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/11.jpg" alt="First slide">
         </div>
     </div>
 </div>
 <div>
-  <?php if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-	      $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	   $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-  echo $ficha->nombre;
-  }
-	  
-  ?>	   
-    <?php if(Yii::app()->user->isGuest == false): ?>
-<?php endif; ?>
-<br>
-<br>
 
-<?php 
-   echo "<div class='form-group'>";
-	  echo CHtml::beginForm('../actividad/InscripcionActividad','post'); 
-
-    echo "<div class='form-group'>";
-      echo CHtml::beginForm('../actividad/inscripcion','post'); 
-      echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-
-if($Us->id_perfil == 2){
-   echo "<div class='form-group'>";
-      echo CHtml::beginForm('../ProfesorInstitucion/Adhesiongimnasio','post'); 
-      echo CHtml::submitButton('Asociate a un gimnasio como Profesor',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
+<?php
+$cantinstituciones = Institucion::model()->count();
+if($cantinstituciones > 0){
+     if($ficinstituciones !=NULL){
+	 echo  "<div><h2>Adherirte a un gimnasio como profesor!</h2></div>";
+        echo    "<table class='table table-hover'>
+                        <thead>
+                            <tr>
+    <tr><th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Localidad</th><th>Provincia</th><th>Telefono Fijo</th><th>Celular</th><th>Departamento</th><th>Piso</th><th></th><th>Google Maps</th></tr></thead>";
+foreach ($ficinstituciones as $ficins){ ?>
+   <tbody>
+   <tr>
+   <td><?php echo $ficins->nombre ?></td>
+   <td><?php echo $ficins->cuit ?></td>
+   <td><?php echo $ficins->direccion ?></td>
+   <td><?php $id_localidad = $ficins->id_localidad; 
+       $localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$id_localidad));
+      echo $localidad->localidad;?></td>  
+   <td><?php $id_provincia = $localidad->id_provincia;
+        $provincia = Provincia::model()->find('id_provincia=:id_provincia',array(':id_provincia'=>$id_provincia));
+        echo $provincia->provincia;?></td>		
+   <td><?php echo $ficins->telfijo ?></td>
+   <td><?php echo $ficins->celular?></td>
+   <td><?php echo $ficins->depto?></td>
+   <td><?php echo $ficins->piso?></td>
+   <td><?php echo "<a href='Adhesiongimnasio/?id_institucion=$ficins->id_institucion' class='btn btn-default'>Enviar solicitud!</a>"?></td> 
+   <td><?php echo CHtml::link('Ver ubicacion en Google Maps!',array('FichaInstitucion/GoogleMaps','nombre'=>$ficins->nombre,'direccion'=>$ficins->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia));?></td>
+   </tbody>
+<?php }
+  echo "</table>";
 }
-    
+else
+{
+   echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>Ya enviaste solicitudes a todas las instituciones de DoFit!</h2>
+                             <h2 class='text-center'>Dirigite a cada una de ellas y consulta su estado!</h2>
+						</div>
+                    </div>";	
+}
+}
+else
+{
+   echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>No se registraron Instituciones en DoFit!</h2>
+						</div>
+                    </div>";
+}					
 ?>
+ </div>
+ <br/>
+ <?php echo CHtml::link('Volver!',array('site/index'));?>
+

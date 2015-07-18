@@ -77,7 +77,7 @@ else
 {
    echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay Institucionescreados aun</h2>
+                            <h2 class='text-center'>No hay Instituciones creadas aún</h2>
                         </div>
                     </div>";	
 }

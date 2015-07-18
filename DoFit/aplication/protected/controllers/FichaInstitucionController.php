@@ -71,7 +71,7 @@ class FichaInstitucionController extends Controller
 		{
 			$model->attributes=$_POST['FichaInstitucion'];
 			if($model->save())
-				$this->redirect(array('index');
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

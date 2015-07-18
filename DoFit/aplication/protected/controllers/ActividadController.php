@@ -36,28 +36,33 @@ class ActividadController extends Controller
 	 */
 	public function actionCrearActividad()
 	{
-        if(!Yii::app()->user->isGuest){
-	  //Es un usuario logueado.
-     	$usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
- 
-     }
-		$actividad = new Actividad;
+        $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
+        $actividad = new Actividad;
 	    $deporte = new Deporte;
 	    $actividad_horario = new ActividadHorario;   
-	   if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){	   
-	     $actividad->attributes = $_POST['Actividad'];
-		 $actividad_horario->attributes = $_POST['ActividadHorario'];
-		 $actividad->id_institucion = $usuarioins->id_institucion;
-	     $actividad->fhcreacion = new CDbExpression('NOW()');
-	     $actividad->fhultmod = new CDbExpression('NOW()');
-         $actividad->cusuario = $usuarioins->email;	
-		if($actividad->save()){
-		  $actividad_horario->id_actividad = $actividad->id_actividad;
-		  $actividad_horario->fhcreacion = new CDbExpression('NOW()');
-	      $actividad_horario->fhultmod = new CDbExpression('NOW()');
-          $actividad_horario->cusuario = $usuarioins->email;
-		  if($actividad_horario->save()){
-		  echo "Se creo la actividad correctamente";
+   	
+        if(isset($_POST['Actividad'],$_POST['ActividadHorario'])){
+            
+			$actividad->attributes = $_POST['Actividad'];
+            //$actividad_horario->attributes = $_POST['ActividadHorario'];
+            $actividad->id_institucion = $usuarioins->id_institucion;
+            $actividad->fhcreacion = new CDbExpression('NOW()');
+            $actividad->fhultmod = new CDbExpression('NOW()');
+            $actividad->cusuario = $usuarioins->email;
+            if($actividad->save()){ 
+			    
+				$dias = implode(",",$_POST['ActividadHorario']);
+				$actividad_horario->attributes = $_POST['ActividadHorario'];
+		
+				$actividad_horario->id_dia = $dias;
+                echo $actividad_horario->id_dia;
+
+                $actividad_horario->id_actividad = $actividad->id_actividad;
+                $actividad_horario->fhcreacion = new CDbExpression('NOW()');
+                $actividad_horario->fhultmod = new CDbExpression('NOW()');
+                $actividad_horario->cusuario = $usuarioins->email;
+                if($actividad_horario->save()){
+                    echo "Se creo la actividad correctamente";
 		 }		  
 	   }
     }
@@ -110,10 +115,8 @@ class ActividadController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Actividad');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+
+        $this->render('index');
 	}
 
 	/**
@@ -158,4 +161,33 @@ class ActividadController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionInscripcionActividad()
+	{
+	  if(!Yii::app()->user->isGuest){
+	   //Es un usuario logueado.
+        $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+      }
+	   if(isset($_GET['id_actividad'])){
+		$actialum = new ActividadAlumno;
+	    $id_actividad = $_GET['id_actividad'];
+		$id_usuario = $usuario->id_usuario;
+		$actialum->id_usuario = $id_usuario;
+		$actialum->id_actividad = $id_actividad;
+		$actialum->id_estado = 0;
+		$actialum->fhcreacion = new CDbExpression('NOW()'); 
+		$actialum->fhultmod = new CDbExpression('NOW()');
+		$actialum->cusuario = $usuario->email;
+	    if($actialum->validate()){
+			 if($actialum->save()){
+				 ?><script> alert("Se envio la solicitud de inscripcion correctamente");</script><?php
+			}
+		 }		
+      }
+	  $criteria = new CDbCriteria;
+      $criteria->select = 't.id_actividad,t.id_deporte,t.id_institucion,t.id_usuario,t.valor_actividad';
+      $criteria->condition = 't.id_actividad NOT IN (SELECT id_actividad FROM actividad_alumno WHERE id_usuario ='.$usuario->id_usuario.')';
+	  $actividades = Actividad::model()->findAll($criteria);
+	  $this->render('InscripcionActividad',array('actividades'=>$actividades,));
+	}	 
 }

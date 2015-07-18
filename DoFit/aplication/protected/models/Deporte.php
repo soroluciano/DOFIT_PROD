@@ -31,7 +31,7 @@ class Deporte extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('deporte, fhcreacion, cusuario', 'required'),
+			array('deporte, fhcreacion, cusuario', 'required','message'=>'Seleccione {attribute}'),
 			array('deporte, cusuario', 'length', 'max'=>60),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().

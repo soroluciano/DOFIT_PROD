@@ -59,11 +59,93 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     <div>
-	 El id de usuario es:  <?php echo Yii::app()->user->getId(); ?>
-    <?php if(Yii::app()->user->isGuest == false): ?>
-    <?php endif; ?>
-    <div class="form-group">
-    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
-	<?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>                     
-    <?php echo CHtml::endForm(); ?>      
+        <div>
+            <label>
+                Pagos
+            </label>
+            <?php echo CHtml::beginForm('../pago/index','post'); ?>
+            <?php echo CHtml::submitButton('Generar pagos',array('class'=>'btn btn-primary')); ?>
+            <?php echo CHtml::endForm(); ?>
+
+        </div>
+        <div class="form-group">
+            <div><label>Actividades</label></div>
+            <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+            <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>
+            <?php echo CHtml::endForm(); ?></div>
+
+            <?php
+     echo  "<div><label>Profesores</label></div>";
+        if($profesor_pen != null){
+            echo    "<table class='table table-hover'>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>.</th>
+                                <th>.</th>
+                            </tr>
+                        </thead>";
+            foreach($profesor_pen as $f){
+                $fu = FichaUsuario::model()->findAll('id_usuario=:id_usuario',array(':id_usuario'=>$f->id_usuario));
+                foreach($fu as $p){
+                    echo "<tbody>
+                                <tr>
+                                    <td>$p->nombre</td>
+                                    <td>$p->apellido</td>
+                                    <td><a href='../institucion/aceptar/$p->id_usuario' class='btn btn-default'>Aceptar<a/></td>
+                                    <td><a href='../institucion/cancelar/$p->id_usuario' class='btn btn-default'>Cancelar<a/></td>";
+                }
+
+            }
+            echo "</tr></tbody>";
+
+        }
+        else
+        {
+            echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>No hay solicitud de profesores</h2>
+                        </div>
+                    </div>";
+        }
+     ?>
+     <?php
+        echo  "<div><label>Inscripción de alumnos a actividades</label></div>";
+        if($actividades_pen != null){
+            echo    "<table class='table table-hover'>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>.</th>
+                                <th>.</th>
+                            </tr>
+                        </thead>";
+            foreach($actividades_pen as $a){
+                $fua = FichaUsuario::model()->findAll('id_usuario=:id_usuario',array(':id_usuario'=>$a->id_usuario));
+                foreach($fua as $t){
+                    echo "<tbody>
+                                <tr>
+                                    <td>$t->nombre</td>
+                                    <td>$t->apellido</td>
+                                    <td><a href='../actividadAlumno/aceptar/$t->id_usuario' class='btn btn-default'>Aceptar<a/></td>
+                                    <td><a href='../actividadAlumno/cancelar/$t->id_usuario' class='btn btn-default'>Cancelar<a/></td>";
+                }
+
+            }
+            echo "</tr></tbody>";
+
+        }
+        else
+        {
+            echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>No hay solicitud de inscripción a actividades</h2>
+                        </div>
+                    </div>";
+        }
+        ?>
+
+
 	</div>

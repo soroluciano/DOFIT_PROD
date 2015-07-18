@@ -6,14 +6,12 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<?php 
-
-if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-  }
-  ?>
+<?php if(!Yii::app()->user->isGuest){
+    //Es un usuario logueado.
+    $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+}
+?>
 
 <div class="navbar-wrapper">
     <div class="container">
@@ -32,8 +30,8 @@ if(!Yii::app()->user->isGuest){
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
-							<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraci�n <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Anotarme en actividades</a></li>
@@ -58,40 +56,30 @@ if(!Yii::app()->user->isGuest){
 <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
     <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
         </div>
     </div>
 </div>
-<div>
-  <?php if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-	      $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	   $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-  echo $ficha->nombre;
-  }
-	  
-  ?>	   
-    <?php if(Yii::app()->user->isGuest == false): ?>
-<?php endif; ?>
-<br>
-<br>
 
-<?php 
-   echo "<div class='form-group'>";
-	  echo CHtml::beginForm('../actividad/InscripcionActividad','post'); 
+<div class="form-group">
+    <div><label>Actividades</label></div>
+    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::submitButton('Crear Pago',array('class'=>'btn btn-primary')); ?>
+    <?php echo CHtml::endForm(); ?></div>
+<div class="form-group">
+    <div><label>Actividades</label></div>
+    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::submitButton('Eliminar Pago',array('class'=>'btn btn-primary')); ?>
+    <?php echo CHtml::endForm(); ?></div>
 
-    echo "<div class='form-group'>";
-      echo CHtml::beginForm('../actividad/inscripcion','post'); 
-      echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
+<div class="form-group">
+    <div><label>Actividades</label></div>
+    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::submitButton('Modificar Pago',array('class'=>'btn btn-primary')); ?>
+    <?php echo CHtml::endForm(); ?></div>
 
-if($Us->id_perfil == 2){
-   echo "<div class='form-group'>";
-      echo CHtml::beginForm('../ProfesorInstitucion/Adhesiongimnasio','post'); 
-      echo CHtml::submitButton('Asociate a un gimnasio como Profesor',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-}
-    
-?>
+<div class="form-group">
+    <div><label>Actividades</label></div>
+    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::submitButton('Consultar pagos',array('class'=>'btn btn-primary')); ?>
+    <?php echo CHtml::endForm(); ?></div>

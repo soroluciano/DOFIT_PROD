@@ -116,20 +116,23 @@ class SiteController extends Controller
 			   $usuario->id_estado = 1;
                $usuario->save();			   
              }		   
- 		  }
-
+ 		  }   
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login()) {
                 // ...log in the user and redirect
-                $perfil = perfilSocial::model()->findByPk(Yii::app()->user->id);
+                //Yii::app()->session->open();
+				//Yii::app()->session['id_usuario'] = Yii::app()->user->id;
+				
+				$perfil = perfilSocial::model()->findByPk(Yii::app()->user->id);
                 if ($perfil == null) {
                     $usu = new UsuarioService();
                     $usu->createPerfilVacio(Yii::app()->user->id);
                     $this->redirect(array('/perfilSocial/index'));
                 } else {
-                    $this->redirect(array('/site/index'));
+					$this->redirect(array('/site/index'));
                 }
             }
+
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -153,8 +156,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginFormInstitucion'];
 			   
 		// validate user input and redirect to the previous page if valid
-	    if($model->validate() && $model->login()){
-            echo "2";            
+	    if($model->validate() && $model->login()){            
 		   // ...log in the user and redirect
           $this->redirect(array('/institucion/home'));
 		 }
