@@ -43,7 +43,7 @@ class FichaInstitucion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email,password,nombre, cuit, id_localidad, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
+			array('nombre, cuit, id_localidad, direccion, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
 			array('id_institucion, cuit, id_localidad', 'numerical', 'integerOnly'=>true),
 			array('telfijo, celular', 'length', 'max'=>30),
 			array('nombre', 'length', 'max'=>200),
