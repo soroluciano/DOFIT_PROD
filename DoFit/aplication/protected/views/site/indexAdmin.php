@@ -14,7 +14,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Index</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,11 +32,11 @@
         </div>
     </div>
 </div>
-<br>
+
 <div class="container">
     <div class="jumbotron">
         <h1>¡Bienvenido, Administrador!</h1>
-        <p>En esta sección podrás administrar DoFit.¿Qué deseas administrar?</p>
+        <p>En esta sección podrás administrar Dofit.<br>¿Qué deseas administrar?</p>
         <p><a class="btn btn-primary btn-lg" href="../institucion/index" role="button">Gimnasios</a>
            <a class="btn btn-primary btn-lg" href="../deporte/index" role="button">Deportes</a></p>
     </div>
