@@ -14,7 +14,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Index</a></li>
+                            <li class="active"><a href="../site/indexAdmin">Index</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,7 +35,6 @@
 
 <div class="container">
     <?php
-    if($institucion != null){
         echo  "<div><h2>Gimnasios</h2></div>";
         echo    "<table class='table table-hover'>
                         <thead>
@@ -46,27 +45,24 @@
                                 <th>.</th>
                             </tr>
                         </thead>";
-        foreach($institucion as $d){
-            echo "<tbody>
-                                <tr>
+        echo "<tbody>";
+                    if($institucion != null) {
+                        foreach ($institucion as $d) {
+                            echo "<tr>
                                     <td>$d->id_institucion</td>
                                     <td>$d->email</td>
                                     <td><a href='../institucion/update/$d->id_institucion' class='btn btn-default'>Modificar<a/></td>
-                                    <td><a href='../institucion/delete/$d->id_institucion' class='btn btn-default'>Borrar<a/></td>";
-        }
-        echo "</tr></tbody></table>";
-
-    }
-    else
-    {
-        echo    "<div class='row'>
-                        <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay gimnasios creados aun</h2>
-                        </div>
-                    </div>";
-    }
+                                    <td><a href='../institucion/delete/$d->id_institucion' class='btn btn-default'>Borrar<a/></td>
+                                  <tr>";
+                        }
+                    }
+                    else {
+                        echo "<td>No hay gimnasios creados aún</td>";
+                    }
+        echo "</tbody></table>";
     ?>
     <a href="../institucion/create" class="btn btn-primary btn-lg">
         Crear institución
     </a>
 </div>
+

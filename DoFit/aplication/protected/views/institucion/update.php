@@ -14,7 +14,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Index</a></li>
+                            <li class="active"><a href="../../site/indexAdmin">Index</a></li>
                         </ul>
                     </div>
                 </div>
