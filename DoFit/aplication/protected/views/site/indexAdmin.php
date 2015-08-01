@@ -34,19 +34,10 @@
 </div>
 <br>
 <div class="container">
-    <div class='row'>
-        <div class=".col-md-6 .col-md-offset-3">
-            <a href="../institucion/index" class="btn btn-default text-center">
-                ABM Gimnasios
-            </a>
-        </div>
-    </div>
-    <br>
-    <div class='row'>
-        <div class=".col-md-6 .col-md-offset-3">
-            <a href="../deporte/index" class="btn btn-default text-center">
-                ABM Deportes
-            </a>
-        </div>
+    <div class="jumbotron">
+        <h1>¡Bienvenido, Administrador!</h1>
+        <p>En esta sección podrás administrar DoFit.¿Qué deseas administrar?</p>
+        <p><a class="btn btn-primary btn-lg" href="../institucion/index" role="button">Gimnasios</a>
+           <a class="btn btn-primary btn-lg" href="../deporte/index" role="button">Deportes</a></p>
     </div>
 </div>
