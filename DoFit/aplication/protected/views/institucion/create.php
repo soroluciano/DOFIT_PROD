@@ -1,9 +1,3 @@
-<?php
-/* @var $this InstitucionController */
-/* @var $model Institucion */
-/* @var $form CActiveForm */
-?>
-
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -20,7 +14,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="../site/indexAdmin">Index</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,7 +36,7 @@
 <div class="container">
     <div class="form">
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'InstitucionForm', 'enableAjaxValidation'=>true, 'enableClientValidation'=>false, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
-        <div class="col-md-8">
+       <div class="col-md-8">
             <div class="form-group">
                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
                 <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"exampleInputEmail1")); ?>

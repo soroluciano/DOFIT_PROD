@@ -124,7 +124,10 @@ class InstitucionController extends Controller
      */
     public function actionIndex()
     {
-        $this->render('index');
+        $institucion =Institucion::model()->findAll();
+        $this->render('index',array(
+            'institucion'=>$institucion,
+        ));
     }
 
     public function actionAceptar($id)
