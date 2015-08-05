@@ -1,3 +1,38 @@
+<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.1/uploadfile.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://hayageek.github.io/jQuery-Upload-File/4.0.1/jquery.uploadfile.min.js"></script>
+<script type="text/javascript">
+
+    function mostrarmapa(contador){
+	   alert(contador);
+	    var nombre = $('#nombre'+contador).html();
+		var cuit = $('#cuit'+contador).html();
+	     alert(cuit);
+	
+		debugger;
+        //showLoader = setTimeout("$('#loadingImage').show()", 300);
+        //$("#btn_galeria").addClass("active");
+        //$("#btn_info").removeClass("active");
+
+        $.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/fichaInstitucion/GoogleMaps';?>',
+			type: 'post',
+            data: data,
+            
+			success:function(data){
+                alert(data);
+				//$('#respuesta_ajax').html(response);
+
+            },
+            error: function(e){
+                alert('Ocurrio un error');
+				alert(data);
+				//$('#logger').html(e.responseText);
+            },
+		 dataType:'html'
+        });
+	}
+</script>
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -48,30 +83,37 @@
     </div>
 
 <?php if($ficha_institucion !=null){
-	 echo  "<div><h2>Instituciones que utilizan Do fit!</h2></div>";
-        echo    "<table class='table table-hover'>
+   $cont = 0; // contador de registros
+  	echo  "<div><h2>Instituciones que utilizan Do fit!</h2></div>";
+		echo    "<table class='table table-hover'>
                         <thead>
                             <tr>
     <tr><th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Localidad</th><th>Provincia</th><th>Telefono Fijo</th><th>Celular</th><th>Departamento</th><th>Piso</th><th>Google Maps</th></tr></thead>";
-foreach ($ficha_institucion as $ficins) {?>
+foreach ($ficha_institucion as $ficins) {
+?>
    <tbody>
+    <?php $cont++;?>
+   <form onsubmit='mostrarmapa(<?php echo $cont?>);'id='formulario' method='post'>
    <tr>
-   <td><?php echo $ficins->nombre ?></td>
-   <td><?php echo $ficins->cuit ?></td>
-   <td><?php echo $ficins->direccion ?></td>
-   <td><?php $id_localidad = $ficins->id_localidad; 
+   <td id="nombre<?php echo $cont?>"><?php echo $ficins->nombre ?></td>
+   <td id="cuit<?php echo $cont?>"><?php echo $ficins->cuit ?></td>
+   <td id="direccion<?php echo $cont?>"><?php echo $ficins->direccion ?></td>
+   <td id="localidad<?php echo $cont?>"><?php $id_localidad = $ficins->id_localidad; 
        $localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$id_localidad));
       echo $localidad->localidad;?></td>  
-   <td><?php $id_provincia = $localidad->id_provincia;
+   <td id="provincia<?php echo $cont?>"><?php $id_provincia = $localidad->id_provincia;
         $provincia = Provincia::model()->find('id_provincia=:id_provincia',array(':id_provincia'=>$id_provincia));
         echo $provincia->provincia;?></td>		
-   <td><?php echo $ficins->telfijo ?></td>
-   <td><?php echo $ficins->celular?></td>
-   <td><?php echo $ficins->depto?></td>
-   <td><?php echo $ficins->piso?></td>
-   <td><?php echo CHtml::link('Ver ubicacion en Google Maps!',array('GoogleMaps','nombre'=>$ficins->nombre,'direccion'=>$ficins->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia));?></td>
-   </tbody>
-<?php }
+   <td id="telfijo<?php echo $cont?>"><?php echo $ficins->telfijo ?></td>
+   <td id="celular<?php echo $cont?>"><?php echo $ficins->celular?></td>
+   <td id="depto<?php echo $cont?>"><?php echo $ficins->depto?></td>
+   <td id="piso<?php echo $cont?>"><?php echo $ficins->piso?></td>
+   <td><input type="submit" value="Ver Ubicación en Google Maps!"></input></td>
+   </form>
+  </tbody>
+<?php 
+}
+echo "</table>";
 }
 else
 {
@@ -82,4 +124,5 @@ else
                     </div>";	
 }
 ?>
+<div id="respuesta_ajax"></div>
 </div>

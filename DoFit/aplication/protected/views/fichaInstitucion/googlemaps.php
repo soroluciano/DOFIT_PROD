@@ -81,26 +81,26 @@
             <div class="span-24">
                 <div class="push-5 span-14">
 				<?php
-				 $nombre = $_GET['nombre'];
-				 $localidad = $_GET['localidad'];
+				 $nombre = $_POST['nombre'];
+				 /*$localidad = $_GET['localidad'];
 				 $direccion = $_GET['direccion'];
 				 $provincia = $_GET['provincia'];
                  $locali = str_replace("+"," ",$localidad);
 				 $direcc = str_replace("+"," ",$direccion);
 				 $provin = str_replace("+"," ",$provincia);
 				 $lugargimnasio = $direcc.", ".$localidad.", ".$provin;
-				 
+				 */
 		         ?>
-                 <h2> Ubicaci&oacute;n en Google Maps de <?php echo $nombre?></h2>
+                 <h2> Ubicaci&oacute;n en Google Maps de <?php echo $nombre ?></h2>
                 </div>
             </div>
             <div class="push-5 span-14">
                 <div class="search">			   
-                   <input id="address" value="<?php echo $lugargimnasio;?>"  placeholder="Ingrese su direccion" type ="text" />
+                   <input id="address" value="<?php //echo $lugargimnasio;?>"  placeholder="Ingrese su direccion" type ="text" />
                     <div class="clear"></div>
                 </div>
                 <div class="box">
-                    <div id="map_canvas"></div>
+                    <div id="map_canvas"></div> 
                 </div>
             </div>
            
