@@ -1,9 +1,3 @@
-<?php
-/* @var $this InstitucionController */
-/* @var $model Institucion */
-/* @var $form CActiveForm */
-?>
-
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -20,7 +14,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="../site/indexAdmin">Index</a></li>
                         </ul>
                     </div>
                 </div>
