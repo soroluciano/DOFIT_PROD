@@ -1,0 +1,935 @@
+2015/08/07 05:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "perfilSocail".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocail')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocail
+---
+2015/08/07 05:15:00 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:15:04 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/index
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:17:19 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:17:28 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/index
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:17:31 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "crearActividad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('crearActividad')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/crearActividad
+---
+2015/08/07 05:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "crearActividad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('crearActividad')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/crearActividad
+---
+2015/08/07 05:18:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crearAxctividad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('crearAxctividad')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('crearAxctividad')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('actividad/crear...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/crearAxctividad
+---
+2015/08/07 05:18:49 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/crearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:18:51 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/crearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:19:13 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/crearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:19:19 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:19:21 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:19:30 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:19:32 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "CrearActivdiad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('CrearActivdiad')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/CrearActivdiad
+---
+2015/08/07 05:19:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "CrearActividad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('CrearActividad')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/CrearActividad
+---
+2015/08/07 05:20:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "InscripcionActividad".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('InscripcionActi...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/InscripcionActividad
+---
+2015/08/07 05:20:49 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\index.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(126): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionIndex()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/index
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\index.php (18)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (126)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:22:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:23:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:23:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:23:10 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\index.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(126): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionIndex()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/index
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\index.php (18)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (126)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:23:19 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:23:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/login
+---
+2015/08/07 05:23:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "idex".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('idex')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('idex')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/ide...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/idex
+---
+2015/08/07 05:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/login
+---
+2015/08/07 05:24:44 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(152): InstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionHome()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/home
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php (10)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (152)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/login
+---
+2015/08/07 05:25:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/login
+---
+2015/08/07 05:26:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deporte".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('deporte')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('deporte')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('deporte/deporte...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/deporte/deporte/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/deporte/update/1
+---
+2015/08/07 05:27:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:28:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deporte".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('deporte')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('deporte')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('deporte/deporte...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/deporte/deporte/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/deporte/update/8
+---
+2015/08/07 05:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "institucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('institucion')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('institucion')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/institucio...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/site/institucion
+---
+2015/08/07 05:31:33 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:32:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('loginInstitucio...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/loginInstitucion
+---
+2015/08/07 05:32:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginAdmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginAdmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginAdmin
+---
+2015/08/07 05:33:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/08/07 05:34:27 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/crearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:34:32 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:35:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:35:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('loginInstitucio...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/loginInstitucion
+---
+2015/08/07 05:36:39 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(152): InstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionHome()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/Home
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php (10)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (152)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:36:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Home".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Home')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Home
+---
+2015/08/07 05:37:00 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(152): InstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionHome()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/Home
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php (10)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (152)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:37:50 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(152): InstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionHome()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/Home
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php (10)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (152)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/login
+---
+2015/08/07 00:38:21 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/login
+---
+2015/08/07 05:39:11 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(152): InstitucionController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionHome()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/home
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\home.php (10)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (152)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:39:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/admin
+---
+2015/08/07 05:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Admin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Admin
+---
+2015/08/07 05:40:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "indexAdmin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('indexAdmin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/indexAdmin
+---
+2015/08/07 05:41:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:42:12 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:43:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Admin".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Admin
+---
+2015/08/07 05:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/loginInstitucion
+---
+2015/08/07 05:44:30 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php:59)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ActividadController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ActividadController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(76): ActividadController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\actividad\CrearActividad.php (59)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (76)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/08/07 05:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginInstitucion".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('loginInstitucio...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('loginInstitucio...')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('Institucion/log...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/Institucion/loginInstitucion
+---
