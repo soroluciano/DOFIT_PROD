@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
 <link href="css/screen.css" rel="stylesheet" type ="text/css" />
 <script type="text/javascript">
@@ -23,15 +23,10 @@
 </script>
 
 <script>
-    /*$(document).ready(function(){
-        initialize('Cordoba Argentina');
-        $('#search').bind('click',function(){
-            initialize($('#address').val());    
-        })
-    })
-	*/
+   
 	function mostrarDireccion(val){
 	  initialize($('#address').val());
+	  
 	}
 </script>
 <style type="text/css">
@@ -81,22 +76,22 @@
             <div class="span-24">
                 <div class="push-5 span-14">
 				<?php
-				 $nombre = $_POST['nombre'];
-				 /*$localidad = $_GET['localidad'];
-				 $direccion = $_GET['direccion'];
-				 $provincia = $_GET['provincia'];
-                 $locali = str_replace("+"," ",$localidad);
-				 $direcc = str_replace("+"," ",$direccion);
-				 $provin = str_replace("+"," ",$provincia);
+				 $nombre = $_GET["nombre"];		      
+				 $direccion = $_GET["direccion"];
+				 $localidad = $_GET["localidad"];
+				 $provincia = $_GET["provincia"];
+                 $locali = str_replace("%20"," ",$localidad);
+				 $direcc = str_replace("%20"," ",$direccion);
+				 $provin = str_replace("%20"," ",$provincia);
 				 $lugargimnasio = $direcc.", ".$localidad.", ".$provin;
-				 */
+			     
 		         ?>
                  <h2> Ubicaci&oacute;n en Google Maps de <?php echo $nombre ?></h2>
                 </div>
             </div>
             <div class="push-5 span-14">
                 <div class="search">			   
-                   <input id="address" value="<?php //echo $lugargimnasio;?>"  placeholder="Ingrese su direccion" type ="text" />
+                   <input id="address" value="<?php echo $lugargimnasio;?>"  placeholder="Ingrese su direccion" type ="text" />
                     <div class="clear"></div>
                 </div>
                 <div class="box">

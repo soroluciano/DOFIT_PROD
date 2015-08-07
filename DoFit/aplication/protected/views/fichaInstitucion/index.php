@@ -1,36 +1,19 @@
-<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.1/uploadfile.css" rel="stylesheet">
+<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.1/uploadfile.css" rel="stylesheet"></link>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.1/jquery.uploadfile.min.js"></script>
 <script type="text/javascript">
+    
 
     function mostrarmapa(contador){
-	   alert(contador);
-	    var nombre = $('#nombre'+contador).html();
+	   debugger;
+		var nombre = $('#nombre'+contador).html();
 		var cuit = $('#cuit'+contador).html();
-	     alert(cuit);
-	
-		debugger;
-        //showLoader = setTimeout("$('#loadingImage').show()", 300);
-        //$("#btn_galeria").addClass("active");
-        //$("#btn_info").removeClass("active");
-
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/fichaInstitucion/GoogleMaps';?>',
-			type: 'post',
-            data: data,
-            
-			success:function(data){
-                alert(data);
-				//$('#respuesta_ajax').html(response);
-
-            },
-            error: function(e){
-                alert('Ocurrio un error');
-				alert(data);
-				//$('#logger').html(e.responseText);
-            },
-		 dataType:'html'
-        });
+	    var direccion = $('#direccion'+contador).html();
+		var localidad = $('#localidad'+contador).html();
+        var provincia = $('#provincia'+contador).html();
+        window.open("fichaInstitucion/googlemaps?nombre="+nombre+"&direccion="+direccion+"&localidad="+localidad+"&provincia="+provincia+"",'','width=600, height=550');
+        
+      
 	}
 </script>
 <div class="navbar-wrapper">
@@ -80,7 +63,6 @@
 
 <div class="container">
     <div class='row'>
-    </div>
 
 <?php if($ficha_institucion !=null){
    $cont = 0; // contador de registros
@@ -93,7 +75,7 @@ foreach ($ficha_institucion as $ficins) {
 ?>
    <tbody>
     <?php $cont++;?>
-   <form onsubmit='mostrarmapa(<?php echo $cont?>);'id='formulario' method='post'>
+   <form onsubmit="mostrarmapa(<?php echo $cont?>);"  name="formulario" id="formulario" method="post">
    <tr>
    <td id="nombre<?php echo $cont?>"><?php echo $ficins->nombre ?></td>
    <td id="cuit<?php echo $cont?>"><?php echo $ficins->cuit ?></td>
@@ -124,5 +106,7 @@ else
                     </div>";	
 }
 ?>
-<div id="respuesta_ajax"></div>
+</div>
+<div id='respuesta_ajax'></div>
+
 </div>

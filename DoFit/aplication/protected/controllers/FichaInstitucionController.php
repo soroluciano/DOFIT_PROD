@@ -173,6 +173,7 @@ class FichaInstitucionController extends Controller
 	
 	public function actionGoogleMaps()
 	{
-      $this->render('googlemaps');
+     
+	  $this->render('googlemaps');
 	}
 }
