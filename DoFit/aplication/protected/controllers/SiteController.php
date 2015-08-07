@@ -120,14 +120,14 @@ class SiteController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login()) {
                 // ...log in the user and redirect
-                //Yii::app()->session->open();
-				//Yii::app()->session['id_usuario'] = Yii::app()->user->id;
+                Yii::app()->session->open();
+				Yii::app()->session['id_usuario'] = Yii::app()->user->id;
 				
-				$perfil = perfilSocial::model()->findByPk(Yii::app()->user->id);
-                if ($perfil == null) {
+				$perfil = PerfilSocial::model()->findByPk(Yii::app()->user->id);
+               if ($perfil == null) {
                     $usu = new UsuarioService();
                     $usu->createPerfilVacio(Yii::app()->user->id);
-                    $this->redirect(array('/perfilSocial/index'));
+                   $this->redirect(array('/perfilSocial/index'));
                 } else {
 					$this->redirect(array('/site/index'));
                 }

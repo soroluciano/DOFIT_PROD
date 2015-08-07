@@ -287,6 +287,16 @@ class PerfilSocialController extends Controller
 	
 	}
 	
+	public function actionGrabarImagenes(){
+		
+	//$this->renderPartial('pruebas');
+		$Us =  Usuario::model()->findByPk(Yii::app()->user->id);
+		$model = new FotosUsuario();
+		$model->id_usuario=$Us->id_usuario;
+		$model->save();
+		 $this->render('grabarImagenes',array('model'=>$model));
+	}
+	
 	
 	
 	
