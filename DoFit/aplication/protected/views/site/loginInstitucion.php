@@ -9,14 +9,14 @@
                 </div>
             </div>
             <div class="inner cover">
-                <h1 class="cover-heading"> Login Institución</h1>
+                <h1 class="cover-heading">Acceso Gimnasios</h1>
                 <p class="lead"><a>
                         <?php $form=$this->beginWidget('CActiveForm', array(
                             'id'=>'loginformadmin',
                             'enableClientValidation'=>true,
                             'clientOptions'=>array('validateOnSubmit'=>true,),)); ?>
                         <div class="form-group">
-                            <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"E-Mail",'id'=>"inputEmail")); ?>
+                            <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"inputEmail")); ?>
                         </div>
 						<div class="form-group">
                             <?php echo $form->error($model,'username');?>

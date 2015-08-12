@@ -55,10 +55,9 @@
 			
 
 			</div>
-			<input type='button' class='btn btn-success text-right' onclick='indexSaveFotos();' value='Agregar foto'/>
+			<input type='button' class='btn btn-success text-right' onclick='activator();' value='Agregar foto'/>
 		
-		
-			<div class="col-md-8">
+	
 
 			
 			<?php
@@ -90,6 +89,7 @@
 					),
 				)); ?>
 
+<<<<<<< HEAD
 					<p class="note">Los Campos con<span class="required">*</span> Son Boligatorios.</p>
 
 					<div class="row">
@@ -120,3 +120,27 @@
 			</div><!-- form -->
 	
 </div>
+=======
+			<?php $this->endWidget(); ?>
+			</div><!-- form --> 
+			<?php
+				echo CHtml::ajaxLink('View Popup', 'perfilSocial/pruebas', 
+				array('update' => '#simple-div'), 
+				array('id' => 'simple-link-'.uniqid())
+				);
+			?>
+			<div id="simple-div">simple div</div>
+			
+			
+		<div class="overlay" id="overlay" style="display:none;"></div>
+
+		<div class="box" id="box">
+		 <a class="boxclose" id="boxclose" onclick="boxclose();"></a>
+		 <div id="content">
+			 <h1>Important message</h1>
+			 <p>	  
+			 </p>
+		 </div>
+		</div>
+</div>
+>>>>>>> 4f04d2f05dbeb1f62cecd8b4c3f5f1f4d825676c
