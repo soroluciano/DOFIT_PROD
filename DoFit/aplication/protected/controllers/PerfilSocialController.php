@@ -187,12 +187,47 @@ class PerfilSocialController extends Controller
 	public function actionGaleria(){
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
 		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
+		$model = new ImagenForm();
+		 if(isset($_POST['ImagenForm']))
+		{                
+			if(isset($_FILES) and $_FILES['ImagenForm']['error']['foto']==0)
+			 {
+				$uf = CUploadedFile::getInstance($model, 'foto');
+				if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+					$uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+				{
+					  $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
+					
+					  Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+					  Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+					  $this->refresh();
+				}else{
+					Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+				}
+				
+			 }
+			 	$this->render('galeria',array(
+				'Us'=>$Us,
+				'perfilSocial'=>$perfilSocial,
+				'model'=>$model,
 		
-		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+			));	
+		} else{
+			
+				$this->render('galeria',array(
+				'Us'=>$Us,
+				'perfilSocial'=>$perfilSocial,
+				'model'=>$model,
 		
-		if(isset($_POST['FileUpload'])) 
+			));	
+		
+		
+		
+		
+		}
+		}
+		
+	/*	if(isset($_POST['FileUpload'])) 
             {                
                 if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
                  {
@@ -236,7 +271,7 @@ class PerfilSocialController extends Controller
 		
 		
 
-	}
+	}*/
 	
 /*	public function actionUploadFoto(){
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
@@ -273,7 +308,7 @@ class PerfilSocialController extends Controller
 	
 	
 	}*/
-
+/*
 	public function actionIndexSaveFotos(){
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
 		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
@@ -285,11 +320,76 @@ class PerfilSocialController extends Controller
 		'model'=>$perfilSocial
 		));
 	
+	}*/
+	
+	public function actionPrueba(){
+	
+		$model = new ImagenForm();
+		 if(isset($_POST['ImagenForm']))
+		{                
+			if(isset($_FILES) and $_FILES['ImagenForm']['error']['foto']==0)
+			 {
+				$uf = CUploadedFile::getInstance($model, 'foto');
+				if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+					$uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+				{
+					  $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
+					
+					  Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+					  Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+					  $this->refresh();
+				}else{
+					Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+				}
+				
+			 }
+		}
+		$this->render('prueba',array('model'=>$model));
+	}
+
+	public function actionPrueba2(){
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+        
+ 
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+ 
+        if(isset($_POST['ImagenForm']))
+        {
+            $perfilSocial->foto1="algo";
+            if($perfilSocial->save())
+            {
+                if (Yii::app()->request->isAjaxRequest)
+                {
+                    echo CJSON::encode(array(
+                        'status'=>'success', 
+                        'div'=>"Classroom successfully added"
+                        ));
+                    exit;               
+                }
+                else
+                    $this->redirect(array('dialogbox'));
+            }
+        }
+ 
+        if (Yii::app()->request->isAjaxRequest)
+        {
+            echo CJSON::encode(array(
+                'status'=>'failure', 
+                'div'=>$this->renderPartial('_form', array('model'=>$perfilSocial), true)));
+            exit;               
+        }
+        else
+            $this->render('dialogbox',array('model'=>$perfilSocial,));
+    
+	
 	}
 	
 	
+	public function actionPrueba3(){
 	
-	
-	
+		$this->render('prueba3');
+	}
 	
 }
