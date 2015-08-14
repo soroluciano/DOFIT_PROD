@@ -254,6 +254,10 @@
 
 <!--content header--> 
  <?php 
+	if(!Yii::app()->user->isGuest){
+	    $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
+	    $fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+	} 
 	$nombre = $fichaUsuario->nombre;
 	$apellido = $fichaUsuario->apellido;
 /*	$dni = $fichaUsuario->dni;
@@ -320,12 +324,15 @@
 	<div id="seccion_botones">	
 			<input type="button" class="btn btn-success active" id ="btn_galeria" onclick="galeria();" value="Mis Fotos"><i class=icon-home></i></input> 
 			<input type="button" class="btn btn-success" id ="btn_info" onclick="info();" value="Informaci&oacute;n"><i class=icon-home></i></input> 	
+	         
 	</div>
 
+	 
 	<div id="respuesta_ajax">
 		<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
 	</div>
-
+      
+	
 </body>
 </html>
 

@@ -93,5 +93,13 @@ if($Us->id_perfil == 2){
       echo CHtml::endForm();      
    echo "</div>";
 }
-    
+   echo "<div class='form-group'>";
+      echo CHtml::beginForm('../perfilSocial/','post'); 
+      echo CHtml::submitButton('Ir a la red social de Do Fit!',array('class'=>'btn btn-primary'));                      
+      echo CHtml::endForm();      
+   echo "</div>";	
+	
 ?>
+
+  <a href="<?php echo Yii::app()->request->baseUrl; ?>/chat/index" class="btn btn-primary">Chatea con tus compañeros!</a>
+
