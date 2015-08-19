@@ -51,6 +51,12 @@ body{
 #imagen_perfil{
     float:left;
     width:30%;
+	border-radius:20px;
+	transition: all 1s linear;
+}
+#imagen_perfil:hover{
+	border-radius:0;
+	transorm:scale(1.2);
 }
 .img1{
     width:320px;
