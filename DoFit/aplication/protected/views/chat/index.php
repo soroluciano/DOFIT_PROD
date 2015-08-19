@@ -1,3 +1,8 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chat.css"></link>
+ </head> 
+
 <?php 
 
 if(!Yii::app()->user->isGuest){
@@ -67,21 +72,20 @@ if(!Yii::app()->user->isGuest){
 				<div class="row">
 					<form id="formChat" role="form">
 						<div class="form-group">
-							<label for="user">Usuario</label>
-							<input type="text" class="form-control" id="user" name="user" value="<?php echo $ficha->nombre;?>" placeholder="Ingrese Usuario">
+							<label for="user">Usuario conectado: <?php echo $ficha->nombre;?></label>
+							<input type="hidden" id="usuario" name="user" value="<?php echo $ficha->nombre;?>"></input>
 						</div>
 						<div class="form-group">							
 							<div class="row">
-								<div class="col-md-12" >
+								<div class="col-md-9" >
 									<div id="conversation" style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
-										
 									</div>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">				
+								</div>		   
+						   </div>
+						</div>   
+						 <div class="form-group">				
 							<label for="message">Mensaje</label>
-							<textarea id="message" name="message" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
+							<textarea id="mensaje" name="message" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
 						</div>
 						<input type="hidden"  name="valor" id="valor"></input>
 						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>
@@ -107,7 +111,7 @@ if(!Yii::app()->user->isGuest){
 					   url : 'Registrarmensaje',
 					   data: frm
 				   }).done(function(info){ 
-                      $("#message").val("");
+                      $("#mensaje").val("");
 					  var altura =$("#conversation").prop("scrollHeight");
                       $("#conversation").scrollTop(altura);		
 					  console.log(info);  				   
