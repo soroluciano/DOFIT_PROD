@@ -57,80 +57,8 @@
 			</div>
 			<input type='button' class='btn btn-success text-right' onclick='activator();' value='Agregar foto'/>
 		
-	
 
-			
-			<?php
-				$this->pageTitle=Yii::app()->name . ' - Subir Imagen';
-				$this->breadcrumbs=array(
-					'Subir Imagen',
-				);
-				?>
-
-				<h1>¿Como subir una Imagen con Yii?</h1>
-				<?php if(Yii::app()->user->hasFlash("error_imagen")){?>
-				<div class="flash-error">
-					<?php echo Yii::app()->user->getFlash("error_imagen"); ?>   
-				</div>
-				<?php }?>
-				<?php if(Yii::app()->user->hasFlash("noerror_imagen")){?>
-				<div class="flash-success">    
-					<?php echo Yii::app()->user->getFlash("noerror_imagen"); ?>    
-				</div>
-				<?php }?>
-
-				<div class="form">
-				<?php $form=$this->beginWidget('CActiveForm', array(
-					'id'=>'imagen-form',
-					'enableClientValidation'=>true,
-						'htmlOptions'=>array('enctype'=>'multipart/form-data'),
-					'clientOptions'=>array(
-						'validateOnSubmit'=>true,
-					),
-				)); ?>
-
-<<<<<<< HEAD
-					<p class="note">Los Campos con<span class="required">*</span> Son Boligatorios.</p>
-
-					<div class="row">
-						<?php echo $form->labelEx($model,'foto'); ?>
-						<?php echo $form->fileField($model,'foto'); ?>
-						<?php echo $form->error($model,'foto'); ?>
-					</div>
-					<div class="row buttons">
-						<?php echo CHtml::submitButton('Subir Imagen'); ?>
-					</div>
-
-				<?php $this->endWidget(); ?>
-				</div><!-- form -->
-				<?php if(Yii::app()->user->hasFlash("imagen")){?>
-				<div class="flash-success">    
-					<?php echo CHtml::image(Yii::app()->request->baseUrl."".Yii::app()->user->getFlash("imagen"));?>    
-				</div>
-				<?php }?>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			</div><!-- form -->
-	
-</div>
-=======
-			<?php $this->endWidget(); ?>
-			</div><!-- form --> 
-			<?php
-				echo CHtml::ajaxLink('View Popup', 'perfilSocial/pruebas', 
-				array('update' => '#simple-div'), 
-				array('id' => 'simple-link-'.uniqid())
-				);
-			?>
-			<div id="simple-div">simple div</div>
-			
+			</div><!-- form --> 			
 			
 		<div class="overlay" id="overlay" style="display:none;"></div>
 
@@ -138,9 +66,31 @@
 		 <a class="boxclose" id="boxclose" onclick="boxclose();"></a>
 		 <div id="content">
 			 <h1>Important message</h1>
-			 <p>	  
+			 <p>
+					zxdszdzsdzsdszdzs
 			 </p>
 		 </div>
 		</div>
+		
+			<?php $formUp=$this->beginWidget('CActiveForm', array(
+				'id'=>'imagen-form',
+				'enableClientValidation'=>true,
+				'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+				'clientOptions'=>array(
+				'validateOnSubmit'=>true,
+				),
+			)); 
+			?>
+
+			<div class="form-group">
+				<?php echo $formUp->labelEx($fuModel,'foto'); ?>
+				<?php echo $formUp->fileField($fuModel,'foto'); ?>
+				<?php echo $formUp->error($fuModel,'foto'); ?>
+				
+			</div>
+			<div class="row buttons">
+				<?php echo CHtml::submitButton('Subir Imagen'); ?>
+			</div>
+
+		<?php $this->endWidget(); ?>
 </div>
->>>>>>> 4f04d2f05dbeb1f62cecd8b4c3f5f1f4d825676c
