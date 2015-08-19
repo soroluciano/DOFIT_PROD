@@ -257,7 +257,7 @@ class UsuarioController extends Controller
 				   $send->Reestablecerpassword($email);
                    ?>
                     <script>
-                     alert("Se envio un mail a su cuenta para activarla");
+                     alert("Se envio un mail a su cuenta para reestablecer la contraseña");
                     </script>
                   <?php					
 		           $this->render("Recuperarpassword",array('usuario'=>$usuario));
