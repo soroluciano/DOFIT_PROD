@@ -57,8 +57,21 @@
 			</div>
 			<input type='button' class='btn btn-success text-right' onclick='activator();' value='Agregar foto'/>
 		
-	
 
+			</div><!-- form --> 			
+			
+		<div class="overlay" id="overlay" style="display:none;"></div>
+
+		<div class="box" id="box">
+		 <a class="boxclose" id="boxclose" onclick="boxclose();"></a>
+		 <div id="content">
+			 <h1>Important message</h1>
+			 <p>
+					zxdszdzsdzsdszdzs
+			 </p>
+		 </div>
+		</div>
+		
 			<?php $formUp=$this->beginWidget('CActiveForm', array(
 				'id'=>'imagen-form',
 				'enableClientValidation'=>true,
@@ -69,35 +82,15 @@
 			)); 
 			?>
 
-				<div class="form-group">
-					<?php echo $formUp->labelEx($fuModel,'foto'); ?>
-					<?php echo $formUp->fileField($fuModel,'foto'); ?>
-					<?php echo $formUp->error($fuModel,'foto'); ?>
-					
-				</div>
-				<div class="row buttons">
-					<?php echo CHtml::submitButton('Subir Imagen'); ?>
-				</div>
+			<div class="form-group">
+				<?php echo $formUp->labelEx($fuModel,'foto'); ?>
+				<?php echo $formUp->fileField($fuModel,'foto'); ?>
+				<?php echo $formUp->error($fuModel,'foto'); ?>
+				
+			</div>
+			<div class="row buttons">
+				<?php echo CHtml::submitButton('Subir Imagen'); ?>
+			</div>
 
-			<?php $this->endWidget(); ?>
-			</div><!-- form --> 
-			<?php
-				echo CHtml::ajaxLink('View Popup', 'perfilSocial/pruebas', 
-				array('update' => '#simple-div'), 
-				array('id' => 'simple-link-'.uniqid())
-				);
-			?>
-			<div id="simple-div">simple div</div>
-			
-			
-		<div class="overlay" id="overlay" style="display:none;"></div>
-
-		<div class="box" id="box">
-		 <a class="boxclose" id="boxclose" onclick="boxclose();"></a>
-		 <div id="content">
-			 <h1>Important message</h1>
-			 <p>	  
-			 </p>
-		 </div>
-		</div>
+		<?php $this->endWidget(); ?>
 </div>
