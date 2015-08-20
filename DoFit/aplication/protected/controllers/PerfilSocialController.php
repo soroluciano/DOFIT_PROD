@@ -246,10 +246,8 @@ class PerfilSocialController extends Controller
 		
 		
 		
-		 if(isset($_POST['ImagenForm']))
-		{                
-			if(isset($_FILES) and $_FILES['ImagenForm']['error']['foto']==0)
-			 {
+		 if(isset($_POST['ImagenForm'])){                
+			if(isset($_FILES) and $_FILES['ImagenForm']['error']['foto']==0){
 				$name = $_FILES['ImagenForm']['name']['foto'];
 				$filename  = pathinfo($name, PATHINFO_FILENAME);
 				$ext = pathinfo($name, PATHINFO_EXTENSION);
@@ -257,8 +255,7 @@ class PerfilSocialController extends Controller
 			 
 				$uf = CUploadedFile::getInstance($modelForm, 'foto');
 				if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
-					$uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
-				{			 
+					$uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif"){			 
 					  $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$newName);	
 					  Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$newName." Subida Correctamente");
 					  Yii::app()->user->setFlash('imagen','/images/'.$newName);
@@ -273,8 +270,6 @@ class PerfilSocialController extends Controller
 						
 							));	
 						}
-					 
-
 				}else{
 					Yii::app()->user->setFlash('error_imagen','Imagen no valida');
 				}

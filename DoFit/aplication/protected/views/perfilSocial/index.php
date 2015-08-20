@@ -292,47 +292,24 @@
 						  echo  "</div>"; 
 					?>
 				</div>
-				<!--	<div style="text-align:right">
-					<input type="button" class="btn btn-info" value="Editar"/>
-				</div>-->
 
 				<br>
 				<a href="../site/index" class="btn btn-default text-center">
 					Continuar
 				</a>
 			</div>
-			
-		<!--	<div class="overlay" id="overlay" style="display:none;"></div>
- 
-			<div class="box" id="box">
-			 <a class="boxclose" id="boxclose"></a>
-			 <div id="content">
-				 <h1>Important message</h1>
-				 <p>	  
-				 </p>
-			 </div>
-			</div>
-			<a href="#" id="activator">activator</a>-
-		</div>
-		-->
+
 		</div>
 		
 	</div>	
-<!--<div id="separador">
-		<hr class="fancy-line"/>
-	</div>-->
 	<div id="seccion_botones">	
 			<input type="button" class="btn btn-success active" id ="btn_galeria" onclick="galeria();" value="Mis Fotos"><i class=icon-home></i></input> 
 			<input type="button" class="btn btn-success" id ="btn_info" onclick="info();" value="Informaci&oacute;n"><i class=icon-home></i></input> 	
 	         
 	</div>
-
-	 
 	<div id="respuesta_ajax">
 		<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
 	</div>
       
-	
-</body>
-</html>
+
 
