@@ -198,7 +198,21 @@
             }
         });
     }
+	function addbtn(idbtn){
+		if(idbtn!=null){
+			if(idbtn==1){
+				$('#im1').append('<button id="op1">boton</button>');
+			}
+		}
+	}
+	function delbtn(idbtn){
+			if(idbtn!=null){
+				if(idbtn==1){
+					$('#im1>#op1').remove();
+				}
+		}
 		
+	}	
 
 
 </script>

@@ -461,5 +461,18 @@ a.boxclose{
     -khtml-border-top-left-radius: 20px;
     -khtml-border-top-right-radius: 20px;
 }
+.prueba{
+    position: relative;
+	width:auto;
+	width: 320px;
+    height: 320px;
+	float:left;
+}
 
+#im1>button{
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+}
 /**************/
