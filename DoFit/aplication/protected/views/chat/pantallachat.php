@@ -61,36 +61,94 @@ if(!Yii::app()->user->isGuest){
 </div>
 <div>
 	<body>
-		<div class="container-fluid">
+		<div  class="container-fluid">
 			<section  style="padding: 3%;">			
 				<div class="row">				
 					<h1 class="text-center">Chat: <small>Do Fit!!</small></h1>	
 					<hr>
 				</div>	
 				<div class="row">
-				  <div class="form-group">
-					 <label for="user"> Usuarios disponibles para el chat</label>  
-					  <div class="row"> 
-						<div class="col-md-9">
-						 <div style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
-					 <?php
-					    $usuarios = Usuario::model()->findAll();
-						foreach($usuarios as $user){
-						 $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
-						
-						 if($user->id_usuario != Yii::app()->user->id){	  
-						?>
-						  <a href="../chat/Chat?nombre=<?php echo $ficha->nombre;?>&idusuario=<?php echo $user->id_usuario;?>"><?php echo $ficha->nombre;?></a>
-						  <br/> 
-					      <?php
-						  
-						  }
-						}	 
-					  ?>
-					    </div>
-					   </div>	 
-			       </div>	
-		        </div>    
-            </div> 			
-    </body>
-</html>  
+					<form id="formChat" role="form">
+						<div class="form-group">
+							<label for="user"><?php echo $ficha->nombre;?> esta en chat con 
+							<?php
+                              $nombre = $_GET['nombre'];							
+							  if(isset($nombre)){
+							     echo $nombre;
+							  }
+							  ?>
+							</label>
+							<input type="hidden" id="usuario" name="user" value="<?php echo $ficha->nombre;?>"></input>
+						</div>
+						<div class="form-group">							
+							<div class="row">
+								<div class="col-md-9" >
+									<div id="conversation" style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
+									</div>
+								</div>		   
+						   </div>
+						</div>   
+						 <div class="form-group">				
+							<label for="message">Mensaje</label>
+							<textarea id="mensaje" name="message" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
+						</div>
+						<input type="hidden"  name="valor" id="valor"></input>
+						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>
+                        <input type="button" id="borrarmensajes" class="btn btn-primary" value="Borrar Mensajes"></input>  						   
+					</form>
+				</div>
+			</section>	
+		</div>		
+		<script>
+		
+			$(document).on("ready", function(){				
+			  registerMessages();
+			  $.ajaxSetup({"cache":false});
+              setInterval("cargarMensajesAntiguos()",500); 			  
+			});
+			var registerMessages = function(){
+			  $("#send").on("click",function(e){
+				   e.preventDefault();
+				   var frm = $("#formChat").serialize();
+				   console.log(frm);
+				   $.ajax({
+					   type : "POST",
+					   url : 'Registrarmensaje',
+					   data: frm
+				   }).done(function(info){ 
+                      $("#mensaje").val("");
+					  var altura =$("#conversation").prop("scrollHeight");
+                      $("#conversation").scrollTop(altura);		
+					  console.log(info);  				   
+				   }) 
+			  });
+            }
+
+          var cargarMensajesAntiguos = function() {
+               $.ajax({
+                      type : "POST",
+                      url : 'MostrarConversaciones',
+			   }).done(function(info){
+				  $("#conversation").html(info);
+				  $("#conversation p:last-child").css({"background-color": "lightgreen",
+				                       				  "padding-bottom": "20px"});
+                  var altura =$("#conversation").prop("scrollHeight");
+                  $("#conversation").scrollTop(altura);				  
+			   });
+		   }
+      
+			  $("#borrarmensajes").on("click",function(){
+                var valor = $("#valor").val(0);
+				    confirmar=confirm("¿Esta seguro que desea borrar todos los mensajes?");
+                   if (confirmar) 
+                       valor.val(1); 	
+                  console.log(valor);				  
+			  $.ajax({
+                      type : "POST",
+                      url : 'BorrarMensajes',
+					  data : valor
+                 })		   
+              });			   
+		</script>
+	</body>
+</html>

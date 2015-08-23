@@ -5,6 +5,12 @@ class ChatController extends Controller
   {
     $this->render('index');
   }
+ 
+  public function actionChat() 
+  {
+    $this->render('pantallachat');
+  }
+  
   public function actionRegistrarmensaje()
   {
 	$conversacion = new Conversacion;
