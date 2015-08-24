@@ -73,6 +73,9 @@ if(!Yii::app()->user->isGuest){
 							<label for="user"><?php echo $ficha->nombre;?> esta en chat con 
 							<?php
                               $nombre = $_GET['nombre'];							
+							  $idusuario = $_GET['idusuario'];
+							  echo "<input type='hidden'  id='idusuario' value='$idusuario' name='idusuario'></input>";
+							   echo "<input type='hidden'  id='idusuariode' value='$idusuario' name='idusuariode'></input>";
 							  if(isset($nombre)){
 							     echo $nombre;
 							  }
@@ -90,7 +93,7 @@ if(!Yii::app()->user->isGuest){
 						</div>   
 						 <div class="form-group">				
 							<label for="message">Mensaje</label>
-							<textarea id="mensaje" name="message" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
+							<textarea id="mensaje" name="mensaje" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
 						</div>
 						<input type="hidden"  name="valor" id="valor"></input>
 						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>
@@ -125,9 +128,11 @@ if(!Yii::app()->user->isGuest){
             }
 
           var cargarMensajesAntiguos = function() {
-               $.ajax({
+			  var idusuario = $("#idusuario").val();
+			  $.ajax({
                       type : "POST",
                       url : 'MostrarConversaciones',
+			          data : {idusuario:idusuario}
 			   }).done(function(info){
 				  $("#conversation").html(info);
 				  $("#conversation p:last-child").css({"background-color": "lightgreen",
@@ -138,15 +143,17 @@ if(!Yii::app()->user->isGuest){
 		   }
       
 			  $("#borrarmensajes").on("click",function(){
-                var valor = $("#valor").val(0);
-				    confirmar=confirm("¿Esta seguro que desea borrar todos los mensajes?");
-                   if (confirmar) 
-                       valor.val(1); 	
-                  console.log(valor);				  
+                var valor = $("#valor").val(0);	   				
+				   
+				   confirmar=confirm("¿Esta seguro que desea borrar todos los mensajes?");
+                   if (confirmar) {
+                       valor.val(1);
+                   }					   
+                  console.log(valor); 
 			  $.ajax({
-                      type : "POST",
+                      type: "POST",
                       url : 'BorrarMensajes',
-					  data : valor
+					  data: valor 	 
                  })		   
               });			   
 		</script>

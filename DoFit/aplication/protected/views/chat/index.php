@@ -69,7 +69,7 @@ if(!Yii::app()->user->isGuest){
 				</div>	
 				<div class="row">
 				  <div class="form-group">
-					 <label for="user"> Usuarios disponibles para el chat</label>  
+					 <label for="user"> Seleccione el usuario con el que desea chatear</label>  
 					  <div class="row"> 
 						<div class="col-md-9">
 						 <div style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
@@ -80,7 +80,7 @@ if(!Yii::app()->user->isGuest){
 						
 						 if($user->id_usuario != Yii::app()->user->id){	  
 						?>
-						  <a href="../chat/Chat?nombre=<?php echo $ficha->nombre;?>&idusuario=<?php echo $user->id_usuario;?>"><?php echo $ficha->nombre;?></a>
+						  <a href="../chat/Chat?nombre=<?php echo $ficha->nombre;?>&idusuario=<?php echo $user->id_usuario;?>"><?php echo $ficha->nombre.'&nbsp'.$ficha->apellido;?></a>
 						  <br/> 
 					      <?php
 						  
@@ -89,7 +89,11 @@ if(!Yii::app()->user->isGuest){
 					  ?>
 					    </div>
 					   </div>	 
-			       </div>	
+			       </div>
+				    <br/> 
+                    <form action="../chat/Chatactivos" method="post">
+                     <input type="submit" class="btn btn-primary" value="Ver Chat Activos"></input>
+                   </form>      					 
 		        </div>    
             </div> 			
     </body>
