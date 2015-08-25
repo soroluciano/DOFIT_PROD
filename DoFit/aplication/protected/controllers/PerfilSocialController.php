@@ -192,6 +192,66 @@ class PerfilSocialController extends Controller
 		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
 		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
 		
+		/*carga de div de confirmacion vacia*/
+		$data = array();
+        $data["myValue"] = "Content loaded";
+		/*
+		if(isset($_POST['FileUpload'])) 
+            {                
+                if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
+                 {
+                    $uf = CUploadedFile::getInstance($fuModel, 'foto');
+                    if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+                        $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+                    {
+                          $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());*/
+			/*			  if($fuModel->foto1!=null){
+							$fuModel->foto1 = $uf->getName();
+							$fuModel->update();
+							$this->render('index',array(
+								'Us'=>$Us,
+								'perfilSocial'=>$perfilSocial,
+								'fuModel' => $fuModel
+							
+							));
+						
+						  }else{
+							$fuModel->foto1 = $uf->getName();
+							$fuModel->save();
+						  }*/
+						  
+                   /*       Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+                          Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+                          $this->refresh();
+                    }else{
+                        Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+                    }
+                    
+                 }
+            }else{
+			*/
+				$this->render('galeria',array(
+				'Us'=>$Us,
+				'perfilSocial'=>$perfilSocial,
+				'fuModel' => $fuModel,
+				
+		
+				),array('data'=>$data));	
+			//}
+		
+		
+	}
+	
+	public function actionSaveImage(){
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
+		
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+		$data = array();
+        $data["myValue"] = "Content updated in AJAX";
+		
 		if(isset($_POST['FileUpload'])) 
             {                
                 if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
@@ -201,9 +261,9 @@ class PerfilSocialController extends Controller
                         $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
                     {
                           $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
-						  if($model->foto1!=null){
-							$model->foto1 = $uf->getName();
-							$model->update();
+			/*			  if($fuModel->foto1!=null){
+							$fuModel->foto1 = $uf->getName();
+							$fuModel->update();
 							$this->render('index',array(
 								'Us'=>$Us,
 								'perfilSocial'=>$perfilSocial,
@@ -212,9 +272,9 @@ class PerfilSocialController extends Controller
 							));
 						
 						  }else{
-							$model->foto1 = $uf->getName();
-							$model->save();
-						  }
+							$fuModel->foto1 = $uf->getName();
+							$fuModel->save();
+						  }*/
 						  
                           Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
                           Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
@@ -226,16 +286,17 @@ class PerfilSocialController extends Controller
                  }
             }else{
 			
-				$this->render('galeria',array(
+				$this->renderPartial('galeria',array(
 				'Us'=>$Us,
 				'perfilSocial'=>$perfilSocial,
 				'fuModel' => $fuModel
-		
-			));	
+				),$data);	
 			}
 		
 		
 	}
+	
+	
 	
 	public function actionPrueba(){
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
@@ -279,5 +340,25 @@ class PerfilSocialController extends Controller
 		}
 			$this->render('prueba',array('model'=>$modelForm));
 	}
+	
+	public function actionPruebaBotonAjax(){		
+		$data = array();
+        $data["myValue"] = "Content loaded";
+        $this->render('pruebaBotonAjax', $data);
+		
+	}
+	public function actionUpdateAjax(){
+   
+        $data = array();
+        $data["myValue"] = "Content updated in AJAX";
+ 
+        $this->renderPartial('_ajaxContent', $data, false, true);
+		
+		
+		
+	}
+	
+	
+	
 	
 }

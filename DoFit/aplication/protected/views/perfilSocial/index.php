@@ -198,21 +198,35 @@
             }
         });
     }
-	function addbtn(idbtn){
+	function addBtn(idbtn){
+		debugger;
 		if(idbtn!=null){
-			if(idbtn==1){
-				$('#im1').append('<button id="op1">boton</button>');
-			}
+			opcion = '#im'+idbtn;
+			append = '<button id="op'+idbtn+'" class="btn btn-default elevateButton">Modificar Imagen</button>';
+			$(opcion).append(append);
 		}
 	}
-	function delbtn(idbtn){
-			if(idbtn!=null){
-				if(idbtn==1){
-					$('#im1>#op1').remove();
-				}
+	function delbtn(id){
+			if(id!=null){
+				opcion = '#im'+id+'>#op'+id;
+				$(opcion).remove();
 		}
 		
-	}	
+	}
+	function addEdBtn(idbtn,im){
+		debugger;
+		if (idbtn!=null) {
+					imres = '#im'+im;
+					append = '<button id = '+idbtn+' class="btn btn-default elevateButton" onmouseout="showHovered('+im+');"" onclick="showHovered('+im+');""  onmousehover="showHovered('+im+');"" >Cargar imagen</button>';
+					$(imres).append(append);	
+					
+		}
+	}
+	function showHovered(id){
+		debugger;
+		hovered = "#im"+id;
+		$(hovered).toggleClass("hovered");
+	}
 
 
 </script>
