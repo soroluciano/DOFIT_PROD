@@ -12,7 +12,7 @@
 		$(function() {
 			$('#activator').click(function(){
 			$('#overlay').fadeIn(200,function(){
-				$('#box').animate({'top':'20px'},200);
+				$('#box').animate({'top':'1px'},200);
 			});
 			return false;
 		});
@@ -27,14 +27,18 @@
 
     });
 
+	
 	function activator(){
 		$('#overlay').fadeIn(200,function(){
+				$('#box').show();
 				$('#box').animate({'top':'20px'},200);
 		});
 	}
 	function boxclose(){
+		
 		$('#box').animate({'top':'-200px'},500,function(){
 			$('#overlay').fadeOut('fast');
+			$('#box').css("display","none");
 		});
 	}
 

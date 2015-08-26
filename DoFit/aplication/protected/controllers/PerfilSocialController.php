@@ -193,8 +193,8 @@ class PerfilSocialController extends Controller
 		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
 		
 		/*carga de div de confirmacion vacia*/
-		$data = array();
-        $data["myValue"] = "Content loaded";
+		
+        $myValue = "Content loaded";
 		/*
 		if(isset($_POST['FileUpload'])) 
             {                
@@ -233,34 +233,34 @@ class PerfilSocialController extends Controller
 				$this->render('galeria',array(
 				'Us'=>$Us,
 				'perfilSocial'=>$perfilSocial,
-				'fuModel' => $fuModel,
+				'myValue' => $myValue,
+				'fuModel' => $fuModel
 				
 		
-				),array('data'=>$data));	
+				));	
 			//}
 		
 		
 	}
 	
 	public function actionSaveImage(){
-		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
-		
-		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+		if(isset($_POST['fuModel'])==null){
+			$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
+		}else{
+			$fuModel = $_POST['fuModel'];
+		}
 		$data = array();
         $data["myValue"] = "Content updated in AJAX";
-		
-		if(isset($_POST['FileUpload'])) 
-            {                
-                if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
-                 {
-                    $uf = CUploadedFile::getInstance($fuModel, 'foto');
-                    if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
-                        $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
-                    {
-                          $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
+		 $this->renderPartial('_ajaxContent', $data, false, true);
+		//if(isset($_POST['FileUpload'])) 
+         //   {                
+          //      if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
+            //     {
+  //                  $uf = CUploadedFile::getInstance($fuModel, 'foto');
+ //                   if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+  //                      $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+  //                  {
+   //                       $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
 			/*			  if($fuModel->foto1!=null){
 							$fuModel->foto1 = $uf->getName();
 							$fuModel->update();
@@ -276,22 +276,18 @@ class PerfilSocialController extends Controller
 							$fuModel->save();
 						  }*/
 						  
-                          Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
-                          Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
-                          $this->refresh();
-                    }else{
-                        Yii::app()->user->setFlash('error_imagen','Imagen no valida');
-                    }
+ //                         Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+  //                        Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+   //                       $this->refresh();
+	//					  $this->renderPartial('_ajaxContent', $data, false, true);
+    //                }else{
+    //                    Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+	//					echo "no funciona";
+   //                 }
                     
-                 }
-            }else{
-			
-				$this->renderPartial('galeria',array(
-				'Us'=>$Us,
-				'perfilSocial'=>$perfilSocial,
-				'fuModel' => $fuModel
-				),$data);	
-			}
+                 //}
+				 
+            //}
 		
 		
 	}

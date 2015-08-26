@@ -46,12 +46,12 @@
 			
 			<div class="overlay" id="overlay" style="display:none;"></div>
 	
-			<div class="box" id="box">
+			<div class="box" id="box" style="display:none">
 						<a class="boxclose" id="boxclose" onclick="boxclose();"></a>
 						<div id="content">
 							<h1>Important message</h1>
 							
-															<h1>¿Como subir una Imagen con Yii?</h1>
+															
 												<?php if(Yii::app()->user->hasFlash("error_imagen")){?>
 												<div class="flash-error">
 													<?php echo Yii::app()->user->getFlash("error_imagen"); ?>   
@@ -88,8 +88,11 @@
 													</div>
 													<div class="row buttons">
 														<?php //echo CHtml::submitButton('Subir Imagen'); ?>							
-														<?php echo CHtml::ajaxButton ("Update data",
-															CController::createUrl('perfilSocial/UpdateAjax'), 
+														<?php echo CHtml::ajaxButton ("Guardar",
+															CController::createUrl('perfilSocial/SaveImage'),array('type'=>'POST',
+															//'data'=> 'js:{"data1": val1, "data2": val2 }',                        
+															//'success'=>'js:function(string){ alert(string); 
+															"fuModel" => $fuModel), 
 															array('update' => '#modificacion'));
 															  ?> 												
 													</div>
