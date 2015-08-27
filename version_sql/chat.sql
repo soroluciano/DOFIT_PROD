@@ -5,6 +5,7 @@ CREATE TABLE `conversacion` (
   `mensaje` varchar(45) DEFAULT NULL,
   `idusuarioori` INT NOT NULL,
   `idusuariodes` INT NOT NULL, 
+  `idusuario` INT NOT NULL,
   PRIMARY KEY (`idConversacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
