@@ -75,25 +75,28 @@ if(!Yii::app()->user->isGuest){
 						 <div style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
 					 <?php
 					    $usuarios = Usuario::model()->findAll();
+						$url = array('chat/Chat');
 						foreach($usuarios as $user){
 						 $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
 						
 						 if($user->id_usuario != Yii::app()->user->id){	  
-						?>
-						  <a href="../chat/Chat?nombre=<?php echo $ficha->nombre;?>&idusuario=<?php echo $user->id_usuario;?>"><?php echo $ficha->nombre.'&nbsp'.$ficha->apellido;?></a>
+                         ?>
+						 <form action="../chat/Chat" name="formu" id="formu" method="post">
+						  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
+						  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
+						  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>
+						  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
+	                 	</form>
 						  <br/> 
 					      <?php
-						  
+						 
 						  }
 						}	 
 					  ?>
 					    </div>
 					   </div>	 
 			       </div>
-				    <br/> 
-                    <form action="../chat/Chatactivos" method="post">
-                     <input type="submit" class="btn btn-primary" value="Ver Chat Activos"></input>
-                   </form>      					 
+				    <br/>  					 
 		        </div>    
             </div> 			
     </body>
