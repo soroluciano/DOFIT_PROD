@@ -58,8 +58,8 @@ if(!Yii::app()->user->isGuest){
         </div>
     </div>
 </div>
-    <body>
-      <div class="container-fluid">
+  <body>
+    <div class="container-fluid">
 	    <section  style="padding: 3%;">			
 		    <div class="row">				
 			 <h1 class="text-center">Chat: <small>Do Fit!!</small></h1>	
@@ -88,12 +88,14 @@ if(!Yii::app()->user->isGuest){
 	         			      <?php
 						            }  // fin del if
 						        } // llave del foreach	 
-					          ?>
+					           ?>
 					        </div>
 					    </div>	 
 			        </div>
 				    <br/>  					 
 		        </div>    
-            </div> 			
-    </body>
+            </div>
+        </section> 			
+    </div>
+  </body>
 </html>  
