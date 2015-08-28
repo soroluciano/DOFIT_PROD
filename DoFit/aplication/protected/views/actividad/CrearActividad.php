@@ -51,13 +51,14 @@ if(!Yii::app()->user->isGuest){
             <?php echo CHtml::beginForm('CrearActividad','post'); ?>
                 <div class="form-group">
 			        <?php
+                        echo $form->labelEx($deporte,'Deporte');
                         $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
                         'name'=>'2',
                         'value'=>'',
                         'source'=>$this->createUrl('jui/completarDeporte'),
                         // additional javascript options for the autocomplete plugin
                         'options'=>array('showAnim'=>'fold'),
-
+                            'htmlOptions' => array('class'=>"form-control"),
                     ));
 			        /*$form->labelEx($deporte,'Deporte'); ?>
                     <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
@@ -73,6 +74,7 @@ if(!Yii::app()->user->isGuest){
                             'source'=>$this->createUrl('jui/completarProfesor'),
                             // additional javascript options for the autocomplete plugin
                             'options'=>array('showAnim'=>'fold'),
+                            'htmlOptions' => array('class'=>"form-control"),
 
                         ));
 
