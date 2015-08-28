@@ -1,4 +1,4 @@
-<?php
+    <?php
 /* @var $this UsuarioController */
 /* @var $model Usuario */
 /* @var $form CActiveForm */
@@ -49,38 +49,37 @@ if(!Yii::app()->user->isGuest){
 	<?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
 	    <div class="col-md-8">
             <?php echo CHtml::beginForm('CrearActividad','post'); ?>
-            <div class="form-group">
-			  <?php echo $form->labelEx($deporte,'Deporte'); ?>
-<?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
-<?php echo $form->error($deporte,'deporte')?>
-			</div>
-			<div class="form-group">
-                <?php echo $form->labelEx($actividad,'Profesor');
-$id_institucion = $usuarioins->id_institucion;
-$profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion and id_estado = 1',array(':id_institucion'=>$id_institucion));
-foreach ( $profeins as $proins){
-    $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
-    echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));
-    echo $fu->id_usuario.$fu->nombre;
-    echo "<br>";
-}
-?>
-			</div>
-			<div class="form-group">
-                <?php echo $form->labelEx($actividad,'valor_actividad');?>
-<?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Precio"));?>
-<?php echo $form->error($actividad,'valor_actividad')?>
-			</div>
-
-            <div class="row">
-                <div class="col-md-1">
-                    Lunes
-                </div>
-                <div class="col-md-1">
-                    <?php echo $form->checkBox($actividad_horario,'id_dia',array('value'=>1,'uncheckValue'=>null,'class'=>'form-control','name'=>'dia[]' )); ?>
-                </div>
-                <div class="col-md-2">
-                    <?php echo $form->dropDownList($actividad_horario,'hora',array("00"=>"00",
+                <div class="form-group">
+			        <?php echo $form->labelEx($deporte,'Deporte'); ?>
+                    <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
+                    <?php echo $form->error($deporte,'deporte')?>
+			    </div>
+			    <div class="form-group">
+                    <?php echo $form->labelEx($actividad,'Profesor');
+                        echo "<br>";
+                        $id_institucion = $usuarioins->id_institucion;
+                        $profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion and id_estado = 1',array(':id_institucion'=>$id_institucion));
+                        foreach ( $profeins as $proins){
+                            $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
+                            echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));
+                            echo "<br>";
+                        }
+                    ?>
+			    </div>
+			    <div class="form-group">
+                    <?php echo $form->labelEx($actividad,'valor_actividad');?>
+                    <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Precio"));?>
+                    <?php echo $form->error($actividad,'valor_actividad')?>
+			    </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        Lunes
+                    </div>
+                    <div class="col-md-1">
+                        <?php echo $form->checkBox($actividad_horario,'id_dia',array('value'=>1,'uncheckValue'=>null,'class'=>'form-control','name'=>'dia[]' )); ?>
+                    </div>
+                    <div class="col-md-2">
+                        <?php echo $form->dropDownList($actividad_horario,'hora',array("00"=>"00",
     "01"=>"01",
     "02"=>"02",
     "03"=>"03",
