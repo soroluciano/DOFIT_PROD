@@ -11,7 +11,7 @@ $this->pageTitle=Yii::app()->name;
      $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
      $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
   }
-  ?>
+?>
 
 <div class="navbar-wrapper">
     <div class="container">
@@ -31,14 +31,14 @@ $this->pageTitle=Yii::app()->name;
                         <ul class="nav navbar-nav">
                             <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
 							<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraciï¿½n <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Anotarme en actividades</a></li>
                                     <li><a href="#">Ver mis actividades</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuración</a></li>
+                                    <li><a href="#">Configuraciï¿½n</a></li>
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                 </ul>
                             </li>
@@ -61,71 +61,80 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 <div id="body">
-  <?php 
+  <?php
     $cantactividades = Actividad::model()->count();
-if($cantactividades > 0){
-    if($actividades != NULL){
-		echo  "<div><h2>Inscribite a las Actividades de DoFit!</h2></div>";
-        echo    "<table class='table table-hover'>
-                        <thead>
-                            <tr>
-    <tr><th>Deporte</th><th>D&iacute;a</th><th>Horario</th><th>Institucion</th><th>Direccion</th><th>Localidad</th><th>Provincia</th><th>Telefono Fijo</th><th>Celular</th><th>Acepta mercado Pago</th><th>Valor_Actividad</th><th>Google Maps</th><th></th></tr></thead>";
-    foreach($actividades as $ac){?>
-        <tbody>
-        <tr>
-        <?php $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$ac->id_deporte));?>
-	    <td> <?php echo $deporte->deporte; ?></td>
-        <?php $ah = ActividadHorario::model()->find('id_actividad='.$ac->id_actividad);
-              $dias = array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
-              $cantdias = count($dias);
-              $cont = 0;
-              while ($cont < $cantdias){
-               if($cont+1 == $ah->id_dia){
-               echo "<td>$dias[$cont]</td>";
-			   }
-			   $cont++;
-			 }?>
-        <td><?php echo $ah->hora ?></td>
-		<?php
-		     $institucion = FichaInstitucion::model()->find('id_institucion='.$ac->id_institucion);
-			 echo "<td>$institucion->nombre</td>";
-			 echo "<td>$institucion->direccion</td>";
-			 $id_localidad = $institucion->id_localidad; 
-             $localidad = Localidad::model()->find('id_localidad='.$id_localidad);
-             echo "<td>$localidad->localidad</td>";  
-             $id_provincia = $localidad->id_provincia;
-             $provincia = Provincia::model()->find('id_provincia='.$id_provincia);
-  		     echo "<td>$provincia->provincia</td>";
-			 echo "<td>$institucion->telfijo</td>";
-			 echo "<td>$institucion->celular</td>";
-			 echo "<td>$institucion->acepta_mp</td>";
-			 echo "<td>$ac->valor_actividad</td>";?>
-			 <td> <?php echo CHtml::link('Ver ubicacion!',array('FichaInstitucion/GoogleMaps','nombre'=>$institucion->nombre,'direccion'=>$institucion->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia));?></td>
-             <td><?php echo "<a href='InscripcionActividad/?id_actividad=$ac->id_actividad' class='btn btn-default'>Inscribirme!</a>"?></td>  
-    </table>
-<?php		
-}
-	}
-else
-{
-  echo    "<div class='row'>
-                        <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>Ya se encuentra inscripto a todas las actividades de DoFit!</h2>
-                        </div>
-                    </div>";
-}
- }
-else
-{
- 
-  echo    "<div class='row'>
-                        <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No se encuentran actividades creadas!</h2>
-                        </div>
-                   </div>";	
-}				   
-?>
-</div>
- <br/>
+    if($cantactividades > 0)
+        if($actividades != NULL) {
+            echo "<div>
+                    <h2>
+                        Inscribite a las Actividades de DoFit!
+                    </h2>
+                  </div>";
+            echo "<table class='table table-hover'>
+                    <thead>
+                        <tr>
+                            <th>
+                                Deporte
+                            </th>
+                            <th>
+                                D&iacute;a
+                            </th>
+                            <th>
+                                Horario
+                            </th>
+                            <th>
+                                Institucion
+                            </th>
+                            <th>
+                                Direccion
+                            </th>
+                            <th>
+                                Localidad
+                            </th>
+                            <th>
+                                Provincia
+                            </th>
+                            <th>
+                                Telefono Fijo
+                            </th>
+                            <th>
+                                Celular
+                            </th>
+                            <th>
+                                Acepta mercado Pago
+                            </th>
+                            <th>
+                                Valor_Actividad
+                            </th>
+                            <th>
+                                Google Maps
+                            </th>
+                        </tr>
+                    </thead>";
+            foreach($actividades as $ac){
+                        echo "<tbody>";
+                        echo "<tr>";
+                        $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$ac->id_deporte));
+                        echo "<td>";
+                                $deporte->deporte;
+                        echo "</td>";
+                        $ah = ActividadHorario::model()->find('id_actividad='.$ac->id_actividad);
+                        $dias = array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
+                        $cantdias = count($dias);
+                        $cont = 0;
+                        while ($cont < $cantdias){
+                            if($cont+1 == $ah->id_dia){
+                                echo "<td>$dias[$cont]</td>";
+                            }
+                        $cont++;
+                        }
+                    echo "<td>";
+                    $ah->hora;
+                  echo " </td>";
+   echo "</tr>";
+    echo "</tbody>";
 
-	
+                }
+
+       } ?>
+</div>
