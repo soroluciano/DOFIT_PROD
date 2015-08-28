@@ -7,10 +7,10 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <?php if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-  }
+    //Es un usuario logueado.
+    $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+}
 ?>
 
 <div class="navbar-wrapper">
@@ -30,7 +30,7 @@ $this->pageTitle=Yii::app()->name;
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
-							<li class="dropdown">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraci�n <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -56,12 +56,12 @@ $this->pageTitle=Yii::app()->name;
 <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
     <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-          <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
         </div>
     </div>
 </div>
 <div id="body">
-  <?php
+    <?php
     $cantactividades = Actividad::model()->count();
     if($cantactividades > 0)
         if($actividades != NULL) {
@@ -112,29 +112,29 @@ $this->pageTitle=Yii::app()->name;
                         </tr>
                     </thead>";
             foreach($actividades as $ac){
-                        echo "<tbody>";
-                        echo "<tr>";
-                        $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$ac->id_deporte));
-                        echo "<td>";
-                                $deporte->deporte;
-                        echo "</td>";
-                        $ah = ActividadHorario::model()->find('id_actividad='.$ac->id_actividad);
-                        $dias = array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
-                        $cantdias = count($dias);
-                        $cont = 0;
-                        while ($cont < $cantdias){
-                            if($cont+1 == $ah->id_dia){
-                                echo "<td>$dias[$cont]</td>";
-                            }
-                        $cont++;
-                        }
-                    echo "<td>";
-                    $ah->hora;
-                  echo " </td>";
-   echo "</tr>";
-    echo "</tbody>";
+                echo "<tbody>";
+                echo "<tr>";
+                $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$ac->id_deporte));
+                echo "<td>";
+                $deporte->deporte;
+                echo "</td>";
+                $ah = ActividadHorario::model()->find('id_actividad='.$ac->id_actividad);
+                $dias = array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
+                $cantdias = count($dias);
+                $cont = 0;
+               /* while ($cont < $cantdias){
+                    if($cont+1 == $ah->id_dia){
+                        echo "<td>$dias[$cont]</td>";
+                    }
+                    $cont++;
+                }*/
+                echo "<td>";
+            //    $ah->hora;
+                echo " </td>";
+                echo "</tr>";
+                echo "</tbody>";
 
-                }
+            }
 
-       } ?>
+        } ?>
 </div>
