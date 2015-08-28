@@ -87,8 +87,8 @@ if(!Yii::app()->user->isGuest){
 						                <br/> 
 	         			      <?php
 						            }  // fin del if
-						        }	 
-					           ?>
+						        } // llave del foreach	 
+					          ?>
 					        </div>
 					    </div>	 
 			        </div>
