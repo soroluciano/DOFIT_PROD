@@ -4,12 +4,11 @@
  </head> 
 
 <?php 
-
 if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
      $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
      $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-  }
+ }
 ?>
   
 <div class="navbar-wrapper">
@@ -59,45 +58,44 @@ if(!Yii::app()->user->isGuest){
         </div>
     </div>
 </div>
-<div>
-	<body>
-		<div class="container-fluid">
-			<section  style="padding: 3%;">			
-				<div class="row">				
-					<h1 class="text-center">Chat: <small>Do Fit!!</small></h1>	
-					<hr>
-				</div>	
-				<div class="row">
-				  <div class="form-group">
-					 <label for="user"> Seleccione el usuario con el que desea chatear</label>  
-					  <div class="row"> 
-						<div class="col-md-9">
-						 <div style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
-					 <?php
-					    $usuarios = Usuario::model()->findAll();
-						$url = array('chat/Chat');
-						foreach($usuarios as $user){
-						 $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
-						
-						 if($user->id_usuario != Yii::app()->user->id){	  
-                         ?>
-						 <form action="../chat/Chat" name="formu" id="formu" method="post">
-						  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
-						  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
-						  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>
-						  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
-	                 	</form>
-						  <br/> 
-					      <?php
-						 
-						  }
-						}	 
-					  ?>
-					    </div>
-					   </div>	 
-			       </div>
+  <body>
+    <div class="container-fluid">
+	    <section  style="padding: 3%;">			
+		    <div class="row">				
+			 <h1 class="text-center">Chat: <small>Do Fit!!</small></h1>	
+				 <hr>
+		    </div>	
+			<div class="row">
+			    <div class="form-group">
+				  <label for="user"> Seleccione el usuario con el que desea chatear</label>  
+				    <div class="row"> 
+					    <div class="col-md-9">
+						    <div style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
+				           <?php
+					         $usuarios = Usuario::model()->findAll();
+						     $url = array('chat/Chat');
+						     foreach($usuarios as $user){
+						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
+						            if($user->id_usuario != Yii::app()->user->id){	  
+                            ?>
+						                <form action="../chat/Chat" name="formu" id="formu" method="post">
+						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
+						                  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
+						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>
+						                  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
+	                 	                </form>
+						                <br/> 
+	         			      <?php
+						            }  // fin del if
+						        } // llave del foreach	 
+					           ?>
+					        </div>
+					    </div>	 
+			        </div>
 				    <br/>  					 
 		        </div>    
-            </div> 			
-    </body>
+            </div>
+        </section> 			
+    </div>
+  </body>
 </html>  
