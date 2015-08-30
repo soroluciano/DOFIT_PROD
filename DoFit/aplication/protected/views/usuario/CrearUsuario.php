@@ -43,15 +43,16 @@
 <div class="container">
     <div class="form">
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
-        <div class="col-md-8">
+		<div class="col-md-8">
             <div class="form-group">
                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
-		        <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"Tu email",'id'=>"exampleInputEmail1")); ?>
-		        <?php echo $form->error($model,'email'); ?>
+		        <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"Tu email",'id'=>"exampleInputEmail1",'size'=>60,'maxlength'=>60)); ?>	    
+		     	<?php echo $form->error($model,'email'); ?>
             </div>
+			
             <div class="form-group">
                 <?php echo $form->labelEx($model,'password'); ?>
-		        <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Elegí una contraseña"));?>
+		        <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Elegí una contraseña",'maxlength'=>15));?>
                 <?php echo $form->error($model,'password'); ?>
             </div>
             <div class="form-group">

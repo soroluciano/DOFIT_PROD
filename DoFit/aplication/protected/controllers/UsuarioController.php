@@ -282,11 +282,7 @@ class UsuarioController extends Controller
 	  if(isset($pass)){
 		 $passencr = md5($pass); 
 		 Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
-		 ?>
-		 <script>
-		  alert("Se actualizo correctamente la contraseña de su cuenta");
-		 </script>
-       <?php 
+		 echo "Se actualizo correctamente la contraseña de su cuenta<br/>";
 	     echo "<b>".CHtml::link('Volver al Login de DoFit!',array('../aplication'))."</b>";
 		}		 
 	}
