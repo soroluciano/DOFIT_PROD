@@ -379,7 +379,7 @@ if(!Yii::app()->user->isGuest){
     "45"=>"45"),array('class'=>"form-control",'name'=>'minutos[]'));?>
                 </div>
             </div>
-
+     <br/>
            <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>
 <?php echo CHtml::endForm(); ?>
         </div>

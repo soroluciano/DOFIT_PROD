@@ -70,7 +70,7 @@ if(!Yii::app()->user->isGuest){
 				  <label for="user"> Seleccione el usuario con el que desea chatear</label>  
 				    <div class="row"> 
 					    <div class="col-md-9">
-						    <div style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
+						    <div class="pantalla">
 				           <?php
 					         $usuarios = Usuario::model()->findAll();
 						     $url = array('chat/Chat');

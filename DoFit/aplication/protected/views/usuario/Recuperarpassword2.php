@@ -57,11 +57,12 @@
 				     <div> Ingrese la contraseña que desea establecer para su cuenta</div>
 					<br/>
 					<?php $email = $_GET['email'];?>
-					<form action="../Recuperarpassword3?email=<?php echo $email;?>" method="post">
+					<form action="../Recuperarpassword2?email=<?php echo $email;?>" method="post">
                          <input type="password" id="pass" name="pass" class="form-control" placeholder="password"></input>  
 					   <br>
 					   <br>
-                      <input type="submit" value="Enviar" class="btn btn-primary"></input>					
+                      <input type="submit" value="Enviar" name="recpass" class="btn btn-primary"></input>
+					</form>
 					<br/>
 				  </div>
 			</div>	  

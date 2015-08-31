@@ -88,7 +88,7 @@ if(!Yii::app()->user->isGuest){
 						<div class="form-group">							
 							<div class="row">
 								<div class="col-md-9" >
-									<div id="conversation" style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
+									<div id="conversation" class="pantalla">
 									</div>
 								</div>		   
 						   </div>
@@ -98,8 +98,7 @@ if(!Yii::app()->user->isGuest){
 							<textarea id="mensaje" name="mensaje" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
 						</div>
 						<input type="hidden"  name="valor" id="valor"></input>
-						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>
-                        
+						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>      
 						<input type="button" id="borrarmensajes" class="btn btn-primary" value="Borrar Mensajes"></input>  						   
 					</form>
 				</div>
