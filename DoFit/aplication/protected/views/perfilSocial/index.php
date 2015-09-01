@@ -12,7 +12,7 @@
 		$(function() {
 			$('#activator').click(function(){
 			$('#overlay').fadeIn(200,function(){
-				$('#box').animate({'top':'20px'},200);
+				$('#box').animate({'top':'1px'},200);
 			});
 			return false;
 		});
@@ -27,14 +27,18 @@
 
     });
 
+	
 	function activator(){
 		$('#overlay').fadeIn(200,function(){
+				$('#box').show();
 				$('#box').animate({'top':'20px'},200);
 		});
 	}
 	function boxclose(){
+		
 		$('#box').animate({'top':'-200px'},500,function(){
 			$('#overlay').fadeOut('fast');
+			$('#box').css("display","none");
 		});
 	}
 
@@ -226,6 +230,31 @@
 		debugger;
 		hovered = "#im"+id;
 		$(hovered).toggleClass("hovered");
+	}
+
+	function uploaderMax(){
+		debugger;
+	var file = {};
+	var file = $('#FileUpload_foto')[0];
+	
+	var formData = new FormData(file);
+
+		 $.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/prueba2';?>',
+            type: 'POST',
+            data:  formData,
+
+            success:function(response){
+                $('#respuesta_ajax').html(response);
+            },
+            error: function(e){
+                $('#logger').html(e.responseText);
+            },
+			cache: false,
+			contentType: false,
+			processData: false
+        });
+		return false;
 	}
 
 

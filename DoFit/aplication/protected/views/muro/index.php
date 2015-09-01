@@ -9,13 +9,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <a href='../../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a>Hola!</a></li>
-							<li class="dropdown">
+                            <li class="active"><a>Hola! </a></li>
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -34,38 +34,29 @@
         </nav>
     </div>
 </div>
-
-<!-- Carousel
-================================================== -->
-
 <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
     <div class="carousel-inner_min" role="listbox">
         <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/14.png" alt="First slide">
+            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">
         </div>
     </div>
 </div>
-<div>
 
-<div class="container">	
-	<!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
-			<div class="row">
-				<div class="col-md-6">
-					<h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
-	                <br>
-                   <div class="form-group">
-				     <div> Ingrese la contraseña que desea establecer para su cuenta</div>
-					<br/>
-					<?php $email = $_GET['email'];?>
-					<form action="../Recuperarpassword2?email=<?php echo $email;?>" method="post">
-                         <input type="password" id="pass" name="pass" class="form-control" placeholder="password"></input>  
-					   <br>
-					   <br>
-                      <input type="submit" value="Enviar" name="recpass" class="btn btn-primary"></input>
-					</form>
-					<br/>
-				  </div>
-			</div>	  
-</div>					
+<h1>MURO</h1>
+
+<div id="posts">
+<?php foreach($posts as $post): ?>
+    <div class="post">
+        <p>Autor: <?php echo $post->id_perfil; ?></p>
+        <p><?php echo $post->email; ?></p>
+    </div>
+<?php endforeach; ?>
 </div>
-</div>
+<?php $this->widget('ext.yiinfinite-scroll.YiinfiniteScroller', array(
+    'contentSelector' => '#posts',
+    'itemSelector' => 'div.post',
+    'loadingText' => 'Loading...',
+    'donetext' => 'This is the end... my only friend, the end',
+    //'pages' => $pages,
+)); ?>
+

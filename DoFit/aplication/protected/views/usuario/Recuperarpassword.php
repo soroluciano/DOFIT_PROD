@@ -61,8 +61,8 @@
 					  <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
 					  <br/>
 					  <?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-primary')); ?>                     
-					 <?php echo CHtml::endForm(); ?>      					  
-                   </div>
+					 <?php echo CHtml::endForm(); ?> 
+				   </div>
 				</div> 
 		</div>		
 </div>				

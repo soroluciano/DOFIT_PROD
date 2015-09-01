@@ -272,25 +272,22 @@ class UsuarioController extends Controller
         $this->render("Recuperarpassword",array('usuario'=>$usuario));
 	   } 
 	  }
-	  }	 
-	}
+	}// fin del else	 
+	  if(isset($_POST['recpass'])){
+		 $email = $_GET['email']; 
+		 $pass  = $_POST['pass'];		 
+	     if(isset($pass)){
+		    $passencr = md5($pass); 
+		    Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');       
+		    echo "<div style='margin-left:8%'>";
+			echo "Se actualizo correctamente la contraseña de su cuenta<br/>";
+	        echo "<b>".CHtml::link('Volver al Login de DoFit!',array('../aplication'))."</b>";
+		    echo "</div>";   
+	     }	  
+	  }
+   }// fin de la funcion 	 
 
-	public function actionRecuperarpassword3()
-	{
-	 $email = $_GET['email'];
-	 $pass  = $_POST['pass'];		 
-	  if(isset($pass)){
-		 $passencr = md5($pass); 
-		 Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
-		 ?>
-		 <script>
-		  alert("Se actualizo correctamente la contraseña de su cuenta");
-		 </script>
-       <?php 
-	     echo "<b>".CHtml::link('Volver al Login de DoFit!',array('../aplication'))."</b>";
-		}		 
-	}
-
+	
     public function actionValidarUsuario()
 	{
      $this->render('ValidarUsuario');

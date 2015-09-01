@@ -46,12 +46,12 @@
 			
 			<div class="overlay" id="overlay" style="display:none;"></div>
 	
-			<div class="box" id="box">
+			<div class="box" id="box" style="display:none">
 						<a class="boxclose" id="boxclose" onclick="boxclose();"></a>
 						<div id="content">
 							<h1>Important message</h1>
 							
-															<h1>¿Como subir una Imagen con Yii?</h1>
+															
 												<?php if(Yii::app()->user->hasFlash("error_imagen")){?>
 												<div class="flash-error">
 													<?php echo Yii::app()->user->getFlash("error_imagen"); ?>   
@@ -81,34 +81,26 @@
 														<?php echo $form->error($fuModel,'foto'); ?>
 														<div id="modificacion">
     
-															<?php $this->renderPartial('_ajaxContent', array('myValue'=>$myValue)); ?>
+			
     
 												        </div>
 		
 													</div>
 													<div class="row buttons">
-														<?php //echo CHtml::submitButton('Subir Imagen'); ?>							
-														<?php echo CHtml::ajaxButton ("Update data",
-															CController::createUrl('perfilSocial/UpdateAjax'), 
-															array('update' => '#modificacion'));
-															  ?> 												
+															<input type="button" class="btn" value="aceptar" onclick="uploaderMax();" id="pAjax"/>
 													</div>
-												
+	
 												<?php $this->endWidget(); ?>
 												</div><!-- form -->
 												<?php if(Yii::app()->user->hasFlash("imagen")){?>
 												<div class="flash-success">    
 													<?php echo CHtml::image(Yii::app()->request->baseUrl."".Yii::app()->user->getFlash("imagen"));?>    
 												</div>
+												<div id="respuesta_ajax">
+															
+												</div>	
 												<?php }?>
 															
-															
-															
-															
-									
-									
-									
-									<!----->
 							
 						</div>
 			</div>

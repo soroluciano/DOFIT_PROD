@@ -23,7 +23,7 @@ if(!Yii::app()->user->isGuest){
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                   <a href='../chat/index'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
@@ -70,14 +70,16 @@ if(!Yii::app()->user->isGuest){
 				<div class="row">
 					<form id="formChat" role="form">
 						<div class="form-group">
-							<label for="user"><?php echo $ficha->nombre;?> esta en chat con 
+							<label for="user"><?php echo $ficha->nombre.'&nbsp'.$ficha->apellido;?> esta en chat con 
 							<?php
-                              $nombre = $_GET['nombre'];							
-							  $idusuario = $_GET['idusuario'];
+                              $nombre = $_POST['nombre'];
+							  $apellido = $_POST['apellido'];
+							  $idusuario = $_POST['idusuario'];
+							  
 							  echo "<input type='hidden'  id='idusuario' value='$idusuario' name='idusuario'></input>";
-							   echo "<input type='hidden'  id='idusuariode' value='$idusuario' name='idusuariode'></input>";
-							  if(isset($nombre)){
-							     echo $nombre;
+						
+							  if(isset($nombre) && isset($apellido)){
+							     echo $nombre.'&nbsp'.$apellido;
 							  }
 							  ?>
 							</label>
@@ -86,7 +88,7 @@ if(!Yii::app()->user->isGuest){
 						<div class="form-group">							
 							<div class="row">
 								<div class="col-md-9" >
-									<div id="conversation" style="height:200px; border: 1px solid #CCCCCC; padding: 12px;  border-radius: 5px; overflow-x: hidden;">
+									<div id="conversation" class="pantalla">
 									</div>
 								</div>		   
 						   </div>
@@ -96,8 +98,8 @@ if(!Yii::app()->user->isGuest){
 							<textarea id="mensaje" name="mensaje" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
 						</div>
 						<input type="hidden"  name="valor" id="valor"></input>
-						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>
-                        <input type="button" id="borrarmensajes" class="btn btn-primary" value="Borrar Mensajes"></input>  						   
+						<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>      
+						<input type="button" id="borrarmensajes" class="btn btn-primary" value="Borrar Mensajes"></input>  						   
 					</form>
 				</div>
 			</section>	
@@ -141,20 +143,24 @@ if(!Yii::app()->user->isGuest){
                   $("#conversation").scrollTop(altura);				  
 			   });
 		   }
-      
 			  $("#borrarmensajes").on("click",function(){
-                var valor = $("#valor").val(0);	   				
-				   
-				   confirmar=confirm("¿Esta seguro que desea borrar todos los mensajes?");
+				
+				var valor = $("#valor").val(0);
+                var idusuarioborr = $("#idusuario").val(); 				
+                  confirmar=confirm("¿Esta seguro que desea borrar todos los mensajes?");
                    if (confirmar) {
-                       valor.val(1);
-                   }					   
-                  console.log(valor); 
+                       valor.val(1);     	
+                   }
+               var valorcar = valor.val(); 
+               var data = { "idusuario":idusuarioborr,"valor":valorcar};
+                   console.log(data);				
 			  $.ajax({
-                      type: "POST",
-                      url : 'BorrarMensajes',
-					  data: valor 	 
-                 })		   
+					  url : "BorrarMensajes",  
+					  type: "POST",
+					  dataType : "json",
+                      data : data				  
+                    })
+					
               });			   
 		</script>
 	</body>
