@@ -40,22 +40,22 @@
             <div class="form-group">
                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
                 <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"exampleInputEmail1")); ?>
-                <?php echo $form->error($model,'email'); ?>
+                <?php echo $form->error($model,'email',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($model,'password'); ?>
                 <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password"));?>
-                <?php echo $form->error($model,'password'); ?>
+                <?php echo $form->error($model,'password',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_institucion,'nombre'); ?>
                 <?php echo $form->textField($ficha_institucion,'nombre',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Gimnasio")); ?>
-                <?php echo $form->error($ficha_institucion,'nombre'); ?>
+                <?php echo $form->error($ficha_institucion,'nombre',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_institucion,'cuit'); ?>
                 <?php echo $form->textField($ficha_institucion,'cuit',array('size'=>11,'maxlength'=>11,'class'=>"form-control",'placeholder'=>"Cuit")); ?>
-                <?php echo $form->error($ficha_institucion,'cuit'); ?>
+                <?php echo $form->error($ficha_institucion,'cuit',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_institucion,'telfijo'); ?>

@@ -76,7 +76,8 @@ if(!Yii::app()->user->isGuest){
 						     $url = array('chat/Chat');
 						     foreach($usuarios as $user){
 						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
-						            if($user->id_usuario != Yii::app()->user->id){	  
+						            
+									if($user->id_usuario != Yii::app()->user->id){	  
                             ?>
 						                <form action="../chat/Chat" name="formu" id="formu" method="post">
 						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
