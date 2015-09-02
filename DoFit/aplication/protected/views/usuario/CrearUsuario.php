@@ -47,35 +47,35 @@
             <div class="form-group">
                 <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
 		        <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"Tu email",'id'=>"exampleInputEmail1",'size'=>60,'maxlength'=>60)); ?>	    
-		     	<?php echo $form->error($model,'email'); ?>
+		     	<?php echo $form->error($model,'email',array("class"=>"error_pw")); ?>
             </div>
 			
             <div class="form-group">
                 <?php echo $form->labelEx($model,'password'); ?>
 		        <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Elegí una contraseña",'maxlength'=>15));?>
-                <?php echo $form->error($model,'password'); ?>
+                <?php echo $form->error($model,'password',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($model,'Perfil'); ?>
 		        <div>
                     <?php echo $form->dropDownList($model,'id_perfil',CHtml::listData(Perfil::model()->findAll(),'id_perfil','perfil'),array('empty'=>'¿Sos alumno o profesor?','class'=>"form-control"));?>
                 </div>
-		        <?php echo $form->error($model,'id_perfil'); ?>
+		        <?php echo $form->error($model,'id_perfil',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'nombre'); ?>
                 <?php echo $form->textField($ficha_usuario,'nombre',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu nombre")); ?>
-                <?php echo $form->error($ficha_usuario,'nombre'); ?>
+                <?php echo $form->error($ficha_usuario,'nombre',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'apellido'); ?>
                 <?php echo $form->textField($ficha_usuario,'apellido',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu apellido")); ?>
-                <?php echo $form->error($ficha_usuario,'apellido'); ?>
+                <?php echo $form->error($ficha_usuario,'apellido',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'dni'); ?>
 	            <?php echo $form->textField($ficha_usuario,'dni',array('size'=>8,'maxlength'=>8,'class'=>"form-control",'placeholder'=>"Tu dni")); ?>
-	            <?php echo $form->error($ficha_usuario,'dni'); ?>
+	            <?php echo $form->error($ficha_usuario,'dni',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'sexo'); ?>
@@ -87,7 +87,7 @@
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'fechanac'); ?>
 	            <?php echo $form->dateField($ficha_usuario,'fechanac',array('class'=>"form-control",'placeholder'=>"dd/mm/yyyy")); ?>
-	            <?php echo $form->error($ficha_usuario,'fechanac'); ?>
+	            <?php echo $form->error($ficha_usuario,'fechanac',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'telfijo'); ?>
@@ -107,7 +107,7 @@
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'direccion'); ?>
 	            <?php echo $form->textField($ficha_usuario,'direccion',array('class'=>"form-control",'placeholder'=>"Tu dirección")); ?>
-	            <?php echo $form->error($ficha_usuario,'direccion'); ?>
+	            <?php echo $form->error($ficha_usuario,'direccion',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($ficha_usuario,'piso'); ?>
