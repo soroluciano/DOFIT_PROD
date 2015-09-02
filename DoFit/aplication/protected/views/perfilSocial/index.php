@@ -232,6 +232,31 @@
 		$(hovered).toggleClass("hovered");
 	}
 
+	function uploaderMax(){
+		debugger;
+	var file = {};
+	var file = $('#FileUpload_foto')[0];
+	
+	var formData = new FormData(file);
+
+		 $.ajax({
+            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/prueba2';?>',
+            type: 'POST',
+            data:  formData,
+
+            success:function(response){
+                $('#respuesta_ajax').html(response);
+            },
+            error: function(e){
+                $('#logger').html(e.responseText);
+            },
+			cache: false,
+			contentType: false,
+			processData: false
+        });
+		return false;
+	}
+
 
 </script>
 

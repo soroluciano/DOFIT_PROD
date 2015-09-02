@@ -81,37 +81,26 @@
 														<?php echo $form->error($fuModel,'foto'); ?>
 														<div id="modificacion">
     
-															<?php $this->renderPartial('_ajaxContent', array('myValue'=>$myValue)); ?>
+			
     
 												        </div>
 		
 													</div>
 													<div class="row buttons">
-														<?php //echo CHtml::submitButton('Subir Imagen'); ?>							
-														<?php echo CHtml::ajaxButton ("Guardar",
-															CController::createUrl('perfilSocial/SaveImage'),array('type'=>'POST',
-															//'data'=> 'js:{"data1": val1, "data2": val2 }',                        
-															//'success'=>'js:function(string){ alert(string); 
-															"fuModel" => $fuModel), 
-															array('update' => '#modificacion'));
-															  ?> 												
+															<input type="button" class="btn" value="aceptar" onclick="uploaderMax();" id="pAjax"/>
 													</div>
-												
+	
 												<?php $this->endWidget(); ?>
 												</div><!-- form -->
 												<?php if(Yii::app()->user->hasFlash("imagen")){?>
 												<div class="flash-success">    
 													<?php echo CHtml::image(Yii::app()->request->baseUrl."".Yii::app()->user->getFlash("imagen"));?>    
 												</div>
+												<div id="respuesta_ajax">
+															
+												</div>	
 												<?php }?>
 															
-															
-															
-															
-									
-									
-									
-									<!----->
 							
 						</div>
 			</div>

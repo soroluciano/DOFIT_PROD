@@ -243,6 +243,10 @@ class PerfilSocialController extends Controller
 		
 	}
 	
+	public function actionPruebaPost(){
+		$this->render('pruebaPost');
+	}
+	
 	public function actionSaveImage(){
 		if(isset($_POST['fuModel'])==null){
 			$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
@@ -250,8 +254,11 @@ class PerfilSocialController extends Controller
 			$fuModel = $_POST['fuModel'];
 		}
 		$data = array();
-        $data["myValue"] = "Content updated in AJAX";
-		 $this->renderPartial('_ajaxContent', $data, false, true);
+        //$data["myValue"] = "Content updated in AJAX";
+		 
+		 $myValue = $_POST['myValue'];
+		 $this->render('pruebaPost');
+		 //$this->renderPartial('pruebaPost', $myValue, false, true);
 		//if(isset($_POST['FileUpload'])) 
          //   {                
           //      if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
@@ -293,8 +300,7 @@ class PerfilSocialController extends Controller
 	}
 	
 	
-	
-	public function actionPrueba(){
+public function actionPrueba(){
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
 		$modelForm = new ImagenForm();
 		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
@@ -337,22 +343,62 @@ class PerfilSocialController extends Controller
 			$this->render('prueba',array('model'=>$modelForm));
 	}
 	
-	public function actionPruebaBotonAjax(){		
-		$data = array();
-        $data["myValue"] = "Content loaded";
-        $this->render('pruebaBotonAjax', $data);
+	public function actionPrueba2(){
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$modelForm = new ImagenForm();
+		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
 		
+		//$this->render('pruebaPost');
+		
+		/*$uf = CUploadedFile::getInstance($modelForm, 'foto');
+		if($uf!=null){
+			$this->render('pruebaPost');
+		}*/
+		
+		 if(isset($_POST['ImagenForm'])){
+			
+			//$this->render('pruebaPost');
+			$data = "hola";
+			$this->renderPartial('pruebaPost', $data, false, true);
+			
+		/*	if(isset($_FILES) and $_FILES['ImagenForm']['error']['foto']==0){
+				$name = $_FILES['ImagenForm']['name']['foto'];
+				$filename  = pathinfo($name, PATHINFO_FILENAME);
+				$ext = pathinfo($name, PATHINFO_EXTENSION);
+				$newName = date("m-d-Y-h-i-s", time())."-".$filename.'.'.$ext;
+			 
+				$uf = CUploadedFile::getInstance($modelForm, 'foto');
+				if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+					$uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif"){			 
+					  $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$newName);	
+					  //Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$newName." Subida Correctamente");
+					  //Yii::app()->user->setFlash('imagen','/images/'.$newName);
+					  $this->refresh();
+					if($uf->save()){ 
+							$this->render('index',array(
+							'model'=>$model,
+							'Us'=>$Us,
+							'fichaUsuario'=>$fichaUsuario,
+							'localidad'=>$localidad
+						//'usuarioService'=>$usuarioService
+						
+							));
+								$this->render('pruebaPost');
+						}
+				}else{
+					Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+				}
+				
+			 }*/
+				
+		}
+			
 	}
-	public function actionUpdateAjax(){
-   
-        $data = array();
-        $data["myValue"] = "Content updated in AJAX";
- 
-        $this->renderPartial('_ajaxContent', $data, false, true);
-		
-		
-		
-	}
+	
+	
+
 	
 	
 	
