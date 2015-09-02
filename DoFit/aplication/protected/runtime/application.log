@@ -3284,3 +3284,472 @@ REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/index
 in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/index.php (50)
 in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (25)
 in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/02 02:46:33 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (50)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/09/02 02:46:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`actividad`, CONSTRAINT `actividad_profesor_institucion_fk` FOREIGN KEY (`id_usuario`, `id_institucion`) REFERENCES `profesor_institucion` (`id_usuario`, `id_institucion`)). The SQL statement executed was: INSERT INTO `actividad` (`fhultmod`, `valor_actividad`, `id_usuario`, `id_deporte`, `id_institucion`, `fhcreacion`, `cusuario`) VALUES (NOW(), :yp0, :yp1, :yp2, :yp3, NOW(), :yp4).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (57)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/09/02 02:46:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`actividad`, CONSTRAINT `actividad_profesor_institucion_fk` FOREIGN KEY (`id_usuario`, `id_institucion`) REFERENCES `profesor_institucion` (`id_usuario`, `id_institucion`)). The SQL statement executed was: INSERT INTO `actividad` (`fhultmod`, `valor_actividad`, `id_usuario`, `id_deporte`, `id_institucion`, `fhcreacion`, `cusuario`) VALUES (NOW(), :yp0, :yp1, :yp2, :yp3, NOW(), :yp4)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(57): CActiveRecord->save()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('CrearActividad')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('actividad/Crear...')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+---
+2015/09/02 02:51:45 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): ActividadController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): ActividadController->filterAccessControl()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ActividadController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ActividadController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (50)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/09/01 22:04:26 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:48 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:50 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:51 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:51 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:52 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:52 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:52 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:52 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:52 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:52 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:53 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:53 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:53 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:53 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:50:53 [error] [exception.CException] exception 'CException' with message 'Property "FichaInstitucion.acepta_mp" is not defined.' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(145): CComponent->__get('acepta_mp')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('acepta_mp')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\helpers\CHtml.php(1981): CHtml::resolveValue(Object(FichaInstitucion), 'acepta_mp')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\widgets\CActiveForm.php(914): CHtml::activeDropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\institucion\create.php(97): CActiveForm->dropDownList(Object(FichaInstitucion), 'acepta_mp', Array, Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php(75): CController->render('create', Array)
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): InstitucionController->actionCreate()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('institucion/cre...')
+#16 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/institucion/create
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/institucion/index
+---
+2015/09/01 22:52:12 [warning] [application] Failed to set unsafe attribute "id_localidad" of "Localidad".
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\InstitucionController.php (40)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/09/02 03:56:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`actividad`, CONSTRAINT `actividad_profesor_institucion_fk` FOREIGN KEY (`id_usuario`, `id_institucion`) REFERENCES `profesor_institucion` (`id_usuario`, `id_institucion`)). The SQL statement executed was: INSERT INTO `actividad` (`fhultmod`, `valor_actividad`, `id_usuario`, `id_deporte`, `id_institucion`, `fhcreacion`, `cusuario`) VALUES (NOW(), :yp0, :yp1, :yp2, :yp3, NOW(), :yp4).
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php (60)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/09/02 03:56:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dofit`.`actividad`, CONSTRAINT `actividad_profesor_institucion_fk` FOREIGN KEY (`id_usuario`, `id_institucion`) REFERENCES `profesor_institucion` (`id_usuario`, `id_institucion`)). The SQL statement executed was: INSERT INTO `actividad` (`fhultmod`, `valor_actividad`, `id_usuario`, `id_deporte`, `id_institucion`, `fhcreacion`, `cusuario`) VALUES (NOW(), :yp0, :yp1, :yp2, :yp3, NOW(), :yp4)' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ActividadController.php(60): CActiveRecord->save()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ActividadController->actionCrearActividad()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('CrearActividad')
+#13 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('actividad/Crear...')
+#14 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/actividad/CrearActividad
+---
