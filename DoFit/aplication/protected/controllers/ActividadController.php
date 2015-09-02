@@ -36,6 +36,7 @@ class ActividadController extends Controller
      */
     public function actionCrearActividad()
     {
+
         $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
         $actividad = new Actividad;
         $deporte = new Deporte;
@@ -71,7 +72,13 @@ class ActividadController extends Controller
                     }
                 }
                 if ($actividades = $cant) {
-                    $this->redirect('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
+                    echo "           <div class='modal fade bs-example-modal-sm' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+                <div class='modal-dialog modal-sm''>
+                    <div class='modal-content'>
+                       SI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    </div>
+                </div>";
+                  //  $this->redirect('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
                 }
             }
         }

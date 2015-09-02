@@ -380,7 +380,8 @@ if(!Yii::app()->user->isGuest){
                 </div>
             </div>
      <br/>
-           <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>
+           <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary','data-toggle'=>'modal','data-target'=>'.bs-example-modal-sm')); ?>
+            </div>
 <?php echo CHtml::endForm(); ?>
         </div>
    </div> 			
