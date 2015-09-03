@@ -74,12 +74,16 @@ if(!Yii::app()->user->isGuest){
 				           <?php
 					         $usuarios = Usuario::model()->findAll();
 						     $url = array('chat/Chat');
-						     foreach($usuarios as $user){
+						     
+							 
+							 foreach($usuarios as $user){
 						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
 						            
-									if($user->id_usuario != Yii::app()->user->id){	  
-                            ?>
-						                <form action="../chat/Chat" name="formu" id="formu" method="post">
+								if($user->id_usuario != Yii::app()->user->id ){	  
+                                    
+								 ?>
+						               
+									   <form action="../chat/Chat" name="formu" id="formu" method="post">
 						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
 						                  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
 						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>
@@ -87,7 +91,8 @@ if(!Yii::app()->user->isGuest){
 	                 	                </form>
 						                <br/> 
 	         			      <?php
-						            }  // fin del if
+									
+						          }  // fin del if
 						        } // llave del foreach	 
 					           ?>
 					        </div>
