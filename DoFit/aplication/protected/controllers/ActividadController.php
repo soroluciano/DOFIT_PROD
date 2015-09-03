@@ -36,48 +36,54 @@ class ActividadController extends Controller
      */
     public function actionCrearActividad()
     {
+
         $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
         $actividad = new Actividad;
         $deporte = new Deporte;
         $actividad_horario = new ActividadHorario;
 
-        
-		if(isset($_POST['Actividad'])){
-         
+
+        if (isset($_POST['Actividad'])) {
+
             $actividad->attributes = $_POST['Actividad'];
+            $ficha_profesor = FichaUsuario::model()->findByAttributes(array('nombre' => $_POST['profesor']));
+            $deporte = Deporte::model()->findByAttributes(array('deporte' => $_POST['deporte']));
+            $actividad->id_usuario = $ficha_profesor->id_usuario;
+            $actividad->id_deporte = $deporte->id_deporte;
             $actividad->id_institucion = $usuarioins->id_institucion;
             $actividad->fhcreacion = new CDbExpression('NOW()');
             $actividad->fhultmod = new CDbExpression('NOW()');
-            $actividad->cusuario = $usuarioins->email;		
+            $actividad->cusuario = $usuarioins->email;
             $actividades = 0;
-            if($actividad->save()){ 
-				$cant = count($_POST['dia']);
-				for($i=0;$i<=$cant-1;$i++){
-					
-					$actividad_horario = new ActividadHorario;
+            if ($actividad->save()) {
+                $cant = count($_POST['dia']);
+                for ($i = 0; $i <= $cant - 1; $i++) {
+
+                    $actividad_horario = new ActividadHorario;
                     $actividad_horario->id_actividad = $actividad->id_actividad;
                     $actividad_horario->id_dia = $_POST['dia'][$i];
-                    $actividad_horario->hora =  $_POST['hora'][$actividad_horario->id_dia-1];
-                    $actividad_horario->minutos = $_POST['minutos'][$actividad_horario->id_dia-1];
+                    $actividad_horario->hora = $_POST['hora'][$actividad_horario->id_dia - 1];
+                    $actividad_horario->minutos = $_POST['minutos'][$actividad_horario->id_dia - 1];
                     $actividad_horario->fhcreacion = new CDbExpression('NOW()');
                     $actividad_horario->fhultmod = new CDbExpression('NOW()');
                     $actividad_horario->cusuario = $usuarioins->email;
-                    if($actividad_horario->save()){
+                    if ($actividad_horario->save()) {
                         $actividades++;
                     }
                 }
-                if($actividades = $cant){
-                    echo "Se creo la actividad correctamente";
-
+                if ($actividades = $cant) {
+                    echo "           <div class='modal fade bs-example-modal-sm' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+                <div class='modal-dialog modal-sm''>
+                    <div class='modal-content'>
+                       SI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    </div>
+                </div>";
+                  //  $this->redirect('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
                 }
-
             }
         }
-
-        $this->render('CrearActividad',array('deporte'=>$deporte,'actividad'=>$actividad,'actividad_horario'=>$actividad_horario));
-
+        $this->render('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
     }
-
 
 
     /**

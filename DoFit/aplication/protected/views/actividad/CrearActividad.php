@@ -53,7 +53,7 @@ if(!Yii::app()->user->isGuest){
 			        <?php
                         echo $form->labelEx($deporte,'Deporte');
                         $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-                        'name'=>'2',
+                        'name'=>'deporte',
                         'value'=>'',
                         'source'=>$this->createUrl('jui/completarDeporte'),
                         // additional javascript options for the autocomplete plugin
@@ -69,7 +69,7 @@ if(!Yii::app()->user->isGuest){
                         echo "<br>";
 
                         $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-                            'name'=>'1',
+                            'name'=>'profesor',
                             'value'=>'',
                             'source'=>$this->createUrl('jui/completarProfesor'),
                             // additional javascript options for the autocomplete plugin
@@ -380,7 +380,8 @@ if(!Yii::app()->user->isGuest){
                 </div>
             </div>
      <br/>
-           <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>
+           <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary','data-toggle'=>'modal','data-target'=>'.bs-example-modal-sm')); ?>
+            </div>
 <?php echo CHtml::endForm(); ?>
         </div>
    </div> 			
