@@ -6,9 +6,10 @@
 
 #chat
 {
- background-color: #9FCC47;
- color : #fff;
- border-color: #9FCC47;
+ background-color: #FFFFFF;
+ color : #9FCC47;
+ font-weight:bold;
+
 }
 
 .pantalla

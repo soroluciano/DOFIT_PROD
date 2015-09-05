@@ -80,27 +80,47 @@ if(!Yii::app()->user->isGuest){
 					<div class="row"> 
 					    <div class="col-md-9">
 						    <div class="pantalla">
-				           <?php
-						     $url = array('chat/Chat');			 
-								   $usuarios = Usuario::model()->findAll();	   
-							 foreach($usuarios as $user){
+				           <?php			 
+								   $usuariosalu = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>2));
+                                   echo "<label for='user'>Profesores</label>";								   
+							 foreach($usuariosalu as $user){
+								  
 						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
-						             if($user->id_usuario != Yii::app()->user->id ){	  
-                                    
+											if($user->id_usuario != Yii::app()->user->id){									
 								 ?>
 						               
 									   <form action="../chat/Chat" name="formu" id="formu" method="post">
 						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
 						                  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
-						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>
-						                  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
+						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>										
+										  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
 	                 	                </form>
 						                <br/> 
 	         			      <?php
 									
 						          }  // fin del if
 						        } // llave del foreach	 
-					           ?>
+					          
+							   $usuariosprof = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>1));
+                                   echo "<label for='user'>Alumnos</label>";								   
+							 foreach($usuariosprof as $user){
+								  
+						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
+											if($user->id_usuario != Yii::app()->user->id){									
+								 ?>
+						               
+									   <form action="../chat/Chat" name="formu" id="formu" method="post">
+						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
+						                  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
+						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>										
+										  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
+										</form>
+						                <br/> 
+	         			      <?php
+									
+						          }  // fin del if
+						        } // llave del foreach	
+							  ?>	
 					        </div>
 					    </div>	 
 			        </div>
