@@ -52,23 +52,23 @@ if(!Yii::app()->user->isGuest){
                 <div class="form-group">
 			        <?php
                         echo $form->labelEx($deporte,'Deporte');
-                        $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                   /*     $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
                         'name'=>'deporte',
                         'value'=>'',
                         'source'=>$this->createUrl('jui/completarDeporte'),
                         // additional javascript options for the autocomplete plugin
                         'options'=>array('showAnim'=>'fold'),
                             'htmlOptions' => array('class'=>"form-control",'placeholder'=>"Ingrese el deporte"),
-                    ));
-			        /*$form->labelEx($deporte,'Deporte'); ?>
+                    ));*/
+			        $form->labelEx($deporte,'Deporte'); ?>
                     <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
-                    <?php echo $form->error($deporte,'deporte')*/?>
+                    <?php echo $form->error($deporte,'deporte')?>
 			    </div>
 			    <div class="form-group">
                     <?php echo $form->labelEx($actividad,'Profesor');
                         echo "<br>";
 
-                        $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                        /*$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
                             'name'=>'profesor',
                             'value'=>'',
                             'source'=>$this->createUrl('jui/completarProfesor'),
@@ -76,15 +76,15 @@ if(!Yii::app()->user->isGuest){
                             'options'=>array('showAnim'=>'fold'),
                             'htmlOptions' => array('class'=>"form-control",'placeholder'=>"Ingrese el profesor"),
 
-                        ));
+                        ));*/
 
-                      /*  $id_institucion = $usuarioins->id_institucion;
+                        $id_institucion = $usuarioins->id_institucion;
                         $profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion and id_estado = 1',array(':id_institucion'=>$id_institucion));
                         foreach ( $profeins as $proins){
                             $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
                             echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));
                             echo "<br>";
-                        }*/
+                        }
                     ?>
 			    </div>
 			    <div class="form-group">
