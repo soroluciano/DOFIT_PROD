@@ -46,10 +46,10 @@ class ActividadController extends Controller
         if (isset($_POST['Actividad'])) {
             
             $actividad->attributes = $_POST['Actividad'];
-            $ficha_profesor = FichaUsuario::model()->findByAttributes(array('nombre' => $_POST['profesor']));
-            $deporte = Deporte::model()->findByAttributes(array('deporte' => $_POST['deporte']));
-            $actividad->id_usuario = $ficha_profesor->id_usuario;
-            $actividad->id_deporte = $deporte->id_deporte;
+            //$ficha_profesor = FichaUsuario::model()->findByAttributes(array('nombre' => $_POST['profesor']));
+            //$deporte = Deporte::model()->findByAttributes(array('deporte' => $_POST['deporte']));
+            //$actividad->id_usuario = $ficha_profesor->id_usuario;
+            //$actividad->id_deporte = $deporte->id_deporte;
             $actividad->id_institucion = $usuarioins->id_institucion;
             $actividad->fhcreacion = new CDbExpression('NOW()');
             $actividad->fhultmod = new CDbExpression('NOW()');
@@ -72,19 +72,7 @@ class ActividadController extends Controller
                     }
                 }
                 if ($actividades = $cant) {
-
-                    echo "<div class='modal fade bs-example-modal-sm' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
-                <div class='modal-dialog modal-sm''>
-                    <div class='modal-content'>
-                       SI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                       <br>
-                       sad
-                       <br>
-                       sda
-                       <br>
-                    </div>
-                </div></div>";
-                   // $this->redirect('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
+                    $this->redirect('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
 
                 }
             }
