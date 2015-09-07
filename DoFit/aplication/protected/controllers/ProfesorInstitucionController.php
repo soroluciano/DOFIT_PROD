@@ -37,5 +37,9 @@
    public function actionListadoProfesores()
    {
      $this->render('ListadoProfesores');
-   }	 
+   }
+   public function actionMostrardatos()
+   {
+     $this->render('Mostrardatos');
+   }	
  } 

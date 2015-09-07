@@ -1,3 +1,17 @@
+<script type="text/javascript">
+  function Mostrartelefonos(idusuario){
+	var idusuario = idusuario;
+	var tel = "tel";
+    window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&tel="+tel+"",'','width=800, height=200');
+  }
+  
+  function Mostrardireccion(idusuario){
+    var idusuario = idusuario;
+    var dir = "dir";
+    window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
+  }  
+</script>  
+  
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -49,18 +63,19 @@
 $idinstitucion = Yii::app()->user->id;
 $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
  if($profesores !=null){
-    echo "<div><h2>Profesores inscriptos en la institucion</h2></div>";
+	$cont = 0; 
+    echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
     echo "<table class='table table-hover'>
            <thead>
             <tr>
-             <tr><th>Nombre</th><th>Apellido</th><th>Deporte que Dicta</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th><th>Contacto Emergencia</th><th>Direcci&oacute;n</th><th>Localidad</th><th>Provinicia</th></tr></thead>";
+             <tr><th>Nombre</th><th>Apellido</th><th>Deporte que dicta</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Editar</th><th>Eliminar</th></tr></thead>";
 	    foreach($profesores as $prof){
               	$ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
 ?>
            <tbody>
             <tr>
-             <td  width="100%" id="nombre"><?php echo $ficha_usuario->nombre ?></td>
-             <td id="cuit"><?php echo $ficha_usuario->apellido ?></td>
+             <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
+             <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
              
 			 <td id="deporte">
 			   <?php 
@@ -88,20 +103,12 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
                }  					   
               ?>
              </td>
-            <td id="fecnac"><?php echo $ficha_usuario->fechanac?></td>
-            <td id="telfijo"><?php echo $ficha_usuario->telfijo ?></td>
-            <td id="celular"><?php echo $ficha_usuario->celular?></td>
-            <td id="conemer"><?php echo $ficha_usuario->conemer?></td>
-            <td id="direccion"><?php echo $ficha_usuario->direccion?></td>
-            <td id="localidad"><?php $id_localidad = $ficha_usuario->id_localidad;   
-              $localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$id_localidad));
-              echo $localidad->localidad;?></td>  
-           <td id="provincia"><?php $id_provincia = $localidad->id_provincia;
-             $provincia = Provincia::model()->find('id_provincia=:id_provincia',array(':id_provincia'=>$id_provincia));
-             echo $provincia->provincia;?></td>		
-           <td id="depto"><?php echo $ficha_usuario->depto?></td>
-           <td id="piso"><?php echo $ficha_usuario->piso?></td>
-          </tr> 
+            <td id="fecnac"><?php echo $ficha_usuario->fechanac;?></td>
+			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+			<td id="editar"><a href="#">Editar</a></td>
+            <td id="eliminar"><a href="#">Eliminar</a></td>		  
+		  </tr> 
         </tbody>
 <?php 
     }
@@ -118,3 +125,4 @@ else
 ?>
    </div>
 </div>
+	
