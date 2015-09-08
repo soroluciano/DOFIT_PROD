@@ -27,7 +27,7 @@ $this->pageTitle=Yii::app()->name;
                     <div id="navbar" class="navbar-collapse collapse">
                         <div class="navbar-form navbar-right">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a>Hola!  <?php echo $fichains->nombre; ?></a></li>
+                                <li class="active"><a>Bienvenido! <?php echo $fichains->nombre; ?></a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                     <ul class="dropdown-menu">

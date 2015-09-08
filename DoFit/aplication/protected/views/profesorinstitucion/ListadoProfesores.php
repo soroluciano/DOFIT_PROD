@@ -10,8 +10,20 @@
     var dir = "dir";
     window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
   }  
-</script>  
-  
+</script> 
+ 
+<?php
+/* @var $this SiteController */
+
+$this->pageTitle=Yii::app()->name;
+?>
+
+<?php if(!Yii::app()->user->isGuest){
+      //Es un usuario logueado.
+	$ins = Institucion::model()->findByPk(Yii::app()->user->id);
+    $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
+	}
+?>  
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -28,7 +40,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"></li>
+                            <li class="active"><a>Bienvenido! <?php echo $fichains->nombre;?></a></li>
 							<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraci&oacute;n <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -103,7 +115,10 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
                }  					   
               ?>
              </td>
-            <td id="fecnac"><?php echo $ficha_usuario->fechanac;?></td>
+            <td id="fecnac">
+			<?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
+		     echo $fechanac;?>
+		     </td>
 			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
 			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
 			<td id="editar"><a href="#">Editar</a></td>
