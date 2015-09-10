@@ -1,12 +1,11 @@
+
+
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" rel="stylesheet">
+<script type="text/javascript">
 
-<?php
-$baseUrl = Yii::app()->baseUrl; 
-$cs = Yii::app()->getClientScript();
-$cs->registerScriptFile($baseUrl.'/js/perfil.js');
-?>
 
+</script>
 <?php
 /* @var $this SiteController */
 
@@ -129,10 +128,84 @@ if(!Yii::app()->user->isGuest){
        </div>
     </nav>
 	
-	<div class="col-lg-12" id="respuesta_ajax">
-			<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
+		<div class="col-lg-12" id="respuesta_ajax">
+																		
+			<?php if(Yii::app()->user->hasFlash("error_imagen")){?>
+			<div class="flash-error">
+				<?php echo Yii::app()->user->getFlash("error_imagen"); ?>   
+			</div>
+			<?php }?>
+			<?php if(Yii::app()->user->hasFlash("noerror_imagen")){?>
+			<div class="flash-success">    
+				<?php echo Yii::app()->user->getFlash("noerror_imagen"); ?>    
+			</div>
+			<?php }?>
+			
+			<div class="form">
+			<?php $form=$this->beginWidget('CActiveForm', array(
+				'id'=>'imagen-form',
+				'enableClientValidation'=>true,
+					'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+				'clientOptions'=>array(
+					'validateOnSubmit'=>true,
+				),
+			)); ?>
+			
+				<!--<p class="note">Los Campos con<span class="required">*</span> Son Boligatorios.</p>-->
+			
+				<div class="row">
+					<?php echo $form->labelEx($fuModel,'foto'); ?>
+					<?php echo $form->fileField($fuModel,'foto'); ?>
+					<?php echo $form->error($fuModel,'foto'); ?>
+					<div id="modificacion">
+					</div>
+	
+				</div>
+				<div class="row buttons">
+						<?php echo CHtml::submitButton('Subir Imagen'); ?>
+				</div>
+	
+			<?php $this->endWidget(); ?>
+			</div><!-- form -->
+			<?php if(Yii::app()->user->hasFlash("imagen")){?>
+			<div class="flash-success" stlyle="width:100px;height:100px;">    
+				<?php echo CHtml::image(Yii::app()->request->baseUrl."".Yii::app()->user->getFlash("imagen"));?>    
+			</div>
+			<?php }?>
+																
+	
+		</div>
+		
+		 <div id="FORMULARIO-REGISTRO">
+					<form name="formulario" id="formulario" class="formulario">
+						<h1>Prueba cristian</h1>
+								<div class="containcampo" >
+							<br />
+							<span class="azul">Imagen de perfil</span>
+							<div id="upload-file-container">
+							<input name="file" type="file" id="imagen" class="button" style="float: left; background-color: rgb(255, 255, 255); border: 0px none; margin-top: 5px; width: 85px; background-image: none;color:#E85851"/>
+							</div>
+							<input type="button" id="subirimagenbutton" value="Subir imagen" style="cursor:pointer;width: 100px; float: left; border: 0px none; background-color: rgb(255, 255, 255); margin-top: 10px;" />
+							<input type="hidden" id="imagendeperfil" value="<?php //echo $Us->cimagen; ?>"/>
+						</div>
+						<div class="containcampo">
+							<div class="messages oculto"></div><br /><br />
+							<div class="showImage"></div>
+							<br/>
+							<br/>
+						</div>
+					</form>
+		 </div>	
+		
     </div>
 
 
 </body>
 </html>
+
+
+
+
+
+<!--TODO-->
+<!--AGREGAR DESCRIPCIONES A LAS IMAGENES Y MODIFICAR LAS TABLAS Y MODELO-->

@@ -31,7 +31,9 @@
     <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.ico" type="image/x-icon">
 
-
+    <script>
+        var baseurl = '<?php echo Yii::app()->request->baseUrl; ?>';
+    </script>
 </head>
 <body>
 <?php if(isset($this->breadcrumbs)):?>
