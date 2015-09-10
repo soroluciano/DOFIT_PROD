@@ -32,5 +32,14 @@
       $criteria->condition = 't.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario ='.$usuario->id_usuario.')';
 	  $ficinstituciones = FichaInstitucion::model()->findAll($criteria);
 	  $this->render('Adhesiongimnasio',array('ficinstituciones'=>$ficinstituciones,));
-    } 
+    }
+   
+   public function actionListadoProfesores()
+   {
+     $this->render('ListadoProfesores');
+   }
+   public function actionMostrardatos()
+   {
+     $this->render('Mostrardatos');
+   }	
  } 

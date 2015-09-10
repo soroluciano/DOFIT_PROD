@@ -6,9 +6,10 @@
 
 #chat
 {
- background-color: #9FCC47;
- color : #fff;
- border-color: #9FCC47;
+ background-color:#FFFFFF;
+ color : #9FCC47;
+ font-weight:bold;
+
 }
 
 .pantalla
@@ -18,4 +19,9 @@
  padding: 12px;  
  border-radius: 5px; 
  overflow-x: hidden;
+}
+
+#centrado
+{ 
+  margin-left:37%;
 }

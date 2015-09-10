@@ -1,6 +1,3 @@
-<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.1/uploadfile.css" rel="stylesheet"></link>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://hayageek.github.io/jQuery-Upload-File/4.0.1/jquery.uploadfile.min.js"></script>
 <script type="text/javascript">
     
 
@@ -81,7 +78,7 @@ foreach ($ficha_institucion as $ficins) {
     <?php $cont++;?>
    <form onsubmit="mostrarmapa(<?php echo $cont?>);"  name="formulario" id="formulario" method="post">
    <tr>
-   <td font color="white" id="nombre<?php echo $cont?>"><?php echo $ficins->nombre ?></td>
+   <td id="nombre<?php echo $cont?>"><?php echo $ficins->nombre ?></td>
    <td id="cuit<?php echo $cont?>"><?php echo $ficins->cuit ?></td>
    <td id="direccion<?php echo $cont?>"><?php echo $ficins->direccion ?></td>
    <td id="localidad<?php echo $cont?>"><?php $id_localidad = $ficins->id_localidad; 
@@ -111,6 +108,5 @@ else
 }
 ?>
 </div>
-<div id='respuesta_ajax'></div>
 
 </div>

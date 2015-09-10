@@ -61,34 +61,66 @@ if(!Yii::app()->user->isGuest){
   <body>
     <div class="container-fluid">
 	    <section  style="padding: 3%;">			
-		    <div class="row">				
-			 <h1 class="text-center">Chat: <small>Do Fit!!</small></h1>	
-				 <hr>
-		    </div>	
+		  <div class="row" id="centrado">				
+			<img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" alt="First slide"> 
+			<img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/chat.jpg" alt="First slide"> 
+		   </div>
+            <br/>			
 			<div class="row">
 			    <div class="form-group">
+				<?php 
+				   /*
+		 			    $actividadalumno = ActividadAlumno::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>Yii::app()->user->id)); // actividad que corresponde al usuario logueado								     
+				        $actividaduser = $actividadalumno->id_actividad;
+                        $actividad = Actividad::model()->find('id_actividad=:id_actividad',array(':id_actividad'=>$actividaduser));
+				        $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$actividad->id_deporte));
+				   */ 
+				 ?>
 				  <label for="user"> Seleccione el usuario con el que desea chatear</label>  
-				    <div class="row"> 
+					<div class="row"> 
 					    <div class="col-md-9">
 						    <div class="pantalla">
-				           <?php
-					         $usuarios = Usuario::model()->findAll();
-						     $url = array('chat/Chat');
-						     foreach($usuarios as $user){
+				           <?php			 
+								   $usuariosalu = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>2));
+                                   echo "<label for='user'>Profesores</label>";								   
+							 foreach($usuariosalu as $user){
+								  
 						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
-						            if($user->id_usuario != Yii::app()->user->id){	  
-                            ?>
-						                <form action="../chat/Chat" name="formu" id="formu" method="post">
+											if($user->id_usuario != Yii::app()->user->id){									
+								 ?>
+						               
+									   <form action="../chat/Chat" name="formu" id="formu" method="post">
 						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
 						                  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
-						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>
-						                  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
+						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>										
+										  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
 	                 	                </form>
 						                <br/> 
 	         			      <?php
-						            }  // fin del if
+									
+						          }  // fin del if
 						        } // llave del foreach	 
-					           ?>
+					          
+							   $usuariosprof = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>1));
+                                   echo "<label for='user'>Alumnos</label>";								   
+							 foreach($usuariosprof as $user){
+								  
+						             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$user->id_usuario));
+											if($user->id_usuario != Yii::app()->user->id){									
+								 ?>
+						               
+									   <form action="../chat/Chat" name="formu" id="formu" method="post">
+						                  <input type="hidden" value="<?php echo $user->id_usuario;?>" name="idusuario"></input>
+						                  <input type="hidden" value="<?php echo $ficha->nombre;?>" name="nombre"></input>
+						                  <input type="hidden" value="<?php echo $ficha->apellido;?>" name="apellido"></input>										
+										  <input type="submit" id="chat" value="<?php echo $ficha->nombre .' '. $ficha->apellido;?>"></input>
+										</form>
+						                <br/> 
+	         			      <?php
+									
+						          }  // fin del if
+						        } // llave del foreach	
+							  ?>	
 					        </div>
 					    </div>	 
 			        </div>
