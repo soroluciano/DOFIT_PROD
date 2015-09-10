@@ -36,7 +36,14 @@ class SiteController extends Controller
     {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
+       // IF(!isset($_SESSION['admin'])){
+        if ( !isset(Yii::app()->session['admin'])){
+            echo Yii::app()->session['admin'];
+            //$this->redirect('loginadmin');
+        }
+        else{
         $this->render('indexAdmin');
+        }
     }
 
     /**
@@ -46,7 +53,12 @@ class SiteController extends Controller
     public function actionLoginAdmin()
     {
         $model = new LoginFormAdmin;
+        $session=new CHttpSession;
         $errorCode = "";
+
+        IF(isset($_SESSION['admin'])){
+           $this->redirect('indexadmin');
+        }
 
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form')
@@ -60,8 +72,9 @@ class SiteController extends Controller
             $model->attributes=$_POST['LoginFormAdmin'];
             if ($model->login() && $model->validate())
             {
+                Yii::app()->session->open();
+                Yii::app()->session['admin'] = Yii::app()->user->id;
                 $this->redirect(array('/site/indexAdmin'));
-
             }
             else
             {
