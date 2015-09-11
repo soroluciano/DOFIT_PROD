@@ -38,8 +38,7 @@ class SiteController extends Controller
         // using the default layout 'protected/views/layouts/main.php'
        // IF(!isset($_SESSION['admin'])){
         if ( !isset(Yii::app()->session['admin'])){
-            echo Yii::app()->session['admin'];
-            //$this->redirect('loginadmin');
+            $this->redirect('loginadmin');
         }
         else{
         $this->render('indexAdmin');
@@ -56,9 +55,10 @@ class SiteController extends Controller
         $session=new CHttpSession;
         $errorCode = "";
 
-        IF(isset($_SESSION['admin'])){
-           $this->redirect('indexadmin');
+        if ( isset(Yii::app()->session['admin'])){
+            $this->redirect('indexAdmin');
         }
+
 
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form')
@@ -73,7 +73,7 @@ class SiteController extends Controller
             if ($model->login() && $model->validate())
             {
                 Yii::app()->session->open();
-                Yii::app()->session['admin'] = Yii::app()->user->id;
+                Yii::app()->session['admin'] = 'admin';
                 $this->redirect(array('/site/indexAdmin'));
             }
             else
