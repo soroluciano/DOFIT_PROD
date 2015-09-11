@@ -18,7 +18,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="indexAdmin">Home</a></li>
+                                    <li><a href="../../site/indexAdmin">Home</a></li>
                                     <li><a href="../institucion/index">ABM gimnasios</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
