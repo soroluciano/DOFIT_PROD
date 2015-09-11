@@ -194,5 +194,14 @@ class InstitucionController extends Controller
         }
     }
 	
+	public function actionListadoAlumnosxInstitucion()
+	{
+      $this->render('ListadoAlumnosxInstitucion');
+	}
 	
+	public function actionMostrardatos()
+    {
+	  $this->render('Mostrardatos');
+	}  
 }
+

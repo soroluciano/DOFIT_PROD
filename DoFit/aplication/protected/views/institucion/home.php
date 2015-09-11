@@ -33,7 +33,7 @@ $this->pageTitle=Yii::app()->name;
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Home</a></li>
                                         <li><a href="../ProfesorInstitucion/ListadoProfesores">Ver listado de Profesores</a></li>
-                                        <li><a href="#">Ver listado de Alumnos</a></li>  										
+                                        <li><a href="../institucion/ListadoAlumnosxInstitucion">Ver listado de Alumnos</a></li>  										
 										<li role="separator" class="divider"></li>
                                         <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                     </ul>

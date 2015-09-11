@@ -2,13 +2,13 @@
   function Mostrartelefonos(idusuario){
 	var idusuario = idusuario;
 	var tel = "tel";
-    window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&tel="+tel+"",'','width=800, height=200');
+    window.open("../institucion/Mostrardatos?idusuario="+idusuario+"&tel="+tel+"",'','width=800, height=200');
   }
   
   function Mostrardireccion(idusuario){
     var idusuario = idusuario;
     var dir = "dir";
-    window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
+    window.open("../institucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
   }  
 </script> 
  
@@ -73,25 +73,27 @@ $this->pageTitle=Yii::app()->name;
 
 <?php 
 $idinstitucion = Yii::app()->user->id;
-$profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
- if($profesores !=null){
-    echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
+$actividades = Actividad::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
+ if($actividades !=null){ 
+    echo "<div><h2>Alumnos inscriptos en la instituci&oacute;n</h2></div>";
     echo "<table class='table table-hover'>
            <thead>
             <tr>
-             <tr><th>Nombre</th><th>Apellido</th><th>Deporte que dicta</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Editar</th><th>Eliminar</th></tr></thead>";
-	    foreach($profesores as $prof){
-              	$ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
+             <tr><th>Nombre</th><th>Apellido</th><th>Deporte que Pr&aacute;ctica</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Editar</th><th>Eliminar</th></tr></thead>";
+	    foreach($actividades as $acti){
+              	 $actividad_alumno = ActividadAlumno::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$acti->id_actividad));
+				  foreach ($actividad_alumno as $act_alum){		
+				            $id_usuario = $act_alum->id_usuario;
+							$ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
 ?>
            <tbody>
             <tr>
              <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
-             <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
-             
+             <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>       
 			 <td id="deporte">
 			   <?php 
-			    $actividad = Actividad::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario,'id_institucion'=>$idinstitucion));
-			      if($actividad == null){
+				$actividad = Actividad::model()->findByAttributes(array('id_actividad'=>$act_alum->id_actividad));			     
+				 if($actividad == null){
 					  echo "No se asocio a ninguna actividad";
 			       }
 				   else {
@@ -102,7 +104,7 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
 			 <td id="dni"><?php echo $ficha_usuario->dni ?></td>
              <td id="email">
 			  <?php 
-			    $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
+			    $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$id_usuario));
 				echo $usuario->email?></td>
              <td id="sexo">
               <?php 
@@ -118,21 +120,22 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
 			<?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
 		     echo $fechanac;?>
 		     </td>
-			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
 			<td id="editar"><a href="#">Editar</a></td>
             <td id="eliminar"><a href="#">Eliminar</a></td>		  
 		  </tr> 
         </tbody>
 <?php 
-    }
+           }
+     }		   
    echo "</table>";
  }
 else
 {
    echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay Profesores asociados a la instituci&oacute;n</h2>
+                            <h2 class='text-center'>No hay Alumnos asociados a la instituci&oacute;n</h2>
                         </div>
                     </div>";	
 }
