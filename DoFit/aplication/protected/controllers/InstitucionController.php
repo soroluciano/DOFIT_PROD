@@ -198,4 +198,10 @@ class InstitucionController extends Controller
 	{
       $this->render('ListadoAlumnosxInstitucion');
 	}
+	
+	public function actionMostrardatos()
+    {
+	  $this->render('Mostrardatos');
+	}  
 }
+

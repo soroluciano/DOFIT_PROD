@@ -35,7 +35,7 @@ $this->pageTitle=Yii::app()->name;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <a href='../aplication'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                   <a href='../institucion/home'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
@@ -46,7 +46,7 @@ $this->pageTitle=Yii::app()->name;
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
 									<li><a href="../ProfesorInstitucion/ListadoProfesores">Ver listado de Profesores</a></li>
-                                    <li><a href="#">Ver listado de Alumnos</a></li>  
+                                    <li><a href="../institucion/ListadoAlumnosxInstitucion">Ver listado de Alumnos</a></li>  
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                 </ul>
                             </li>
@@ -92,7 +92,7 @@ $actividades = Actividad::model()->findAll('id_institucion=:id_institucion',arra
              <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>       
 			 <td id="deporte">
 			   <?php 
-			    $actividad = Actividad::model()->findByAttributes(array('id_usuario'=>$id_usuario));			     
+				$actividad = Actividad::model()->findByAttributes(array('id_actividad'=>$act_alum->id_actividad));			     
 				 if($actividad == null){
 					  echo "No se asocio a ninguna actividad";
 			       }
@@ -135,7 +135,7 @@ else
 {
    echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay Alumnos asociados a la institucion</h2>
+                            <h2 class='text-center'>No hay Alumnos asociados a la instituci&oacute;n</h2>
                         </div>
                     </div>";	
 }
