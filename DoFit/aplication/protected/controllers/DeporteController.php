@@ -23,6 +23,9 @@ class DeporteController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
 
 		if(isset($_POST['Deporte']))
 		{
@@ -48,7 +51,11 @@ class DeporteController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
+
+        // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Deporte']))
@@ -73,7 +80,11 @@ class DeporteController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
+
+        $this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -85,6 +96,10 @@ class DeporteController extends Controller
 	 */
 	public function actionIndex()
 	{
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
+
         $deporte =Deporte::model()->findAll();
         $this->render('index',array(
             'deporte'=>$deporte,

@@ -25,6 +25,10 @@ class InstitucionController extends Controller
      */
     public function actionCreate()
     {
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
+
         date_default_timezone_set('America/Argentina/Buenos_Aires');
         $model= new Institucion;
         $send = new SendEmailService;
@@ -82,6 +86,10 @@ class InstitucionController extends Controller
      */
     public function actionUpdate($id)
     {
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
+
         $model=$this->loadModel($id);
         $ficha_institucion = new FichaInstitucion;
         $ficha_institucion = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$id));
@@ -112,6 +120,10 @@ class InstitucionController extends Controller
      */
     public function actionDelete($id)
     {
+        if ( !isset(Yii::app()->session['admin'])){
+            $this->redirect('loginadmin');
+        }
+
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
