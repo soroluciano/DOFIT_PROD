@@ -398,9 +398,68 @@ public function actionPrueba(){
 	}
 	
 	
+	public function actionNuevaFoto(){
+		
+		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+		
+		
+		if($model == null){ // se crea un nuevo perfil social si el usuario es nuevo
+			$model = new PerfilSocial();
+			$model->id_usuario=$Us->id_usuario;
+			$model->fhcreacion= new CDbExpression('NOW()');
+			$model->cusuario=$Us->id_usuario;
+			$model->save();
+		}
 
+		//Modelos utilizados
+		//$model=new PerfilSocial;
+		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
+		
+		 if(isset($_POST['FileUpload'])) 
+            {                
+                if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
+                 {
+                    $uf = CUploadedFile::getInstance($fuModel, 'foto');
+                    if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
+                        $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
+                    {
+                          $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
+						  if($model->foto1!=null){
+							$model->foto1 = $uf->getName();
+							$model->update();
+						
+						  }else{
+							$model->foto1 = $uf->getName();
+							$model->save();
+						
+						  }
+						  
+                          Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
+                          Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
+                          $this->refresh();
+						  
+                    }else{
+                        Yii::app()->user->setFlash('error_imagen','Imagen no valida');
+                    }
+                    
+                 }
+            }
+		
+			
+		$this->render('nuevaFoto',array(
+			'model'=>$model,
+			'fuModel'=>$fuModel,
+			'Us'=>$Us,
+			'fichaUsuario'=>$fichaUsuario,
+			'localidad'=>$localidad,
+		));	
+		
+		
+		
+	}
 	
-	
-	
-	
+
 }

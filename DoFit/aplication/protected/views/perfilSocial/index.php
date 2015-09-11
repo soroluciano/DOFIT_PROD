@@ -1,266 +1,29 @@
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" rel="stylesheet">
-<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.1/uploadfile.css" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://hayageek.github.io/jQuery-Upload-File/4.0.1/jquery.uploadfile.min.js"></script>
-<script type="text/javascript">
-    var showLoader;
-	var i = 0;
-    $(window).load(function(){
 
-        info();
-		
-		$(function() {
-			$('#activator').click(function(){
-			$('#overlay').fadeIn(200,function(){
-				$('#box').animate({'top':'1px'},200);
-			});
-			return false;
-		});
-		$('#boxclose').click(function(){
+<?php
+$baseUrl = Yii::app()->baseUrl; 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/js/perfil.js');
+?>
 
-			});
- 
-		});
+<?php
+/* @var $this SiteController */
 
+$this->pageTitle=Yii::app()->name;
+?>
 
+<?php 
 
-
-    });
-
+if(!Yii::app()->user->isGuest){
+	//Es un usuario logueado.
+     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+  }
+  ?>
+<html>
+<body>
 	
-	function activator(){
-		$('#overlay').fadeIn(200,function(){
-				$('#box').show();
-				$('#box').animate({'top':'20px'},200);
-		});
-	}
-	function boxclose(){
-		
-		$('#box').animate({'top':'-200px'},500,function(){
-			$('#overlay').fadeOut('fast');
-			$('#box').css("display","none");
-		});
-	}
-
-
-    function galeria(){
-        debugger;
-        showLoader = setTimeout("$('#loadingImage').show()", 300);
-        $("#btn_galeria").addClass("active");
-        $("#btn_info").removeClass("active");
-
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/galeria ';?>',
-            type: 'post',
-            //data: { },
-            success:function(response){
-                $('#respuesta_ajax').html(response);
-
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-    }
-
-    function info(){
-        debugger;
-        showLoader = setTimeout("$('#loadingImage').show()", 300);
-        $("#btn_galeria").removeClass("active");
-        $("#btn_info").addClass("active");
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/informacion ';?>',
-            type: 'post',
-            data: { /*raza: valor, sexo: sx */},
-            success:function(response){
-                $('#respuesta_ajax').html(response);
-
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-    }
-    function edicion(){
-        debugger;
-        showLoader = setTimeout("$('#loadingImage').show()", 300);
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/edicion ';?>',
-            type: 'post',
-            data: { /*raza: valor, sexo: sx */},
-            success:function(response){
-                $('#respuesta_ajax').html(response);
-
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-    }
-    function edicionInfo(){
-        debugger;
-        showLoader = setTimeout("$('#loadingImage').show()", 300);
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/edicionInfo ';?>',
-            type: 'post',
-            data: { /*raza: valor, sexo: sx */},
-            success:function(response){
-                $('#respuesta_ajax').html(response);
-
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-    }
-
-	function edicionDescripcionForm(){	
-       <?php
-			$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-			$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		?>
-		$("#descripcion").html("<form><textarea id='descripcion_inpt' maxlength='500'><?php echo $perfilSocial->descripcion;?></textarea><br><input type='button' class='btn btn-default' id ='btn_save_edicion' value='Guardar' onclick='saveEdicionInfo();'/><input type='button' id='btn_close' class='btn btn-warning' value='Cancelar' onclick='cancelEdit();'/></form>");
-
-	} 
-	
-	function saveEdicionInfo(){
-		debugger;
-		var descripcion = $("#descripcion_inpt").val();
-		
-		showLoader = setTimeout("$('#loadingImage').show()", 300);
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/saveInfo ';?>',
-            type: 'post',
-            data: { descripcion:descripcion},
-            success:function(response){
-	
-				$("#descripcion").html("<div id='descripcion_inpt' onclick='edicionDescripcionForm();'>"+response+"</div>");
-				
-				//$("#descripcion_inpt").append(res);
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-		
-		
-	
-	}
-	
-	function cancelEdit(){
-		$("#descripcion").html("<div id='descripcion_inpt' onclick='edicionDescripcionForm();'><?php echo $model->descripcion; ?></div>");	
-	}
-		
-	function saveFotos(){
-	
-		/*$.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/saveInfo ';?>',
-            type: 'post',
-            data: { descripcion:descripcion},
-            success:function(response){
-	
-				//$("#descripcion").html("<div id='descripcion_inpt' onclick='edicionDescripcionForm();'>"+response+"</div>");
-				
-				//$("#descripcion_inpt").append(res);
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-	*/
-		
-	}
-		
-	function indexSaveFotos(){
-		debugger;
-		$.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/indexSaveFotos ';?>',
-            type: 'post',
-            data:{},
-            success:function(response){
-				$('#subir_foto').html(response);
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-	}	
-	
-	 function edicion(){
-        debugger;
-        showLoader = setTimeout("$('#loadingImage').show()", 300);
-        $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/edicion ';?>',
-            type: 'post',
-            data: { /*raza: valor, sexo: sx */},
-            success:function(response){
-                $('#respuesta_ajax').html(response);
-
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            }
-        });
-    }
-	function addBtn(idbtn){
-		debugger;
-		if(idbtn!=null){
-			opcion = '#im'+idbtn;
-			append = '<button id="op'+idbtn+'" class="btn btn-default elevateButton">Modificar Imagen</button>';
-			$(opcion).append(append);
-		}
-	}
-	function delbtn(id){
-			if(id!=null){
-				opcion = '#im'+id+'>#op'+id;
-				$(opcion).remove();
-		}
-		
-	}
-	function addEdBtn(idbtn,im){
-		debugger;
-		if (idbtn!=null) {
-					imres = '#im'+im;
-					append = '<button id = '+idbtn+' class="btn btn-default elevateButton" onmouseout="showHovered('+im+');"" onclick="showHovered('+im+');""  onmousehover="showHovered('+im+');"" >Cargar imagen</button>';
-					$(imres).append(append);	
-					
-		}
-	}
-	function showHovered(id){
-		debugger;
-		hovered = "#im"+id;
-		$(hovered).toggleClass("hovered");
-	}
-
-	function uploaderMax(){
-		debugger;
-	var file = {};
-	var file = $('#FileUpload_foto')[0];
-	
-	var formData = new FormData(file);
-
-		 $.ajax({
-            url: '<?php echo Yii::app()->request->baseUrl;echo'/perfilSocial/prueba2';?>',
-            type: 'POST',
-            data:  formData,
-
-            success:function(response){
-                $('#respuesta_ajax').html(response);
-            },
-            error: function(e){
-                $('#logger').html(e.responseText);
-            },
-			cache: false,
-			contentType: false,
-			processData: false
-        });
-		return false;
-	}
-
-
-</script>
-
-
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -272,13 +35,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+                   <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a>Hola! </a></li>
-                            <li class="dropdown">
+                            <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+							<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -308,8 +71,12 @@
         </div>
     </div>
 </div>
+<div>
 
-<!--content header--> 
+    <?php if(Yii::app()->user->isGuest == false): ?>
+<?php endif; ?>
+
+
  <?php 
 	if(!Yii::app()->user->isGuest){
 	    $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
@@ -331,42 +98,41 @@
 	$depto = $fichaUsuario->depto;
  */
  ?>
- 
-	<div id="content_perfil">
-		<div id="perfil">			
-			<div id="imagen_perfil">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$model->foto1 ?>" class="img-circle img_p">
-			</div>	
-
-			<div id="p_datos"> 
-				<p><span class='size_2'><?php echo $nombre." ".$apellido; ?></span>, <span class='size_1'>25</span>&nbsp;&nbsp;</p>
-
-				<p><span class='size_2'>2 </span><span class='size_1'>Deportes</span></p>	
-
-				<div id="descripcion" class="size_3 italic">
-					<?php echo "<div id='descripcion_inpt' onclick='edicionDescripcionForm();'>";
-						  echo $model->descripcion; 
-						  echo  "</div>"; 
-					?>
-				</div>
-
-				<br>
-				<a href="../site/index" class="btn btn-default text-center">
-					Continuar
-				</a>
-			</div>
-
-		</div>
-		
-	</div>	
-	<div id="seccion_botones">	
-			<input type="button" class="btn btn-success active" id ="btn_galeria" onclick="galeria();" value="Mis Fotos"><i class=icon-home></i></input> 
-			<input type="button" class="btn btn-success" id ="btn_info" onclick="info();" value="Informaci&oacute;n"><i class=icon-home></i></input> 	
-	         
-	</div>
-	<div id="respuesta_ajax">
-		<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
-	</div>
-      
 
 
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4" style="background-color: black; color:white;width:30%;margin-left:15px;">
+            <img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$model->foto1 ?>" alt="Generic placeholder image" width="140" height="140" class="img-circle">
+			<h2><?php echo $nombre." ".$apellido; ?></span></h2>
+            <h3>calcular edad</h3>
+            <h3>Practico 2 deportes</h3>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-8">
+			 <img src="<?php echo Yii::app()->request->baseUrl;echo "/images/default_cover.jpg" ?>" alt="Generic placeholder image" width="100%" height="340px" >
+         
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <nav class="navbar navbar-inverse" role="navigation">
+       <div class="navbar-header">
+		    <ul class="nav navbar-nav">
+             <li id="btn_info" style="cursor: pointer;"><a onclick="info();">Informaci&oacute;n</a></li>		
+          </ul>
+       </div>
+       <div>
+          <ul class="nav navbar-nav">
+             <li id="btn_galeria" style="cursor: pointer;"><a onclick="galeria();" >Imagenes</a></li>
+             <li><a href="#">Companeros</a></li>		
+          </ul>
+       </div>
+    </nav>
+	
+	<div class="col-lg-12" id="respuesta_ajax">
+			<div id="loadingImage" style="display:none;"><img src="<?php echo Yii::app()->request->baseUrl;echo "/img/722.GIF" ?>"</div>
+    </div>
+
+
+</body>
+</html>
