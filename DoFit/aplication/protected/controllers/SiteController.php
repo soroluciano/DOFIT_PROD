@@ -107,51 +107,36 @@ class SiteController extends Controller
 	 * Displays the login page
 	 */
 	public function actionLogin()
-	{
-		$model=new LoginForm;
-     
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+    {
+        $model = new LoginForm;
+		if(isset($_POST['email'])&& isset($_POST['password']))// && $_POST['email']<>'' && $_POST['password']<>''
 		{
-			echo CActiveForm::validate($model);  
-			Yii::app()->end();
-		}
-         
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-		/*	$model->attributes=$_POST['LoginForm'];
-			  if(isset($_GET['activo'])){
-                 $activo = $_GET['activo'];
-		     if( $activo == 1){
-               $mail = $model->username;
-	           $usuario = Usuario::model()->find('email=:email',array(':email'=>$mail));
-			   $usuario->id_estado = 1;
-               $usuario->save();			   
-             }		   
- 		  }   */
+
+            $model->username = $_POST['email'];
+            $model->password = $_POST['password'];
+
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login()) {
+			if($model->login()) {
                 // ...log in the user and redirect
                 Yii::app()->session->open();
 				Yii::app()->session['id_usuario'] = Yii::app()->user->id;
-				
+
 				$perfil = PerfilSocial::model()->findByPk(Yii::app()->user->id);
                if ($perfil == null) {
                     $usu = new UsuarioService();
                     $usu->createPerfilVacio(Yii::app()->user->id);
-                   $this->redirect(array('/perfilSocial/index'));
+                  // $this->redirect(array('/perfilSocial/index'));
+                   echo $errorCode="2";
                 } else {
-					$this->redirect(array('/site/index'));
+					//$this->redirect(array('/site/index'));
+                  echo $errorCode="1";
                 }
             }
-            else{
+        }else{
+            $this->render('login',array('model'=>$model));
+        }
 
-                echo "datos incorrectos";
-            }
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
+
 	}
 
 	
@@ -190,4 +175,39 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+    public function actionPrueba()
+    {
+
+        $model = new LoginForm();
+
+       if(isset($_POST['email'])&& isset($_POST['password']))// && $_POST['email']<>'' && $_POST['password']<>''
+        {
+            $model->username = $_POST['email'];
+            $model->password = $_POST['password'];
+
+            // validate user input and redirect to the previous page if valid
+
+            if($model->login()) {
+                // ...log in the user and redirect
+                Yii::app()->session->open();
+                Yii::app()->session['id_usuario'] = Yii::app()->user->id;
+
+                $perfil = PerfilSocial::model()->findByPk(Yii::app()->user->id);
+                if ($perfil == null) {
+                    $usu = new UsuarioService();
+                    $usu->createPerfilVacio(Yii::app()->user->id);
+                    // $this->redirect(array('/perfilSocial/index'));
+                    echo Yii::app()->request->baseUrl."/perfilSocial/index";
+                } else {
+                    //$this->redirect(array('/site/index'));
+                    echo Yii::app()->request->baseUrl."/site/index";
+                }
+            }
+        }else{
+           echo "error";
+       }
+
+
+    }
 }

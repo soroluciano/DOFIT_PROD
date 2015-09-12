@@ -13,6 +13,12 @@
     ),
 )); ?>
 
+<?php
+$baseUrl = Yii::app()->baseUrl;
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/js/login.js');
+?>
+
 
 <div class="navbar-wrapper">
     <div class="container">
@@ -30,12 +36,39 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
                     <div class="form-group">
-                        <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"exampleInputEmail1")); ?>
+                        <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"email")); ?>
 					</div>
                     <div class="form-group">
-                        <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"exampleInputPassword1")); ?>
+                        <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"password")); ?>
                     </div>
-                    <?php echo CHtml::submitButton('Ingresar!',array("class"=>"btn btn-primary")); ?>
+                    <?php echo CHtml::Button('Ingresar!',array("class"=>"btn btn-primary",'onclick'=>'login();')); ?>
+                    <?php /*
+                    echo CHtml::ajaxSubmitButton('Ingresar',CHtml::normalizeUrl(array('site/login')),
+                        array('success'=>'js: function(data) {
+								if(data=="1"){
+									window.location.replace("' . Yii::app()->request->baseUrl . '/index.php");
+								}
+								else{
+								     if(data=="2"){
+                                        window.location.replace("' . Yii::app()->request->baseUrl . 'perfilSocial/index.php");
+
+								     }
+								     else
+								     {
+								       alert(data);
+								     };
+
+								}
+					}',
+
+
+                        ),
+                        array('id'=>'submit_loginlight','class'=>'button')); */
+                    ?>
+
+
+
+
                     <a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/create" class="btn btn-primary">Registrate!</a>
                     <br>
                     <div class="form-group">
