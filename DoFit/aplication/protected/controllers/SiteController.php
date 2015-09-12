@@ -120,7 +120,7 @@ class SiteController extends Controller
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			$model->attributes=$_POST['LoginForm'];
+		/*	$model->attributes=$_POST['LoginForm'];
 			  if(isset($_GET['activo'])){
                  $activo = $_GET['activo'];
 		     if( $activo == 1){
@@ -129,7 +129,7 @@ class SiteController extends Controller
 			   $usuario->id_estado = 1;
                $usuario->save();			   
              }		   
- 		  }   
+ 		  }   */
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login()) {
                 // ...log in the user and redirect
@@ -145,7 +145,10 @@ class SiteController extends Controller
 					$this->redirect(array('/site/index'));
                 }
             }
+            else{
 
+                echo "datos incorrectos";
+            }
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
