@@ -120,7 +120,7 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
 		     </td>
 			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
 			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-			<td id="editar"><a href="#">Editar</a></td>
+			<td id="editar"><a id="edi" href="../">Editar</a></td>
             <td id="eliminar"><a href="#">Eliminar</a></td>		  
 		  </tr> 
         </tbody>
