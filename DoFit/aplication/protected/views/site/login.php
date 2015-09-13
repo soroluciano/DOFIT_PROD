@@ -72,10 +72,10 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
                     <a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/create" class="btn btn-primary">Registrate!</a>
                     <br>
                     <div class="form-group">
-                        <?php echo $form->error($model,'username',array("class"=>"error_pw"));?>
+                        <div class="error_pw" id="erruser"></div>
                     </div>
                     <div class="form-group">
-                        <?php echo $form->error($model,'password',array("class"=>"error_pw")); ?>
+                        <div class="error_pw" id="errpass"></div>
                     </div>
                 </div>
             </div>
