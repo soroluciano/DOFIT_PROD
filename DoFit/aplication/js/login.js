@@ -11,14 +11,14 @@ function login(){
     var data = {'email':email,'password':password};
 
     $.ajax({
-        url: baseurl+'/site/prueba',
+        url: baseurl+'/site/login',
         type: "POST",
         data: data,
         dataType: "html",
         cache: false,
         success:function(response){
             if(response=="error"){
-                alert(error);
+                alert("Datos incorrectos");
             }
             else{
                 window.location.replace(response);
