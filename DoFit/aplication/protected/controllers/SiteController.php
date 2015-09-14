@@ -174,14 +174,13 @@ class SiteController extends Controller
         {
             $model->username = $_POST['email'];
             $model->password = $_POST['password'];
-
+            $usuario = Usuario::model()->findByAttributes(array('email'=>$model->username));
             // validate user input and redirect to the previous page if valid
 
-            if ($model->login()) {
+            if ($model->login() && $usuario->id_estado == 1) {
                 // ...log in the user and redirect
                 Yii::app()->session->open();
                 Yii::app()->session['id_usuario'] = Yii::app()->user->id;
-
                 $perfil = PerfilSocial::model()->findByPk(Yii::app()->user->id);
                 if ($perfil == null) {
                     $usu = new UsuarioService();
