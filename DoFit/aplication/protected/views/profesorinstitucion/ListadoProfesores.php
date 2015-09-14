@@ -35,7 +35,7 @@ $this->pageTitle=Yii::app()->name;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <a href='../aplication'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                   <a href='../institucion/home'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
@@ -46,7 +46,7 @@ $this->pageTitle=Yii::app()->name;
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
 									<li><a href="../ProfesorInstitucion/ListadoProfesores">Ver listado de Profesores</a></li>
-                                    <li><a href="#">Ver listado de Alumnos</a></li>  
+                                    <li><a href="../institucion/ListadoAlumnosxInstitucion">Ver listado de Alumnos</a></li>  
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                 </ul>
                             </li>
@@ -75,7 +75,6 @@ $this->pageTitle=Yii::app()->name;
 $idinstitucion = Yii::app()->user->id;
 $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
  if($profesores !=null){
-	$cont = 0; 
     echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
     echo "<table class='table table-hover'>
            <thead>
@@ -91,7 +90,7 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
              
 			 <td id="deporte">
 			   <?php 
-			    $actividad = Actividad::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
+			    $actividad = Actividad::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario,'id_institucion'=>$idinstitucion));
 			      if($actividad == null){
 					  echo "No se asocio a ninguna actividad";
 			       }
@@ -121,7 +120,7 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
 		     </td>
 			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
 			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-			<td id="editar"><a href="#">Editar</a></td>
+			<td id="editar"><a id="edi" href="../">Editar</a></td>
             <td id="eliminar"><a href="#">Eliminar</a></td>		  
 		  </tr> 
         </tbody>
@@ -133,7 +132,7 @@ else
 {
    echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay Profesores asociados a la institucion</h2>
+                            <h2 class='text-center'>No hay Profesores asociados a la instituci&oacute;n</h2>
                         </div>
                     </div>";	
 }

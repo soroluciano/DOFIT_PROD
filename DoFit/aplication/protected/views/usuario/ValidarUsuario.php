@@ -46,8 +46,9 @@ if(!Yii::app()->user->isGuest){
 	$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 }else{
 	//No está logueado.
-	
-	$usuario = Usuario::model()->findByAttributes(array('email'=>$_GET['email']));
+	if(isset($_GET['email'])){
+	   $usuario = Usuario::model()->findByAttributes(array('email'=>$_GET['email']));
+	}
 	if($usuario){
 		//Existe el código, activo el usuario.
 		$usuario->id_estado = 1;

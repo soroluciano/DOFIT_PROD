@@ -42,8 +42,15 @@ return array(
 
 		'user'=>array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+			'allowAutoLogin'=>false,
+
+        ),
+
+        'session'=>array(
+            'class' => 'CDbHttpSession',
+            'connectionID' => 'db',
+            'sessionTableName' => 'dbsession',
+        ),
 
 		// uncomment the following to enable URLs in path-format
 

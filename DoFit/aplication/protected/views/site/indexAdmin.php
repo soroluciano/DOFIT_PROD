@@ -14,7 +14,16 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Index</a></li>
+                            <li class="active"><a>Hola! Administrador</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../institucion/index">ABM gimnasios</a></li>
+                                    <li><a href="../deporte/index">ABM Deportes</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
