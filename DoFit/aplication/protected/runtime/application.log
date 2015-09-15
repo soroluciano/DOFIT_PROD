@@ -1751,3 +1751,720 @@ Stack trace:
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/js/jquery.js
 HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/fichaInstitucion/googlemaps?nombre=Torre%20Vado&direccion=Bariloche%20y%20Catriel%20%208521&localidad=Las%20Grutas&provincia=Rio%20Negro
 ---
+2015/09/14 16:20:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.dbsession' doesn't exist. The SQL statement executed was: DELETE FROM `dbsession` WHERE expire<:expire.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/models/LoginForm.php (75)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/SiteController.php (180)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/14 16:57:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 16:59:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 17:08:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 17:09:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 17:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:32:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 17:39:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:44:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/Screenshot%20from%202015-09-14%2012:25:06.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:48:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 17:54:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 17:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:08:17 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:404)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (404)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/14 19:08:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:09:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:11:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:13:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:14:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:15:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:17:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:20:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:27:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:32:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:34:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:38:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 19:45:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/nuevaFoto
+---
+2015/09/14 20:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploads".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('uploads')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('uploads')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/up...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/uploads/2.png
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/14 20:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 20:09:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:09:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 20:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 20:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:36:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 20:36:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:40:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 20:40:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 20:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 20:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:20:53 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (43)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/14 21:21:00 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (43)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/14 21:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:27:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:27:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:31:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:31:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:52:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:52:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 21:58:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 21:58:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 22:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 22:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/14 22:09:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/14 22:09:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---

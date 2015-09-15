@@ -17,16 +17,35 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>DoFit - entrená fácil</title>
     <!-- Bootstrap -->
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-doc.css" rel="stylesheet">
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
+   <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
+   <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-doc.css" rel="stylesheet">
+   <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
+   <link href="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="screen" />
+   <link href="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" rel="stylesheet">
+   <link href="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" rel="stylesheet">
+     
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie10.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/perfil.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.file-input.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>	
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>	
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
+    <script>
+       $(document).ready(function() {
+            $('input[type=file]').bootstrapFileInput();
+            $('.file-inputs').bootstrapFileInput();
+        });
+    </script>
+    
     <!-- favicon -->
     <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.ico" type="image/x-icon">

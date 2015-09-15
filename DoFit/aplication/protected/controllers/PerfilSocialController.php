@@ -52,44 +52,9 @@ class PerfilSocialController extends Controller
 			$model->cusuario=$Us->id_usuario;
 			$model->save();
 		}
-
-		//Modelos utilizados
-		//$model=new PerfilSocial;
-		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
-		
-		 if(isset($_POST['FileUpload'])) 
-            {                
-                if(isset($_FILES) and $_FILES['FileUpload']['error']['foto']==0)
-                 {
-                    $uf = CUploadedFile::getInstance($fuModel, 'foto');
-                    if($uf->getExtensionName() == "jpg" || $uf->getExtensionName() == "png" ||
-                        $uf->getExtensionName() == "jpeg" || $uf->getExtensionName()== "gif")
-                    {
-                          $uf->saveAs(Yii::getPathOfAlias('webroot').'/images/'.$uf->getName());
-						  if($model->foto1!=null){
-							$model->foto1 = $uf->getName();
-							$model->update();
-						
-						  }else{
-							$model->foto1 = $uf->getName();
-							$model->save();
-						
-						  }
-						  
-                          Yii::app()->user->setFlash('noerror_imagen',"Imagen: ".$uf->getName()." Subida Correctamente");
-                          Yii::app()->user->setFlash('imagen','/images/'.$uf->getName());
-                          $this->refresh();
-                    }else{
-                        Yii::app()->user->setFlash('error_imagen','Imagen no valida');
-                    }
-                    
-                 }
-            }
-		
-			
+	
 		$this->render('index',array(
 			'model'=>$model,
-			'fuModel'=>$fuModel,
 			'Us'=>$Us,
 			'fichaUsuario'=>$fichaUsuario,
 			'localidad'=>$localidad,

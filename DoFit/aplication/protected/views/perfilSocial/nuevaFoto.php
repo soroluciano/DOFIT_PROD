@@ -129,73 +129,91 @@ if(!Yii::app()->user->isGuest){
     </nav>
 	
 		<div class="col-lg-12" id="respuesta_ajax">
-																		
-			<?php if(Yii::app()->user->hasFlash("error_imagen")){?>
-			<div class="flash-error">
-				<?php echo Yii::app()->user->getFlash("error_imagen"); ?>   
-			</div>
-			<?php }?>
-			<?php if(Yii::app()->user->hasFlash("noerror_imagen")){?>
-			<div class="flash-success">    
-				<?php echo Yii::app()->user->getFlash("noerror_imagen"); ?>    
-			</div>
-			<?php }?>
-			
-			<div class="form">
-			<?php $form=$this->beginWidget('CActiveForm', array(
-				'id'=>'imagen-form',
-				'enableClientValidation'=>true,
-					'htmlOptions'=>array('enctype'=>'multipart/form-data'),
-				'clientOptions'=>array(
-					'validateOnSubmit'=>true,
-				),
-			)); ?>
-			
-				<!--<p class="note">Los Campos con<span class="required">*</span> Son Boligatorios.</p>-->
-			
-				<div class="row">
-					<?php echo $form->labelEx($fuModel,'foto'); ?>
-					<?php echo $form->fileField($fuModel,'foto'); ?>
-					<?php echo $form->error($fuModel,'foto'); ?>
-					<div id="modificacion">
-					</div>
-	
-				</div>
-				<div class="row buttons">
-						<?php echo CHtml::submitButton('Subir Imagen'); ?>
-				</div>
-	
-			<?php $this->endWidget(); ?>
-			</div><!-- form -->
-			<?php if(Yii::app()->user->hasFlash("imagen")){?>
-			<div class="flash-success" stlyle="width:100px;height:100px;">    
-				<?php echo CHtml::image(Yii::app()->request->baseUrl."".Yii::app()->user->getFlash("imagen"));?>    
-			</div>
-			<?php }?>
-																
-	
+
+																	
 		</div>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FORMULARIO-REGISTRO" data-whatever="@getbootstrap">Nueva Foto</button>
+	
 		
-		 <div id="FORMULARIO-REGISTRO">
-					<form name="formulario" id="formulario" class="formulario">
-						<h1>Prueba cristian</h1>
-								<div class="containcampo" >
-							<br />
-							<span class="azul">Imagen de perfil</span>
-							<div id="upload-file-container">
-							<input name="file" type="file" id="imagen" class="button" style="float: left; background-color: rgb(255, 255, 255); border: 0px none; margin-top: 5px; width: 85px; background-image: none;color:#E85851"/>
+		 <div  class="modal fade" id="FORMULARIO-REGISTRO" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="exampleModalLabel">Nueva Imagen</h4>
+					</div>
+					<div class="modal-body">
+						<form name="formulario" id="formulario" class="formulario">
+							
+							<div id="upload-file-container" class="form-group">
+								<label for="message-text" class="control-label">Imagen:</label>
+								<br>
+								<input name="file" type="file" id="imagen" title="Buscar imagen" class="btn btn-default"/>
 							</div>
-							<input type="button" id="subirimagenbutton" value="Subir imagen" style="cursor:pointer;width: 100px; float: left; border: 0px none; background-color: rgb(255, 255, 255); margin-top: 10px;" />
-							<input type="hidden" id="imagendeperfil" value="<?php //echo $Us->cimagen; ?>"/>
-						</div>
-						<div class="containcampo">
-							<div class="messages oculto"></div><br /><br />
+							<div class="form-group">
+								<label for="message-text" class="control-label">Descripcion:</label>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+							<div class="messages oculto"></div>
 							<div class="showImage"></div>
-							<br/>
-							<br/>
-						</div>
-					</form>
+							<div class="modal-footer">	
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+								<input type="button" class="btn btn-primary" id="subirimagenbutton" value="Subir imagen"/>
+								<input type="hidden" id="imagendeperfil" value="<?php //echo $Us->cimagen; ?>"/>
+							</div>		
+						</form>
+					</div>
+				</div>
+			</div>
 		 </div>	
+		
+	
+
+		<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadFoto" data-whatever="@getbootstrap">Nueva Foto</button>
+	
+		
+		<div class="modal fade" id="uploadFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="exampleModalLabel">Nueva Imagen</h4>
+			  </div>
+			  <div id="FORMULARIO-REGISTRO" class="modal-body">
+				<form  name="formulario" id="formulario" class="formulario">
+					<div class="form-group">
+						<label for="recipient-name" class="control-label">Imagen:</label>
+						<div class="containcampo" >
+							<div id="upload-file-container">
+								<input type="file" id="imagen" title="Buscar imagen" class="btn btn-default">					
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="message-text" class="control-label">Descripcion:</label>
+						<textarea class="form-control" id="message-text"></textarea>
+					</div>
+					<div class="containcampo">
+						<div class="messages oculto"></div><br /><br />
+						<div class="showImage"></div>
+						<br/>
+						<br/>
+					</div>
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrrar</button>
+				<button type="button" class="btn btn-primary" id="subirimagenbutton">Guardar</button>
+				<input type="hidden" id="imagendeperfil" value="<?php //echo $Us->cimagen; ?>"/>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+-->
+
+		
+		
 		
     </div>
 
