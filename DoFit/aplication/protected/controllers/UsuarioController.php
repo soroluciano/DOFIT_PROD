@@ -293,5 +293,5 @@ class UsuarioController extends Controller
       $this->render('ActivarUsuario');
     }	 
     
-	
 }
+?>
