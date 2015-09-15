@@ -9,13 +9,14 @@ function login() {
     var password = $('#password').val();
     $('#erruser').html("");
     $('#errpass').html("");
+    $(document).off('.alert.data-api');
     var cont = 0;
     if (email == "" || email == null){
-        $('#erruser').html("Ingrese su email");
+        $('#erruser').html("<div class='arrow-up'></div><div class='tooltip-inner-login'>Por favor ingrese su e-mail</div>");
         cont++;
     }
     if (password == "" || password == null){
-        $('#errpass').html("Ingrese su contraseña");
+        $('#errpass').html("<div class='arrow-up'></div><div class='tooltip-inner-login'>Por favor ingrese su contraseña</div>");
         cont++;
     }
     if(cont == 0) {
@@ -29,7 +30,7 @@ function login() {
             cache: false,
             success: function (response) {
                 if (response == "error") {
-                    alert("Datos incorrectos");
+                    $('#errpass').alert('asd');
                 }
                 else {
                     window.location.replace(response);
