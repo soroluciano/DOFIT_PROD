@@ -289,8 +289,8 @@ class UsuarioController extends Controller
 
 	
     public function actionActivarUsuario()
-	{
-     $this->render('ActivarUsuario');
+    {
+      $this->render('ActivarUsuario');
     }	 
     
 	
