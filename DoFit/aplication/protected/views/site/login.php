@@ -35,10 +35,10 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
-                    <div class="form-group">
+                    <div class="form-group" id="div-email">
                         <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"email")); ?>
 					</div>
-                    <div class="form-group">
+                    <div class="form-group" id="div-password">
                         <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"password")); ?>
                     </div>
                     <?php echo CHtml::Button('Ingresar!',array("class"=>"btn btn-primary",'onclick'=>'login();')); ?>
@@ -65,10 +65,6 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
                         ),
                         array('id'=>'submit_loginlight','class'=>'button')); */
                     ?>
-
-
-
-
                     <a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/create" class="btn btn-primary">Registrate!</a>
                     <br>
                     <div class="form-group">
