@@ -73,7 +73,7 @@ if(!Yii::app()->user->isGuest){
 						<div class="form-group">
 							<label for="user"><?php echo $ficha->nombre.'&nbsp'.$ficha->apellido;?> esta en chat con 
 							<?php
-                              $nombre = $_POST['nombre'];
+                                                          $nombre = $_POST['nombre'];
 							  $apellido = $_POST['apellido'];
 							  $idusuario = $_POST['idusuario'];
 							  
