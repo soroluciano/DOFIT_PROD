@@ -3,13 +3,14 @@
 class SendEmailService
 {
 	public function Send($email_destino){
-        $message = '<html>
+        $email_destino_enc = md5($email_destino);
+		$message = '<html>
                     <body >
 					<h1>¡Hola!</h1>
 					<br>
 					Confirmá tu registración, pegando la siguiente URL en el navegador que quieras:
 					<br>
-					http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/ValidarUsuario/?email='.$email_destino.';
+					http://localhost/DOFIT_FINAL/DoFit/aplication/usuario/ActivarUsuario/?email='.$email_destino_enc.';
 					<br>
 					¡Gracias por registrarte! Que disfrutes de la web
 					<br>
