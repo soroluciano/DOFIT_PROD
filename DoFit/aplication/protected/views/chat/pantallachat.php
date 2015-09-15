@@ -1,4 +1,4 @@
-<<html>
+<html>
  <head>
   <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chat.css"></link>
  </head> 
@@ -157,9 +157,11 @@ if(!Yii::app()->user->isGuest){
 					  url : "BorrarMensajes",  
 					  type: "POST",
 					  dataType : "json",
-                      data : data				  
+					  data : data				  
                     })
 					
               });			   
 		</script>
-	</bod
+	</body>
+   </div>
+ </html>  
