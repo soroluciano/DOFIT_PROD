@@ -1,10 +1,9 @@
-<html>
+<<html>
  <head>
   <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chat.css"></link>
  </head> 
 
 <?php 
-
 if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
      $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
@@ -73,7 +72,7 @@ if(!Yii::app()->user->isGuest){
 						<div class="form-group">
 							<label for="user"><?php echo $ficha->nombre.'&nbsp'.$ficha->apellido;?> esta en chat con 
 							<?php
-                                                          $nombre = $_POST['nombre'];
+							  $nombre = $_POST['nombre'];
 							  $apellido = $_POST['apellido'];
 							  $idusuario = $_POST['idusuario'];
 							  
@@ -129,7 +128,6 @@ if(!Yii::app()->user->isGuest){
 				   }) 
 			  });
             }
-
           var cargarMensajesAntiguos = function() {
 			  var idusuario = $("#idusuario").val();
 			  $.ajax({
@@ -164,5 +162,4 @@ if(!Yii::app()->user->isGuest){
 					
               });			   
 		</script>
-	</body>
-</html>
+	</bod
