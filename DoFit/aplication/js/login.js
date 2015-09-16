@@ -2,6 +2,8 @@
  * Created by Damián on 12/09/2015.
  */
 
+
+
 function login() {
     debugger;
     //var algo = baseurl;
@@ -34,7 +36,16 @@ function login() {
             cache: false,
             success: function (response) {
                 if (response == "error") {
-                    $('#errpass').alert('asd');
+                    $('#erruser').html("<div class='alert alert-danger alert-dismissible fade in' role='alert' id='alerta-1'>" +
+                                       "<button class='close' aria-label='Close' data-dismiss='alert' type='button' id='alerta-2'>" +
+                                                "</button>" +
+                                                    "<h4>Error!</h4>" +
+                                                        "<p>Datos incorrectos, por favor intenta de nuevo</p>" +
+                                                            "<p>" +
+                                                                "<button class='btn btn-danger' onclick='hiddenalert();' type='button'>Intentá de nuevo</button>" +
+                                                                "</button>" +
+                                                            "</p>" +
+                                    "</div>");
                 }
                 else {
                     window.location.replace(response);
@@ -49,3 +60,4 @@ function login() {
 
 
 }
+

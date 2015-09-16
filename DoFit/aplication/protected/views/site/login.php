@@ -194,13 +194,15 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
       </div>
  </div>
 
+
+
 <footer class="footer">
     <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
     </div>
 </footer>
 </div>
-<script>
+<script type='text/javascript'>
     $("#email").blur(function() {
         var email = $('#email').val();
         if (email == "") {
@@ -238,4 +240,9 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
             }
 
 });
+</script>
+<script type='text/javascript'>
+function hiddenalert(){
+    $('#alerta-1').remove();
+}
 </script>
