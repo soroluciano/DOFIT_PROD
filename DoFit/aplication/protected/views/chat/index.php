@@ -1,16 +1,16 @@
 <html>
- <head>
-  <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chat.css"></link>
- </head> 
+<head>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chat.css"></link>
+</head>
 
-<?php 
+<?php
 if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
- }
+    //Es un usuario logueado.
+    $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+}
 ?>
-  
+
 <div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -22,13 +22,13 @@ if(!Yii::app()->user->isGuest){
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                    <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
-							<li class="dropdown">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -59,61 +59,61 @@ if(!Yii::app()->user->isGuest){
     </div>
 </div>
 <body>
-  <div class="container-fluid">
-	<section  style="padding: 3%;">			
-	  <div class="row" id="centrado">				
-	    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" alt="First slide"> 
-		<img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/chat.jpg" alt="First slide"> 
-	   </div>
-       <br/>			
-	   <div class="row">
-	      <div class="form-group">
-			<label for="user"> Seleccione el usuario con el que desea chatear</label>  
-			  <div class="row"> 
-				<div class="col-md-9">
-				   <div class="pantalla">
-				     <?php			 
-					  $usuariosprof = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>2));
-                      echo "<label for='user'>Profesores</label>";								   
-				      foreach($usuariosprof as $userprof){			  
-						       $fichaprof = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$userprof->id_usuario));
-							   if($userprof->id_usuario != Yii::app()->user->id){									
-					 ?>
-							      <form action="../chat/Chat" name="formu" id="formu" method="post">
-						            <input type="hidden" value="<?php echo $userprof->id_usuario;?>" name="idusuario"></input>
-						            <input type="hidden" value="<?php echo $fichaprof->nombre;?>" name="nombre"></input>
-						            <input type="hidden" value="<?php echo $fichaprof->apellido;?>" name="apellido"></input>										
-								    <input type="submit" id="chat" value="<?php echo $fichaprof->nombre .' '. $fichaprof->apellido;?>"></input>
-	                 	          </form>
-						            <br/> 
-	         	     <?php
-						         }  // fin del if
-						     } // llave del foreach	 
-					 $usuariosalum = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>1));
-					  echo "<label for='user'>Alumnos</label>";								   
-					   foreach($usuariosalum as $useralum){
-								 $fichaalum = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$useralum->id_usuario));
-						      	 if($useralum->id_usuario != Yii::app()->user->id){									
-					  ?>
-									 <form action="../chat/Chat" name="formu" id="formu" method="post">
-						               <input type="hidden" value="<?php echo $useralum->id_usuario;?>" name="idusuario"></input>
-						               <input type="hidden" value="<?php echo $fichaalum->nombre;?>" name="nombre"></input>
-						               <input type="hidden" value="<?php echo $fichaalum->apellido;?>" name="apellido"></input>										
-									    <input type="submit" id="chat" value="<?php echo $fichaalum->nombre .' '. $fichaalum->apellido;?>"></input>
-								     </form>
-						               <br/> 
-	         		         <?php
-						           }  // fin del if
-						      } // llave del foreach	
-				              ?>	
-					 </div>
-				  </div>	 
-			  </div>
-			   <br/>  					 
-		   </div>    
+<div class="container-fluid">
+    <section  style="padding: 3%;">
+        <div class="row" id="centrado">
+            <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" alt="First slide">
+            <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/chat.jpg" alt="First slide">
         </div>
-     </section>
-  </div>	 
-    </div>
-  </body>
+        <br/>
+        <div class="row">
+            <div class="form-group">
+                <label for="user"> Seleccione el usuario con el que desea chatear</label>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="pantalla">
+                            <?php
+                            $usuariosprof = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>2));
+                            echo "<label for='user'>Profesores</label>";
+                            foreach($usuariosprof as $userprof){
+                                $fichaprof = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$userprof->id_usuario));
+                                if($userprof->id_usuario != Yii::app()->user->id){
+                                    ?>
+                                    <form action="../chat/Chat" name="formu" id="formu" method="post">
+                                        <input type="hidden" value="<?php echo $userprof->id_usuario;?>" name="idusuario"></input>
+                                        <input type="hidden" value="<?php echo $fichaprof->nombre;?>" name="nombre"></input>
+                                        <input type="hidden" value="<?php echo $fichaprof->apellido;?>" name="apellido"></input>
+                                        <input type="submit" id="chat" value="<?php echo $fichaprof->nombre .' '. $fichaprof->apellido;?>"></input>
+                                    </form>
+                                    <br/>
+                                    <?php
+                                }  // fin del if
+                            } // llave del foreach
+                            $usuariosalum = Usuario::model()->findAll('id_perfil=:id_perfil',array(':id_perfil'=>1));
+                            echo "<label for='user'>Alumnos</label>";
+                            foreach($usuariosalum as $useralum){
+                                $fichaalum = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$useralum->id_usuario));
+                                if($useralum->id_usuario != Yii::app()->user->id){
+                                    ?>
+                                    <form action="../chat/Chat" name="formu" id="formu" method="post">
+                                        <input type="hidden" value="<?php echo $useralum->id_usuario;?>" name="idusuario"></input>
+                                        <input type="hidden" value="<?php echo $fichaalum->nombre;?>" name="nombre"></input>
+                                        <input type="hidden" value="<?php echo $fichaalum->apellido;?>" name="apellido"></input>
+                                        <input type="submit" id="chat" value="<?php echo $fichaalum->nombre .' '. $fichaalum->apellido;?>"></input>
+                                    </form>
+                                    <br/>
+                                    <?php
+                                }  // fin del if
+                            } // llave del foreach
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+</body>
 </html>  
