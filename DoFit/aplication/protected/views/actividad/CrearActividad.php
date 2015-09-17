@@ -88,10 +88,14 @@ if(!Yii::app()->user->isGuest){
                     ?>
 			    </div>
 			    <div class="form-group">
-                    <?php echo $form->labelEx($actividad,'valor_actividad');?>
-                    <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Precio"));?>
-                    <?php echo $form->error($actividad,'valor_actividad')?>
-			    </div>
+                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Precio"));?>
+                        <?php echo $form->error($actividad,'valor_actividad')?>
+                        <div class="input-group-addon">.00</div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-1">
                         Lunes
