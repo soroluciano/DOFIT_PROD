@@ -12,7 +12,7 @@
                 <h1 class="cover-heading">Acceso Gimnasios</h1>
                 <p class="lead"><a>
                         <?php $form=$this->beginWidget('CActiveForm', array(
-                            'id'=>'loginformadmin',
+                            'id'=>'loginforminstitucion',
                             'enableClientValidation'=>true,
                             'clientOptions'=>array('validateOnSubmit'=>true,),)); ?>
                         <div class="form-group">

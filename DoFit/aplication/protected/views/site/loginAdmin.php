@@ -19,6 +19,9 @@
                             <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Usuario",'id'=>"inputEmail")); ?>
                         </div>
                         <div class="form-group">
+                            <?php echo $form->error($model,'username');?>
+                        </div>
+                        <div class="form-group">
                             <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"inputPassword")); ?>
                         </div>
                         <div class="form-group">
