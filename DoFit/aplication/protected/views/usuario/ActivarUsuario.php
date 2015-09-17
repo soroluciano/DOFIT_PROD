@@ -40,17 +40,21 @@
 </div>
 <div class="container">
 <?php 
-
 if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
 	$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 }else{
 	//No está logueado.
 	if(isset($_GET['email'])){	
-	   $usuario = Usuario::model()->findByAttributes(array('email'=>$_GET['email']));	
-	}
-	if($usuario){
-		//Existe el código, activo el usuario.
+	   $usuarios = Usuario::model()->findAll();
+       foreach($usuarios as $usu){		   
+	           if(md5($usu->email) == $_GET['email']){
+			        $usuario = $usu;
+                }
+         }
+	} 		 
+	 if($usuario){
+		//Existe el objeto usuario y lo activo.
 		$usuario->id_estado = 1;
 	    $usuario->saveAttributes(array('id_estado'=>$usuario->id_estado));
         
@@ -77,8 +81,8 @@ if(!Yii::app()->user->isGuest){
     </div>
     
 <?php
-	}else{
-		//No existe el código.
+}else{
+	//No existe el código.
 ?>
 	 <div class="containleft left">
         <div class="table">
@@ -100,7 +104,7 @@ if(!Yii::app()->user->isGuest){
         </div>
     </div>
 <?php
-	}
+  }
 }
 ?>
 </div>
