@@ -41,7 +41,7 @@ class Actividad extends CActiveRecord
 		return array(
 			array('id_deporte, id_institucion, id_usuario, valor_actividad, fhcreacion, cusuario', 'required','message'=>'Ingrese {attribute}'),
 			array('id_deporte, id_institucion, id_usuario', 'numerical', 'integerOnly'=>true),
-			array('valor_actividad', 'length', 'max'=>15),
+			array('valor_actividad', 'length','min'=>0, 'max'=>15),
 			array('cusuario', 'length', 'max'=>60),
 			array('fhultmod', 'safe'),
 			// The following rule is used by search().

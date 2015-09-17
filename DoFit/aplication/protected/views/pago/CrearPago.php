@@ -3,8 +3,8 @@
 /* @var $model Usuario */
 /* @var $form CActiveForm */
 if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
+	  //Es un usuario logueado.
+     	$usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
 }
 
 ?>
@@ -48,5 +48,5 @@ if(!Yii::app()->user->isGuest){
     <div class="form">
 
 
-    </div>
+   </div>
 </div>

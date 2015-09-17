@@ -63,7 +63,7 @@ $this->pageTitle=Yii::app()->name;
 
 <div class="form-group">
     <div><label>Actividades</label></div>
-    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::beginForm('../pago/CrearPago','post'); ?>
     <?php echo CHtml::submitButton('Crear Pago',array('class'=>'btn btn-primary')); ?>
     <?php echo CHtml::endForm(); ?></div>
 <div class="form-group">

@@ -11,4 +11,9 @@ class PagoController extends Controller
         $this->render('index');
     }
 
+    public function actionCrearPago()
+    {
+        $this->render('CrearPago');
+    }
+
 }
