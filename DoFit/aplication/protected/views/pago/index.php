@@ -68,18 +68,18 @@ $this->pageTitle=Yii::app()->name;
     <?php echo CHtml::endForm(); ?></div>
 <div class="form-group">
     <div><label>Actividades</label></div>
-    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::beginForm('../pago/EliminarPago','post'); ?>
     <?php echo CHtml::submitButton('Eliminar Pago',array('class'=>'btn btn-primary')); ?>
     <?php echo CHtml::endForm(); ?></div>
 
 <div class="form-group">
     <div><label>Actividades</label></div>
-    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::beginForm('../pago/ModificarPago','post'); ?>
     <?php echo CHtml::submitButton('Modificar Pago',array('class'=>'btn btn-primary')); ?>
     <?php echo CHtml::endForm(); ?></div>
 
 <div class="form-group">
     <div><label>Actividades</label></div>
-    <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
+    <?php echo CHtml::beginForm('../pago/ListarPagos','post'); ?>
     <?php echo CHtml::submitButton('Consultar pagos',array('class'=>'btn btn-primary')); ?>
     <?php echo CHtml::endForm(); ?></div>
