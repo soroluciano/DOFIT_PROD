@@ -63,66 +63,8 @@ $this->pageTitle=Yii::app()->name;
 
 <div class="container">
     <div class="form">
-        <?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
-        <div class="col-md-8">
-            <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
-            <div class="form-group">
-                <?php echo $form->labelEx($deportes,'Deporte'); ?>
-                <?php echo $form->dropDownList($deportes,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaDeporte"));?>
-                <?php echo $form->error($deportes,'deporte')?>
-            </div>
-            <div class="form-group">
-                <?php echo $form->labelEx($provincia,'Provincia'); ?>
-                <?php echo $form->dropDownList($provincia,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),array('empty'=>'Seleccione la provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaProvincias"));?>
-                <?php echo $form->error($provincia,'provincia')?>
-            </div>
-            <div class="form-group">
-                <?php echo $form->labelEx($localidad,'Localidad'); ?>
-                <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades"));?>
-                <?php echo $form->error($localidad,'localidad')?>
-            </div>
-
-           </div>
-        </div>
+            asd
     </div>
+</div>
 <?php echo CHtml::endForm(); ?>
 <?php $this->endWidget(); ?>
-
-<script type="text/javascript">
-    function BuscadorGimnasios(){
-        var deporte = $("#ListaDeporte").val();
-        var localidad = $("#ListaLocalidades").val();
-        var provincia = $("#ListaProvincias").val();
-        if(deporte != ""){
-           if(provincia != ""){
-               if(localidad != ""){
-                   var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
-                   $.ajax({
-                       url: baseurl + '/actividad/InscripcionActividad',
-                       type: "POST",
-                       data: data,
-                       dataType: "html",
-                       cache: false,
-                       success: function (response) {
-                           if (response == "error") {
-                               alert('No hay gimnasios para los datos ingresados');
-                           }
-                           else {
-                               window.location.replace(response);
-                           }
-
-                       },
-                       error: function (e) {
-                           console.log(e);
-                       }
-                   });
-
-               }
-           }
-        }
-
-
-    }
-
-
-</script>
