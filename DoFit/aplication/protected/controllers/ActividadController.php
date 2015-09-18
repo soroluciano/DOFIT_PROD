@@ -199,4 +199,26 @@ class ActividadController extends Controller
 
 
     }
+
+    public function actionInscripcionActividadMapa()
+    {
+        $deportes = new Deporte();
+        $provincia = new Provincia();
+        $localidad = new Localidad();
+        // echo "error";
+        if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
+            $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+
+        }
+        else{
+
+            $this->render('InscripcionActividadMapa');
+
+        }
+
+
+    }
 }
