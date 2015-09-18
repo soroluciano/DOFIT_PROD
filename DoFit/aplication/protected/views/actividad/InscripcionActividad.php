@@ -60,81 +60,70 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
 </div>
-<div id="body">
-    <?php
-    $cantactividades = Actividad::model()->count();
-    if($cantactividades > 0)
-        if($actividades != NULL) {
-            echo "<div>
-                    <h2>
-                        Inscribite a las Actividades de DoFit!
-                    </h2>
-                  </div>";
-            echo "<table class='table table-hover'>
-                    <thead>
-                        <tr>
-                            <th>
-                                Deporte
-                            </th>
-                            <th>
-                                D&iacute;a
-                            </th>
-                            <th>
-                                Horario
-                            </th>
-                            <th>
-                                Institucion
-                            </th>
-                            <th>
-                                Direccion
-                            </th>
-                            <th>
-                                Localidad
-                            </th>
-                            <th>
-                                Provincia
-                            </th>
-                            <th>
-                                Telefono Fijo
-                            </th>
-                            <th>
-                                Celular
-                            </th>
-                            <th>
-                                Acepta mercado Pago
-                            </th>
-                            <th>
-                                Valor_Actividad
-                            </th>
-                            <th>
-                                Google Maps
-                            </th>
-                        </tr>
-                    </thead>";
-            foreach($actividades as $ac){
-                echo "<tbody>";
-                echo "<tr>";
-                $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$ac->id_deporte));
-                echo "<td>";
-                $deporte->deporte;
-                echo "</td>";
-                $ah = ActividadHorario::model()->find('id_actividad='.$ac->id_actividad);
-                $dias = array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
-                $cantdias = count($dias);
-                $cont = 0;
-               /* while ($cont < $cantdias){
-                    if($cont+1 == $ah->id_dia){
-                        echo "<td>$dias[$cont]</td>";
-                    }
-                    $cont++;
-                }*/
-                echo "<td>";
-            //    $ah->hora;
-                echo " </td>";
-                echo "</tr>";
-                echo "</tbody>";
 
-            }
+<div class="container">
+    <div class="form">
+        <?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
+        <div class="col-md-8">
+            <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
+            <div class="form-group">
+                <?php echo $form->labelEx($deportes,'Deporte'); ?>
+                <?php echo $form->dropDownList($deportes,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaDeporte"));?>
+                <?php echo $form->error($deportes,'deporte')?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($provincia,'Provincia'); ?>
+                <?php echo $form->dropDownList($provincia,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),array('empty'=>'Seleccione la provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaProvincias"));?>
+                <?php echo $form->error($provincia,'provincia')?>
+            </div>
+            <div class="form-group">
+                <?php echo $form->labelEx($localidad,'Localidad'); ?>
+                <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades"));?>
+                <?php echo $form->error($localidad,'localidad')?>
+            </div>
 
-        } ?>
-</div>
+           </div>
+        </div>
+    </div>
+<?php echo CHtml::endForm(); ?>
+<?php $this->endWidget(); ?>
+
+<script type="text/javascript">
+    function BuscadorGimnasios(){
+        var deporte = $("#ListaDeporte").val();
+        var localidad = $("#ListaLocalidades").val();
+        var provincia = $("#ListaProvincias").val();
+        if(deporte != ""){
+           if(provincia != ""){
+               if(localidad != ""){
+                   var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
+                   $.ajax({
+                       url: baseurl + '/actividad/InscripcionActividad',
+                       type: "POST",
+                       data: data,
+                       dataType: "html",
+                       cache: false,
+                       success: function (response) {
+                           if (response == "error") {
+                               alert('pepe');
+                           }
+                           else {
+                               alert('jose');
+                               //window.location.replace(response);
+                           }
+
+                       },
+                       error: function (e) {
+                           console.log(e);
+                       }
+                   });
+
+               }
+           }
+        }
+
+
+    }
+
+
+</script>
