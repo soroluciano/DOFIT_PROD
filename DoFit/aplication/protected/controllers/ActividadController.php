@@ -174,30 +174,51 @@ class ActividadController extends Controller
 
     public function actionInscripcionActividad()
     {
-        if(!Yii::app()->user->isGuest){
-            //Es un usuario logueado.
-            $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-        }
-        if(isset($_GET['id_actividad'])){
-            $actialum = new ActividadAlumno;
-            $id_actividad = $_GET['id_actividad'];
-            $id_usuario = $usuario->id_usuario;
-            $actialum->id_usuario = $id_usuario;
-            $actialum->id_actividad = $id_actividad;
-            $actialum->id_estado = 0;
-            $actialum->fhcreacion = new CDbExpression('NOW()');
-            $actialum->fhultmod = new CDbExpression('NOW()');
-            $actialum->cusuario = $usuario->email;
-            if($actialum->validate()){
-                if($actialum->save()){
-                    ?><script> alert("Se envio la solicitud de inscripcion correctamente");</script><?php
-                }
+        $deportes = new Deporte();
+        $provincia = new Provincia();
+        $localidad = new Localidad();
+       // echo "error";
+        if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
+            $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+
+            if($gimnasio == null ) {
+                echo "error";
             }
+            else{
+                echo Yii::app()->request->baseUrl . "/actividad/InscripcionActividadMapa";
+            }
+
         }
-        $criteria = new CDbCriteria;
-        $criteria->select = 't.id_actividad,t.id_deporte,t.id_institucion,t.id_usuario,t.valor_actividad';
-        $criteria->condition = 't.id_actividad NOT IN (SELECT id_actividad FROM actividad_alumno WHERE id_usuario ='.$usuario->id_usuario.')';
-        $actividades = Actividad::model()->findAll($criteria);
-        $this->render('InscripcionActividad',array('actividades'=>$actividades,));
+        else{
+            $this->render('InscripcionActividad',array('deportes'=>$deportes,'provincia'=>$provincia,'localidad'=>$localidad));
+
+        }
+
+
+    }
+
+    public function actionInscripcionActividadMapa()
+    {
+        $deportes = new Deporte();
+        $provincia = new Provincia();
+        $localidad = new Localidad();
+        // echo "error";
+        if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
+            $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+
+        }
+        else{
+
+            $this->render('InscripcionActividadMapa');
+
+        }
+
+
     }
 }
