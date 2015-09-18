@@ -4,50 +4,67 @@
 			<div class="imagenes">
 
 						<?php
-							if(isset($perfilSocial->foto1)){	
+							$posicion = 0;
+							if(isset($perfilSocial->foto1)){
+						       $posicion++;
 						?>  <div id="im1" class="prueba">
-							<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1 ?>" class="img-rounded img1">
+							<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1 ?>" class="img-rounded img1"></a>
 							</div>
 						<?php		
 							}
 							else{
 						?>
 						        <div id="im1" class="prueba">
-								<img  src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img1">
+									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img1"></a>
+								</div>				
 						<?php
 							
 						}
 						?>
 						
 						<?php
-							if(isset($perfilSocial->foto2)){	
+							if(isset($perfilSocial->foto2)){
+						        $posicion++;
 						?>  <div id="im2" class="prueba">
-							<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto2 ?>" class="img-rounded img2">
-							</div>
+									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto2;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto2 ?>" class="img-rounded img2"></a>	
+						</div>
 						<?php		
 							}
 							else{
 						?>
-						        <div id="im2" class="prueba">
-								<img  src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img2">
+						       <div id="im2" class="prueba">
+									<img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img2">
+								</div>	
+								
 						<?php
 							
 						}
+							if($posicion != 2){
+								$posicion++;
+								
+									
+									if(isset($perfilSocial->foto1)){
+									$posicion++; ?>
+									<div id="im1" class="prueba">
+									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1 ?>" class="img-rounded img3"></a>
+									</div>
+									<?php		
+									}
+									else{
+									?>
+									<div id="im1" class="prueba">
+									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img3"></a>
+									</div>				
+									<?php
+									
+									}
+							}
+						
+						
 						?>
 
 			</div>
-								
-			<div>
-					<!--	  <a href="#" class="btn btn-succes"><?php //echo CHtml::link('Nueva Imagen', array('/perfilSocial/nuevaFoto')); ?></a>-->
-						
-						
-						
-						
-						
-			</div>
-								
-			
-	
+									
 		
 			<div  class="modal fade" id="FORMULARIO-REGISTRO" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 			   <div class="modal-dialog" role="document">

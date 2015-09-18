@@ -32,12 +32,11 @@
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie10.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/perfil.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.file-input.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>	
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>	
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/web.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.easing-1.3.pack.js"></script>
 
     <script>
        $(document).ready(function() {
