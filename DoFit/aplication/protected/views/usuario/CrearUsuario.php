@@ -63,61 +63,61 @@
 		        <?php echo $form->error($model,'id_perfil',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'nombre'); ?>
-                <?php echo $form->textField($ficha_usuario,'nombre',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu nombre")); ?>
-                <?php echo $form->error($ficha_usuario,'nombre',array("class"=>"error_pw")); ?>
+                <?php echo $form->labelEx($profesor,'nombre'); ?>
+                <?php echo $form->textField($profesor,'nombre',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu nombre")); ?>
+                <?php echo $form->error($profesor,'nombre',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'apellido'); ?>
-                <?php echo $form->textField($ficha_usuario,'apellido',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu apellido")); ?>
-                <?php echo $form->error($ficha_usuario,'apellido',array("class"=>"error_pw")); ?>
+                <?php echo $form->labelEx($profesor,'apellido'); ?>
+                <?php echo $form->textField($profesor,'apellido',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu apellido")); ?>
+                <?php echo $form->error($profesor,'apellido',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'dni'); ?>
-	            <?php echo $form->textField($ficha_usuario,'dni',array('size'=>8,'maxlength'=>8,'class'=>"form-control",'placeholder'=>"Tu dni")); ?>
-	            <?php echo $form->error($ficha_usuario,'dni',array("class"=>"error_pw")); ?>
+                <?php echo $form->labelEx($profesor,'dni'); ?>
+	            <?php echo $form->textField($profesor,'dni',array('size'=>8,'maxlength'=>8,'class'=>"form-control",'placeholder'=>"Tu dni")); ?>
+	            <?php echo $form->error($profesor,'dni',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'sexo'); ?>
+                <?php echo $form->labelEx($profesor,'sexo'); ?>
 	            <div>
-                        <?php echo $form->dropDownList($ficha_usuario,'sexo',array('empty'=>'¿Mujer u Hombre?','M'=>'Masculino','F'=>'Femenino','O'=>'Otro'),array('class'=>"form-control")); ?>
+                        <?php echo $form->dropDownList($profesor,'sexo',array('empty'=>'¿Mujer u Hombre?','M'=>'Masculino','F'=>'Femenino','O'=>'Otro'),array('class'=>"form-control")); ?>
                 </div>
-	            <?php echo $form->error($ficha_usuario,'sexo'); ?>
+	            <?php echo $form->error($profesor,'sexo'); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'fechanac'); ?>
-	            <?php echo $form->dateField($ficha_usuario,'fechanac',array('class'=>"form-control",'placeholder'=>"dd/mm/yyyy")); ?>
-	            <?php echo $form->error($ficha_usuario,'fechanac',array("class"=>"error_pw")); ?>
+                <?php echo $form->labelEx($profesor,'fechanac'); ?>
+	            <?php echo $form->dateField($profesor,'fechanac',array('class'=>"form-control",'placeholder'=>"dd/mm/yyyy")); ?>
+	            <?php echo $form->error($profesor,'fechanac',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'telfijo'); ?>
-	            <?php echo $form->textField($ficha_usuario,'telfijo',array('class'=>"form-control",'placeholder'=>"Tu teléfono fijo")); ?>
-	            <?php echo $form->error($ficha_usuario,'telfijo'); ?>
+                <?php echo $form->labelEx($profesor,'telfijo'); ?>
+	            <?php echo $form->textField($profesor,'telfijo',array('class'=>"form-control",'placeholder'=>"Tu teléfono fijo")); ?>
+	            <?php echo $form->error($profesor,'telfijo'); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'conemer'); ?>
-	            <?php echo $form->textField($ficha_usuario,'conemer',array('class'=>"form-control",'placeholder'=>"Nombre del contacto por emergencia")); ?>
-	            <?php echo $form->error($ficha_usuario,'conemer'); ?>
+                <?php echo $form->labelEx($profesor,'conemer'); ?>
+	            <?php echo $form->textField($profesor,'conemer',array('class'=>"form-control",'placeholder'=>"Nombre del contacto por emergencia")); ?>
+	            <?php echo $form->error($profesor,'conemer'); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'telemer'); ?>
-	            <?php echo $form->textField($ficha_usuario,'telemer',array('class'=>"form-control",'placeholder'=>"Teléfono del contacto por emergencia")); ?>
-	            <?php echo $form->error($ficha_usuario,'telemer'); ?>
+                <?php echo $form->labelEx($profesor,'telemer'); ?>
+	            <?php echo $form->textField($profesor,'telemer',array('class'=>"form-control",'placeholder'=>"Teléfono del contacto por emergencia")); ?>
+	            <?php echo $form->error($profesor,'telemer'); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'direccion'); ?>
-	            <?php echo $form->textField($ficha_usuario,'direccion',array('class'=>"form-control",'placeholder'=>"Tu dirección")); ?>
-	            <?php echo $form->error($ficha_usuario,'direccion',array("class"=>"error_pw")); ?>
+                <?php echo $form->labelEx($profesor,'direccion'); ?>
+	            <?php echo $form->textField($profesor,'direccion',array('class'=>"form-control",'placeholder'=>"Tu dirección")); ?>
+	            <?php echo $form->error($profesor,'direccion',array("class"=>"error_pw")); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'piso'); ?>
-	            <?php echo $form->textField($ficha_usuario,'piso',array('class'=>"form-control",'placeholder'=>"¿Vivís en un piso?")); ?>
-                <?php echo $form->error($ficha_usuario,'piso'); ?>
+                <?php echo $form->labelEx($profesor,'piso'); ?>
+	            <?php echo $form->textField($profesor,'piso',array('class'=>"form-control",'placeholder'=>"¿Vivís en un piso?")); ?>
+                <?php echo $form->error($profesor,'piso'); ?>
             </div>
             <div class="form-group">
-                <?php echo $form->labelEx($ficha_usuario,'depto'); ?>
-	            <?php echo $form->textField($ficha_usuario,'depto',array('class'=>"form-control",'placeholder'=>"¿Vivís en un departamento?")); ?>
-	            <?php echo $form->error($ficha_usuario,'depto'); ?>
+                <?php echo $form->labelEx($profesor,'depto'); ?>
+	            <?php echo $form->textField($profesor,'depto',array('class'=>"form-control",'placeholder'=>"¿Vivís en un departamento?")); ?>
+	            <?php echo $form->error($profesor,'depto'); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($localidad,'Provincia'); ?>

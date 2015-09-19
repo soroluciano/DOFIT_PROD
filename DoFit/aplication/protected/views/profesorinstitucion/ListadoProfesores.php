@@ -81,12 +81,12 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
             <tr>
              <tr><th>Nombre</th><th>Apellido</th><th>Deporte que dicta</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Editar</th><th>Eliminar</th></tr></thead>";
 	    foreach($profesores as $prof){
-              	$ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
+              	$profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
 ?>
            <tbody>
             <tr>
-             <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
-             <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
+             <td id="nombre"><?php echo $profesor->nombre ?></td>
+             <td id="apellido"><?php echo $profesor->apellido ?></td>
              
 			 <td id="deporte">
 			   <?php 
@@ -99,28 +99,28 @@ $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_instituc
 		            echo $deporte->deporte;
 				   }
 			   ?>
-			 <td id="dni"><?php echo $ficha_usuario->dni ?></td>
+			 <td id="dni"><?php echo $profesor->dni ?></td>
              <td id="email">
 			  <?php 
 			    $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
 				echo $usuario->email?></td>
              <td id="sexo">
               <?php 
-               if($ficha_usuario->sexo == 'M'){
+               if($profesor->sexo == 'M'){
                   echo "Masculino";
                }
-              if($ficha_usuario->sexo == 'F'){
+              if($profesor->sexo == 'F'){
                  echo "Femenino";
                }  					   
               ?>
              </td>
             <td id="fecnac">
-			<?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
+			<?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
 		     echo $fechanac;?>
 		     </td>
 			<td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
 			<td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-			<td id="editar"><a id="edi" href="../">Editar</a></td>
+		   <?php echo "<td><a href='../profesorinstitucion/EditarProfesor?idprofesor=$prof->id_institucion'>Editar<a/></td>"?>;
             <td id="eliminar"><a href="#">Eliminar</a></td>		  
 		  </tr> 
         </tbody>

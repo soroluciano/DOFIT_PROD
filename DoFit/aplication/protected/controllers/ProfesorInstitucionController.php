@@ -41,5 +41,12 @@
    public function actionMostrardatos()
    {
      $this->render('Mostrardatos');
-   }	
+   }
+    public function actionEditarProfesor()
+   {
+	 $idprofesor = $_GET['idprofesor'];
+     $ficha_profesor = new FichaInstitucion;
+     $ficha_profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idprofesor));	 
+     $this->render('EditarProfesor',array('ficha_profesor'=>$ficha_profesor));    
+   }	 
  } 
