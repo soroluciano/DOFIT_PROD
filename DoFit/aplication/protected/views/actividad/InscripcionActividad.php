@@ -81,7 +81,7 @@ $this->pageTitle=Yii::app()->name;
                 <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades"));?>
                 <?php echo $form->error($localidad,'localidad')?>
             </div>
-
+            <div id="map" style="width: 500px; height: 400px;"></div>
            </div>
         </div>
     </div>
@@ -108,7 +108,34 @@ $this->pageTitle=Yii::app()->name;
                                alert('No hay gimnasios para los datos ingresados');
                            }
                            else {
-                               window.location.replace(response);
+
+                               var locations = JSON.parse("[" + response + "]");;
+
+
+                               var map = new google.maps.Map(document.getElementById('map'), {
+                                   zoom: 10,
+                                   center: new google.maps.LatLng(-34.661657,-58.616856 ),
+                                   mapTypeId: google.maps.MapTypeId.ROADMAP
+                               });
+
+                               var infowindow = new google.maps.InfoWindow();
+
+                               var marker, i;
+
+                               for (i = 0; i < locations.length; i++) {
+                                   marker = new google.maps.Marker({
+                                       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                       map: map
+                                   });
+
+                                   google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                       return function() {
+                                           infowindow.setContent(locations[i][0]);
+                                           infowindow.open(map, marker);
+                                       }
+                                   })(marker, i));
+
+                               }
                            }
 
                        },
