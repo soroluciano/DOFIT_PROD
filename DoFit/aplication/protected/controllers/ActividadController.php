@@ -183,12 +183,19 @@ class ActividadController extends Controller
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
             $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+            //$locations = '[';
+            $i = 1;
+            $locations = "";
+            foreach($gimnasio as $gim){
+               $locations = $locations .'["'. $gim->nombre . '"'. ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++. ']' ;
 
+            }
+            //$locations = $locations . ']';
             if($gimnasio == null ) {
                 echo "error";
             }
             else{
-                echo Yii::app()->request->baseUrl . "/actividad/InscripcionActividadMapa";
+                echo $locations;
             }
 
         }
