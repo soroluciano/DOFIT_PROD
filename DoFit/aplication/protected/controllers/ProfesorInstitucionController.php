@@ -57,6 +57,9 @@ class ProfesorInstitucionController extends Controller
 		$localidad = Localidad::model()->findByAttributes(array('id_localidad'=>$ficha_profesor->id_localidad));
 		$provincia = Provincia::model()->findByAttributes(array('id_provincia'=>$localidad->id_provincia));
 
+		// veo las actividades que dicta 
+		$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>Yii::app()->user->id,'id_usuario'=>$idprofesor));
+
 		if(isset($_POST['FichaUsuario'], $_POST['Localidad'])){
 			$ficha_profesor->attributes = $_POST['FichaUsuario'];
 			$ficha_profesor->id_localidad = $_POST['Localidad']['id_localidad'];
@@ -65,6 +68,6 @@ class ProfesorInstitucionController extends Controller
 			}
 		}
 
-		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'localidad'=>$localidad,'provincia'=>$provincia));
+		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'localidad'=>$localidad,'provincia'=>$provincia,'actividad'=>$actividad));
 	}
 }
