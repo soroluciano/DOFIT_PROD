@@ -219,7 +219,7 @@ class ActividadController extends Controller
             $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
 
-            $list= Yii::app()->db->createCommand('select * from post')->queryAll();
+            $list= Yii::app()->db->createCommand('select nombre,direccion,telfijo,id_dia,hora,minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = 1) and actividad.id_deporte = 4')->queryAll();
 
             $rs=array();
             foreach($list as $item){
