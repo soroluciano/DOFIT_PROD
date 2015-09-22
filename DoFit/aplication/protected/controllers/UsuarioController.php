@@ -68,16 +68,16 @@ class UsuarioController extends Controller
 	  date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
         $send = new SendEmailService;
-        $ficha_usuario = new FichaUsuario;
+        $profesor = new FichaUsuario;
 	    $localidad = new Localidad;
 	    $estado = new Estado;
 		
 		// Uncomment the following line if AJAX validation is needed
-	    //$this->performAjaxValidation(array($model,$ficha_usuario));
+	    //$this->performAjaxValidation(array($model,$profesor));
 
 		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
 		   $model->attributes = $_POST['Usuario'];
-		   $ficha_usuario->attributes = $_POST['FichaUsuario'];
+		   $profesor->attributes = $_POST['FichaUsuario'];
 		   $localidad->attributes = $_POST['Localidad'];
  
 		   $model->fhcreacion = new CDbExpression('NOW()');
@@ -92,21 +92,21 @@ class UsuarioController extends Controller
 		   $localidad->fhultmod = new CDbExpression('NOW()');
            $localidad->cusuario = $model->email;	
 		   
-		   $ficha_usuario->fhcreacion = new CDbExpression('NOW()');           
-	       $ficha_usuario->fhultmod = new CDbExpression('NOW()');
-           $ficha_usuario->cusuario = $model->email;
-           $ficha_usuario->id_localidad = $_POST['Localidad']['id_localidad']; 	   
+		   $profesor->fhcreacion = new CDbExpression('NOW()');           
+	       $profesor->fhultmod = new CDbExpression('NOW()');
+           $profesor->cusuario = $model->email;
+           $profesor->id_localidad = $_POST['Localidad']['id_localidad']; 	   
 	       $mail = $model->email;
 		   
 			// valido los modelos
 			$validarusuario = $model->validate();			
-		    $validarficha = $ficha_usuario->validate();
+		    $validarficha = $profesor->validate();
 	    if($validarusuario && $validarficha){
 			if($model->save()){
 			   Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
 			   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));      
-			   $ficha_usuario->id_usuario = $usuario->id_usuario;
-			  if($ficha_usuario->save()){
+			   $profesor->id_usuario = $usuario->id_usuario;
+			  if($profesor->save()){
                   $send->Send($model->email);
 			      $this->redirect(array('view','id'=>$model->id_usuario));
 			  }
@@ -118,7 +118,7 @@ class UsuarioController extends Controller
     	 
 		$this->render('create',array(
 			'model'=>$model,
-			'ficha_usuario'=>$ficha_usuario,
+			'ficha_usuario'=>$profesor,
 			'localidad'=>$localidad
 		));
 	
