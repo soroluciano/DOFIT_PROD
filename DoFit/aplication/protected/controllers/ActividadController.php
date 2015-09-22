@@ -187,7 +187,7 @@ class ActividadController extends Controller
             $i = 1;
             $locations = "";
             foreach($gimnasio as $gim){
-               $locations = $locations .'["'. $gim->nombre . '"'. ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++. ']' ;
+               $locations = $locations .'["Gimnasio: '. $gim->nombre .' Dirección: '.$gim->direccion. ' Telefono: '.$gim->telfijo.'"'. ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++. ']' ;
 
             }
             //$locations = $locations . ']';
@@ -207,25 +207,31 @@ class ActividadController extends Controller
 
     }
 
-    public function actionInscripcionActividadMapa()
+
+
+
+
+    public function actionListaDeInscripcion()
     {
-        $deportes = new Deporte();
-        $provincia = new Provincia();
-        $localidad = new Localidad();
-        // echo "error";
         if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
             $criteria = new CDbCriteria;
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
             $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
 
+            $list= Yii::app()->db->createCommand('select * from post')->queryAll();
+
+            $rs=array();
+            foreach($list as $item){
+                //process each item here
+                $rs[]=$item['id'];
+
+            }
+            return $rs;
+
         }
-        else{
 
-            $this->render('InscripcionActividadMapa');
-
-        }
-
+        $this->render('ListaDeInscripcion');
 
     }
 }
