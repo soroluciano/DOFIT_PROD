@@ -8,7 +8,7 @@
 							if(isset($perfilSocial->foto1)){
 						       $posicion++;
 						?>  <div id="im1" class="prueba">
-							<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1 ?>" class="img-rounded img1"></a>
+							<a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1 ?>" class="img-rounded img1"></a>
 							</div>
 						<?php		
 							}
@@ -26,7 +26,7 @@
 							if(isset($perfilSocial->foto2)){
 						        $posicion++;
 						?>  <div id="im2" class="prueba">
-									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto2;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto2 ?>" class="img-rounded img2"></a>	
+									<a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto2;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto2 ?>" class="img-rounded img2"></a>	
 						</div>
 						<?php		
 							}
@@ -46,7 +46,7 @@
 									if(isset($perfilSocial->foto1)){
 									$posicion++; ?>
 									<div id="im1" class="prueba">
-									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$perfilSocial->foto1 ?>" class="img-rounded img3"></a>
+									<a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1 ?>" class="img-rounded img3"></a>
 									</div>
 									<?php		
 									}

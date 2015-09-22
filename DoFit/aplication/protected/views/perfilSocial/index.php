@@ -104,7 +104,7 @@ if(!Yii::app()->user->isGuest){
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4" style="background-color: black; color:white;width:30%;margin-left:15px;">
-            <img src="<?php echo Yii::app()->request->baseUrl;echo "/images/".$model->foto1 ?>" alt="Generic placeholder image" width="140" height="140" class="img-circle">
+            <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$model->foto1 ?>" alt="Generic placeholder image" width="140" height="140" class="img-circle">
 			<h2><?php echo $nombre." ".$apellido; ?></span></h2>
             <h3>calcular edad</h3>
             <h3>Practico 2 deportes</h3>
