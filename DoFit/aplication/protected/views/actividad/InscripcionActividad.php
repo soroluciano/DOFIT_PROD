@@ -62,7 +62,7 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 <div class="container">
-    <div class="form">
+    <form class="form" method="post" action="ListaDeInscripcion">
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
         <div class="col-md-8">
             <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
@@ -81,10 +81,15 @@ $this->pageTitle=Yii::app()->name;
                 <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades"));?>
                 <?php echo $form->error($localidad,'localidad')?>
             </div>
-
-           </div>
+                <div id="map" style="width: 700px; height: 400px;"></div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
+                </div>
         </div>
-    </div>
+    </form>
+</div>
 <?php echo CHtml::endForm(); ?>
 <?php $this->endWidget(); ?>
 
@@ -93,6 +98,7 @@ $this->pageTitle=Yii::app()->name;
         var deporte = $("#ListaDeporte").val();
         var localidad = $("#ListaLocalidades").val();
         var provincia = $("#ListaProvincias").val();
+        $("#boton").hide();
         if(deporte != ""){
            if(provincia != ""){
                if(localidad != ""){
@@ -108,7 +114,37 @@ $this->pageTitle=Yii::app()->name;
                                alert('No hay gimnasios para los datos ingresados');
                            }
                            else {
-                               window.location.replace(response);
+
+                               var locations = JSON.parse("[" + response + "]");;
+
+                               var map = new google.maps.Map(document.getElementById('map'), {
+                                   zoom: 13,
+                                   center: new google.maps.LatLng(locations[0][1], locations[0][2] ),
+                                   mapTypeId: google.maps.MapTypeId.ROADMAP
+                               });
+
+                               var infowindow = new google.maps.InfoWindow();
+
+                               var marker, i;
+
+                               for (i = 0; i < locations.length; i++) {
+                                   marker = new google.maps.Marker({
+                                       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                       map: map,
+                                       animation: google.maps.Animation.BOUNCE
+
+
+                                   });
+
+                                   google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                       return function() {
+                                           infowindow.setContent(locations[i][0]);
+                                           infowindow.open(map, marker);
+                                       }
+                                   })(marker, i));
+
+                               }
+                               $("#boton").show();
                            }
 
                        },

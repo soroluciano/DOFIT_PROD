@@ -63,7 +63,7 @@ if(!Yii::app()->user->isGuest){
     <section  style="padding: 3%;">
         <div class="row" id="centrado">
             <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" alt="First slide">
-            <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/chat.jpg" alt="First slide">
+            <a href="<?php echo Yii::app()->request->baseUrl; ?>/img/chat.jpg" id="example2"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/chat.jpg" alt="First slide"></img></a>
         </div>
         <br/>
         <div class="row">

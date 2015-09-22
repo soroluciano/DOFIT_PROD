@@ -183,12 +183,19 @@ class ActividadController extends Controller
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
             $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+            //$locations = '[';
+            $i = 1;
+            $locations = "";
+            foreach($gimnasio as $gim){
+               $locations = $locations .'["Gimnasio: '. $gim->nombre .' Dirección: '.$gim->direccion. ' Telefono: '.$gim->telfijo.'"'. ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++. ']' ;
 
+            }
+            //$locations = $locations . ']';
             if($gimnasio == null ) {
                 echo "error";
             }
             else{
-                echo Yii::app()->request->baseUrl . "/actividad/InscripcionActividadMapa";
+                echo $locations;
             }
 
         }
@@ -200,25 +207,31 @@ class ActividadController extends Controller
 
     }
 
-    public function actionInscripcionActividadMapa()
+
+
+
+
+    public function actionListaDeInscripcion()
     {
-        $deportes = new Deporte();
-        $provincia = new Provincia();
-        $localidad = new Localidad();
-        // echo "error";
         if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
             $criteria = new CDbCriteria;
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
             $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
 
+            $list= Yii::app()->db->createCommand('select nombre,direccion,telfijo,id_dia,hora,minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = 1) and actividad.id_deporte = 4')->queryAll();
+
+            $rs=array();
+            foreach($list as $item){
+                //process each item here
+                $rs[]=$item['id'];
+
+            }
+            return $rs;
+
         }
-        else{
 
-            $this->render('InscripcionActividadMapa');
-
-        }
-
+        $this->render('ListaDeInscripcion');
 
     }
 }
