@@ -80,7 +80,7 @@ body{
     width:320px;
     height:320px;
 }
-
+prueba
 .img1:hover{
     opacity: 0.8;
 }
@@ -247,11 +247,11 @@ resize:none;
 }
 
 
-.prueba{
-    position: relative;
+.osvaldito{
+  position: relative;
 	width:auto;
 	width: 320px;
-    height: 320px;
+  height: 320px;
 	float:left;
 }
 

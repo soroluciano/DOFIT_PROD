@@ -3,64 +3,51 @@
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FORMULARIO-REGISTRO" data-whatever="@getbootstrap">Nueva Foto</button>
 			<div class="imagenes">
 
-						<?php
-							$posicion = 0;
-							if(isset($perfilSocial->foto1)){
-						       $posicion++;
-						?>  <div id="im1" class="prueba">
-							<a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1 ?>" class="img-rounded img1"></a>
-							</div>
-						<?php		
-							}
-							else{
-						?>
-						        <div id="im1" class="prueba">
-									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img1"></a>
-								</div>				
-						<?php
-							
-						}
-						?>
 						
 						<?php
-							if(isset($perfilSocial->foto2)){
-						        $posicion++;
-						?>  <div id="im2" class="prueba">
-									<a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto2;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto2 ?>" class="img-rounded img2"></a>	
-						</div>
-						<?php		
-							}
-							else{
-						?>
-						       <div id="im2" class="prueba">
-									<img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img2">
-								</div>	
-								
-						<?php
-							
-						}
-							if($posicion != 2){
-								$posicion++;
-								
-									
-									if(isset($perfilSocial->foto1)){
-									$posicion++; ?>
-									<div id="im1" class="prueba">
-									<a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1;?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->foto1 ?>" class="img-rounded img3"></a>
-									</div>
-									<?php		
+										$posicion = 0;		
+										if(isset($perfilSocial->foto1)){
+												$posicion++;
+						        }
+										if(isset($perfilSocial->foto2)){
+												$posicion++;
+						        }
+										if(isset($perfilSocial->foto3)){
+												$posicion++;
+						        }
+										if(isset($perfilSocial->foto4)){
+												$posicion++;
+						        }
+										if(isset($perfilSocial->foto5)){
+												$posicion++;
+						        }
+										if(isset($perfilSocial->foto6)){
+												$posicion++;
+						        }
+					
+									for($i=1;$i<=$posicion;$i++){
+													$property = 'foto'.$i;
+												if($i%2 != 1 || $i == 1){
+												?>
+												        <div id="im<?php echo $i; ?>" class="osvaldito">																
+																
+												        <a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property;?>" class="ifancy"><div id="imagen1"><img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" class="img-rounded img<?php echo $i; ?>"></div></a>
+																      
+																			<input class="update" type="button" value="Update" />
+																		  <input class="delete" type="button" value="Delete" />
+																		  <input class="ver" type="button" onclick="op1();" value="Ver" />
+												        </div>
+												<?php
+												}else{
+												?>
+												<div id="im"<?php echo $i; ?>" class="osvaldito">			
+																		<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="ifancy"><img src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img<?php echo $i?>"></a>
+												</div>		
+												<?php
+												}
+												
 									}
-									else{
-									?>
-									<div id="im1" class="prueba">
-									<a href="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="ifancy"><img alt="im1" src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" class="img-rounded img3"></a>
-									</div>				
-									<?php
 									
-									}
-							}
-						
-						
 						?>
 
 			</div>

@@ -12,6 +12,10 @@ jQuery(document).ready(function() {
 		'titleShow'     : false
 	});
 
+		$("#elid").fancybox({
+		'titleShow'     : false
+	});
+	
 	$("a#example2").fancybox({
 		'titleShow'     : false,
 		'transitionIn'	: 'elastic',

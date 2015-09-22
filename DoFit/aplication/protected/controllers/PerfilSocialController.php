@@ -144,7 +144,7 @@ class PerfilSocialController extends Controller
 		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
 		$nombreImagen=$_POST['data'];
 		
-		$perfilSocial->foto1 = $nombreImagen;
+		$perfilSocial->foto2 = $nombreImagen;
 		
 		//echo $nombreImagen;
 		
