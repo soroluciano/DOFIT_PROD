@@ -88,14 +88,16 @@ $this->pageTitle=Yii::app()->name;
                     <td id="apellido"><?php echo $profesor->apellido;?></td>
                     <td id="deporte">
                         <?php
-                        $actividad = Actividad::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario,'id_institucion'=>$idinstitucion));
+                        $actividad = Actividad::model()->findAllByAttributes(array('id_usuario'=>$prof->id_usuario,'id_institucion'=>$idinstitucion));
                         if($actividad == null){
                             echo "No se asocio a ninguna actividad";
                         }
                         else {
-                            $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$actividad->id_deporte));
-                            echo $deporte->deporte;
-                        }
+                          foreach($actividad as $act){
+							      $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
+                                  echo $deporte->deporte." -&nbsp";
+                              }
+						}	   
                         ?>
                     </td>
                     <td id="dni"><?php echo $profesor->dni; ?></td>
