@@ -60,6 +60,13 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
 </div>
+    <?php if($list == null){
+        echo "Nada";
+    }
+    else{
+        echo "sii";
+    }
+    ?>
 
 <div class="container">
     <div class="form">
