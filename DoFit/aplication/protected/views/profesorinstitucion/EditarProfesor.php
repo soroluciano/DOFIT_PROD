@@ -74,7 +74,16 @@ $this->pageTitle=Yii::app()->name;
                 <?php echo $form->textField($ficha_profesor,'apellido',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"apellido")); ?>
                 <?php echo $form->error($ficha_profesor,'apellido'); ?>
             </div>
-            <div class="form-group">
+			<div class="form-group">
+                <?php echo $form->labelEx($ficha_profesor,'Actividades que dicta'); ?>
+				<?php 
+				foreach($actividad as $act){
+				     echo $form->dropDownList($act,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('class'=>"form-control"));
+				     echo "<br/>";
+				  }	
+				?>					
+			</div>
+			<div class="form-group">
                 <?php echo $form->labelEx($ficha_profesor,'sexo'); ?>
                 <div>
                     <?php echo $form->dropDownList($ficha_profesor,'sexo',array('empty'=>'¿Mujer u Hombre?','M'=>'Masculino','F'=>'Femenino','O'=>'Otro'),array('class'=>"form-control")); ?>
