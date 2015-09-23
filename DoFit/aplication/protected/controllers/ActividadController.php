@@ -214,24 +214,31 @@ class ActividadController extends Controller
     public function actionListaDeInscripcion()
     {
         if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
-            $criteria = new CDbCriteria;
-            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
-            $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
-            $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+         //   $criteria = new CDbCriteria;
+         //   $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+          //  $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
+          //  $gimnasio = FichaInstitucion:: model()->findAll($criteria);
 
-            $list= Yii::app()->db->createCommand('select nombre,direccion,telfijo,id_dia,hora,minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = 1) and actividad.id_deporte = 4')->queryAll();
+            $list= Yii::app()->db->createCommand('select nombre,direccion,telfijo,id_dia,hora,minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = 1) and actividad.id_deporte = 1')->queryAll();
 
             $rs=array();
             foreach($list as $item){
                 //process each item here
-                $rs[]=$item['id'];
+                $rs[]=$item['nombre'];
+                echo 'Gimnasio: '.$item['nombre'];
+                echo 'Direccion: '.$item['direccion'];
+                echo 'Telefono: '.$item['telfijo'];
+                echo 'Dia: '.$item['id_dia'];
+                echo 'Hora: '.$item['hora'].':'.$item['minutos'];
+                echo 'Actividad: '.$item['id_actividad'];
+                echo "<br>";
 
             }
-            return $rs;
 
         }
-
         $this->render('ListaDeInscripcion');
+
+
 
     }
 }

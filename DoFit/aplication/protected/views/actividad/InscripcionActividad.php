@@ -68,17 +68,17 @@ $this->pageTitle=Yii::app()->name;
             <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
             <div class="form-group">
                 <?php echo $form->labelEx($deportes,'Deporte'); ?>
-                <?php echo $form->dropDownList($deportes,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaDeporte"));?>
+                <?php echo $form->dropDownList($deportes,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaDeporte","name"=>"deporte"));?>
                 <?php echo $form->error($deportes,'deporte')?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($provincia,'Provincia'); ?>
-                <?php echo $form->dropDownList($provincia,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),array('empty'=>'Seleccione la provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaProvincias"));?>
+                <?php echo $form->dropDownList($provincia,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),array('empty'=>'Seleccione la provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaProvincias","name"=>"provincia"));?>
                 <?php echo $form->error($provincia,'provincia')?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($localidad,'Localidad'); ?>
-                <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades"));?>
+                <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades", "name"=>"localidad"));?>
                 <?php echo $form->error($localidad,'localidad')?>
             </div>
                 <div id="map" style="width: 700px; height: 400px;"></div>
