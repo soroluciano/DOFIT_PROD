@@ -2090,3 +2090,951 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
 ---
+2015/09/23 15:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 15:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 15:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 15:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 15:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 15:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 15:57:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/23 15:57:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/23 16:43:36 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (43)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/23 16:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 16:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 16:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:44:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:44:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "myDivID".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('myDivID')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('myDivID')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/my...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/myDivID
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/myDivID
+---
+2015/09/23 16:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/myDivID
+---
+2015/09/23 16:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:47:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:47:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:47:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:47:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/23 16:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/23 16:54:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "myDivID".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('myDivID')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('myDivID')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/my...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/myDivID
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:54:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/myDivID
+---
+2015/09/23 16:54:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/myDivID
+---
+2015/09/23 16:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:55:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 16:55:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 16:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 16:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:58:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 16:58:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:01:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:01:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:01:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:01:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:03:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:03:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:04:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:04:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:33:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:33:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:33:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:33:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:36:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 17:36:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 17:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 17:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 17:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 17:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:11 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (43)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/23 19:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:14 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (43)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/23 19:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:16 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): PerfilSocialController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): PerfilSocialController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/PerfilSocialController.php (43)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/09/23 19:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 19:03:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/
+---
+2015/09/23 19:03:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 19:03:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/site/index
+---
+2015/09/23 19:03:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:03:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:04:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:04:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:27:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:27:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.mousewheel-3.0.4.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.mousewheel-3.0.4.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/09/23 19:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fancybox/jquery.easing-1.3.pack.js".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fancybox/jqu...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/fancybox/jquery.easing-1.3.pack.js
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---

@@ -4,6 +4,59 @@ jQuery(document).ready(function() {
 	*   Examples - images
 	*/
 
+		$("a#fancyBoxLink").fancybox({
+			'href'   : '#myDivId',
+			'titleShow'  : false //,
+//			'transitionIn'  : 'elastic',
+//			'transitionOut' : 'elastic'
+	});
+	
+	
+	$("a#fancyBoxLink1").fancybox({
+			'href'   : '#myDivId1',
+			'titleShow'  : false //,
+			//			'transitionIn'  : 'elastic',
+			//			'transitionOut' : 'elastic'
+	});
+	
+	$("a#fancyBoxLink2").fancybox({
+			'href'   : '#myDivId2',
+			'titleShow'  : false //,
+			//			'transitionIn'  : 'elastic',
+			//			'transitionOut' : 'elastic'
+	});
+	
+	$("a#fancyBoxLink3").fancybox({
+			'href'   : '#myDivId3',
+			'titleShow'  : false //,
+			//			'transitionIn'  : 'elastic',
+			//			'transitionOut' : 'elastic'
+	});
+	
+	$("a#fancyBoxLink4").fancybox({
+			'href'   : '#myDivId4',
+			'titleShow'  : false //,
+			//			'transitionIn'  : 'elastic',
+			//			'transitionOut' : 'elastic'
+	});
+	
+	$("a#fancyBoxLink5").fancybox({
+			'href'   : '#myDivId5',
+			'titleShow'  : false //,
+			//			'transitionIn'  : 'elastic',
+			//			'transitionOut' : 'elastic'
+	});
+	
+	$("a#fancyBoxLink6").fancybox({
+			'href'   : '#myDivId6',
+			'titleShow'  : false //,
+			//			'transitionIn'  : 'elastic',
+			//			'transitionOut' : 'elastic'
+	});
+
+	
+	
+	
 	$("a#example1").fancybox({
 		'titleShow'     : false
 	});
@@ -254,4 +307,7 @@ jQuery(document).ready(function() {
 
 	$("table.options tr:even").addClass('even');
 
+	
+	
+	
 });

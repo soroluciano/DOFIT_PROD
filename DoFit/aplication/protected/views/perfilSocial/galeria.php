@@ -4,6 +4,7 @@
 			<div class="imagenes">
 
 						
+
 						<?php
 										$posicion = 0;		
 										if(isset($perfilSocial->foto1)){
@@ -27,16 +28,39 @@
 					
 									for($i=1;$i<=$posicion;$i++){
 													$property = 'foto'.$i;
-												if($i%2 != 1 || $i == 1){
+												if($i%2 != 1){
 												?>
-												        <div id="im<?php echo $i; ?>" class="osvaldito">																
-																
-												        <a href="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property;?>" class="ifancy"><div id="imagen1"><img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" class="img-rounded img<?php echo $i; ?>"></div></a>
-																      
-																			<input class="update" type="button" value="Update" />
-																		  <input class="delete" type="button" value="Delete" />
-																		  <input class="ver" type="button" onclick="op1();" value="Ver" />
-												        </div>
+								<!--		<div id="im<?php // echo $i; ?>" class="osvaldito">																
+												
+														<a href="<?php //echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property;?>" class="ifancy">
+																<div id="imagen1">
+																		<img src="<?php // echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" class="img-rounded img<?php // echo $i; ?>">
+																</div>
+														</a>-->
+												<!--		<input class="update" type="button" value="Update" />
+														<input class="delete" type="button" value="Delete" />
+														<input class="ver" type="button" onclick="op1();" value="Ver" />
+												</div>-->
+						     
+												<div id="im<?php echo $i; ?>" class="osvaldito">
+																		<img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" class="img-rounded img<?php echo $i; ?>" />
+																		<a href="#myDivId<?php echo $i;?>" class="btn btn-default" id="fancyBoxLink<?php echo $i;?>">Ver</a>
+																		<div style="display:none">
+																								<div id="myDivId<?php echo $i;?>">
+																								<!--<div id="desc1"><span>Este soy yo jugando</span></div>-->
+																								<img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" width="500px" heigh="500px" />
+																								</div>
+																		</div>
+												</div>
+												<?php
+												if($i==1){
+												?>
+												<div id="im"<?php echo $i; ?>" class="osvaldito">			
+													<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" alt="" class="img-rounded img<?php echo $i; ?>" />
+												</div>				
+												<?php
+												    }
+												?>
 												<?php
 												}else{
 												?>
