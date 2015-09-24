@@ -60,15 +60,49 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
 </div>
-    <?php if($list == null){
-        echo "Nada";
-    }
-    else{
-        echo "sii";
-    }
-    ?>
 
 <div class="container">
     <div class="form">
+    <?php
+        echo    "<div><h2>Deportes</h2></div>";
+        $cant = 0;
+        if($list != null) {
+            $actividad_ant = 0;
+            foreach($list as $gim){
+                $actividad = $gim['id_actividad'];
+                echo "<form method='post'>";
+                if($cant = 0){
+                    $actividad_ant = $gim['id_actividad'];
+                    $cant = 1;
+                    echo "<input type='submit' value='anotarme'/>";
+                    echo "<input type='hidden' name='actividad' value='".$actividad."'/>'";
+                    echo "Gimnasio: ".$gim['nombre'];
+                    echo "Dirección: ".$gim['direccion'];
+                    echo "Telefono: ".$gim['telfijo'];
+                    echo "Dia: ".$gim['id_dia'];
+                    echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                }
+                else{
+                    if($gim['id_actividad']== $actividad_ant){
+                        echo "Dia: ".$gim['id_dia'];
+                        echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                        $actividad_ant = $gim['id_actividad'];
+                    }
+                    else{
+                        echo "<br>";
+                        echo "<input type='submit' value='anotarme'/>";
+                        echo "Gimnasio: ".$gim['nombre'];
+                        echo "Dirección: ".$gim['direccion'];
+                        echo "Telefono: ".$gim['telfijo'];
+                        echo "Dia: ".$gim['id_dia'];
+                        echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                        $actividad_ant = $gim['id_actividad'];
+
+                    }
+                }
+                echo "</form>";
+
+             }
+         }?>
     </div>
 </div>

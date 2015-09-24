@@ -6,7 +6,7 @@ class ActividadController extends Controller
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
-    public $layout='//layouts/column2';
+    public $layout = '//layouts/column2';
 
     /**
      * @return array action filters
@@ -25,8 +25,8 @@ class ActividadController extends Controller
      */
     public function actionView($id)
     {
-        $this->render('view',array(
-            'model'=>$this->loadModel($id),
+        $this->render('view', array(
+            'model' => $this->loadModel($id),
         ));
     }
 
@@ -44,7 +44,7 @@ class ActividadController extends Controller
 
 
         if (isset($_POST['Actividad'])) {
-            
+
             $actividad->attributes = $_POST['Actividad'];
             //$ficha_profesor = FichaUsuario::model()->findByAttributes(array('nombre' => $_POST['profesor']));
             //$deporte = Deporte::model()->findByAttributes(array('deporte' => $_POST['deporte']));
@@ -89,20 +89,19 @@ class ActividadController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model=$this->loadModel($id);
+        $model = $this->loadModel($id);
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if(isset($_POST['Actividad']))
-        {
-            $model->attributes=$_POST['Actividad'];
-            if($model->save())
-                $this->redirect(array('view','id'=>$model->id_actividad));
+        if (isset($_POST['Actividad'])) {
+            $model->attributes = $_POST['Actividad'];
+            if ($model->save())
+                $this->redirect(array('view', 'id' => $model->id_actividad));
         }
 
-        $this->render('update',array(
-            'model'=>$model,
+        $this->render('update', array(
+            'model' => $model,
         ));
     }
 
@@ -116,7 +115,7 @@ class ActividadController extends Controller
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-        if(!isset($_GET['ajax']))
+        if (!isset($_GET['ajax']))
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
     }
 
@@ -134,13 +133,13 @@ class ActividadController extends Controller
      */
     public function actionAdmin()
     {
-        $model=new Actividad('search');
+        $model = new Actividad('search');
         $model->unsetAttributes();  // clear any default values
-        if(isset($_GET['Actividad']))
-            $model->attributes=$_GET['Actividad'];
+        if (isset($_GET['Actividad']))
+            $model->attributes = $_GET['Actividad'];
 
-        $this->render('admin',array(
-            'model'=>$model,
+        $this->render('admin', array(
+            'model' => $model,
         ));
     }
 
@@ -153,9 +152,9 @@ class ActividadController extends Controller
      */
     public function loadModel($id)
     {
-        $model=Actividad::model()->findByPk($id);
-        if($model===null)
-            throw new CHttpException(404,'The requested page does not exist.');
+        $model = Actividad::model()->findByPk($id);
+        if ($model === null)
+            throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
     }
 
@@ -165,8 +164,7 @@ class ActividadController extends Controller
      */
     protected function performAjaxValidation($model)
     {
-        if(isset($_POST['ajax']) && $_POST['ajax']==='actividad-form')
-        {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'actividad-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
@@ -177,30 +175,28 @@ class ActividadController extends Controller
         $deportes = new Deporte();
         $provincia = new Provincia();
         $localidad = new Localidad();
-       // echo "error";
-        if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+        // echo "error";
+        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
             $criteria = new CDbCriteria;
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
-            $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
+            $criteria->params = array(':localidad' => $_POST['localidad'], 'deporte' => $_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
             //$locations = '[';
             $i = 1;
             $locations = "";
-            foreach($gimnasio as $gim){
-               $locations = $locations .'["Gimnasio: '. $gim->nombre .' Dirección: '.$gim->direccion. ' Telefono: '.$gim->telfijo.'"'. ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++. ']' ;
+            foreach ($gimnasio as $gim) {
+                $locations = $locations . '["Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
 
             }
             //$locations = $locations . ']';
-            if($gimnasio == null ) {
+            if ($gimnasio == null) {
                 echo "error";
-            }
-            else{
+            } else {
                 echo $locations;
             }
 
-        }
-        else{
-            $this->render('InscripcionActividad',array('deportes'=>$deportes,'provincia'=>$provincia,'localidad'=>$localidad));
+        } else {
+            $this->render('InscripcionActividad', array('deportes' => $deportes, 'provincia' => $provincia, 'localidad' => $localidad));
 
         }
 
@@ -208,25 +204,36 @@ class ActividadController extends Controller
     }
 
 
-
-
-
     public function actionListaDeInscripcion()
     {
-        if(isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
-         //   $criteria = new CDbCriteria;
-         //   $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
-          //  $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
-          //  $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+            //   $criteria = new CDbCriteria;
+            //   $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            //  $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
+            //  $gimnasio = FichaInstitucion:: model()->findAll($criteria);
 
-            $list= Yii::app()->db->createCommand('select nombre,direccion,telfijo,id_dia,hora,minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = 1) and actividad.id_deporte = 1')->queryAll ();
-            print_r($list);
-           // return $list;
+            $list = Yii::app()->db->createCommand('select nombre,direccion,telfijo,CASE id_dia WHEN 1 THEN "Lunes" WHEN 2 THEN "Martes" WHEN 3 THEN "Miercoles" WHEN 4 THEN "Jueves" WHEN 5 THEN "Viernes" WHEN 6 THEN "Sábado" WHEN 7 THEN "Domingo" END as id_dia,lpad(hora,2,"0") as hora,lpad(minutos,2,"0") as minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = ' . $_POST['localidad'] . ') and actividad.id_deporte = ' . $_POST['deporte'] . ' order by nombre')->queryAll();
+            //print_r($list);
+            // return $list;
 
         }
-        $this->render('ListaDeInscripcion',array('list'=>$list));
+        $this->render('ListaDeInscripcion', array('list' => $list));
 
 
+    }
 
+    public function actionSeleccionarLocalidad()
+    {
+
+        $id_provincia = $_POST['Localidad']['id_provincia'];
+        $localidades = Localidad::model()->findAll('id_provincia= :id_provincia', array(':id_provincia' => $id_provincia));
+        $localidades = CHtml::listData($localidades, 'id_localidad', 'localidad');
+
+        echo CHtml::tag('option', array('value' => ''), 'Seleccione una localidad', true);
+
+        foreach ($localidades as $valor => $localidadessel) {
+
+            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($localidadessel), true);
+        }
     }
 }
