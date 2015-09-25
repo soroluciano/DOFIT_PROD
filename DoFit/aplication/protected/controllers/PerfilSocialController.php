@@ -144,8 +144,32 @@ class PerfilSocialController extends Controller
 		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
 		$nombreImagen=$_POST['data'];
 		
-		$perfilSocial->foto2 = $nombreImagen;
-		
+		$flag = 0;
+		if($perfilSocial->foto1 == null && $flag!=1){
+			$perfilSocial->foto1 = $nombreImagen;
+			$flag = 1;
+			
+		}
+		if($perfilSocial->foto2 == null && $flag!=1){
+			$perfilSocial->foto2 = $nombreImagen;
+			$flag = 1;
+		}
+		if($perfilSocial->foto3 == null && $flag!=1){
+			$perfilSocial->foto3 = $nombreImagen;
+			$flag = 1;
+		}
+		if($perfilSocial->foto4 == null && $flag!=1){
+			$perfilSocial->foto4 = $nombreImagen;
+			$flag = 1;
+		}
+		if($perfilSocial->foto5 == null && $flag!=1){
+			$perfilSocial->foto5 = $nombreImagen;
+			$flag = 1;
+		}
+		if($perfilSocial->foto6 == null && $flag!=1){
+			$perfilSocial->foto6 = $nombreImagen;
+			$flag = 1;
+		}
 		//echo $nombreImagen;
 		
 		$perfilSocial->update();

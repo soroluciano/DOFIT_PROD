@@ -63,35 +63,54 @@ body{
 }
 
 .img1{
+    margin: 3px;
     width:320px;
     height:320px;
+    border-style: solid;
+    border-color: #787878 ;
+    border-width: 8px;
 }
 .img2{
+    margin: 3px;
     width:320px;
     height:320px;
+    border-style: solid;
+    border-color: #787878 ;
+    border-width: 8px;
 }
 
 .img3{
+    margin: 3px;
     width:320px;
     height:320px;
+    border-style: solid;
+    border-color: #787878 ;
+    border-width: 8px;
 }
 
 .img4{
+    margin: 3px;
     width:320px;
     height:320px;
+    border-style: solid;
+    border-color: #787878 ;
+    border-width: 8px;
 }
-prueba
-.img1:hover{
-    opacity: 0.8;
+.img5{
+    margin: 3px;
+    width:320px;
+    height:320px;
+    border-style: solid;
+    border-color: #787878 ;
+    border-width: 8px;
 }
-.img2:hover{
-    opacity: 0.8;
-}
-.img3:hover{
-    opacity: 0.8;
-}
-.img4:hover{
-    opacity: 0.8;
+.img6{
+    margin: 3px;
+    width:320px;
+    height:320px;
+    border-style: solid;
+    border-color: #787878 ;
+    border-width: 8px;
 }
 
 #seccion_imagenes{
@@ -324,4 +343,45 @@ resize:none;
 
 .oculto{
     display:none;
+}
+
+
+/***** SHOW IMAGE ****/ 
+
+div.show-image {
+    position: relative;
+    float:left;
+    margin:5px;
+}
+div.show-image:hover img{
+    opacity:0.5;
+}
+div.show-image:hover button {
+    display: block;
+}
+div.show-image button {
+    position:absolute;
+    display:none;
+}
+
+div.show-image:hover a {
+    display: block;
+}
+div.show-image a {
+    position:absolute;
+    display:none;
+}
+
+div.show-image a.ver {
+    top:20%;
+    left:30%;
+  
+}
+div.show-image button.update {
+    top:50%;
+    left:30%;
+}
+div.show-image button.delete {
+    top:80%;
+    left:30%;
 }
