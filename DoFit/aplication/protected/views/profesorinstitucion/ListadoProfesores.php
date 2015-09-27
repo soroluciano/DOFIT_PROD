@@ -93,11 +93,11 @@ $this->pageTitle=Yii::app()->name;
                             echo "No se asocio a ninguna actividad";
                         }
                         else {
-                          foreach($actividad as $act){
-							      $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
-                                  echo $deporte->deporte." -&nbsp";
-                              }
-						}	   
+                            foreach($actividad as $act){
+                                $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
+                                echo $deporte->deporte." -&nbsp";
+                            }
+                        }
                         ?>
                     </td>
                     <td id="dni"><?php echo $profesor->dni; ?></td>

@@ -46,8 +46,8 @@ class InstitucionController extends Controller
             $model->fhultmod = new CDbExpression('NOW()');
             $model->cusuario = "sysadmin";
             $passencr = md5($model->password); // encripto la password en MD5
-            
-			$localidad->fhcreacion = new CDbExpression('NOW()');
+
+            $localidad->fhcreacion = new CDbExpression('NOW()');
             $localidad->fhultmod = new CDbExpression('NOW()');
             $localidad->cusuario = $model->email;
 
@@ -55,23 +55,23 @@ class InstitucionController extends Controller
             $ficha_institucion->fhultmod = new CDbExpression('NOW()');
             $ficha_institucion->cusuario = $model->email;
             $ficha_institucion->id_localidad = $_POST['Localidad']['id_localidad'];
-			
-			$mail = $model->email;
-             
+
+            $mail = $model->email;
+
             if ($model->validate() && $ficha_institucion->validate())
             {
-               if($model->save()){
+                if($model->save()){
                     Institucion::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
-					$institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
+                    $institucion = Institucion::model()->findByAttributes(array('email'=>$mail));
                     $ficha_institucion->id_institucion = $institucion->id_institucion;
                     if($ficha_institucion->save()){
-                      $send->Send($model->email);
-			          $this->redirect(array('view','id'=>$model->id_institucion));
+                        $send->Send($model->email);
+                        $this->redirect(array('view','id'=>$model->id_institucion));
+                    }
                 }
-            }
 
+            }
         }
-	}	
         $this->render('create',array(
             'model'=>$model,
             'ficha_institucion'=>$ficha_institucion,
@@ -205,15 +205,42 @@ class InstitucionController extends Controller
             Yii::app()->end();
         }
     }
-	
-	public function actionListadoAlumnosxInstitucion()
-	{
-      $this->render('ListadoAlumnosxInstitucion');
-	}
-	
-	public function actionMostrardatos()
+
+    public function actionListadoAlumnosxInstitucion()
     {
-	  $this->render('Mostrardatos');
-	}  
+        $this->render('ListadoAlumnosxInstitucion');
+    }
+
+    public function actionMostrardatos()
+    {
+        $this->render('Mostrardatos');
+    }
+
+    public function actionEditarAlumno()
+    {
+
+        if(isset($_GET['idalumno'])){
+            $idalumno = $_GET['idalumno'];
+        }
+        if(isset($_POST['idalumno'])){
+            $idprofesor = $_POST['idalumno'];
+        }
+        $ficha_alumno = new FichaUsuario;
+        $ficha_alumno = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idalumno));
+        $actividad_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario'=>$idalumno));
+        if(isset($_POST['actividad'])){
+            $cantidad = count($_POST['actividad']);
+            for($cant = 0; $cant < $cantidad; $cant++){
+                $actividad_alumno[$cant]->id_actividad = $_POST['actividad'][$cant];
+                $actividad_alumno[$cant]->update();
+            }
+            if($cant == $cantidad){
+                $this->redirect('../institucion/ListadoAlumnosxInstitucion');
+            }
+        }
+        $this->render('EditarAlumno',array('idalumno'=>$idalumno,'ficha_alumno'=>$ficha_alumno,'actividad_alumno'=>$actividad_alumno));
+
+
+    }
 }
 

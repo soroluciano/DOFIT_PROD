@@ -57,25 +57,36 @@ $this->pageTitle=Yii::app()->name;
     <div class="container">
         <div class='form-group'>
             <div>
-                <h3>Modificar Actividades de <?php echo $ficha_profesor->nombre."&nbsp";?><?php echo $ficha_profesor->apellido."&nbsp";?>
-                    <?php echo "- Dni:&nbsp;". $ficha_profesor->dni?></h3>
+                <h3>Modificar actividades de <?php echo $ficha_alumno->nombre."&nbsp";?><?php echo $ficha_alumno->apellido."&nbsp";?>
+                    <?php echo "- Dni:&nbsp;". $ficha_alumno->dni?></h3>
             </div>
-            <input type="hidden" value="<?php echo $idprofesor?>" name="idprofesor"></input>
+            <input type="hidden" value="<?php echo $idalumno?>" name="idalumno"></input>
             <div class="form">
-                <?php $form=$this->beginWidget('CActiveForm', array('id'=>'Profesor', 'enableAjaxValidation'=>true, 'enableClientValidation'=>false, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
+                <?php $form=$this->beginWidget('CActiveForm', array('id'=>'alumno', 'enableAjaxValidation'=>true, 'enableClientValidation'=>false, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
                 <div class="col-md-8">
-                    <?php echo CHtml::beginForm('EditarProfesor','post'); ?>
+                    <?php echo CHtml::beginForm('EditarAlumno','post'); ?>
                     <div class="form-group">
-                        <div><h4> Actividades que dicta</h4></div>
+                        <div><h4> Actividades que pr&aacute;ctica</h4></div>
                         <?php
-                        if($actividad == NULL){
+
+                        $idinstitucion = Yii::app()->user->id;
+                        if($actividad_alumno == NULL){
                             echo "<br/>";
-                            echo "No dicta ninguna actividad";
+                            echo "El alumno no se anoto en ninguna actividad";
                         }
-                        else{
-                            foreach($actividad as $act){
-                                echo $form->dropDownList($act,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('class'=>"form-control",'name'=>'deporte[]'));
-                                echo "<br/>";
+                        else
+                        {
+                            $actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion));
+
+                            foreach($actividad_alumno as $actalum){
+                                echo "<select id='deportes' name='actividad[]' class='form-control'>";
+                                foreach($actividad as $act){
+                                    $deporte =Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
+                                    echo "<option value='$act->id_actividad'>$deporte->deporte</option>";
+                                    echo "<br/>";
+
+                                }
+                                echo "</select>";
                             }
                         }
                         ?>

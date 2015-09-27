@@ -53,24 +53,20 @@ class ProfesorInstitucionController extends Controller
 		}
 		$ficha_profesor = new FichaUsuario;
 		$ficha_profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idprofesor));
-		$localidad = new Localidad;
-		$localidad = Localidad::model()->findByAttributes(array('id_localidad'=>$ficha_profesor->id_localidad));
-		$provincia = Provincia::model()->findByAttributes(array('id_provincia'=>$localidad->id_provincia));
-    	// veo las actividades que dicta 
+		// veo las actividades que dicta
 		$actividad = new Actividad;
 		$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>Yii::app()->user->id,'id_usuario'=>$idprofesor));
-        
-		if(isset($_POST['FichaUsuario'], $_POST['Localidad'], $_POST['Actividad'])){
-			$ficha_profesor->attributes = $_POST['FichaUsuario'];
-			$ficha_profesor->id_localidad = $_POST['Localidad']['id_localidad'];
-			foreach($actividad as $act){
-				    $act->id_deporte = $_POST['Actividad']['id_deporte'];
-			   }		   
-			if( $ficha_profesor->save()){
+		if(isset($_POST['deporte'])){
+			$cantidad = count($_POST['deporte']);
+			for($cant = 0; $cant < $cantidad; $cant++){
+				$actividad[$cant]->id_deporte = $_POST['deporte'][$cant];
+				$actividad[$cant]->update();
+			}
+			if($cant == $cantidad){
 				$this->redirect('../profesorInstitucion/ListadoProfesores');
-			}  
+			}
 		}
 
-		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'localidad'=>$localidad,'provincia'=>$provincia,'actividad'=>$actividad));
+		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'actividad'=>$actividad));
 	}
 }
