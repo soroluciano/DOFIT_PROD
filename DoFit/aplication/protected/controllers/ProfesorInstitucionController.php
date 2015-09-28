@@ -42,33 +42,6 @@ class ProfesorInstitucionController extends Controller
 	{
 		$this->render('Mostrardatos');
 	}
-	public function actionEditarProfesor()
-	{
-
-		if(isset($_GET['idprofesor'])){
-			$idprofesor = $_GET['idprofesor'];
-		}
-		if(isset($_POST['idprofesor'])){
-			$idprofesor = $_POST['idprofesor'];
-		}
-		$ficha_profesor = new FichaUsuario;
-		$ficha_profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idprofesor));
-		// veo las actividades que dicta
-		$actividad = new Actividad;
-		$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>Yii::app()->user->id,'id_usuario'=>$idprofesor));
-		if(isset($_POST['deporte'])){
-			$cantidad = count($_POST['deporte']);
-			for($cant = 0; $cant < $cantidad; $cant++){
-				$actividad[$cant]->id_deporte = $_POST['deporte'][$cant];
-				$actividad[$cant]->update();
-			}
-			if($cant == $cantidad){
-				$this->redirect('../profesorInstitucion/ListadoProfesores');
-			}
-		}
-
-		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'actividad'=>$actividad));
-	}
 
 	public function actionBorrarProfesor()
 	{
