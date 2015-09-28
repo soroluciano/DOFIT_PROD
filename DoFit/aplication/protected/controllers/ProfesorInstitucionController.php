@@ -69,4 +69,34 @@ class ProfesorInstitucionController extends Controller
 
 		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'actividad'=>$actividad));
 	}
+
+	public function actionBorrarProfesor()
+	{
+
+		$idprofesor = $_GET['idprofesor'];
+		$idinstitucion = Yii::app()->user->id;
+		//$valor = $_POST['valor'];
+		$valor = 1;
+		if($valor == 1){
+			$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
+			foreach($actividad as $act){
+				//$actividad_horario = ActividadHorario::model()->findByAttrributes('id_actividad'=>$act->id_acctividad);
+				//if($actividad_horario->delete()){
+				$actividad_alumno = ActividadAlumno::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
+				$actividad_alumno->delete();
+				$act->delete();
+
+			}
+			//}
+			$profesor_institucion = ProfesorInstitucion::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
+			foreach($profesor_institucion as $prof_ins){
+				$prof_ins->delete();
+			}
+			if($actividad == NULL && $profesor_institucion == NULL){
+				$this->redirect('../profesorInstitucion/ListadoProfesores');
+			}
+		}
+	}
+
 }
+?>
