@@ -127,7 +127,7 @@ class SiteController extends Controller
             $usuario = Usuario::model()->findByAttributes(array('email'=>$model->username));
             // validate user input and redirect to the previous page if valid
 
-            if ($model->login() && $usuario->id_estado == 1) {
+            if ($model->login() && $usuario->id_estado == 1){
                 // ...log in the user and redirect
                 Yii::app()->session->open();
                 Yii::app()->session['id_usuario'] = Yii::app()->user->id;
@@ -142,7 +142,12 @@ class SiteController extends Controller
                     echo Yii::app()->request->baseUrl . "/site/index";
                 }
             } else {
-                echo "error";
+                    if($usuario->id_estado == 1){
+                        echo "error";
+                    }
+                    else{
+                        echo "inactivo";
+                    }
             }
         } else {
             $this->render('/site/login', array('model' => $model));
