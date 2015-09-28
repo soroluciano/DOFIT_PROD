@@ -10,8 +10,9 @@
         var dir = "dir";
         window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
     }
+	
 </script>
-
+		
 <?php
 /* @var $this SiteController */
 
@@ -84,7 +85,9 @@ $this->pageTitle=Yii::app()->name;
                 ?>
                 <tbody>
                 <tr>
-                    <td id="nombre"><?php echo $profesor->nombre;?></td>
+                    <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor"></input>
+					<input type="hidden" name="valor" id="valor"></input>
+					<td id="nombre"><?php echo $profesor->nombre;?></td>
                     <td id="apellido"><?php echo $profesor->apellido;?></td>
                     <td id="deporte">
                         <?php
@@ -122,8 +125,8 @@ $this->pageTitle=Yii::app()->name;
                     <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                     <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
                     <?php echo "<td><a href='../profesorinstitucion/EditarProfesor?idprofesor=$prof->id_usuario'>Editar<a/></td>";?>
-                    <td id="eliminar"><a href="#">Eliminar</a></td>
-                </tr>
+                    <?php echo "<td><a href='../profesorinstitucion/BorrarProfesor?idprofesor=$prof->id_usuario'>Eliminar<a/></td>";?> 
+				</tr>
                 </tbody>
                 <?php
             }
@@ -140,4 +143,24 @@ $this->pageTitle=Yii::app()->name;
         ?>
     </div>
 </div>
+
+<script type="text/javascript">
+  /*function Borrarprofesor(idprofesor)
+  {
+         	var valor = $("#valor").val(0);
+			var idusuarioborr = idprofesor;
+			confirmar=confirm("¿Esta seguro que desea eliminar al profesor de la institucion");
+			if (confirmar) {
+				valor.val(1);
+			}
+			var valorcar = valor.val();
+			var data = { "idprofesor":idusuarioborr,"valor":valorcar};
+			$.ajax({
+				url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
+				type: "POST",
+				dataType : "html",
+				data : data
+			})
+  }*/
+</script>	
 	
