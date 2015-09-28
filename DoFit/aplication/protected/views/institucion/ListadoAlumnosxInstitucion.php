@@ -122,8 +122,7 @@ $this->pageTitle=Yii::app()->name;
                         </td>
                         <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                         <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                        <?php echo "<td id='editar'><a href='../institucion/EditarAlumno?idalumno=$id_usuario'>Editar</a></td>";?>
-                        <td id="eliminar"><a href="#">Eliminar</a></td>
+                        <td id="eliminar"><a href="#">Eliminar actividades del Alumno</a></td>
                     </tr>
                     </tbody>
                     <?php
