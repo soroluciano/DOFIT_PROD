@@ -125,6 +125,7 @@ class SiteController extends Controller
             $model->username = $_POST['email'];
             $model->password = $_POST['password'];
             $usuario = Usuario::model()->findByAttributes(array('email'=>$model->username));
+
             // validate user input and redirect to the previous page if valid
 
             if ($model->login() && $usuario->id_estado == 1){
@@ -142,13 +143,21 @@ class SiteController extends Controller
                     echo Yii::app()->request->baseUrl . "/site/index";
                 }
             } else {
-                    if($usuario->id_estado == 1){
-                        echo "error";
+                    if($usuario != null) {
+                        if ($usuario->id_estado == 0) {
+                            echo "inactivo";
+
+                        } else {
+                            echo "error";
+                        }
                     }
                     else{
-                        echo "inactivo";
+                        echo "error";
                     }
+
             }
+
+
         } else {
             $this->render('/site/login', array('model' => $model));
         }
