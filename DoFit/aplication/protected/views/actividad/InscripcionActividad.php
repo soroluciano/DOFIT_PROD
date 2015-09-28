@@ -87,6 +87,24 @@ $this->pageTitle=Yii::app()->name;
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
                 </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Lo sentimos :( </h4>
+                        </div>
+                        <div class="modal-body">
+                           ¡No encontramos resultados para tu búsqueda!
+                            Intentá de nuevo
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 </div>
@@ -111,10 +129,12 @@ $this->pageTitle=Yii::app()->name;
                        cache: false,
                        success: function (response) {
                            if (response == "error") {
-                               alert('No hay gimnasios para los datos ingresados');
+                               $("#map").hide();
+                               $("#boton").hide();
+                               $('#myModal').modal('show');
                            }
                            else {
-
+                               $("#map").show();
                                var locations = JSON.parse("[" + response + "]");;
 
                                var map = new google.maps.Map(document.getElementById('map'), {
