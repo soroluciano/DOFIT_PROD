@@ -126,11 +126,12 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
     function BuscadorGimnasios(){
         var deporte = $("#ListaDeporte").val();
-        var localidad = $("#ListaLocalidades").val();
-        var provincia = $("#ListaProvincias").val();
+        var localidad = $("#Localidad_id_localidad").val();
+        var provincia = $("#Localidad_id_provincia").val();
+        alert(localidad);
         $("#boton").hide();
         if(deporte != ""){
-           if(provincia != ""){
+           //if(provincia != ""){
                if(localidad != ""){
                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
                    $.ajax({
@@ -186,7 +187,7 @@ $this->pageTitle=Yii::app()->name;
                    });
 
                }
-           }
+           //}
         }
 
 
