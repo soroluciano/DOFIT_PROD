@@ -72,6 +72,7 @@ $this->pageTitle=Yii::app()->name;
     <div class='row'>
 
         <?php
+        $id_usuario_ant = 0;
         $idinstitucion = Yii::app()->user->id;
         $actividades = Actividad::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
         if($actividades !=null){
@@ -79,53 +80,47 @@ $this->pageTitle=Yii::app()->name;
             echo "<table class='table table-hover'>
            <thead>
             <tr>
-             <tr><th>Nombre</th><th>Apellido</th><th>Deporte que Pr&aacute;ctica</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Editar</th><th>Eliminar</th></tr></thead>";
+             <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th></tr></thead>";
             foreach($actividades as $acti){
                 $actividad_alumno = ActividadAlumno::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$acti->id_actividad));
                 foreach ($actividad_alumno as $act_alum){
                     $id_usuario = $act_alum->id_usuario;
                     $ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
-                    ?>
-                    <tbody>
-                    <tr>
-                        <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
-                        <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
-                        <td id="deporte">
-                            <?php
-                            $actividad = Actividad::model()->findByAttributes(array('id_actividad'=>$act_alum->id_actividad));
-                            if($actividad == null){
-                                echo "No se asocio a ninguna actividad";
-                            }
-                            else {
-                                $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$actividad->id_deporte));
-                                echo $deporte->deporte;
-                            }
-                            ?>
-                        <td id="dni"><?php echo $ficha_usuario->dni ?></td>
-                        <td id="email">
-                            <?php
-                            $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$id_usuario));
-                            echo $usuario->email?></td>
-                        <td id="sexo">
-                            <?php
-                            if($ficha_usuario->sexo == 'M'){
-                                echo "Masculino";
-                            }
-                            if($ficha_usuario->sexo == 'F'){
-                                echo "Femenino";
-                            }
-                            ?>
-                        </td>
-                        <td id="fecnac">
-                            <?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
-                            echo $fechanac;?>
-                        </td>
-                        <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                        <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                        <td id="eliminar"><a href="#">Eliminar actividades del Alumno</a></td>
-                    </tr>
-                    </tbody>
-                    <?php
+                    if($id_usuario != $id_usuario_ant){
+                        $id_usuario_ant = $act_alum->id_usuario;
+                        ?>
+                        <tbody>
+                        <tr>
+                            <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
+                            <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
+                            <td id="dni"><?php echo $ficha_usuario->dni ?></td>
+                            <td id="email">
+                                <?php
+                                $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$id_usuario));
+                                echo $usuario->email?></td>
+                            <td id="sexo">
+                                <?php
+                                if($ficha_usuario->sexo == 'M'){
+                                    echo "Masculino";
+                                }
+                                if($ficha_usuario->sexo == 'F'){
+                                    echo "Femenino";
+                                }
+                                ?>
+                            </td>
+                            <td id="fecnac">
+                                <?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
+                                echo $fechanac;?>
+                            </td>
+                            <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+                            <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+                            <td id="actividades"><a href="#">Ver actividades</a></td>
+                        </tr>
+                        </tbody>
+                        <?php
+
+
+                    }
                 }
             }
             echo "</table>";

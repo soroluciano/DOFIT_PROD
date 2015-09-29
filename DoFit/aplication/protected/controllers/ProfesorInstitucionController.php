@@ -53,22 +53,17 @@ class ProfesorInstitucionController extends Controller
 		if($valor == 1){
 			$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
 			foreach($actividad as $act){
-				//$actividad_horario = ActividadHorario::model()->findByAttrributes('id_actividad'=>$act->id_acctividad);
-				//if($actividad_horario->delete()){
-				$actividad_alumno = ActividadAlumno::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
-				$actividad_alumno->delete();
+				$actividad_horario = ActividadHorario::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
+				$actividad_horario->delete();
 				$act->delete();
-
-			}
-			//}
-			$profesor_institucion = ProfesorInstitucion::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
-			foreach($profesor_institucion as $prof_ins){
-				$prof_ins->delete();
-			}
-			if($actividad == NULL && $profesor_institucion == NULL){
-				$this->redirect('../profesorInstitucion/ListadoProfesores');
 			}
 		}
+		$profesor_institucion = ProfesorInstitucion::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
+		foreach($profesor_institucion as $prof_ins){
+			$prof_ins->delete();
+		}
+
+		$this->redirect('../profesorInstitucion/ListadoProfesores');
 	}
 
 }
