@@ -216,31 +216,6 @@ class InstitucionController extends Controller
         $this->render('Mostrardatos');
     }
 
-    public function actionEditarAlumno()
-    {
-
-        if(isset($_GET['idalumno'])){
-            $idalumno = $_GET['idalumno'];
-        }
-        if(isset($_POST['idalumno'])){
-            $idprofesor = $_POST['idalumno'];
-        }
-        $ficha_alumno = new FichaUsuario;
-        $ficha_alumno = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idalumno));
-        $actividad_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario'=>$idalumno));
-        if(isset($_POST['actividad'])){
-            $cantidad = count($_POST['actividad']);
-            for($cant = 0; $cant < $cantidad; $cant++){
-                $actividad_alumno[$cant]->id_actividad = $_POST['actividad'][$cant];
-                $actividad_alumno[$cant]->update();
-            }
-            if($cant == $cantidad){
-                $this->redirect('../institucion/ListadoAlumnosxInstitucion');
-            }
-        }
-        $this->render('EditarAlumno',array('idalumno'=>$idalumno,'ficha_alumno'=>$ficha_alumno,'actividad_alumno'=>$actividad_alumno));
-
-
-    }
+  
 }
 

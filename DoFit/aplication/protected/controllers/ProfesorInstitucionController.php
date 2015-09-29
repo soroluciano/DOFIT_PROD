@@ -42,33 +42,6 @@ class ProfesorInstitucionController extends Controller
 	{
 		$this->render('Mostrardatos');
 	}
-	public function actionEditarProfesor()
-	{
-
-		if(isset($_GET['idprofesor'])){
-			$idprofesor = $_GET['idprofesor'];
-		}
-		if(isset($_POST['idprofesor'])){
-			$idprofesor = $_POST['idprofesor'];
-		}
-		$ficha_profesor = new FichaUsuario;
-		$ficha_profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idprofesor));
-		// veo las actividades que dicta
-		$actividad = new Actividad;
-		$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>Yii::app()->user->id,'id_usuario'=>$idprofesor));
-		if(isset($_POST['deporte'])){
-			$cantidad = count($_POST['deporte']);
-			for($cant = 0; $cant < $cantidad; $cant++){
-				$actividad[$cant]->id_deporte = $_POST['deporte'][$cant];
-				$actividad[$cant]->update();
-			}
-			if($cant == $cantidad){
-				$this->redirect('../profesorInstitucion/ListadoProfesores');
-			}
-		}
-
-		$this->render('EditarProfesor',array('idprofesor'=>$idprofesor,'ficha_profesor'=>$ficha_profesor,'actividad'=>$actividad));
-	}
 
 	public function actionBorrarProfesor()
 	{
@@ -80,22 +53,17 @@ class ProfesorInstitucionController extends Controller
 		if($valor == 1){
 			$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
 			foreach($actividad as $act){
-				//$actividad_horario = ActividadHorario::model()->findByAttrributes('id_actividad'=>$act->id_acctividad);
-				//if($actividad_horario->delete()){
-				$actividad_alumno = ActividadAlumno::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
-				$actividad_alumno->delete();
+				$actividad_horario = ActividadHorario::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
+				$actividad_horario->delete();
 				$act->delete();
-
-			}
-			//}
-			$profesor_institucion = ProfesorInstitucion::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
-			foreach($profesor_institucion as $prof_ins){
-				$prof_ins->delete();
-			}
-			if($actividad == NULL && $profesor_institucion == NULL){
-				$this->redirect('../profesorInstitucion/ListadoProfesores');
 			}
 		}
+		$profesor_institucion = ProfesorInstitucion::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
+		foreach($profesor_institucion as $prof_ins){
+			$prof_ins->delete();
+		}
+
+		$this->redirect('../profesorInstitucion/ListadoProfesores');
 	}
 
 }

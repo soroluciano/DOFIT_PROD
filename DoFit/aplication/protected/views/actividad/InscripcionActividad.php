@@ -71,22 +71,30 @@ $this->pageTitle=Yii::app()->name;
                 <?php echo $form->dropDownList($deportes,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaDeporte","name"=>"deporte"));?>
                 <?php echo $form->error($deportes,'deporte')?>
             </div>
+
             <div class="form-group">
-                <?php echo $form->labelEx($provincia,'Provincia'); ?>
-                <?php echo $form->dropDownList($provincia,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),array('empty'=>'Seleccione la provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaProvincias","name"=>"provincia"));?>
-                <?php echo $form->error($provincia,'provincia')?>
+                <?php echo $form->labelEx($localidad,'Provincia'); ?>
+                <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
+                    array('ajax'=>array('type'=>'POST',
+                        'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
+                        'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
+                    ),'prompt'=>'Seleccione una Provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();"));?>
+                <?php echo $form->error($localidad,'id_provincia'); ?>
             </div>
             <div class="form-group">
                 <?php echo $form->labelEx($localidad,'Localidad'); ?>
-                <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades", "name"=>"localidad"));?>
-                <?php echo $form->error($localidad,'localidad')?>
-            </div>
-                <div id="map" style="width: 700px; height: 400px;"></div>
-                <br>
-                <br>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
+                <div>
+                    <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control","onchange"=>"BuscadorGimnasios();")); ?>
                 </div>
+                <?php echo $form->error($localidad,'id_localidad'); ?>
+            </div>
+            <div id="map" style="width: 700px; height: 400px;">
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
+            </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
@@ -111,14 +119,19 @@ $this->pageTitle=Yii::app()->name;
 <?php echo CHtml::endForm(); ?>
 <?php $this->endWidget(); ?>
 
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDGuKpwaC15M3ivyOjCgU6_yvwpI8UWWE&callback=initMap">
+</script>
+
 <script type="text/javascript">
     function BuscadorGimnasios(){
         var deporte = $("#ListaDeporte").val();
-        var localidad = $("#ListaLocalidades").val();
-        var provincia = $("#ListaProvincias").val();
+        var localidad = $("#Localidad_id_localidad").val();
+        var provincia = $("#Localidad_id_provincia").val();
+        alert(localidad);
         $("#boton").hide();
         if(deporte != ""){
-           if(provincia != ""){
+           //if(provincia != ""){
                if(localidad != ""){
                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
                    $.ajax({
@@ -174,7 +187,7 @@ $this->pageTitle=Yii::app()->name;
                    });
 
                }
-           }
+           //}
         }
 
 
