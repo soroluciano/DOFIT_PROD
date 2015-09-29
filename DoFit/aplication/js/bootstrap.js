@@ -1011,6 +1011,7 @@ if (typeof jQuery === 'undefined') {
   }
 
   Modal.prototype.hide = function (e) {
+
     if (e) e.preventDefault()
 
     e = $.Event('hide.bs.modal')

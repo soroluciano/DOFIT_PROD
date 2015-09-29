@@ -21,22 +21,20 @@
    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-doc.css" rel="stylesheet">
    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
    <link href="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="screen" />
-   <link href="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" rel="stylesheet">
-   <link href="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" rel="stylesheet">
+
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <!-- <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.3.js"></script>-->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie10.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/perfil.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.file-input.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox-1.3.4.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/web.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.easing-1.3.pack.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/googleMaps.js"></script>
 
     <script>

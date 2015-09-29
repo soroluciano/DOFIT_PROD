@@ -594,7 +594,6 @@
 
 					F.trigger('onUpdate');
 				}
-
 				F.update();
 			}
 		},
