@@ -62,7 +62,7 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 <div class="container">
-    <div class="form">
+    <div class="form-group">
     <?php
         echo    "<div><h2>Deportes</h2></div>";
         $cant = 0;
@@ -70,12 +70,14 @@ $this->pageTitle=Yii::app()->name;
             $actividad_ant = 0;
             foreach($list as $gim){
                 $actividad = $gim['id_actividad'];
-                echo "<form method='post'>";
+                echo "<form method='post' action='InscripcionFinal'>";
                 if($cant = 0){
                     $actividad_ant = $gim['id_actividad'];
                     $cant = 1;
-                    echo "<input type='submit' value='anotarme'/>";
-                    echo "<input type='hidden' name='actividad' value='".$actividad."'/>'";
+                    echo "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                            Anotarme
+                          </button>";
+                    echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'/>'";
                     echo "Gimnasio: ".$gim['nombre'];
                     echo "Dirección: ".$gim['direccion'];
                     echo "Telefono: ".$gim['telfijo'];
@@ -90,19 +92,65 @@ $this->pageTitle=Yii::app()->name;
                     }
                     else{
                         echo "<br>";
-                        echo "<input type='submit' value='anotarme'/>";
+                        echo "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                            Anotarme
+                          </button>";
                         echo "Gimnasio: ".$gim['nombre'];
                         echo "Dirección: ".$gim['direccion'];
                         echo "Telefono: ".$gim['telfijo'];
                         echo "Dia: ".$gim['id_dia'];
                         echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
                         $actividad_ant = $gim['id_actividad'];
+                        echo "<input type='hidden' id='actividad' name='actividad' value='".$actividad_ant."'/>'";
 
                     }
                 }
+                echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                        <div class='modal-dialog' role='document'>
+                            <div class='modal-content'>
+                                <div class='modal-header'>
+                                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                    <h4 class='modal-title' id='myModalLabel'>Inscripción</h4>
+                                </div>
+                                <div class='modal-body'>
+                                    ¿Deseás anotarte?
+                                </div>
+                                <div class='modal-footer'>
+                                    <button type='button' class='btn btn-primary' onclick='Anotarme();'>Si</button>
+                                    <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
+                                </div>
+                            </div>
+                        </div>
+                     </div>";
                 echo "</form>";
+
 
              }
          }?>
+        <!-- Modal -->
+
     </div>
 </div>
+
+<script type="text/javascript">
+    function Anotarme(){
+
+        var deporte = $("#ListaDeporte").val();
+        var localidad = $("#ListaLocalidades").val();
+        var provincia = $("#ListaProvincias").val();
+        $("#boton").hide();
+        if(deporte != ""){
+            if(provincia != ""){
+                if(localidad != ""){
+                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
+                    $.ajax({
+                        url: baseurl + '/actividad/InscripcionActividad',
+                        type: "POST",
+                        data: data,
+                        dataType: "html",
+                        cache: false,
+                        success: function (response) {
+                            if (response == "error") {
+
+
+</script>

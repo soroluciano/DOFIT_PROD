@@ -81,7 +81,9 @@ $this->pageTitle=Yii::app()->name;
                 <?php echo $form->dropDownList($localidad,'id_localidad',CHtml::listData(Localidad::model()->findAll(),'id_localidad','localidad'),array('empty'=>'Seleccione la localidad','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaLocalidades", "name"=>"localidad"));?>
                 <?php echo $form->error($localidad,'localidad')?>
             </div>
-                <div id="map" style="width: 700px; height: 400px;"></div>
+                <div id="map" style="width: 700px; height: 400px;">
+
+                </div>
                 <br>
                 <br>
                 <div class="form-group">
@@ -110,6 +112,10 @@ $this->pageTitle=Yii::app()->name;
 </div>
 <?php echo CHtml::endForm(); ?>
 <?php $this->endWidget(); ?>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDGuKpwaC15M3ivyOjCgU6_yvwpI8UWWE&callback=initMap">
+</script>
 
 <script type="text/javascript">
     function BuscadorGimnasios(){
