@@ -226,4 +226,18 @@ class ActividadController extends Controller
 
     }
 
+    public function actionInscripcionFinal()
+    {
+
+        $act_alum = new actividadalumno();
+        $act_alum->id_usuario = Yii::app()->user->id;
+        $act_alum -> id_actividad =  $_POST['actividad'];
+        $act_alum->fhcreacion = new CDbExpression('NOW()');
+        $act_alum->fhultmod = new CDbExpression('NOW()');
+        $act_alum->cusuario = 'sysadmin';
+        $act_alum->save();
+        $this->render('admin');
+
+    }
+
 }
