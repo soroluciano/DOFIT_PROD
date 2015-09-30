@@ -128,7 +128,7 @@ $this->pageTitle=Yii::app()->name;
                 </tr>
                 </tbody>
                 <?php
-		echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>
                   <div class='modal-content'>
                     <div class='modal-header'>
@@ -159,20 +159,20 @@ $this->pageTitle=Yii::app()->name;
         ?>
     </div>
 </div>
- 
+
 <script type="text/javascript">
-  function Borrarprofesor(idprofesor)
- {
-     var idprofesor = idprofesor;
-	 var data = {"idprofesor":idprofesor};
-     $.ajax({
-     url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
-     type: "POST",
-     dataType : "json",
-     data : data,
-	 cache: false
-     });
-	 
-}
+    function Borrarprofesor(idprofesor)
+    {
+        var idprofesor = idprofesor;
+        var data = {"idprofesor":idprofesor};
+        $.ajax({
+            url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
+            type: "POST",
+            dataType : "json",
+            data : data,
+            cache: false
+        });
+
+    }
 </script>	
 	
