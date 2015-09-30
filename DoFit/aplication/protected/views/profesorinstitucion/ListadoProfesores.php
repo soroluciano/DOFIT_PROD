@@ -124,10 +124,27 @@ $this->pageTitle=Yii::app()->name;
                     </td>
                     <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                     <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                    <?php echo "<td><a href='../profesorinstitucion/BorrarProfesor?idprofesor=$prof->id_usuario'>Eliminar de la institución<a/></td>";?>
+                    <td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
                 </tr>
                 </tbody>
                 <?php
+		echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                <div class='modal-dialog' role='document'>
+                  <div class='modal-content'>
+                    <div class='modal-header'>
+                      <button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
+                      <h4 class='modal-title' id='myModalLabel'>Inscripción</h4>
+                  </div>
+                  <div class='modal-body'>
+                   ¿Estas seguro que desea elimnar al profesor de la insituci&oacute;n?
+                  </div>
+                 <div class='modal-footer'>
+                  <button type='button' class='btn btn-primary' onclick='Borrarprofesor($prof->id_usuario);'>Si</button>
+                  <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
+                </div>
+              </div>
+            </div>
+         </div>";
             }
             echo "</table>";
         }
@@ -142,24 +159,20 @@ $this->pageTitle=Yii::app()->name;
         ?>
     </div>
 </div>
-
+ 
 <script type="text/javascript">
-    /*function Borrarprofesor(idprofesor)
-     {
-     var valor = $("#valor").val(0);
-     var idusuarioborr = idprofesor;
-     confirmar=confirm("¿Esta seguro que desea eliminar al profesor de la institucion");
-     if (confirmar) {
-     valor.val(1);
-     }
-     var valorcar = valor.val();
-     var data = { "idprofesor":idusuarioborr,"valor":valorcar};
+  function Borrarprofesor(idprofesor)
+ {
+     var idprofesor = idprofesor;
+	 var data = {"idprofesor":idprofesor};
      $.ajax({
      url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
      type: "POST",
      dataType : "json",
-     data : data
-     })
-     }*/
+     data : data,
+	 cache: false
+     });
+	 
+}
 </script>	
 	

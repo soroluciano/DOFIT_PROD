@@ -44,27 +44,21 @@ class ProfesorInstitucionController extends Controller
 	}
 
 	public function actionBorrarProfesor()
-	{
-
-		$idprofesor = $_GET['idprofesor'];
+   {
+		$idprofesor = $_POST['idprofesor'];
 		$idinstitucion = Yii::app()->user->id;
-		//$valor = $_POST['valor'];
-		$valor = 1;
-		if($valor == 1){
-			$actividad = Actividad::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
-			foreach($actividad as $act){
-				$actividad_horario = ActividadHorario::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
-				$actividad_horario->delete();
-				$act->delete();
-			}
-		}
-		$profesor_institucion = ProfesorInstitucion::model()->findAllByAttributes(array('id_institucion'=>$idinstitucion,'id_usuario'=>$idprofesor));
-		foreach($profesor_institucion as $prof_ins){
-			$prof_ins->delete();
-		}
-
-		$this->redirect('../profesorInstitucion/ListadoProfesores');
-	}
-
+	      $del_act_hor = Yii::app()->db->createCommand('DELETE from actividad_horario where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute(); 			
+		  if($del_act_hor or $del_act_hor == 0){
+			  $del_act_alumn = Yii::app()->db->createCommand('DELETE from actividad_alumno where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute(); 	
+			  if($del_act_alumn or $del_act_alumn == 0){
+			    $del_act = Yii::app()->db->createCommand('DELETE from actividad where id_institucion='.$idinstitucion.' and id_usuario='.$idprofesor)->execute();  	 
+			  }
+		  }  
+		 $del_ins_prof = Yii::app()->db->createCommand('DELETE from profesor_institucion where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion)->execute();
+		if($del_ins_prof){
+		   $this->redirect('../profesorInstitucion/ListadoProfesores');
+	    }
+	 
+   }
 }
 ?>
