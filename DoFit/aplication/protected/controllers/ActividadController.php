@@ -206,34 +206,38 @@ class ActividadController extends Controller
 
     public function actionListaDeInscripcion()
     {
-        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+        if (isset($_POST['deporte']) && isset($_POST['Localidad'])){
             //   $criteria = new CDbCriteria;
             //   $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
             //  $criteria->params = array(':localidad'=>$_POST['localidad'],'deporte'=>$_POST['deporte']);
             //  $gimnasio = FichaInstitucion:: model()->findAll($criteria);
-
-            $list = Yii::app()->db->createCommand('select nombre,direccion,telfijo,CASE id_dia WHEN 1 THEN "Lunes" WHEN 2 THEN "Martes" WHEN 3 THEN "Miercoles" WHEN 4 THEN "Jueves" WHEN 5 THEN "Viernes" WHEN 6 THEN "Sábado" WHEN 7 THEN "Domingo" END as id_dia,lpad(hora,2,"0") as hora,lpad(minutos,2,"0") as minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = ' . $_POST['localidad'] . ') and actividad.id_deporte = ' . $_POST['deporte'] . ' order by nombre')->queryAll();
+            //print_r($_POST['Localidad']['id_localidad']);
+            $list = Yii::app()->db->createCommand('select nombre,direccion,telfijo,CASE id_dia WHEN 1 THEN "Lunes" WHEN 2 THEN "Martes" WHEN 3 THEN "Miercoles" WHEN 4 THEN "Jueves" WHEN 5 THEN "Viernes" WHEN 6 THEN "Sábado" WHEN 7 THEN "Domingo" END as id_dia,lpad(hora,2,"0") as hora,lpad(minutos,2,"0") as minutos,actividad.id_actividad from ficha_institucion,actividad, actividad_horario where actividad.id_institucion = ficha_institucion.id_institucion and actividad.id_actividad = actividad_horario.id_actividad and ficha_institucion.id_institucion = (select id_institucion from ficha_institucion where id_localidad = ' . $_POST['Localidad']['id_localidad'] . ') and actividad.id_deporte = ' . $_POST['deporte'] . ' order by nombre')->queryAll();
             //print_r($list);
             // return $list;
-
+            //$this->render('admin');
+            $this->render('ListaDeInscripcion', array('list' => $list));
         }
-        $this->render('ListaDeInscripcion', array('list' => $list));
+        else{
+            $this->render('admin');
+        }
+
 
 
     }
 
-    public function actionSeleccionarLocalidad()
+    public function actionInscripcionFinal()
     {
 
-        $id_provincia = $_POST['Localidad']['id_provincia'];
-        $localidades = Localidad::model()->findAll('id_provincia= :id_provincia', array(':id_provincia' => $id_provincia));
-        $localidades = CHtml::listData($localidades, 'id_localidad', 'localidad');
+        $act_alum = new actividadalumno();
+        $act_alum->id_usuario = Yii::app()->user->id;
+        $act_alum -> id_actividad =  $_POST['actividad'];
+        $act_alum->fhcreacion = new CDbExpression('NOW()');
+        $act_alum->fhultmod = new CDbExpression('NOW()');
+        $act_alum->cusuario = 'sysadmin';
+        $act_alum->save();
+        $this->render('admin');
 
-        echo CHtml::tag('option', array('value' => ''), 'Seleccione una localidad', true);
-
-        foreach ($localidades as $valor => $localidadessel) {
-
-            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($localidadessel), true);
-        }
     }
+
 }

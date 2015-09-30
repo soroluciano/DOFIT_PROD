@@ -74,7 +74,7 @@ $this->pageTitle=Yii::app()->name;
                 if($cant = 0){
                     $actividad_ant = $gim['id_actividad'];
                     $cant = 1;
-                    echo "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                    echo "<button type='submit' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
                             Anotarme
                           </button>";
                     echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'/>'";
@@ -83,6 +83,7 @@ $this->pageTitle=Yii::app()->name;
                     echo "Telefono: ".$gim['telfijo'];
                     echo "Dia: ".$gim['id_dia'];
                     echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                    echo $actividad;
                 }
                 else{
                     if($gim['id_actividad']== $actividad_ant){
@@ -92,7 +93,7 @@ $this->pageTitle=Yii::app()->name;
                     }
                     else{
                         echo "<br>";
-                        echo "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                        echo "<button type='submit' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
                             Anotarme
                           </button>";
                         echo "Gimnasio: ".$gim['nombre'];
@@ -101,32 +102,20 @@ $this->pageTitle=Yii::app()->name;
                         echo "Dia: ".$gim['id_dia'];
                         echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
                         $actividad_ant = $gim['id_actividad'];
-                        echo "<input type='hidden' id='actividad' name='actividad' value='".$actividad_ant."'/>'";
+                        echo "<input type='hidden' id='actividad' name='actividad' value='".$actividad."'/>'";
+                        echo $actividad;
 
                     }
                 }
-                echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
-                        <div class='modal-dialog' role='document'>
-                            <div class='modal-content'>
-                                <div class='modal-header'>
-                                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                    <h4 class='modal-title' id='myModalLabel'>Inscripción</h4>
-                                </div>
-                                <div class='modal-body'>
-                                    ¿Deseás anotarte?
-                                </div>
-                                <div class='modal-footer'>
-                                    <button type='button' class='btn btn-primary' onclick='Anotarme();'>Si</button>
-                                    <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
-                                </div>
-                            </div>
-                        </div>
-                     </div>";
                 echo "</form>";
 
 
              }
-         }?>
+         }
+        else{
+            echo "nada";
+        }
+    ?>
         <!-- Modal -->
 
     </div>
@@ -135,22 +124,18 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
     function Anotarme(){
 
-        var deporte = $("#ListaDeporte").val();
-        var localidad = $("#ListaLocalidades").val();
-        var provincia = $("#ListaProvincias").val();
-        $("#boton").hide();
-        if(deporte != ""){
-            if(provincia != ""){
-                if(localidad != ""){
-                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
-                    $.ajax({
+        var actividad = $("#actividad").val();
+        alert(actividad);
+
+                    //var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
+                    /* $.ajax({
                         url: baseurl + '/actividad/InscripcionActividad',
                         type: "POST",
                         data: data,
                         dataType: "html",
                         cache: false,
                         success: function (response) {
-                            if (response == "error") {
+                            if (response == "error") { */ }
 
 
 </script>
