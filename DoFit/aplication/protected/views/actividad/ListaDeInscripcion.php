@@ -126,7 +126,11 @@ $this->pageTitle=Yii::app()->name;
 
 
              }
-         }?>
+         }
+        else{
+            echo "nada";
+        }
+    ?>
         <!-- Modal -->
 
     </div>
@@ -135,22 +139,18 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
     function Anotarme(){
 
-        var deporte = $("#ListaDeporte").val();
-        var localidad = $("#ListaLocalidades").val();
-        var provincia = $("#ListaProvincias").val();
-        $("#boton").hide();
-        if(deporte != ""){
-            if(provincia != ""){
-                if(localidad != ""){
-                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
-                    $.ajax({
+        var actividad = $("#actividad").val();
+        alert(actividad);
+
+                    //var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
+                    /* $.ajax({
                         url: baseurl + '/actividad/InscripcionActividad',
                         type: "POST",
                         data: data,
                         dataType: "html",
                         cache: false,
                         success: function (response) {
-                            if (response == "error") {
+                            if (response == "error") { *(
 
 
 </script>

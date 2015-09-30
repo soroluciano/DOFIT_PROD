@@ -84,7 +84,7 @@ $this->pageTitle=Yii::app()->name;
             <div class="form-group">
                 <?php echo $form->labelEx($localidad,'Localidad'); ?>
                 <div>
-                    <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control","onchange"=>"BuscadorGimnasios();")); ?>
+                    <?php echo $form->dropDownList($localidad,'id_localidad',array(''=>"Selecciona tu localidad"),array('class'=>"form-control","onchange"=>"BuscadorGimnasios();")); ?>
                 </div>
                 <?php echo $form->error($localidad,'id_localidad'); ?>
             </div>
@@ -128,10 +128,9 @@ $this->pageTitle=Yii::app()->name;
         var deporte = $("#ListaDeporte").val();
         var localidad = $("#Localidad_id_localidad").val();
         var provincia = $("#Localidad_id_provincia").val();
-        alert(localidad);
         $("#boton").hide();
         if(deporte != ""){
-           //if(provincia != ""){
+           if(provincia != ""){
                if(localidad != ""){
                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
                    $.ajax({
@@ -187,7 +186,7 @@ $this->pageTitle=Yii::app()->name;
                    });
 
                }
-           //}
+           }
         }
 
 

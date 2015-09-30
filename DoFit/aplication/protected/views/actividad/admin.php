@@ -1,30 +1,3 @@
-<?php
-/* @var $this ActividadController */
-/* @var $model Actividad */
-
-$this->breadcrumbs=array(
-	'Actividads'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Actividad', 'url'=>array('index')),
-	array('label'=>'Create Actividad', 'url'=>array('create')),
-);
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#actividad-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
-?>
 
 <h1>Manage Actividads</h1>
 
@@ -34,29 +7,3 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'actividad-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id_actividad',
-		'id_deporte',
-		'id_institucion',
-		'id_usuario',
-		'valor_actividad',
-		'fhcreacion',
-		/*
-		'fhultmod',
-		'cusuario',
-		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>

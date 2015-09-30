@@ -1,8 +1,6 @@
 
 
-foreach($actividades as $ac){
-echo "<tbody>
-<tr>"; ?>
+
     <?php $deporte = Deporte::model()->find('id_deporte=:id_deporte',array(':id_deporte'=>$ac->id_deporte));?>
     echo "<td>";
         <?php echo $deporte->deporte; ?></td>
