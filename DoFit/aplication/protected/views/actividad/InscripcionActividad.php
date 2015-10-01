@@ -38,7 +38,7 @@ $this->pageTitle=Yii::app()->name;
                                     <li><a href="#">Ver mis actividades</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuraci�n</a></li>
+                                    <li><a href="#">Configuración</a></li>
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                 </ul>
                             </li>
