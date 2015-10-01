@@ -228,21 +228,26 @@ class ActividadController extends Controller
 
     public function actionInscripcionFinal()
     {
-
-        $act_alum = new actividadAlumno();
-        $act_alum->id_usuario = 1;
-        $act_alum->id_estado = 0;
-        $act_alum -> id_actividad =  $_POST['actividad'];
-        $act_alum->fhcreacion = new CDbExpression('NOW()');
-        $act_alum->fhultmod = new CDbExpression('NOW()');
-        $act_alum->cusuario = 'sysadmin';
-        if ($act_alum->save()){
-            echo "error";
+        if(isset($_POST['actividad'])){
+            $act_alum = new actividadAlumno();
+            $act_alum->id_usuario = 1;
+            $act_alum->id_estado = 0;
+            $act_alum -> id_actividad =  $_POST['actividad'];
+            $act_alum->fhcreacion = new CDbExpression('NOW()');
+            $act_alum->fhultmod = new CDbExpression('NOW()');
+            $act_alum->cusuario = 'sysadmin';
+            if ($act_alum->save()){
+                echo "error";
+            }
+            else {
+                echo "lolo";
+            }
         }
         else{
-            echo "lolo";
+                $this->render('admin');
         }
-        $this->render('admin');
+
+
 
     }
 
