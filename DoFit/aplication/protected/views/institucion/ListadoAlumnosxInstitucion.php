@@ -10,6 +10,8 @@
         var dir = "dir";
         window.open("../institucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
     }
+	
+	
 </script>
 
 <?php
@@ -83,9 +85,10 @@ $this->pageTitle=Yii::app()->name;
              <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th></tr></thead>";
             foreach($actividades as $acti){
                 $actividad_alumno = ActividadAlumno::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$acti->id_actividad));
-                foreach ($actividad_alumno as $act_alum){
-                    $id_usuario = $act_alum->id_usuario;
-                    $ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
+                if($actividad_alumno != null){
+					foreach ($actividad_alumno as $act_alum){
+                             $id_usuario = $act_alum->id_usuario;
+                             $ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
                     if($id_usuario != $id_usuario_ant){
                         $id_usuario_ant = $act_alum->id_usuario;
                         ?>
@@ -121,7 +124,16 @@ $this->pageTitle=Yii::app()->name;
 
 
                     }
-                }
+                 }
+				}
+               else
+               {
+                echo    "<div class='row'>
+                        <div class='.col-md-6 .col-md-offset-3'>
+                            <h2 class='text-center'>No hay Alumnos asociados a la instituci&oacute;n</h2>
+                        </div>
+                    </div>";
+			   }					
             }
             echo "</table>";
         }
@@ -129,7 +141,7 @@ $this->pageTitle=Yii::app()->name;
         {
             echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay Alumnos asociados a la instituci&oacute;n</h2>
+                            <h2 class='text-center'>No hay Actividades creadas para que los alumnos se asocien a la instituci&oacute;n </h2>
                         </div>
                     </div>";
         }

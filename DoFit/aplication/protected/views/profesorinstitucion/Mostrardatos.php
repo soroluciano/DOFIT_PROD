@@ -2,14 +2,18 @@
 	<div class='row'>
 		<?php
 		$idusuario = $_GET['idusuario'];
+		$idinstitucion = Yii::app()->user->id;
 		if(isset($_GET['tel'])){
 			$telefono = $_GET['tel'];
 			echo "<div><h2>Datos Tel&eacute;fonicos de&nbsp;";
 		}
 		if(isset($_GET['dir'])){
 			$direccion = $_GET['dir'];
-			echo "<div><h2>Datos de direcci&oacute;n de&nbsp;";
+			echo "<div><h2>Datos domiciliarios de&nbsp;";
 		}
+		if(isset($_GET['act'])){
+			echo "<div><h2>Actividades que enseña &nbsp;";
+		} 
 		$fichausuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idusuario));
 		echo $fichausuario->nombre."&nbsp".$fichausuario->apellido."</h2></div>";
 		if(isset($_GET['tel'])){
@@ -49,5 +53,30 @@
 			</table>
 			<?php
 		}
-		?>
-	 
+		if(isset($_GET['act'])){ 
+		 ?>
+	       <table class="table table-hover">
+				<thead>
+				<tr><th>Deporte</th><th>Día</th><th>Hora</th><th>Minutos</th><th>Alumnos que practican</th></tr>
+				</thead>
+				<tbody>
+				<?php $queryact = Yii::app()->db->createCommand('SELECT id_actividad FROM actividad where id_institucion= '.$idinstitucion.' and id_usuario = '.$idusuario)->queryAll();
+				      foreach($queryact as $act){
+				    ?>
+                <tr>					
+					<?php 
+					 $dep = Yii::app()->db->createCommand('SELECT deporte FROM deporte where id_deporte IN(SELECT id_deporte FROM actividad where id_actividad= '.$act['id_actividad'].')')->queryRow();
+            		?>
+					<td id='depo'><?php echo $dep['deporte']?></td>
+					<td id="dia"><?php?></td>
+					<td id="hora"><?php?></td>
+					<td id="minu"><?php ?></td>
+					<td id="alumn"><?php ?></td>
+				</tr>
+					  <?php }?>
+				</tbody>
+			</table> 
+		<?php 
+		}
+        ?>		
+			

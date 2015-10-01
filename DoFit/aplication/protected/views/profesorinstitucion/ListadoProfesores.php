@@ -10,7 +10,12 @@
         var dir = "dir";
         window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
     }
-
+    
+   function Mostraractividad(idusuario){
+        var idusuario = idusuario;
+        var act = "act";
+        window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&act="+act+"",'','width=800, height=200');
+   }  		
 </script>
 
 <?php
@@ -79,7 +84,7 @@ $this->pageTitle=Yii::app()->name;
             echo "<table class='table table-hover'>
            <thead>
             <tr>
-             <tr><th>Nombre</th><th>Apellido</th><th>Deporte que dicta</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Eliminar Profesor</th></tr></thead>";
+             <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th><th>Eliminar Profesor</th></tr></thead>";
             foreach($profesores as $prof){
                 $profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
                 ?>
@@ -89,20 +94,6 @@ $this->pageTitle=Yii::app()->name;
                     <input type="hidden" name="valor" id="valor"></input>
                     <td id="nombre"><?php echo $profesor->nombre;?></td>
                     <td id="apellido"><?php echo $profesor->apellido;?></td>
-                    <td id="deporte">
-                        <?php
-                        $actividad = Actividad::model()->findAllByAttributes(array('id_usuario'=>$prof->id_usuario,'id_institucion'=>$idinstitucion));
-                        if($actividad == null){
-                            echo "No se asocio a ninguna actividad";
-                        }
-                        else {
-                            foreach($actividad as $act){
-                                $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
-                                echo $deporte->deporte." -&nbsp";
-                            }
-                        }
-                        ?>
-                    </td>
                     <td id="dni"><?php echo $profesor->dni; ?></td>
                     <td id="email">
                         <?php
@@ -124,7 +115,8 @@ $this->pageTitle=Yii::app()->name;
                     </td>
                     <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                     <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                    <td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
+                    <td><a id="act" href="" onClick="javascript:Mostraractividad(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
+					<td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
                 </tr>
                 </tbody>
                 <?php
