@@ -70,7 +70,7 @@ $this->pageTitle=Yii::app()->name;
             $actividad_ant = 0;
             foreach($list as $gim){
                 $actividad = $gim['id_actividad'];
-                echo "<form method='post' action='InscripcionFinal'>";
+                echo "<form method='post' id='form-field' action='InscripcionFinal'>";
                 if($cant = 0){
                     $actividad_ant = $gim['id_actividad'];
                     $cant = 1;
@@ -122,10 +122,12 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 <script type="text/javascript">
-    function Anotarme(){
 
-        var actividad = $("#actividad").val();
-        alert(actividad);
+
+   // function Anotarme(){
+
+       // var actividad = $("#actividad").val();
+       // alert(actividad);
 
                     //var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
                     /* $.ajax({
@@ -135,7 +137,7 @@ $this->pageTitle=Yii::app()->name;
                         dataType: "html",
                         cache: false,
                         success: function (response) {
-                            if (response == "error") { */ }
+                            if (response == "error") { */
 
 
 </script>
