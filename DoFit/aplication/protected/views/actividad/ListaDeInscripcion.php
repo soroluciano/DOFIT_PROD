@@ -118,7 +118,24 @@ $this->pageTitle=Yii::app()->name;
                                     </div>
                                     <div class='modal-footer'>
                                         <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-                                        <button type='button' id='button' onclick='Click(this.value);' class='btn btn-primary'>Save changes</button>
+                                        <button type='button' id='button' onclick='ModalClick(this.value);' class='btn btn-primary'>Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>;";
+
+                        echo "<div class='modal fade' id='Confirmacion' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                            <div class='modal-dialog' role='document'>
+                                <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                        <h4 class='modal-title' id='myModalLabel'>Modal title</h4>
+                                    </div>
+                                    <div class='modal-body'>
+                                        Te anotaste!!
+                                    </div>
+                                    <div class='modal-footer'>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,42 +156,34 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
 
     function Anotarme(value){
-
-        //if(value != ""){
-        $('#myModal').modal('show');
-
-        $("#button").prop('value', value);
-        alert(value);
+      $('#myModal').modal('show');
+      $("#button").prop('value', value);
+      alert(value);
     }
 
+</script>
 
-    function Click(value){
-        alert(value);
-        //var data = {'actividad': actividad}
-      /*  $.ajax({
-                url: baseurl + '/actividad/InscripcionFinal',
-                type: "POST",
-                data: data,
-                dataType: "html",
-                cache: false
-                success: function(response){
-                   if(response == "error"){
-                    null;*/
-                        }
-
-
-
-
-
-                    //var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
-                    /* $.ajax({
-                        url: baseurl + '/actividad/InscripcionActividad',
-                        type: "POST",
-                        data: data,
-                        dataType: "html",
-                        cache: false,
-                        success: function (response) {
-                            if (response == "error") { */
-
+<script type="text/javascript">
+    function ModalClick(value){
+        if(value != ""){
+            var data = {'actividad': value};
+            $('#myModal').modal('hide');
+            $.ajax({
+                    url: baseurl + '/actividad/InscripcionFinal',
+                    type: "POST",
+                    data: data,
+                    dataType: "html",
+                    cache: false,
+                    success: function(response){
+                                if(response == "error"){
+                                  alert('pepe');
+                                }
+                                else{
+                                    $('#Confirmacion').modal('show');
+                                }
+                    }
+            })
+        }
+    }
 
 </script>

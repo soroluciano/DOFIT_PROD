@@ -237,7 +237,7 @@ class ActividadController extends Controller
         $act_alum->fhultmod = new CDbExpression('NOW()');
         $act_alum->cusuario = 'sysadmin';
         if ($act_alum->save()){
-            echo "lala";
+            echo "error";
         }
         else{
             echo "lolo";
