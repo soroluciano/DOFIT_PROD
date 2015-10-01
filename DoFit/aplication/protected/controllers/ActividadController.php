@@ -72,7 +72,7 @@ class ActividadController extends Controller
                     }
                 }
                 if ($actividades = $cant) {
-                    $this->redirect('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
+                    $this->redirect('CrearActividadOk');
 
                 }
             }
@@ -243,12 +243,14 @@ class ActividadController extends Controller
                 echo "lolo";
             }
         }
-        else{
-                $this->render('admin');
-        }
-
-
-
     }
+    public function actionCrearActividadOk()
+    {
+        $deporte = new Deporte();
+        $actividad = new Actividad();
+        $actividad_horario = new ActividadHorario();
+        $this->render('CrearActividadOk', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
+    }
+
 
 }

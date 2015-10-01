@@ -38,7 +38,7 @@ $this->pageTitle=Yii::app()->name;
                                     <li><a href="#">Ver mis actividades</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuración</a></li>
+                                    <li><a href="#">Configuraci&oacute;n</a></li>
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                 </ul>
                             </li>
@@ -111,14 +111,14 @@ $this->pageTitle=Yii::app()->name;
                                 <div class='modal-content'>
                                     <div class='modal-header'>
                                         <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                        <h4 class='modal-title' id='myModalLabel'>Modal title</h4>
+                                        <h4 class='modal-title' id='myModalLabel'>¡Atención!</h4>
                                     </div>
                                     <div class='modal-body'>
-                                        ...
+                                        ¿Deseás anotarte?
                                     </div>
                                     <div class='modal-footer'>
-                                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-                                        <button type='button' id='button' onclick='ModalClick(this.value);' class='btn btn-primary'>Save changes</button>
+                                        <button type='button' id='button' onclick='ModalClick(this.value);' class='btn btn-primary'>Si</button>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
                                     </div>
                                 </div>
                             </div>
@@ -129,10 +129,10 @@ $this->pageTitle=Yii::app()->name;
                                 <div class='modal-content'>
                                     <div class='modal-header'>
                                         <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                        <h4 class='modal-title' id='myModalLabel'>Modal title</h4>
+                                        <h4 class='modal-title' id='myModalLabel'>¡Felicidades!</h4>
                                     </div>
                                     <div class='modal-body'>
-                                        Te anotaste!!
+                                        ¡Te anotaste correctamente!
                                     </div>
                                     <div class='modal-footer'>
                                         <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
@@ -146,10 +146,10 @@ $this->pageTitle=Yii::app()->name;
                                 <div class='modal-content'>
                                     <div class='modal-header'>
                                         <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                        <h4 class='modal-title' id='myModalLabel'>Modal title</h4>
+                                        <h4 class='modal-title' id='myModalLabel'>Error</h4>
                                     </div>
                                     <div class='modal-body'>
-                                        <strong>Error al anotarte</strong>
+                                        <strong>Se produjo un error al intentar inscribirte</strong>
                                     </div>
                                     <div class='modal-footer'>
                                         <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
@@ -162,7 +162,7 @@ $this->pageTitle=Yii::app()->name;
                  }
              }
             else{
-                echo "nada";
+                echo "Ya te has inscripto a todas las actividades.";
         }
     ?>
 
@@ -174,7 +174,7 @@ $this->pageTitle=Yii::app()->name;
 
     function Anotarme(value){
       $('#myModal').modal('show');
-      $("#button").prop('value', value);;
+      $("#button").prop('value', value);
     }
 
 </script>
@@ -192,15 +192,16 @@ $this->pageTitle=Yii::app()->name;
                     cache: false,
                     success: function(response){
                                 if(response == "error"){
-                                    $('#Confirmacion').modal('show');
-
+                                    location.reload();
+                                    $('#myModal').modal('show');
                                 }
                                 else{
                                     $('#Error').modal('show');
-
                                 }
                     }
             })
+
+
         }
     }
 
