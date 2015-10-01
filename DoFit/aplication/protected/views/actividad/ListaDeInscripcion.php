@@ -70,11 +70,10 @@ $this->pageTitle=Yii::app()->name;
             $actividad_ant = 0;
             foreach($list as $gim){
                 $actividad = $gim['id_actividad'];
-                echo "<form method='post' id='form-field' action='InscripcionFinal'>";
                 if($cant = 0){
                     $actividad_ant = $gim['id_actividad'];
                     $cant = 1;
-                    echo "<button type='submit' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                    echo "<button type='submit' onclick='Anotarme();' value='".$actividad."' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
                             Anotarme
                           </button>";
                     echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'/>'";
@@ -93,7 +92,7 @@ $this->pageTitle=Yii::app()->name;
                     }
                     else{
                         echo "<br>";
-                        echo "<button type='submit' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                        echo "<button type='submit' onclick='Anotarme(this.value);' value='".$actividad."' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
                             Anotarme
                           </button>";
                         echo "Gimnasio: ".$gim['nombre'];
@@ -124,10 +123,10 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
 
 
-   // function Anotarme(){
+    function Anotarme(value){
 
-       // var actividad = $("#actividad").val();
-       // alert(actividad);
+        var actividad = $("#submit").value;
+        alert(value); }
 
                     //var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
                     /* $.ajax({
