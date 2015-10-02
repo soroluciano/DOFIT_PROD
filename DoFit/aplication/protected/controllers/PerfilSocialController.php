@@ -209,6 +209,35 @@ class PerfilSocialController extends Controller
 		));	
 	}
 	
+	public function actionDeleteImagen(){
+			$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+			$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+			$id = $_POST['id'];	
+			
+			if($id != null && $id != ""){
+		
+				$foto = "foto".$id;
+				$perfilSocial->$foto =	new CDbExpression('NULL');
+				$perfilSocial->update();
+			}
+			
+			//$this->render('galeria',array(
+			//	'Us'=>$Us,
+			//	'perfilSocial'=>$perfilSocial
+			//	));	
+			//}
+	}
+	
+	public function actionMostrarImagenes(){
+			$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+			$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+			$this->render('_imagenes',array(
+				'Us'=>$Us,
+				'perfilSocial'=>$perfilSocial
+			));	
+	}
+	
+	
 
 
 }

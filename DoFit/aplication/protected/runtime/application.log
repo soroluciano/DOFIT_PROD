@@ -1,0 +1,206 @@
+2015/09/30 15:27:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 15:27:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 15:48:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 15:48:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 15:48:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 15:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 15:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 15:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:07:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:07:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:09:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:09:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:13:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:13:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:14:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:14:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/09/30 16:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/09/30 16:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('jquery.min.map')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('jquery.min.map')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
