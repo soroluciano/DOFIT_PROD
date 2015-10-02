@@ -26,12 +26,25 @@ class PagoController extends Controller
             $pa->fhultmod =  new CDbExpression('NOW()');
             $pa->mes = $_POST['meses'];
             $pa->monto = $_POST['monto'];
-            if($pa->save()){
-                echo "ok";
-            }
-            else{
+
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_usuario = :id_usuario and id_actividad = :id_actividad and anio = :anio and mes = :meses';
+            $criteria->params = array(':id_usuario' => $_POST['id_usuario'], ':id_actividad' => $_POST['actividad'], ':anio'=> $_POST['anio'], ':meses'=> $_POST['meses']);
+            $Actividad = Pago:: model()->findAll($criteria);
+
+            if($Actividad != null){
                 echo "error";
             }
+            else{
+                if($pa->save()){
+                    echo "ok";
+                }
+                else{
+                    echo "error";
+                }
+
+            }
+
 
         }
 
