@@ -1,4 +1,5 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/googleMaps.js"></script>
 
 <?php
 /* @var $this SiteController */

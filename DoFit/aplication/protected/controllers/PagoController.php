@@ -13,11 +13,9 @@ class PagoController extends Controller
 
     public function actionCrearPago()
     {
-
         $fu = new FichaUsuario();
         $ac = new Actividad();
         $pa = new Pago();
-
 
         IF(isset($_POST['id_usuario']) && isset($_POST['actividad']) && isset($_POST['anio']) && isset($_POST['meses'])){
             $pa->anio = $_POST['anio'];
