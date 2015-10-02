@@ -92,9 +92,10 @@ if(!Yii::app()->user->isGuest){
                     <div class="input-group">
                         <div class="input-group-addon">$</div>
                         <?php echo $form->textField($actividad,'valor_actividad',array('class'=>"form-control",'placeholder'=>"Precio"));?>
-                        <?php echo $form->error($actividad,'valor_actividad')?>
                         <div class="input-group-addon">.00</div>
                     </div>
+                    <br>
+                    <?php echo $form->error($actividad,'valor_actividad')?>
                 </div>
                 <div class="row">
                     <div class="col-md-1">
