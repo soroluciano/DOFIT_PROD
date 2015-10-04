@@ -10,8 +10,8 @@
         var dir = "dir";
         window.open("../institucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
     }
-	
-	
+
+
 </script>
 
 <?php
@@ -86,54 +86,54 @@ $this->pageTitle=Yii::app()->name;
             foreach($actividades as $acti){
                 $actividad_alumno = ActividadAlumno::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$acti->id_actividad));
                 if($actividad_alumno != null){
-					foreach ($actividad_alumno as $act_alum){
-                             $id_usuario = $act_alum->id_usuario;
-                             $ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
-                    if($id_usuario != $id_usuario_ant){
-                        $id_usuario_ant = $act_alum->id_usuario;
-                        ?>
-                        <tbody>
-                        <tr>
-                            <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
-                            <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
-                            <td id="dni"><?php echo $ficha_usuario->dni ?></td>
-                            <td id="email">
-                                <?php
-                                $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$id_usuario));
-                                echo $usuario->email?></td>
-                            <td id="sexo">
-                                <?php
-                                if($ficha_usuario->sexo == 'M'){
-                                    echo "Masculino";
-                                }
-                                if($ficha_usuario->sexo == 'F'){
-                                    echo "Femenino";
-                                }
-                                ?>
-                            </td>
-                            <td id="fecnac">
-                                <?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
-                                echo $fechanac;?>
-                            </td>
-                            <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                            <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                            <td id="actividades"><a href="#">Ver actividades</a></td>
-                        </tr>
-                        </tbody>
-                        <?php
+                    foreach ($actividad_alumno as $act_alum){
+                        $id_usuario = $act_alum->id_usuario;
+                        $ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
+                        if($id_usuario != $id_usuario_ant){
+                            $id_usuario_ant = $act_alum->id_usuario;
+                            ?>
+                            <tbody>
+                            <tr>
+                                <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
+                                <td id="apellido"><?php echo $ficha_usuario->apellido ?></td>
+                                <td id="dni"><?php echo $ficha_usuario->dni ?></td>
+                                <td id="email">
+                                    <?php
+                                    $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$id_usuario));
+                                    echo $usuario->email?></td>
+                                <td id="sexo">
+                                    <?php
+                                    if($ficha_usuario->sexo == 'M'){
+                                        echo "Masculino";
+                                    }
+                                    if($ficha_usuario->sexo == 'F'){
+                                        echo "Femenino";
+                                    }
+                                    ?>
+                                </td>
+                                <td id="fecnac">
+                                    <?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
+                                    echo $fechanac;?>
+                                </td>
+                                <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+                                <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+                                <td id="actividades"><a href="#">Ver actividades</a></td>
+                            </tr>
+                            </tbody>
+                            <?php
 
 
+                        }
                     }
-                 }
-				}
-               else
-               {
-                echo    "<div class='row'>
+                }
+                else
+                {
+                    echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
                             <h2 class='text-center'>No hay Alumnos asociados a la instituci&oacute;n</h2>
                         </div>
                     </div>";
-			   }					
+                }
             }
             echo "</table>";
         }

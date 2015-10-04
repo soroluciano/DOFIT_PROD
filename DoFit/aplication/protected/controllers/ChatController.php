@@ -22,18 +22,18 @@ class ChatController extends Controller
 	
 	$conversacion->usuario = $usuarioori;
 	$conversacion->mensaje = $mensaje;
-	$conversacion->idusuarioori = $idusuarioori;
-	$conversacion->idusuariodes = $idusuariodes;
-	$conversacion->idusuario = $idusuarioori;
+	$conversacion->id_usuarioori = $idusuarioori;
+	$conversacion->id_usuariodes = $idusuariodes;
+	$conversacion->id_usuario = $idusuarioori;
     if($conversacion->save()) 
        echo "Mensaje Registrado."; 
     // Ingreso nuevamente la conversacion a la base para poder borrarla según el usuario logueado
     $conversacionrep = new Conversacion;
 	$conversacionrep->usuario = $usuarioori;
 	$conversacionrep->mensaje = $mensaje;
-	$conversacionrep->idusuarioori = $idusuarioori;
-	$conversacionrep->idusuariodes = $idusuariodes;
-	$conversacionrep->idusuario = $idusuariodes;
+	$conversacionrep->id_usuarioori = $idusuarioori;
+	$conversacionrep->id_usuariodes = $idusuariodes;
+	$conversacionrep->id_usuario = $idusuariodes;
     if($conversacionrep->save()) 
        echo "Mensaje Registrado.";
     	
@@ -46,10 +46,10 @@ class ChatController extends Controller
     $idusuario1 = Yii::app()->user->id;
 	$idusuario2 = $_POST['idusuario'];
 	$criteria = new CDbCriteria;
-	$criteria->condition = '(idusuarioori =:idusuario1 AND idusuariodes =:idusuario2
-	                        OR  idusuarioori =:idusuario2 AND idusuariodes =:idusuario1) 
-							AND idusuario =:idusuario1'; 
-    $criteria->order = 'idConversacion ASC';
+	$criteria->condition = '(id_usuarioori =:idusuario1 AND id_usuariodes =:idusuario2
+	                        OR  id_usuarioori =:idusuario2 AND id_usuariodes =:idusuario1) 
+							AND id_usuario =:idusuario1'; 
+    $criteria->order = 'id_conversacion ASC';
 	$criteria->params = array(':idusuario1'=>$idusuario1,':idusuario2'=>$idusuario2);
 	$mensajes = Conversacion :: model()->findAll($criteria);
      
@@ -67,9 +67,9 @@ class ChatController extends Controller
 	$idusuario1 = Yii::app()->user->id;
 	 if($valor == 1){
          $criteria = new CDbCriteria;
-	     $criteria->condition = '(idusuarioori =:idusuario1 AND idusuariodes =:idusuario2
-	                             OR  idusuarioori =:idusuario2 AND idusuariodes =:idusuario1)
-								 AND idusuario =:idusuario1';
+	     $criteria->condition = '(id_usuarioori =:idusuario1 AND id_usuariodes =:idusuario2
+	                             OR  id_usuarioori =:idusuario2 AND id_usuariodes =:idusuario1)
+								 AND id_usuario =:idusuario1';
 	     $criteria->params = array(':idusuario1'=>$idusuario1,':idusuario2'=>$idusuario2);          
  	     $mensajes = Conversacion :: model()->findAll($criteria);
 		 

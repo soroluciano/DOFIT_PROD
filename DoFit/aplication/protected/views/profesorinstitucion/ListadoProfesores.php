@@ -10,12 +10,12 @@
         var dir = "dir";
         window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
     }
-    
-   function Mostraractividad(idusuario){
+
+    function Mostraractividad(idusuario){
         var idusuario = idusuario;
         var act = "act";
         window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&act="+act+"",'','width=800, height=200');
-   }  		
+    }
 </script>
 
 <?php
@@ -116,7 +116,7 @@ $this->pageTitle=Yii::app()->name;
                     <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                     <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
                     <td><a id="act" href="" onClick="javascript:Mostraractividad(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
-					<td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
+                    <td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
                 </tr>
                 </tbody>
                 <?php
