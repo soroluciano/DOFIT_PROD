@@ -38,7 +38,7 @@ $this->pageTitle=Yii::app()->name;
                                     <li><a href="#">Ver mis actividades</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuraci�n</a></li>
+                                    <li><a href="#">Configuraci&oacute;n</a></li>
                                     <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
                                 </ul>
                             </li>
@@ -70,74 +70,139 @@ $this->pageTitle=Yii::app()->name;
             $actividad_ant = 0;
             foreach($list as $gim){
                 $actividad = $gim['id_actividad'];
-                echo "<form method='post' id='form-field' action='InscripcionFinal'>";
                 if($cant = 0){
                     $actividad_ant = $gim['id_actividad'];
                     $cant = 1;
-                    echo "<button type='submit' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                    echo "<button type='button'  value='".$actividad."' onclick='Anotarme(this.value);' class='btn btn-primary btn-lg'>
                             Anotarme
                           </button>";
                     echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'/>'";
                     echo "Gimnasio: ".$gim['nombre'];
-                    echo "Dirección: ".$gim['direccion'];
-                    echo "Telefono: ".$gim['telfijo'];
-                    echo "Dia: ".$gim['id_dia'];
-                    echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                    echo " Dirección: ".$gim['direccion'];
+                    echo " Telefono: ".$gim['telfijo'];
+                    echo " Dia: ".$gim['id_dia'];
+                    echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
                     echo $actividad;
                 }
                 else{
                     if($gim['id_actividad']== $actividad_ant){
-                        echo "Dia: ".$gim['id_dia'];
-                        echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                        echo " Dia: ".$gim['id_dia'];
+                        echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
                         $actividad_ant = $gim['id_actividad'];
                     }
                     else{
                         echo "<br>";
-                        echo "<button type='submit' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
+                        echo "<button  type='button'  onclick='Anotarme(this.value);' value='".$actividad."' class='btn btn-primary btn-lg'>
                             Anotarme
                           </button>";
                         echo "Gimnasio: ".$gim['nombre'];
-                        echo "Dirección: ".$gim['direccion'];
-                        echo "Telefono: ".$gim['telfijo'];
-                        echo "Dia: ".$gim['id_dia'];
-                        echo "Horario: ".$gim['hora'].':'.$gim['minutos'];
+                        echo " Dirección: ".$gim['direccion'];
+                        echo " Telefono: ".$gim['telfijo'];
+                        echo " Dia: ".$gim['id_dia'];
+                        echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
                         $actividad_ant = $gim['id_actividad'];
                         echo "<input type='hidden' id='actividad' name='actividad' value='".$actividad."'/>'";
                         echo $actividad;
 
                     }
                 }
-                echo "</form>";
+                    echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                            <div class='modal-dialog' role='document'>
+                                <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                        <h4 class='modal-title' id='myModalLabel'>¡Atención!</h4>
+                                    </div>
+                                    <div class='modal-body'>
+                                        ¿Deseás anotarte?
+                                    </div>
+                                    <div class='modal-footer'>
+                                        <button type='button' id='button' onclick='ModalClick(this.value);' class='btn btn-primary'>Si</button>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>;";
+
+                    echo "<div class='modal fade' id='Confirmacion' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                            <div class='modal-dialog' role='document'>
+                                <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                        <h4 class='modal-title' id='myModalLabel'>¡Felicidades!</h4>
+                                    </div>
+                                    <div class='modal-body'>
+                                        ¡Te anotaste correctamente!
+                                    </div>
+                                    <div class='modal-footer'>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>;";
+
+                    echo "<div class='modal fade' id='Error' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                            <div class='modal-dialog' role='document'>
+                                <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                        <h4 class='modal-title' id='myModalLabel'>Error</h4>
+                                    </div>
+                                    <div class='modal-body'>
+                                        <strong>Se produjo un error al intentar inscribirte</strong>
+                                    </div>
+                                    <div class='modal-footer'>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>;";
 
 
+                 }
              }
-         }
-        else{
-            echo "nada";
+            else{
+                echo "Ya te has inscripto a todas las actividades.";
         }
     ?>
-        <!-- Modal -->
+
 
     </div>
 </div>
 
 <script type="text/javascript">
 
+    function Anotarme(value){
+      $('#myModal').modal('show');
+      $("#button").prop('value', value);
+    }
 
-   // function Anotarme(){
+</script>
 
-       // var actividad = $("#actividad").val();
-       // alert(actividad);
+<script type="text/javascript">
+    function ModalClick(value){
+        if(value != ""){
+            var data = {'actividad': value};
+            $('#myModal').modal('hide');
+            $.ajax({
+                    url: baseurl + '/actividad/InscripcionFinal',
+                    type: "POST",
+                    data: data,
+                    dataType: "html",
+                    cache: false,
+                    success: function(response){
+                                if(response == "error"){
+                                    location.reload();
+                                    $('#myModal').modal('show');
+                                }
+                                else{
+                                    $('#Error').modal('show');
+                                }
+                    }
+            })
 
-                    //var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
-                    /* $.ajax({
-                        url: baseurl + '/actividad/InscripcionActividad',
-                        type: "POST",
-                        data: data,
-                        dataType: "html",
-                        cache: false,
-                        success: function (response) {
-                            if (response == "error") { */
 
+        }
+    }
 
 </script>

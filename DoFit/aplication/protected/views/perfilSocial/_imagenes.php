@@ -46,8 +46,7 @@
                   <div id="im<?php echo $i; ?>" class="osvaldito show-image">
                               <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" class="img-rounded img<?php echo $i; ?>" />
                               <a href="#myDivId<?php echo $i;?>" class="btn btn-lg btn-default ver" id="fancyBoxLink<?php echo $i;?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"> Ver </span></a>
-                              <button type="button" value="Modificar" class="btn btn-lg btn-default update"><span class="glyphicon glyphicon-pencil" aria-hidden="true"> Editar</span></button>
-                              <button class="btn btn-lg btn-default delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"> Borrar</span></button>
+                              <button class="btn btn-lg btn-default delete" onclick="deleteImagen(<?php echo $posArray[$i];?>);"><span class="glyphicon glyphicon-trash" aria-hidden="true"> Borrar</span></button>
 
                               <div style="display:none">
                                           <div id="myDivId<?php echo $i;?>">

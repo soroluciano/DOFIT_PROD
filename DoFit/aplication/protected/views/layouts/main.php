@@ -35,7 +35,7 @@
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox-1.3.4.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/web.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/googleMaps.js"></script>
+
 
     <script>
        $(document).ready(function() {
