@@ -88,7 +88,7 @@ if(!Yii::app()->user->isGuest){
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-9" >
-								<div id="conversation" class="pantalla">
+								<div id="conversacion" class="pantalla">
 								</div>
 							</div>
 						</div>
@@ -98,7 +98,7 @@ if(!Yii::app()->user->isGuest){
 						<textarea id="mensaje" name="mensaje" placeholder="Ingrese Mensaje"  class="form-control" rows="3"></textarea>
 					</div>
 					<input type="hidden"  name="valor" id="valor"></input>
-					<input type="button" id="send" class="btn btn-primary" value="Enviar"></input>
+					<input type="button" id="enviar" class="btn btn-primary" value="Enviar"></input>
 					<input type="button" id="borrarmensajes" class="btn btn-primary" value="Borrar Mensajes"></input>
 				</form>
 			</div>
@@ -112,19 +112,17 @@ if(!Yii::app()->user->isGuest){
 			setInterval("cargarMensajesAntiguos()",500);
 		});
 		var registerMessages = function(){
-			$("#send").on("click",function(e){
+			$("#enviar").on("click",function(e){
 				e.preventDefault();
 				var frm = $("#formChat").serialize();
-				console.log(frm);
 				$.ajax({
 					type : "POST",
 					url : 'Registrarmensaje',
 					data: frm
 				}).done(function(info){
 					$("#mensaje").val("");
-					var altura =$("#conversation").prop("scrollHeight");
-					$("#conversation").scrollTop(altura);
-					console.log(info);
+					var altura =$("#conversacion").prop("scrollHeight");
+					$("#conversacion").scrollTop(altura);
 				})
 			});
 		}
@@ -135,11 +133,11 @@ if(!Yii::app()->user->isGuest){
 				url : 'MostrarConversaciones',
 				data : {idusuario:idusuario}
 			}).done(function(info){
-				$("#conversation").html(info);
-				$("#conversation p:last-child").css({"background-color": "lightgreen",
+				$("#conversacion").html(info);
+				$("#conversacion p:last-child").css({"background-color": "lightgreen",
 					"padding-bottom": "20px"});
-				var altura =$("#conversation").prop("scrollHeight");
-				$("#conversation").scrollTop(altura);
+				var altura =$("#conversacion").prop("scrollHeight");
+				$("#conversacion").scrollTop(altura);
 			});
 		}
 		$("#borrarmensajes").on("click",function(){
@@ -152,7 +150,6 @@ if(!Yii::app()->user->isGuest){
 			}
 			var valorcar = valor.val();
 			var data = { "idusuario":idusuarioborr,"valor":valorcar};
-			console.log(data);
 			$.ajax({
 				url : "BorrarMensajes",
 				type: "POST",

@@ -2,10 +2,10 @@
 
 class ActividadAlumnoController extends Controller
 {
-	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
-	 */
+    /**
+     * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
+     * using two-column layout. See 'protected/views/layouts/column2.php'.
+     */
     public function actionAceptar($id)
     {
         $aa = ActividadAlumno::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
@@ -20,4 +20,13 @@ class ActividadAlumnoController extends Controller
         $aa->delete();
         $this->redirect('../../institucion/home');
     }
-}
+
+    public function actionVeractividades($id)
+    {
+        $id_usuario = $id;
+        $actividad_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario'=>$id_usuario));
+        if($actividad_alumno != null){
+            $this->render('Veractividades',array('actividad_alumno'=>$actividad_alumno));
+        }
+    }
+}	
