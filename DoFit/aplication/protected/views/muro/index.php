@@ -62,7 +62,7 @@ if(!Yii::app()->user->isGuest){
   <div id="myCarousel" class="carousel_min slide" data-ride="carousel">
       <div class="carousel-inner_min" role="listbox">
           <div class="item active">
-              <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">
+              <!--<img class="first-slide_min" src="<?php //echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">-->
           </div>
       </div>
   </div>
@@ -72,7 +72,7 @@ if(!Yii::app()->user->isGuest){
     <div class="posts_case">
       <div class="post_content">
         <div class="post_image">
-          <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/images.jpg" class="img-circle" style="width:70px;height:70px;"/>
+          <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/images.jpg" class="img-circle img-size" style="width:70px;height:70px;"/>
         </div>    
         <div class="post_text">
           <h5>Dave Gamache</h5>
