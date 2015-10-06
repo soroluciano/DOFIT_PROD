@@ -104,7 +104,26 @@ if(!Yii::app()->user->isGuest){
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4" style="background-color: black; color:white;width:30%;margin-left:15px;">
-            <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$model->foto1 ?>" alt="Generic placeholder image" width="140" height="140" class="img-circle">
+            <?php 
+				if($model->foto1){
+				?>
+				<div class="profile_img">
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$model->foto1 ?>" alt="Generic placeholder image" width="140" height="140" class="img-circle">
+					<input type="button" value="Cambiar foto"/>
+				</div>
+				<?php
+				}else{
+				?>
+				<div class="profile_img">
+					<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/profile_defect_picture.png"; ?>" alt="Generic placeholder image" width="140" height="140" class="img-circle profile_img">
+					<input type="button" value="Cambiar foto"/>
+				</div>	
+				<?php
+				}
+			?>
+			
+			
+			
 			<h2><?php echo $nombre." ".$apellido; ?></span></h2>
             <h3>calcular edad</h3>
             <h3>Practico 2 deportes</h3>
@@ -118,12 +137,12 @@ if(!Yii::app()->user->isGuest){
     <nav class="navbar navbar-inverse" role="navigation">
        <div class="navbar-header">
 		    <ul class="nav navbar-nav">
-             <li id="btn_info" style="cursor: pointer;"><a onclick="info();">Informaci&oacute;n</a></li>		
+			 <li id="btn_galeria" style="cursor: pointer;"><a onclick="galeria();" >Imagenes</a></li>			
           </ul>
        </div>
        <div>
           <ul class="nav navbar-nav">
-             <li id="btn_galeria" style="cursor: pointer;"><a onclick="galeria();" >Imagenes</a></li>
+             <li id="btn_info" style="cursor: pointer;"><a onclick="info();">Informaci&oacute;n</a></li>
              <li><a href="#">Companeros</a></li>		
           </ul>
        </div>

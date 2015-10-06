@@ -113,14 +113,21 @@ body{
     border-width: 8px;
 }
 
+.profile_img:hover{
+
+}
+
 #seccion_imagenes{
-    margin-top:80px;
+    margin-top:1px;
+	min-height:800px;
+	overflow:hidden;
 }
 .imagenes{
     float:left;
-    padding-right:25px;
+    padding-right:15px;
     padding-bottom:10px;
-    padding-top:10px;
+    padding-top:20px;
+	text-align:right;
 }
 .img_p{
     width:40%;
@@ -198,12 +205,12 @@ hr.fancy-line:after {
 }
 #respuesta_ajax{
     padding-top:2%;
-    padding-left:12.5%;
-    padding-right:12.5%;
+    padding-left:2%;
+    padding-right:2%;
     background-color: white;
     float: left;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 1px;
+    margin-bottom: 10px;
 }
 #loadingImage{
     display: block;
@@ -267,18 +274,11 @@ resize:none;
 
 
 .osvaldito{
-  position: relative;
+	position: relative;
 	width:auto;
 	width: 320px;
-  height: 320px;
+	height: 320px;
 	float:left;
-}
-
-.opcion{
-}
-.opcion_a{
-    
-    
 }
 
 #menu_opciones{
@@ -348,6 +348,19 @@ resize:none;
 
 /***** SHOW IMAGE ****/ 
 
+div.profile_img:hover{
+	opacity:0.5;
+	
+}
+div.profile_img input{
+    position:absolute;
+    display:none;
+}
+div.profile_img:hover input{
+	display:block;
+}
+
+
 div.show-image {
     position: relative;
     float:left;
@@ -373,11 +386,18 @@ div.show-image a {
 }
 
 div.show-image a.ver {
-    top:20%;
-    left:30%;
+    top:82%;
+    left:62%;
   
 }
 div.show-image button.delete {
-    top:80%;
-    left:30%;
+    top:82%;
+    left:80%;
+}
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
 }

@@ -45,12 +45,11 @@
            
                   <div id="im<?php echo $i; ?>" class="osvaldito show-image">
                               <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" class="img-rounded img<?php echo $i; ?>" />
-                              <a href="#myDivId<?php echo $i;?>" class="btn btn-lg btn-default ver" id="fancyBoxLink<?php echo $i;?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"> Ver </span></a>
-                              <button class="btn btn-lg btn-default delete" onclick="deleteImagen(<?php echo $posArray[$i];?>);"><span class="glyphicon glyphicon-trash" aria-hidden="true"> Borrar</span></button>
+                              <a href="#myDivId<?php echo $i;?>" class="btn btn-lg btn-default ver" id="fancyBoxLink<?php echo $i;?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                              <button class="btn btn-lg btn-default delete" onclick="deleteImagen(<?php echo $posArray[$i];?>);"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
 
                               <div style="display:none">
                                           <div id="myDivId<?php echo $i;?>">
-                                          <!--<div id="desc1"><span>Este soy yo jugando</span></div>-->
                                           <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" width="500px" heigh="500px" />
                                           </div>
                               </div>

@@ -3532,3 +3532,829 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
 ---
+2015/10/04 01:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/20150925_172528.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/2015092...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/uploads/20150925_172528.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/10/04 01:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/20150925_172524.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/2015092...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/uploads/20150925_172524.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/10/04 01:19:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/20150925_172528.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/2015092...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/uploads/20150925_172528.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/10/04 01:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/20150925_172528.jpg".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/2015092...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/uploads/20150925_172528.jpg
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+---
+2015/10/04 01:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:21:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:21:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 01:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:32:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 01:43:08 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 01:43:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 01:43:13 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 01:43:14 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 01:43:20 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:17:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:17:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:18:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:18:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:19:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:19:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:24:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:25:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:25:04 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:25:11 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:25:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:25:13 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:25:21 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:25:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:25:24 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:25:30 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:33:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:34:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:36:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:36:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:39:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:39:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 02:44:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 02:54:47 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:54:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:54:51 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:54:52 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 02:55:20 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 03:12:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 03:12:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 03:13:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 03:13:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 03:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 03:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 03:20:59 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 03:21:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 03:26:27 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 03:31:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 03:31:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 04:21:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 04:21:49 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 04:21:54 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 05:17:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:142)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/saveImagen
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (142)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 05:17:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 05:17:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 05:17:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 05:17:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 05:17:50 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (43)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 05:17:51 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 05:17:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/10/04 06:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 06:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/04 06:49:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(270): CController->missingAction('jquery.min.map')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): CController->run('jquery.min.map')
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('perfilSocial/jq...')
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/jquery.min.map
+---
+2015/10/04 06:49:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/js/jquery.min.map
+---
+2015/10/05 00:36:27 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (196)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
