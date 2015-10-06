@@ -1,0 +1,124 @@
+
+
+@media only screen and (max-width: 500px) {
+  
+  .posts_case{
+    width: 95%;
+    max-height: 1200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    overflow: auto;
+  }
+  .post_image{
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+    float: left;
+    width: 20%;
+    padding:2%;
+  }
+  .post_text{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    float: left;
+    width: 80%;
+    padding:2%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .posts_case{
+    width: 95%;
+    max-height: 1200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    overflow: auto;
+  }
+  .post_image{
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+    float: left;
+    width: 20%;
+    padding:2%;
+  }
+  .post_text{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    float: left;
+    width: 80%;
+    padding:2%;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .posts_case{
+    width: 60%;
+    max-height: 1200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    overflow: auto;
+    
+    
+    
+  }
+  .post_image{
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+    float: left;
+    width: 20%;
+    padding:2%;
+  }
+  .post_text{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    float: left;
+    width: 80%;
+    padding:2%;
+  }
+
+}
+
+@media only screen and (max-width: 1400px) {
+  
+  .posts_case{
+    width: 60%;
+    max-height: 1200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    overflow: auto;
+    
+    
+    
+  }
+  .post_image{
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+    float: left;
+    width: 20%;
+    padding:2%;
+  }
+  .post_text{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    float: left;
+    width: 80%;
+    padding:2%;
+  }
+
+  
+}
