@@ -33,7 +33,7 @@ class PagoController extends Controller
             $Actividad = Pago:: model()->findAll($criteria);
 
             if($Actividad != null){
-                echo "error";
+                echo "duplicado";
             }
             else{
                 if($pa->save()){
