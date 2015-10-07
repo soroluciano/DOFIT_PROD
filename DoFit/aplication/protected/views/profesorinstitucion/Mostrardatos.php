@@ -24,10 +24,10 @@
 				</thead>
 				<tbody>
 				<tr>
-					<td id="telfijo"><?php echo $fichausuario->telfijo;?></td>
+					<td id="telfijo"><?php echo substr($fichausuario->telfijo,0,4)."-".substr($fichausuario->telfijo,0,4);?></td>
 					<td id="celular"><?php echo $fichausuario->celular;?></td>
 					<td id="conemer"><?php echo $fichausuario->conemer;?></td>
-					<td id="telemer"><?php echo $fichausuario->telemer;?></td>
+					<td id="telemer"><?php echo substr($fichausuario->telemer,0,4)."-".substr($fichausuario->telemer,-4);?></td>
 				</tr>
 				</tbody>
 			</table>

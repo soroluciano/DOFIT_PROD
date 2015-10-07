@@ -59,18 +59,31 @@ $this->pageTitle=Yii::app()->name;
     <div class='row'>
         <?php
 
-        if($actividad_alumno != null){
+        if($actividades_alumno != null) {
             echo "<table class='table table-hover'>
 	            <thead>
-		          <tr><th>Deporte</th><th>Día</th><th>Hora</th><th>Valor actividad</th><th>Eliminar actividad</th></tr>
+		          <tr><th>Deporte</th><th>Día</th><th>Hora</th><th>Valor actividad</th><th>Desafectar actividad</th></tr>
 		        </thead>
 		        <tbody>";
-            foreach($actividad_alumno as $act_alum){
-                $actividad = Actividad::model()->findByAttributes(array('id_actividad'=>$act_alum->id_actividad,'id_institucion'=>$ins->id_institucion));
-                $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$actividad->id_deporte));
-                echo "<td id='depo'>$deporte->deporte</td>";
+            foreach ($actividades_alumno as $act_alum) {
+                echo "<tr>";
+                $act = Actividad::model()->findByAttributes(array('id_institucion' => $ins->id_institucion, 'id_actividad' => $act_alum->id_actividad));
+                if ($act != null) {
+                    $deporte = Deporte::model()->findByAttributes(array('id_deporte' => $act->id_deporte));
+                    echo "<td id='depo'>$deporte->deporte</td>";
+                    $act_hor = ActividadHorario::model()->findByAttributes(array('id_actividad' => $act->id_actividad));
+                    $dias = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
+                    $id_dia = $act_hor->id_dia;
+                    echo "<td id='dia'>$dias[$id_dia]</td>";
+                    ?>
+                    <td id='hora'><?php echo $act_hor->hora.':'.($act_hor->minutos == '0' ? '0'.$act_hor->minutos : $act_hor->minutos);?></td>
+                    <td id='valor'><?php echo  $act->valor_actividad;?></td>
+                    <td id='elim'><a href='../desafectaractividad?id_usuario=<?php echo $act_alum->id_usuario;?>'>Desafectar actividad</a></td>
+                    <?php
+                }
+                echo "</tr>";
             }
-            echo  "</tbody>
+            echo "</tbody>
 	           </table>";
         }
         else

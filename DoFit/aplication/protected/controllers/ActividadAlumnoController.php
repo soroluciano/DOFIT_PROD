@@ -8,7 +8,7 @@ class ActividadAlumnoController extends Controller
      */
     public function actionAceptar($id)
     {
-        $aa = ActividadAlumno::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
+        $aa = ActividadAlumno::model()->find('id_usuario=:id_usuario', array(':id_usuario' => $id));
         $aa->id_estado = 1;
         $aa->update();
         $this->redirect('../../institucion/home');
@@ -16,7 +16,7 @@ class ActividadAlumnoController extends Controller
 
     public function actionCancelar($id)
     {
-        $aa = ActividadAlumno::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
+        $aa = ActividadAlumno::model()->find('id_usuario=:id_usuario', array(':id_usuario' => $id));
         $aa->delete();
         $this->redirect('../../institucion/home');
     }
@@ -24,9 +24,10 @@ class ActividadAlumnoController extends Controller
     public function actionVeractividades($id)
     {
         $id_usuario = $id;
-        $actividad_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario'=>$id_usuario));
-        if($actividad_alumno != null){
-            $this->render('Veractividades',array('actividad_alumno'=>$actividad_alumno));
+        $id_institucion = Yii::app()->user->id;
+        $actividades_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario' => $id_usuario));
+        if ($actividades_alumno != null) {
+            $this->render('Veractividades', array('actividades_alumno' => $actividades_alumno));
         }
     }
-}	
+}
