@@ -47,8 +47,10 @@ class PagoController extends Controller
 
 
         }
+        else{
+            $this->render('CrearPago', array('ficha_usuario' => $fu, 'actividad' => $ac, 'pago' => $pa));
+        }
 
-        $this->render('CrearPago', array('ficha_usuario' => $fu, 'actividad' => $ac, 'pago' => $pa));
 
     }
 
@@ -63,8 +65,9 @@ class PagoController extends Controller
 
         foreach ($actividades as $valor => $act) {
 
-            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($act), true);
+            echo CHtml::tag('option', array('value' => $valor), 'Actividad número: ' . CHtml::encode($act), true);
         }
+
     }
 }
 

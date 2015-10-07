@@ -174,10 +174,9 @@ if(!Yii::app()->user->isGuest){
                                 dataType: "html",
                                 cache: false,
                                 success: function (response) {
-                                    if (response == "ok") {
+                                    if (response == 'ok') {
                                         $('#Ok').modal('show');
                                     }
-
 
                                     else {
                                         $('#Error').modal('show');
