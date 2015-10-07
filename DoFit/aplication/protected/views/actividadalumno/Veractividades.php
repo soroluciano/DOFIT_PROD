@@ -69,7 +69,7 @@ $this->pageTitle=Yii::app()->name;
                 echo "<tr>";
                 $act = Actividad::model()->findByAttributes(array('id_institucion' => $ins->id_institucion, 'id_actividad' => $act_alum->id_actividad));
                 if ($act != null) {
-                    $deporte = Deporte::model()->findByAttributes(array('id_deporte' => $act->id_deporte));
+                    $deporte = Deporte::model()->findByAttributes(array('id_deporte' =>$act->id_deporte));
                     echo "<td id='depo'>$deporte->deporte</td>";
                     $act_hor = ActividadHorario::model()->findByAttributes(array('id_actividad' => $act->id_actividad));
                     $dias = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
