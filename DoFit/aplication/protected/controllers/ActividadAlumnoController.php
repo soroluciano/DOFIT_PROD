@@ -41,7 +41,7 @@ class ActividadAlumnoController extends Controller
         if($act_alum != null ){
             $pago->delete();
             $act_alum->delete();
-            $this->render('../../actividadalumno/Veractividades/'.$idusuario);
+            $this->render('../Veractividades/'.$idusuario);
         }
     }
 }
