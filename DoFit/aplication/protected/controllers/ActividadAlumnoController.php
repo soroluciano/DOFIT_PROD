@@ -30,4 +30,18 @@ class ActividadAlumnoController extends Controller
             $this->render('Veractividades', array('actividades_alumno' => $actividades_alumno));
         }
     }
+
+    public function actionDesafectarActividad()
+    {
+
+        $idactividad = $_POST['id_actividad'];
+        $idusuario = $_POST['id_usuario'];
+        $pago = Pago::model()->findByAttributes(array('id_actividad'=>$idactividad, 'id_usuario'=>$idusuario));
+        $act_alum = ActividadAlumno::model()->findByAttributes(array('id_actividad'=>$idactividad, 'id_usuario'=>$idusuario));
+        if($act_alum != null ){
+            $pago->delete();
+            $act_alum->delete();
+            $this->render('../Veractividades/'.$idusuario);
+        }
+    }
 }
