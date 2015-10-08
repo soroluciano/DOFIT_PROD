@@ -39,5 +39,37 @@ class MuroController extends Controller
                 'pages' => $pages,
             ));*/
     }
+		
+		public function actionPrueba()
+    {
+		/*		$user = Yii::app()->db->createCommand()
+				->select('id, username, profile')
+				->from('tbl_user u')
+				->join('tbl_profile p', 'u.id=p.user_id')
+				->where('id=:id', array(':id'=>$id))
+				->queryRow();
+		*/
+			/* index de todos  los posts ordenados que un usuario puede ver al pertenecer a una actividad*/
+    /*
+		 *actividad
+			respuesta
+			usuario
+			perfil_social
+			perfil_muro_profesor
+
+      */	
+				
+				
+				$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+        $query = PerfilMuroProfesor:model()->find    
+						
+						
+						
+						
+        $this->render('prueba',array('posts'=>$Us));
+        
+				
+				
+		}
 }
 
