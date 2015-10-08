@@ -78,8 +78,30 @@ $this->pageTitle=Yii::app()->name;
                     ?>
                     <td id='hora'><?php echo $act_hor->hora.':'.($act_hor->minutos == '0' ? '0'.$act_hor->minutos : $act_hor->minutos);?></td>
                     <td id='valor'><?php echo  $act->valor_actividad;?></td>
-                    <td id='elim'><a href='../desafectaractividad?id_usuario=<?php echo $act_alum->id_usuario;?>'>Desafectar actividad</a></td>
+                    <td id='elim'><a href="" data-toggle="modal" data-target="#myModal">Desafectar actividad</a></td>
                     <?php
+                    echo "
+                     <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+						<div class='modal-dialog' role='document'>
+						 <div class='modal-content'>
+                    <div class='modal-header'>
+                      <button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
+                      <h4 class='modal-title' id='myModalLabel'>Inscripción</h4>
+                  </div>
+                  <div class='modal-body'>
+                   ¿Estas seguro que desea desafectar al alumno de la actividad?
+                  </div>
+                 <div class='modal-footer'>
+                  <form action='../DesafectarActividad' method='post'>
+                  <input type='submit'class='btn btn-primary' value='Si'></input>
+                  <input type='hidden' value='$act->id_actividad' name='id_actividad'></input>
+                  <input type='hidden' value='$act_alum->id_usuario' name='id_usuario'></input>
+                  <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+         </div>";
                 }
                 echo "</tr>";
             }
