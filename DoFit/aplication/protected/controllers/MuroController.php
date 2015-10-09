@@ -15,14 +15,11 @@ class MuroController extends Controller
     public function actionIndex()
     {
       	$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-        
-        
-        
-        
+		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
         //$dataProvider = new CArrayDataProvider($arrayData);
         
         
-        $this->render('index',array('posts'=>$Us));
+        $this->render('index',array('usuario'=>$Us,'perfilSocial'=>$perfilSocial));
         
         /*
             $criteria = new CDbCriteria;
