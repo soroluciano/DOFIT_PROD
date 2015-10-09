@@ -56,7 +56,15 @@ class MuroController extends Controller
 			usuario
 			perfil_social
 			perfil_muro_profesor
-
+			
+			EJEMPLO
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            $criteria->params = array(':localidad' => $_POST['localidad'], 'deporte' => $_POST['deporte']);
+            $gimnasio = FichaInstitucion:: model()->findAll($criteria);
+			EJEMPLO
+			
+			
       */	
 				
 				
