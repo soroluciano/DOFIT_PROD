@@ -65,13 +65,13 @@ class MuroController extends Controller
       */	
 				
 				
-				$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-        $query = PerfilMuroProfesor:model()->find    
+				//$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+        //$query = PerfilMuroProfesor:model()->find    
 						
 						
 						
 						
-        $this->render('prueba',array('posts'=>$Us));
+        //$this->render('prueba',array('posts'=>$Us));
         
 				
 				
