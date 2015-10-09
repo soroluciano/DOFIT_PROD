@@ -1,4 +1,4 @@
-<?php
+    <?php
 /* @var $this UsuarioController */
 /* @var $model Usuario */
 /* @var $form CActiveForm */
@@ -129,7 +129,7 @@ if(!Yii::app()->user->isGuest){
                     </div>
                 </div>
             </div>
-            <!-- Modal OK -->
+            <!-- Modal Error -->
             <div class='modal fade' id='Error' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>
                     <div class='modal-content'>
@@ -139,6 +139,23 @@ if(!Yii::app()->user->isGuest){
                         </div>
                         <div class='modal-body'>
                             No se ha generado el pago debido a un error.
+                        </div>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Duplicado -->
+            <div class='modal fade' id='Duplicado' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                <div class='modal-dialog' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                            <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
+                        </div>
+                        <div class='modal-body'>
+                            Pago duplicado. Verifique.
                         </div>
                         <div class='modal-footer'>
                             <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
@@ -174,13 +191,19 @@ if(!Yii::app()->user->isGuest){
                                 dataType: "html",
                                 cache: false,
                                 success: function (response) {
-                                    if (response == "ok") {
+                                    if (response == 'ok') {
                                         $('#Ok').modal('show');
                                     }
 
-
                                     else {
-                                        $('#Error').modal('show');
+                                        if(response == 'error'){
+                                            $('#Error').modal('show');
+                                        }
+                                        else
+                                        {
+                                            $('#Duplicado').modal('show');
+                                        }
+
                                     }
                                 }
                             })

@@ -86,19 +86,19 @@ $this->pageTitle=Yii::app()->name;
             foreach($actividades as $acti){
                 $actividad_alumno = ActividadAlumno::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$acti->id_actividad));
                 if($actividad_alumno != null){
-					foreach ($actividad_alumno as $act_alum){
+                    foreach ($actividad_alumno as $act_alum){
                         $id_usuario = $act_alum->id_usuario;
-						$contador_veces = 0; // cuanta veces aparece el id_usuario en el array
-						array_push($id_usuarios_array, $id_usuario);
+                        $contador_veces = 0; // cuanta veces aparece el id_usuario en el array
+                        array_push($id_usuarios_array, $id_usuario);
                         $ficha_usuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id_usuario));
-                         
-						 for($cont = 0; $cont< count($id_usuarios_array); $cont++){
-                               if($id_usuarios_array[$cont] == $id_usuario){
-								   $contador_veces ++;
-							   }
-						 }
-                        if($contador_veces == 1){						 
-							?>
+
+                        for($cont = 0; $cont< count($id_usuarios_array); $cont++){
+                            if($id_usuarios_array[$cont] == $id_usuario){
+                                $contador_veces ++;
+                            }
+                        }
+                        if($contador_veces == 1){
+                            ?>
                             <tbody>
                             <tr>
                                 <td id="nombre"><?php echo $ficha_usuario->nombre ?></td>
@@ -130,7 +130,7 @@ $this->pageTitle=Yii::app()->name;
                             <?php
 
                         }
-                       
+
                     }
                 }
                 else
