@@ -148,3 +148,9 @@ if($Us->id_perfil == 2){
 
   <a href="<?php echo Yii::app()->request->baseUrl; ?>/chat/index" class="btn btn-primary">Chatea con tus compañeros!</a>
 
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+    </div>
+</footer>
+
