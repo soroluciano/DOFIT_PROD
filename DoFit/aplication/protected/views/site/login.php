@@ -35,11 +35,15 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
-                    <div class="form-group" id="div-email">
+                    <div class="form-group has-success has-feedback" id="div-email">
                         <?php echo $form->textField($model,'username',array('class'=>"form-control",'placeholder'=>"Email",'id'=>"email")); ?>
+                        <span id="sobre" class="glyphicon glyphicon-envelope form-control-feedback" aria-hidden="true"></span>
+                       <!-- <span id="inputSuccess2Status" class="sr-only">(success)</span> -->
 					</div>
-                    <div class="form-group" id="div-password">
+                    <div class="form-group has-success has-feedback" id="div-password">
                         <?php echo $form->passwordField($model,'password',array('class'=>"form-control",'placeholder'=>"Password",'id'=>"password")); ?>
+                        <span id="lapicera" class="glyphicon glyphicon-pencil form-control-feedback" aria-hidden="true"></span>
+                       <!-- <span id="inputSuccess2Status" class="sr-only">(success)</span> -->
                     </div>
                     <?php echo CHtml::Button('Ingresar!',array("class"=>"btn btn-primary",'onclick'=>'login();')); ?>
                     <?php /*
@@ -208,11 +212,13 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
         if (email == "") {
             $('#div-email').removeClass('has-success has-feedback').addClass('has-error has-feedback');
             $('#icono').remove();
+            $('#sobre').remove();
             $('#div-email').append("<span class='glyphicon glyphicon-remove form-control-feedback' id='icono' aria-hidden='true'></span><span id='inputError2Status' class='sr-only'>(error)</span>");
             $('#erruser').html("<div class='arrow-up' id='error-msj'></div><div class='tooltip-inner-login' id='error-msj-2'>Por favor ingrese su e-mail</div>");
         }
         else {
             $('#div-email').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+            $('#sobre').remove();
             $('#icono').remove();
             $('#div-email').append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true' id='icono'></span><span id='inputSuccess2Status' class='sr-only'>(success)</span>");
             $('#error-msj').remove();
@@ -225,6 +231,7 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
             if (password == "") {
                 $('#div-password').removeClass('has-success has-feedback').addClass('has-error has-feedback');
                 $('#icono-2').remove();
+                $('#lapicera').remove();
                 $('#div-password').append("<span class='glyphicon glyphicon-remove form-control-feedback' id='icono-2' aria-hidden='true'></span><span id='inputError2Status' class='sr-only'>(error)</span>");
                 //$('#div-email').remove("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span><span id='inputSuccess2Status' class='sr-only'>(success)</span>");
                 $('#errpass').html("<div class='arrow-up' id='error-msj-4'></div><div class='tooltip-inner-login' id='error-msj-3'>Por favor ingrese su contraseña</div>");
@@ -232,6 +239,7 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
             }
             else {
                 $('#div-password').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                $('#lapicera').remove();
                 $('#icono-2').remove();
                 $('#div-password').append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true' id='icono-2'></span><span id='inputSuccess2Status' class='sr-only'>(success)</span>");
                 $('#error-msj-3').remove();
