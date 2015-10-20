@@ -66,7 +66,7 @@ class MuroController extends Controller
 				
 				
 				//$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-        //$query = PerfilMuroProfesor:model()->find    
+        //$query = PerfilMuroProfesor:model()->find     
 						
 						
 						
@@ -76,5 +76,10 @@ class MuroController extends Controller
 				
 				
 		}
+		
+		public function actionPruebaTime(){
+			   $this->render('timePrueba');
+		}
+		
 }
 
