@@ -9,13 +9,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                   <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                    <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active"><a>Hola!</a></li>
-							<li class="dropdown">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Home</a></li>
@@ -47,23 +47,66 @@
 </div>
 <div>
 
-<div class="form">
- <div class="container">	
-	<!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
-			<div class="row">
-				<div class="col-md-6">
-					<h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
-	                <br>
-					<div> Ingrese el mail de cual desea recuperar la contraseña</div>
-					<br>
-                   <div class="form-group">
-                       <?php echo CHtml::beginForm('Recuperarpassword2','post'); ?>
-					  <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-					  <br/>
-					  <?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-primary')); ?>                     
-					 <?php echo CHtml::endForm(); ?> 
-				   </div>
-				</div> 
-		</div>		
-</div>				
+    <div class="form">
+        <div class="container">
+            <!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
+                    <br>
+                    <div> Ingrese el mail de cual desea recuperar la contraseña</div>
+                    <br>
+                    <?php){
+                    ?>
+                    <div class="form-group">
+                        <?php echo CHtml::beginForm('Recuperarpassword2','post'); ?>
+                        <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
+                        <br/>
+                        <?php echo CHtml::Button('Enviar',array('type'=>'submit','class'=>'btn btn-primary','name'=>'Enviar','data-target'=>'#Usuario', 'data-toggle'=>'modal')); ?>
+                        <?php echo CHtml::endForm(); ?>
+
+                        <?php
+                        if (isset($_POST['Enviar'])){
+                            if($encontro == 0) {
+                                echo "<div class='modal fade' id='Usuario' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+								    <div class='modal-dialog' role='document'>
+										<div class='modal-content'>
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
+												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+											</div>
+											<div class='modal-body'>
+											El usuario ingresado no est&aacute; registrado.
+											</div>
+										<div class='modal-footer'>
+											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+										</div>
+										</div>
+									</div>
+								</div>";
+
+                            }
+                            if($encontro == 1) {
+                                echo "<div class='modal fade' id='Usuario' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+								    <div class='modal-dialog' role='document'>
+										<div class='modal-content'>
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+											</div>
+											<div class='modal-body'>
+											Se envió un mail a su cuenta para recueperar su contraseña.
+											</div>
+										<div class='modal-footer'>
+											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+										</div>
+										</div>
+									</div>
+								</div>";
+                            }
+                        }?>
+                    </div>
+                </div>
+            </div>
+        </div>
 			

@@ -248,28 +248,18 @@ class UsuarioController extends Controller
 	   $send = new SendEmailService;
 	   $usuario->attributes = $_POST['Usuario'];
 	   $email = $_POST['Usuario']['email'];
-	   $encontro = 0; 		 
+	   $encontro = 0; 	   
 	  if(isset($email)){ 
-	     $usuarios = Usuario::model()->findAll();
+		 $usuarios = Usuario::model()->findAll();
 	     foreach($usuarios as $user){
 	           if($user->email == $email){	 
 		           $encontro =1;
-				   $send->Reestablecerpassword($email);
-                   ?>
-                    <script>
-                     alert("Se envio un mail a su cuenta para reestablecer la contraseña");
-                    </script>
-                  <?php					
-		           $this->render("Recuperarpassword",array('usuario'=>$usuario));
+				   $send->Reestablecerpassword($email);				
+		           $this->render("Recuperarpassword",array('usuario'=>$usuario,'encontro'=>$encontro));
 	           }
 	      }
 	  if($encontro == 0){
-	   ?>
-	    <script>
-		 alert("El usuario no esta registrado");
-		 </script>	
-	<?php
-        $this->render("Recuperarpassword",array('usuario'=>$usuario));
+		     $this->render("Recuperarpassword",array('usuario'=>$usuario,'encontro'=>$encontro));
 	   } 
 	  }
 	}// fin del else	 
