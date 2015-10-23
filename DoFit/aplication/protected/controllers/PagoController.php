@@ -63,10 +63,13 @@ class PagoController extends Controller
 
         echo CHtml::tag('option', array('value' => ''), 'Seleccione una actividad', true);
 
+        //$deporte = Deporte::model()->findByPk('id_deporte= :id_deporte', array(':id_deporte' => 1));
+        //$pepe = $deporte->deporte;
         foreach ($actividades as $valor => $act) {
 
-            echo CHtml::tag('option', array('value' => $valor), 'Actividad número: ' . CHtml::encode($act), true);
+            echo CHtml::tag('option', array('value' => $valor), 'Actividad número: '.CHtml::encode($act), true);
         }
+
 
     }
 }

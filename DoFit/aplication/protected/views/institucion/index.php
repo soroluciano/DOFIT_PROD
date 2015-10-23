@@ -81,3 +81,27 @@
     </div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>
+            &copy; 2015 DoFit.
+            &middot;
+            <a href="#">Privacidad</a>
+            &middot;
+            <a href="#">Terminos</a>
+        </p>
+    </div>
+</footer>
