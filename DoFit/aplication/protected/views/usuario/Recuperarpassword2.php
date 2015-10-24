@@ -65,27 +65,27 @@
                 </div>
             </div>
         </div>
+        <?php
+        echo "<div class='modal fade'  id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+		  <div class='modal-dialog' role='document'>
+			 <div class='modal-content'>
+			   <div class='modal-header'>
+				 <button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
+					<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+				</div>
+				<div class='modal-body'>
+				  Se actualizo correctamente la contraseña de su cuenta.
+				</div>
+			    <div class='modal-footer'>
+				<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+				</div>
+			 </div>
+		  </div>
+		</div>
+	  </div>";
+        ?>
     </div>
 </div>
-<?php
-echo "<div class='modal fade'  id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
-								    <div class='modal-dialog' role='document'>
-										<div class='modal-content'>
-											<div class='modal-header'>
-												<button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
-												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
-											</div>
-											<div class='modal-body'>
-											Se actualizo correctamente la contraseña de su cuenta.
-											</div>
-										<div class='modal-footer'>
-											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
-										</div>
-										</div>
-									</div>
-								</div>
-								</div>";
-?>
 <script type="text/javascript">
     $("#recuperarpass").on("click",function(){
         var pass = $('#pass').val();

@@ -68,8 +68,6 @@
                         <input type="button" value="Enviar" class="btn btn-primary" id="enviardatos" name="Enviar"></input>
                     </form>
                     <?php
-
-
                     echo "<div class='modal fade'  id='usuarioerroneo' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 								    <div class='modal-dialog' role='document'>
 										<div class='modal-content'>
@@ -111,28 +109,29 @@
             </div>
         </div>
     </div>
+</div>
 
-    <script type="text/javascript">
-        $("#enviardatos").on("click",function(){
-            var email = $('#email').val();
-            var data = {'email':email};
-            $.ajax({
-                url :  baseurl + '/usuario/Recuperarpassword',
-                type: "POST",
-                dataType : "html",
-                data : data,
-                cache: false,
-                success: function (response) {
-                    if(response == "error"){
-                        $('#usuarioerroneo').modal('show');
-                    }
-                    if(response == "exitoso") {
-                        $('#usuarioexitoso').modal('show');
-                    }
-                } ,
-                error: function (e) {
-                    console.log(e);
+<script type="text/javascript">
+    $("#enviardatos").on("click",function(){
+        var email = $('#email').val();
+        var data = {'email':email};
+        $.ajax({
+            url :  baseurl + '/usuario/Recuperarpassword',
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response) {
+                if(response == "error"){
+                    $('#usuarioerroneo').modal('show');
                 }
-            });
-        })
-    </script>
+                if(response == "exitoso") {
+                    $('#usuarioexitoso').modal('show');
+                }
+            } ,
+            error: function (e) {
+                console.log(e);
+            }
+        });
+    })
+</script>
