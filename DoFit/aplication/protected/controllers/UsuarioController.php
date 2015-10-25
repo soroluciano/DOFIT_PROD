@@ -108,13 +108,13 @@ class UsuarioController extends Controller
 					$profesor->id_usuario = $usuario->id_usuario;
 					if($profesor->save()){
 						$send->Send($model->email);
-						$this->redirect(array('view','id'=>$model->id_usuario));
+						echo "actusuok";
+						//$this->redirect(array('view','id'=>$model->id_usuario));
 					}
 				}
 			}
 
 		}
-
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -238,23 +238,28 @@ class UsuarioController extends Controller
 		if(!isset($_POST['email'])){
 			$this->render("Recuperarpassword");
 		}
-		else{
-			$encontro = 0;
-			$usuario = new Usuario;
-			$send = new SendEmailService;
+		if(isset($_POST['email'])){
 			$email = $_POST['email'];
-			$usuarios = Usuario::model()->findAll();
-			foreach($usuarios as $user){
-				if($user->email == $email){
-					$send->Reestablecerpassword($email);
-					$encontro = 1;
-					echo "exitoso";
+			if($email == ''){
+				echo "emailblanco";
+			}
+			else{
+				$encontro = 0;
+				$usuario = new Usuario;
+				$send = new SendEmailService;
+				$usuarios = Usuario::model()->findAll();
+				foreach($usuarios as $user){
+					if($user->email == $email){
+						$send->Reestablecerpassword($email);
+						$encontro = 1;
+						echo "exitoso";
+					}
 				}
-			}
-			if($encontro == 0){
-				echo "error";
-			}
+				if($encontro == 0){
+					echo "error";
+				}
 
+			}
 		}
 	}
 
@@ -267,10 +272,27 @@ class UsuarioController extends Controller
 		if(isset($_POST['pass'])){
 			$email = $_POST['email'];
 			$pass  = $_POST['pass'];
+			$expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
+
 			if(isset($pass)){
-				$passencr = md5($pass);
-				Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
-				echo "ok";
+				if($pass == ''){
+					echo "passblanco";
+				}
+				else{
+					if(strlen($pass) < 6 || strlen($pass) > 15){
+						echo "longerronea";
+					}
+					else{
+						if(!preg_match($expr_regular, $pass)){
+							echo "expregerronea";
+						}
+						else{
+							$passencr = md5($pass);
+							Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
+							echo "ok";
+						}
+					}
+				}
 			}
 		}
 	}// fin de la funcion

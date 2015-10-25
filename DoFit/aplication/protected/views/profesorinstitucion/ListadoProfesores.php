@@ -116,11 +116,11 @@ $this->pageTitle=Yii::app()->name;
                     <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                     <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
                     <td><a id="act" href="" onClick="javascript:Mostraractividad(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
-                    <td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
+                    <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
                 </tr>
                 </tbody>
                 <?php
-                echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                echo "<div class='modal fade' id='borrarprofemodal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>
                   <div class='modal-content'>
                     <div class='modal-header'>
@@ -160,7 +160,7 @@ $this->pageTitle=Yii::app()->name;
         $.ajax({
             url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
             type: "POST",
-            dataType : "json",
+            dataType : "html",
             data : data,
             cache: false
         });

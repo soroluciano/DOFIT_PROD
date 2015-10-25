@@ -1,10 +1,3 @@
-<script type="text/javascript">
-
-    $( window ).load(function() {
-        info();
-    });
-</script>
-
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -20,25 +13,23 @@
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="../getting-started/">Getting started</a>
+                    <a href="../getting-started/"></a>
                 </li>
                 <li>
-                    <a href="../css/">CSS</a>
+                    <a href="../css/"></a>
                 </li>
                 <li>
-                    <a href="../components/">Components</a>
+                    <a href="../components/"></a>
                 </li>
                 <li>
-                    <a href="../javascript/">JavaScript</a>
+                    <a href="../javascript/"></a>
                 </li>
                 <li>
-                    <a href="../customize/">Customize</a>
+                    <a href="../customize/"></a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a></li>
-                <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+                <li><a href="../">Principal</a></li>
             </ul>
         </nav>
     </div>
@@ -57,18 +48,18 @@
             <div class="col-md-6">
                 <h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
                 <br>
-                <div> Ingrese el mail de cual desea recuperar la contraseña</div>
+                <div> Ingrese el mail del cual desea recuperar la contraseña</div>
                 <br>
                 <?php
                 ?>
                 <div class="form-group">
                     <form action="">
-                        <input type="text" name="email" id="email" class="form-control" placeholder="email"></input>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="E-mail"></input>
                         <br/>
                         <input type="button" value="Enviar" class="btn btn-primary" id="enviardatos" name="Enviar"></input>
                     </form>
                     <?php
-                    echo "<div class='modal fade'  id='usuarioerroneo' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                    echo "<div class='modal fade'  id='mensajemailblanco' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 								    <div class='modal-dialog' role='document'>
 										<div class='modal-content'>
 											<div class='modal-header'>
@@ -76,7 +67,7 @@
 												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
 											</div>
 											<div class='modal-body'>
-											El usuario ingresado no est&aacute; registrado.
+											Ingrese una dirección de email.
 											</div>
 										<div class='modal-footer'>
 											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
@@ -85,9 +76,7 @@
 									</div>
 								</div>
 								</div>";
-
-
-                    echo "<div class='modal fade'  id='usuarioexitoso' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                    echo "<div class='modal fade'  id='mensajemailerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 								    <div class='modal-dialog' role='document'>
 										<div class='modal-content'>
 											<div class='modal-header'>
@@ -95,7 +84,24 @@
 												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
 											</div>
 											<div class='modal-body'>
-											Se envió un mail a su cuenta para recueperar su contraseña.
+											No se encontro ninguna cuenta con ese email.
+											</div>
+										<div class='modal-footer'>
+											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+										</div>
+										</div>
+									</div>
+								</div>
+								</div>";
+                    echo "<div class='modal fade'  id='mensajemailexitoso' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+								    <div class='modal-dialog' role='document'>
+										<div class='modal-content'>
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+											</div>
+											<div class='modal-body'>
+											Se envió un correo a su cuenta para recueperar su contraseña.
 											</div>
 										<div class='modal-footer'>
 											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
@@ -103,7 +109,6 @@
 										</div>
 									</div>
 								</div>";
-
                     ?>
                 </div>
             </div>
@@ -122,11 +127,14 @@
             data : data,
             cache: false,
             success: function (response) {
+                if(response == "emailblanco"){
+                    $('#mensajemailblanco').modal('show');
+                }
                 if(response == "error"){
-                    $('#usuarioerroneo').modal('show');
+                    $('#mensajemailerror').modal('show');
                 }
                 if(response == "exitoso") {
-                    $('#usuarioexitoso').modal('show');
+                    $('#mensajemailexitoso').modal('show');
                 }
             } ,
             error: function (e) {

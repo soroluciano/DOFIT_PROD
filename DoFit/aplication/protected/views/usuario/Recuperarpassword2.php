@@ -13,25 +13,23 @@
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="../getting-started/">Getting started</a>
+                    <a href="../getting-started/"></a>
                 </li>
                 <li>
-                    <a href="../css/">CSS</a>
+                    <a href="../css/"></a>
                 </li>
                 <li>
-                    <a href="../components/">Components</a>
+                    <a href="../components/"></a>
                 </li>
                 <li>
-                    <a href="../javascript/">JavaScript</a>
+                    <a href="../javascript/"></a>
                 </li>
                 <li>
-                    <a href="../customize/">Customize</a>
+                    <a href="../customize/"></a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a></li>
-                <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+                <li><a href="../../">Principal</a></li>
             </ul>
         </nav>
     </div>
@@ -55,7 +53,7 @@
                     <br/>
                     <?php $email = $_GET['email'];?>
                     <form action="">
-                        <input type="password" id="pass" name="pass" class="form-control" placeholder="password"></input>
+                        <input type="password" id="pass" name="pass" class="form-control" placeholder="Contraseña"></input>
                         <input type="hidden" id="email" value="<?php echo $email?>"></input>
                         <br>
                         <br>
@@ -66,7 +64,64 @@
             </div>
         </div>
         <?php
-        echo "<div class='modal fade'  id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        echo "<div class='modal fade'  id='mensajepassblanco' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+		  <div class='modal-dialog' role='document'>
+			 <div class='modal-content'>
+			   <div class='modal-header'>
+				 <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+					<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+				</div>
+				<div class='modal-body'>
+				  Ingrese una contraseña.
+				</div>
+			    <div class='modal-footer'>
+				<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+				</div>
+			 </div>
+		  </div>
+		</div>
+	  </div>";
+        ?>
+        <?php
+        echo "<div class='modal fade'  id='mensajelongerronea' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+		  <div class='modal-dialog' role='document'>
+			 <div class='modal-content'>
+			   <div class='modal-header'>
+				 <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+					<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+				</div>
+				<div class='modal-body'>
+				  La contraseña debe tener entre 6 y 15 carácteres.
+				</div>
+			    <div class='modal-footer'>
+				<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+				</div>
+			 </div>
+		  </div>
+		</div>
+	  </div>";
+        ?>
+        <?php
+        echo "<div class='modal fade'  id='mensajeexpregerronea' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+		  <div class='modal-dialog' role='document'>
+			 <div class='modal-content'>
+			   <div class='modal-header'>
+				 <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+					<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+				</div>
+				<div class='modal-body'>
+				 La contraseña debe tener al menos una mayuscula y dos números.
+				</div>
+			    <div class='modal-footer'>
+				<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+				</div>
+			 </div>
+		  </div>
+		</div>
+	  </div>";
+        ?>
+        <?php
+        echo "<div class='modal fade'  id='mensajepassok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 		  <div class='modal-dialog' role='document'>
 			 <div class='modal-content'>
 			   <div class='modal-header'>
@@ -99,7 +154,16 @@
             cache: false,
             success: function (response) {
                 if(response == "ok"){
-                    $('#myModal').modal('show');
+                    $('#mensajepassok').modal('show');
+                }
+                if(response == "passblanco"){
+                    $('#mensajepassblanco').modal('show');
+                }
+                if(response == "longerronea"){
+                    $('#mensajelongerronea').modal('show');
+                }
+                if(response == "expregerronea"){
+                    $('#mensajeexpregerronea').modal('show');
                 }
             } ,
             error: function (e) {

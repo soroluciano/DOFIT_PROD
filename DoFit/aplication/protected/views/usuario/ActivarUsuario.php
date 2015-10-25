@@ -1,33 +1,40 @@
-<?php
-/* @var $this UsuarioController */
-/* @var $model Usuario */
-/* @var $form CActiveForm */
-?>
-
-<div class="navbar-wrapper">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+            <a href="../" class="navbar-brand"></a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/"></a>
+                </li>
+                <li>
+                    <a href="../css/"></a>
+                </li>
+                <li>
+                    <a href="../components/"></a>
+                </li>
+                <li>
+                    <a href="../javascript/"></a>
+                </li>
+                <li>
+                    <a href="../customize/"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href='../../'>Principal</a></li>
+            </ul>
         </nav>
     </div>
-</div>
+</header>
+
 
 <!-- Carousel
 ================================================== -->
@@ -50,6 +57,8 @@
             foreach($usuarios as $usu){
                 if(md5($usu->email) == $_GET['email']){
                     $usuario = $usu;
+                    $ficusuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$usuario->id_usuario));
+
                 }
             }
         }
@@ -63,22 +72,14 @@
                 <div class="table">
                     <div class="tr">
                         <h3 class="sombra">
-                            Bienvenido a <b>Do fit!</b>, <?php echo $usuario->email; ?>.<br />
+                            Bienvenido a <b>Do fit!</b>, <?php echo $ficusuario->nombre."&nbsp".$ficusuario->apellido; ?>.<br />
                             Tu cuenta está activada.<br />
                             Ya puedes iniciar sesión en el sitio.
                         </h3>
                     </div>
                 </div>
             </div>
-            <div class="containright right">
-                <div class="table">
-                    <div class="tr">
-                        <div class="login">
-                            <?php echo CHtml::link('Volver al Login de DoFit!',array('../aplication'));?><br/><br/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <?php
         }else{
