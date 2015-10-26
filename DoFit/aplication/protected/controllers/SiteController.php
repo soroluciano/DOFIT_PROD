@@ -29,7 +29,12 @@ class SiteController extends Controller
     {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-        $this->render('index');
+        if (!isset(Yii::app()->session['id_usuario'])) {
+            $this->redirect('login');
+        } else {
+            $this->render('index');
+        }
+
     }
 
     public function actionIndexAdmin()
@@ -42,6 +47,11 @@ class SiteController extends Controller
         } else {
             $this->render('indexAdmin');
         }
+
+        if (!isset(Yii::app()->session['id_usuario'])) {
+            $this->redirect('index');
+        }
+
     }
 
     /**
@@ -56,6 +66,9 @@ class SiteController extends Controller
 
         if (isset(Yii::app()->session['admin'])) {
             $this->redirect('indexAdmin');
+        }
+        if (isset(Yii::app()->session['id_usuario'])) {
+            $this->redirect('index');
         }
 
         // validate user input and redirect to the previous page if valid
@@ -91,6 +104,10 @@ class SiteController extends Controller
     {
         $model = new LoginFormInstitucion;
 
+        if (isset(Yii::app()->session['id_usuario'])) {
+            $this->redirect('index');
+        }
+
         // collect user input data
         if (isset($_POST['LoginFormInstitucion'])) {
             $model->attributes = $_POST['LoginFormInstitucion'];
@@ -119,6 +136,10 @@ class SiteController extends Controller
     {
 
         $model = new LoginForm();
+
+        if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('index');
+        }
 
         if (isset($_POST['email']) && isset($_POST['password']))// && $_POST['email']<>'' && $_POST['password']<>''
         {
