@@ -48,7 +48,7 @@ class SiteController extends Controller
             $this->render('indexAdmin');
         }
 
-        if (!isset(Yii::app()->session['id_usuario'])) {
+        if (isset(Yii::app()->session['id_usuario'])) {
             $this->redirect('index');
         }
 

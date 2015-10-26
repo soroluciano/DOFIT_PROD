@@ -121,7 +121,8 @@
 				                        </div>
 			                        </div>
 		                        </div>
-		                    </div>";?>
+		                    </div>"
+                        ;?>
                     </div>
                  </div>
                 <?php $this->endWidget(); ?>

@@ -23,10 +23,16 @@ class DeporteController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-        if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
-        }
+        if (!isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('../site/loginadmin');
+            }
 
+
+         }
 		if(isset($_POST['Deporte']))
 		{
 			$model->attributes=$_POST['Deporte'];
@@ -52,7 +58,12 @@ class DeporteController extends Controller
 		$model=$this->loadModel($id);
 
         if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
         }
 
         // Uncomment the following line if AJAX validation is needed
@@ -81,7 +92,12 @@ class DeporteController extends Controller
 	public function actionDelete($id)
 	{
         if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
         }
 
         $this->loadModel($id)->delete();
@@ -97,10 +113,15 @@ class DeporteController extends Controller
 	public function actionIndex()
 	{
         if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
         }
-
         $deporte =Deporte::model()->findAll();
+
         $this->render('index',array(
             'deporte'=>$deporte,
 		));

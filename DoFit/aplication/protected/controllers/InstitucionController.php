@@ -26,9 +26,13 @@ class InstitucionController extends Controller
     public function actionCreate()
     {
         if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
         }
-
         date_default_timezone_set('America/Argentina/Buenos_Aires');
         $model= new Institucion;
         $send = new SendEmailService;
@@ -87,7 +91,12 @@ class InstitucionController extends Controller
     public function actionUpdate($id)
     {
         if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
         }
 
         $model=$this->loadModel($id);
@@ -121,7 +130,12 @@ class InstitucionController extends Controller
     public function actionDelete($id)
     {
         if ( !isset(Yii::app()->session['admin'])){
-            $this->redirect('loginadmin');
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
         }
 
         $this->loadModel($id)->delete();
@@ -136,7 +150,14 @@ class InstitucionController extends Controller
      */
     public function actionIndex()
     {
-        $institucion =Institucion::model()->findAll();
+        if ( !isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
+        }
         $this->render('index',array(
             'institucion'=>$institucion,
         ));
@@ -144,6 +165,14 @@ class InstitucionController extends Controller
 
     public function actionAceptar($id)
     {
+        if ( !isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
+        }
         $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
         $pi->id_estado = 1;
         $pi->update();
@@ -152,6 +181,14 @@ class InstitucionController extends Controller
 
     public function actionCancelar($id)
     {
+        if ( !isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
+        }
         $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
         $pi->delete();
         $this->redirect('../home');
@@ -159,6 +196,14 @@ class InstitucionController extends Controller
 
     public function actionHome()
     {
+        if ( !isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('loginadmin');
+            }
+        }
         $profesor_pen =ProfesorInstitucion::model()->findAll('id_estado = 0 and id_institucion = :id_institucion',array(':id_institucion'=>Yii::app()->user->id));
         $actividades_pen = ActividadAlumno::model()->findAll('id_estado = 0 and id_actividad in (select id_actividad from actividad where id_institucion = :id_institucion)',array(':id_institucion'=>Yii::app()->user->id));
         $this->render('home',array('profesor_pen'=>$profesor_pen,'actividades_pen'=>$actividades_pen));
