@@ -29,9 +29,22 @@ class SiteController extends Controller
     {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-        if (!isset(Yii::app()->session['id_usuario'])) {
-            $this->redirect('login');
-        } else {
+
+
+        if (!isset(Yii::app()->session['id_usuario'])){
+            if (isset(Yii::app()->session['admin'])) {
+                $this->redirect('indexAdmin');
+            }
+            else{
+                if(isset(Yii::app()->session['id_institucion'])){
+                    $this->redirect('../institucion/home');
+                }
+                else{
+                    $this->redirect('login');
+                }
+            }
+        }
+        else{
             $this->render('index');
         }
 
@@ -42,14 +55,21 @@ class SiteController extends Controller
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
         // IF(!isset($_SESSION['admin'])){
-        if (!isset(Yii::app()->session['admin'])) {
-            $this->redirect('loginadmin');
-        } else {
-            $this->render('indexAdmin');
+        if (!isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('index');
+            }
+            else{
+                if(isset(Yii::app()->session['id_institucion'])){
+                    $this->redirect('../institucion/home');
+                }
+                else{
+                    $this->redirect('../site/loginadmin');
+                }
+            }
         }
-
-        if (isset(Yii::app()->session['id_usuario'])) {
-            $this->redirect('index');
+        else{
+            $this->render('indexAdmin');
         }
 
     }
@@ -64,11 +84,18 @@ class SiteController extends Controller
         $session = new CHttpSession;
         $errorCode = "";
 
-        if (isset(Yii::app()->session['admin'])) {
-            $this->redirect('indexAdmin');
+        if (!isset(Yii::app()->session['admin'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                if(isset(Yii::app()->session['id_institucion'])){
+                    $this->redirect('../institucion/home');
+                }
+            }
         }
-        if (isset(Yii::app()->session['id_usuario'])) {
-            $this->redirect('index');
+        else{
+            $this->redirect('../site/indexAdmin');
         }
 
         // validate user input and redirect to the previous page if valid
@@ -104,8 +131,18 @@ class SiteController extends Controller
     {
         $model = new LoginFormInstitucion;
 
-        if (isset(Yii::app()->session['id_usuario'])) {
-            $this->redirect('index');
+        if (!isset(Yii::app()->session['id_institucion'])){
+            if (isset(Yii::app()->session['admin'])) {
+                $this->redirect('../site/indexAdmin');
+            }
+            else{
+                if(isset(Yii::app()->session['id_usuario'])){
+                    $this->redirect('../site/index');
+                }
+            }
+        }
+        else{
+            $this->redirect('../institucion/home');
         }
 
         // collect user input data
@@ -134,13 +171,22 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
-
         $model = new LoginForm();
-
-        if (isset(Yii::app()->session['id_usuario'])) {
-                $this->redirect('index');
+        //
+        if (!isset(Yii::app()->session['id_usuario'])){
+            if (isset(Yii::app()->session['admin'])) {
+                $this->redirect('indexAdmin');
+            }
+            else{
+                if(isset(Yii::app()->session['id_institucion'])){
+                    $this->redirect('../institucion/home');
+                }
+            }
         }
-
+        else{
+            $this->redirect('index');
+        }
+        //
         if (isset($_POST['email']) && isset($_POST['password']))// && $_POST['email']<>'' && $_POST['password']<>''
         {
             $model->username = $_POST['email'];
@@ -152,7 +198,7 @@ class SiteController extends Controller
             if ($model->login() && $usuario->id_estado == 1){
                 // ...log in the user and redirect
                 Yii::app()->session->open();
-                Yii::app()->session['id_usuario'] = Yii::app()->user->id;
+                Yii::app()->session['id_usuario'] = 1;//Yii::app()->user->id;
                 $perfil = PerfilSocial::model()->findByPk(Yii::app()->user->id);
                 if ($perfil == null) {
                     $usu = new UsuarioService();
@@ -180,7 +226,7 @@ class SiteController extends Controller
 
 
         } else {
-            $this->render('/site/login', array('model' => $model));
+            $this->render('login', array('model' => $model));
         }
 
     }

@@ -30,8 +30,6 @@ class DeporteController extends Controller
             else{
                 $this->redirect('../site/loginadmin');
             }
-
-
          }
 		if(isset($_POST['Deporte']))
 		{
