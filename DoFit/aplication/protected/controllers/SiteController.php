@@ -64,7 +64,7 @@ class SiteController extends Controller
                     $this->redirect('../institucion/home');
                 }
                 else{
-                    $this->redirect('../site/loginadmin');
+                    $this->redirect('loginadmin');
                 }
             }
         }
@@ -133,11 +133,11 @@ class SiteController extends Controller
 
         if (!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['admin'])) {
-                $this->redirect('../site/indexAdmin');
+                $this->redirect('indexAdmin');
             }
             else{
                 if(isset(Yii::app()->session['id_usuario'])){
-                    $this->redirect('../site/index');
+                    $this->redirect('index');
                 }
             }
         }
@@ -198,7 +198,7 @@ class SiteController extends Controller
             if ($model->login() && $usuario->id_estado == 1){
                 // ...log in the user and redirect
                 Yii::app()->session->open();
-                Yii::app()->session['id_usuario'] = 1;//Yii::app()->user->id;
+                Yii::app()->session['id_usuario'] = Yii::app()->user->id;
                 $perfil = PerfilSocial::model()->findByPk(Yii::app()->user->id);
                 if ($perfil == null) {
                     $usu = new UsuarioService();

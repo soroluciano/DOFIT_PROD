@@ -158,6 +158,7 @@ class InstitucionController extends Controller
                 $this->redirect('loginadmin');
             }
         }
+        $institucion =Institucion::model()->findAll();
         $this->render('index',array(
             'institucion'=>$institucion,
         ));
