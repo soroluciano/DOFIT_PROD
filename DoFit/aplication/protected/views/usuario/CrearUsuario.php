@@ -1,13 +1,26 @@
+<style type="text/css">
+    body {
+        background: url(../img/18.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+         }
+</style>
+
+
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="myModal" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="container">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../site/login">&times;</a></span></button>
+                <h4 class="modal-title">Registrate, es gratis!</h4>
+            </div>
+                <div class="container">
                 <div class="form">
                     <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
-                    <div class="form-group">
-                        <h2>Registrate, es gratis</h2>
-                    </div>
-                    <div class="col-md-8">
+                    <br>
+                    <div class="col-xs-6 col-sm-3">
                         <div class="form-group">
                             <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
                             <?php echo $form->textField($model,'email',array('class'=>"form-control",'placeholder'=>"Tu email",'id'=>"exampleInputEmail1",'size'=>60,'maxlength'=>60)); ?>
@@ -47,6 +60,8 @@
                             </div>
                              <?php echo $form->error($ficha_usuario,'sexo'); ?>
                         </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
                         <div class="form-group">
                             <?php echo $form->labelEx($ficha_usuario,'fechanac'); ?>
                             <?php echo $form->dateField($ficha_usuario,'fechanac',array('class'=>"form-control",'placeholder'=>"dd/mm/yyyy")); ?>
@@ -73,22 +88,30 @@
                             <?php echo $form->error($ficha_usuario,'direccion',array("class"=>"error_pw")); ?>
                         </div>
                         <div class="form-group">
-                            <?php echo $form->labelEx($ficha_usuario,'piso'); ?>
-                            <?php echo $form->textField($ficha_usuario,'piso',array('class'=>"form-control",'placeholder'=>"¿Vivís en un piso?")); ?>
-                            <?php echo $form->error($ficha_usuario,'piso'); ?>
-                        </div>
-                        <div class="form-group">
                             <?php echo $form->labelEx($ficha_usuario,'depto'); ?>
                             <?php echo $form->textField($ficha_usuario,'depto',array('class'=>"form-control",'placeholder'=>"¿Vivís en un departamento?")); ?>
                             <?php echo $form->error($ficha_usuario,'depto'); ?>
                         </div>
+                        <div class="form-group">
+                            <?php echo $form->labelEx($ficha_usuario,'piso'); ?>
+                            <?php echo $form->textField($ficha_usuario,'piso',array('class'=>"form-control",'placeholder'=>"¿En qué piso?")); ?>
+                            <?php echo $form->error($ficha_usuario,'piso'); ?>
+                        </div>
+                        <div class="form-group">
+                            <br>
+                            <div class="text-center">
+                            <?php echo CHtml::Button($model->isNewRecord ? 'Registrate!': 'Save',array('type'=>'submit','class'=>'btn btn-primary')); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
                         <div class="form-group">
                             <?php echo $form->labelEx($localidad,'Provincia'); ?>
                             <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
                             array('ajax'=>array('type'=>'POST',
                                   'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
                                   'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
-                                  ),'prompt'=>'Seleccione una Provincia','class'=>"form-control"));?>
+                                  ),'prompt'=>'Seleccione tu Provincia','class'=>"form-control"));?>
                             <?php echo $form->error($localidad,'id_provincia'); ?>
                         </div>
                         <div class="form-group">
@@ -98,10 +121,7 @@
                             </div>
                             <?php echo $form->error($localidad,'id_localidad'); ?>
                         </div>
-                        <div class="form-group">
-                            <br>
-                            <?php echo CHtml::Button($model->isNewRecord ? 'Registrate!': 'Save',array('type'=>'submit','class'=>'btn btn-primary')); ?>
-                        </div>
+                    </div>
                     </div>
                     <?php
                         echo "<div class='modal fade'  id='mensajeregistrook' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
