@@ -11,6 +11,18 @@ class PagoController extends Controller
         $this->render('index');
     }
 
+    public function actionVerificarActividad()
+    {
+        $var = "";
+        //list = Yii::app()->db->createCommand('select deporte as deporte,CASE id_dia WHEN 1 THEN "Lunes" WHEN 2 THEN "Martes" WHEN 3 THEN "Miercoles" WHEN 4 THEN "Jueves" WHEN 5 THEN "Viernes" WHEN 6 THEN "Sábado" WHEN 7 THEN "Domingo" END as id_dia,lpad(hora,2,"0") as hora,lpad(minutos,2,"0") as minutos,actividad.id_actividad from deporte,actividad, actividad_horario where actividad.id_actividad = 126 and actividad.id_actividad = actividad_horario.id_actividad and actividad.id_deporte = deporte.id_deporte');
+
+        $actividad = Actividad::model()->findbyPk('id_actividad = 126');
+        //$deporte = Deporte::model()->findByPk('id_deporte= :id_deporte', array(':id_deporte' => $actividad->id_deporte));
+
+        echo $actividad->id_actividad;
+
+    }
+
     public function actionCrearPago()
     {
         $fu = new FichaUsuario();

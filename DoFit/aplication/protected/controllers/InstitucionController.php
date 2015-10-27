@@ -197,12 +197,14 @@ class InstitucionController extends Controller
 
     public function actionHome()
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if ( !isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                if (isset(Yii::app()->session['admin'])){
+                    $this->redirect('../site/indexAdmin');
+                }
             }
         }
         $profesor_pen =ProfesorInstitucion::model()->findAll('id_estado = 0 and id_institucion = :id_institucion',array(':id_institucion'=>Yii::app()->user->id));

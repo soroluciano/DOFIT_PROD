@@ -65,8 +65,15 @@ if(!Yii::app()->user->isGuest){
             <div class="form-group">
                 <?php echo $form->labelEx($actividad,'actividad'); ?>
                 <div>
-                    <?php echo $form->dropDownList($actividad,'id_actividad',array(''=>"Selecciona actividad"),array('class'=>"form-control")); ?>
-                </div>
+                    <?php echo $form->dropDownList($actividad,'id_actividad',
+                                                   array(''=>"Selecciona actividad"),
+                                                   array('class'=>"form-control",'data-tooggle'=>"collapse",'role'=>"button",'href'=>"#collapseExample",'aria-expanded'=>"false",'aria-controls'=>"collapseExample","onchange"=>"a();")); ?>
+                    <div class="collapse" id="collapseExample">
+                        <div class="well">
+                            ...
+                        </div>
+                    </div>
+                 </div>
                 <?php echo $form->error($actividad,'id_actividad'); ?>
             </div>
             <div class="form-group">
@@ -170,6 +177,29 @@ if(!Yii::app()->user->isGuest){
    </div>
 </div>
 
+    <script type="text/javascript">
+
+        function a(){
+            var valor = $('#Actividad_id_actividad').val();
+            alert(valor);
+            if(valor != ""){
+                var data = {'valor':valor};
+                $.ajax({
+                    url: baseurl + '/pago/VerificarActividad',
+                    type: "POST",
+                    data: data,
+                    dataType: "html",
+                    cache: false,
+                    success: function (response) {
+                        alert(response);
+
+                        }
+
+                })
+            }
+        }
+
+ </script>
 <script type="text/javascript">
     function Crear(){
         var id_usuario = $('#FichaUsuario_id_usuario').val();

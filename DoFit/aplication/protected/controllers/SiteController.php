@@ -152,6 +152,8 @@ class SiteController extends Controller
             // validate user input and redirect to the previous page if valid
             if ($model->validate() && $model->login()) {
                 // ...log in the user and redirect
+                Yii::app()->session->open();
+                Yii::app()->session['id_institucion'] = Yii::app()->user->id;
                 $this->redirect(array('/institucion/home'));
             }
         }
