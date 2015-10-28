@@ -67,14 +67,12 @@ if(!Yii::app()->user->isGuest){
                 <div>
                     <?php echo $form->dropDownList($actividad,'id_actividad',
                                                    array(''=>"Selecciona actividad"),
-                                                   array('class'=>"form-control",'data-tooggle'=>"collapse",'role'=>"button",'href'=>"#collapseExample",'aria-expanded'=>"false",'aria-controls'=>"collapseExample","onchange"=>"a();")); ?>
-                    <div class="collapse" id="collapseExample">
-                        <div class="well">
-                            ...
-                        </div>
-                    </div>
-                 </div>
-                <?php echo $form->error($actividad,'id_actividad'); ?>
+                                                   array('class'=>"form-control","onchange"=>"BuscoDetalle();")); ?>
+
+                    <?php echo $form->error($actividad,'id_actividad'); ?>
+                </div>
+            </div>
+            <div class="form-group" id="Detalle">
             </div>
             <div class="form-group">
                 <?php $anio = date("Y"); ?>
@@ -177,22 +175,20 @@ if(!Yii::app()->user->isGuest){
    </div>
 </div>
 
-    <script type="text/javascript">
-
-        function a(){
-            var valor = $('#Actividad_id_actividad').val();
-            alert(valor);
-            if(valor != ""){
-                var data = {'valor':valor};
-                $.ajax({
+<script type="text/javascript">
+    function BuscoDetalle(){
+        $('#Detalle').empty();
+        var valor = $('#Actividad_id_actividad').val();
+        if(valor != ""){
+            var data = {'valor':valor};
+            $.ajax({
                     url: baseurl + '/pago/VerificarActividad',
                     type: "POST",
                     data: data,
                     dataType: "html",
                     cache: false,
                     success: function (response) {
-                        alert(response);
-
+                            $('#Detalle').append("<p>"+response+"</p>");
                         }
 
                 })

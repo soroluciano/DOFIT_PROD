@@ -14,12 +14,27 @@ class PagoController extends Controller
     public function actionVerificarActividad()
     {
         $var = "";
-        //list = Yii::app()->db->createCommand('select deporte as deporte,CASE id_dia WHEN 1 THEN "Lunes" WHEN 2 THEN "Martes" WHEN 3 THEN "Miercoles" WHEN 4 THEN "Jueves" WHEN 5 THEN "Viernes" WHEN 6 THEN "Sábado" WHEN 7 THEN "Domingo" END as id_dia,lpad(hora,2,"0") as hora,lpad(minutos,2,"0") as minutos,actividad.id_actividad from deporte,actividad, actividad_horario where actividad.id_actividad = 126 and actividad.id_actividad = actividad_horario.id_actividad and actividad.id_deporte = deporte.id_deporte');
+        $dia = "";
+        IF(isset($_POST['valor'])){
+            $actividad = Actividad::model()->findByPk($_POST['valor']);
+            $id_deporte = $actividad->id_deporte;
+            $deporte = Deporte::model()->findByPk($id_deporte);
+            $actividad_horario = ActividadHorario::model()->findAll('id_actividad = :id',array(':id'=>126));
+            $var = 'Deporte: '.$deporte->deporte.' ';
+            foreach($actividad_horario as $ah){
+                if($ah->id_dia == 1){$dia = "Lunes";};
+                if($ah->id_dia == 2){$dia = "Martes";};
+                if($ah->id_dia == 3){$dia = "Miercoles";};
+                if($ah->id_dia == 4){$dia = "Jueves";};
+                if($ah->id_dia == 5){$dia = "Viernes";};
+                if($ah->id_dia == 6){$dia = "Sabado";};
+                if($ah->id_dia == 7){$dia = "Domingo";};
 
-        $actividad = Actividad::model()->findbyPk('id_actividad = 126');
-        //$deporte = Deporte::model()->findByPk('id_deporte= :id_deporte', array(':id_deporte' => $actividad->id_deporte));
+                $var = $var . ' Dia: '.$dia. ' Horario: '.str_pad($ah->hora,2,'0',STR_PAD_LEFT).':'.str_pad($ah->minutos,2,'0',STR_PAD_LEFT);
+            }
+            echo $var;
 
-        echo $actividad->id_actividad;
+        }
 
     }
 
