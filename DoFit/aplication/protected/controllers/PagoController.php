@@ -11,6 +11,14 @@ class PagoController extends Controller
         $this->render('index');
     }
 
+    public function actionEliminarPago()
+    {
+        $fu = new FichaUsuario();
+        $ac = new Actividad();
+        $pa = new Pago();
+        $this->render('EliminarPago', array('ficha_usuario' => $fu, 'actividad' => $ac, 'pago' => $pa));
+    }
+
     public function actionVerificarActividad()
     {
         $var = "";
@@ -36,6 +44,23 @@ class PagoController extends Controller
 
         }
 
+    }
+
+    public function actionListarPagos(){
+       // IF(isset($_POST['actividad'])){
+            $pagos = Pago::model()->findAll('id_usuario = :id',array(':id'=>1));
+            $result = array();
+            foreach($pagos as $p) {
+                $result[] = array(
+                    'usuario' => $p->id_usuario,
+                    'actividad' => $p->id_actividad,
+                    'anio' => $p->anio,
+                    'mes' => $p->mes,
+                    'monto' => $p->monto,
+                );
+            }
+            echo CJSON::encode($result);
+        //}
     }
 
     public function actionCrearPago()
@@ -90,11 +115,27 @@ class PagoController extends Controller
 
         echo CHtml::tag('option', array('value' => ''), 'Seleccione una actividad', true);
 
-        //$deporte = Deporte::model()->findByPk('id_deporte= :id_deporte', array(':id_deporte' => 1));
-        //$pepe = $deporte->deporte;
         foreach ($actividades as $valor => $act) {
 
             echo CHtml::tag('option', array('value' => $valor), 'Actividad número: '.CHtml::encode($act), true);
+        }
+
+
+    }
+
+    public function actionSeleccionarPago()
+    {
+
+        $id_usuario = $_POST['FichaUsuario']['id_usuario'];
+        $pagos = Pago::model()->findAll('id_usuario= :id_usuario', array(':id_usuario' => $id_usuario));
+        $pagos = CHtml::listData($pagos, 'id_pago', 'id_pago');
+
+        echo CHtml::tag('option', array('value' => ''), 'Seleccione el pago', true);
+
+
+        foreach ($pagos as $valor => $p) {
+
+            echo CHtml::tag('option', array('value' => $valor), 'Pago número: '.CHtml::encode($p), true);
         }
 
 
