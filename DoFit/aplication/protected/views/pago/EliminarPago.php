@@ -125,35 +125,28 @@ if(!Yii::app()->user->isGuest){
 
 <script type="text/javascript">
     function lista_pagos(){
-        var actividad = $('#Actividad_id_actividad').val();
-        var data = {'actividad': actividad};
-        $.ajax({
-            url:'../pago/ListarPagos',
-            type:'POST',
-            data:data,
-            dataType:"json",
-            cache:false,
-            success: function(response){
-            alert("entro");
-                //  console.log(response.toString());
+        var usuario = $('#FichaUsuario_id_usuario').val();
+        $('#lista').html("");
+        if(usuario != ""){
+            var data = {'actividad': usuario};
+            $.ajax({
+                url:'../pago/ListarPagos',
+                type:'POST',
+                data:data,
+                dataType:"json",
+                cache:false,
+                success: function(response){
+                    var html="<table class='table table-bordered'><thead><tr><th>Actividad</th><th>Año</th><th>Mes</th><th>Monto</th></thead><tbody>";
+                    for(i=0; i<response.length; i++){
+                        html+= "<tr><td>"+response[i].actividad+"</td><td>"+response[i].anio+"</td><td>"+response[i].mes+"</td><td>"+response[i].monto+"</td><tr>";
+                    }
+                    html+="</tbody></table>";
+                    $('#lista').html(html);
 
-                alert(response[0].usuario);
-                alert(response[0].anio);
-                alert(response[0].actividad);
-           // var valores = eval(response);
-          //  alert(valores);
-            //var locations = JSON.parse("[" + response + "]");
-            //alert(locations);
-            //html="<table class='table table-bordered'><thead><tr><th>#</th><th>ISBN</th><th>Titulo</th><th>Autor</th><th>Año de Publicacion</th><th>Nro de Paginas</th><th>Ediccion<</th><th>Idioma</th></tr></thead><tbody>";
-            //for(i=0;i<valores.length;i++){
-            //    html+="<tr><td>"+(i+1)+"</td><td>"+valores[i][1]+"</td><td>"+valores[i][2]+"</td><td>"+valores[i][3]+"</td>";
-           //}
-           // html+="</tbody></table>"
-           // $("#lista").html(html);
-        },                       error: function (e) {
+                },error: function (e) {
                     console.log(e);
                 }
-        });
+            });
+        }
     }
-
 </script>
