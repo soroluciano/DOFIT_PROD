@@ -56,7 +56,7 @@ if(!Yii::app()->user->isGuest){
                 $criteria->params = array(':institucion' => 1 );
                 $usuario = FichaUsuario:: model()->findAll($criteria);?>
                 <?php   echo $form->labelEx($ficha_usuario,'Alumno'); ?>
-                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre'),array("class"=>"form-control",'prompt'=>'Seleccione un alumno'));?>
+                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre'),array("class"=>"form-control",'prompt'=>'Seleccione un alumno',"onchange"=>"lista_pagos();"));?>
                 <?php   echo $form->error($ficha_usuario,'Alumno')?>
             </div>
 
@@ -66,6 +66,11 @@ if(!Yii::app()->user->isGuest){
                 <?php   echo $form->error($pago,'anio')?>
             </div>
 
+            <div class="form-group">
+                <?php   echo $form->labelEx($pago,'mes'); ?>
+                <?php   echo $form->dropDownList($pago,'mes',CHtml::listData(Pago:: model()->findAll(),'mes','mes'),array("class"=>"form-control",'prompt'=>'Seleccione el mes',"onchange"=>"lista_pagos();"));?>
+                <?php   echo $form->error($pago,'mes')?>
+            </div>
 
             <div id="lista">
 
@@ -116,53 +121,64 @@ if(!Yii::app()->user->isGuest){
     function lista_pagos(){
         var usuario = $('#FichaUsuario_id_usuario').val();
         var anio    = $('#Pago_anio').val();
+        var mes     = $('#Pago_mes').val();
         $('#lista').html("");
         if(usuario != ""){
             if(anio != "") {
-                var data = {'usuario': usuario, 'anio': anio};
-                $.ajax({
-                    url: '../pago/ListarPagos',
-                    type: 'POST',
-                    data: data,
-                    dataType: "json",
-                    cache: false,
-                    success: function (response) {
-                        var html = "<table class='table table-bordered'><thead><tr><th>Actividad</th><th>Año</th><th>Mes</th><th>Monto</th></thead><tbody>";
-                        for (i = 0; i < response.length; i++) {
-                            html += "<tr><td>" + response[i].actividad + "</td><td>" + response[i].anio + "</td><td>" + response[i].mes + "</td><td>" + response[i].monto + "</td><td><input type='button' value ='Eliminar' onclick='eliminar_pago();' class='btn btn-primary' id='boton' name='"+ response[i].id +"' /></td><tr>";
+                if (mes!= "") {
+                    var data = {'usuario': usuario, 'anio': anio, 'mes': mes};
+                    $.ajax({
+                        url: '../pago/ListarPagos',
+                        type: 'POST',
+                        data: data,
+                        dataType: "json",
+                        cache: false,
+                        success: function (response) {
+                            var html = "<table class='table table-bordered'><thead><tr><th>Actividad</th><th>Año</th><th>Mes</th><th>Monto</th></thead><tbody>";
+                            for (i = 0; i < response.length; i++) {
+                                html += "<tr><td>" + response[i].actividad + "</td><td>" + response[i].anio + "</td><td>" + response[i].mes + "</td><td>" + response[i].monto + "</td><td><button type='button'  onclick='eliminar_pago(this.value);' class='btn btn-primary' id='boton' value='" + response[i].id + "'>Eliminar </button></td><tr>";
+                            }
+                            html += "</tbody></table>";
+                            $('#lista').html(html);
+                        }, error: function (e) {
+                            console.log(e);
                         }
-                        html += "</tbody></table>";
-                        $('#lista').html(html);
-
-                    }, error: function (e) {
-                        console.log(e);
-                    }
-                });
+                    });
+                }
             }
         }
     }
 </script>
-    <script type="text/javascript">
-        function eliminar_pago() {
-            var pago = $('#boton').prop("name");
-            if (pago != "") {
-                var data = {'id': pago};
-                $.ajax({
-                    url: '../pago/Eliminar',
-                    type: 'POST',
-                    data: data,
-                    dataType: "html",
-                    cache: false,
-                    success: function (response) {
-                        if (response == "ok") {
-                            $('#Ok').modal('show');
-                        }
-                        else {
-                            $('#Error').modal('show');
+
+<script type="text/javascript">
+        function eliminar_pago(value) {
+            var id = value;
+            var usuario = $('#FichaUsuario_id_usuario').val();
+            var anio = $('#Pago_anio').val();
+            var mes = $('#Pago_mes').val();
+            if (id != "") {
+                if(usuario != ""){
+                    if(anio != ""){
+                        if(mes != "") {
+                            var data = {'id': id, 'usuario': usuario, 'anio': anio, 'mes': mes};
+                            $.ajax({
+                                url: '../pago/Eliminar',
+                                type: 'POST',
+                                data: data,
+                                dataType: "html",
+                                cache: false,
+                                success: function (response) {
+                                    if (response == "ok") {
+                                        $('#Ok').modal('show');
+                                    }
+                                    else {
+                                        $('#Error').modal('show');
+                                    }
+                                }
+                            })
                         }
                     }
-
-                })
+                }
             }
         }
 </script>

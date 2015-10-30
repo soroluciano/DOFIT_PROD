@@ -47,30 +47,31 @@ class PagoController extends Controller
     }
 
     public function actionEliminar(){
-        IF(isset($_POST['id'])){
-            $this->loadModel($_POST['id'])->delete();
-            echo "ok";
+        IF(isset($_POST['usuario']) && isset($_POST['anio']) && isset($_POST['mes']) && isset($_POST['id'])){
+            $pagos = Pago::model()->findByPk(array('id_actividad'=>126,'id_usuario' => $_POST['usuario'], 'anio' => $_POST['anio'], 'mes' => $_POST['mes']));
+            if($pagos->delete()){
+                echo "ok";
+            }
+            else {
+                echo "error";
+            }
         }
     }
 
     public function actionListarPagos(){
         IF(isset($_POST['usuario'])&& isset($_POST['anio'])){
             $criteria = new CDbCriteria;
-            $criteria->condition = 'id_usuario = :id and anio = :anio';
-            $criteria->params = array(':id' => $_POST['usuario'], ':anio' => $_POST['anio']);
+            $criteria->condition = 'id_usuario = :id and anio = :anio and mes = :mes';
+            $criteria->params = array(':id' => $_POST['usuario'], ':anio' => $_POST['anio'], ':mes' => $_POST['mes']);
             $pagos = Pago::model()->findAll($criteria);
-
             $result = array();
-
 
             foreach($pagos as $p) {
                 $horario = "";
                 $dia = "";
                 $mes = "";
                 $actividad = Actividad::model()->findByPk($p->id_actividad);
-
                 $deporte = Deporte::model()->findByPk($actividad->id_deporte);
-
                 $actividad_horario = ActividadHorario::model()->findAll('id_actividad = :id',array(':id'=>$p->id_actividad));
 
                 foreach($actividad_horario as $ah){
@@ -105,7 +106,7 @@ class PagoController extends Controller
                     'mes' => $mes,
                     'monto' => "$".$p->monto,
                     'id'=> $p->id_actividad,
-                    'mes'=> $p->mes,
+                    'm'=> $p->mes,
                 );
             }
             echo CJSON::encode($result);
@@ -190,12 +191,6 @@ class PagoController extends Controller
 
     }
 
-    public function loadModel($id)
-    {
-        $model=Pago::model()->findByPk($id);
-        if($model===null)
-            throw new CHttpException(404,'The requested page does not exist.');
-        return $model;
-    }
+
 }
 
