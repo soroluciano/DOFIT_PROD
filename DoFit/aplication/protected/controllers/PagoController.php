@@ -46,21 +46,70 @@ class PagoController extends Controller
 
     }
 
+    public function actionEliminar(){
+        IF(isset($_POST['id'])){
+            $this->loadModel($_POST['id'])->delete();
+            echo "ok";
+        }
+    }
+
     public function actionListarPagos(){
-       // IF(isset($_POST['actividad'])){
-            $pagos = Pago::model()->findAll('id_usuario = :id',array(':id'=>1));
+        IF(isset($_POST['usuario'])&& isset($_POST['anio'])){
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_usuario = :id and anio = :anio';
+            $criteria->params = array(':id' => $_POST['usuario'], ':anio' => $_POST['anio']);
+            $pagos = Pago::model()->findAll($criteria);
+
             $result = array();
+
+
             foreach($pagos as $p) {
+                $horario = "";
+                $dia = "";
+                $mes = "";
+                $actividad = Actividad::model()->findByPk($p->id_actividad);
+
+                $deporte = Deporte::model()->findByPk($actividad->id_deporte);
+
+                $actividad_horario = ActividadHorario::model()->findAll('id_actividad = :id',array(':id'=>$p->id_actividad));
+
+                foreach($actividad_horario as $ah){
+                    if($ah->id_dia == 1){$dia = "Lunes";};
+                    if($ah->id_dia == 2){$dia = "Martes";};
+                    if($ah->id_dia == 3){$dia = "Miercoles";};
+                    if($ah->id_dia == 4){$dia = "Jueves";};
+                    if($ah->id_dia == 5){$dia = "Viernes";};
+                    if($ah->id_dia == 6){$dia = "Sabado";};
+                    if($ah->id_dia == 7){$dia = "Domingo";};
+
+                    $horario = $horario . "Dia: ".$dia . " Horario: ".str_pad($ah->hora,2,'0',STR_PAD_LEFT).":" .str_pad($ah->minutos,2,'0',STR_PAD_LEFT);
+                }
+
+                if($p->mes == 1){$mes = "Enero";}
+                if($p->mes == 2){$mes = "Febrero";}
+                if($p->mes == 3){$mes = "Marzo";}
+                if($p->mes == 4){$mes = "Abril";}
+                if($p->mes == 5){$mes = "Mayo";}
+                if($p->mes == 6){$mes = "Junio";}
+                if($p->mes == 7){$mes = "Julio";}
+                if($p->mes == 8){$mes = "Agosto";}
+                if($p->mes == 9){$mes = "Septiembre";}
+                if($p->mes == 10){$mes = "Octubre";}
+                if($p->mes == 11){$mes = "Noviembre";}
+                if($p->mes == 12){$mes = "Diciembre";}
+
                 $result[] = array(
                     'usuario' => $p->id_usuario,
-                    'actividad' => $p->id_actividad,
+                    'actividad' => 'Deporte: '.$deporte->deporte.' '.$horario,
                     'anio' => $p->anio,
-                    'mes' => $p->mes,
-                    'monto' => $p->monto,
+                    'mes' => $mes,
+                    'monto' => "$".$p->monto,
+                    'id'=> $p->id_actividad,
+                    'mes'=> $p->mes,
                 );
             }
             echo CJSON::encode($result);
-        //}
+        }
     }
 
     public function actionCrearPago()
@@ -139,6 +188,14 @@ class PagoController extends Controller
         }
 
 
+    }
+
+    public function loadModel($id)
+    {
+        $model=Pago::model()->findByPk($id);
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
     }
 }
 

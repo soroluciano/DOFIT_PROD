@@ -50,19 +50,26 @@ if(!Yii::app()->user->isGuest){
         <div class="col-md-8">
             <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
             <div class="form-group">
-                <?php   $criteria = new CDbCriteria;
+                <?php
+                $criteria = new CDbCriteria;
                 $criteria->condition = 'id_usuario IN (select id_usuario from actividad_alumno where id_actividad IN ( select id_actividad from actividad where id_institucion = :institucion ))';
                 $criteria->params = array(':institucion' => 1 );
                 $usuario = FichaUsuario:: model()->findAll($criteria);?>
                 <?php   echo $form->labelEx($ficha_usuario,'Alumno'); ?>
-                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre'),array("class"=>"form-control",'prompt'=>'Seleccione un alumno',"onchange"=>"lista_pagos();"));?>
+                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre'),array("class"=>"form-control",'prompt'=>'Seleccione un alumno'));?>
                 <?php   echo $form->error($ficha_usuario,'Alumno')?>
             </div>
+
+            <div class="form-group">
+                <?php   echo $form->labelEx($pago,'Anio'); ?>
+                <?php   echo $form->dropDownList($pago,'anio',CHtml::listData(Pago:: model()->findAll(),'anio','anio'),array("class"=>"form-control",'prompt'=>'Seleccione el año',"onchange"=>"lista_pagos();"));?>
+                <?php   echo $form->error($pago,'anio')?>
+            </div>
+
 
             <div id="lista">
 
             </div>
-            <button type="button" name="button" class="btn btn-primary" onclick="Crear();">Crear</button>
 
             <!-- Modal OK -->
             <div class='modal fade' id='Ok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
@@ -73,7 +80,7 @@ if(!Yii::app()->user->isGuest){
                             <h4 class='modal-title' id='myModalLabel'>Felicidades</h4>
                         </div>
                         <div class='modal-body'>
-                            ¡Has generado el pago!
+                            ¡Has eliminado el pago!
                         </div>
                         <div class='modal-footer'>
                             <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
@@ -90,7 +97,7 @@ if(!Yii::app()->user->isGuest){
                             <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
                         </div>
                         <div class='modal-body'>
-                            No se ha generado el pago debido a un error.
+                            No se ha eliminado el pago debido a un error.
                         </div>
                         <div class='modal-footer'>
                             <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
@@ -98,24 +105,6 @@ if(!Yii::app()->user->isGuest){
                     </div>
                 </div>
             </div>
-            <!-- Modal Duplicado -->
-            <div class='modal fade' id='Duplicado' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
-                <div class='modal-dialog' role='document'>
-                    <div class='modal-content'>
-                        <div class='modal-header'>
-                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                            <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
-                        </div>
-                        <div class='modal-body'>
-                            Pago duplicado. Verifique.
-                        </div>
-                        <div class='modal-footer'>
-                            <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <?php echo CHtml::endForm(); ?>
             <?php $this->endWidget(); ?>
 
@@ -126,27 +115,54 @@ if(!Yii::app()->user->isGuest){
 <script type="text/javascript">
     function lista_pagos(){
         var usuario = $('#FichaUsuario_id_usuario').val();
+        var anio    = $('#Pago_anio').val();
         $('#lista').html("");
         if(usuario != ""){
-            var data = {'actividad': usuario};
-            $.ajax({
-                url:'../pago/ListarPagos',
-                type:'POST',
-                data:data,
-                dataType:"json",
-                cache:false,
-                success: function(response){
-                    var html="<table class='table table-bordered'><thead><tr><th>Actividad</th><th>Año</th><th>Mes</th><th>Monto</th></thead><tbody>";
-                    for(i=0; i<response.length; i++){
-                        html+= "<tr><td>"+response[i].actividad+"</td><td>"+response[i].anio+"</td><td>"+response[i].mes+"</td><td>"+response[i].monto+"</td><tr>";
-                    }
-                    html+="</tbody></table>";
-                    $('#lista').html(html);
+            if(anio != "") {
+                var data = {'usuario': usuario, 'anio': anio};
+                $.ajax({
+                    url: '../pago/ListarPagos',
+                    type: 'POST',
+                    data: data,
+                    dataType: "json",
+                    cache: false,
+                    success: function (response) {
+                        var html = "<table class='table table-bordered'><thead><tr><th>Actividad</th><th>Año</th><th>Mes</th><th>Monto</th></thead><tbody>";
+                        for (i = 0; i < response.length; i++) {
+                            html += "<tr><td>" + response[i].actividad + "</td><td>" + response[i].anio + "</td><td>" + response[i].mes + "</td><td>" + response[i].monto + "</td><td><input type='button' value ='Eliminar' onclick='eliminar_pago();' class='btn btn-primary' id='boton' name='"+ response[i].id +"' /></td><tr>";
+                        }
+                        html += "</tbody></table>";
+                        $('#lista').html(html);
 
-                },error: function (e) {
-                    console.log(e);
-                }
-            });
+                    }, error: function (e) {
+                        console.log(e);
+                    }
+                });
+            }
         }
     }
+</script>
+    <script type="text/javascript">
+        function eliminar_pago() {
+            var pago = $('#boton').prop("name");
+            if (pago != "") {
+                var data = {'id': pago};
+                $.ajax({
+                    url: '../pago/Eliminar',
+                    type: 'POST',
+                    data: data,
+                    dataType: "html",
+                    cache: false,
+                    success: function (response) {
+                        if (response == "ok") {
+                            $('#Ok').modal('show');
+                        }
+                        else {
+                            $('#Error').modal('show');
+                        }
+                    }
+
+                })
+            }
+        }
 </script>

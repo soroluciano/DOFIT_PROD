@@ -179,7 +179,7 @@ class ActividadController extends Controller
         if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
             $criteria = new CDbCriteria;
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
-            $criteria->params = array(':localidad' => $_POST['localidad'], 'deporte' => $_POST['deporte']);
+            $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
             //$locations = '[';
             $i = 1;
