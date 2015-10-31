@@ -165,5 +165,12 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 	),
 
+    'controllerMap' => array(
+        // ...
+        'barcodegenerator' => array(
+            'class' => 'ext.barcodegenerator.BarcodeGeneratorController',
+        ),
+    ),
+
 
 );
