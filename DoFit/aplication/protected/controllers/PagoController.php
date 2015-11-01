@@ -181,23 +181,45 @@ class PagoController extends Controller
 
     }
 
-    public function actionSeleccionarPago()
+    public function actionSeleccionarAño()
     {
 
         $id_usuario = $_POST['FichaUsuario']['id_usuario'];
         $pagos = Pago::model()->findAll('id_usuario= :id_usuario', array(':id_usuario' => $id_usuario));
-        $pagos = CHtml::listData($pagos, 'id_pago', 'id_pago');
+        $pagos = CHtml::listData($pagos, 'anio', 'anio');
 
-        echo CHtml::tag('option', array('value' => ''), 'Seleccione el pago', true);
+        echo CHtml::tag('option', array('value' => ''), 'Seleccione el año', true);
 
 
         foreach ($pagos as $valor => $p) {
 
-            echo CHtml::tag('option', array('value' => $valor), 'Pago número: '.CHtml::encode($p), true);
+            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($p), true);
         }
 
 
     }
+
+    public function actionSeleccionarMes()
+    {
+
+        $id_usuario = $_POST['FichaUsuario']['id_usuario'];
+        $anio = $_POST['Pago']['anio'];
+        $criteria = new CDbCriteria;
+        $criteria->condition = 'id_usuario = :id_usuario and  anio = :anio';
+        $criteria->params = array(':id_usuario' => $id_usuario, ':anio'=> $anio);
+        $pagos = Pago:: model()->findAll($criteria);
+        $pagos = CHtml::listData($pagos, 'mes', 'mes');
+
+        echo CHtml::tag('option', array('value' => ''), 'Seleccione el mes', true);
+
+        foreach ($pagos as $valor => $p) {
+
+            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($p), true);
+        }
+
+
+    }
+
 
 
 }

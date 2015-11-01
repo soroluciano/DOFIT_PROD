@@ -25,12 +25,17 @@ class InstitucionController extends Controller
      */
     public function actionCreate()
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                if (isset(Yii::app()->session['admin'])){
+                    $this->redirect('../site/indexAdmin');
+                }
+                else{
+                    $this->redirect('../site/logininstitucion');
+                }
             }
         }
         date_default_timezone_set('America/Argentina/Buenos_Aires');
@@ -90,12 +95,17 @@ class InstitucionController extends Controller
      */
     public function actionUpdate($id)
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                if (isset(Yii::app()->session['admin'])){
+                    $this->redirect('../site/indexAdmin');
+                }
+                else{
+                    $this->redirect('../site/logininstitucion');
+                }
             }
         }
 
@@ -129,12 +139,17 @@ class InstitucionController extends Controller
      */
     public function actionDelete($id)
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                if (isset(Yii::app()->session['admin'])){
+                    $this->redirect('../site/indexAdmin');
+                }
+                else{
+                    $this->redirect('../site/logininstitucion');
+                }
             }
         }
 
@@ -150,12 +165,17 @@ class InstitucionController extends Controller
      */
     public function actionIndex()
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                if (isset(Yii::app()->session['admin'])){
+                    $this->redirect('../site/indexAdmin');
+                }
+                else{
+                    $this->redirect('../site/logininstitucion');
+                }
             }
         }
         $institucion =Institucion::model()->findAll();
@@ -166,12 +186,12 @@ class InstitucionController extends Controller
 
     public function actionAceptar($id)
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                $this->redirect('../site/loginadmin');
             }
         }
         $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
@@ -182,12 +202,12 @@ class InstitucionController extends Controller
 
     public function actionCancelar($id)
     {
-        if ( !isset(Yii::app()->session['admin'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
-                $this->redirect('loginadmin');
+                $this->redirect('../site/loginadmin');
             }
         }
         $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
@@ -197,13 +217,16 @@ class InstitucionController extends Controller
 
     public function actionHome()
     {
-        if ( !isset(Yii::app()->session['id_institucion'])){
+        if(!isset(Yii::app()->session['id_institucion'])){
             if (isset(Yii::app()->session['id_usuario'])) {
                 $this->redirect('../site/index');
             }
             else{
                 if (isset(Yii::app()->session['admin'])){
                     $this->redirect('../site/indexAdmin');
+                }
+                else{
+                    $this->redirect('../site/logininstitucion');
                 }
             }
         }
