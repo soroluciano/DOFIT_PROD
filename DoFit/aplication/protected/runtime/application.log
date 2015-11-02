@@ -1,0 +1,17 @@
+2015/11/03 00:17:24 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\perfilSocial\galeria.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): PerfilSocialController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): PerfilSocialController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php(209): PerfilSocialController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): PerfilSocialController->actionGaleria()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): PerfilSocialController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): PerfilSocialController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): PerfilSocialController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/perfilSocial/galeria
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\perfilSocial\galeria.php (5)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\PerfilSocialController.php (209)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
