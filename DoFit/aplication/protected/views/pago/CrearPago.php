@@ -65,9 +65,14 @@ if(!Yii::app()->user->isGuest){
             <div class="form-group">
                 <?php echo $form->labelEx($actividad,'actividad'); ?>
                 <div>
-                    <?php echo $form->dropDownList($actividad,'id_actividad',array(''=>"Selecciona actividad"),array('class'=>"form-control")); ?>
+                    <?php echo $form->dropDownList($actividad,'id_actividad',
+                                                   array(''=>"Selecciona actividad"),
+                                                   array('class'=>"form-control","onchange"=>"BuscoDetalle();")); ?>
+
+                    <?php echo $form->error($actividad,'id_actividad'); ?>
                 </div>
-                <?php echo $form->error($actividad,'id_actividad'); ?>
+            </div>
+            <div class="form-group" id="Detalle">
             </div>
             <div class="form-group">
                 <?php $anio = date("Y"); ?>
@@ -170,6 +175,27 @@ if(!Yii::app()->user->isGuest){
    </div>
 </div>
 
+<script type="text/javascript">
+    function BuscoDetalle(){
+        $('#Detalle').empty();
+        var valor = $('#Actividad_id_actividad').val();
+        if(valor != ""){
+            var data = {'valor':valor};
+            $.ajax({
+                    url: baseurl + '/pago/VerificarActividad',
+                    type: "POST",
+                    data: data,
+                    dataType: "html",
+                    cache: false,
+                    success: function (response) {
+                            $('#Detalle').append("<p>"+response+"</p>");
+                        }
+
+                })
+            }
+        }
+
+ </script>
 <script type="text/javascript">
     function Crear(){
         var id_usuario = $('#FichaUsuario_id_usuario').val();

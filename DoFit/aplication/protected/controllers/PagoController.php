@@ -11,6 +11,116 @@ class PagoController extends Controller
         $this->render('index');
     }
 
+    public function actionFactura(){
+        $mPDF1 = Yii::app()->ePdf->mpdf();
+        $mPDF1->WriteHTML($this->render('factura', array(), true));
+        $mPDF1->Output();
+      //  $this->render('factura');
+
+    }
+
+    public function actionEliminarPago()
+    {
+        $fu = new FichaUsuario();
+        $ac = new Actividad();
+        $pa = new Pago();
+        $this->render('EliminarPago', array('ficha_usuario' => $fu, 'actividad' => $ac, 'pago' => $pa));
+    }
+
+    public function actionVerificarActividad()
+    {
+        $var = "";
+        $dia = "";
+        IF(isset($_POST['valor'])){
+            $actividad = Actividad::model()->findByPk($_POST['valor']);
+            $id_deporte = $actividad->id_deporte;
+            $deporte = Deporte::model()->findByPk($id_deporte);
+            $actividad_horario = ActividadHorario::model()->findAll('id_actividad = :id',array(':id'=>126));
+            $var = 'Deporte: '.$deporte->deporte.' ';
+            foreach($actividad_horario as $ah){
+                if($ah->id_dia == 1){$dia = "Lunes";};
+                if($ah->id_dia == 2){$dia = "Martes";};
+                if($ah->id_dia == 3){$dia = "Miercoles";};
+                if($ah->id_dia == 4){$dia = "Jueves";};
+                if($ah->id_dia == 5){$dia = "Viernes";};
+                if($ah->id_dia == 6){$dia = "Sabado";};
+                if($ah->id_dia == 7){$dia = "Domingo";};
+
+                $var = $var . ' Dia: '.$dia. ' Horario: '.str_pad($ah->hora,2,'0',STR_PAD_LEFT).':'.str_pad($ah->minutos,2,'0',STR_PAD_LEFT);
+            }
+            echo $var;
+
+        }
+
+    }
+
+    public function actionEliminar(){
+        IF(isset($_POST['usuario']) && isset($_POST['anio']) && isset($_POST['mes']) && isset($_POST['id'])){
+            $pagos = Pago::model()->findByPk(array('id_actividad'=>126,'id_usuario' => $_POST['usuario'], 'anio' => $_POST['anio'], 'mes' => $_POST['mes']));
+            if($pagos->delete()){
+                echo "ok";
+            }
+            else {
+                echo "error";
+            }
+        }
+    }
+
+    public function actionListarPagos(){
+        IF(isset($_POST['usuario'])&& isset($_POST['anio'])){
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'id_usuario = :id and anio = :anio and mes = :mes';
+            $criteria->params = array(':id' => $_POST['usuario'], ':anio' => $_POST['anio'], ':mes' => $_POST['mes']);
+            $pagos = Pago::model()->findAll($criteria);
+            $result = array();
+
+            foreach($pagos as $p) {
+                $horario = "";
+                $dia = "";
+                $mes = "";
+                $actividad = Actividad::model()->findByPk($p->id_actividad);
+                $deporte = Deporte::model()->findByPk($actividad->id_deporte);
+                $actividad_horario = ActividadHorario::model()->findAll('id_actividad = :id',array(':id'=>$p->id_actividad));
+
+                foreach($actividad_horario as $ah){
+                    if($ah->id_dia == 1){$dia = "Lunes";};
+                    if($ah->id_dia == 2){$dia = "Martes";};
+                    if($ah->id_dia == 3){$dia = "Miercoles";};
+                    if($ah->id_dia == 4){$dia = "Jueves";};
+                    if($ah->id_dia == 5){$dia = "Viernes";};
+                    if($ah->id_dia == 6){$dia = "Sabado";};
+                    if($ah->id_dia == 7){$dia = "Domingo";};
+
+                    $horario = $horario . "Dia: ".$dia . " Horario: ".str_pad($ah->hora,2,'0',STR_PAD_LEFT).":" .str_pad($ah->minutos,2,'0',STR_PAD_LEFT);
+                }
+
+                if($p->mes == 1){$mes = "Enero";}
+                if($p->mes == 2){$mes = "Febrero";}
+                if($p->mes == 3){$mes = "Marzo";}
+                if($p->mes == 4){$mes = "Abril";}
+                if($p->mes == 5){$mes = "Mayo";}
+                if($p->mes == 6){$mes = "Junio";}
+                if($p->mes == 7){$mes = "Julio";}
+                if($p->mes == 8){$mes = "Agosto";}
+                if($p->mes == 9){$mes = "Septiembre";}
+                if($p->mes == 10){$mes = "Octubre";}
+                if($p->mes == 11){$mes = "Noviembre";}
+                if($p->mes == 12){$mes = "Diciembre";}
+
+                $result[] = array(
+                    'usuario' => $p->id_usuario,
+                    'actividad' => 'Deporte: '.$deporte->deporte.' '.$horario,
+                    'anio' => $p->anio,
+                    'mes' => $mes,
+                    'monto' => "$".$p->monto,
+                    'id'=> $p->id_actividad,
+                    'm'=> $p->mes,
+                );
+            }
+            echo CJSON::encode($result);
+        }
+    }
+
     public function actionCrearPago()
     {
         $fu = new FichaUsuario();
@@ -65,9 +175,52 @@ class PagoController extends Controller
 
         foreach ($actividades as $valor => $act) {
 
-            echo CHtml::tag('option', array('value' => $valor), 'Actividad número: ' . CHtml::encode($act), true);
+            echo CHtml::tag('option', array('value' => $valor), 'Actividad número: '.CHtml::encode($act), true);
         }
 
+
     }
+
+    public function actionSeleccionarAño()
+    {
+
+        $id_usuario = $_POST['FichaUsuario']['id_usuario'];
+        $pagos = Pago::model()->findAll('id_usuario= :id_usuario', array(':id_usuario' => $id_usuario));
+        $pagos = CHtml::listData($pagos, 'anio', 'anio');
+
+        echo CHtml::tag('option', array('value' => ''), 'Seleccione el año', true);
+
+
+        foreach ($pagos as $valor => $p) {
+
+            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($p), true);
+        }
+
+
+    }
+
+    public function actionSeleccionarMes()
+    {
+
+        $id_usuario = $_POST['FichaUsuario']['id_usuario'];
+        $anio = $_POST['Pago']['anio'];
+        $criteria = new CDbCriteria;
+        $criteria->condition = 'id_usuario = :id_usuario and  anio = :anio';
+        $criteria->params = array(':id_usuario' => $id_usuario, ':anio'=> $anio);
+        $pagos = Pago:: model()->findAll($criteria);
+        $pagos = CHtml::listData($pagos, 'mes', 'mes');
+
+        echo CHtml::tag('option', array('value' => ''), 'Seleccione el mes', true);
+
+        foreach ($pagos as $valor => $p) {
+
+            echo CHtml::tag('option', array('value' => $valor), CHtml::encode($p), true);
+        }
+
+
+    }
+
+
+
 }
 

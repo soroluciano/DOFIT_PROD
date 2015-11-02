@@ -34,14 +34,16 @@ class ActividadAlumnoController extends Controller
     public function actionDesafectarActividad()
     {
 
-        $idactividad = $_POST['id_actividad'];
-        $idusuario = $_POST['id_usuario'];
+        $idactividad = $_POST['idactividad'];
+        $idusuario = $_POST['idalumno'];
         $pago = Pago::model()->findByAttributes(array('id_actividad'=>$idactividad, 'id_usuario'=>$idusuario));
         $act_alum = ActividadAlumno::model()->findByAttributes(array('id_actividad'=>$idactividad, 'id_usuario'=>$idusuario));
-        if($act_alum != null ){
-            $pago->delete();
+        if($act_alum != null){
+            if($pago != null){
+                $pago->delete();
+            }
             $act_alum->delete();
-            $this->render('../Veractividades/'.$idusuario);
+            echo "ok";
         }
     }
 }

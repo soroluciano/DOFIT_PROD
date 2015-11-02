@@ -1,69 +1,131 @@
-<div class="navbar-wrapper">
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                   <a href='../'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a>Hola!</a></li>
-							<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Anotarme en actividades</a></li>
-                                    <li><a href="#">Ver mis actividades</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuración</a></li>
-                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
-                                </ul>
-                            </li>
-                        </ul>
+<style type="text/css">
+    body {
+        background: url(../img/19.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../site/login">&times;</a></span></button>
+                <h4 class="modal-title">Recuperá tu contraseña</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <br>
+                            <div>Ingresa tu usuario para poder recuperarla</div>
+                            <br>
+                            <div class="form-group">
+                                <form action="">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="E-mail"></input>
+                                    <br/>
+                                    <input type="button" value="Enviar" class="btn btn-primary" id="enviardatos" name="Enviar"></input>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/8.png" alt="First slide">
         </div>
     </div>
 </div>
-<div>
 
-<div class="form">
- <div class="container">	
-	<!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
-			<div class="row">
-				<div class="col-md-6">
-					<h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
-	                <br>
-					<div> Ingrese el mail de cual desea recuperar la contraseña</div>
-					<br>
-                   <div class="form-group">
-                       <?php echo CHtml::beginForm('Recuperarpassword2','post'); ?>
-					  <?php echo CHtml::activeTextField($usuario,'email',array('class'=>"form-control",'placeholder'=>"email",'id'=>"exampleInputEmail1")); ?>
-					  <br/>
-					  <?php echo CHtml::submitButton('Enviar',array('class'=>'btn btn-primary')); ?>                     
-					 <?php echo CHtml::endForm(); ?> 
-				   </div>
-				</div> 
-		</div>		
-</div>				
-			
+
+<?php
+                    echo "<div class='modal fade'  id='mensajemailblanco' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+								    <div class='modal-dialog' role='document'>
+										<div class='modal-content'>
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+											</div>
+											<div class='modal-body'>
+											Ingrese una dirección de email.
+											</div>
+										<div class='modal-footer'>
+											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+										</div>
+										</div>
+									</div>
+								</div>
+								</div>";
+                    echo "<div class='modal fade'  id='mensajemailerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+								    <div class='modal-dialog' role='document'>
+										<div class='modal-content'>
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+											</div>
+											<div class='modal-body'>
+											No se encontro ninguna cuenta con ese email.
+											</div>
+										<div class='modal-footer'>
+											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+										</div>
+										</div>
+									</div>
+								</div>
+								</div>";
+                    echo "<div class='modal fade'  id='mensajemailexitoso' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+								    <div class='modal-dialog' role='document'>
+										<div class='modal-content'>
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+												<h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+											</div>
+											<div class='modal-body'>
+											Se envió un correo a su cuenta para recueperar su contraseña.
+											</div>
+										<div class='modal-footer'>
+											<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+										</div>
+										</div>
+									</div>
+								</div>";
+                    ?>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#myModal').modal('show');
+    });
+
+</script>
+
+
+<script type="text/javascript">
+    $("#enviardatos").on("click",function(){
+        var email = $('#email').val();
+        var data = {'email':email};
+        $.ajax({
+            url :  baseurl + '/usuario/Recuperarpassword',
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response) {
+                if(response == "emailblanco"){
+                    $('#mensajemailblanco').modal('show');
+                }
+                if(response == "error"){
+                    $('#mensajemailerror').modal('show');
+                }
+                if(response == "exitoso") {
+                    $('#mensajemailexitoso').modal('show');
+                }
+            } ,
+            error: function (e) {
+                console.log(e);
+            }
+        });
+    })
+</script>

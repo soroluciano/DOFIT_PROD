@@ -46,29 +46,6 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
                        <!-- <span id="inputSuccess2Status" class="sr-only">(success)</span> -->
                     </div>
                     <?php echo CHtml::Button('Ingresar!',array("class"=>"btn btn-primary",'onclick'=>'login();')); ?>
-                    <?php /*
-                    echo CHtml::ajaxSubmitButton('Ingresar',CHtml::normalizeUrl(array('site/login')),
-                        array('success'=>'js: function(data) {
-								if(data=="1"){
-									window.location.replace("' . Yii::app()->request->baseUrl . '/index.php");
-								}
-								else{
-								     if(data=="2"){
-                                        window.location.replace("' . Yii::app()->request->baseUrl . 'perfilSocial/index.php");
-
-								     }
-								     else
-								     {
-								       alert(data);
-								     };
-
-								}
-					}',
-
-
-                        ),
-                        array('id'=>'submit_loginlight','class'=>'button')); */
-                    ?>
                     <a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/create" class="btn btn-primary">Registrate!</a>
                     <br>
                     <div class="form-group">
@@ -77,6 +54,11 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
                     <div class="form-group">
                         <div class="error_pw" id="errpass"></div>
                     </div>
+                    <div class="form-group">
+                        <div>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/usuario/Recuperarpassword" class="btn btn-link">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <div>
                 </div>
             </div>
         </nav>
@@ -177,34 +159,27 @@ $cs->registerScriptFile($baseUrl.'/js/login.js');
         </div>
     </div>
     <!-- /END THE FEATURETTES -->
-
+    <br>
+    <br>
     <!-- FOOTER -->
-    <footer>
-        <p class="pull-right"><a href="#">Volvé al principio</a></p>
-        <p>&copy; 2015 DoFit. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
-    </footer>
-</div><!-- /.container -->
-               
-						<div>
-						 <?php echo CHtml::link('¿Olvidaste tu contraseña?',array('usuario/Recuperarpassword'));?>
-						</div>
-
-      <br>
-	 
-	  <?php echo CHtml::link('Ver Instituciones que utilizan DoFit!',array('../aplication/fichaInstitucion'));?><br/><br/>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>
+            &copy; 2015 DoFit.
+            &middot;
+            <a href="#">Privacidad</a>
+            &middot;
+            <a href="#">Terminos</a>
+        </p>
+    </div>
+</footer>
 
 <?php $this->endWidget(); ?>
         </div>
       </div>
  </div>
 
-
-
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-    </div>
-</footer>
 </div>
 <script type='text/javascript'>
     $("#email").blur(function() {

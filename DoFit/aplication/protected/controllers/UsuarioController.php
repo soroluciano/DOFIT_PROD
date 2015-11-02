@@ -26,7 +26,7 @@ class UsuarioController extends Controller
 	 * @return array access control rules
 	 */
 
-	
+
 	public function accessRules()
 	{
 		return array(
@@ -36,7 +36,7 @@ class UsuarioController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				/*'actions'=>array('create','update'),*/
-			'users'=>array('@'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -47,7 +47,7 @@ class UsuarioController extends Controller
 			)
 		);
 	}
-   
+
 	/**
 	 * Displays a particular usuario.
 	 * @param integer $id the ID of the model to be displayed
@@ -65,64 +65,64 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-	  date_default_timezone_set('America/Argentina/Buenos_Aires');
+		date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
-        $send = new SendEmailService;
-        $profesor = new FichaUsuario;
-	    $localidad = new Localidad;
-	    $estado = new Estado;
-		
+		$send = new SendEmailService;
+		$profesor = new FichaUsuario;
+		$localidad = new Localidad;
+		$estado = new Estado;
+
 		// Uncomment the following line if AJAX validation is needed
-	    //$this->performAjaxValidation(array($model,$profesor));
+		//$this->performAjaxValidation(array($model,$profesor));
 
 		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
-		   $model->attributes = $_POST['Usuario'];
-		   $profesor->attributes = $_POST['FichaUsuario'];
-		   $localidad->attributes = $_POST['Localidad'];
- 
-		   $model->fhcreacion = new CDbExpression('NOW()');
-	       $model->fhultmod = new CDbExpression('NOW()');
-		   $model->cusuario = $model->email;
-           $passencr = md5($model->password); // encripto la password en MD5
-		   
-		   $estado = Estado::model()->findByPk(0);
-           $model->id_estado = $estado->id_estado;
-           
-		   $localidad->fhcreacion = new CDbExpression('NOW()');          
-		   $localidad->fhultmod = new CDbExpression('NOW()');
-           $localidad->cusuario = $model->email;	
-		   
-		   $profesor->fhcreacion = new CDbExpression('NOW()');           
-	       $profesor->fhultmod = new CDbExpression('NOW()');
-           $profesor->cusuario = $model->email;
-           $profesor->id_localidad = $_POST['Localidad']['id_localidad']; 	   
-	       $mail = $model->email;
-		   
+			$model->attributes = $_POST['Usuario'];
+			$profesor->attributes = $_POST['FichaUsuario'];
+			$localidad->attributes = $_POST['Localidad'];
+
+			$model->fhcreacion = new CDbExpression('NOW()');
+			$model->fhultmod = new CDbExpression('NOW()');
+			$model->cusuario = $model->email;
+			$passencr = md5($model->password); // encripto la password en MD5
+
+			$estado = Estado::model()->findByPk(0);
+			$model->id_estado = $estado->id_estado;
+
+			$localidad->fhcreacion = new CDbExpression('NOW()');
+			$localidad->fhultmod = new CDbExpression('NOW()');
+			$localidad->cusuario = $model->email;
+
+			$profesor->fhcreacion = new CDbExpression('NOW()');
+			$profesor->fhultmod = new CDbExpression('NOW()');
+			$profesor->cusuario = $model->email;
+			$profesor->id_localidad = $_POST['Localidad']['id_localidad'];
+			$mail = $model->email;
+
 			// valido los modelos
-			$validarusuario = $model->validate();			
-		    $validarficha = $profesor->validate();
-	    if($validarusuario && $validarficha){
-			if($model->save()){
-			   Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
-			   $usuario = Usuario::model()->findByAttributes(array('email'=>$mail));      
-			   $profesor->id_usuario = $usuario->id_usuario;
-			  if($profesor->save()){
-                  $send->Send($model->email);
-			      $this->redirect(array('view','id'=>$model->id_usuario));
-			  }
-			}	
+			$validarusuario = $model->validate();
+			$validarficha = $profesor->validate();
+			if($validarusuario && $validarficha){
+				if($model->save()){
+					Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
+					$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
+					$profesor->id_usuario = $usuario->id_usuario;
+					if($profesor->save()){
+						$send->Send($model->email);
+						echo "actusuok";
+						//$this->redirect(array('view','id'=>$model->id_usuario));
+					}
+				}
+			}
+
 		}
 
-	  }
-	 
-    	 
 		$this->render('create',array(
 			'model'=>$model,
 			'ficha_usuario'=>$profesor,
 			'localidad'=>$localidad
 		));
-	
-  }
+
+	}
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -214,84 +214,94 @@ class UsuarioController extends Controller
 			Yii::app()->end();
 		}
 	}
-	
+
 
 	public function actionSeleccionarLocalidad()
 	{
 
-	 $id_provincia = $_POST['Localidad']['id_provincia'];
-	 $localidades = Localidad::model()->findAll('id_provincia= :id_provincia',array(':id_provincia'=>$id_provincia));
-	 $localidades = CHtml::listData($localidades,'id_localidad','localidad');
-	  
-	  echo CHtml::tag('option',array('value'=>''),'Seleccione una localidad',true);
-	 
-	 foreach ( $localidades as $valor=>$localidadessel){
-		 
-		 echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($localidadessel),true);
-	  }	 
-	
-    } 
-	
+		$id_provincia = $_POST['Localidad']['id_provincia'];
+		$localidades = Localidad::model()->findAll('id_provincia= :id_provincia',array(':id_provincia'=>$id_provincia));
+		$localidades = CHtml::listData($localidades,'id_localidad','localidad');
+
+		echo CHtml::tag('option',array('value'=>''),'Seleccione una localidad',true);
+
+		foreach ( $localidades as $valor=>$localidadessel){
+
+			echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($localidadessel),true);
+		}
+
+	}
+
 	public function actionRecuperarpassword()
 	{
-	  $usuario = new Usuario;
-	  $this->render("Recuperarpassword",array('usuario'=>$usuario));
-	}
-	
-	public function actionRecuperarpassword2()
-	{  
-	   if(isset($_GET['email'])){
-		    $this->render("Recuperarpassword2");
-	   }
-       else{	   
-	   $usuario = new Usuario;
-	   $send = new SendEmailService;
-	   $usuario->attributes = $_POST['Usuario'];
-	   $email = $_POST['Usuario']['email'];
-	   $encontro = 0; 		 
-	  if(isset($email)){ 
-	     $usuarios = Usuario::model()->findAll();
-	     foreach($usuarios as $user){
-	           if($user->email == $email){	 
-		           $encontro =1;
-				   $send->Reestablecerpassword($email);
-                   ?>
-                    <script>
-                     alert("Se envio un mail a su cuenta para reestablecer la contraseña");
-                    </script>
-                  <?php					
-		           $this->render("Recuperarpassword",array('usuario'=>$usuario));
-	           }
-	      }
-	  if($encontro == 0){
-	   ?>
-	    <script>
-		 alert("El usuario no esta registrado");
-		 </script>	
-	<?php
-        $this->render("Recuperarpassword",array('usuario'=>$usuario));
-	   } 
-	  }
-	}// fin del else	 
-	  if(isset($_POST['recpass'])){
-		 $email = $_GET['email']; 
-		 $pass  = $_POST['pass'];		 
-	     if(isset($pass)){
-		    $passencr = md5($pass); 
-		    Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');       
-		    echo "<div style='margin-left:8%'>";
-			echo "Se actualizo correctamente la contraseña de su cuenta<br/>";
-	        echo "<b>".CHtml::link('Volver al Login de DoFit!',array('../aplication'))."</b>";
-		    echo "</div>";   
-	     }	  
-	  }
-   }// fin de la funcion 	 
 
-	
-    public function actionActivarUsuario()
-    {
-      $this->render('ActivarUsuario');
-    }	 
-    
+		if(!isset($_POST['email'])){
+			$this->render("Recuperarpassword");
+		}
+		if(isset($_POST['email'])){
+			$email = $_POST['email'];
+			if($email == ''){
+				echo "emailblanco";
+			}
+			else{
+				$encontro = 0;
+				$usuario = new Usuario;
+				$send = new SendEmailService;
+				$usuarios = Usuario::model()->findAll();
+				foreach($usuarios as $user){
+					if($user->email == $email){
+						$send->Reestablecerpassword($email);
+						$encontro = 1;
+						echo "exitoso";
+					}
+				}
+				if($encontro == 0){
+					echo "error";
+				}
+
+			}
+		}
+	}
+
+	public function actionRecuperarpassword2()
+	{
+		if(isset($_GET['email'])){
+			$this->render("Recuperarpassword2");
+		}
+
+		if(isset($_POST['pass'])){
+			$email = $_POST['email'];
+			$pass  = $_POST['pass'];
+			$expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
+
+			if(isset($pass)){
+				if($pass == ''){
+					echo "passblanco";
+				}
+				else{
+					if(strlen($pass) < 6 || strlen($pass) > 15){
+						echo "longerronea";
+					}
+					else{
+						if(!preg_match($expr_regular, $pass)){
+							echo "expregerronea";
+						}
+						else{
+							$passencr = md5($pass);
+							Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$email.'"');
+							echo "ok";
+						}
+					}
+				}
+			}
+		}
+	}// fin de la funcion
+
+
+	public function actionActivarUsuario()
+	{
+		$this->render('ActivarUsuario');
+	}
+
 }
 ?>

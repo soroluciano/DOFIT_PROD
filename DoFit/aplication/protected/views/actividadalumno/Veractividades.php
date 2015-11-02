@@ -11,54 +11,52 @@ $this->pageTitle=Yii::app()->name;
     $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
 }
 ?>
-<div class="navbar-wrapper">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href='../institucion/home'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a>Bienvenido! <?php echo $fichains->nombre;?></a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraci&oacute;n <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="../ProfesorInstitucion/ListadoProfesores">Ver listado de Profesores</a></li>
-                                    <li><a href="../institucion/ListadoAlumnosxInstitucion">Ver listado de Alumnos</a></li>
-                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../site/LoginInstitucion"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+            <a href="../" class="navbar-brand"></a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../../ProfesorInstitucion/ListadoProfesores">Listado de Profesores</a>
+                </li>
+                <li>
+                    <a href="../../institucion/ListadoAlumnosxInstitucion">Listado de Alumnos</a>
+                </li>
+                <li>
+                    <a href="../../actividad/CrearActividad">Crear Actividades</a>
+                </li>
+                <li>
+                    <a href="../javascript/"></a>
+                </li>
+                <li>
+                    <a href="../customize/"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
+                <li><a href="../../site/LoginInstitucion">Salir</a></li>
+            </ul>
         </nav>
     </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/17.jpg" alt="First slide">
-        </div>
-    </div>
-</div>
+</header>
 <div class="container">
     <div class='row'>
         <?php
-
+        echo"<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>";
         if($actividades_alumno != null) {
             echo "<table class='table table-hover'>
 	            <thead>
@@ -69,6 +67,8 @@ $this->pageTitle=Yii::app()->name;
                 echo "<tr>";
                 $act = Actividad::model()->findByAttributes(array('id_institucion' => $ins->id_institucion, 'id_actividad' => $act_alum->id_actividad));
                 if ($act != null) {
+                    echo "<input type='hidden' value='$act->id_actividad' id='idactividad'></input>";
+                    echo "<input type='hidden' value='$act_alum->id_usuario' id='idalumno'></input>";
                     $deporte = Deporte::model()->findByAttributes(array('id_deporte' =>$act->id_deporte));
                     echo "<td id='depo'>$deporte->deporte</td>";
                     $act_hor = ActividadHorario::model()->findByAttributes(array('id_actividad' => $act->id_actividad));
@@ -85,19 +85,15 @@ $this->pageTitle=Yii::app()->name;
 						<div class='modal-dialog' role='document'>
 						 <div class='modal-content'>
                     <div class='modal-header'>
-                      <button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
+                      <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                       <h4 class='modal-title' id='myModalLabel'>Inscripción</h4>
                   </div>
                   <div class='modal-body'>
                    ¿Estas seguro que desea desafectar al alumno de la actividad?
                   </div>
                  <div class='modal-footer'>
-                  <form action='../DesafectarActividad' method='post'>
-                  <input type='submit'class='btn btn-primary' value='Si'></input>
-                  <input type='hidden' value='$act->id_actividad' name='id_actividad'></input>
-                  <input type='hidden' value='$act_alum->id_usuario' name='id_usuario'></input>
+                  <button type='button' class='btn btn-primary' onclick='javascript:desafectaractividad();'>Si</button>
                   <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
-                  </form>
                 </div>
               </div>
             </div>
@@ -115,4 +111,32 @@ $this->pageTitle=Yii::app()->name;
         ?>
     </div>
 </div>
+
+<script type="text/javascript">
+    function desafectaractividad()
+    {
+        var idactividad = $('#idactividad').val();
+        var idalumno = $('#idalumno').val();
+        var data = {"idactividad":idactividad,"idalumno":idalumno};
+        $.ajax({
+            url :  baseurl + "/actividadalumno/DesafectarActividad",
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response){
+                if(response == "ok"){
+                    location.reload();
+                }
+                if (response == "error"){
+                    $('#mensajeerror').modal('show');
+                }
+            }	,
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+    }
+</script>	
 			   

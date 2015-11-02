@@ -49,16 +49,29 @@ class ProfesorInstitucionController extends Controller
 		$idinstitucion = Yii::app()->user->id;
 		$del_act_hor = Yii::app()->db->createCommand('DELETE from actividad_horario where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute();
 		if($del_act_hor or $del_act_hor == 0){
-			$del_act_alumn = Yii::app()->db->createCommand('DELETE from actividad_alumno where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute();
-			if($del_act_alumn or $del_act_alumn == 0){
-				$del_act = Yii::app()->db->createCommand('DELETE from actividad where id_institucion='.$idinstitucion.' and id_usuario='.$idprofesor)->execute();
+			$del_act_pago = Yii::app()->db->createCommand('DELETE from pago where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute();
+			if($del_act_pago or $del_act_pago == 0){
+				$del_resp = Yii::app()->db->createCommand('DELETE from respuesta where id_posteo IN (SELECT id_posteo from perfil_muro_profesor where id_actividad IN (SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.'))')->execute();
+				if($del_resp or $del_resp == 0){
+					$del_per_muro = Yii::app()->db->createCommand('DELETE from perfil_muro_profesor where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute();
+					if($del_per_muro or $del_per_muro == 0){
+						$del_act_alumn = Yii::app()->db->createCommand('DELETE from actividad_alumno where id_actividad IN(SELECT id_actividad from actividad where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion.')')->execute();
+						if($del_act_alumn or $del_act_alumn == 0){
+							$del_act = Yii::app()->db->createCommand('DELETE from actividad where id_institucion='.$idinstitucion.' and id_usuario='.$idprofesor)->execute();
+						}
+					}
+				}
 			}
 		}
 		$del_ins_prof = Yii::app()->db->createCommand('DELETE from profesor_institucion where id_usuario='.$idprofesor.' and id_institucion='.$idinstitucion)->execute();
 		if($del_ins_prof){
-			$this->redirect('../profesorInstitucion/ListadoProfesores');
+			echo "ok";
+			//$this->redirect('../profesorInstitucion/ListadoProfesores');
 		}
-
+		else
+		{
+			echo "error";
+		}
 	}
 }
 ?>
