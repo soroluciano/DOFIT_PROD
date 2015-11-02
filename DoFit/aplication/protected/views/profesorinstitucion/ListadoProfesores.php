@@ -30,57 +30,57 @@ $this->pageTitle=Yii::app()->name;
     $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
 }
 ?>
-<div class="navbar-wrapper">
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href='../institucion/home'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a>Bienvenido! <?php echo $fichains->nombre;?></a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraci&oacute;n <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="../ProfesorInstitucion/ListadoProfesores">Ver listado de Profesores</a></li>
-                                    <li><a href="../institucion/ListadoAlumnosxInstitucion">Ver listado de Alumnos</a></li>
-                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../site/LoginInstitucion"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+            <a href="../" class="navbar-brand"></a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../ProfesorInstitucion/ListadoProfesores">Listado de Profesores</a>
+                </li>
+                <li>
+                    <a href="../institucion/ListadoAlumnosxInstitucion">Listado de Alumnos</a>
+                </li>
+                <li>
+                    <a href="../actividad/CrearActividad">Crear Actividades</a>
+                </li>
+                <li>
+                    <a href="../javascript/"></a>
+                </li>
+                <li>
+                    <a href="../customize/"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
+                <li><a href="../site/LoginInstitucion">Salir</a></li>
+            </ul>
         </nav>
     </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/17.jpg" alt="First slide">
-        </div>
-    </div>
-</div>
+</header>
 <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class='row'>
         <?php
         $idinstitucion = Yii::app()->user->id;
         $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
         if($profesores !=null){
             echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
+            echo "<br/>";
             echo "<table class='table table-hover'>
            <thead>
             <tr>
@@ -90,7 +90,8 @@ $this->pageTitle=Yii::app()->name;
                 ?>
                 <tbody>
                 <tr>
-                    <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor"></input>
+                    <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor">
+                    </input>
                     <input type="hidden" name="valor" id="valor"></input>
                     <td id="nombre"><?php echo $profesor->nombre;?></td>
                     <td id="apellido"><?php echo $profesor->apellido;?></td>
@@ -116,27 +117,44 @@ $this->pageTitle=Yii::app()->name;
                     <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
                     <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
                     <td><a id="act" href="" onClick="javascript:Mostraractividad(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
-                    <td><a href="" data-toggle="modal" data-target="#myModal" >Eliminar de la institución</a></td>
+                    <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
                 </tr>
                 </tbody>
                 <?php
-                echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                echo "<div class='modal fade' id='borrarprofemodal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>
                   <div class='modal-content'>
                     <div class='modal-header'>
-                      <button type='button' class='close' data-dismiss='modal' aria-label='Close' onClick='location.reload();'><span aria-hidden='true'>&times;</span></button>
+                      <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                       <h4 class='modal-title' id='myModalLabel'>Inscripción</h4>
                   </div>
                   <div class='modal-body'>
-                   ¿Estas seguro que desea elimnar al profesor de la insituci&oacute;n?
+                   ¿Estas seguro que desea elimnar al profesor de la instituci&oacute;n?
                   </div>
                  <div class='modal-footer'>
-                  <button type='button' class='btn btn-primary' onclick='Borrarprofesor($prof->id_usuario);'>Si</button>
+                  <button type='button' class='btn btn-primary' onclick='javascript:Borrarprofesor($prof->id_usuario);'>Si</button>
                   <button type='button' class='btn btn-default' data-dismiss='modal'>No</button>
                 </div>
               </div>
             </div>
          </div>";
+                echo "<div class='modal fade'  id='mensajeerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+				 <div class='modal-dialog' role='document'>
+					<div class='modal-content'>
+						<div class='modal-header'>
+						  <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+							 <h4 class='modal-title' id='myModalLabel'>Recuperar contraseña</h4>
+						 </div>
+						 <div class='modal-body'>
+						   Hubo un error al eliminar el profesor de la instituci&oacute;n.
+						 </div>
+						 <div class='modal-footer'>
+							<button type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+						 </div>
+					</div>
+					</div>
+				</div>
+			  </div>";
             }
             echo "</table>";
         }
@@ -155,14 +173,25 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
     function Borrarprofesor(idprofesor)
     {
-        var idprofesor = idprofesor;
+        var idprofesor = $('#idprofesor').val();
         var data = {"idprofesor":idprofesor};
         $.ajax({
             url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
             type: "POST",
-            dataType : "json",
+            dataType : "html",
             data : data,
-            cache: false
+            cache: false,
+            success: function (response){
+                if(response == "ok"){
+                    location.reload();
+                }
+                if (response == "error"){
+                    $('#mensajeerror').modal('show');
+                }
+            }	,
+            error: function (e) {
+                console.log(e);
+            }
         });
 
     }

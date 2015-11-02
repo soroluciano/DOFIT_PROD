@@ -46,7 +46,7 @@ $this->pageTitle=Yii::app()->name;
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a></li>
                 <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+                <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
     </div>
