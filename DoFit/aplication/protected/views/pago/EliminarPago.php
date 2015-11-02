@@ -145,7 +145,7 @@ if(!Yii::app()->user->isGuest){
                         success: function (response) {
                             var html = "<table class='table table-bordered'><thead><tr><th>Actividad</th><th>Año</th><th>Mes</th><th>Monto</th></thead><tbody>";
                             for (i = 0; i < response.length; i++) {
-                                html += "<tr><td>" + response[i].actividad + "</td><td>" + response[i].anio + "</td><td>" + response[i].mes + "</td><td>" + response[i].monto + "</td><td><button type='button'  onclick='eliminar_pago(this.value);' class='btn btn-primary' id='boton' value='" + response[i].id + "'>Eliminar </button></td><td><button type='button'  onclick='ver_factura(this.value);' class='btn btn-primary' id='boton' value='" + response[i].id + "'>Ver factura </button></td><tr>";
+                                html += "<tr><td>" + response[i].actividad + "</td><td>" + response[i].anio + "</td><td>" + response[i].mes + "</td><td>" + response[i].monto + "</td><td><button type='button'  onclick='eliminar_pago(this.value);' class='btn btn-primary' id='boton' value='" + response[i].id + "'>Eliminar </button></td><td><button  onclick='ver_factura(this.value);' class='btn btn-primary' id='boton' value='" + response[i].id + "'>Ver factura </button></td><tr>";
                             }
                             html += "</tbody></table>";
                             $('#lista').html(html);
@@ -193,7 +193,7 @@ if(!Yii::app()->user->isGuest){
 </script>
 
 <script type="text/javascript">
-        function eliminar_pago(value) {
+        function ver_factura(value) {
             var id = value;
             var usuario = $('#FichaUsuario_id_usuario').val();
             var anio = $('#Pago_anio').val();
@@ -202,22 +202,7 @@ if(!Yii::app()->user->isGuest){
                 if(usuario != ""){
                     if(anio != ""){
                         if(mes != "") {
-                            var data = {'id': id, 'usuario': usuario, 'anio': anio, 'mes': mes};
-                            $.ajax({
-                                url: '../pago/factura',
-                                type: 'POST',
-                                data: data,
-                                dataType: "html",
-                                cache: false,
-                                success: function (response) {
-                                    if (response == "ok") {
-                                        $('#Ok').modal('show');
-                                    }
-                                    else {
-                                        $('#Error').modal('show');
-                                    }
-                                }
-                            })
+                            window.open("../pago/factura?idusuario="+usuario+"&idactividad="+id+"&anio="+anio+"&mes="+mes,'','width=1000, height=1000');
                         }
                     }
                 }
