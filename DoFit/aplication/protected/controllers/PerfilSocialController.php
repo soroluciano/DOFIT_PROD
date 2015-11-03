@@ -194,10 +194,9 @@ class PerfilSocialController extends Controller
 	public function actionGaleria(){
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
 		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen
-		
+		$fuModel= new FileUpload();//modelo que permite subir archivos de imagen	
 		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
+
 		
 		/*carga de div de confirmacion vacia*/
 		
@@ -220,12 +219,6 @@ class PerfilSocialController extends Controller
 				$perfilSocial->$foto =	new CDbExpression('NULL');
 				$perfilSocial->update();
 			}
-			
-			//$this->render('galeria',array(
-			//	'Us'=>$Us,
-			//	'perfilSocial'=>$perfilSocial
-			//	));	
-			//}
 	}
 	
 	public function actionMostrarImagenes(){

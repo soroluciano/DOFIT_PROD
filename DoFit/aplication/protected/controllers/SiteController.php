@@ -29,24 +29,24 @@ class SiteController extends Controller
     {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-
-
-        if (!isset(Yii::app()->session['id_usuario'])){
-            if (isset(Yii::app()->session['admin'])) {
-                $this->redirect('indexAdmin');
-            }
-            else{
-                if(isset(Yii::app()->session['id_institucion'])){
-                    $this->redirect('../institucion/home');
-                }
-                else{
-                    $this->redirect('login');
-                }
-            }
-        }
-        else{
-            $this->render('index');
-        }
+             $this->render('index');
+        //
+        //if (!isset(Yii::app()->session['id_usuario'])){
+        //    if (isset(Yii::app()->session['admin'])) {
+        //        $this->redirect('indexAdmin');
+        //    }
+        //    else{
+        //        if(isset(Yii::app()->session['id_institucion'])){
+        //            $this->redirect('../institucion/home');
+        //        }
+        //        else{
+        //            $this->redirect('login');
+        //        }
+        //    }
+        //}
+        //else{
+        //    $this->render('index');
+        //}
 
     }
 
