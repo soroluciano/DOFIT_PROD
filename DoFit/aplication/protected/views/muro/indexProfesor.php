@@ -2,7 +2,7 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/muro.css" rel="stylesheet">
 <script type="text/javascript">
-	$(function(){
+/*	$(function(){
             var pusher = new Pusher('c48d59c4cb61c7183954');
             var canal  = pusher.subscribe('canalo');
             
@@ -89,7 +89,7 @@
                   
       }
       window.onload = load;  
-
+*/
 </script>
 
 
@@ -100,9 +100,8 @@ $cs->registerScriptFile($baseUrl.'/js/muro.js');
 ?>
 
 <?php
-/* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
+	$this->pageTitle=Yii::app()->name;
 ?>
 
 <?php 
@@ -114,43 +113,46 @@ $this->pageTitle=Yii::app()->name;
   }
 ?>
   
+<?php $this->renderPartial('_menu'); ?>
   
-  
-  
-	<?php $this->renderPartial('_menu'); ?>
-  
-  
-  
-
-			<?php // $this->renderPartial('_posts', array('perfilSocial'=>$perfilSocial)); ?>
 <body>
   <div id="container" class="container">
     <div>
         <h1>Soy Profesor</h1>
     </div>
 
-    <div class="row">
-      <div class="col-md-8 contenedor-espaciado">
-                  <div class="widget-area no-padding blank">
-                  <div class="status-upload">
-                    <form action="" method="post">
-                      <textarea placeholder="What are you doing right now?" id="input_mensaje"></textarea>
-                      <ul>
-                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
-                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
-                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
-                        <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
-                      </ul>
-                      <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Publicar</button>
-                    </form>
-                  </div><!-- Status Upload  -->
-                </div><!-- Widget Area -->
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-md-8 contenedor-espaciado">
+			<div class="widget-area no-padding blank">
+				<div class="status-upload">
+					<form action="" method="post">
+						<textarea placeholder="What are you doing right now?" id="input_mensaje"></textarea>
+						<ul>
+						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+						</ul>
+						<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Publicar</button>
+					</form>
+				</div><!-- Status Upload  -->
+			</div><!-- Widget Area -->
+		</div>
+	</div>
+    <?php
+    if($resultSet!=null){
+      foreach($resultSet as $res){
+        echo $res->id_posteo;  
+      }
+    
+    }
+      
+     ?>
 
     <div id="comentarios" class="row">
-
+		<?php $this->renderPartial('_posts'); ?>
     </div>
+	
 </div>   
 </body>
 

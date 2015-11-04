@@ -1,0 +1,426 @@
+2015/11/04 04:15:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\chat\index.php:100)
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(869): ChatController->renderFile()
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(782): ChatController->renderPartial()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ChatController.php(6): ChatController->render()
+#3 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\actions\CInlineAction.php(49): ChatController->actionIndex()
+#4 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(286): ChatController->runAction()
+#6 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CController.php(265): ChatController->runActionWithFilters()
+#7 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(282): ChatController->run()
+#8 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/chat/index
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\views\chat\index.php (100)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\protected\controllers\ChatController.php (6)
+in C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php (13)
+2015/11/04 04:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+HTTP_REFERER=http://localhost/DOFIT_FINAL/DoFit/aplication/chat/index
+---
+2015/11/04 04:17:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/11/04 04:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/11/04 04:17:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/11/04 04:18:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/11/04 04:18:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/11/04 04:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\xampp\htdocs\DOFIT_FINAL\DoFit\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\DOFIT_FINAL\DoFit\aplication\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/index
+---
+2015/11/04 15:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(270): CController->missingAction('')
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('')
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro')
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro
+---
+2015/11/04 17:34:39 [error] [php] Trying to get property of non-object (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php:10)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): MuroController->runAction()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): MuroController->runActionWithFilters()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): MuroController->run()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (10)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:35:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.Actividad' doesn't exist. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN Actividad ac on pmp.id_actividad=ac.id_actividad INNER JOIN Perfil_Social ps on ps.id_usuario = ac.id_usuario inner join Usuario usu on usu.id_usuario = ac.id_usuario INNER JOIN Ficha_Usuario fu on fu.id_usuario= usu.id_usuario WHERE usu.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:35:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.Actividad' doesn't exist. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN Actividad ac on pmp.id_actividad=ac.id_actividad INNER JOIN Perfil_Social ps on ps.id_usuario = ac.id_usuario inner join Usuario usu on usu.id_usuario = ac.id_usuario INNER JOIN Ficha_Usuario fu on fu.id_usuario= usu.id_usuario WHERE usu.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:37:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.Usuario' doesn't exist. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad ac on pmp.id_actividad=ac.id_actividad INNER JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join Usuario usu on usu.id_usuario = ac.id_usuario INNER JOIN ficha_usuario fu on fu.id_usuario= usu.id_usuario WHERE usu.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:37:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dofit.Usuario' doesn't exist. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad ac on pmp.id_actividad=ac.id_actividad INNER JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join Usuario usu on usu.id_usuario = ac.id_usuario INNER JOIN ficha_usuario fu on fu.id_usuario= usu.id_usuario WHERE usu.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:37:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pmp.id_posteo' in 'field list'. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad ac on pmp.id_actividad=ac.id_actividad INNER JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario INNER JOIN ficha_usuario fu on fu.id_usuario= usu.id_usuario WHERE usu.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:37:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pmp.id_posteo' in 'field list'. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad ac on pmp.id_actividad=ac.id_actividad INNER JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario INNER JOIN ficha_usuario fu on fu.id_usuario= usu.id_usuario WHERE usu.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:39:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pmp.id_posteo' in 'field list'. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario= usuario.id_usuario WHERE usu.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:39:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pmp.id_posteo' in 'field list'. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario= usuario.id_usuario WHERE usu.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:39:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pmp.id_posteo' in 'field list'. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario= usuario.id_usuario WHERE usu.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:39:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pmp.id_posteo' in 'field list'. The SQL statement executed was: SELECT pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario= usuario.id_usuario WHERE usu.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:40:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario= usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:40:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario= usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:54:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_actividad' in 'on clause'. The SQL statement executed was: SELECT perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:54:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_actividad' in 'on clause'. The SQL statement executed was: SELECT perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:56:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on actividad.id_actividad=perfil_muro_profesor.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:56:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on actividad.id_actividad=perfil_muro_profesor.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 17:57:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 17:57:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 18:12:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=a' at line 1. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:12:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=a' at line 1. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 18:20:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:20:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 18:24:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:24:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 18:25:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=a' at line 1. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:25:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=a' at line 1. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` perfil_muro_profesor INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 18:25:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value.
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (23)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:25:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'perfil_muro_profesor.id_posteo' in 'field list'. The SQL statement executed was: SELECT perfil_muro_profesor.id_posteo,perfil_muro_profesor.posteo,perfil_social.foto1,ficha_usuario.nombre,ficha_usuario.apellido FROM `perfil_muro_profesor` `t` INNER JOIN actividad on perfil_muro_profesor.id_actividad=actividad.id_actividad INNER JOIN perfil_social on perfil_social.id_usuario = actividad.id_usuario inner join usuario on usuario.id_usuario = actividad.id_usuario INNER JOIN ficha_usuario on ficha_usuario.id_usuario = usuario.id_usuario WHERE usuario.id_usuario = :value' in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(23): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): CController->run('indexProfesor')
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController('muro/indexProfe...')
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+---
+2015/11/04 18:29:00 [error] [php] Undefined variable: resultSet (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/indexProfesor.php:143)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(869): MuroController->renderFile()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(782): MuroController->renderPartial()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(45): MuroController->render()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): MuroController->runAction()
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): MuroController->runActionWithFilters()
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): MuroController->run()
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/indexProfesor.php (143)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (45)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:32:17 [error] [php] Undefined variable: resultSet (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/indexProfesor.php:143)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(869): MuroController->renderFile()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(782): MuroController->renderPartial()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(45): MuroController->render()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): MuroController->runAction()
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): MuroController->runActionWithFilters()
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): MuroController->run()
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/indexProfesor.php (143)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (45)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
+2015/11/04 18:32:19 [error] [php] Undefined variable: resultSet (/opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/indexProfesor.php:143)
+Stack trace:
+#0 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(869): MuroController->renderFile()
+#1 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(782): MuroController->renderPartial()
+#2 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php(45): MuroController->render()
+#3 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/actions/CInlineAction.php(49): MuroController->actionIndexProfesor()
+#4 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(286): MuroController->runAction()
+#6 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CController.php(265): MuroController->runActionWithFilters()
+#7 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(282): MuroController->run()
+#8 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php(13): CWebApplication->run()
+REQUEST_URI=/DOFIT_FINAL/DoFit/aplication/muro/indexProfesor
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/views/muro/indexProfesor.php (143)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/protected/controllers/MuroController.php (45)
+in /opt/lampp/htdocs/DOFIT_FINAL/DoFit/aplication/index.php (13)
