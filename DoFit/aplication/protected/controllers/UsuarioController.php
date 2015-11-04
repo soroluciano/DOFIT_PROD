@@ -65,6 +65,7 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
+
 		date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
 		$send = new SendEmailService;
@@ -74,20 +75,47 @@ class UsuarioController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		//$this->performAjaxValidation(array($model,$profesor));
+		if(isset($_POST['enviar'])){
+			$model->email = $_POST['email'];
+			if($model->email == ''){
+				echo "err_mail/";
+			}
+			else
+			{
+				echo "/";
+			}
+			$model->password = $_POST['password'];
+			if($model->password == ''){
+				echo "err_pass/";
+			}
+			else{
+				echo "/";
+			}
+			$model->id_perfil = $_POST['id_perfil'];
+			$profesor->nombre = $_POST['nombre'];
+			$profesor->apellido = $_POST['apellido'];
+			$profesor->dni = $_POST['dni'];
+			$profesor->sexo = $_POST['sexo'];
+			$profesor->fechanac = $_POST['fechanac'];
+			$profesor->telfijo = $_POST['telfijo'];
+			$profesor->conemer = $_POST['conemer'];
+			$profesor->telemer = $_POST['telemer'];
+			$profesor->direccion = $_POST['direccion'];
+			$profesor->piso = $_POST['piso'];
+			$profesor->depto = $_POST['depto'];
 
-		if(isset($_POST['Usuario'],$_POST['FichaUsuario'],$_POST['Localidad'])){
-			$model->attributes = $_POST['Usuario'];
+			/*$model->attributes = $_POST['Usuario'];
 			$profesor->attributes = $_POST['FichaUsuario'];
-			$localidad->attributes = $_POST['Localidad'];
+			$localidad->attributes = $_POST['Localidad'];*/
 
 			$model->fhcreacion = new CDbExpression('NOW()');
 			$model->fhultmod = new CDbExpression('NOW()');
 			$model->cusuario = $model->email;
 			$passencr = md5($model->password); // encripto la password en MD5
-
 			$estado = Estado::model()->findByPk(0);
 			$model->id_estado = $estado->id_estado;
 
+			$localidad->id_provincia = $_POST['provincia'];
 			$localidad->fhcreacion = new CDbExpression('NOW()');
 			$localidad->fhultmod = new CDbExpression('NOW()');
 			$localidad->cusuario = $model->email;
@@ -95,33 +123,31 @@ class UsuarioController extends Controller
 			$profesor->fhcreacion = new CDbExpression('NOW()');
 			$profesor->fhultmod = new CDbExpression('NOW()');
 			$profesor->cusuario = $model->email;
-			$profesor->id_localidad = $_POST['Localidad']['id_localidad'];
+			$profesor->id_localidad = $_POST['localidad'];
 			$mail = $model->email;
 
 			// valido los modelos
-			$validarusuario = $model->validate();
-			$validarficha = $profesor->validate();
-			if($validarusuario && $validarficha){
-				if($model->save()){
-					Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
-					$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
-					$profesor->id_usuario = $usuario->id_usuario;
-					if($profesor->save()){
-						$send->Send($model->email);
-						echo "actusuok";
-						//$this->redirect(array('view','id'=>$model->id_usuario));
-					}
+			//$validarusuario = $model->validate();
+			//$validarficha = $profesor->validate();
+			if($model->save()){
+				Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
+				$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
+				$profesor->id_usuario = $usuario->id_usuario;
+				if($profesor->save()){
+					$send->Send($model->email);
+					echo "actusuok";
 				}
 			}
 
+
 		}
-
-		$this->render('create',array(
-			'model'=>$model,
-			'ficha_usuario'=>$profesor,
-			'localidad'=>$localidad
-		));
-
+		else{
+			$this->render('create',array(
+				'model'=>$model,
+				'ficha_usuario'=>$profesor,
+				'localidad'=>$localidad
+			));
+		}
 	}
 	/**
 	 * Updates a particular model.
