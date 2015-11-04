@@ -5,8 +5,28 @@ class MuroController extends Controller
 {
     public function actionIndexProfesor()
     {
-      	$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+      	$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+		
+		
+//		http://www.yiiframework.com/forum/index.php/topic/47668-join-query-in-yii-framework/page__view__findpost__p__223069
+//		$criteria = new CDbCriteria;
+//        $criteria->select = 't.*';
+//        $criteria->join ='LEFT JOIN products_categories ON products_categories.products_id = t.products_id';
+//        $criteria->condition = 'products_categories.categories_id = :value';
+//        $criteria->params = array(":value" => "C1");
+//
+//
+//
+//        Product::model()->findAll($criteria);
+		
+		
+	//	$actividad = Actividad::model()->findAll('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+		
+	//	$muroProfesor = PerfilMuroProfesor::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$usuario->id_usuario));
+		
+		/*
 		$queryPrueba = "select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido
 		from Perfil_Muro_Profesor pmp 
 		inner join Actividad ac 
@@ -19,7 +39,7 @@ class MuroController extends Controller
 		on fu.id_usuario= usu.id_usuario
 		where usu.id_usuario = 5
 		order by pmp.fhcreacion desc,pmp.fhultmod desc
-		";
+		";*/
 
 	    //$list = Yii::app()->db->createCommand('select id_posteo,posteo where id_actividad =' . $_POST['id_actividad']')->queryAll()');
 
