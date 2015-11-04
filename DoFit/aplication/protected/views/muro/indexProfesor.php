@@ -107,12 +107,12 @@ $this->pageTitle=Yii::app()->name;
 
 <?php 
 
-if(!Yii::app()->user->isGuest){
+	if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
      $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
      $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
   }
-  ?>
+?>
   
   
   
@@ -149,7 +149,7 @@ if(!Yii::app()->user->isGuest){
     </div>
 
     <div id="comentarios" class="row">
-       <?php echo $rows; ?>
+
     </div>
 </div>   
 </body>
