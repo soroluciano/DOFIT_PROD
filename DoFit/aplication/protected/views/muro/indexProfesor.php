@@ -1,97 +1,8 @@
 
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/muro.css" rel="stylesheet">
-<script type="text/javascript">
-/*	$(function(){
-            var pusher = new Pusher('c48d59c4cb61c7183954');
-            var canal  = pusher.subscribe('canalo');
-            
-            canal.bind('nuevo_comentario', function(respuesta){
-                $('#comentarios').append('<li>' + respuesta.mensaje  + '</li>');
-            });
-
-            $('form').submit(function(){
-            
-                $.ajax({
-                    url: "insertar.php",
-                    type: 'post',
-                    data: { input_mensaje: $('#input_mensaje').val() },
-                    success:function(response){
-                        //alert( "Data Saved: " + response );
-                    },
-                    error: function(e){
-                    $('#logger').html(e.responseText);
-                    }
-                });
-                
-                
-                
-                $.post('ajax.php', {
-                    msj : $('#input_mensaje').val(),
-                    socket_id : pusher.connection.socket_id
-                }
-                , function(respuesta){
-                        $('#comentarios').append('<li>' + respuesta.mensaje  + '</li>');
-                }, 'json');
-
-                return false;
-            });
-        });
-     
-     
-       function getMensajesFromBase(){
-            // $('#comentarios').append('<li>' + respuesta.mensaje  + '</li>');
-                $.ajax({
-                    //url: "mensajes.php",
-                    url: "muroProfesor.php",
-                    type: 'post',
-                    data: {},
-                    success:function(response){
-                        $('#comentarios').html(response);
-                    },
-                    error: function(e){
-                    $('#logger').html(e.responseText);
-                    }
-                });
-       }
-        
-        
-        $(function(){
-        
-            var pusher = new Pusher('c48d59c4cb61c7183954');
-            var canal  = pusher.subscribe('canalo');
-
-            canal.bind('nuevo_comentario', function(){
-                getMensajesFromBase();
-               
-            });
-
-            $('form').submit(function(){
-                $.post('ajax.php', { msj : $('#input_mensaje').val(), socket_id : pusher.connection.socket_id }, function(respuesta){
-                    $('#comentarios').append('<li>' + respuesta.mensaje  + '</li>');
-                }, 'json');
-
-                return false;
-            });
-        });
-        
-      $(document).ready(function(){    
-        $("[data-toggle=tooltip]").tooltip();
-    });
-      
-     function load() {
-       var loadedWindow = 0;
-          debugger;
-          if (loadedWindow == 0) {
-            getMensajesFromBase();
-            loadedWindow = 1;
-          }
-                  
-      }
-      window.onload = load;  
-*/
-</script>
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
 <?php
 $baseUrl = Yii::app()->baseUrl; 
@@ -99,18 +10,30 @@ $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/muro.js');
 ?>
 
-<?php
 
-	$this->pageTitle=Yii::app()->name;
+<?php if(!Yii::app()->user->isGuest){
+    //Es un usuario logueado.
+    //$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+
+	//$actividades = Yii::app()->db->createCommand("select distinct(act.id_actividad) from actividad act left join usuario us on act.id_usuario=us.id_usuario where us=".$usuario->id_usuario."")->queryAll();
+
+    //$actividad = Actividad::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+	
+}
 ?>
 
-<?php 
 
+<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>
+
+<?php
+	
+	$this->pageTitle=Yii::app()->name;
+	
 	if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
-     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-  }
+	$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+	$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+	}
 ?>
   
 <?php $this->renderPartial('_menu'); ?>
@@ -118,7 +41,7 @@ $cs->registerScriptFile($baseUrl.'/js/muro.js');
 <body>
   <div id="container" class="container">
     <div>
-        <h1>Soy Profesor</h1>
+      <!--  <h1>Soy Profesor</h1>-->
     </div>
 
 	<div class="row">
@@ -126,11 +49,11 @@ $cs->registerScriptFile($baseUrl.'/js/muro.js');
 			<div class="widget-area no-padding blank">
 				<div class="status-upload">
 					<form action="" method="post">
-						<textarea placeholder="What are you doing right now?" id="input_mensaje"></textarea>
+						<textarea placeholder="¿Qué estas pensando?" id="input_mensaje"></textarea>
 						<ul>
-						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+<!--					<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
 						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
-						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>-->
 						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
 						</ul>
 						<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Publicar</button>
@@ -139,18 +62,8 @@ $cs->registerScriptFile($baseUrl.'/js/muro.js');
 			</div><!-- Widget Area -->
 		</div>
 	</div>
-    <?php
-    if($resultSet!=null){
-      foreach($resultSet as $res){
-        echo $res->id_posteo;  
-      }
-    
-    }
-      
-     ?>
-
     <div id="comentarios" class="row">
-		<?php $this->renderPartial('_posts'); ?>
+		<?php $this->renderPartial('_mensajesProfesor',array('resultSet'=>$resultSet)); ?>
     </div>
 	
 </div>   
