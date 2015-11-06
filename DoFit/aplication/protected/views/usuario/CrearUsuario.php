@@ -26,15 +26,18 @@
                         <div class="form-group">
                             <?php echo $form->labelEx($model,'email',array('for'=>"exampleInputEmail1")); ?>
                             <?php echo $form->textField($model,'email',array('name'=>'email','class'=>"form-control",'placeholder'=>"Tu email",'id'=>"email",'size'=>60,'maxlength'=>60)); ?>
-                            <div class="form-group has-error" id="err_mail">
-                                <label class="control-label" for="inputError" id="email">Ingrese un mail.</label>
+                            <div class="form-group has-error" id="err_mail_vacio">
+                                <label class="control-label" for="inputError" id="emailvacio">Ingrese un mail.</label>
+                            </div>
+							<div class="form-group has-error" id="err_mail_exprreg">
+                                <label class="control-label" for="inputError" id="passvacio">Ingrese una dirección de correo válida.</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <?php echo $form->labelEx($model,'password'); ?>
                             <?php echo $form->passwordField($model,'password',array('id'=>'password','name'=>'password','class'=>"form-control",'placeholder'=>"Elegí una contraseña",'maxlength'=>15));?>
-                            <div class="form-group has-error" id="err_pass">
-                                <label class="control-label" for="inputError" id="pass">Ingrese una contraseña.</label>
+                            <div class="form-group has-error" id="err_pass_vacio">
+                                <label class="control-label" for="inputError" id="passvacio">Ingrese una contraseña.</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -42,22 +45,32 @@
                             <div>
                                 <?php echo $form->dropDownList($model,'id_perfil',CHtml::listData(Perfil::model()->findAll(),'id_perfil','perfil'),array('empty'=>'¿Sos alumno o profesor?','class'=>"form-control",'name'=>'id_perfil','id'=>'id_perfil'));?>
                             </div>
-                            <?php echo $form->error($model,'id_perfil',array("class"=>"error_pw")); ?>
+						    <div class="form-group has-error" id="err_perfil_vacio">
+                                <label class="control-label" for="inputError" id="perfilvacio">Seleccione un perfil.</label>
+                            </div>
+                            
                         </div>
                         <div class="form-group">
                             <?php echo $form->labelEx($ficha_usuario,'nombre'); ?>
                             <?php echo $form->textField($ficha_usuario,'nombre',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu nombre")); ?>
                             <?php echo $form->error($ficha_usuario,'nombre',array("class"=>"error_pw")); ?>
-                        </div>
+                             <div class="form-group has-error" id="err_nombre_vacio">
+                                <label class="control-label" for="inputError" id="nombrevacio">Ingrese un nombre.</label>
+                            </div>                    
+						</div>
                         <div class="form-group">
                             <?php echo $form->labelEx($ficha_usuario,'apellido'); ?>
                             <?php echo $form->textField($ficha_usuario,'apellido',array('size'=>200,'maxlength'=>200,'class'=>"form-control",'placeholder'=>"Tu apellido")); ?>
-                            <?php echo $form->error($ficha_usuario,'apellido',array("class"=>"error_pw")); ?>
+                             <div class="form-group has-error" id="err_apellido_vacio">
+                                <label class="control-label" for="inputError" id="apellidovacio">Ingrese un apellido.</label>
+                            </div>     
                         </div>
                         <div class="form-group">
                             <?php echo $form->labelEx($ficha_usuario,'dni'); ?>
                             <?php echo $form->textField($ficha_usuario,'dni',array('size'=>8,'maxlength'=>8,'class'=>"form-control",'placeholder'=>"Tu dni")); ?>
-                            <?php echo $form->error($ficha_usuario,'dni',array("class"=>"error_pw")); ?>
+                            <div class="form-group has-error" id="err_dni_vacio">
+                                <label class="control-label" for="inputError" id="dnivacio">Ingrese un número de documento.</label>
+                            </div>     
                         </div>
                         <div class="form-group">
                             <?php echo $form->labelEx($ficha_usuario,'sexo'); ?>
@@ -161,8 +174,14 @@ echo"<div class='modal fade' id='mensajeregistrook' tabindex='-1' role='dialog' 
 <script type="text/javascript">
     $(document).ready(function() {
         $('#myModal').modal('show');
-        $('#err_mail').hide();
-        $('#err_pass').hide();
+        $('#err_mail_vacio').hide();
+		$('#err_mail_exprreg').hide();
+        $('#err_pass_vacio').hide();
+		$('#err_perfil_vacio').hide();
+		$('#err_nombre_vacio').hide();
+		$('#err_apellido_vacio').hide();
+		$('#err_dni_vacio').hide();
+		
     });
 </script>
 
@@ -194,22 +213,66 @@ echo"<div class='modal fade' id='mensajeregistrook' tabindex='-1' role='dialog' 
             cache: false,
             success: function(response) {
                 res = response.split("/");
-                if(res[0] == "err_mail"){
-                    $('#err_mail').show();
+                if(res[0] == "err_mail_vacio"){
+                    $('#err_mail_vacio').show();
                     $('#email').css("border-color","#a94442");
                 }
                 else{
-                    $('#err_mail').hide();
+                    $('#err_mail_vacio').hide();
                     $('#email').removeAttr('style');
                 }
-                if(res[1] == "err_pass"){
-                    $('#err_pass').show();
+                
+				if(res[1] == "err_mail_exprreg"){
+                    $('#err_mail_exprreg').show();
+                    $('#email').css("border-color","#a94442");
+                }
+                else{
+                    $('#err_mail_exprreg').hide();
+                    $('#email').removeAttr('style');
+                }
+				if(res[2] == "err_pass_vacio"){
+                    $('#err_pass_vacio').show();
                     $('#password').css("border-color","#a94442");
                 }
                 else{
-                    $('#err_pass').hide();
+                    $('#err_pass_vacio').hide();
                     $('#password').removeAttr('style');
                 }
+				if(res[3] == "err_perfil_vacio"){
+					$('#err_perfil_vacio').show();
+                    $('#id_perfil').css("border-color","#a94442");
+			    }
+                else{
+					$('#err_perfil_vacio').hide(); 
+					$('#id_perfil').removeAttr('style');
+				}
+	            
+			    if(res[4] == "err_nombre_vacio"){
+					$('#err_nombre_vacio').show();
+                    $('#nombre').css("border-color","#a94442");
+			    }
+                else{
+					$('#err_nombre_vacio').hide(); 
+					$('#nombre').removeAttr('style');
+				}
+                if(res[5] == "err_apellido_vacio"){
+                    $('#err_apellido_vacio').show();
+                    $('#apellido').css("border-color","#a94442");  					
+				}
+               else{
+					$('#err_apellido_vacio').hide(); 
+					$('#apellido').removeAttr('style');
+				}
+				
+			   if(res[6] == "err_dni_vacio"){
+                    $('#err_dni_vacio').show();
+                    $('#dni').css("border-color","#a94442");  					
+				}
+               else{
+					$('#err_dni_vacio').hide(); 
+					$('#dni').removeAttr('style');
+				}
+				
                 if(response == "actusuok"){
                     $('#mensajeregistrook').modal('show');
                 }

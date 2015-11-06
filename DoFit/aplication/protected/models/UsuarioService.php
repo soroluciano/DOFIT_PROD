@@ -86,4 +86,14 @@ class UsuarioService
 		}
 	
 	}
+	
+	public function CampoVacio($strcampnom)
+	{
+	  if($strcampnom == ''){
+		  return true;
+	  }
+      else{
+         return false;
+	  }
+    }	
 }

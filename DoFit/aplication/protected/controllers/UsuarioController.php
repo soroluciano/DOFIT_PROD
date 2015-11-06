@@ -69,6 +69,7 @@ class UsuarioController extends Controller
 		date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
 		$send = new SendEmailService;
+		$userv = new UsuarioService;
 		$profesor = new FichaUsuario;
 		$localidad = new Localidad;
 		$estado = new Estado;
@@ -77,30 +78,89 @@ class UsuarioController extends Controller
 		//$this->performAjaxValidation(array($model,$profesor));
 		if(isset($_POST['enviar'])){
 			$model->email = $_POST['email'];
-			if($model->email == ''){
-				echo "err_mail/";
+			if($userv->CampoVacio($model->email)){
+				echo "err_mail_vacio/";
 			}
 			else
 			{
 				echo "/";
 			}
+			
+			if(!filter_var($model->email, FILTER_VALIDATE_EMAIL) && !($userv->CampoVacio($model->email))){
+				echo "err_mail_exprreg/";
+		    }
+            else
+            {
+              echo "/";
+            }
+ 
+                     			
+			
 			$model->password = $_POST['password'];
-			if($model->password == ''){
-				echo "err_pass/";
+			if($userv->CampoVacio($model->password)){
+				echo "err_pass_vacio/";
 			}
 			else{
 				echo "/";
 			}
+			
 			$model->id_perfil = $_POST['id_perfil'];
+			if($userv->CampoVacio($model->id_perfil)){
+			    echo "err_perfil_vacio/";
+			}
+     	    else{
+				echo "/";
+			}
+			
 			$profesor->nombre = $_POST['nombre'];
+			if($userv->CampoVacio($profesor->nombre)){
+			   echo "err_nombre_vacio/";
+			}
+           	else{
+				echo "/";
+			}		 
+			
 			$profesor->apellido = $_POST['apellido'];
+	        if($userv->CampoVacio($profesor->apellido)){
+			   echo "err_apellido_vacio/";
+			}
+           	else{
+				echo "/";
+			}		 
 			$profesor->dni = $_POST['dni'];
+			if($userv->CampoVacio($profesor->dni)){
+			   echo "err_dni_vacio/";
+			}
+           	else{
+				echo "/";
+			}	 
+			
 			$profesor->sexo = $_POST['sexo'];
+			if($userv->CampoVacio($profesor->sexo)){
+			   echo "err_sexo_vacio/";
+			}
+           	else{
+				echo "/";
+			}	 
+			
 			$profesor->fechanac = $_POST['fechanac'];
+			if($userv->CampoVacio($profesor->fechanac)){
+			   echo "err_fechanac_vacia/";
+			}
+           	else{
+				echo "/";
+			}
+			
 			$profesor->telfijo = $_POST['telfijo'];
 			$profesor->conemer = $_POST['conemer'];
 			$profesor->telemer = $_POST['telemer'];
 			$profesor->direccion = $_POST['direccion'];
+		    if($userv->CampoVacio($profesor->direccion)){
+			   echo "err_direccion_vacia/";
+			}
+           	else{
+				echo "/";
+			}
 			$profesor->piso = $_POST['piso'];
 			$profesor->depto = $_POST['depto'];
 
@@ -116,6 +176,13 @@ class UsuarioController extends Controller
 			$model->id_estado = $estado->id_estado;
 
 			$localidad->id_provincia = $_POST['provincia'];
+			if($userv->CampoVacio($localidad->id_provincia)){
+				echo "err_prov_vacia";
+			}
+			else {
+			   echo "/";
+			}    
+			
 			$localidad->fhcreacion = new CDbExpression('NOW()');
 			$localidad->fhultmod = new CDbExpression('NOW()');
 			$localidad->cusuario = $model->email;
@@ -123,7 +190,15 @@ class UsuarioController extends Controller
 			$profesor->fhcreacion = new CDbExpression('NOW()');
 			$profesor->fhultmod = new CDbExpression('NOW()');
 			$profesor->cusuario = $model->email;
+			
 			$profesor->id_localidad = $_POST['localidad'];
+			if($userv->CampoVacio($profesor->id_localidad)){
+				echo "err_loc_vacia";
+			}
+            else {
+               echo "/"; 
+			}  
+			
 			$mail = $model->email;
 
 			// valido los modelos
@@ -328,6 +403,7 @@ class UsuarioController extends Controller
 	{
 		$this->render('ActivarUsuario');
 	}
-
-}
+	
+	
+}	
 ?>
