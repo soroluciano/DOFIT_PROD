@@ -77,159 +77,37 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		//$this->performAjaxValidation(array($model,$profesor));
 		if(isset($_POST['enviar'])){
+			$valexito = 1; // si las validaciones se realizaron con exito.
 			$model->email = $_POST['email'];
-			if($userv->CampoVacio($model->email)){
-				echo "err_mail_vacio/";
-			}
-			else
-			{
-				echo "/";
-			}
-
-			if(!filter_var($model->email, FILTER_VALIDATE_EMAIL) && !($userv->CampoVacio($model->email))){
-				echo "err_mail_exprreg/";
-			}
-			else
-			{
-				echo "/";
-			}
 			$usuario = Yii::app()->db->createCommand("SELECT id_usuario FROM usuario where email = '$model->email'")->queryRow();
 			if($usuario['id_usuario'] != ''){
 				echo "err_mail_dup/";
+				$valexito = 0;
 			}
-			else
-			{
+			else{
 				echo "/";
 			}
-
 			$model->password = $_POST['password'];
-			if($userv->CampoVacio($model->password)){
-				echo "err_pass_vacio/";
-			}
-			else{
-				echo "/";
-			}
-
-			if($userv->validarexpregContraseña($model->password) == 1){
-				echo "err_pass_long/";
-			}
-			else {
-				echo "/";
-			}
-
-			if($userv->validarexpregContraseña($model->password) == 2){
-				echo "err_pass_exprreg/";
-			}
-			else {
-				echo "/";
-			}
-
-
 			$model->id_perfil = $_POST['id_perfil'];
-			if($userv->CampoVacio($model->id_perfil)){
-				echo "err_perfil_vacio/";
-			}
-			else{
-				echo "/";
-			}
-
 			$profesor->nombre = $_POST['nombre'];
-			if($userv->CampoVacio($profesor->nombre)){
-				echo "err_nombre_vacio/";
-			}
-			else{
-				echo "/";
-			}
-
 			$profesor->apellido = $_POST['apellido'];
-			if($userv->CampoVacio($profesor->apellido)){
-				echo "err_apellido_vacio/";
-			}
-			else{
-				echo "/";
-			}
-
 			$profesor->dni = $_POST['dni'];
-			if($userv->CampoVacio($profesor->dni)){
-				echo "err_dni_vacio/";
-			}
-			else{
-				echo "/";
-			}
-			if(!is_numeric($profesor->dni) && ! $userv->CampoVacio($profesor->dni)){
-				echo "err_dni_num/";
-			}
-			else{
-				echo "/";
-			}
-
-			$usuario = Yii::app()->db->createCommand("SELECT id_usuario FROM usuario where email = '$profesor->dni'")->queryRow();
+			$usuario = Yii::app()->db->createCommand("SELECT id_usuario FROM ficha_usuario where dni = '$profesor->dni'")->queryRow();
 			if($usuario['id_usuario'] != ''){
-				echo "err_mail_dup/";
+				echo "err_dni_dupl/";
+				$valexito = 0;
 			}
-			else
-			{
+			else {
 				echo "/";
 			}
-
 			$profesor->sexo = $_POST['sexo'];
-			if($profesor->sexo == 'empty'){
-				echo "err_sexo_vacio/";
-			}
-			else{
-				echo "/";
-			}
-
 			$profesor->fechanac = $_POST['fechanac'];
-			if($userv->CampoVacio($profesor->fechanac)){
-				echo "err_fechanac_vacia/";
-			}
-			else{
-				echo "/";
-			}
-
-			if(!$userv->CampoVacio($profesor->fechanac)){
-				$fecha = explode("/",$profesor->fechanac);
-				if(!(checkdate($fecha[1],$fecha[0],$fecha[2])))
-				{
-					echo "err_fechanac_valida/";
-				}
-			}
-			else{
-				echo "/";
-			}
-
-
 			$profesor->telfijo = $_POST['telfijo'];
-			if(!is_numeric($profesor->telfijo) && !$userv->CampoVacio($profesor->telfijo)){
-				echo "err_telfijo_num/";
-			}
-			else{
-				echo "/";
-			}
-
 			$profesor->conemer = $_POST['conemer'];
 			$profesor->telemer = $_POST['telemer'];
-			if(!is_numeric($profesor->telemer) && !$userv->CampoVacio($profesor->telemer)){
-				echo "err_telemer_num/";
-			}
-			else{
-				echo "/";
-			}
-
 			$profesor->direccion = $_POST['direccion'];
-			if($userv->CampoVacio($profesor->direccion)){
-				echo "err_direccion_vacia/";
-			}
-			else{
-				echo "/";
-			}
 			$profesor->piso = $_POST['piso'];
 			$profesor->depto = $_POST['depto'];
-
-			/*$model->attributes = $_POST['Usuario'];
-			$profesor->attributes = $_POST['FichaUsuario'];
-			$localidad->attributes = $_POST['Localidad'];*/
 
 			$model->fhcreacion = new CDbExpression('NOW()');
 			$model->fhultmod = new CDbExpression('NOW()');
@@ -239,44 +117,26 @@ class UsuarioController extends Controller
 			$model->id_estado = $estado->id_estado;
 
 			$localidad->id_provincia = $_POST['provincia'];
-			if($userv->CampoVacio($localidad->id_provincia)){
-				echo "err_prov_vacia/";
-			}
-			else {
-				echo "/";
-			}
-
 			$localidad->fhcreacion = new CDbExpression('NOW()');
 			$localidad->fhultmod = new CDbExpression('NOW()');
 			$localidad->cusuario = $model->email;
-
 			$profesor->fhcreacion = new CDbExpression('NOW()');
 			$profesor->fhultmod = new CDbExpression('NOW()');
 			$profesor->cusuario = $model->email;
-
 			$profesor->id_localidad = $_POST['localidad'];
-			if($profesor->id_localidad == 'empty'){
-				echo "err_loc_vacia/";
-			}
-			else {
-				echo "/";
-			}
-
 			$mail = $model->email;
 
-			// valido los modelos
-			//$validarusuario = $model->validate();
-			//$validarficha = $profesor->validate();
-			if($model->save()){
-				Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
-				$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
-				$profesor->id_usuario = $usuario->id_usuario;
-				if($profesor->save()){
-					$send->Send($model->email);
-					echo "actusuok";
+			if($valexito == 1){
+				if($model->save()){
+					Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
+					$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
+					$profesor->id_usuario = $usuario->id_usuario;
+					if($profesor->save()){
+						$send->Send($model->email);
+						echo "actusuok";
+					}
 				}
 			}
-
 
 		}
 		else{

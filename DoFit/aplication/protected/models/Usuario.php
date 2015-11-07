@@ -58,16 +58,16 @@ class Usuario extends CActiveRecord
 
 	public function validarexpregContraseña($attribute,$params)
 	{
-	  $expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
-	  $password = $this->password;
+		$expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
+		$password = $this->password;
 
-	  if(strlen($password) < 6  || strlen($password) > 15){
-	  $this->addError('password','La contraseña debe tener entre 6 y 15 caracteres');
-	  }
+		if(strlen($password) < 6  || strlen($password) > 15){
+			$this->addError('password','La contraseña debe tener entre 6 y 15 caracteres');
+		}
 
-	  if(!preg_match($expr_regular,$password)){
-		  $this->addError('password',' La contraseña debe tener al menos una mayúscula y dos números');
-	  }
+		if(!preg_match($expr_regular,$password)){
+			$this->addError('password',' La contraseña debe tener al menos una mayúscula y dos números');
+		}
 
 
 	}

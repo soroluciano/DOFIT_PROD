@@ -83,7 +83,7 @@
                                 <label class="control-label" for="inputError" id="dninum">El dato debe ser númerico.</label>
                             </div>
                             <div class="form-group has-error" id="err_dni_dupl">
-                                <label class="control-label" for="inputError" id="dnidupl">El dni se encuentra registrado.</label>
+                                <label class="control-label" for="inputError" id="dnidupl">El dni ya se encuentra registrado.</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -156,7 +156,7 @@
                                     'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
                                 ),'prompt'=>'Seleccione tu Provincia','class'=>"form-control"));?>
                             <div class="form-group has-error" id="err_prov_vacia">
-                                <label class="control-label" for="inputError" id="provvacia">Seleccione una provinicia.</label>
+                                <label class="control-label" for="inputError" id="provincia">Seleccione una provincia.</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -223,11 +223,60 @@ echo"<div class='modal fade' id='mensajeregistrook' tabindex='-1' role='dialog' 
         $('#err_prov_vacia').hide();
         $('#err_loc_vacia').hide();
     });
+
+
 </script>
 
 <script type="text/javascript">
+    function CampoVacio(strcampnom){
+        if(strcampnom == null || strcampnom.length == 0 || strcampnom == ''){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    function Validaremail(email){
+        var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(!(expr.test(email))){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function validarexpregContraseña(pass)
+    {
+        expr_regular = /^(?=.*\d{2})(?=.*[A-Z]).{0,20}$/;
+        if(pass.length < 6  || pass.length > 15){
+            return 1;
+        }
+
+        if(!(expr_regular.test(pass))){
+            return 2;
+        }
+    }
+
+    function validarfecha(fechaing){
+        expr = /^(?:(?:0?[1-9]|1\d|2[0-8])(\/|-)(?:0?[1-9]|1[0-2]))(\/|-)(?:[1-9]\d\d\d|\d[1-9]\d\d|\d\d[1-9]\d|\d\d\d[1-9])$|^(?:(?:31(\/|-)(?:0?[13578]|1[02]))|(?:(?:29|30)(\/|-)(?:0?[1,3-9]|1[0-2])))(\/|-)(?:[1-9]\d\d\d|\d[1-9]\d\d|\d\d[1-9]\d|\d\d\d[1-9])$|^(29(\/|-)0?2)(\/|-)(?:(?:0[48]00|[13579][26]00|[2468][048]00)|(?:\d\d)?(?:0[48]|[2468][048]|[13579][26]))$/;
+        exprreg1 = /^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/;
+        if(expr.test(fechaing) || exprreg1.test(fechaing)){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     function enviardatos(){
         var enviar = $('#enviar').val();
+        var val = 1; // valor que verfica que el registro paso por todas las validaciones correctamente.
+        var errmail = 0;
+        var errpass = 0;
+        var errdni = 0;
+        var errfecnac = 0;
         var email = $('#email').val();
         var password = $('#password').val();
         var id_perfil = $('#id_perfil').val();
@@ -244,202 +293,239 @@ echo"<div class='modal fade' id='mensajeregistrook' tabindex='-1' role='dialog' 
         var depto = $('#FichaUsuario_depto').val();
         var localidad = $('#Localidad_id_localidad').val();
         var provincia = $('#Localidad_id_provincia').val();
-        var data = {"enviar": enviar,"email": email, "password": password, "id_perfil": id_perfil, "nombre": nombre,"apellido": apellido,"dni": dni, "sexo": sexo, "fechanac": fechanac, "telfijo": telfijo, "conemer": conemer, "telemer": telemer,"direccion": direccion, "piso": piso, "depto": depto, "localidad":localidad, "provincia": provincia};
-        $.ajax({
-            url :  baseurl + '/usuario/Create',
-            type: "POST",
-            data : data,
-            dataType : "html",
-            cache: false,
-            success: function(response) {
-                res = response.split("/");
-                if(res[0] == "err_mail_vacio"){
-                    $('#err_mail_vacio').show();
-                    $('#email').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_mail_vacio').hide();
-                    $('#email').removeAttr('style');
-                }
 
-                if(res[1] == "err_mail_exprreg"){
-                    $('#err_mail_exprreg').show();
-                    $('#email').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_mail_exprreg').hide();
-                    $('#email').removeAttr('style');
-                }
-                if(res[2] == "err_mail_dup"){
-                    $('#err_mail_dup').show();
-                    $('#email').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_mail_dup').hide();
-                    $('#email').removeAttr('style');
-                }
+        /* valido el mail */
+        if(CampoVacio(email)){
+            $('#err_mail_vacio').show();
+            $('#email').css("border-color","#a94442");
+            val = 0;
+            errmail = 1;
+        }
+        else {
+            $('#err_mail_vacio').hide();
+        }
+        if((!Validaremail(email)) && (!CampoVacio(email))){
+            $('#err_mail_exprreg').show();
+            $('#email').css("border-color","#a94442");
+            val = 0;
+            errmail = 1;
+        }
+        else {
+            $('#err_mail_exprreg').hide();
+        }
+        if(errmail == 0){
+            $('#email').removeAttr('style');
+        }
+        /* valido la contraseña*/
+        if(CampoVacio(password)){
+            $('#err_pass_vacio').show();
+            $('#password').css("border-color","#a94442");
+            val = 0;
+            errpass = 1;
+        }
+        else {
+            $('#err_pass_vacio').hide();
+        }
+        if(validarexpregContraseña(password) == 1 && (!CampoVacio(password))){
+            $('#err_pass_long').show();
+            $('#password').css("border-color","#a94442");
+            val = 0;
+            errpass = 1;
+        }
+        else{
+            $('#err_pass_long').hide();
+        }
+        if(validarexpregContraseña(password) == 2 && (!CampoVacio(password))){
+            $('#err_pass_exprreg').show();
+            $('#password').css("border-color","#a94442");
+            val = 0;
+            errpass = 1;
+        }
+        else{
+            $('#err_pass_exprreg').hide();
+        }
+        if(errpass == 0){
+            $('#password').removeAttr('style');
+        }
 
-                if(res[3] == "err_pass_vacio"){
-                    $('#err_pass_vacio').show();
-                    $('#password').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_pass_vacio').hide();
-                    $('#password').removeAttr('style');
-                }
+        /* valido el perfil */
+        if(CampoVacio(id_perfil)){
+            $('#err_perfil_vacio').show();
+            $('#id_perfil').css("border-color","#a94442");
+            val = 0;
+        }
+        else {
+            $('#err_perfil_vacio').hide();
+            $('#id_perfil').removeAttr('style');
+        }
 
-                if(res[4] == "err_pass_long"){
-                    $('#err_pass_long').show();
-                    $('#password').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_pass_long').hide();
-                    $('#password').removeAttr('style');
-                }
+        /* valido el nombre */
+        if(CampoVacio(nombre)){
+            $('#err_nombre_vacio').show();
+            $('#FichaUsuario_nombre').css("border-color","#a94442");
+            val = 0;
+        }
+        else{
+            $('#err_nombre_vacio').hide();
+            $('#FichaUsuario_nombre').removeAttr('style');
+        }
+        /* valido el apellido */
+        if(CampoVacio(apellido)){
+            $('#err_apellido_vacio').show();
+            $('#FichaUsuario_apellido').css("border-color","#a94442");
+            val = 0;
+        }
+        else{
+            $('#err_apellido_vacio').hide();
+            $('#FichaUsuario_apellido').removeAttr('style');
+        }
 
-                if(res[5] == "err_pass_exprreg"){
-                    $('#err_pass_exprreg').show();
-                    $('#password').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_pass_exprreg').hide();
-                    $('#password').removeAttr('style');
-                }
+        /* valido el dni */
+        if(CampoVacio(dni)){
+            $('#err_dni_vacio').show();
+            $('#FichaUsuario_dni').css("border-color","#a94442");
+            val = 0;
+            errdni = 1;
+        }
+        else{
+            $('#err_dni_vacio').hide();
+        }
 
+        if((!CampoVacio(dni)) && isNaN(dni)){
+            $('#err_dni_num').show();
+            $('#FichaUsuario_dni').css("border-color","#a94442");
+            val = 0;
+            errdni = 1;
+        }
+        else {
+            $('#err_dni_num').hide();
+        }
+        if(errdni == 0){
+            $('#FichaUsuario_dni').removeAttr('style');
+        }
 
-                if(res[6] == "err_perfil_vacio"){
-                    $('#err_perfil_vacio').show();
-                    $('#id_perfil').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_perfil_vacio').hide();
-                    $('#id_perfil').removeAttr('style');
-                }
+        /* valido el sexo */
+        if(sexo == 'empty'){
+            $('#err_sexo_vacio').show();
+            $('#sexo').css("border-color","#a94442");
+            val = 0;
+        }
+        else {
+            $('#err_sexo_vacio').hide();
+            $('#sexo').removeAttr('style');
+        }
 
-                if(res[7] == "err_nombre_vacio"){
-                    $('#err_nombre_vacio').show();
-                    $('#FichaUsuario_nombre').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_nombre_vacio').hide();
-                    $('#FichaUsuario_nombre').removeAttr('style');
-                }
-                if(res[8] == "err_apellido_vacio"){
-                    $('#err_apellido_vacio').show();
-                    $('#FichaUsuario_apellido').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_apellido_vacio').hide();
-                    $('#FichaUsuario_apellido').removeAttr('style');
-                }
+        /* valido la fecha de nacimiento */
+        if(CampoVacio(fechanac)){
+            $('#err_fechanac_vacia').show();
+            $('#FichaUsuario_fechanac').css("border-color","#a94442");
+            val = 0;
+            errfecnac = 1;
+        }
+        else{
+            $('#err_fechanac_vacia').hide();
+        }
+        if((validarfecha(fechanac) == false) && (!CampoVacio(fechanac))){
+            $('#err_fechanac_valida').show();
+            $('#FichaUsuario_fechanac').css("border-color","#a94442");
+            val = 0;
+            errfecnac = 1;
+        }
+        else {
+            $('#err_fechanac_valida').hide();
+        }
+        if(errfecnac == 0){
+            $('#FichaUsuario_fechanac').removeAttr('style');
+        }
 
-                if(res[9] == "err_dni_vacio"){
-                    $('#err_dni_vacio').show();
-                    $('#FichaUsuario_dni').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_dni_vacio').hide();
-                    $('#FichaUsuario_dni').removeAttr('style');
-                }
+        /* valido el telefono fijo */
+        if(isNaN(telfijo)){
+            $('#err_telfijo_num').show();
+            $('#FichaUsuario_telfijo').css("border-color","#a94442");
+            val = 0;
+        }
+        else {
+            $('#err_telfijo_num').hide();
+            $('#FichaUsuario_telfijo').removeAttr('style');
+        }
 
-                if(res[10] == "err_dni_num"){
-                    $('#err_dni_num').show();
-                    $('#FichaUsuario_dni').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_dni_num').hide();
-                    $('#FichaUsuario_dni').removeAttr('style');
-                }
+        /* valido el telefono de emergencia */
+        if(isNaN(telemer)){
+            $('#err_telemer_num').show();
+            $('#FichaUsuario_telemer').css("border-color","#a94442");
+            val = 0;
+        }
+        else{
+            $('#err_telemer_num').hide();
+            $('#FichaUsuario_telemer').removeAttr('style');
+        }
 
+        /* valido la direccion */
+        if(CampoVacio(direccion)){
+            $('#err_direccion_vacia').show();
+            $('#FichaUsuario_direccion').css("border-color","#a94442");
+            val = 0;
+        }
+        else {
+            $('#err_direccion_vacia').hide();
+            $('#FichaUsuario_direccion').removeAttr('style');
+        }
+        /* valido la provincia */
 
-                if(res[11] == "err_dni_dupl"){
-                    $('#err_dni_dupl').show();
-                    $('#FichaUsuario_dni').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_dni_dupl').hide();
-                    $('#FichaUsuario_dni').removeAttr('style');
-                }
+        if(CampoVacio(provincia)){
+            $('#err_prov_vacia').show();
+            $('#Localidad_id_provincia').css("border-color","#a94442");
+            val = 0;
+        }
+        else{
+            $('#err_prov_vacia').hide();
+            $('#Localidad_id_provincia').removeAttr('style');
+        }
 
-
-                if(res[12] == "err_sexo_vacio"){
-                    $('#err_sexo_vacio').show();
-                    $('#sexo').css("border-color","#a94442");
+        /* valido la localidad */
+        if(localidad == 'empty'){
+            $('#err_loc_vacia').show();
+            $('#Localidad_id_localidad').css("border-color","#a94442");
+            val = 0;
+        }
+        else {
+            $('#err_loc_vacia').hide();
+            $('#Localidad_id_localidad').removeAttr('style');
+        }
+        if(val == 1){
+            var data = {"enviar": enviar,"email": email, "password": password, "id_perfil": id_perfil, "nombre": nombre,"apellido": apellido,"dni": dni, "sexo": sexo, "fechanac": fechanac, "telfijo": telfijo, "conemer": conemer, "telemer": telemer,"direccion": direccion, "piso": piso, "depto": depto, "localidad":localidad, "provincia": provincia};
+            $.ajax({
+                url :  baseurl + '/usuario/Create',
+                type: "POST",
+                data : data,
+                dataType : "html",
+                cache: false,
+                success: function(response) {
+                    res = response.split("/");
+                    if(res[0] == "err_mail_dup"){
+                        $('#err_mail_dup').show();
+                        $('#email').css("border-color","#a94442");
+                    }
+                    else{
+                        $('#err_mail_dup').hide();
+                        $('#email').removeAttr('style');
+                    }
+                    if(res[1] == "err_dni_dupl"){
+                        $('#err_dni_dupl').show();
+                        $('#FichaUsuario_dni').css("border-color","#a94442");
+                    }
+                    else{
+                        $('#err_dni_dupl').hide();
+                        $('#FichaUsuario_dni').removeAttr('style');
+                    }
+                    if(res[2] == "actusuok"){
+                        $('#mensajeregistrook').modal('show');
+                    }
+                } ,
+                error: function (e) {
+                    console.log(e);
                 }
-                else{
-                    $('#err_sexo_vacio').hide();
-                    $('#sexo').removeAttr('style');
-                }
-
-                if(res[13] == "err_fechanac_vacia"){
-                    $('#err_fechanac_vacia').show();
-                    $('#FichaUsuario_fechanac').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_fechanac_vacia').hide();
-                    $('#FichaUsuario_fechanac').removeAttr('style');
-                }
-                if(res[14] == "err_fechanac_valida"){
-                    $('#err_fechanac_valida').show();
-                    $('#FichaUsuario_fechanac').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_fechanac_valida').hide();
-                    $('#FichaUsuario_fechanac').removeAttr('style');
-                }
-
-
-                if(res[15] == "err_telfijo_num"){
-                    $('#err_telfijo_num').show();
-                    $('#FichaUsuario_telfijo').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_telfijo_num').hide();
-                    $('#FichaUsuario_telfijo').removeAttr('style');
-                }
-
-
-                if(res[16] == "err_telemer_num"){
-                    $('#err_telemer_num').show();
-                    $('#FichaUsuario_telemer').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_telemer_num').hide();
-                    $('#FichaUsuario_telemer').removeAttr('style');
-                }
-                if(res[17] == "err_direccion_vacia"){
-                    $('#err_direccion_vacia').show();
-                    $('#FichaUsuario_direccion').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_direccion_vacia').hide();
-                    $('#FichaUsuario_direccion').removeAttr('style');
-                }
-                if(res[18] == "err_prov_vacia"){
-                    $('#err_prov_vacia').show();
-                    $('#Localidad_id_provincia').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_prov_vacia').hide();
-                    $('#Localidad_id_provincia').removeAttr('style');
-                }
-
-                if(res[19] == "err_loc_vacia"){
-                    $('#err_loc_vacia').show();
-                    $('#Localidad_id_localidad').css("border-color","#a94442");
-                }
-                else{
-                    $('#err_loc_vacia').hide();
-                    $('#Localidad_id_localidad').removeAttr('style');
-                }
-
-                if(response == "actusuok"){
-                    $('#mensajeregistrook').modal('show');
-                }
-            } ,
-            error: function (e) {
-                console.log(e);
-            }
-        });
+            });
+        }
     }
 </script>
