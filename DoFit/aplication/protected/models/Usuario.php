@@ -44,7 +44,7 @@ class Usuario extends CActiveRecord
 			array('email, password, fhcreacion, cusuario', 'required','message'=>'Ingrese un {attribute}'),
 			//array('email, password, id_estado, fhcreacion, cusuario', 'required','message'=>'Ingrese un dato en el campo {attribute}'),
 			array('id_perfil', 'required', 'message'=>'Seleccione un perfil'),
-			array('id_perfil, id_estado', 'numerical', 'integerOnly'=>true),
+			array('id_perfil, id_estado','numerical', 'integerOnly'=>true),
 			array('email, cusuario', 'length', 'max'=>60),
 			array('email','email','message'=>'Ingrese una dirección de correo válida'),
 			array('password', 'validarexpregContraseña'),
