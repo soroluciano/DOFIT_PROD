@@ -8,7 +8,7 @@
 	    var direccion = $('#direccion'+contador).html();
 		var localidad = $('#localidad'+contador).html();
         var provincia = $('#provincia'+contador).html();
-        window.open("fichaInstitucion/googlemaps?nombre="+nombre+"&direccion="+direccion+"&localidad="+localidad+"&provincia="+provincia+"",'','width=600, height=550');
+        window.open("../fichaInstitucion/googlemaps?nombre="+nombre+"&direccion="+direccion+"&localidad="+localidad+"&provincia="+provincia+"",'','width=600, height=550');
         
       
 	}

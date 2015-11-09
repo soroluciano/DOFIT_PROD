@@ -69,6 +69,7 @@ class UsuarioController extends Controller
 		date_default_timezone_set('America/Argentina/Buenos_Aires');
 		$model= new Usuario;
 		$send = new SendEmailService;
+		$userv = new UsuarioService;
 		$profesor = new FichaUsuario;
 		$localidad = new Localidad;
 		$estado = new Estado;
@@ -76,25 +77,29 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		//$this->performAjaxValidation(array($model,$profesor));
 		if(isset($_POST['enviar'])){
+			$valexito = 1; // si las validaciones se realizaron con exito.
 			$model->email = $_POST['email'];
-			if($model->email == ''){
-				echo "err_mail/";
-			}
-			else
-			{
-				echo "/";
-			}
-			$model->password = $_POST['password'];
-			if($model->password == ''){
-				echo "err_pass/";
+			$usuario = Yii::app()->db->createCommand("SELECT id_usuario FROM usuario where email = '$model->email'")->queryRow();
+			if($usuario['id_usuario'] != ''){
+				echo "err_mail_dup/";
+				$valexito = 0;
 			}
 			else{
 				echo "/";
 			}
+			$model->password = $_POST['password'];
 			$model->id_perfil = $_POST['id_perfil'];
 			$profesor->nombre = $_POST['nombre'];
 			$profesor->apellido = $_POST['apellido'];
 			$profesor->dni = $_POST['dni'];
+			$usuario = Yii::app()->db->createCommand("SELECT id_usuario FROM ficha_usuario where dni = '$profesor->dni'")->queryRow();
+			if($usuario['id_usuario'] != ''){
+				echo "err_dni_dupl/";
+				$valexito = 0;
+			}
+			else {
+				echo "/";
+			}
 			$profesor->sexo = $_POST['sexo'];
 			$profesor->fechanac = $_POST['fechanac'];
 			$profesor->telfijo = $_POST['telfijo'];
@@ -103,10 +108,6 @@ class UsuarioController extends Controller
 			$profesor->direccion = $_POST['direccion'];
 			$profesor->piso = $_POST['piso'];
 			$profesor->depto = $_POST['depto'];
-
-			/*$model->attributes = $_POST['Usuario'];
-			$profesor->attributes = $_POST['FichaUsuario'];
-			$localidad->attributes = $_POST['Localidad'];*/
 
 			$model->fhcreacion = new CDbExpression('NOW()');
 			$model->fhultmod = new CDbExpression('NOW()');
@@ -119,26 +120,23 @@ class UsuarioController extends Controller
 			$localidad->fhcreacion = new CDbExpression('NOW()');
 			$localidad->fhultmod = new CDbExpression('NOW()');
 			$localidad->cusuario = $model->email;
-
 			$profesor->fhcreacion = new CDbExpression('NOW()');
 			$profesor->fhultmod = new CDbExpression('NOW()');
 			$profesor->cusuario = $model->email;
 			$profesor->id_localidad = $_POST['localidad'];
 			$mail = $model->email;
 
-			// valido los modelos
-			//$validarusuario = $model->validate();
-			//$validarficha = $profesor->validate();
-			if($model->save()){
-				Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
-				$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
-				$profesor->id_usuario = $usuario->id_usuario;
-				if($profesor->save()){
-					$send->Send($model->email);
-					echo "actusuok";
+			if($valexito == 1){
+				if($model->save()){
+					Usuario::model()->updateAll(array('password'=>$passencr),'email="'.$mail.'"');
+					$usuario = Usuario::model()->findByAttributes(array('email'=>$mail));
+					$profesor->id_usuario = $usuario->id_usuario;
+					if($profesor->save()){
+						$send->Send($model->email);
+						echo "actusuok";
+					}
 				}
 			}
-
 
 		}
 		else{
@@ -328,6 +326,7 @@ class UsuarioController extends Controller
 	{
 		$this->render('ActivarUsuario');
 	}
+
 
 }
 ?>
