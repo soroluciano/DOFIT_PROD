@@ -19,6 +19,14 @@ class PagoController extends Controller
 
     }
 
+    public function actionListaPagos()
+    {
+        $fu = new FichaUsuario();
+        $ac = new Actividad();
+        $pa = new Pago();
+        $this->render('ListaPagos', array('ficha_usuario' => $fu, 'actividad' => $ac, 'pago' => $pa));
+    }
+
     public function actionEliminarPago()
     {
         $fu = new FichaUsuario();
