@@ -1,29 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "perfil_muro_profesor".
+ * This is the model class for table "canal".
  *
- * The followings are the available columns in table 'perfil_muro_profesor':
- * @property integer $id_posteo
- * @property string $posteo
- * @property integer $id_actividad
+ * The followings are the available columns in table 'canal':
  * @property integer $id_canal
- * @property string $fhcreacion
- * @property string $fhultmod
- * @property string $cusuario
+ * @property string $nombre
+ * @property integer $id_usuario
  *
  * The followings are the available model relations:
- * @property Actividad $idActividad
- * @property Respuesta[] $respuestas
+ * @property Usuario $idUsuario
  */
-class PerfilMuroProfesor extends CActiveRecord
+class Canal extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'perfil_muro_profesor';
+		return 'canal';
 	}
 
 	/**
@@ -34,14 +29,12 @@ class PerfilMuroProfesor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('posteo, id_actividad, id_canal, fhcreacion, cusuario', 'required'),
-			array('id_actividad, id_canal', 'numerical', 'integerOnly'=>true),
-			array('posteo', 'length', 'max'=>2000),
-			array('cusuario', 'length', 'max'=>60),
-			array('fhultmod', 'safe'),
+			array('nombre, id_usuario', 'required'),
+			array('id_usuario', 'numerical', 'integerOnly'=>true),
+			array('nombre', 'length', 'max'=>60),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_posteo, posteo, id_actividad, id_canal, fhcreacion, fhultmod, cusuario', 'safe', 'on'=>'search'),
+			array('id_canal, nombre, id_usuario', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,8 +46,7 @@ class PerfilMuroProfesor extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idActividad' => array(self::BELONGS_TO, 'Actividad', 'id_actividad'),
-			'respuestas' => array(self::HAS_MANY, 'Respuesta', 'id_posteo'),
+			'idUsuario' => array(self::BELONGS_TO, 'Usuario', 'id_usuario'),
 		);
 	}
 
@@ -64,13 +56,9 @@ class PerfilMuroProfesor extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_posteo' => 'Id Posteo',
-			'posteo' => 'Posteo',
-			'id_actividad' => 'Id Actividad',
 			'id_canal' => 'Id Canal',
-			'fhcreacion' => 'Fhcreacion',
-			'fhultmod' => 'Fhultmod',
-			'cusuario' => 'Cusuario',
+			'nombre' => 'Nombre',
+			'id_usuario' => 'Id Usuario',
 		);
 	}
 
@@ -92,13 +80,9 @@ class PerfilMuroProfesor extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_posteo',$this->id_posteo);
-		$criteria->compare('posteo',$this->posteo,true);
-		$criteria->compare('id_actividad',$this->id_actividad);
 		$criteria->compare('id_canal',$this->id_canal);
-		$criteria->compare('fhcreacion',$this->fhcreacion,true);
-		$criteria->compare('fhultmod',$this->fhultmod,true);
-		$criteria->compare('cusuario',$this->cusuario,true);
+		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('id_usuario',$this->id_usuario);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -109,7 +93,7 @@ class PerfilMuroProfesor extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return PerfilMuroProfesor the static model class
+	 * @return Canal the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

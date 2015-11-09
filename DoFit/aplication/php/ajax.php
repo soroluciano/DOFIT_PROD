@@ -2,11 +2,12 @@
 require 'Pusher.php';
 
 $mensaje = $_POST['msj'];
+$canal = $_POST['canal'];
 
 $pusher = PusherInstance::get_pusher();
 
 $pusher->trigger(
-    'canalo',
+    $canal,
     'nuevo_comentario',
     array('mensaje' => $mensaje),
     $_POST['socket_id']

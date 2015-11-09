@@ -5,7 +5,22 @@
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
 <?php
-$baseUrl = Yii::app()->baseUrl; 
+$baseUrl = Yii::app()->baseUrl;
+
+$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+	
+$canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+if($canal==null){
+	$canal = new Canal();
+	$canal->id_usuario=$usuario->id_usuario;
+	$nombre=md5($usuario->id_usuario."".$ficha->nombre."".$ficha->id_ficha);
+	$canal->nombre=$nombre;
+	$canal->save();
+	
+}
+
+
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/muro.js');
 ?>
@@ -65,7 +80,8 @@ $cs->registerScriptFile($baseUrl.'/js/muro.js');
     <div id="comentarios" class="row">
 		<?php $this->renderPartial('_mensajesProfesor',array('resultSet'=>$resultSet)); ?>
     </div>
-	
+	<input type="hidden" id="canal" value="<?php echo $canal->nombre;?>"/>
+	<input type="hidden" id="id_canal" value="<?php echo $canal->id_canal;?>"/>
 </div>   
 </body>
 
