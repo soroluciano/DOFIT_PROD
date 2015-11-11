@@ -51,7 +51,7 @@ if(!Yii::app()->user->isGuest){
                     <a href="../javascript/">JavaScript</a>
                 </li>
                 <li>
-                    <a href="../customize/">Customize</a>
+					<?php echo CHtml::link('Salir', array('site/logout')); ?>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

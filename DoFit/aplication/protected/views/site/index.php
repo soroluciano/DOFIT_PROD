@@ -88,7 +88,13 @@ if($Us->id_perfil == 2){
       echo CHtml::beginForm('../perfilSocial/','post'); 
       echo CHtml::submitButton('Ir a la red social de Do Fit!',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
-   echo "</div>";	
+   echo "</div>";
+   
+      echo "<div class='form-group'>";
+      echo CHtml::beginForm('../muro/','post'); 
+      echo CHtml::submitButton('Muro',array('class'=>'btn btn-primary'));                      
+      echo CHtml::endForm();      
+   echo "</div>";
 	
 ?>
 
