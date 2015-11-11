@@ -3,7 +3,7 @@
 
 class MuroController extends Controller
 {
-    public function actionIndexProfesor()
+    public function actionIndex()
     {
 			
 		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
@@ -79,6 +79,11 @@ class MuroController extends Controller
 		
     }
 
+	public function actionLogout()
+    {
+        Yii::app()->user->logout();
+        $this->redirect(Yii::app()->homeUrl);
+    }
 
 
 }
