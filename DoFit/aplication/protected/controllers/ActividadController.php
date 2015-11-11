@@ -175,17 +175,25 @@ class ActividadController extends Controller
         $deportes = new Deporte();
         $provincia = new Provincia();
         $localidad = new Localidad();
+        $fichainstitucion = new FichaInstitucion();
         // echo "error";
-        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad']) && isset($_POST['mercadopago'])) {
             $criteria = new CDbCriteria;
-            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
-            $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte']);
+            $criteria->condition = 'id_localidad = :localidad and acepta_mp = :aceptamp and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte'], ':aceptamp'=>$_POST['mercadopago']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
             //$locations = '[';
             $i = 1;
             $locations = "";
+
             foreach ($gimnasio as $gim) {
-                $locations = $locations . '["Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
+                if($gim->acepta_mp == 'S'){
+                    $gim->acepta_mp = 'Si';
+                }
+                if($gim->acepta_mp == 'N'){
+                    $gim->acepta_mp = 'No';
+                }
+                $locations = $locations . '["Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . ' Acepta Mercado Pago: ' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
 
             }
             //$locations = $locations . ']';
@@ -196,7 +204,7 @@ class ActividadController extends Controller
             }
 
         } else {
-            $this->render('InscripcionActividad', array('deportes' => $deportes, 'provincia' => $provincia, 'localidad' => $localidad));
+            $this->render('InscripcionActividad', array('deportes' => $deportes, 'provincia' => $provincia, 'localidad' => $localidad, 'fichainstitucion'=>$fichainstitucion));
 
         }
 

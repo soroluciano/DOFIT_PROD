@@ -88,33 +88,37 @@ $this->pageTitle=Yii::app()->name;
                     <?php echo $form->dropDownList($localidad,'id_localidad',array(''=>"Selecciona tu localidad"),array('class'=>"form-control","onchange"=>"BuscadorGimnasios();")); ?>
                 </div>
                 <?php echo $form->error($localidad,'id_localidad'); ?>
-            </div>
-            <div id="map" style="width: 700px; height: 400px;">
-            </div>
-            <br>
-            <br>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Lo sentimos :( </h4>
-                        </div>
-                        <div class="modal-body">
-                           ¡No encontramos resultados para tu búsqueda!
-                            Intentá de nuevo
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <br/>
+                <div class="form-group" id="mercpago">
+                    <?php echo $form->labelEx($fichainstitucion,'Acepta mercado pago');?>
+                    <?php echo $form->dropDownList($fichainstitucion,'acepta_mp',array('empty'=>'Seleccione','S'=>'Si','N'=>'No'),array('class'=>"form-control",'id'=>'mercadopago',"onchange"=>"BuscadorGimnasios();")); ?>
+                </div>
+                <div id="map" style="width: 700px; height: 400px;">
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Lo sentimos :( </h4>
+                            </div>
+                            <div class="modal-body">
+                                ¡No encontramos resultados para tu búsqueda!
+                                Intentá de nuevo
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </form>
 </div>
 <?php echo CHtml::endForm(); ?>
@@ -129,65 +133,66 @@ $this->pageTitle=Yii::app()->name;
         var deporte = $("#ListaDeporte").val();
         var localidad = $("#Localidad_id_localidad").val();
         var provincia = $("#Localidad_id_provincia").val();
+        var mercadopago = $("#mercadopago").val();
         $("#boton").hide();
         if(deporte != ""){
-           if(provincia != ""){
-               if(localidad != ""){
-                   var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
-                   $.ajax({
-                       url: baseurl + '/actividad/InscripcionActividad',
-                       type: "POST",
-                       data: data,
-                       dataType: "html",
-                       cache: false,
-                       success: function (response) {
-                           if (response == "error") {
-                               $("#map").hide();
-                               $("#boton").hide();
-                               $('#myModal').modal('show');
-                           }
-                           else {
-                               $("#map").show();
-                               var locations = JSON.parse("[" + response + "]");;
+            if(provincia != ""){
+                if(localidad != ""){
+                    if(mercadopago != "empty"){
+                        var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad, 'mercadopago': mercadopago};
+                        $.ajax({
+                            url: baseurl + '/actividad/InscripcionActividad',
+                            type: "POST",
+                            data: data,
+                            dataType: "html",
+                            cache: false,
+                            success: function (response) {
+                                if (response == "error") {
+                                    $("#map").hide();
+                                    $("#boton").hide();
+                                    $('#myModal').modal('show');
+                                }
+                                else {
+                                    $("#map").show();
+                                    var locations = JSON.parse("[" + response + "]");;
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 13,
+                                        center: new google.maps.LatLng(locations[0][1], locations[0][2] ),
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    });
 
-                               var map = new google.maps.Map(document.getElementById('map'), {
-                                   zoom: 13,
-                                   center: new google.maps.LatLng(locations[0][1], locations[0][2] ),
-                                   mapTypeId: google.maps.MapTypeId.ROADMAP
-                               });
+                                    var infowindow = new google.maps.InfoWindow();
 
-                               var infowindow = new google.maps.InfoWindow();
+                                    var marker, i;
 
-                               var marker, i;
-
-                               for (i = 0; i < locations.length; i++) {
-                                   marker = new google.maps.Marker({
-                                       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                                       map: map,
-                                       animation: google.maps.Animation.BOUNCE
+                                    for (i = 0; i < locations.length; i++) {
+                                        marker = new google.maps.Marker({
+                                            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                            map: map,
+                                            animation: google.maps.Animation.BOUNCE
 
 
-                                   });
+                                        });
 
-                                   google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                                       return function() {
-                                           infowindow.setContent(locations[i][0]);
-                                           infowindow.open(map, marker);
-                                       }
-                                   })(marker, i));
+                                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                            return function() {
+                                                infowindow.setContent(locations[i][0]);
+                                                infowindow.open(map, marker);
+                                            }
+                                        })(marker, i));
 
-                               }
-                               $("#boton").show();
-                           }
+                                    }
+                                    $("#boton").show();
+                                }
 
-                       },
-                       error: function (e) {
-                           console.log(e);
-                       }
-                   });
-
-               }
-           }
+                            },
+                            error: function (e) {
+                                console.log(e);
+                            }
+                        });
+                    }
+                }
+            }
         }
 
 
