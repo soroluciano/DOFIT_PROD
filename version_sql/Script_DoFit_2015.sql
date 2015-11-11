@@ -455,7 +455,7 @@ INSERT INTO DoFit.`ficha_institucion`(id_institucion, nombre         , cuit, tel
 							         (2             , 'Universidad Nacional de La Matanza',  31345066691, '4480-8900', '1123905890', 5 , 'Florencio Varela 1903', NULL, NULL, '-34.670580', '-58.562751', 'N', now(), now(), 'sysadmin'),
                                      (3             , 'Club Atletico Boca Juniors '       , 30780910107, ' 5777-1200', '1543041212', 7 , 'Del Valle Iberlucea'  , ''  , ''  ,'-34.633399', '-58.365223',  'S', now(), now(), 'sysadmin'),
                                      (4             , 'Thaler S.A.'                , 20899909901, '4697-6008' , '1567803400', 1, 'Avenida Rivadavia 18037'       , ''  , ''  ,'-34.649347', '-58.617812', 'S', now(), now(), 'sysadmin'),
-                                     (5             , 'Tu Gimansio'                , 30670890121, '5400-9008'	, '1567803200', 22, 'Gobernador Pedro Godoy 257'   , ''  , ''  , '-54.804559', '-68.303432', 'N', now(), now(), 'sysadmin');  
+                                     (5             , 'Tu Gimansio'                , 30670890121, '5400-9008'	, '1567803200', 37, 'Gobernador Pedro Godoy 257'   , ''  , ''  , '-54.804559', '-68.303432', 'N', now(), now(), 'sysadmin');  
 
 DELETE FROM DoFit.`profesor_institucion`;
 								   
