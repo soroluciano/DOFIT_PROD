@@ -98,7 +98,7 @@ $this->pageTitle=Yii::app()->name;
                 <br>
                 <br>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Anotarme"/>
+                    <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Seguir con la inscripción"/>
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

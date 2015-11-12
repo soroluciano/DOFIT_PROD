@@ -63,25 +63,36 @@ $this->pageTitle=Yii::app()->name;
 
 <div class="container">
     <div class="form-group">
-    <?php
-        echo    "<div><h2>Deportes</h2></div>";
+        <?php
+        echo "<div><h2>Inscripción a actividades </h2></div>";
         $cant = 0;
         if($list != null) {
             $actividad_ant = 0;
             foreach($list as $gim){
                 $actividad = $gim['id_actividad'];
-                if($cant = 0){
+                $deporte = Yii::app()->db->createCommand("SELECT deporte FROM deporte where id_deporte IN (SELECT id_deporte FROM actividad WHERE id_actividad = $actividad)")->queryRow();
+                if($cant == 0){
                     $actividad_ant = $gim['id_actividad'];
+                    echo "<b><h2>Deporte: ".$deporte['deporte']."</h2></b>";
+                    echo "<div class='form-group'>";
+                    echo "<h4><b>Gimnasio: </b>".$gim['nombre'].".</h4>";
+                    echo "</div>";
+                    echo "<div class='form-group'>";
+                    echo " <h4><b>Dirección: </b>".$gim['direccion'].".</h4>";
+                    echo "</div>";
+                    echo "<div class='form-group'>";
+                    echo "<h4><b> Telefono: </b>".$gim['telfijo'].".</h4>";
+                    echo "</div>";
+                    echo "<div class='form-group'>";
+                    echo "<h4><b> Dia: </b>".$gim['id_dia']."</h4>";
+                    echo "</div>";
+                    echo "<div class='form-group'>";
+                    echo "<h4><b> Horario: </b>".$gim['hora'].':'.$gim['minutos']."</h4>";
                     $cant = 1;
                     echo "<button type='button'  value='".$actividad."' onclick='Anotarme(this.value);' class='btn btn-primary btn-lg'>
                             Anotarme
-                          </button>";
-                    echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'/>'";
-                    echo "Gimnasio: ".$gim['nombre'];
-                    echo " Dirección: ".$gim['direccion'];
-                    echo " Telefono: ".$gim['telfijo'];
-                    echo " Dia: ".$gim['id_dia'];
-                    echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
+                          </button><br/>";
+                    echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'</input>'";
                     echo $actividad;
                 }
                 else{
@@ -95,8 +106,13 @@ $this->pageTitle=Yii::app()->name;
                         echo "<button  type='button'  onclick='Anotarme(this.value);' value='".$actividad."' class='btn btn-primary btn-lg'>
                             Anotarme
                           </button>";
-                        echo "Gimnasio: ".$gim['nombre'];
-                        echo " Dirección: ".$gim['direccion'];
+                        echo "<br/>";
+                        echo "<div class='form-group'>";
+                        echo "<h4><b>Gimnasio: </b>".$gim['nombre'].".</h4>";
+                        echo "</div>";
+                        echo "<div class='form-group'>";
+                        echo "<h4><b> Dirección: </b>".$gim['direccion'].".</h4>";
+                        echo "</div>";
                         echo " Telefono: ".$gim['telfijo'];
                         echo " Dia: ".$gim['id_dia'];
                         echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
@@ -106,7 +122,7 @@ $this->pageTitle=Yii::app()->name;
 
                     }
                 }
-                    echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                             <div class='modal-dialog' role='document'>
                                 <div class='modal-content'>
                                     <div class='modal-header'>
@@ -124,7 +140,7 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                          </div>;";
 
-                    echo "<div class='modal fade' id='Confirmacion' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                echo "<div class='modal fade' id='Confirmacion' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                             <div class='modal-dialog' role='document'>
                                 <div class='modal-content'>
                                     <div class='modal-header'>
@@ -141,7 +157,7 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                          </div>;";
 
-                    echo "<div class='modal fade' id='Error' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                echo "<div class='modal fade' id='Error' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                             <div class='modal-dialog' role='document'>
                                 <div class='modal-content'>
                                     <div class='modal-header'>
@@ -159,12 +175,12 @@ $this->pageTitle=Yii::app()->name;
                          </div>;";
 
 
-                 }
-             }
-            else{
-                echo "Ya te has inscripto a todas las actividades.";
+            }
         }
-    ?>
+        else{
+            echo "Ya te has inscripto a todas las actividades.";
+        }
+        ?>
 
 
     </div>
@@ -173,8 +189,8 @@ $this->pageTitle=Yii::app()->name;
 <script type="text/javascript">
 
     function Anotarme(value){
-      $('#myModal').modal('show');
-      $("#button").prop('value', value);
+        $('#myModal').modal('show');
+        $("#button").prop('value', value);
     }
 
 </script>
@@ -185,20 +201,20 @@ $this->pageTitle=Yii::app()->name;
             var data = {'actividad': value};
             $('#myModal').modal('hide');
             $.ajax({
-                    url: baseurl + '/actividad/InscripcionFinal',
-                    type: "POST",
-                    data: data,
-                    dataType: "html",
-                    cache: false,
-                    success: function(response){
-                                if(response == "error"){
-                                    location.reload();
-                                    $('#myModal').modal('show');
-                                }
-                                else{
-                                    $('#Error').modal('show');
-                                }
+                url: baseurl + '/actividad/InscripcionFinal',
+                type: "POST",
+                data: data,
+                dataType: "html",
+                cache: false,
+                success: function(response){
+                    if(response == "error"){
+                        location.reload();
+                        $('#myModal').modal('show');
                     }
+                    else{
+                        $('#Error').modal('show');
+                    }
+                }
             })
 
 
