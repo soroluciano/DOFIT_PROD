@@ -8,7 +8,7 @@ class MuroController extends Controller
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 			$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();//.Yii::app()->user->id.''
 			$this->render('indexProfesor',array('resultSet'=>$resultSet));
-    }
+    } 
 	
 	public function actionMensajes(){
 		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
