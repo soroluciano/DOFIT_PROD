@@ -89,10 +89,6 @@ $this->pageTitle=Yii::app()->name;
                 </div>
                 <?php echo $form->error($localidad,'id_localidad'); ?>
                 <br/>
-                <div class="form-group" id="mercpago">
-                    <?php echo $form->labelEx($fichainstitucion,'Acepta mercado pago');?>
-                    <?php echo $form->dropDownList($fichainstitucion,'acepta_mp',array('empty'=>'Seleccione','S'=>'Si','N'=>'No'),array('class'=>"form-control",'id'=>'mercadopago',"onchange"=>"BuscadorGimnasios();")); ?>
-                </div>
                 <div id="map" style="width: 700px; height: 400px;">
                 </div>
                 <br>
@@ -133,64 +129,61 @@ $this->pageTitle=Yii::app()->name;
         var deporte = $("#ListaDeporte").val();
         var localidad = $("#Localidad_id_localidad").val();
         var provincia = $("#Localidad_id_provincia").val();
-        var mercadopago = $("#mercadopago").val();
         $("#boton").hide();
         if(deporte != ""){
             if(provincia != ""){
                 if(localidad != ""){
-                    if(mercadopago != "empty"){
-                        var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad, 'mercadopago': mercadopago};
-                        $.ajax({
-                            url: baseurl + '/actividad/InscripcionActividad',
-                            type: "POST",
-                            data: data,
-                            dataType: "html",
-                            cache: false,
-                            success: function (response) {
-                                if (response == "error") {
-                                    $("#map").hide();
-                                    $("#boton").hide();
-                                    $('#myModal').modal('show');
-                                }
-                                else {
-                                    $("#map").show();
-                                    var locations = JSON.parse("[" + response + "]");;
-                                    var map = new google.maps.Map(document.getElementById('map'), {
-                                        zoom: 13,
-                                        center: new google.maps.LatLng(locations[0][1], locations[0][2] ),
-                                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    var data = {'deporte': deporte, 'provincia': provincia, 'localidad': localidad};
+                    $.ajax({
+                        url: baseurl + '/actividad/InscripcionActividad',
+                        type: "POST",
+                        data: data,
+                        dataType: "html",
+                        cache: false,
+                        success: function (response) {
+                            if (response == "error") {
+                                $("#map").hide();
+                                $("#boton").hide();
+                                $('#myModal').modal('show');
+                            }
+                            else {
+                                $("#map").show();
+                                var locations = JSON.parse("[" + response + "]");;
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    zoom: 13,
+                                    center: new google.maps.LatLng(locations[0][1], locations[0][2] ),
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                });
+
+                                var infowindow = new google.maps.InfoWindow();
+
+                                var marker, i;
+
+                                for (i = 0; i < locations.length; i++) {
+                                    marker = new google.maps.Marker({
+                                        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                        map: map,
+                                        animation: google.maps.Animation.BOUNCE
+
+
                                     });
 
-                                    var infowindow = new google.maps.InfoWindow();
+                                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                        return function() {
+                                            infowindow.setContent(locations[i][0]);
+                                            infowindow.open(map, marker);
+                                        }
+                                    })(marker, i));
 
-                                    var marker, i;
-
-                                    for (i = 0; i < locations.length; i++) {
-                                        marker = new google.maps.Marker({
-                                            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                                            map: map,
-                                            animation: google.maps.Animation.BOUNCE
-
-
-                                        });
-
-                                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                                            return function() {
-                                                infowindow.setContent(locations[i][0]);
-                                                infowindow.open(map, marker);
-                                            }
-                                        })(marker, i));
-
-                                    }
-                                    $("#boton").show();
                                 }
-
-                            },
-                            error: function (e) {
-                                console.log(e);
+                                $("#boton").show();
                             }
-                        });
-                    }
+
+                        },
+                        error: function (e) {
+                            console.log(e);
+                        }
+                    });
                 }
             }
         }
