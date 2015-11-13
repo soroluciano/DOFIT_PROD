@@ -7,12 +7,13 @@
         <div class='panel panel-white post panel-shadow'>
         
             <div class='post-heading'>
+              <div></div>
               <div class='pull-left image'>
                 <img src='".Yii::app()->request->baseUrl."/uploads/".$row['foto1']."' class='img-circle avatar' alt='user profile image'>
               </div>
               <div class='pull-left meta'>
                 <div class='title h5'>
-                  <a href='#'><b>".$row['nombre']." ".$row['apellido']."</b></a>
+                  <a href=''><b>".$row['nombre']." ".$row['apellido']."</b></a>
                  <!-- made a post.-->
                 </div>
                 <!--<h6 class='text-muted time'>1 minute ago</h6>-->
@@ -32,9 +33,9 @@
            </div>
            <div class='post-footer'>
              <div class='input-group'> 
-                 <input class='form-control' placeholder='Add a comment' type='text'>
+                 <input class='form-control' placeholder='Add a comment' type='text' id='txt_post_".$row['id_posteo']."'>
                  <span class='input-group-addon'>
-                     <a href='#'><i class='fa fa-edit'></i></a>  
+                     <button type='submit' id='".$row['id_posteo']."' onclick='insertarComent(this.id);'/><i class='fa fa-edit'></i></button>
                  </span>
              </div>";
 
