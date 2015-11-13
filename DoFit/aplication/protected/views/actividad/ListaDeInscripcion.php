@@ -204,11 +204,9 @@ $this->pageTitle=Yii::app()->name;
                 cache: false,
                 success: function(response){
                     if(response == "error"){
-                        location.reload();
                         $('#Error').modal('show');
                     }
-                    if(response == "ok")
-                    {
+                    if(response == "ok"){
                         $('#Confirmacion').modal('show');
                     }
                 }
