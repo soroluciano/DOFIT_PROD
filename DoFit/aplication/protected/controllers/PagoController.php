@@ -144,49 +144,54 @@ class PagoController extends Controller
             $pa->fhultmod =  new CDbExpression('NOW()');
             $pa->mes = $_POST['meses'];
             $pa->monto = $_POST['monto'];
-
+            $suma = 0;
             $criteria = new CDbCriteria;
             $criteria->condition = 'id_usuario = :id_usuario and id_actividad = :id_actividad and anio = :anio and mes = :meses';
             $criteria->params = array(':id_usuario' => $_POST['id_usuario'], ':id_actividad' => $_POST['actividad'], ':anio'=> $_POST['anio'], ':meses'=> $_POST['meses']);
             $Actividad = Pago:: model()->findAll($criteria);
-
-            if($Actividad != null){
-                echo "duplicado";
-            }
+			$valoractividad = Actividad::model()->findByAttributes(array('id_actividad'=>$_POST['actividad']));
+		  if($Actividad != null){
+				 echo "duplicado";
+			 }		
             else{
-                if($pa->save()){
+                 if($_POST['monto'] != $valoractividad->valor_actividad){
+				   echo "valor_incorrecto";
+				 }
+				 
+                 else{				 
+				  if($pa->save()){
                     echo "ok";
-                }
+                  } 
                 else{
                     echo "error";
                 }
-
+				 }
             }
-
-
-        }
+		}
         else{
             $this->render('CrearPago', array('ficha_usuario' => $fu, 'actividad' => $ac, 'pago' => $pa));
         }
-
-
     }
 
     public function actionSeleccionarActividad()
     {
 
         $id_usuario = $_POST['FichaUsuario']['id_usuario'];
-        $actividades = ActividadAlumno::model()->findAll('id_usuario= :id_usuario', array(':id_usuario' => $id_usuario));
-        $actividades = CHtml::listData($actividades, 'id_actividad', 'id_actividad');
-
+		$id_institucion = Yii::app()->user->id;
+		$acti = ActividadAlumno::model()->findAll('id_usuario= :id_usuario', array(':id_usuario' => $id_usuario));
         echo CHtml::tag('option', array('value' => ''), 'Seleccione una actividad', true);
+		foreach($acti as $act){
+		    if($acti != null){
+		       $actividades = Actividad::model()->findAllByAttributes(array('id_institucion'=>$id_institucion,'id_actividad'=>$act->id_actividad));
+		       $actividades = CHtml::listData($actividades, 'id_actividad', 'id_actividad');
+          
 
         foreach ($actividades as $valor => $act) {
 
             echo CHtml::tag('option', array('value' => $valor), 'Actividad número: '.CHtml::encode($act), true);
         }
-
-
+	  }
+	}
     }
 
     public function actionSeleccionarAño()
