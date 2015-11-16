@@ -1,4 +1,5 @@
 
+
 <?php
     if ($resultSet != null) {
       foreach($resultSet as $row) {
@@ -31,37 +32,23 @@
                  </a>
              </div>
            </div>
-           <div class='post-footer'>
+           <div class='btn-comment-open'>
+            <input type='button' value='Comentar' class='btn-like-link' onclick='showComents(".$row['id_posteo'].");' />
+           </div>
+           <div class='post-footer' style='display:none' id='post-footer-".$row['id_posteo']."'>
              <div class='input-group'> 
                  <input class='form-control' placeholder='Add a comment' type='text' id='txt_post_".$row['id_posteo']."'>
                  <span class='input-group-addon'>
-                     <button type='submit' id='".$row['id_posteo']."' onclick='insertarComent(this.id);'/><i class='fa fa-edit'></i></button>
+                     <input type='submit' class='btn-comment' id='".$row['id_posteo']."' onclick='insertarComent(this.id);' value='Comentar'/>
                  </span>
-             </div>";
-
-            echo "<ul class='comments-list'>";
-
-            $respuestas_alumnos = Yii::app()->db->createCommand("select res.respuesta,fu.nombre,fu.apellido,ps.foto1 from respuesta res left join perfil_muro_profesor pm on res.id_posteo = pm.id_posteo left join ficha_usuario fu on res.id_usuario=fu.id_usuario left join perfil_social ps on ps.id_usuario=fu.id_usuario where pm.id_posteo =".$row['id_posteo']."")->queryAll();
-
-            if ($respuestas_alumnos != null) {
-                foreach ($respuestas_alumnos as $respuesta) {
-                  echo "
-                      <li class='comment'>
-                        <a class='pull-left' href='#'>
-                            <img src='".Yii::app()->request->baseUrl."/uploads/".$respuesta['foto1']."' class='avatar' alt='avatar'>
-                        </a>
-                          <div class='comment-body'>
-                              <div class='comment-heading'>
-                                  <h4 class='user'>".$respuesta['nombre']." ".$respuesta['apellido']."</h4>
-                                  <!--<h5 class='time'>5 minutes ago</h5>-->
-                              </div>
-                              <p>".$respuesta['respuesta']."</p>
-                          </div>
-                      </li>";
-            
-                }
-            }   
-            echo "</ul></div></div></div>";
+             </div>
+                <ul class='comments-list' id='post_coment_".$row['id_posteo']."'></br>
+                <input type='button' value='Mostrar respuestas' class='btn-like-link' onclick='getComentsByPost(".$row['id_posteo'].")'/>
+                </ul>
+             </div>
+             </div>
+           </div>";
+                       
       }
     }
 
