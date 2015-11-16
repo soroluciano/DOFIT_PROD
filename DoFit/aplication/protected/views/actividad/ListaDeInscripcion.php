@@ -64,63 +64,54 @@ $this->pageTitle=Yii::app()->name;
 <div class="container">
     <div class="form-group">
         <?php
-        echo "<div><h2>Inscripción a actividades </h2></div>";
-        $cant = 0;
         if($list != null) {
+            echo "<div><h2>Inscripción a actividades</h2></div>";
+            echo "<table class='table table-hover'>
+           <thead>
+            <tr>
+             <tr><th>Inscribirse</th><th>Deporte</th><th>Gimnasio</th><th>Dirección</th><th>Telefonó</th><th>Días y Horarios</th></thead>";
+            $cant = 0;
             $actividad_ant = 0;
             foreach($list as $gim){
                 $actividad = $gim['id_actividad'];
                 $deporte = Yii::app()->db->createCommand("SELECT deporte FROM deporte where id_deporte IN (SELECT id_deporte FROM actividad WHERE id_actividad = $actividad)")->queryRow();
                 if($cant == 0){
-                    $actividad_ant = $gim['id_actividad'];
-                    echo "<b><h2>Deporte: ".$deporte['deporte']."</h2></b>";
-                    echo "<div class='form-group'>";
-                    echo "<h4><b>Gimnasio: </b>".$gim['nombre'].".</h4>";
-                    echo "</div>";
-                    echo "<div class='form-group'>";
-                    echo " <h4><b>Dirección: </b>".$gim['direccion'].".</h4>";
-                    echo "</div>";
-                    echo "<div class='form-group'>";
-                    echo "<h4><b> Telefono: </b>".$gim['telfijo'].".</h4>";
-                    echo "</div>";
-                    echo "<div class='form-group'>";
-                    echo "<h4><b> Dia: </b>".$gim['id_dia']."</h4>";
-                    echo "</div>";
-                    echo "<div class='form-group'>";
-                    echo "<h4><b> Horario: </b>".$gim['hora'].':'.$gim['minutos']."</h4>";
+                    echo "<tbody>";
+                    echo "<tr>";
+                    echo "<td><button type='button'  value='".$actividad."' onclick='Anotarme(this.value);' class='btn btn-primary'>
+                            Inscribirse
+                          </button></td>";
                     $cant = 1;
-                    echo "<button type='button'  value='".$actividad."' onclick='Anotarme(this.value);' class='btn btn-primary btn-lg'>
-                            Anotarme
-                          </button><br/>";
-                    echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'</input>'";
-                    echo $actividad;
+                    echo "<input type='hidden' name='actividad' id='actividad' value='".$actividad."'</input>";
+                    echo "<td>".$deporte['deporte']."</td>";
+                    echo "<td>". $gim['nombre']."</td>";
+                    echo "<td>". $gim['direccion']."</td>";
+                    echo "<td>". $gim['telfijo']. "</td>";
+                    echo "<td>". $gim['id_dia']."&nbsp";
+                    echo $gim['hora'].':'.$gim['minutos']."&nbsp&nbsp";
+                    $actividad_ant = $gim['id_actividad'];
                 }
                 else{
                     if($gim['id_actividad']== $actividad_ant){
-                        echo " Dia: ".$gim['id_dia'];
-                        echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
+                        echo $gim['id_dia'];
+                        echo $gim['hora'].':'.$gim['minutos']."</td>";
                         $actividad_ant = $gim['id_actividad'];
+                        echo "</tr>";
                     }
                     else{
-                        echo "<br>";
+                        echo "<tr>";
                         echo "<button  type='button'  onclick='Anotarme(this.value);' value='".$actividad."' class='btn btn-primary btn-lg'>
-                            Anotarme
+                            Inscribirse
                           </button>";
-                        echo "<br/>";
-                        echo "<div class='form-group'>";
-                        echo "<h4><b>Gimnasio: </b>".$gim['nombre'].".</h4>";
-                        echo "</div>";
-                        echo "<div class='form-group'>";
-                        echo "<h4><b> Dirección: </b>".$gim['direccion'].".</h4>";
-                        echo "</div>";
-                        echo " Telefono: ".$gim['telfijo'];
-                        echo " Dia: ".$gim['id_dia'];
-                        echo " Horario: ".$gim['hora'].':'.$gim['minutos'];
+                        echo "<input type='hidden' id='actividad' name='actividad' value='".$actividad."'/>";
+                        echo "<td>".$gim['nombre']."</td>";
+                        echo "<td>".$gim['direccion']."</td>";
+                        echo "<td>".$gim['telfijo']."</td>";
+                        echo "<td>".$gim['id_dia']."&nbsp&nbsp";
+                        echo $gim['hora'].':'.$gim['minutos']."</td>";
                         $actividad_ant = $gim['id_actividad'];
-                        echo "<input type='hidden' id='actividad' name='actividad' value='".$actividad."'/>'";
-                        echo $actividad;
-
                     }
+                    echo "</tbody>";
                 }
                 echo "<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                             <div class='modal-dialog' role='document'>
@@ -138,7 +129,7 @@ $this->pageTitle=Yii::app()->name;
                                     </div>
                                 </div>
                             </div>
-                         </div>;";
+                         </div>";
 
                 echo "<div class='modal fade' id='Confirmacion' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                             <div class='modal-dialog' role='document'>
@@ -151,11 +142,11 @@ $this->pageTitle=Yii::app()->name;
                                         ¡Te anotaste correctamente!
                                     </div>
                                     <div class='modal-footer'>
-                                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal' onclick='location.reload();'>Cerrar</button>
                                     </div>
                                 </div>
                             </div>
-                         </div>;";
+                         </div>";
 
                 echo "<div class='modal fade' id='Error' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                             <div class='modal-dialog' role='document'>
@@ -168,17 +159,22 @@ $this->pageTitle=Yii::app()->name;
                                         <strong>Se produjo un error al intentar inscribirte</strong>
                                     </div>
                                     <div class='modal-footer'>
-                                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+                                        <button type='button' class='btn btn-default' data-dismiss='modal' onclick='location.reload();'>Cerrar</button>
                                     </div>
                                 </div>
                             </div>
-                         </div>;";
+                         </div>";
 
 
             }
+            echo "</table>";
         }
         else{
-            echo "Ya te has inscripto a todas las actividades.";
+            echo "<div class='row'>
+                  <div class='.col-md-6 .col-md-offset-3'>
+                  <h2 class='text-center'>Ya te has inscripto a todas las actividades.</h2>
+				  </div>
+                  </div>";
         }
         ?>
 
@@ -208,11 +204,10 @@ $this->pageTitle=Yii::app()->name;
                 cache: false,
                 success: function(response){
                     if(response == "error"){
-                        location.reload();
-                        $('#myModal').modal('show');
-                    }
-                    else{
                         $('#Error').modal('show');
+                    }
+                    if(response == "ok"){
+                        $('#Confirmacion').modal('show');
                     }
                 }
             })

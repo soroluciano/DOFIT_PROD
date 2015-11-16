@@ -175,12 +175,11 @@ class ActividadController extends Controller
         $deportes = new Deporte();
         $provincia = new Provincia();
         $localidad = new Localidad();
-        $fichainstitucion = new FichaInstitucion();
         // echo "error";
-        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad']) && isset($_POST['mercadopago'])) {
+        if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
             $criteria = new CDbCriteria;
-            $criteria->condition = 'id_localidad = :localidad and acepta_mp = :aceptamp and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
-            $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte'], ':aceptamp'=>$_POST['mercadopago']);
+            $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
+            $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte']);
             $gimnasio = FichaInstitucion:: model()->findAll($criteria);
             //$locations = '[';
             $i = 1;
@@ -204,7 +203,7 @@ class ActividadController extends Controller
             }
 
         } else {
-            $this->render('InscripcionActividad', array('deportes' => $deportes, 'provincia' => $provincia, 'localidad' => $localidad, 'fichainstitucion'=>$fichainstitucion));
+            $this->render('InscripcionActividad', array('deportes' => $deportes, 'provincia' => $provincia, 'localidad' => $localidad));
 
         }
 
@@ -236,7 +235,9 @@ class ActividadController extends Controller
 
     public function actionInscripcionFinal()
     {
+
         if(isset($_POST['actividad'])){
+
             $act_alum = new actividadAlumno();
             $act_alum->id_usuario = 1;
             $act_alum->id_estado = 0;
@@ -245,10 +246,10 @@ class ActividadController extends Controller
             $act_alum->fhultmod = new CDbExpression('NOW()');
             $act_alum->cusuario = 'sysadmin';
             if ($act_alum->save()){
-                echo "error";
+                echo "ok";
             }
             else {
-                echo "lolo";
+                echo "error";
             }
         }
     }

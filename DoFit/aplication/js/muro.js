@@ -1,4 +1,27 @@
-
+      
+      function showComents(idpost){
+        $("#post-footer-"+idpost).removeAttr("style");
+      }
+      
+      
+      function getComentsByPost(idpost){
+        var position = $("#position_post_"+idpost).val();
+        debugger;
+        $.ajax({
+                url:  baseurl+'/muro/getComentarios',
+                type: 'POST',
+                data: 'idposteo='+idpost+'&position='+position,
+                success:function(response){
+                        debugger;
+                        $('#post_coment_'+idpost).html(response);
+                
+        },
+        error: function(e){
+                $('#logger').html(e.responseText);
+        }});
+     
+      }
+      
        function insertarComent(a) {
           debugger;
           var _a = a;
@@ -33,11 +56,9 @@
           ,function(respuesta){
               getMensajesFromBase();
           });
-         
-    
+             
        }
-       
-       
+
        
         $(function(){
             var pusher = new Pusher('c48d59c4cb61c7183954');    
@@ -74,7 +95,7 @@
                 });
                 return false;
             });
-     });
+         });
      
         $(function(){
         

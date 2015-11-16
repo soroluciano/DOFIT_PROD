@@ -120,6 +120,7 @@ if(!Yii::app()->user->isGuest){
             <a mp-mode="dftl" id="futbol" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-a1537fa2-1750-4bba-adb1-3739c6135672" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
             <a mp-mode="dftl" id="basquet" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-883a3922-8cf5-42f9-8e84-4914389693bf" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
             <a mp-mode="dftl" id="cross-fit" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-ecc713b9-5c9b-4eb5-8eb8-ac4abfdcd876" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
+            <a mp-mode="dftl" id="natacion" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-7bfa3296-9c8f-45d2-9c88-281e4a099f03" name="MP-payButton" class='btn btn-primary'>Pagar con mercado pago</a>
             <!-- Modal OK -->
             <div class='modal fade' id='Ok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>
@@ -171,7 +172,23 @@ if(!Yii::app()->user->isGuest){
                     </div>
                 </div>
             </div>
-
+            <!-- Modal Correcto -->
+            <div class='modal fade' id='incorrecto' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                <div class='modal-dialog' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                            <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
+                        </div>
+                        <div class='modal-body'>
+                            Ingrese el importe correcto para esa actividad.
+                        </div>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php echo CHtml::endForm(); ?>
             <?php $this->endWidget(); ?>
 
@@ -183,6 +200,7 @@ if(!Yii::app()->user->isGuest){
             $('#futbol').hide();
             $('#basquet').hide();
             $('#cross-fit').hide();
+            $('#natacion').hide();
         });
     </script>
     <script type="text/javascript">
@@ -205,21 +223,31 @@ if(!Yii::app()->user->isGuest){
                             $('#futbol').hide();
                             $('#basquet').hide();
                             $('#cross-fit').hide();
+                            $('#natacion').hide();
                         }
                         if(deporte[1] == "Fútbol"){
                             $('#futbol').show();
                             $('#kempo').hide();
                             $('#basquet').hide();
                             $('#cross-fit').hide();
+                            $('#natacion').hide();
                         }
                         if(deporte[1] == "Basquet"){
                             $('#basquet').show();
                             $('#futbol').hide();
                             $('#kempo').hide();
                             $('#cross-fit').hide();
+                            $('#natacion').hide();
                         }
                         if(deporte[1] == "Cross-Fit"){
                             $('#cross-fit').show();
+                            $('#basquet').hide();
+                            $('#futbol').hide();
+                            $('#kempo').hide();
+                            $('#natacion').hide();
+                        }
+                        if(deporte[1] == "Natación"){
+                            $('#natacion').show();
                             $('#basquet').hide();
                             $('#futbol').hide();
                             $('#kempo').hide();
@@ -239,7 +267,6 @@ if(!Yii::app()->user->isGuest){
             var anio  = $('#anio').val();
             var meses = $('#meses').val();
             var monto = $('#Actividad_valor_actividad').val();
-
             if(id_usuario != ""){
                 if(actividad!= ""){
                     if(anio != ""){
@@ -260,6 +287,9 @@ if(!Yii::app()->user->isGuest){
                                         else {
                                             if(response == 'error'){
                                                 $('#Error').modal('show');
+                                            }
+                                            if(response == 'valor_incorrecto'){
+                                                $('#incorrecto').modal('show');
                                             }
                                             else
                                             {
@@ -299,8 +329,7 @@ if(!Yii::app()->user->isGuest){
         /* Cross Fit */
         (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
     </script>
-
     <script type="text/javascript">
+        /* Natacion*/
         (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
     </script>
-  
