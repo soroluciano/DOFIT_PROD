@@ -17,7 +17,7 @@
 			</li>";
 		}
 			if($show){
-				echo "<input type='hidden' value='$' id='position_post_.$idposteo'/>";
+				echo "<input type='hidden' value='$position' id='position_post_$idposteo'/>";
 				echo "<input type='button' class='btn-like-link' onclick='getComentsByPost($idposteo);' value='Ver mas comentarios'/>";  
 			}
 		}

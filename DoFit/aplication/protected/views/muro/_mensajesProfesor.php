@@ -35,15 +35,17 @@
            <div class='btn-comment-open'>
             <input type='button' value='Comentar' class='btn-like-link' onclick='showComents(".$row['id_posteo'].");' />
            </div>
-           <div class='post-footer' style='display:none' id='post-footer-".$row['id_posteo']."'>
+           <div class='post-footer' id='post-footer-".$row['id_posteo']."'>
              <div class='input-group'> 
                  <input class='form-control' placeholder='Add a comment' type='text' id='txt_post_".$row['id_posteo']."'>
                  <span class='input-group-addon'>
                      <input type='submit' class='btn-comment' id='".$row['id_posteo']."' onclick='insertarComent(this.id);' value='Comentar'/>
                  </span>
-             </div>
+             </div>";
+             
+        echo  "<script>$('#post-footer-".$row['id_posteo']."').load(getComentsByPost(".$row['id_posteo']."));</script>
                 <ul class='comments-list' id='post_coment_".$row['id_posteo']."'></br>
-                <input type='button' value='Mostrar respuestas' class='btn-like-link' onclick='getComentsByPost(".$row['id_posteo'].")'/>
+                <!--<input type='button' value='Mostrar respuestas' class='btn-like-link' onclick='getComentsByPost(".$row['id_posteo'].")'/>-->
                 </ul>
              </div>
              </div>
