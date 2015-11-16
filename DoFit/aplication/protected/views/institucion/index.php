@@ -21,7 +21,7 @@
                                     <li><a href="../site/indexAdmin">Home</a></li>
                                     <li><a href="../deporte/index">ABM Deportes</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
+                                    <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
                                 </ul>
                             </li>
                         </ul>
