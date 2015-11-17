@@ -33,12 +33,6 @@ $this->pageTitle=Yii::app()->name;
                 <li>
                     <a href="../actividad/CrearActividad">Crear Actividades</a>
                 </li>
-                <li>
-                    <a href="../javascript/"></a>
-                </li>
-                <li>
-                    <a href="../customize/"></a>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
@@ -47,30 +41,38 @@ $this->pageTitle=Yii::app()->name;
         </nav>
     </div>
 </header>
-<div>
-    <div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <label>
-            Pagos
-        </label>
-        <?php echo CHtml::beginForm('../pago/index','post'); ?>
-        <?php echo CHtml::submitButton('Generar pagos',array('class'=>'btn btn-primary')); ?>
-        <?php echo CHtml::endForm(); ?>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2><a href="../pago/index" class="btn btn-primary">Pagos</a></h2>
+            <p>Gestioná los pagos de tus alumnos</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/2.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2><a href="../actividad/CrearActividad" class="btn btn-primary">Actividades</a></h2>
+            <p>Gestioná las actividades de tu institución</p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/3.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>¿No sabés cómo funciona?</h2>
+            <p>Hacé click <a href="#">acá</a> para ver como funciona de DoFit. </p>
+        </div>
     </div>
-    <div class="form-group">
-        <div><label>Actividades</label></div>
-        <?php echo CHtml::beginForm('../actividad/CrearActividad','post'); ?>
-        <?php echo CHtml::submitButton('Crear Actividad',array('class'=>'btn btn-primary')); ?>
-        <?php echo CHtml::endForm(); ?></div>
+</div>
+<br>
+<br>
 
-    <?php
-    echo  "<div><label> Solicitud de adhesion a Profesores</label></div>";
+<div class="container">
+<?php
+    echo  "<div><h2>Profesores que se quieren unir a tu gimnasio</h2></div>";
     if($profesor_pen != null){
         echo    "<table class='table table-hover'>
                         <thead>
@@ -100,30 +102,36 @@ $this->pageTitle=Yii::app()->name;
     {
         echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay solicitud de profesores</h2>
+                            <h5 class='text-center'>No hay solicitud de profesores</h5>
                         </div>
                     </div>";
     }
-    ?>
-    <?php
-    echo  "<div><label>Inscripción de alumnos a actividades</label></div>";
+?>
+<br>
+<br>
+<br>
+<?php
+    echo  "<div><h2>Alumnos que se anotaron en actividades</h2></div>";
     if($actividades_pen != null){
         echo    "<table class='table table-hover'>
                         <thead>
                             <tr>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
+                                <th>Actividad</th>
                                 <th>.</th>
                                 <th>.</th>
                             </tr>
                         </thead>";
         foreach($actividades_pen as $a){
             $fua = FichaUsuario::model()->findAll('id_usuario=:id_usuario',array(':id_usuario'=>$a->id_usuario));
+
             foreach($fua as $t){
                 echo "<tbody>
                                 <tr>
                                     <td>$t->nombre</td>
                                     <td>$t->apellido</td>
+                                    <td></td>
                                     <td><a href='../actividadAlumno/aceptar/$t->id_usuario' class='btn btn-default'>Aceptar<a/></td>
                                     <td><a href='../actividadAlumno/cancelar/$t->id_usuario' class='btn btn-default'>Cancelar<a/></td>";
             }
@@ -136,7 +144,7 @@ $this->pageTitle=Yii::app()->name;
     {
         echo    "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No hay solicitud de inscripción a actividades</h2>
+                            <h5 class='text-center'>No hay solicitud de inscripción a actividades</h5>
                         </div>
                     </div>";
     }
