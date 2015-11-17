@@ -25,17 +25,32 @@ class MuroController extends Controller
 			
 			//$muroProfesor = PerfilMuroProfesor::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 			$actividad = $_POST['id_actividad'];
-			$mensaje = $_POST['mensaje'];
-	
-			$muroProfesor = new PerfilMuroProfesor();
-			$muroProfesor->posteo = $mensaje;
-			$muroProfesor->id_actividad = $actividad;
-			$muroProfesor->id_canal = $canal->id_canal;
-			$muroProfesor->fhcreacion= new CDbExpression('NOW()');
-			$muroProfesor->cusuario="juancito";
-			$muroProfesor->save();
 			
-			echo "saved";
+			if(is_numeric($actividad)){
+				$mensaje = $_POST['mensaje'];
+			
+				//si la persona puede guardar utilizando esa actividad lo dejo guardar
+			
+				$actividadBusqueda  = Yii::app()->db->createCommand("select act.id_actividad from actividad act where act.id_usuario=".$usuario->id_usuario." and act.id_actividad=".$actividad)->queryAll();
+			
+				if($actividadBusqueda != null){
+								
+					$muroProfesor = new PerfilMuroProfesor();
+					$muroProfesor->posteo = $mensaje;
+					$muroProfesor->id_actividad = $actividad;
+					$muroProfesor->id_canal = $canal->id_canal;
+					$muroProfesor->fhcreacion= new CDbExpression('NOW()');
+					$muroProfesor->cusuario="juancito";
+					$muroProfesor->save();
+					echo "saved";			
+				}else{
+					throw new ExceptionClass('No se ha podido guardar el comentario');
+				}
+			
+			}else{
+					throw new ExceptionClass('No hemos podido encontrar la actividad');
+			}
+			
 	}
 	
 	public function actionGetCanal(){
