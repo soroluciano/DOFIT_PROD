@@ -185,6 +185,44 @@
         
           })
 
-      }  
+      }
+      
+      function editComment(idcoment) {
+        
+        $txt_area = "<textarea> </textarea>";
+        
+        
+        
+        
+      }
+      
+      /*
+        Lista de tareas profesor
+        * edicion de posts
+        * edicion de respuestas
+        * elimiacion de comentarios si me pertenecen -> eliminacion de respuestas asociados
+        
+        Seccion de alumnos con posts
+        * edicion de respuestas
+        * eliminacion de respuestas si me pertenecen
+        * 
+      
+      
+      
+      
+      
+      
+      
+      */
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         
         

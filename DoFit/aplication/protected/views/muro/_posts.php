@@ -1,64 +1,59 @@
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-
-
-
-
-
-    <div class="col-md-8">
-      <h2 class="page-header">Comments</h2>
-        <section class="comment-list">
-          <!-- First Comment -->
-          <article class="row">
-            <div class="col-md-2 col-sm-2 hidden-xs">
-              <figure class="thumbnail">
-				<img class="img-responsive" src="<?php echo Yii::app()->request->baseUrl;echo "/images/1.jpg"; ?>"/>
-                <figcaption class="text-center">Profesor Juancito</figcaption>
-              </figure>
-            </div>
-            <div class="col-md-10 col-sm-10">
-              <div class="panel panel-default arrow left">
-                <div class="panel-body">
-                  <header class="text-left">
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2015</time>
-                  </header>
-                  <div class="comment-post">
-                    <p>
-                      Chicos el sabado 19 habrá actividades normalmente
-                    </p>
-                  </div>
-                  <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> comentar</a></p>
+<?php
+    if ($resultSet != null) {
+      foreach($resultSet as $row) {
+          echo "
+      <div class='col-sm-8'>
+        <div class='panel panel-white post panel-shadow'>
+        
+            <div class='post-heading'>
+              <div></div>
+              <div class='pull-left image'>
+                <img src='".Yii::app()->request->baseUrl."/uploads/".$row['foto1']."' class='img-circle avatar' alt='user profile image'>
+              </div>
+              <div class='pull-left meta'>
+                <div class='title h5'>
+                  <a href=''><b>".$row['nombre']." ".$row['apellido']."</b></a>
+                 <!-- made a post.-->
                 </div>
+                <!--<h6 class='text-muted time'>1 minute ago</h6>-->
               </div>
             </div>
-          </article>
-          <!-- Second Comment Reply -->
-          <article class="row">
-            <div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs">
-              <figure class="thumbnail">
-                <img class="img-responsive" src="<?php echo Yii::app()->request->baseUrl;echo "/images/avatar-dhg.png"; ?>" />
-                <figcaption class="text-center">Hernan Mancuso</figcaption>
-              </figure>
-            </div>
-            <div class="col-md-9 col-sm-9">
-              <div class="panel panel-default arrow left">
-                <!--<div class="panel-heading right">Reply</div>-->
-                <div class="panel-body">
-                  <header class="text-left">
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2015</time>
-                  </header>
-                  <div class="comment-post">
-                    <p>
-                      Gracias!
-                    </p>
-                  </div>
-                  <p class="text-right"></p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- Third Comment -->
-        </section>
-    </div>
-  </div>
+
+           <div class='post-description'> 
+             <p>".$row['posteo']."</p>
+             <div class='stats'>
+                <!-- <a href='#' class='btn btn-default stat-item'>
+                     <i class='fa fa-thumbs-up icon'></i>2
+                 </a>
+                 <a href='#' class='btn btn-default stat-item'>
+                     <i class='fa fa-share icon'></i>12
+                 </a>-->
+             </div>
+           </div>
+           <div class='btn-comment-open'>
+            <!--<input type='button' value='Comentar' class='btn-like-link' onclick='showComents(".$row['id_posteo'].");' />-->
+           </div>
+           <div class='post-footer' id='post-footer-".$row['id_posteo']."'>
+             <div class='input-group'> 
+                 <input class='form-control' placeholder='Add a comment' type='text' id='txt_post_".$row['id_posteo']."'>
+                 <span class='input-group-addon'>
+                     <input type='submit' class='btn-comment' id='".$row['id_posteo']."' onclick='insertarComent(this.id);' value='Comentar'/>
+                 </span>
+             </div>";
+             
+        echo  "<script>$('#post-footer-".$row['id_posteo']."').load(getComentsByPost(".$row['id_posteo']."));</script>
+                <ul class='comments-list' id='post_coment_".$row['id_posteo']."'></br>
+                <!--<input type='button' value='Mostrar respuestas' class='btn-like-link' onclick='getComentsByPost(".$row['id_posteo'].")'/>-->
+                </ul>
+             </div>
+             </div>
+           </div>";
+                       
+      }
+    }
+
+        
+
+?>
