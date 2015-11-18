@@ -215,6 +215,22 @@ class InstitucionController extends Controller
         $this->redirect('../home');
     }
 
+    public function actionAceptarAlumno($id)
+    {
+        if(!isset(Yii::app()->session['id_institucion'])){
+            if (isset(Yii::app()->session['id_usuario'])) {
+                $this->redirect('../site/index');
+            }
+            else{
+                $this->redirect('../site/loginadmin');
+            }
+        }
+        $pi = ProfesorInstitucion::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
+        $pi->id_estado = 1;
+        $pi->update();
+        $this->redirect('../home');
+    }
+
     public function actionHome()
     {
         if(!isset(Yii::app()->session['id_institucion'])){
@@ -286,7 +302,7 @@ class InstitucionController extends Controller
     {
         $this->render('Mostrardatos');
     }
-
+     
   
 }
 

@@ -79,8 +79,6 @@ $this->pageTitle=Yii::app()->name;
                             <tr>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
-                                <th>.</th>
-                                <th>.</th>
                             </tr>
                         </thead>";
         foreach($profesor_pen as $f){
@@ -119,21 +117,38 @@ $this->pageTitle=Yii::app()->name;
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Actividad</th>
-                                <th>.</th>
-                                <th>.</th>
                             </tr>
                         </thead>";
         foreach($actividades_pen as $a){
             $fua = FichaUsuario::model()->findAll('id_usuario=:id_usuario',array(':id_usuario'=>$a->id_usuario));
+            $actividad = Actividad::model()->findByPk($a->id_actividad);
+            $deporte = Deporte::model()->findByPk($actividad->id_deporte);
+
+            $actividad_horario = ActividadHorario::model()->findAll('id_actividad = :id',array(':id'=>$a->id_actividad));
+
+            $var = $deporte->deporte. ' - ';
+
+            foreach($actividad_horario as $ah){
+                if($ah->id_dia == 1){$dia = "Lunes";};
+                if($ah->id_dia == 2){$dia = "Martes";};
+                if($ah->id_dia == 3){$dia = "Miercoles";};
+                if($ah->id_dia == 4){$dia = "Jueves";};
+                if($ah->id_dia == 5){$dia = "Viernes";};
+                if($ah->id_dia == 6){$dia = "Sabado";};
+                if($ah->id_dia == 7){$dia = "Domingo";};
+
+                $var = $var . ' Dia: '.$dia. ' Horario: '.str_pad($ah->hora,2,'0',STR_PAD_LEFT).':'.str_pad($ah->minutos,2,'0',STR_PAD_LEFT);
+            }
+
 
             foreach($fua as $t){
                 echo "<tbody>
                                 <tr>
                                     <td>$t->nombre</td>
                                     <td>$t->apellido</td>
-                                    <td></td>
-                                    <td><a href='../actividadAlumno/aceptar/$t->id_usuario' class='btn btn-default'>Aceptar<a/></td>
-                                    <td><a href='../actividadAlumno/cancelar/$t->id_usuario' class='btn btn-default'>Cancelar<a/></td>";
+                                    <td>$var</td>
+                                    <td><a href='../actividadAlumno/AceptarAlumno/$t->id_usuario' class='btn btn-default'>Aceptar<a/></td>
+                                    <td><a href='../actividadAlumno/CancelarAlumno/$t->id_usuario' class='btn btn-default'>Cancelar<a/></td>";
             }
 
         }

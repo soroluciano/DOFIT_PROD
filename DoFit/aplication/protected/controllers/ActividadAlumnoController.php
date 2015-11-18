@@ -46,4 +46,12 @@ class ActividadAlumnoController extends Controller
             echo "ok";
         }
     }
+	
+	// Listado de actividades por Alumno
+	public function actionListadoActividades()
+   	{
+	  $id_usuario = Yii::app()->user->id;
+	  $this->render('ListadoActividadesAlumno');
+	} 
 }
+
