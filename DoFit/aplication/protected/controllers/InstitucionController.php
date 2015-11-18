@@ -286,7 +286,7 @@ class InstitucionController extends Controller
     {
         $this->render('Mostrardatos');
     }
-
+     
   
 }
 
