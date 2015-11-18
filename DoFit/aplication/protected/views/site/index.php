@@ -67,15 +67,20 @@ $this->pageTitle=Yii::app()->name;
 <br>
 <br>
 <?php
-   echo "<div class='form-group'>";
-	  echo CHtml::beginForm('../actividad/InscripcionActividad','post'); 
-
     echo "<div class='form-group'>";
       echo CHtml::beginForm('../actividad/inscripcion','post'); 
       echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
-
+   
+if($Us->id_perfil == 1){   
+   echo "<div class='form-group'>";
+      echo CHtml::beginForm('../actividadalumno/ListadoActividades','post'); 
+      echo CHtml::submitButton('Actividades a la que estoy inscripto',array('class'=>'btn btn-primary'));                      
+      echo CHtml::endForm();      
+   echo "</div>";
+} 
+ 
 if($Us->id_perfil == 2){
    echo "<div class='form-group'>";
       echo CHtml::beginForm('../ProfesorInstitucion/Adhesiongimnasio','post'); 
@@ -94,7 +99,7 @@ if($Us->id_perfil == 2){
       echo CHtml::submitButton('Muro',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
-	
+ 
 ?>
 
   <a href="<?php echo Yii::app()->request->baseUrl; ?>/chat/index" class="btn btn-primary">Chatea con tus compañeros!</a>

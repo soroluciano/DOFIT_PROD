@@ -116,11 +116,6 @@ if(!Yii::app()->user->isGuest){
             </div>
 
             <button type="button" name="button" class="btn btn-primary" onclick="Crear();">Crear</button>
-            <a mp-mode="dftl" id="kempo" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-5fd2c6eb-45ea-4e38-a1d4-6b1f50ff3899" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
-            <a mp-mode="dftl" id="futbol" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-a1537fa2-1750-4bba-adb1-3739c6135672" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
-            <a mp-mode="dftl" id="basquet" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-883a3922-8cf5-42f9-8e84-4914389693bf" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
-            <a mp-mode="dftl" id="cross-fit" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-ecc713b9-5c9b-4eb5-8eb8-ac4abfdcd876" name="MP-payButton" class='btn btn-primary'>Pagar con Mercado Pago</a>
-            <a mp-mode="dftl" id="natacion" href="https://www.mercadopago.com/mla/checkout/start?pref_id=197246675-7bfa3296-9c8f-45d2-9c88-281e4a099f03" name="MP-payButton" class='btn btn-primary'>Pagar con mercado pago</a>
             <!-- Modal OK -->
             <div class='modal fade' id='Ok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>
@@ -195,15 +190,6 @@ if(!Yii::app()->user->isGuest){
         </div>
     </div>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#kempo').hide();
-            $('#futbol').hide();
-            $('#basquet').hide();
-            $('#cross-fit').hide();
-            $('#natacion').hide();
-        });
-    </script>
-    <script type="text/javascript">
         function BuscoDetalle(){
             $('#Detalle').empty();
             var valor = $('#Actividad_id_actividad').val();
@@ -218,40 +204,6 @@ if(!Yii::app()->user->isGuest){
                     success: function (response) {
                         deporte = response.split(":");
                         deporte[1] = deporte[1].replace(/\s/g, ''); // quito los espcios en Blanco del deporte
-                        if(deporte[1] == "Kempo"){
-                            $('#kempo').show();
-                            $('#futbol').hide();
-                            $('#basquet').hide();
-                            $('#cross-fit').hide();
-                            $('#natacion').hide();
-                        }
-                        if(deporte[1] == "Fútbol"){
-                            $('#futbol').show();
-                            $('#kempo').hide();
-                            $('#basquet').hide();
-                            $('#cross-fit').hide();
-                            $('#natacion').hide();
-                        }
-                        if(deporte[1] == "Basquet"){
-                            $('#basquet').show();
-                            $('#futbol').hide();
-                            $('#kempo').hide();
-                            $('#cross-fit').hide();
-                            $('#natacion').hide();
-                        }
-                        if(deporte[1] == "Cross-Fit"){
-                            $('#cross-fit').show();
-                            $('#basquet').hide();
-                            $('#futbol').hide();
-                            $('#kempo').hide();
-                            $('#natacion').hide();
-                        }
-                        if(deporte[1] == "Natación"){
-                            $('#natacion').show();
-                            $('#basquet').hide();
-                            $('#futbol').hide();
-                            $('#kempo').hide();
-                        }
                         $('#Detalle').append("<p>"+response+"</p>");
                     }
 
@@ -305,31 +257,5 @@ if(!Yii::app()->user->isGuest){
                 }
             }
         }
-
-
-
-
     </script>
-    <script type="text/javascript">
-        /* Kempo */
-        (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
-    </script>
-
-    <script type="text/javascript">
-        /* Futbol */
-        (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
-    </script>
-
-    <script type="text/javascript">
-        /* Basquet */
-        (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
-    </script>
-
-    <script type="text/javascript">
-        /* Cross Fit */
-        (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
-    </script>
-    <script type="text/javascript">
-        /* Natacion*/
-        (function(){function $MPBR_load(){window.$MPBR_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = ("https:"==document.location.protocol?"https://www.mercadopago.com/org-img/jsapi/mptools/buttons/":"http://mp-tools.mlstatic.com/buttons/")+"render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPBR_loaded = true;})();}window.$MPBR_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPBR_load) : window.addEventListener('load', $MPBR_load, false)) : null;})();
-    </script>
+    
