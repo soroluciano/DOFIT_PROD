@@ -33,7 +33,7 @@
              </div>
            </div>
            <div class='btn-comment-open'>
-            <input type='button' value='Comentar' class='btn-like-link' onclick='showComents(".$row['id_posteo'].");' />
+            <!--<input type='button' value='Comentar' class='btn-like-link' onclick='showComents(".$row['id_posteo'].");' />-->
            </div>
            <div class='post-footer' id='post-footer-".$row['id_posteo']."'>
              <div class='input-group'> 
