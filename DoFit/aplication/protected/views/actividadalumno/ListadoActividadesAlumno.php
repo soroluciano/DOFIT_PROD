@@ -3,6 +3,7 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
+
 ?>
 
 <script type="text/javascript">
@@ -55,5 +56,24 @@ $this->pageTitle=Yii::app()->name;
 <br/>
 <br/>
 <html>
-<?php echo "hola";?>
+<div class="container">
+  <div class="form">
+    <div class="col-md-8"> 
+	 <div class="form-group">
+   <h3> Seleccione una instituci&oacute;n </h3>
+   <select id="institucion" class="form-control"> 
+ 	  <?php 
+       if(!Yii::app()->user->isGuest){
+	      echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>"; 
+	      foreach($instituciones as $ins){
+		  echo $ins['nombre'];		  
+          echo "<option  value='institucion' name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
+	     }
+	   }	
+      ?> 
+   </select>  
+   </div>
+   </div>
+  </div>
+ </div> 
 </html>

@@ -51,7 +51,11 @@ class ActividadAlumnoController extends Controller
 	public function actionListadoActividades()
    	{
 	  $id_usuario = Yii::app()->user->id;
-	  $this->render('ListadoActividadesAlumno');
-	} 
+	  $criteria = new CDbCriteria;
+	  $instituciones = Yii::app()->db->createCommand('select id_institucion,nombre from ficha_institucion WHERE id_institucion IN(SELECT id_institucion from actividad where id_actividad IN(SELECT id_actividad from actividad_alumno WHERE id_usuario ='.$id_usuario.'))')->queryAll();	  
+	  if($instituciones != NULL){
+          $this->render('ListadoActividadesAlumno',array('instituciones'=>$instituciones));
+	  } 
+	}  
 }
-
+?>
