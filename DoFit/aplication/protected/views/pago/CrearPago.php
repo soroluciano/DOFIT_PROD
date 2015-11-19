@@ -1,53 +1,58 @@
 <?php
-/* @var $this UsuarioController */
-/* @var $model Usuario */
-/* @var $form CActiveForm */
-if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
-}
+/* @var $this SiteController */
 
+$this->pageTitle=Yii::app()->name;
 ?>
 
-<div class="navbar-wrapper">
+<?php if(!Yii::app()->user->isGuest){
+    //Es un usuario logueado.
+    $ins = Institucion::model()->findByPk(Yii::app()->user->id);
+    $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
+}
+?>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../site/LoginInstitucion"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+            <a href="../" class="navbar-brand"></a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../ProfesorInstitucion/ListadoProfesores">Listado de Profesores</a>
+                </li>
+                <li>
+                    <a href="../institucion/ListadoAlumnosxInstitucion">Listado de Alumnos</a>
+                </li>
+                <li>
+                    <a href="../actividad/CrearActividad">Crear Actividades</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
+                <li><a href="../site/LoginInstitucion">Salir</a></li>
+            </ul>
         </nav>
     </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
-        </div>
-    </div>
-</div>
-
-<div class="container">
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container marketing">
     <div class="form">
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'pago-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
-        <div class="col-md-8">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
             <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
             <div class="form-group">
                 <?php   $criteria = new CDbCriteria;
