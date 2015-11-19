@@ -8,59 +8,75 @@ class MuroController extends Controller
     {	
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 			$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
+			
+			
+			
+			
+			
+			
 			$this->render('indexProfesor',array('resultSet'=>$resultSet));
-    } 
+    
+			//if(){ TODO AGREGAR VALIDACION POR TIPO DE USUARIO
+			//	
+			//}
+		
+		
+		
+		} 
 	
-		public function actionMensajes(){
+		public function actionMensajes()
+		{
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 			$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
-			$this->renderPartial('_mensajesProfesor',array('resultSet'=>$resultSet));
+			$this->renderPartial('_posts',array('resultSet'=>$resultSet));
 		}
 	
 		public function actionInsertarComentarioProfesor(){
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 			$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 			$canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-			
-			
-			//$muroProfesor = PerfilMuroProfesor::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 			$actividad = $_POST['id_actividad'];
 			
-			if(is_numeric($actividad)){
-				$mensaje = $_POST['mensaje'];
-			
-				//si la persona puede guardar utilizando esa actividad lo dejo guardar
-			
-				$actividadBusqueda  = Yii::app()->db->createCommand("select act.id_actividad from actividad act where act.id_usuario=".$usuario->id_usuario." and act.id_actividad=".$actividad)->queryAll();
-			
-				if($actividadBusqueda != null){
-								
-					$muroProfesor = new PerfilMuroProfesor();
-					$muroProfesor->posteo = $mensaje;
-					$muroProfesor->id_actividad = $actividad;
-					$muroProfesor->id_canal = $canal->id_canal;
-					$muroProfesor->fhcreacion= new CDbExpression('NOW()');
-					$muroProfesor->cusuario="juancito";
-					$muroProfesor->save();
-					echo "saved";			
+			$mensaje = $_POST['mensaje'];
+						
+			if($actividad !=null && $mensaje != null){
+				if(is_numeric($actividad)){
+		
+					$mensajeFilter = mysql_real_escape_string(htmlentities($mensaje));			//le quito las etiquetas html
+					//si la persona puede guardar utilizando esa actividad lo dejo guardar	
+					$actividadBusqueda  = Yii::app()->db->createCommand("select act.id_actividad from actividad act where act.id_usuario=".$usuario->id_usuario." and act.id_actividad=".$actividad)->queryAll();
+				
+					if($actividadBusqueda != null){
+									
+						$muroProfesor = new PerfilMuroProfesor();
+						$muroProfesor->posteo = $mensajeFilter;
+						$muroProfesor->id_actividad = $actividad;
+						$muroProfesor->id_canal = $canal->id_canal;
+						$muroProfesor->fhcreacion= new CDbExpression('NOW()');
+						$muroProfesor->cusuario="juancito";
+						$muroProfesor->save();
+						echo "saved";			
+					}else{
+						throw new ExceptionClass('No se ha podido guardar el comentario');
+					}
+				
 				}else{
-					throw new ExceptionClass('No se ha podido guardar el comentario');
+						echo "error de actividad";
 				}
-			
-			}else{
-					throw new ExceptionClass('No hemos podido encontrar la actividad');
 			}
 			
 	}
 	
-	public function actionGetCanal(){
+	public function actionGetCanal()
+	{
 		//$usuario = Usuario::model()->findByPk(Yii::app()->user->id);		
 		$canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 		echo $canal->nombre;
 		
 	}
 	
-	public function actionGetIdCanal(){
+	public function actionGetIdCanal()
+	{
 		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
 		$canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 		echo $canal->id_canal;
@@ -68,7 +84,8 @@ class MuroController extends Controller
 	}
 	
 	
-	public function actionInsertarRespuesta(){
+	public function actionInsertarRespuesta()
+	{	
 		$comentario = $_POST['respuesta'];
 		$id_posteo = $_POST['id_posteo'];
 		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
@@ -99,7 +116,8 @@ class MuroController extends Controller
 		
 	}
 	
-	public function actionGetComentarios(){
+	public function actionGetComentarios()
+	{
 		$idposteo = $_POST['idposteo'];
 		$position = $_POST['position'];
 		$response;
@@ -126,11 +144,7 @@ class MuroController extends Controller
 		
 		
 		
-	public function actionLogout()
-	{
-	Yii::app()->user->logout();
-	$this->redirect(Yii::app()->homeUrl);
-	}
+
 	
 	
 	public function actionPruebaJson() {
@@ -140,8 +154,17 @@ class MuroController extends Controller
 			Yii::app()->end();
 	}
 	
-	public function actionPruebaVista(){
+	public function actionPruebaVista()
+	{
 		$this->render('pruebaJson');
+	}
+
+	
+	
+	public function actionLogout()
+	{
+		Yii::app()->user->logout();
+		$this->redirect(Yii::app()->homeUrl);
 	}
 
 

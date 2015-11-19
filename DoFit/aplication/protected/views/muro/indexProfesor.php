@@ -127,7 +127,7 @@ function getActividades($id){
 		</div>
 	</div>
     <div id="comentarios" class="row">
-		<?php $this->renderPartial('_mensajesProfesor',array('resultSet'=>$resultSet)); ?>
+		<?php $this->renderPartial('_posts',array('resultSet'=>$resultSet)); ?>
     </div>
 	<input type="hidden" id="canal" value="<?php echo $canal->nombre;?>"/>
 	<input type="hidden" id="id_canal" value="<?php echo $canal->id_canal;?>"/>
