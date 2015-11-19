@@ -57,10 +57,10 @@ $this->pageTitle=Yii::app()->name;
             <div class="form-group">
                 <?php   $criteria = new CDbCriteria;
                 $criteria->condition = 'id_usuario IN (select id_usuario from actividad_alumno where id_actividad IN ( select id_actividad from actividad where id_institucion = :institucion ))';
-                $criteria->params = array(':institucion' => 1 );
+                $criteria->params = array(':institucion' => Yii::app()->user->id  );
                 $usuario = FichaUsuario:: model()->findAll($criteria);?>
                 <?php   echo $form->labelEx($ficha_usuario,'Alumno'); ?>
-                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre'),
+                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),
                     array('ajax'=>array('type'=>'POST',
                         'url'=>CController::createUrl('Pago/SeleccionarActividad'),
                         'update'=>'#'.CHtml::activeId($actividad,'id_actividad'),
@@ -121,6 +121,7 @@ $this->pageTitle=Yii::app()->name;
             </div>
 
             <button type="button" name="button" class="btn btn-primary" onclick="Crear();">Crear</button>
+            <a href="index" class="btn btn-primary">Volver</a>
             <!-- Modal OK -->
             <div class='modal fade' id='Ok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                 <div class='modal-dialog' role='document'>

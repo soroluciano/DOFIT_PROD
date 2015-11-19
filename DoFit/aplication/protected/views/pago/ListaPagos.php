@@ -59,10 +59,10 @@ $this->pageTitle=Yii::app()->name;
                 <?php
                 $criteria = new CDbCriteria;
                 $criteria->condition = 'id_usuario IN (select id_usuario from actividad_alumno where id_actividad IN ( select id_actividad from actividad where id_institucion = :institucion ))';
-                $criteria->params = array(':institucion' => 1 );
+                $criteria->params = array(':institucion' => Yii::app()->user->id );
                 $usuario = FichaUsuario:: model()->findAll($criteria);?>
                 <?php   echo $form->labelEx($ficha_usuario,'Alumno'); ?>
-                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre'),
+                <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),
                     array('ajax'=>array('type'=>'POST',
                         'url'=>CController::createUrl('Pago/SeleccionarAño'),
                         'update'=>'#'.CHtml::activeId($pago,'anio'),
@@ -87,6 +87,10 @@ $this->pageTitle=Yii::app()->name;
                 <?php   echo $form->dropDownList($pago,'mes',array(''=>'Seleccione el mes'),array("class"=>"form-control",'prompt'=>'Seleccione el mes',"onchange"=>"lista_pagos();"));?>
                 <?php   echo $form->error($pago,'mes')?>
             </div>
+
+            <a href="index" class="btn btn-primary">Volver</a>
+            <br>
+            <br>
 
             <div id="lista">
             </div>

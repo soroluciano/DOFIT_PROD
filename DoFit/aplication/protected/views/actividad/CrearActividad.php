@@ -59,18 +59,14 @@ if(!Yii::app()->user->isGuest){
                     <?php echo $form->error($deporte,'deporte')?>
 			    </div>
 			    <div class="form-group">
-                    <?php echo $form->labelEx($actividad,'Profesor');
-                        echo "<br>";
-                        $id_institucion = $usuarioins->id_institucion;
-                        $profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion and id_estado = 1',array(':id_institucion'=>$id_institucion));
-                        foreach ( $profeins as $proins){
-                            $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
-                            echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));
-                            echo "<br>";
-                        }
-                    ?>
-			    </div>
-			    <div class="form-group">
+                    <?php   $criteria = new CDbCriteria;
+                    $criteria->condition = 'id_usuario IN (select id_usuario from actividad where id_actividad IN ( select id_actividad from actividad where id_institucion = :institucion ))';
+                    $criteria->params = array(':institucion' => Yii::app()->user->id  );
+                    $usuario = FichaUsuario:: model()->findAll($criteria);?>
+                    <?php   echo $form->labelEx($ficha_usuario,'Profesor'); ?>
+                    <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),array('prompt'=>'Seleccione el profesor','class'=>"form-control"));?>                        </div>
+
+            <div class="form-group">
                     <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
                     <div class="input-group">
                         <div class="input-group-addon">$</div>
