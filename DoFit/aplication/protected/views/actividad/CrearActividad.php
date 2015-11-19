@@ -35,7 +35,7 @@ if(!Yii::app()->user->isGuest){
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="">Bienvenido! re puto!</a></li>
-                    <li><a href="../site/LoginInstitucion">Salir</a></li>
+                    <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
                 </ul>
             </nav>
         </div>
@@ -54,14 +54,6 @@ if(!Yii::app()->user->isGuest){
                 <div class="form-group">
 			        <?php
                         echo $form->labelEx($deporte,'Deporte');
-                   /*     $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-                        'name'=>'deporte',
-                        'value'=>'',
-                        'source'=>$this->createUrl('jui/completarDeporte'),
-                        // additional javascript options for the autocomplete plugin
-                        'options'=>array('showAnim'=>'fold'),
-                            'htmlOptions' => array('class'=>"form-control",'placeholder'=>"Ingrese el deporte"),
-                    ));*/
 			        $form->labelEx($deporte,'Deporte'); ?>
                     <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
                     <?php echo $form->error($deporte,'deporte')?>
@@ -69,17 +61,6 @@ if(!Yii::app()->user->isGuest){
 			    <div class="form-group">
                     <?php echo $form->labelEx($actividad,'Profesor');
                         echo "<br>";
-
-                        /*$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-                            'name'=>'profesor',
-                            'value'=>'',
-                            'source'=>$this->createUrl('jui/completarProfesor'),
-                            // additional javascript options for the autocomplete plugin
-                            'options'=>array('showAnim'=>'fold'),
-                            'htmlOptions' => array('class'=>"form-control",'placeholder'=>"Ingrese el profesor"),
-
-                        ));*/
-
                         $id_institucion = $usuarioins->id_institucion;
                         $profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion and id_estado = 1',array(':id_institucion'=>$id_institucion));
                         foreach ( $profeins as $proins){

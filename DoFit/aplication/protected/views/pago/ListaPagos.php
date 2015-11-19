@@ -36,7 +36,7 @@ $this->pageTitle=Yii::app()->name;
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
-                <li><a href="../site/LoginInstitucion">Salir</a></li>
+                <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
     </div>

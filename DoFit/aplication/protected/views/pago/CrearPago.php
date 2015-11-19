@@ -36,7 +36,7 @@ $this->pageTitle=Yii::app()->name;
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
-                <li><a href="../site/LoginInstitucion">Salir</a></li>
+                <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
     </div>
@@ -189,6 +189,22 @@ $this->pageTitle=Yii::app()->name;
                     </div>
                 </div>
             </div>
+            <!-- Modal Error -->
+            <div class='modal fade' id='error' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                <div class='modal-dialog' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                            <h4 class='modal-title' id='myModalLabel'>¡Oops!</h4>
+                        </div>
+                        <div class='modal-body' id="modal-error">
+                        </div>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php echo CHtml::endForm(); ?>
             <?php $this->endWidget(); ?>
 
@@ -228,7 +244,7 @@ $this->pageTitle=Yii::app()->name;
                 if(actividad!= ""){
                     if(anio != ""){
                         if(meses != ""){
-                            if(monto != "") {
+                            if(monto != "" && monto > 0) {
                                 var data = {'id_usuario': id_usuario, 'actividad': actividad, 'anio': anio, 'meses': meses, 'monto': monto};
                                 $.ajax({
                                     url: baseurl + '/pago/CrearPago',
@@ -257,9 +273,37 @@ $this->pageTitle=Yii::app()->name;
                                     }
                                 })
                             }
+                            else{
+                                if(monto <= 0 && monto != ""){
+                                    $('#modal-error').html("¡El importe no puede ser cero o menor a cero!");
+                                    $('#error').modal('show');
+                                }
+                                else{
+                                    if(monto == ""){
+                                        $('#modal-error').html("¡Ingrese el importe!");
+                                        $('#error').modal('show');
+                                    }
+                                }
+                            }
+                        }
+                        else{
+                            $('#modal-error').html("¡Seleccione el mes del pago!");
+                            $('#error').modal('show');
                         }
                     }
+                    else{
+                        $('#modal-error').html("¡Seleccione el año del pago!");
+                        $('#error').modal('show');
+                    }
                 }
+                else{
+                    $('#modal-error').html("¡Seleccione una actividad!");
+                    $('#error').modal('show');
+                }
+            }
+            else{
+                $('#modal-error').html("¡Ingrese el usuario!");
+                $('#error').modal('show');
             }
         }
     </script>
