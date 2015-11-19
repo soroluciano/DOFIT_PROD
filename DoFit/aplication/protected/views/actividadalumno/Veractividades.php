@@ -73,7 +73,7 @@ $this->pageTitle=Yii::app()->name;
                     echo "<td id='depo'>$deporte->deporte</td>";
                     $act_hor = ActividadHorario::model()->findByAttributes(array('id_actividad' => $act->id_actividad));
                     $dias = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
-                    $id_dia = $act_hor->id_dia;
+                    $id_dia = $act_hor->id_dia-1;
                     echo "<td id='dia'>$dias[$id_dia]</td>";
                     ?>
                     <td id='hora'><?php echo $act_hor->hora.':'.($act_hor->minutos == '0' ? '0'.$act_hor->minutos : $act_hor->minutos);?></td>
