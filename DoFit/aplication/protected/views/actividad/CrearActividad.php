@@ -9,41 +9,43 @@ if(!Yii::app()->user->isGuest){
 
 ?>
 
-<div class="navbar-wrapper">
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../site/LoginInstitucion"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+                <a href="../" class="navbar-brand"></a>
             </div>
-        </nav>
-    </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
+            <nav id="bs-navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../ProfesorInstitucion/ListadoProfesores">Listado de Profesores</a>
+                    </li>
+                    <li>
+                        <a href="../institucion/ListadoAlumnosxInstitucion">Listado de Alumnos</a>
+                    </li>
+                    <li>
+                        <a href="../actividad/CrearActividad">Crear Actividades</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Bienvenido! re puto!</a></li>
+                    <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</div>
-
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <div class="container">
     <div class="form">
 	<?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
@@ -52,42 +54,19 @@ if(!Yii::app()->user->isGuest){
                 <div class="form-group">
 			        <?php
                         echo $form->labelEx($deporte,'Deporte');
-                   /*     $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-                        'name'=>'deporte',
-                        'value'=>'',
-                        'source'=>$this->createUrl('jui/completarDeporte'),
-                        // additional javascript options for the autocomplete plugin
-                        'options'=>array('showAnim'=>'fold'),
-                            'htmlOptions' => array('class'=>"form-control",'placeholder'=>"Ingrese el deporte"),
-                    ));*/
 			        $form->labelEx($deporte,'Deporte'); ?>
                     <?php echo $form->dropDownList($actividad,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control"));?>
                     <?php echo $form->error($deporte,'deporte')?>
 			    </div>
 			    <div class="form-group">
-                    <?php echo $form->labelEx($actividad,'Profesor');
-                        echo "<br>";
+                    <?php   $criteria = new CDbCriteria;
+                    $criteria->condition = 'id_usuario IN (select id_usuario from actividad where id_actividad IN ( select id_actividad from actividad where id_institucion = :institucion ))';
+                    $criteria->params = array(':institucion' => Yii::app()->user->id  );
+                    $usuario = FichaUsuario:: model()->findAll($criteria);?>
+                    <?php   echo $form->labelEx($ficha_usuario,'Profesor'); ?>
+                    <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),array('prompt'=>'Seleccione el profesor','class'=>"form-control"));?>                        </div>
 
-                        /*$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-                            'name'=>'profesor',
-                            'value'=>'',
-                            'source'=>$this->createUrl('jui/completarProfesor'),
-                            // additional javascript options for the autocomplete plugin
-                            'options'=>array('showAnim'=>'fold'),
-                            'htmlOptions' => array('class'=>"form-control",'placeholder'=>"Ingrese el profesor"),
-
-                        ));*/
-
-                        $id_institucion = $usuarioins->id_institucion;
-                        $profeins = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion and id_estado = 1',array(':id_institucion'=>$id_institucion));
-                        foreach ( $profeins as $proins){
-                            $fu = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$proins->id_usuario));
-                            echo $form->radioButtonList($actividad,'id_usuario',array($fu->id_usuario=>$fu->nombre),array( 'separator'=>' ','labelOptions'=>(array('style'=>'display:inline'))));
-                            echo "<br>";
-                        }
-                    ?>
-			    </div>
-			    <div class="form-group">
+            <div class="form-group">
                     <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
                     <div class="input-group">
                         <div class="input-group-addon">$</div>

@@ -40,6 +40,7 @@ class ActividadController extends Controller
         $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
         $actividad = new Actividad;
         $deporte = new Deporte;
+        $ficha_usuario = new FichaUsuario;
         $actividad_horario = new ActividadHorario;
 
 
@@ -78,7 +79,7 @@ class ActividadController extends Controller
             }
         }
 
-        $this->render('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
+        $this->render('CrearActividad', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario, 'ficha_usuario' => $ficha_usuario));
     }
 
 
