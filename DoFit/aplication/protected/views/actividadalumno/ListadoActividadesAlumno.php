@@ -52,6 +52,12 @@ $this->pageTitle=Yii::app()->name;
         </nav>
     </div>
 </header>
+<?php if(!Yii::app()->user->isGuest){
+    //Es un usuario logueado.
+    $Us = Usuario::model()->findByPk(Yii::app()->user->id);
+    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+}
+?>
 <br/>
 <br/>
 <br/>
@@ -60,7 +66,9 @@ $this->pageTitle=Yii::app()->name;
     <div class="form">
         <div class="col-md-8">
             <div class="form-group">
-                <h3> Seleccione una instituci&oacute;n </h3>
+                <h3> Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h3>
+                <br/>
+				<h5><b>Instituci&oacute;n</b></h5>
                 <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
                     <?php
                     if(!Yii::app()->user->isGuest){
@@ -81,16 +89,17 @@ $this->pageTitle=Yii::app()->name;
 </html>
 <script type="text/javascript">
     function ConsultarActividades(){
+        $('#mostraractividades').empty();
         var idinstitucion = $('#idinstitucion').val();
         var data = {'idinstitucion':idinstitucion};
         $.ajax({
             url: baseurl + '/actividadalumno/ConsultarActividades',
             type: "POST",
             data: data,
-            dataType: "json",
+            dataType: "html",
             cache : false,
-            success : function(datos){
-                $('#mostraractividades').append(datos);
+            success : function(response){
+                $('#mostraractividades').append(response);
             }
         })
     }

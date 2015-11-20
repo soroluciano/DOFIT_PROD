@@ -25,7 +25,7 @@ class ActividadAlumnoController extends Controller
     {
         $id_usuario = $id;
         $id_institucion = Yii::app()->user->id;
-        $actividades_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario' => $id_usuario));
+        $actividades_alumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario' => $id_usuario,'id_estado'=>1));
         if ($actividades_alumno != null) {
             $this->render('Veractividades', array('actividades_alumno' => $actividades_alumno));
         }
@@ -65,17 +65,37 @@ class ActividadAlumnoController extends Controller
         $id_usuario = Yii::app()->user->id;
         $actividadesalumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario'=>$id_usuario,'id_estado'=>1));
         if($actividadesalumno != NULL){
+            echo "<br/>";
+            echo "<br/>";
+            echo "<table class='table table-hover'>
+			       <thead>
+				     <tr>
+					 <td><b>Deporte</b></td><td><b>Días y Horarios</b></td><td><b>Profesor</b></td><td><b>Pagar con Mercado Pago</b></td>
+					 </tr>
+				   </thead>
+			      <tbody>";
             foreach($actividadesalumno as $actalum){
+                echo "<tr>";
                 $act = Actividad::model()->findByAttributes(array('id_actividad'=>$actalum->id_actividad,'id_institucion'=>$id_institucion));
                 if( $act != NULL){
                     $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
-                    $diahorario = ActividadHorario::model()->findByAttributes(array('id_actividad'=>$act->id_actividad));
-                    $dias = array("Lunes","Martes","Miercoles","Jueves","Viernes","Sábado","Domingo");
-                    $id_dia = $diahorario->id_dia-1;
-                    $datos = "<table>".$deporte->deporte ." ".$dias[$id_dia]." ".$diahorario->hora.":".$diahorario->minutos . "</table>";
-                    echo json_encode($datos);
+                    $diashorarios = ActividadHorario::model()->findAllByAttributes(array('id_actividad'=>$act->id_actividad));
+                    $fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$act->id_usuario));
+                    echo "<td id='deporte'>".$deporte->deporte ."</td>";
+                    echo "<td id='diahor'>";
+                    foreach($diashorarios as $diashor){
+                        $dias = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
+                        $id_dia = $diashor->id_dia-1;
+                        echo $dias[$id_dia]."&nbsp;".$diashor->hora .':'.($diashor->minutos == '0' ? '0'.$diashor->minutos : $diashor->minutos)." - ";
+                    }
+                    echo "</td>";
+                    echo "<td id='prof'>".$fichausuario->nombre ." ".$fichausuario->apellido ."</td>";
+
                 }
+                echo "</tr>";
             }
+            echo "</tbody>
+			     </table>";
         }
     }
 }
