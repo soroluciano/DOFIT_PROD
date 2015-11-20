@@ -188,10 +188,10 @@
       }
       
       function editComment(idcoment) {
+        debugger;
+        $valor = $("#post-description-"+idcoment+" .details").html();
         
-        $txt_area = "<textarea> </textarea>";
-        
-        
+        alert($valor);
         
         
       }

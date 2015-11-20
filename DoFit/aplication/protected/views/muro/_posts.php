@@ -21,16 +21,19 @@
               </div>
             </div>
 
-           <div class='post-description'> 
-             <p>".$row['posteo']."</p>
+           <div class='post-description' id='post-description-".$row['id_posteo']."'> 
+             <p class='details'>".$row['posteo']."</p>
+             <input type='button' onclick='editComment(".$row['id_posteo'].")' value='editar'/>
+             
+             <!--
              <div class='stats'>
-                <!-- <a href='#' class='btn btn-default stat-item'>
+                 <a href='#' class='btn btn-default stat-item'>
                      <i class='fa fa-thumbs-up icon'></i>2
                  </a>
                  <a href='#' class='btn btn-default stat-item'>
                      <i class='fa fa-share icon'></i>12
-                 </a>-->
-             </div>
+                 </a>
+             </div>-->
            </div>
            <div class='btn-comment-open'>
             <!--<input type='button' value='Comentar' class='btn-like-link' onclick='showComents(".$row['id_posteo'].");' />-->
