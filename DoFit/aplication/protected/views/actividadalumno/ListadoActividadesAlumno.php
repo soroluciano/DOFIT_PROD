@@ -58,35 +58,56 @@ $this->pageTitle=Yii::app()->name;
     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
 }
 ?>
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-    <div class="form">
-        <div class="col-md-8">
-            <div class="form-group">
-                <h3> Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h3>
-                <br/>
-				<h5><b>Instituci&oacute;n</b></h5>
-                <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
-                    <?php
-                    if(!Yii::app()->user->isGuest){
-                        echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
-                        foreach($instituciones as $ins){
-                            echo $ins['nombre'];
-                            echo "<option  value=".$ins['id_institucion']." name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
-                        }
-                    }
-                    ?>
-                </select>
-                <div class="form-group" id="mostraractividades">
+<style type="text/css">
+    body {
+        background: url(../img/futbol.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../site/login">&times;</a></span></button>
+				<h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
+			</div>	
+                 <div class="container">
+                    <div class="form">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                              <br/>
+				              <h5><b>Instituci&oacute;n</b></h5>
+                              <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
+                              <?php
+                               if(!Yii::app()->user->isGuest){
+                                   echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
+                                   foreach($instituciones as $ins){
+                                        echo $ins['nombre'];
+                                        echo "<option  value=".$ins['id_institucion']." name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
+                                    }
+                                }
+                               ?>
+                             </select>
+                                <div class="form-group" id="mostraractividades">
+                                </div>
+                            </div>
+                        </div>
+                   </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
 </html>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#principal').modal('show');
+  })
+</script>
+
 <script type="text/javascript">
     function ConsultarActividades(){
         $('#mostraractividades').empty();
