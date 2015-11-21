@@ -68,7 +68,7 @@ $this->pageTitle=Yii::app()->name;
 <br>
 <?php
     echo "<div class='form-group'>";
-      echo CHtml::beginForm('../actividad/inscripcion','post'); 
+      echo CHtml::beginForm('../actividad/InscripcionActividad','post'); 
       echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
