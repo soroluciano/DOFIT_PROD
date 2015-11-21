@@ -72,7 +72,6 @@ $this->pageTitle=Yii::app()->name;
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../site/login">&times;</a></span></button>
 				<h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
 			</div>	
                  <div class="container">
@@ -94,6 +93,8 @@ $this->pageTitle=Yii::app()->name;
                              </select>
                                 <div class="form-group" id="mostraractividades">
                                 </div>
+							<br/>	
+							<a href="../site/index" class="btn btn-primary">Volver</a>	
                             </div>
                         </div>
                    </div>

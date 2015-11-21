@@ -87,25 +87,4 @@ class UsuarioService
 
 	}
 
-	public function CampoVacio($strcampnom)
-	{
-		if($strcampnom == ''){
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
-
-	public function validarexpregContraseña($password)
-	{
-		$expr_regular = "^(?=.*\d{2})(?=.*[A-Z]).{0,20}$^";
-		if(strlen($password) < 6  || strlen($password) > 15){
-			return 1;
-		}
-
-		if(!preg_match($expr_regular,$password)){
-			return 2;
-		}
-	}
 }

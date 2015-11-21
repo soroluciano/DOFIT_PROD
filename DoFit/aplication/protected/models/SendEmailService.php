@@ -26,7 +26,7 @@ class SendEmailService
         $mailer->Port='465';
         $mailer->From = 'dofit@noreply.com';
         $mailer->Username = 'programacionweb3@gmail.com';
-        $mailer->Password = 'montoto123';
+        $mailer->Password = 'Montoto123';
         $mailer->AddAddress($email_destino);
         $mailer->FromName = 'Dofit!';
         $mailer->CharSet = 'UTF-8';
@@ -58,7 +58,7 @@ class SendEmailService
         $mailer->Port='465';
         $mailer->From = 'dofit@noreply.com';
         $mailer->Username = 'programacionweb3@gmail.com';
-        $mailer->Password = 'montoto123';
+        $mailer->Password = 'Montoto123';
         $mailer->AddAddress($email);
         $mailer->FromName = 'Dofit!';
         $mailer->CharSet = 'UTF-8';

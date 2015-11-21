@@ -1,4 +1,5 @@
 <?php
+require('protected/extensions/apimercadopago/lib/mercadopago.php');
 
 class ActividadAlumnoController extends Controller
 {
