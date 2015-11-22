@@ -63,6 +63,7 @@ class ActividadAlumnoController extends Controller
     public function actionConsultarActividades()
     {
         $id_institucion = $_POST['idinstitucion'];
+        $ficha_institucion = FichaInstitucion::model()->findByAttributes(array('id_institucion'=>$id_institucion));
         $id_usuario = Yii::app()->user->id;
         $actividadesalumno = ActividadAlumno::model()->findAllByAttributes(array('id_usuario'=>$id_usuario,'id_estado'=>1));
         if($actividadesalumno != NULL){
@@ -71,14 +72,18 @@ class ActividadAlumnoController extends Controller
             echo "<table class='table table-hover'>
 			       <thead>
 				     <tr>
-					 <td><b>Deporte</b></td><td><b>Días y Horarios</b></td><td><b>Profesor</b></td><td><b>Pagar con Mercado Pago</b></td>
+					 <td><b>Deporte</b></td><td><b>Días y Horarios</b></td><td><b>Profesor</b></td><td><b>Valor Mensual</b></td><td><b>Mercado Pago</b></td>
 					 </tr>
 				   </thead>
 			      <tbody>";
             foreach($actividadesalumno as $actalum){
+                $mp = new MP('5074134695637543', 'JBGhJiQy7dn5BOUzIH2jNYEpQiY3L1hB');
+                $diashorarios = array();
+                $cont = 0;
                 echo "<tr>";
                 $act = Actividad::model()->findByAttributes(array('id_actividad'=>$actalum->id_actividad,'id_institucion'=>$id_institucion));
                 if( $act != NULL){
+                    $diashorariosact = "";
                     $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
                     $diashorarios = ActividadHorario::model()->findAllByAttributes(array('id_actividad'=>$act->id_actividad));
                     $fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$act->id_usuario));
@@ -87,11 +92,25 @@ class ActividadAlumnoController extends Controller
                     foreach($diashorarios as $diashor){
                         $dias = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
                         $id_dia = $diashor->id_dia-1;
-                        echo $dias[$id_dia]."&nbsp;".$diashor->hora .':'.($diashor->minutos == '0' ? '0'.$diashor->minutos : $diashor->minutos)." - ";
+                        echo $dias[$id_dia]."&nbsp;".$diashor->hora .':'.($diashor->minutos == '0' ? '0'.$diashor->minutos : $diashor->minutos)."&nbsp&nbsp";
+                        $diashorariosact = $diashorariosact . $dias[$id_dia]."&nbsp;".$diashor->hora .':'.($diashor->minutos == '0' ? '0'.$diashor->minutos : $diashor->minutos). "&nbsp";
                     }
                     echo "</td>";
                     echo "<td id='prof'>".$fichausuario->nombre ." ".$fichausuario->apellido ."</td>";
-
+                    echo "<td id='valoract'>". $act->valor_actividad ."</td>";
+                    $deporte = $ficha_institucion->nombre . "&nbsp-&nbsp" . $deporte->deporte . " (". $diashorariosact . ")";
+                    $datosactividadmp = array(
+                        "items" => array(
+                            array(
+                                "title" =>$deporte,
+                                "quantity" => 1,
+                                "currency_id" => "ARS",
+                                "unit_price" =>intval($act->valor_actividad)
+                            )
+                        )
+                    );
+                    $botonactividadmp = $mp->create_preference($datosactividadmp);
+                    echo "<td><a href=". $botonactividadmp['response']['init_point']." class='btn btn-primary'>Pagar con Mercado Pago </a></td>";
                 }
                 echo "</tr>";
             }

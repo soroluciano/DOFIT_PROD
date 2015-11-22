@@ -68,45 +68,45 @@ $this->pageTitle=Yii::app()->name;
     }
 </style>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myModalLabel">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-				<h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
-			</div>	
-                 <div class="container">
-                    <div class="form">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                              <br/>
-				              <h5><b>Instituci&oacute;n</b></h5>
-                              <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
-                              <?php
-                               if(!Yii::app()->user->isGuest){
-                                   echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
-                                   foreach($instituciones as $ins){
+                <h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
+            </div>
+            <div class="container">
+                <div class="form">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <br/>
+                            <h5><b>Instituci&oacute;n</b></h5>
+                            <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
+                                <?php
+                                if(!Yii::app()->user->isGuest){
+                                    echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
+                                    foreach($instituciones as $ins){
                                         echo $ins['nombre'];
                                         echo "<option  value=".$ins['id_institucion']." name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
                                     }
                                 }
-                               ?>
-                             </select>
-                                <div class="form-group" id="mostraractividades">
-                                </div>
-							<br/>	
-							<a href="../site/index" class="btn btn-primary">Volver</a>	
+                                ?>
+                            </select>
+                            <div class="form-group" id="mostraractividades">
                             </div>
+                            <br/>
+                            <a href="../site/index" class="btn btn-primary">Volver</a>
                         </div>
-                   </div>
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>
 </html>
 <script type="text/javascript">
-  $(document).ready(function() {
-      $('#principal').modal('show');
-  })
+    $(document).ready(function() {
+        $('#principal').modal('show');
+    })
 </script>
 
 <script type="text/javascript">
