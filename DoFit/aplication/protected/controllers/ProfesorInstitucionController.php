@@ -73,5 +73,10 @@ class ProfesorInstitucionController extends Controller
 			echo "error";
 		}
 	}
+	
+	public function actionListadoActividades()
+	{
+	  $this->render('ListadoActividades');
+    }	  
 }
 ?>

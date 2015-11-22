@@ -87,6 +87,12 @@ if($Us->id_perfil == 2){
       echo CHtml::submitButton('Asociate a un gimnasio como Profesor',array('class'=>'btn btn-primary'));                      
       echo CHtml::endForm();      
    echo "</div>";
+   
+   echo "<div class='form-group'>";
+      echo CHtml::beginForm('../ProfesorInstitucion/ListadoActividades','post'); 
+      echo CHtml::submitButton('Actividades que dicto',array('class'=>'btn btn-primary'));                      
+      echo CHtml::endForm();      
+   echo "</div>";
 }
    echo "<div class='form-group'>";
       echo CHtml::beginForm('../perfilSocial/','post'); 
