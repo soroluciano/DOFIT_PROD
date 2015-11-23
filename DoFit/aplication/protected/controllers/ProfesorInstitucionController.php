@@ -73,10 +73,48 @@ class ProfesorInstitucionController extends Controller
 			echo "error";
 		}
 	}
-	
+
 	public function actionListadoActividades()
 	{
-	  $this->render('ListadoActividades');
-    }	  
+		$id_usuario = Yii::app()->user->id;
+		$criteria = new CDbCriteria;
+		$instituciones = Yii::app()->db->createCommand('select id_institucion,nombre FROM ficha_institucion WHERE id_institucion IN(SELECT id_institucion FROM profesor_institucion WHERE id_usuario = '.$id_usuario.' AND id_estado = 1)')->queryAll();
+		if($instituciones != NULL){
+			$this->render('ListadoActividadesProfesor',array('instituciones'=>$instituciones));
+		}
+	}
+
+	public function actionConsultarActividadesInscripto()
+	{
+		$id_usuario = Yii::app()->user->id;
+		$id_institucion = $_POST['idinstitucion'];
+		$actividades = Actividad::model()->findAllByAttributes(array('id_usuario'=>$id_usuario,'id_institucion'=>$id_institucion));
+		if($actividades != NULL){
+			echo "<table class='table table-hover'>
+	         <td><b>Deporte</b></td><td><b>Días y Horarios</b></td><td><b>Alumnos Inscriptos</b></td>
+	         </tr></thead>
+	         <tbody>";
+			foreach($actividades as $act){
+				echo "<tr>";
+				$deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
+				echo "<td id='deporte'>" . $deporte->deporte . "</td>";
+				$diashorarios = ActividadHorario::model()->findAllByAttributes(array('id_actividad'=>$act->id_actividad));
+				echo "<td id='diahor'>";
+				foreach($diashorarios as $diashor){
+					$dias = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
+					$id_dia = $diashor->id_dia-1;
+					echo $dias[$id_dia]."&nbsp;".$diashor->hora .':'.($diashor->minutos == '0' ? '0'.$diashor->minutos : $diashor->minutos)."&nbsp&nbsp";
+				}
+				echo "</td>";
+				echo "<td><a href='../veralumnos'>Ver alumnos Inscriptos</a></td>";
+				echo "</tr>";
+			}
+			echo "</tbody>";
+			echo "</table>";
+		}
+		else {
+	      echo "error";
+        }		  
+	}
 }
 ?>

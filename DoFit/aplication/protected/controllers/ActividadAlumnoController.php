@@ -53,7 +53,7 @@ class ActividadAlumnoController extends Controller
     {
         $id_usuario = Yii::app()->user->id;
         $criteria = new CDbCriteria;
-        $instituciones = Yii::app()->db->createCommand('select id_institucion,nombre from ficha_institucion WHERE id_institucion IN(SELECT id_institucion from actividad where id_actividad IN(SELECT id_actividad from actividad_alumno WHERE id_usuario ='.$id_usuario.'))')->queryAll();
+        $instituciones = Yii::app()->db->createCommand('select id_institucion,nombre from ficha_institucion WHERE id_institucion IN(SELECT id_institucion from actividad where id_actividad IN(SELECT id_actividad from actividad_alumno WHERE id_usuario ='.$id_usuario.' AND id_estado = 1 ))')->queryAll();
         if($instituciones != NULL){
             $this->render('ListadoActividadesAlumno',array('instituciones'=>$instituciones));
         }
