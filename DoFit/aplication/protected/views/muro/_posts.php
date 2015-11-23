@@ -8,17 +8,37 @@
         <div class='panel panel-white post panel-shadow'>
         
             <div class='post-heading'>
-              <div></div>
+             
+			  
               <div class='pull-left image'>
                 <img src='".Yii::app()->request->baseUrl."/uploads/".$row['foto1']."' class='img-circle avatar' alt='user profile image'>
               </div>
+			  
               <div class='pull-left meta'>
+			  
                 <div class='title h5'>
                   <a href=''><b>".$row['nombre']." ".$row['apellido']."</b></a>
                  <!-- made a post.-->
                 </div>
+				
                 <!--<h6 class='text-muted time'>1 minute ago</h6>-->
               </div>
+			  
+			  <div class='pull-left edicion'>
+				<!--<input type='button' class='btneditpost' value='...' onclick='editpost(".$row['id_posteo'].");'/>-->
+				
+				<div class='dropdown'>
+				  <button class='btneditpost' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>...</button>
+				  <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
+					<li><a href='javascript:editComment(".$row['id_posteo'].")'>Editar</a></li>
+					<li><a href='#'>Eliminar</a></li>
+				  </ul>
+				</div>
+				
+				
+			  </div>
+			  
+			  
             </div>
 
            <div class='post-description' id='post-description-".$row['id_posteo']."'> 

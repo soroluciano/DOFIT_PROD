@@ -271,3 +271,26 @@ background-color:#eee;
   
 }
 
+.edicion{
+  padding-right: 5px;
+  padding-left: 10px;
+  width: 72%;
+  text-align: right;
+  height: 30px !important;
+}
+
+.btneditpost{
+  border-color: #cccccc #c5c6c8 #b6b7b9;
+  border-radius: 3px;
+  color:#00FF00;
+  vertical-align:center !important;
+  font-size: 20px;
+  font-weight:bolder;
+  background-color:transparent;
+  line-height: 20px;
+}
+
+.dropdown-menu{
+  margin-left: 68%;
+  
+}
