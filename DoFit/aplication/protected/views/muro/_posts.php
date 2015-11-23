@@ -43,8 +43,10 @@
 
            <div class='post-description' id='post-description-".$row['id_posteo']."'> 
              <p class='details'>".$row['posteo']."</p>
-             <input type='button' onclick='editComment(".$row['id_posteo'].")' value='editar'/>
-             
+             <textarea class='edit-details' style='display:none'>".$row['posteo']."</textarea>
+             <input type='button' class='btn-cancel' style='float:right;display:none;' value='Cancelar'/>
+             <input type='button' class='btn-ed-fin' style='float:right;display:none;' value='Edicion terminada'/>
+           
              <!--
              <div class='stats'>
                  <a href='#' class='btn btn-default stat-item'>

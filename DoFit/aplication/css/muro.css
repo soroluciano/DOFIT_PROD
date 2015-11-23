@@ -4,6 +4,7 @@ body{
 
 }
 
+
 .panel-shadow {
     box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
 }
@@ -292,5 +293,11 @@ background-color:#eee;
 
 .dropdown-menu{
   margin-left: 68%;
+  
+}
+
+.edit-details{
+  width: 100%;
+  text-align: inherit;
   
 }

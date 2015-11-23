@@ -189,11 +189,10 @@
       
       function editComment(idcoment) {
         debugger;
-        $valor = $("#post-description-"+idcoment+" .details").html();
-        
-        alert($valor);
-        
-        
+         $("#post-description-"+idcoment+" .edit-details").css("display","block");
+         $("#post-description-"+idcoment+" .details").css("display","none");
+         $("#post-description-"+idcoment+" .btn-ed-fin").css("display","block");
+         $("#post-description-"+idcoment+" .btn-cancel").css("display","block");
       }
       
       /*
