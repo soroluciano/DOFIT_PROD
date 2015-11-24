@@ -106,15 +106,40 @@ class ProfesorInstitucionController extends Controller
 					echo $dias[$id_dia]."&nbsp;".$diashor->hora .':'.($diashor->minutos == '0' ? '0'.$diashor->minutos : $diashor->minutos)."&nbsp&nbsp";
 				}
 				echo "</td>";
-				echo "<td><a href='../veralumnos'>Ver alumnos Inscriptos</a></td>";
+				echo "<td><input type='button' class='btn btn-primary' value='Ver alumnos Inscriptos' onclick='javascript:AlumnosInscriptos($act->id_actividad)'></input></td>";
 				echo "</tr>";
 			}
 			echo "</tbody>";
 			echo "</table>";
 		}
 		else {
-	      echo "error";
-        }		  
+			echo "error";
+		}
+	}
+
+	public function actionAlumnosInscriptosActividad()
+	{
+		$idactividad = $_POST['idactividad'];
+		$actividadalumno = ActividadAlumno::model()->findAllByAttributes(array('id_actividad'=>$idactividad,'id_estado'=>1));
+		if($actividadalumno != NULL){
+			echo "<table class='table table-hover'>
+	         <td><b>Nombre y Apellido</b></td><td><b>E-mail</b></td><td><b>DNI</b></td><td><b>Fecha Nacimiento</b></td><td><b>Tel&eacute;fonos</b></td>
+	         </tr></thead>
+	         <tbody>";
+			foreach($actividadalumno as $actalum){
+				$fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
+				$usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
+				echo "<tr>";
+				echo "<td id='nomyape'>".$fichausuario->nombre ."&nbsp".$fichausuario->apellido ."</td>";
+				echo "<td id='mail'>" .$usuario->email . "</td>";
+				echo "<td id='dni'>". $fichausuario->dni."</td>";
+				$fechanac = date("d-m-Y",strtotime($fichausuario->fechanac));
+				echo "<td id='fecnac'>". $fechanac ."</td>";
+				echo "<td id='telefonos'>". $fichausuario->telfijo . "&nbsp" . $fichausuario->celular . "</td>";
+				echo "</tr>";
+			}
+			echo "</tbody>";
+		}
 	}
 }
 ?>
