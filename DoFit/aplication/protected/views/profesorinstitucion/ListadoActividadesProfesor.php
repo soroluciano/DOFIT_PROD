@@ -68,7 +68,7 @@ $this->pageTitle=Yii::app()->name;
             <div class="form-group">
                 <h3> Actividades dictadas por <?php echo $ficha->nombre . "&nbsp" . $ficha->apellido; ?></h3>
                 <br/>
-				<h5><b>Instituci&oacute;n</b></h5>
+                <h5><b>Instituci&oacute;n</b></h5>
                 <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividadesInscripto();">
                     <?php
                     if(!Yii::app()->user->isGuest){
@@ -95,15 +95,15 @@ $this->pageTitle=Yii::app()->name;
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../profesorinstitucion/ConsultarActividadesInscripto">&times;</a></span></button>
-				<h4 class="modal-title">Alumnos Inscriptos en la Actividad</h4>
+                <h4 class="modal-title">Alumnos Inscriptos en la Actividad</h4>
             </div>
             <div class="container">
                 <div class="form">
                     <div class="col-md-8">
                         <div class="form-group">
-						  <div id="actaluminsc">
-						  </div> 
-						  <a href="../profesorinstitucion/ConsultarActividadesInscripto" class="btn btn-primary">Volver</a>
+                            <div id="actaluminsc">
+                            </div>
+                            <a href="../profesorinstitucion/ConsultarActividadesInscripto" class="btn btn-primary">Volver</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 </html>
- 
+
 <script type="text/javascript">
     function ConsultarActividadesInscripto()
     {
@@ -155,11 +155,11 @@ $this->pageTitle=Yii::app()->name;
 </script>
 
 <script type="text/javascript">
-  function AlumnosInscriptos(idactividad)
-  {
-    $('#actaluminsc').empty();
-	var id_actividad = idactividad;
-    var data = {'idactividad':id_actividad};
+    function AlumnosInscriptos(idactividad)
+    {
+        $('#actaluminsc').empty();
+        var id_actividad = idactividad;
+        var data = {'idactividad':id_actividad};
         $.ajax({
             url: baseurl + '/profesorinstitucion/AlumnosInscriptosActividad',
             type: "POST",
@@ -168,9 +168,9 @@ $this->pageTitle=Yii::app()->name;
             cache : false,
             success : function(response){
                 $('#actaluminsc').append(response);
-				$('#principal').modal('show');
-			}
-          }) 			
-  }
+                $('#principal').modal('show');
+            }
+        })
+    }
 </script>
   
