@@ -33,7 +33,7 @@ $cs->registerScriptFile($baseUrl.'/js/muroalumno.js');
 
 function getActividades($id){
 				
-	$listaActividades = Yii::app()->db->createCommand("select a.id_actividad,d.deporte,ao.hora,ao.minutos,ao.id_dia,fi.nombre from actividad a inner join actividad_horario ao on a.id_actividad=ao.id_actividad inner join institucion i on a.id_institucion=i.id_institucion inner join ficha_institucion fi on i.id_institucion=fi.id_institucion inner join deporte d on a.id_deporte=d.id_deporte where a.id_usuario=".$id)->queryAll();
+	$listaActividades = Yii::app()->db->createCommand("select a.id_actividad,d.deporte,ao.hora,ao.minutos,ao.id_dia,fi.nombre from actividad a inner join actividad_horario ao on a.id_actividad=ao.id_actividad inner join actividad_alunno al  on a.id_actividad = al.id_actividad inner join institucion i on a.id_institucion=i.id_institucion inner join ficha_institucion fi on i.id_institucion=fi.id_institucion inner join deporte d on a.id_deporte=d.id_deporte where a.id_usuario=".$id." or al.id_usuario=".$id)->queryAll();
 	$respuesta="
 		<select class='form-control' style='margin-top:5px;' id='sel1'>
 		<option>Compartir con...</option>";
