@@ -21,7 +21,7 @@ if($canal==null){
 
 
 $cs = Yii::app()->getClientScript();
-$cs->registerScriptFile($baseUrl.'/js/muro.js');	
+$cs->registerScriptFile($baseUrl.'/js/muroprofesor.js');	
 
 function getActividades($id){
 				
@@ -104,7 +104,7 @@ function getActividades($id){
     </div>
 
 	<div class="row">
-	
+	<h1>Soy profesor</h1>
 		<div class="col-md-8 contenedor-espaciado">
 			<div class="widget-area no-padding blank">
 				<div class="status-upload">

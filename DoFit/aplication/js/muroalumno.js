@@ -189,10 +189,14 @@
       
       function editComment(idcoment) {
         debugger;
-         $("#post-description-"+idcoment+" .edit-details").css("display","block");
-         $("#post-description-"+idcoment+" .details").css("display","none");
-         $("#post-description-"+idcoment+" .btn-ed-fin").css("display","block");
-         $("#post-description-"+idcoment+" .btn-cancel").css("display","block");
+      
+          function seteandoDelay(){  
+            $("#post-description-"+idcoment+" .edit-details").css("display","block").delay(18000);
+            $("#post-description-"+idcoment+" .details").css("display","none");
+            $("#post-description-"+idcoment+" .btn-ed-fin").css("display","block");
+            $("#post-description-"+idcoment+" .btn-cancel").css("display","block");
+             
+           }
       }
       
       /*

@@ -7,14 +7,18 @@ class MuroController extends Controller
     public function actionIndex()
     {	
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-			$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
+			$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =".$usuario->id_usuario." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
+			
+			
+			if($usuario->id_perfil == 1){
+				$this->render('indexAlumno',array('resultSet'=>$resultSet));
+			}else{
+				$this->render('indexProfesor',array('resultSet'=>$resultSet));
+			}
 			
 			
 			
 			
-			
-			
-			$this->render('indexProfesor',array('resultSet'=>$resultSet));
     
 			//if(){ TODO AGREGAR VALIDACION POR TIPO DE USUARIO
 			//	
@@ -66,6 +70,17 @@ class MuroController extends Controller
 			}
 			
 	}
+	
+	public function actionGetCanales(){
+			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+			$resultSet = Yii::app()->db->createCommand("select c.id_canal,c.nombre,c.id_usuario from canal c join actividad a on c.id_usuario = a.id_usuario join actividad_alumno au on a.id_actividad = au.id_actividad where au.id_usuario =".$usuario->id_usuario." or c.id_usuario=".$usuario->id_usuario)->queryAll();
+			
+			echo CJSON::encode($resultSet);
+			Yii::app()->end();
+	
+	
+	}
+	
 	
 	public function actionGetCanal()
 	{
