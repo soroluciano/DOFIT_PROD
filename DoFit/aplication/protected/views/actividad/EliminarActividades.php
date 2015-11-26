@@ -51,30 +51,48 @@ if(!Yii::app()->user->isGuest){
         </nav>
     </div>
 </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php
+$listaActividades = Yii::app()->db->createCommand("select a.id_actividad,d.deporte,ao.hora,ao.minutos,ao.id_dia,fi.nombre from actividad a inner join actividad_horario ao on a.id_actividad=ao.id_actividad inner join actividad_alumno al  on a.id_actividad = al.id_actividad inner join institucion i on a.id_institucion=i.id_institucion inner join ficha_institucion fi on i.id_institucion=fi.id_institucion inner join deporte d on a.id_deporte=d.id_deporte where a.id_usuario=1 or al.id_usuario=1")->queryAll();
+$respuesta="
+<select class='form-control' style='margin-top:5px;' id='sel1'>
+    <option>Compartir con...</option>";
 
+    foreach($listaActividades as $act ){
+    $dia;
+    switch($act['id_dia']){
+    case 1:{
+    $dia="Lunes";
+    }
+    case 2:{
+    $dia="Martes";
+    }
+    case 3:{
+    $dia="Miercoles";
+    }
+    case 4:{
+    $dia="Jueves";
+    }
+    case 5:{
+    $dia="Viernes";
+    }
+    case 6:{
+    $dia="Sabado";
+    }
+    case 7:{
+    $dia="Domingo";
+    }
 
+    }
 
-<div class='modal fade' id='ModalVentana' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
-    <div class='modal-dialog' role='document'>
-        <div class='modal-content'>
-            <div class='modal-header'>
-                <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                <h4 class='modal-title' id='myModalLabel'>¡Felicitaciones!</h4>
-            </div>
-            <div class='modal-body'>
-                <p>Has creado correctamente la actividad.</p>
-            </div>
-            <div class='modal-footer'>
-                <a href="CrearActividad" class='btn btn-primary' >Cerrar</a>
-            </div>
-        </div>
-    </div>
-</div>
+    $respuesta.="<option id='".$act['id_actividad']."'><a href='#'>".$act['deporte']."-".$act['nombre']."-".$dia."(".$act['hora'].":".$act['minutos']." hs".")</a></li>";
+    }
+    $respuesta.="</select>";
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#principal').modal('show');
-        $('#ModalVentana').modal('show');
-    });
-
-</script>
+    echo $respuesta;
+?>

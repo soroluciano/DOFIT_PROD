@@ -82,7 +82,7 @@ if(!Yii::app()->user->isGuest){
                                 $criteria->params = array(':institucion' => Yii::app()->user->id  );
                                 $usuario = FichaUsuario:: model()->findAll($criteria);?>
                         <?php   echo $form->labelEx($ficha_usuario,'Profesor'); ?>
-                        <?php   echo $form->dropDownList($ficha_usuario,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),array('prompt'=>'Seleccione el profesor','class'=>"form-control"));?>
+                        <?php   echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),array('prompt'=>'Seleccione el profesor','class'=>"form-control"));?>
                     </div>
                     <div class="form-group">
                         <?php   echo $form->labelEx($actividad,'Precio'); ?>
@@ -409,7 +409,7 @@ if(!Yii::app()->user->isGuest){
                         </div>
                     </div>
                     <br/>
-                    <input type="submit" value="Crear Actividad" class="btn btn-primary" onsubmit="return pepe();"/>
+                    <input type="submit" value="Crear Actividad" class="btn btn-primary" onclick="return Crear();"/>
                     <a href="index" class="btn btn-primary">Volver</a>
                     <br>
                     <br>
@@ -446,9 +446,39 @@ if(!Yii::app()->user->isGuest){
 </script>
 
 <script type="text/javascript">
-    function pepe(){
-        alert("lala");
-        return false;
+    function Crear(){
+        var deporte = $('#Actividad_id_deporte').val();
+        var profesor = $('#Actividad_id_usuario').val();
+        var valor = $('#Actividad_valor_actividad').val();
+        var dia = $('input[name="dia[]"]:checked').length > 0;
+
+        if(deporte == ""){
+            $('#modal-error').html("¡Debe seleccionar al menos un deporte!");
+            $('#error').modal('show');
+            return false;
+        }
+        if(profesor == ""){
+            $('#modal-error').html("¡Debe seleccionar un profesor!");
+            $('#error').modal('show');
+            return false;
+        }
+        if(valor == ""){
+            $('#modal-error').html("¡Debe ingresar el precio de la actividad!");
+            $('#error').modal('show');
+            return false;
+        }
+        if(valor <= 0){
+            $('#modal-error').html("¡El importe no puede ser cero o menor a cero!");
+            $('#error').modal('show');
+            return false;
+        }
+        if(dia == false){
+            $('#modal-error').html("¡Debe seleccionar al menos un día de la semana!");
+            $('#error').modal('show');
+            return false;
+        }
+        return true;
+
     }
 </script>
 
