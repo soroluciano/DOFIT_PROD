@@ -47,10 +47,6 @@ class ActividadController extends Controller
         if (isset($_POST['Actividad'])) {
 
             $actividad->attributes = $_POST['Actividad'];
-            //$ficha_profesor = FichaUsuario::model()->findByAttributes(array('nombre' => $_POST['profesor']));
-            //$deporte = Deporte::model()->findByAttributes(array('deporte' => $_POST['deporte']));
-            //$actividad->id_usuario = $ficha_profesor->id_usuario;
-            //$actividad->id_deporte = $deporte->id_deporte;
             $actividad->id_institucion = $usuarioins->id_institucion;
             $actividad->fhcreacion = new CDbExpression('NOW()');
             $actividad->fhultmod = new CDbExpression('NOW()');
@@ -256,11 +252,19 @@ class ActividadController extends Controller
     }
     public function actionCrearActividadOk()
     {
-        $deporte = new Deporte();
-        $actividad = new Actividad();
-        $actividad_horario = new ActividadHorario();
-        $this->render('CrearActividadOk', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario));
+        $actividad = new Actividad;
+        $deporte = new Deporte;
+        $ficha_usuario = new FichaUsuario;
+        $actividad_horario = new ActividadHorario;
+        $this->render('CrearActividadOk', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario, 'ficha_usuario' => $ficha_usuario));
     }
 
-
+    public function actionEliminarActividades()
+    {
+        $actividad = new Actividad;
+        $deporte = new Deporte;
+        $ficha_usuario = new FichaUsuario;
+        $actividad_horario = new ActividadHorario;
+        $this->render('EliminarActividades', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario, 'ficha_usuario' => $ficha_usuario));
+    }
 }
