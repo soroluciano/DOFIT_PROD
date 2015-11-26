@@ -3,6 +3,25 @@
 
 class MuroController extends Controller
 {
+	/*
+				cargar canales cada 2 min y luego cerrarlos buscar como hacerlo
+				si soy el que comenta ->carga datos automaticamente
+				si soy el que escucha ->carga automaticamente todos mis cananales en 2 min
+				ver si armar una tabla que relacione canales con alumnos para hacer una query que traiga los canales donde esta agregado
+				si estoy sobre comentario no deberia recargarse nada
+				si no hago ninguna accion -Ç>puede recargarse
+				cada post deberia tener un canal (que pasaria si muchos comentan a la vez? se me recarga sin parar?)
+				como se que canales recargar?
+				deberia agregar todos mis canalaes escuchados por comentario
+				cada 2 min y por post tmb.
+	
+	
+	
+	
+	*/
+	
+	
+	
 	
     public function actionIndex()
     {	
