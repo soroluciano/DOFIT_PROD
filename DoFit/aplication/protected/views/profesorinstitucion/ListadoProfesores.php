@@ -1,22 +1,3 @@
-<script type="text/javascript">
-    function Mostrartelefonos(idusuario){
-        var idusuario = idusuario;
-        var tel = "tel";
-        window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&tel="+tel+"",'','width=800, height=200');
-    }
-
-    function Mostrardireccion(idusuario){
-        var idusuario = idusuario;
-        var dir = "dir";
-        window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
-    }
-
-    function Mostraractividad(idusuario){
-        var idusuario = idusuario;
-        var act = "act";
-        window.open("../profesorinstitucion/Mostrardatos?idusuario="+idusuario+"&act="+act+"",'','width=800, height=200');
-    }
-</script>
 
 <?php
 /* @var $this SiteController */
@@ -114,9 +95,9 @@ $this->pageTitle=Yii::app()->name;
                         <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
                         echo $fechanac;?>
                     </td>
-                    <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                    <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                    <td><a id="act" href="" onClick="javascript:Mostraractividad(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
+                    <td><a id="tel" href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+                    <td><a id="dir" href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+                    <td><a id="act" href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
                     <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
                 </tr>
                 </tbody>
@@ -155,7 +136,59 @@ $this->pageTitle=Yii::app()->name;
 					</div>
 				</div>
 			  </div>";
-            }
+                ?>
+                <!-- Modal telefonos !-->
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="datostelefonos" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="container">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div id="datostele">
+                                        </div>
+                                        <a href="../profesorinstitucion/ListadoProfesores" class="btn btn-primary">Volver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Direccion !-->
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="datosdireccion" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="container">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div id="datosdire">
+                                        </div>
+                                        <a href="../profesorinstitucion/ListadoProfesores" class="btn btn-primary">Volver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Actividades !-->
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="datosactividades" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="container">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div id="datosacti">
+                                        </div>
+                                        <a href="../profesorinstitucion/ListadoProfesores" class="btn btn-primary">Volver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <?php    }
             echo "</table>";
         }
         else
@@ -195,5 +228,62 @@ $this->pageTitle=Yii::app()->name;
         });
 
     }
-</script>	
-	
+</script>
+
+<script type="text/javascript">
+    function Mostrartelefonos(idusuario){
+        $('#datostele').empty();
+        var idusuario = idusuario;
+        var data = {"idusuario":idusuario};
+        $.ajax({
+            url :  baseurl + "/ProfesorInstitucion/MostrarTelefonos",
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response){
+                $('#datostele').append(response);
+                $('#datostelefonos').modal('show');
+            }
+        });
+    }
+</script>
+
+
+<script type="text/javascript">
+    function Mostrardireccion(idusuario){
+        $('#datosdire').empty();
+        var idusuario = idusuario;
+        var data = {"idusuario":idusuario};
+        $.ajax({
+            url :  baseurl + "/ProfesorInstitucion/MostrarDireccion",
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response){
+                $('#datosdire').append(response);
+                $('#datosdireccion').modal('show');
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    function Mostraractividades(idusuario){
+        $('#datosacti').empty();
+        var idusuario = idusuario;
+        var data = {"idusuario":idusuario};
+        $.ajax({
+            url :  baseurl + "/ProfesorInstitucion/MostrarActividades",
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response){
+                $('#datosacti').append(response);
+                $('#datosactividades').modal('show');
+            }
+        });
+    }
+</script>			 
