@@ -38,10 +38,6 @@ class ProfesorInstitucionController extends Controller
 	{
 		$this->render('ListadoProfesores');
 	}
-	public function actionMostrardatos()
-	{
-		$this->render('Mostrardatos');
-	}
 
 	public function actionMostrarTelefonos()
 	{

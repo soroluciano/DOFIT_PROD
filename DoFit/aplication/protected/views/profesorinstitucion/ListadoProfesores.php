@@ -136,59 +136,57 @@ $this->pageTitle=Yii::app()->name;
 					</div>
 				</div>
 			  </div>";
-                ?>
-                <!-- Modal telefonos !-->
-                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="datostelefonos" aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="container">
-                                <div class="col-md-8">
-                                    <div class="form-group">
-                                        <div id="datostele">
+
+                // Modal telefonos 
+                echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datostelefonos' aria-labelledby='myLargeModalLabel'>
+                    <div class='modal-dialog modal-lg'>
+                        <div class='modal-content'>
+                            <div class='container'>
+                                <div class='col-md-8'>
+                                    <div class='form-group'>
+                                        <div id='datostele'>
                                         </div>
-                                        <a href="../profesorinstitucion/ListadoProfesores" class="btn btn-primary">Volver</a>
+                                        <a href='../profesorinstitucion/ListadoProfesores' class='btn btn-primary'>Volver</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Modal Direccion !-->
-                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="datosdireccion" aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="container">
-                                <div class="col-md-8">
-                                    <div class="form-group">
-                                        <div id="datosdire">
+                </div>";
+                // Modal Direccion 
+                echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosdireccion' aria-labelledby='myLargeModalLabel'>
+                    <div class='modal-dialog modal-lg'>
+                        <div class='modal-content'>
+                            <div class='container'>
+                                <div class='col-md-8'>
+                                    <div class='form-group'>
+                                        <div id='datosdire'>
                                         </div>
-                                        <a href="../profesorinstitucion/ListadoProfesores" class="btn btn-primary">Volver</a>
+                                        <a href='../profesorinstitucion/ListadoProfesores' class='btn btn-primary'>Volver</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>";
 
-                <!-- Modal Actividades !-->
-                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="datosactividades" aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="container">
-                                <div class="col-md-8">
-                                    <div class="form-group">
-                                        <div id="datosacti">
+                // Modal Actividades 
+                echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosactividades' aria-labelledby='myLargeModalLabel'>
+                    <div class='modal-dialog modal-lg'>
+                        <div class='modal-content'>
+                            <div class='container'>
+                                <div class='col-md-8'>
+                                    <div class='form-group'>
+                                        <div id='datosacti'>
                                         </div>
-                                        <a href="../profesorinstitucion/ListadoProfesores" class="btn btn-primary">Volver</a>
+                                        <a href='../profesorinstitucion/ListadoProfesores' class='btn btn-primary'>Volver</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-            <?php    }
+                </div>";
+            }
             echo "</table>";
         }
         else

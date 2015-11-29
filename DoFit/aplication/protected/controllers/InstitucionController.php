@@ -302,7 +302,50 @@ class InstitucionController extends Controller
     {
         $this->render('Mostrardatos');
     }
-     
-  
-}
 
+    public function actionMostrarTelefonosAlumno()
+    {
+        $idusuario = $_POST['idusuario'];
+        $fichausuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idusuario));
+        echo "<h3>Datos Tel&eacute;fonicos de&nbsp" . $fichausuario->nombre."&nbsp".$fichausuario->apellido."</h3><br/>";
+        echo "<table class='table table-hover'>
+				<thead>
+				<tr><th>Tel&eacute;fono Fijo</th><th>Celular</th><th>Contacto Emergencia</th><th>Tel&eacute;fono Emergencia</th></tr>
+				</thead>
+				<tbody>
+				<tr>";
+        echo "<td id='telfijo'>" . substr($fichausuario->telfijo,0,4)."-".substr($fichausuario->telfijo,0,4) . "</td>";
+        echo "<td id='celular'>" . $fichausuario->celular . "</td>";
+        echo "<td id='conemer'>" . $fichausuario->conemer . "</td>";
+        echo "<td id='telemer'>" . substr($fichausuario->telemer,0,4)."-".substr($fichausuario->telemer,-4) . "</td>";
+        echo "</tr>
+				</tbody>
+			</table>";
+
+    }
+
+    public function actionMostrarDireccionAlumno()
+    {
+        $idusuario = $_POST['idusuario'];
+        $fichausuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$idusuario));
+        echo "<h3>Datos de domiciliarios de&nbsp;". $fichausuario->nombre."&nbsp".$fichausuario->apellido."</h3><br/>";
+        echo "<table class='table table-hover'>
+				<thead>
+				<tr><th>Direcci&oacute;n</th><th>Piso</th><th>Departamento</th><th>Localidad</th><th>Provincia</th></tr>
+				</thead>
+				<tbody>
+				<tr>";
+        echo	"<td id='direccion'>" .  $fichausuario->direccion . "</td>";
+        echo	"<td id='piso'>".  $fichausuario->piso . "</td>";
+        echo	"<td id='depto'>" . $fichausuario->depto . "</td>";
+        echo	"<td id='loca'>";
+        $localidad = Localidad::model()->findByAttributes(array('id_localidad'=>$fichausuario->id_localidad));
+        echo $localidad->localidad . "</td>";
+        echo	"<td id='prov'>";
+        $provincia = Provincia::model()->findByAttributes(array('id_provincia'=>$localidad->id_provincia));
+        echo $provincia->provincia . "</td>";
+        echo "</tr>
+				</tbody>
+			</table>";
+    }
+}
