@@ -298,11 +298,6 @@ class InstitucionController extends Controller
         $this->render('ListadoAlumnosxInstitucion');
     }
 
-    public function actionMostrardatos()
-    {
-        $this->render('Mostrardatos');
-    }
-
     public function actionMostrarTelefonosAlumno()
     {
         $idusuario = $_POST['idusuario'];
