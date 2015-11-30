@@ -280,7 +280,7 @@ background-color:#eee;
   height: 30px !important;
 }
 
-.btneditpost{
+.btn-edit-post{
   border-color: #cccccc #c5c6c8 #b6b7b9;
   border-radius: 3px;
   color:#00FF00;
@@ -296,8 +296,37 @@ background-color:#eee;
   
 }
 
-.edit-details{
+.edit-details-textarea{
   width: 100%;
   text-align: inherit;
-  
+  outline: none;
+  resize: none;
+  border:none;
+}
+
+.div-btns-comment{
+    height:44px;
+    background-color: rgb(246,247,249);
+    padding-top: 5px;
+    border-top: 1px solid;
+    border-top-color: rgb(231,232,234);;
+    
+}
+
+.btn-cancel-comment{
+  float: right;
+  margin-right: 3px;
+  font-weight: bold;
+}
+
+.btn-ed-fin{
+   float: right;
+   margin-right: 3px;
+   font-weight: bold;
+}
+
+.div-ed-comment{
+  border: 1px solid;
+  border-color: rgb(186,186,194);
+  height: auto;
 }
