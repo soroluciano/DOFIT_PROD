@@ -1,15 +1,3 @@
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-?>
-
-<?php if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    $ins = Institucion::model()->findByPk(Yii::app()->user->id);
-    $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
-}
-?>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -41,7 +29,13 @@ $this->pageTitle=Yii::app()->name;
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Bienvenido! <?php echo $fichains->nombre; ?></a></li>
+                <li><a href="">Bienvenido! <?php 
+				if(!Yii::app()->user->isGuest){
+                      //Es un usuario logueado.
+                     $ins = Institucion::model()->findByPk(Yii::app()->user->id);
+                     $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
+				     echo $fichains->nombre; 
+				}  ?></a></li>
                 <li><a href="../site/LoginInstitucion">Salir</a></li>
             </ul>
         </nav>
@@ -56,7 +50,8 @@ $this->pageTitle=Yii::app()->name;
         <br>
         <br>
         <?php
-        $id_usuarios_array = array();
+    if(!Yii::app()->user->isGuest){    
+		$id_usuarios_array = array();
         $idinstitucion = Yii::app()->user->id;
         $cant_alumnos = 0;
         $actividades = Actividad::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
@@ -169,7 +164,11 @@ $this->pageTitle=Yii::app()->name;
                         </div>
                     </div>";
         }
-        ?>
+    }    
+    else {
+          echo "<h3> La sesi&oacute;n caduco por favor inicia nuevamente </h3>";		
+    }		  
+	?>
     </div>
 </div>
 
