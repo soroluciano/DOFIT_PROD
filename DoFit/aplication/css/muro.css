@@ -112,99 +112,99 @@ body{
 /*textarea comentarios*/
 
 .widget-area.blank {
-background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
--webkit-box-shadow: none;
--moz-box-shadow: none;
--ms-box-shadow: none;
--o-box-shadow: none;
-box-shadow: none;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 body .no-padding {
 padding: 0;
 }
 .widget-area {
-background-color: #fff;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
--ms-border-radius: 4px;
--o-border-radius: 4px;
-border-radius: 4px;
--webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
--moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
--ms-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
--o-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-float: left;
-margin-top: 30px;
-padding: 25px 30px;
-position: relative;
-width: 100%;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  float: left;
+  margin-top: 30px;
+  padding: 25px 30px;
+  position: relative;
+  width: 100%;
 }
 .status-upload {
-background: none repeat scroll 0 0 #f5f5f5;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
--ms-border-radius: 4px;
--o-border-radius: 4px;
-border-radius: 4px;
-float: left;
-width: 100%;
+  background: none repeat scroll 0 0 #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  width: 100%;
 }
 .status-upload form {
-float: left;
-width: 100%;
+  float: left;
+  width: 100%;
 }
 .status-upload form textarea {
-background: none repeat scroll 0 0 #fff;
-border: medium none;
--webkit-border-radius: 4px 4px 0 0;
--moz-border-radius: 4px 4px 0 0;
--ms-border-radius: 4px 4px 0 0;
--o-border-radius: 4px 4px 0 0;
-border-radius: 4px 4px 0 0;
-color: #777777;
-float: left;
-font-family: Lato;
-font-size: 14px;
-height: 142px;
-letter-spacing: 0.3px;
-padding: 20px;
-width: 100%;
-resize:vertical;
-outline:none;
-border: 1px solid #F2F2F2;
+  background: none repeat scroll 0 0 #fff;
+  border: medium none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  color: #777777;
+  float: left;
+  font-family: Lato;
+  font-size: 14px;
+  height: 142px;
+  letter-spacing: 0.3px;
+  padding: 20px;
+  width: 100%;
+  resize:vertical;
+  outline:none;
+  border: 1px solid #F2F2F2;
 }
 
 .status-upload ul {
-float: left;
-list-style: none outside none;
-margin: 0;
-padding: 0 0 0 15px;
-width: auto;
+  float: left;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0 0 0 15px;
+  width: auto;
 }
 .status-upload ul > li {
-float: left;
+  float: left;
 }
 .status-upload ul > li > a {
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
--ms-border-radius: 4px;
--o-border-radius: 4px;
-border-radius: 4px;
-color: #777777;
-float: left;
-font-size: 14px;
-height: 30px;
-line-height: 30px;
-margin: 10px 0 10px 10px;
-text-align: center;
--webkit-transition: all 0.4s ease 0s;
--moz-transition: all 0.4s ease 0s;
--ms-transition: all 0.4s ease 0s;
--o-transition: all 0.4s ease 0s;
-transition: all 0.4s ease 0s;
-width: 30px;
-cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #777777;
+  float: left;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 0 10px 10px;
+  text-align: center;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  width: 30px;
+  cursor: pointer;
 }
 .status-upload ul > li > a:hover {
 background: none repeat scroll 0 0 #606060;
@@ -240,25 +240,25 @@ margin-right: 7px;
 
 .btn-comment{
   border: medium none;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
--ms-border-radius: 4px;
--o-border-radius: 4px;
-border-radius: 4px;
-color: #7f7f7f;
-font-weight: bold;
-background-color:#eee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #7f7f7f;
+  font-weight: bold;
+  background-color:#eee;
 }
 
 .btn-like-link {
-     background:none!important;
-     border:none; 
-     padding:0!important;
-     font: inherit;
-     /*border is optional*/
-     border-bottom:1px solid #46FF1A;
-     color: #46FF1A;
-     cursor: pointer;
+  background:none!important;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  border-bottom:1px solid #46FF1A;
+  color: #46FF1A;
+  cursor: pointer;
 }
 
 .btn-comment-open{
@@ -305,11 +305,11 @@ background-color:#eee;
 }
 
 .div-btns-comment{
-    height:44px;
-    background-color: rgb(246,247,249);
-    padding-top: 5px;
-    border-top: 1px solid;
-    border-top-color: rgb(231,232,234);;
+  height:44px;
+  background-color: rgb(246,247,249);
+  padding-top: 5px;
+  border-top: 1px solid;
+  border-top-color: rgb(231,232,234);
     
 }
 
@@ -320,9 +320,9 @@ background-color:#eee;
 }
 
 .btn-ed-fin{
-   float: right;
-   margin-right: 3px;
-   font-weight: bold;
+  float: right;
+  margin-right: 3px;
+  font-weight: bold;
 }
 
 .div-ed-comment{
