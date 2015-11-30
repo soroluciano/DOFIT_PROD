@@ -94,19 +94,19 @@ $this->pageTitle=Yii::app()->name;
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../profesorinstitucion/ConsultarActividadesInscripto">&times;</a></span></button>
-                <h4 class="modal-title">Alumnos Inscriptos en la Actividad</h4>
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../profesorinstitucion/ListadoActividades">&times;</a></span></button>
+                <h4 class="modal-title">Alumnos Inscriptos en la actividad</h4>
             </div>
             <div class="container">
-                <div class="form">
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <div id="actaluminsc">
-                            </div>
-                            <a href="../profesorinstitucion/ConsultarActividadesInscripto" class="btn btn-primary">Volver</a>
+
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <div id="actaluminsc">
                         </div>
+                        <a href="../profesorinstitucion/ListadoActividades" class="btn btn-primary">Volver</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

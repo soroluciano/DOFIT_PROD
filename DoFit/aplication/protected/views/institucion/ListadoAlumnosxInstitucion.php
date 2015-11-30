@@ -1,19 +1,3 @@
-<script type="text/javascript">
-    function Mostrartelefonos(idusuario){
-        var idusuario = idusuario;
-        var tel = "tel";
-        window.open("../institucion/Mostrardatos?idusuario="+idusuario+"&tel="+tel+"",'','width=800, height=200');
-    }
-
-    function Mostrardireccion(idusuario){
-        var idusuario = idusuario;
-        var dir = "dir";
-        window.open("../institucion/Mostrardatos?idusuario="+idusuario+"&dir="+dir+"",'','width=800, height=200');
-    }
-
-
-</script>
-
 <?php
 /* @var $this SiteController */
 
@@ -123,8 +107,8 @@ $this->pageTitle=Yii::app()->name;
                                     <?php $fechanac = date("d-m-Y",strtotime($ficha_usuario->fechanac));
                                     echo $fechanac;?>
                                 </td>
-                                <td><a id="tel" href="" onClick="javascript:Mostrartelefonos(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                                <td><a id="dir" href="" onClick="javascript:Mostrardireccion(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+                                <td><a id="tel" href="#" onClick="javascript:Mostrartelefonosalumno(<?php echo $id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+                                <td><a id="dir" href="#" onClick="javascript:Mostrardireccionalumno(<?php echo $id_usuario;?>);")>Ver direcci&oacute;n</a></td>
                                 <td id="act"><a href="../actividadalumno/Veractividades/<?php echo $id_usuario?>">Ver actividades</a></td>
                             </tr>
                             </tbody>
@@ -134,7 +118,38 @@ $this->pageTitle=Yii::app()->name;
 
                     }
                 }
-
+                // Modal telefonos
+                echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datostelefonos' aria-labelledby='myLargeModalLabel'>
+                    <div class='modal-dialog modal-lg'>
+                        <div class='modal-content'>
+                            <div class='container'>
+                                <div class='col-md-8'>
+                                    <div class='form-group'>
+                                        <div id='datostele'>
+                                        </div>
+                                        <a href='../profesorinstitucion/ListadoProfesores' class='btn btn-primary'>Volver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>";
+                // Modal Direccion 
+                echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosdireccion' aria-labelledby='myLargeModalLabel'>
+                    <div class='modal-dialog modal-lg'>
+                        <div class='modal-content'>
+                            <div class='container'>
+                                <div class='col-md-8'>
+                                    <div class='form-group'>
+                                        <div id='datosdire'>
+                                        </div>
+                                        <a href='../profesorinstitucion/ListadoProfesores' class='btn btn-primary'>Volver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>";
             }
             echo "</table>";
         }
@@ -157,4 +172,41 @@ $this->pageTitle=Yii::app()->name;
         ?>
     </div>
 </div>
-	
+
+<script type="text/javascript">
+    function Mostrartelefonosalumno(idusuario){
+        $('#datostele').empty();
+        var idusuario = idusuario;
+        var data = {"idusuario":idusuario};
+        $.ajax({
+            url :  baseurl + "/Institucion/MostrarTelefonosAlumno",
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response){
+                $('#datostele').append(response);
+                $('#datostelefonos').modal('show');
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    function Mostrardireccionalumno(idusuario){
+        $('#datosdire').empty();
+        var idusuario = idusuario;
+        var data = {"idusuario":idusuario};
+        $.ajax({
+            url :  baseurl + "/Institucion/MostrarDireccionAlumno",
+            type: "POST",
+            dataType : "html",
+            data : data,
+            cache: false,
+            success: function (response){
+                $('#datosdire').append(response);
+                $('#datosdireccion').modal('show');
+            }
+        });
+    }
+</script>
