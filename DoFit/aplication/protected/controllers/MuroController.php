@@ -225,7 +225,7 @@ class MuroController extends Controller
 				
 				/*falta contar las posiciones para seguir avanzando de acuerdo*/
 				
-				$respuestas = Yii::app()->db->createCommand("select res.respuesta,res.fhcreacion,res.fhultmod,fu.nombre,fu.apellido,ps.foto1 from respuesta res left join perfil_muro_profesor pm on res.id_posteo = pm.id_posteo left join ficha_usuario fu on res.id_usuario=fu.id_usuario left join perfil_social ps on ps.id_usuario=fu.id_usuario where pm.id_posteo =".$idposteo." order by res.fhcreacion desc, res.fhultmod desc limit ".$position)->queryAll();
+				$respuestas = Yii::app()->db->createCommand("select res.id_respuesta,res.respuesta,res.fhcreacion,res.fhultmod,fu.nombre,fu.apellido,ps.foto1 from respuesta res left join perfil_muro_profesor pm on res.id_posteo = pm.id_posteo left join ficha_usuario fu on res.id_usuario=fu.id_usuario left join perfil_social ps on ps.id_usuario=fu.id_usuario where pm.id_posteo =".$idposteo." order by res.fhcreacion desc, res.fhultmod desc limit ".$position)->queryAll();
 				
 				$this->renderPartial('_respuestas',array('respuestas'=>$respuestas,'show'=>$show,'idposteo'=>$idposteo,'position'=>$position));
 						

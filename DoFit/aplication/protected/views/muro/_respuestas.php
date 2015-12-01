@@ -15,16 +15,21 @@
 				
 			echo "
 			<li class='comment'>
-			<a class='pull-left' href='#'>
-			<img src='".Yii::app()->request->baseUrl."/uploads/".$respuesta['foto1']."' class='avatar' alt='avatar'>
-			</a>
-			<div class='comment-body'>
-			<div class='comment-heading'>
-			<h4 class='user'>".$respuesta['nombre']." ".$respuesta['apellido']."</h4>
-			<h5 class='time'>".$finaltime."</h5>
-			</div>
-			<p>".$respuesta['respuesta']."</p>
-			</div>
+				<a class='pull-left' href='#'>
+				      <img src='".Yii::app()->request->baseUrl."/uploads/".$respuesta['foto1']."' class='avatar' alt='avatar'>
+				</a>
+				<div class='comment-body'>
+					<div class='comment-heading'>
+						<h4 class='user'>".$respuesta['nombre']." ".$respuesta['apellido']."</h4>
+						<h5 class='time'>".$finaltime."</h5>
+					</div>
+				    <p class='description-respuesta'>".$respuesta['respuesta']."</p>
+				    <!--<a href='#' class='editresp' title='Editar' role='button' data-toggle='dropdown' aria-haspopup='true'><span><i class='glyphicon glyphicon-edit'/></span></a> 
+					   <ul class='dropdown-menu editresp-menu' aria-labelledby='dropdownMenu'>
+						   <li><a href='javascript:alert(".$respuesta['id_respuesta'].")'>Editar</a></li>
+						   <li><a href='' onclick='alert(".$respuesta['id_respuesta'].")' data-toggle='modal' data-target='#popborrar')'>Eliminar</a></li>
+					   </ul>-->
+				</div>
 			</li>";
 		}
 			if($show){

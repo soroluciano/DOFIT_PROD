@@ -330,3 +330,25 @@ background-color:#eee;
   border-color: rgb(186,186,194);
   height: auto;
 }
+
+.editresp{
+    float: right;
+    padding-right:3%;
+    padding-bottom: 3%;
+}
+.editresp-menu{
+  position:relative;
+  
+}
+.description-respuesta{
+  width:90%;
+  height: auto;
+  display: inherit;
+  text-align: left;
+   word-break: break-all
+}
+
+
+.display-block{
+  display: block;
+}
