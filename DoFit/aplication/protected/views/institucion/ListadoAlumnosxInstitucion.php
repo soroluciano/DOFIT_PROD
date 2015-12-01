@@ -30,7 +30,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido! <?php 
-				if(!Yii::app()->user->isGuest){
+				if(Yii::app()->session['id_institucion']){
                       //Es un usuario logueado.
                      $ins = Institucion::model()->findByPk(Yii::app()->user->id);
                      $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
@@ -50,7 +50,7 @@
         <br>
         <br>
         <?php
-    if(!Yii::app()->user->isGuest){    
+    if(Yii::app()->session['id_institucion']){    
 		$id_usuarios_array = array();
         $idinstitucion = Yii::app()->user->id;
         $cant_alumnos = 0;
@@ -63,7 +63,7 @@
             <tr>
              <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th></tr></thead>";
             foreach($actividades as $acti){
-                $actividades_alumnos = ActividadAlumno::model()->findAll('id_actividad=:id_actividad',array(':id_actividad'=>$acti->id_actividad));
+                $actividades_alumnos = ActividadAlumno::model()->findAll('id_actividad=:id_actividad AND id_estado=:id_estado',array(':id_actividad'=>$acti->id_actividad,'id_estado'=>1));
                 if($actividades_alumnos != null){
                     $cant_alumnos++;
                     foreach ($actividades_alumnos as $act_alum){
@@ -166,7 +166,7 @@
         }
     }    
     else {
-          echo "<h3> La sesi&oacute;n caduco por favor inicia nuevamente </h3>";		
+        $this->redirect(array('/institucion/home'));	
     }		  
 	?>
     </div>
