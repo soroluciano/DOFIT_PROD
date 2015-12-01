@@ -27,15 +27,17 @@
       canal : $('#canal').val(),
       socket_id : pusher.connection.socket_id
       },function(respuesta){
+        debugger;
           getMensajesFromBase();
     });
     
-    
+      pusher.disconnect();
   }
   
   /*Traer las respuestas/comentarios por el id del post*/
 
   function getComentsByPost(idpost){  // trae los comentarios por id de post
+    debugger;
     var position = $("#position_post_"+idpost).val();
     $.ajax({
       url:  baseurl+'/muro/getComentarios',
@@ -67,6 +69,7 @@
       type: 'POST',
       data: 'respuesta='+comment+'&id_posteo='+_a,
       success:function(response){
+           window.$isNewMsg.value='true';
         alert( "Data Saved: " + response );
       },
       error: function(e){
@@ -81,91 +84,59 @@
     },function(respuesta){
       showComents(this._a);
     });
-  }
-  
-  
-  
-  /*POSTEOS*/
-  
-  
-  $(function(){
-    setInterval("intervalo()",1000);
-    
-    $i = 0;
-  
-  });
-  
-  function intervalo(){
-    $i=1;
-    //alert($i);
-  
-  }
-  
-  
-  $(function(){
-    window.$postValue={}   
-    var pusher = new Pusher('c48d59c4cb61c7183954');    
-    var canalnom = $('#canal').val();
-    var canal  = pusher.subscribe(canalnom);
-    
-    canal.bind('nuevo_comentario', function(respuesta){
-     getMensajesFromBase();
-  });
-  
-  
-  $('form').submit(function(){
-    $.ajax({
-      url:  baseurl+'/muro/insertarComentarioProfesor',
-      type: 'POST',
-      data: 'mensaje='+$('#input_mensaje').val()+'&id_actividad='+$('#id_actividad_selected').val(),
-      success:function(response){
-      alert( "Data Saved: " + response );
-    },
-    error: function(e){
-      $('#logger').html(e.responseText);
+      pusher.disconnect();
     }
-  });
-  
-  $.post(baseurl+'/php/ajax.php', {
-    msj : $('#input_mensaje').val(),
-    canal : $('#canal').val(),
-    socket_id : pusher.connection.socket_id
-  }
-  ,function(respuesta){
-    getMensajesFromBase();
-  });
-    return false;
-  });
-  });
-  
-  
-  
-  
-  
-  //$(function(){ me parece al pedo
-  //
-  //    var pusher = new Pusher('c48d59c4cb61c7183954');
-  //    var canalnom = $('#canal').val();
-  //    debugger;
-  //    var canal  = pusher.subscribe(canalnom);
-  //    
-  //    var url = baseurl;
-  //
-  //    canal.bind('nuevo_comentario', function(){
-  //        getMensajesFromBase();
-  //       
-  //    });
-  //    
-  //    $('form').submit(function(){
-  //        $.post(url+'/php/ajax.php', { msj : $('#input_mensaje').val(),canal:$('#canal').val(), socket_id : pusher.connection.socket_id }, function(respuesta){
-  //          getMensajesFromBase();
-  //        }, 'json');
-  //
-  //        return false;
-  //    });
-  //});
-  
 
+  
+  $(function(){
+      window.$postValue={}
+      window.$isNewMsg={}
+      var pusher = new Pusher('c48d59c4cb61c7183954');    
+      var canalnom = $('#canal').val();
+      var canal  = pusher.subscribe(canalnom);
+      
+      //if(window.$isNewMsg.value =='true') {
+          canal.bind('nuevo_comentario', function(respuesta){
+              debugger;
+               if(window.$isNewMsg.value =='true') {
+                  getMensajesFromBase();
+               }else{
+                  getMensajesConDelay();
+               }
+          });
+      //}else{
+      //  getMensajesConDelay();
+      //}
+
+
+    $('form').submit(function(){
+      $.ajax({
+        url:  baseurl+'/muro/insertarComentarioProfesor',
+        type: 'POST',
+        data: 'mensaje='+$('#input_mensaje').val()+'&id_actividad='+$('#id_actividad_selected').val(),
+        success:function(response){
+        alert( "Data Saved: " + response );
+        window.$isNewMsg.value='true';
+      },
+      error: function(e){
+        $('#logger').html(e.responseText);
+      }
+    });
+    
+    $.post(baseurl+'/php/ajax.php', {
+      msj : $('#input_mensaje').val(),
+      canal : $('#canal').val(),
+      socket_id : pusher.connection.socket_id
+    }
+    ,function(respuesta){
+      debugger;
+      getMensajesFromBase();
+    });
+      pusher.disconnect();
+      return false;
+    });
+  });
+  
   
   function getMensajesFromBase(){
     $.ajax({
@@ -180,46 +151,6 @@
       }
     });
   }
-  
-  //function recuperarJson(){
-  //  $.ajax({
-  //    url:  baseurl+'/muro/pruebaJson',
-  //    dataType: "json",
-  //    data: {},
-  //    success:function(response){
-  //    crearTabla(response);
-  //    },
-  //    error: function(e){
-  //      $('#logger').html(e.responseText);
-  //    }});
-  //
-  //}
-  
-  //function crearTabla(response){
-  //  $.each(response, function(i,item){
-  //  $('#respuesta').append("<br>"+i+" - "+response[i].posteo+" - "+response[i].foto1);
-  //
-  //})
-  //
-  //}
-  
-  //function getHtmlDecoded(val) {
-  //  debugger;
-  //  $_val = val;
-  //  $.ajax({
-  //    url: baseurl+"/muro/getHtmlDecoded",
-  //    type: 'POST',
-  //    data: 'val='+$_val,
-  //    success:function(response){
-  //      debugger;
-  //      return response;
-  //    },
-  //    error: function(e){
-  //      debugger
-  //      $('#logger').html(e.responseText);
-  //    }
-  //  });
-  //}
   
   
   function editComment(idcoment) //funcion de la seleccion de edicion de comentario
@@ -258,6 +189,7 @@
       success:function(response){
       alert( "Data Saved: " + response );
       pushearMensaje();
+      window.$isNewMsg.value='true';
     },
       error: function(e){
         $('#logger').html(e.responseText);
@@ -281,7 +213,8 @@
         data: 'id_posteo='+$idposteo,
         success:function(response){
           alert( "Data deleted: " + response );
-          getMensajesFromBase();
+          window.$isNewMsg.value='true';
+          pushearMensaje('deleted');
       },
         error: function(e){
           $('#logger').html(e.responseText);
@@ -289,18 +222,28 @@
      });
     
   }
-      
-   
-      
-      
-      /*
-        Lista de tareas profesor
-        
-        * edicion de respuestas
-  
 
-      */
+   
+   function getMensajesConDelay(){
+       setInterval("getMensajesFromBase()",50000);
+   }
+   
+   
+    //function rechargeTimePusher(){
+    //    debugger;
+    //    alert("recargando...")
+    //    var pusher = new Pusher('c48d59c4cb61c7183954');    
+    //    var canalnom = $('#canal').val();
+    //    var canal  = pusher.subscribe(canalnom);
+    //    
+    //    canal.bind('nuevo_comentario', function(respuesta){
+    //      debugger;
+    //     getMensajesFromBase();
+    //  });
+    //    pusher.disconnect();
+    //}   
       
+
       
       
       

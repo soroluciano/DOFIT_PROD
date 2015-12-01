@@ -3,15 +3,7 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/muro.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-<!--
-los alumnos se deberia hacer una query a partir de actividad_alumno
-y asi poder mostrar los perfil_muro_profesor a los que estoy unido
 
-
-
-
-
--->
 <?php
 $baseUrl = Yii::app()->baseUrl;
 
@@ -31,47 +23,6 @@ if($canal==null){
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/muroalumno.js');	
 
-function getActividades($id){
-				
-	$listaActividades = Yii::app()->db->createCommand("select a.id_actividad,d.deporte,ao.hora,ao.minutos,ao.id_dia,fi.nombre from actividad a inner join actividad_horario ao on a.id_actividad=ao.id_actividad inner join actividad_alunno al  on a.id_actividad = al.id_actividad inner join institucion i on a.id_institucion=i.id_institucion inner join ficha_institucion fi on i.id_institucion=fi.id_institucion inner join deporte d on a.id_deporte=d.id_deporte where a.id_usuario=".$id." or al.id_usuario=".$id)->queryAll();
-	$respuesta="
-		<select class='form-control' style='margin-top:5px;' id='sel1'>
-		<option>Compartir con...</option>";
-	
-  foreach($listaActividades as $act ){
-	$dia;
-	switch($act['id_dia']){
-		case 1:{
-			$dia="Lunes";	
-		}
-		case 2:{
-			$dia="Martes";
-		}
-			case 3:{
-			$dia="Miercoles";
-		}
-		case 4:{
-			$dia="Jueves";		
-		}
-		case 5:{
-			$dia="Viernes";
-		}
-		case 6:{
-			$dia="Sabado";
-		}
-		case 7:{
-			$dia="Domingo";
-		}
-		
-	}
-
-	$respuesta.="<option id='".$act['id_actividad']."'><a href='#'>".$act['deporte']."-".$act['nombre']."-".$dia."(".$act['hora'].":".$act['minutos']." hs".")</a></li>";
-  }
-	$respuesta.="</select>";
-
-  return $respuesta;
-						
-}
 
 
 
