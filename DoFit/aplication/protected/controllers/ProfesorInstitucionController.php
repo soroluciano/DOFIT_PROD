@@ -5,33 +5,65 @@ class ProfesorInstitucionController extends Controller
 
 	public function actionAdhesiongimnasio()
 	{
-		if(!Yii::app()->user->isGuest){
-			//Es un usuario logueado.
-			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+		$localidad =  new Localidad;
+		$this->render('Adhesiongimnasio',array('localidad'=>$localidad));
+	}
+
+	public function actionMostrarInstituciones()
+	{
+		$localidadsel = $_POST['localidad'];
+		$id_usuario = Yii::app()->user->id;
+		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$localidadsel));
+		$id_provincia = $localidad->id_provincia;
+		$provincia = Provincia::model()->find('id_provincia=:id_provincia',array(':id_provincia'=>$id_provincia));
+		$criteria = new CDbCriteria;
+		$criteria->select = 't.id_institucion,t.nombre,t.cuit,t.direccion,t.id_localidad,t.telfijo,t.celular,t.depto,t.piso';
+		$criteria->condition = 't.id_localidad = ' . $localidadsel .' AND t.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario = ' . $id_usuario . ')';
+		$ficinstituciones = FichaInstitucion::model()->findAll($criteria);
+
+		if($ficinstituciones != NULL){
+			echo "<table class='table table-hover'>
+                     <thead>
+                     <tr>
+				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th></th><th>Google Maps</th></tr></thead>";
+			foreach($ficinstituciones as $ficins){
+				echo "<tbody>
+                      <tr>";
+				echo  "<td id='nombre'>" . $ficins->nombre . "</td>";
+				echo  "<td id='cuit'>" . $ficins->cuit . "</td>";
+				echo  "<td id='direccion'>" . $ficins->direccion ."</td>";
+				echo  "<td id='telfijo'>" . $ficins->telfijo . "</td>";
+				echo  "<td id='celular'>" . $ficins->celular . "</td>";
+				echo  "<td id='depto'>" . $ficins->depto . "</td>";
+				echo  "<td id='piso'>" .  $ficins->piso . "</td>";
+				echo  "<td id='ad'><input type='button' class='btn btn-primary' onclick='javascript:Enviarsolicitud($ficins->id_institucion)' value='Enviar solicitud!'></input></td>";
+				echo  "<td id='googlemaps'>". CHtml::link('Google Maps!',array('FichaInstitucion/GoogleMaps','nombre'=>$ficins->nombre,'direccion'=>$ficins->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia)) . "</td>";
+			}
 		}
-		if(isset($_GET['id_institucion'])){
+	}
+
+	public function actionEnviarSolicitud()
+	{
+		if(isset($_POST['id_institucion'])){
 			$profins = new ProfesorInstitucion;
-			$id_institucion = $_GET['id_institucion'];
-			$id_usuario = $usuario->id_usuario;
+			$id_institucion = $_POST['id_institucion'];
+			$id_usuario = Yii::app()->user->id;
 			$profins->id_usuario = $id_usuario;
 			$profins->id_institucion = $id_institucion;
 			$profins->id_estado = 0;
 			$profins->fhcreacion = new CDbExpression('NOW()');
 			$profins->fhultmod = new CDbExpression('NOW()');
+			$usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$id_usuario));
 			$profins->cusuario = $usuario->email;
 			if($profins->validate()){
-				if($profins->save()){?>
-					<script>alert("Se envio la solicitud para adherirse correctamente");</script>
-					<?php
+				if($profins->save()){
+					echo "solicitudok";
+				}
+				else{
+					echo "solicituderror";
 				}
 			}
 		}
-
-		$criteria = new CDbCriteria;
-		$criteria->select = 't.id_institucion,t.nombre,t.cuit,t.direccion,t.id_localidad,t.telfijo,t.celular,t.depto,t.piso';
-		$criteria->condition = 't.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario ='.$usuario->id_usuario.')';
-		$ficinstituciones = FichaInstitucion::model()->findAll($criteria);
-		$this->render('Adhesiongimnasio',array('ficinstituciones'=>$ficinstituciones,));
 	}
 
 	public function actionListadoProfesores()

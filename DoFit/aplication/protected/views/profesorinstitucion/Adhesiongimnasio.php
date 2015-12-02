@@ -1,118 +1,172 @@
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
-
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-?>
-
-<?php if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-  }
-  ?>
-
-<div class="navbar-wrapper">
+<html>
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                   <a href='../site/index'> <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></img></a>
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+            <a href="../" class="navbar-brand"></a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/">Getting started</a>
+                </li>
+                <li>
+                    <a href="../css/">CSS</a>
+                </li>
+                <li>
+                    <a href="../components/">Components</a>
+                </li>
+                <li>
+                    <a href="../javascript/">JavaScript</a>
+                </li>
+                <li>
+                    <a href="../customize/">Customize</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a></li>
+                <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
+                <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<style type="text/css">
+    body {
+        background: url(../img/futbol.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<?php if(isset(Yii::app()->session['id_usuario'])){?>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Adhirete a un gimnasio como profesor!</h4>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
-							<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Anotarme en actividades</a></li>
-                                    <li><a href="#">Ver mis actividades</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuración</a></li>
-                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                <div class="container">
+                    <div class="form">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <br/>
+                                <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
+                                <?php echo $form->labelEx($localidad,'Provincia'); ?>
+                                <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
+                                    array('ajax'=>array('type'=>'POST',
+                                        'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
+                                        'update'=>'#'.CHtml::activeId($localidad,'id_localidad'),
+                                    ),'prompt'=>'Seleccione tu Provincia','class'=>"form-control"));?>
+                            </div>
+                            <div class="form-group">
+                                <?php echo $form->labelEx($localidad,'Localidad'); ?>
+                                <div>
+                                    <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control",'onchange'=>"ConsultarInstituciones();")); ?>
+                                </div>
+                            </div>
+                            <div class="form-group" id="mostrargimnasios">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-
-
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/11.jpg" alt="First slide">
         </div>
     </div>
-</div>
-<div>
+    <!-- Modal Exito !-->
+    <div class='modal fade' id='solicitudok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                    <h4 class='modal-title' id='myModalLabel'>¡Felicidades!</h4>
+                </div>
+                <div class='modal-body'>
+                    Se envio la solicitud correctamente.
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-default' data-dismiss='modal' onclick='location.reload();'>Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<?php
-$cantinstituciones = Institucion::model()->count();
-if($cantinstituciones > 0){
-     if($ficinstituciones !=NULL){
-	 echo  "<div><h2>Adherirte a un gimnasio como profesor!</h2></div>";
-        echo    "<table class='table table-hover'>
-                        <thead>
-                            <tr>
-    <tr><th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Localidad</th><th>Provincia</th><th>Telefono Fijo</th><th>Celular</th><th>Departamento</th><th>Piso</th><th></th><th>Google Maps</th></tr></thead>";
-foreach ($ficinstituciones as $ficins){ ?>
-   <tbody>
-   <tr>
-   <td><?php echo $ficins->nombre ?></td>
-   <td><?php echo $ficins->cuit ?></td>
-   <td><?php echo $ficins->direccion ?></td>
-   <td><?php $id_localidad = $ficins->id_localidad; 
-       $localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$id_localidad));
-      echo $localidad->localidad;?></td>  
-   <td><?php $id_provincia = $localidad->id_provincia;
-        $provincia = Provincia::model()->find('id_provincia=:id_provincia',array(':id_provincia'=>$id_provincia));
-        echo $provincia->provincia;?></td>		
-   <td><?php echo $ficins->telfijo ?></td>
-   <td><?php echo $ficins->celular?></td>
-   <td><?php echo $ficins->depto?></td>
-   <td><?php echo $ficins->piso?></td>
-   <td><?php echo "<a href='Adhesiongimnasio/?id_institucion=$ficins->id_institucion' class='btn btn-default'>Enviar solicitud!</a>"?></td> 
-   <td><?php echo CHtml::link('Ver ubicacion en Google Maps!',array('FichaInstitucion/GoogleMaps','nombre'=>$ficins->nombre,'direccion'=>$ficins->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia));?></td>
-   </tbody>
-<?php }
-  echo "</table>";
+    <!-- Modal Error !-->
+    <div class='modal fade' id='solicituderror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                    <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
+                </div>
+                <div class='modal-body'>
+                    Hubo un error al enviar la solicitud a la Instituci&oacute;n.
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php
 }
 else
 {
-   echo    "<div class='row'>
-                        <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>Ya enviaste solicitudes a todas las instituciones de DoFit!</h2>
-                             <h2 class='text-center'>Dirigite a cada una de ellas y consulta su estado!</h2>
-						</div>
-                    </div>";	
+    $this->render('../site/index');
 }
-}
-else
-{
-   echo    "<div class='row'>
-                        <div class='.col-md-6 .col-md-offset-3'>
-                            <h2 class='text-center'>No se registraron Instituciones en DoFit!</h2>
-						</div>
-                    </div>";
-}					
-?>
- </div>
- <br/>
+$this->endWidget();?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#principal').modal('show');
+    });
+</script>
 
+<script type="text/javascript">
+    function ConsultarInstituciones()
+    {
+        $('#mostrargimnasios').empty();
+        var localidad = $('#Localidad_id_localidad').val();
+        var data = {'localidad':localidad};
+        $.ajax({
+            url: baseurl + '/profesorinstitucion/MostrarInstituciones',
+            type: "POST",
+            data: data,
+            dataType: "html",
+            cache : false,
+            success : function(response){
+                $('#mostrargimnasios').append(response);
+            }
+        })
+    }
+</script>
+<script type="text/javascript">
+    function Enviarsolicitud(id_institucion)
+    {
+        var id_institucion = id_institucion;
+        var data = {'id_institucion':id_institucion};
+        $.ajax({
+            url: baseurl + '/profesorinstitucion/EnviarSolicitud',
+            type: "POST",
+            data: data,
+            dataType: "html",
+            cache : false,
+            success : function(response){
+                if(response == "solicitudok"){
+                    $('#solicitudok').modal('show');
+                }
+                if(response == "solicituderror"){
+                    $("#solicituderror").modal('show');
+                }
+            }
+        })
+    }
+</script>  
