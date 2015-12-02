@@ -250,6 +250,18 @@ class ActividadController extends Controller
             }
         }
     }
+
+    public function actionEliminar()
+    {
+        if(isset($_POST['actividad'])){
+            Pago::model()->deleteAll("id_actividad='" . $_POST['actividad']."'");
+            ActividadHorario::model()->deleteAll("id_actividad='" . $_POST['actividad']."'");
+            ActividadAlumno::model()->deleteAll("id_actividad='" . $_POST['actividad']."'");
+            Actividad::model()->deleteAll("id_actividad='" . $_POST['actividad']."'");
+            echo "ok";
+        }
+    }
+
     public function actionCrearActividadOk()
     {
         $actividad = new Actividad;
