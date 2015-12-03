@@ -2,7 +2,7 @@
 
 
 .panel > .list-group .list-group-item:first-child {
-    /*border-top: 1px solid rgb(204, 204, 204);*/
+    border-top: 1px solid rgb(204, 204, 204);
 }
 @media (max-width: 900px) {
     .visible-xs {
@@ -33,6 +33,9 @@ ul.c-controls {
     list-style: none;
     margin: 0px;
     min-height: 44px;
+    height:900px;
+    overflow:hidden;
+    overflow-y:scroll;
 }
 
 ul.c-controls li {
@@ -63,6 +66,11 @@ ul.c-controls li a:hover {
 }
 
 .c-info {
-/*    padding: 5px 10px;*/
+    padding: 5px 10px;
     font-size: 1.25em;
+}
+
+.modified
+{
+    width: 100% !important;
 }

@@ -6,6 +6,7 @@
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/contactos.js');
+
 ?>
 
 <?php
@@ -18,8 +19,7 @@ $this->pageTitle=Yii::app()->name;
 
 if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
-     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
   }
   ?>
 <html>
@@ -74,11 +74,10 @@ if(!Yii::app()->user->isGuest){
 
  <?php 
 	if(!Yii::app()->user->isGuest){
-	    $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	    $fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+	    $fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
 	} 
-	$nombre = $fichaUsuario->nombre;
-	$apellido = $fichaUsuario->apellido;
+	//$nombre = $fichaUsuario->nombre;
+	//$apellido = $fichaUsuario->apellido;
 /*	$dni = $fichaUsuario->dni;
 	$sexo = $fichaUsuario->sexo;
 	$fechanac = $fichaUsuario->fechanac;
@@ -98,19 +97,13 @@ if(!Yii::app()->user->isGuest){
 <div class="container marketing">
     <!-- Three columns of text below the carousel -->
     <div class="row">
-		<?php $this->renderPartial('_cabecera',array('model'=>$model,'nombre'=>$nombre,'apellido'=>$apellido)); ?>
+		<?php //$this->renderPartial('_cabecera',array('model'=>$model,'nombre'=>$nombre,'apellido'=>$apellido)); ?>
 	</div>
 
     <nav class="navbar navbar-inverse" role="navigation">
        <div class="navbar-header">
 		    <ul class="nav navbar-nav">
 			 <li id="btn_galeria" style="cursor: pointer;"><a onclick="galeria();" >Imagenes</a></li>			
-          </ul>
-       </div>
-       <div>
-          <ul class="nav navbar-nav">
-             <li id="btn_info" style="cursor: pointer;"><a onclick="info();">Informaci&oacute;n</a></li>
-            <li id="btn_info" style="cursor: pointer;"><a onclick="getContactos();">Compa&ntilde;eros</a></li>
           </ul>
        </div>
     </nav>
