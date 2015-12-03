@@ -6,8 +6,9 @@ if(!Yii::app()->user->isGuest){
     //Es un usuario logueado.
     $usuarioins = Institucion::model()->findByPk(Yii::app()->user->id);
 }
-
 ?>
+
+
 
 <style type="text/css">
         body {
@@ -78,8 +79,8 @@ if(!Yii::app()->user->isGuest){
 			        </div>
 			        <div class="form-group">
                         <?php   $criteria = new CDbCriteria;
-                                $criteria->condition = 'id_usuario IN (select id_usuario from actividad where id_actividad IN ( select id_actividad from actividad where id_institucion = :institucion ))';
-                                $criteria->params = array(':institucion' => Yii::app()->user->id  );
+                                $criteria->condition = 'id_usuario IN (select id_usuario from profesor_institucion where id_institucion = :institucion )';
+                                $criteria->params = array(':institucion' =>  Yii::app()->user->id );
                                 $usuario = FichaUsuario:: model()->findAll($criteria);?>
                         <?php   echo $form->labelEx($ficha_usuario,'Profesor'); ?>
                         <?php   echo $form->dropDownList($actividad,'id_usuario',CHtml::listData(FichaUsuario:: model()->findAll($criteria),'id_usuario','nombre','apellido'),array('prompt'=>'Seleccione el profesor','class'=>"form-control"));?>
