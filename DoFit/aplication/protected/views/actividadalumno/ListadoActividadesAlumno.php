@@ -62,16 +62,19 @@ $this->pageTitle=Yii::app()->name;
                     <div class="col-md-8">
                         <div class="form-group">
                             <br/>
+							<?php if($instituciones != NULL){  ?>
                             <h5><b>Instituci&oacute;n</b></h5>
-                            <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
+							<select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
                                 <?php
-                                if(!Yii::app()->user->isGuest){
                                     echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
                                     foreach($instituciones as $ins){
                                         echo $ins['nombre'];
                                         echo "<option  value=".$ins['id_institucion']." name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
                                     }
-                                }
+							    }
+								else{
+						            echo "<h4><b>No estas inscripto en Ninguna Institución</b></h4>.";
+								}	
                                 ?>
                             </select>
                             <div class="form-group" id="mostraractividades">
