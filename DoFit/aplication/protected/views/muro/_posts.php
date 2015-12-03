@@ -25,14 +25,14 @@
               </div>
 			  
 			  <div class='pull-left edicion'>
-				
-				<div class='dropdown'>
-				  <button class='btn-edit-post' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>...</button>
-				  <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-					<li><a href='javascript:editComment(".$row['id_posteo'].")'>Editar</a></li>
-					<li><a href='' onclick='indicateIdPost(".$row['id_posteo'].")' data-toggle='modal' data-target='#popborrar')'>Eliminar</a></li>
-				  </ul>
-				</div>
+				<!--agregar validacion ...si el usuario es el mismo permite editar y borrar -->
+          <div class='dropdown'>
+            <button class='btn-edit-post' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>...</button>
+            <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
+            <li><a href='javascript:editComment(".$row['id_posteo'].")'>Editar</a></li>
+            <li><a href='' onclick='indicateIdPost(".$row['id_posteo'].")' data-toggle='modal' data-target='#popborrar')'>Eliminar</a></li>
+            </ul>
+          </div>
 				
 				
 			  </div>

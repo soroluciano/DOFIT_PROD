@@ -273,10 +273,15 @@ class ActividadController extends Controller
 
     public function actionEliminarActividades()
     {
+        $this->render('EliminarActividades');
+    }
+
+    public function actionModificarActividades()
+    {
         $actividad = new Actividad;
         $deporte = new Deporte;
         $ficha_usuario = new FichaUsuario;
         $actividad_horario = new ActividadHorario;
-        $this->render('EliminarActividades', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario, 'ficha_usuario' => $ficha_usuario));
+        $this->render('ModificarActividades', array('deporte' => $deporte, 'actividad' => $actividad, 'actividad_horario' => $actividad_horario, 'ficha_usuario' => $ficha_usuario));
     }
 }

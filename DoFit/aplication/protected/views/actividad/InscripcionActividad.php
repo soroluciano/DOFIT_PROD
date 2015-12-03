@@ -1,5 +1,4 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/googleMaps.js"></script>
 
 <?php
 /* @var $this SiteController */
@@ -14,68 +13,64 @@ $this->pageTitle=Yii::app()->name;
 }
 ?>
 
+</div>
+<style type="text/css">
+    body {
+        height:0px;
+    }
+</style>
 
-<div class="navbar-wrapper">
+
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href='../site/index'><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <div class="navbar-form navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a>Hola!  <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuraci�n <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Anotarme en actividades</a></li>
-                                    <li><a href="#">Ver mis actividades</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Privacidad</li>
-                                    <li><a href="#">Configuración</a></li>
-                                    <li><a href="#"><?php echo CHtml::link('Salir', array('site/logout')); ?></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../site/LoginInstitucion"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+            <a href="../" class="navbar-brand"></a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../ProfesorInstitucion/ListadoProfesores">Listado de Profesores</a>
+                </li>
+                <li>
+                    <a href="../institucion/ListadoAlumnosxInstitucion">Listado de Alumnos</a>
+                </li>
+                <li>
+                    <a href="../actividad/CrearActividad">Crear Actividades</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Bienvenido! Rabufeti</a></li>
+                <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
+            </ul>
         </nav>
     </div>
+</header>
+<div id="map"  style="width: 100%; height: 740px; z-index:-1; position:absolute;">
 </div>
-
-<!-- Carousel
-================================================== -->
-
-<div id="myCarousel" class="carousel_min slide" data-ride="carousel">
-    <div class="carousel-inner_min" role="listbox">
-        <div class="item active">
-            <img class="first-slide_min" src="<?php echo Yii::app()->request->baseUrl; ?>/img/16.jpg" alt="First slide">
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <form class="form" method="post" action="ListaDeInscripcion">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" style="z-index:300; width:300px; margin-left:13%;">
+    <form class="form" method="post" action="ListaDeInscripcion" >
         <?php $form=$this->beginWidget('CActiveForm', array('id'=>'actividad-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
-        <div class="col-md-8">
+        <div class="col-md-12">
             <?php echo CHtml::beginForm('InscripcionActividad','post'); ?>
+            <br>
             <div class="form-group">
-                <?php echo $form->labelEx($deportes,'Deporte'); ?>
                 <?php echo $form->dropDownList($deportes,'id_deporte',CHtml::listData(Deporte::model()->findAll(),'id_deporte','deporte'),array('empty'=>'Seleccione el deporte','class'=>"form-control","onchange"=>"BuscadorGimnasios();","id"=>"ListaDeporte","name"=>"deporte"));?>
                 <?php echo $form->error($deportes,'deporte')?>
             </div>
-
+            <br>
             <div class="form-group">
-                <?php echo $form->labelEx($localidad,'Provincia'); ?>
                 <?php echo $form->dropDownList($localidad,'id_provincia',CHtml::listData(Provincia::model()->findAll(),'id_provincia','provincia'),
                     array('ajax'=>array('type'=>'POST',
                         'url'=>CController::createUrl('Usuario/SeleccionarLocalidad'),
@@ -83,17 +78,15 @@ $this->pageTitle=Yii::app()->name;
                     ),'prompt'=>'Seleccione una Provincia','class'=>"form-control","onchange"=>"BuscadorGimnasios();"));?>
                 <?php echo $form->error($localidad,'id_provincia'); ?>
             </div>
+            <br>
             <div class="form-group">
-                <?php echo $form->labelEx($localidad,'Localidad'); ?>
                 <div>
                     <?php echo $form->dropDownList($localidad,'id_localidad',array(''=>"Selecciona tu localidad"),array('class'=>"form-control","onchange"=>"BuscadorGimnasios();")); ?>
                 </div>
                 <?php echo $form->error($localidad,'id_localidad'); ?>
-                <br/>
-                <div id="map" style="width: 700px; height: 400px;">
-                </div>
                 <br>
                 <br>
+
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" id="boton" style="display:none" value="Seguir con la inscripción"/>
                 </div>
@@ -124,6 +117,19 @@ $this->pageTitle=Yii::app()->name;
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDGuKpwaC15M3ivyOjCgU6_yvwpI8UWWE&callback=initMap">
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#map").show();
+        var map;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+    })
+</script>
+
 
 <script type="text/javascript">
     function BuscadorGimnasios(){
