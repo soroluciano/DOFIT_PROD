@@ -358,7 +358,10 @@ div.profile_img input{
 }
 div.profile_img:hover input{
 	display:block;
-  position:absolute;
+/*  position:absolute;*/
+  margin-bottom: 130px;
+  margin-left: 120px;
+  float: left;
 }
 
 
