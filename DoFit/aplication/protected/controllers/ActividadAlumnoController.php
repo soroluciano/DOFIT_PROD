@@ -57,6 +57,10 @@ class ActividadAlumnoController extends Controller
         if($instituciones != NULL){
             $this->render('ListadoActividadesAlumno',array('instituciones'=>$instituciones));
         }
+		else
+		{
+	     $this->render('ListadoActividadesAlumno',array('instituciones'=>$instituciones));
+		}
     }
 
     // Consulto las actividades que esta inscripto el alumno según la institución

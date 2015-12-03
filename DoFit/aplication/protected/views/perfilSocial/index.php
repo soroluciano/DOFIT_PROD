@@ -1,10 +1,11 @@
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/perfilsocial.css" rel="stylesheet">
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/contactos.css" rel="stylesheet">
 
 <?php
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
-$cs->registerScriptFile($baseUrl.'/js/perfil.js');
+$cs->registerScriptFile($baseUrl.'/js/contactos.js');
 ?>
 
 <?php
@@ -39,25 +40,24 @@ if(!Yii::app()->user->isGuest){
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="../getting-started/">Getting started</a>
                 </li>
                 <li>
-                    <a href="../css/">CSS</a>
+
                 </li>
                 <li>
-                    <a href="../components/">Components</a>
+
                 </li>
                 <li>
-                    <a href="../javascript/">JavaScript</a>
+
                 </li>
                 <li>
-					<?php echo CHtml::link('Salir', array('site/logout')); ?>
+
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a></li>
-                <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+                <li></li>
+                <li></li>
+								<li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
     </div>
@@ -120,8 +120,8 @@ if(!Yii::app()->user->isGuest){
 			
 			
 			<h2><?php echo $nombre." ".$apellido; ?></span></h2>
-            <h3>calcular edad</h3>
-            <h3>Practico 2 deportes</h3>
+<!--            <h3>calcular edad</h3>
+            <h3>Practico 2 deportes</h3>-->
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-8">
 			 <img src="<?php echo Yii::app()->request->baseUrl;echo "/images/default_cover.jpg" ?>" alt="Generic placeholder image" width="100%" height="340px" >
@@ -138,7 +138,7 @@ if(!Yii::app()->user->isGuest){
        <div>
           <ul class="nav navbar-nav">
              <li id="btn_info" style="cursor: pointer;"><a onclick="info();">Informaci&oacute;n</a></li>
-             <li><a href="#">Companeros</a></li>		
+            <li id="btn_info" style="cursor: pointer;"><a onclick="getContactos();">Compa&ntilde;eros</a></li>
           </ul>
        </div>
     </nav>

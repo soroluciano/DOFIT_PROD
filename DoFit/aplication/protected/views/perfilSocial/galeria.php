@@ -32,11 +32,6 @@
 								   <label for="message-text" class="control-label">Imagen:</label>
 								   <br>
 								   <input name="file" type="file" id="imagen" title="Buscar imagen" class="btn btn-default"/>
-								 <!--
-							   <div class="form-group">
-								   <label for="message-text" class="control-label">Descripcion:</label>
-								   <textarea class="form-control" id="message-text"></textarea>
-							   </div>-->
 							   <div class="messages oculto"></div>
 							   <div class="showImage"></div>
 							   <div class="modal-footer">	

@@ -46,17 +46,17 @@
             <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2><a href="../actividad/InscripcionActividad" class="btn btn-primary">Inscribite a una actividad</a></h2>
             <p>Inscribite a las actividades que te ofrece DoFit!</p>
-        </div>
-		<?php if($Us->id_perfil == 1){ ?>
-	    <div class="col-lg-4">
-        </div>		
+        </div>	
+        <?php if($Us->id_perfil == 1){
+          	echo "<div class='col-lg-4'>
+                  </div>"; 
+		        }?>  
         <div class="col-lg-4">
             <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2><a href="../actividadalumno/ListadoActividades" class="btn btn-primary">Actividades que estoy inscripto</a></h2>
             <p>Consulta el estado de tus actividades y pagalas con Mercado Pago. </p>
         </div>
-  <?php } ?>
-  
+   
 		<?php if($Us->id_perfil == 2){ ?>
 	    <div class="col-lg-4">
            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -69,8 +69,6 @@
            <p>Consulta las actividades que das clases y el detalle de los alumnos inscriptos.</a></p>
         </div>     
   <?php } ?>
-    </div>
-	<div class="row">
 	    <div class="col-lg-4">
           <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2><a href="../perfilSocial/" class="btn btn-primary">Red Social de DoFit.</a></h2>

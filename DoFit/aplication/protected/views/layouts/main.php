@@ -31,6 +31,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie10.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/perfil.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.file-input.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/jquery.fancybox-1.3.4.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/fancybox/web.js"></script>

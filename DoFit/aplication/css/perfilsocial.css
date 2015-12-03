@@ -348,16 +348,17 @@ resize:none;
 
 /***** SHOW IMAGE ****/ 
 
-div.profile_img:hover{
+/*div.profile_img:hover{
 	opacity:0.5;
 	
-}
+}*/
 div.profile_img input{
     position:absolute;
     display:none;
 }
 div.profile_img:hover input{
 	display:block;
+  position:absolute;
 }
 
 

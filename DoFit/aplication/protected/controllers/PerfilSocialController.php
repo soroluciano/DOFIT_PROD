@@ -37,7 +37,7 @@ class PerfilSocialController extends Controller
 	*/
 
 
-    public function actionIndex(){
+  public function actionIndex(){
 		
 		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
 		$model = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
@@ -144,50 +144,22 @@ class PerfilSocialController extends Controller
 		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
 		$nombreImagen=$_POST['data'];
 		
-		$flag = 0;
-		if($perfilSocial->foto1 == null && $flag!=1){
-			$perfilSocial->foto1 = $nombreImagen;
-			$flag = 1;
-			
+		$isnull=false;
+		$foto;
+		$fotoSave;
+		for($i=1;$i<=6;$i++){
+			$foto = "foto".$i;
+			$nombre =	$perfilSocial->$foto;
+			if($nombre==null && $isnull != true){
+				$fotoSave = "foto".$i;
+				$isnull = true;
+			}
 		}
-		if($perfilSocial->foto2 == null && $flag!=1){
-			$perfilSocial->foto2 = $nombreImagen;
-			$flag = 1;
-		}
-		if($perfilSocial->foto3 == null && $flag!=1){
-			$perfilSocial->foto3 = $nombreImagen;
-			$flag = 1;
-		}
-		if($perfilSocial->foto4 == null && $flag!=1){
-			$perfilSocial->foto4 = $nombreImagen;
-			$flag = 1;
-		}
-		if($perfilSocial->foto5 == null && $flag!=1){
-			$perfilSocial->foto5 = $nombreImagen;
-			$flag = 1;
-		}
-		if($perfilSocial->foto6 == null && $flag!=1){
-			$perfilSocial->foto6 = $nombreImagen;
-			$flag = 1;
-		}
-		//echo $nombreImagen;
 		
+		$perfilSocial->$fotoSave = $nombreImagen;		
 		$perfilSocial->update();
 		echo "grabado";
-		/*
-		if($perfilSocial->update()){
-			echo "grabado";
-		}else{
-			echo "error";
-		}
-		*/
-	
-	/*	if(isset($_POST['descripcion'])){
-			$perfilSocial->descripcion = $_POST['descripcion'];
-			$perfilSocial->save();
-		}
-		*/
-		/*echo $perfilSocial->descripcion;*/
+
 	}
 
 	
@@ -230,6 +202,10 @@ class PerfilSocialController extends Controller
 			));	
 	}
 	
+	public function actionGetContactos(){
+		
+					$this->renderPartial('_contactos');
+	}
 	
 
 
