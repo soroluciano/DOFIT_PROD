@@ -35,15 +35,6 @@ $this->pageTitle=Yii::app()->name;
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="../ProfesorInstitucion/ListadoProfesores">Listado de Profesores</a>
-                </li>
-                <li>
-                    <a href="../institucion/ListadoAlumnosxInstitucion">Listado de Alumnos</a>
-                </li>
-                <li>
-                    <a href="../actividad/CrearActividad">Crear Actividades</a>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido! Rabufeti</a></li>
@@ -114,12 +105,12 @@ $this->pageTitle=Yii::app()->name;
 <?php echo CHtml::endForm(); ?>
 <?php $this->endWidget(); ?>
 
-<script async defer
+<script 
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDGuKpwaC15M3ivyOjCgU6_yvwpI8UWWE&callback=initMap">
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(function(){
         $("#map").show();
         var map;
         map = new google.maps.Map(document.getElementById('map'), {
@@ -127,7 +118,7 @@ $this->pageTitle=Yii::app()->name;
             zoom: 8,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-    })
+    });
 </script>
 
 
@@ -155,7 +146,7 @@ $this->pageTitle=Yii::app()->name;
                             }
                             else {
                                 $("#map").show();
-                                var locations = JSON.parse("[" + response + "]");;
+                                var locations = JSON.parse("[" + response + "]");
                                 var map = new google.maps.Map(document.getElementById('map'), {
                                     zoom: 13,
                                     center: new google.maps.LatLng(locations[0][1], locations[0][2] ),

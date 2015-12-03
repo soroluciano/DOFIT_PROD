@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                  <li><a href="">Bienvenido! <?php echo $ficha->nombre; ?></a></li>
+                  <li><a href="">Bienvenido! <?php echo $ficha->nombre ."&nbsp".$ficha->apellido; ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>

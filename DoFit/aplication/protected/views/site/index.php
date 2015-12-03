@@ -21,7 +21,13 @@
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Bienvenido! <?php echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+                <li><a href="">Bienvenido!  
+				                <?php if(!Yii::app()->user->isGuest){
+	                                    //Es un usuario logueado.
+	                                     $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
+	                                     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+                                     }
+ 							   echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
@@ -36,12 +42,12 @@
 <div class="container marketing">
     <!-- Three columns of text below the carousel -->
     <div class="row">
-        <?php if($Us->id_perfil == 1){ ?>
 		<div class="col-lg-4">
             <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2><a href="../actividad/InscripcionActividad" class="btn btn-primary">Inscribite a una actividad</a></h2>
             <p>Inscribite a las actividades que te ofrece DoFit!</p>
         </div>
+		<?php if($Us->id_perfil == 1){ ?>
 	    <div class="col-lg-4">
         </div>		
         <div class="col-lg-4">
@@ -56,8 +62,6 @@
            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
            <h2><a href="../ProfesorInstitucion/Adhesiongimnasio" class="btn btn-primary">Asociate a una Institución</a></h2>
            <p>Anotate como profesor a una Institución para dictar clases.</a></p>
-        </div>
-		<div class="col-lg-4">
         </div>
         <div class="col-lg-4">
            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">

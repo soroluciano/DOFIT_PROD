@@ -13,7 +13,6 @@ $this->pageTitle=Yii::app()->name;
         info();
     });
 </script>
-
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -28,36 +27,20 @@ $this->pageTitle=Yii::app()->name;
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="../getting-started/">Getting started</a>
-                </li>
-                <li>
-                    <a href="../css/">CSS</a>
-                </li>
-                <li>
-                    <a href="../components/">Components</a>
-                </li>
-                <li>
-                    <a href="../javascript/">JavaScript</a>
-                </li>
-                <li>
-                    <a href="../customize/">Customize</a>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a></li>
-                <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
+                  <li><a href="">Bienvenido! <?php 
+				                  if(!Yii::app()->user->isGuest){
+	                                  //Es un usuario logueado.
+	                                  $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
+	                                 $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+                                    }
+								  echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
     </div>
 </header>
-<?php if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    $Us = Usuario::model()->findByPk(Yii::app()->user->id);
-    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-}
-?>
 <style type="text/css">
     body {
         background: url(../img/futbol.jpg) no-repeat center center fixed;
