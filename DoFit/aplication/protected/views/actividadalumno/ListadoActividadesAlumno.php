@@ -73,7 +73,7 @@ $this->pageTitle=Yii::app()->name;
                                     }
 							    }
 								else{
-						            echo "<h4><b>No estas inscripto en Ninguna Institución</b></h4>.";
+						            echo "<h4><b>No estas inscripto en ninguna institución</b></h4>.";
 								}	
                                 ?>
                             </select>
