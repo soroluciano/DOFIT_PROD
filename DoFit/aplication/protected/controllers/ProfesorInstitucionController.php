@@ -25,7 +25,7 @@ class ProfesorInstitucionController extends Controller
 			echo "<table class='table table-hover'>
                      <thead>
                      <tr>
-				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th></th><th>Google Maps</th></tr></thead>";
+				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th></th></tr></thead>";
 			foreach($ficinstituciones as $ficins){
 				echo "<tbody>
                       <tr>";
@@ -37,7 +37,6 @@ class ProfesorInstitucionController extends Controller
 				echo  "<td id='depto'>" . $ficins->depto . "</td>";
 				echo  "<td id='piso'>" .  $ficins->piso . "</td>";
 				echo  "<td id='ad'><input type='button' class='btn btn-primary' onclick='javascript:Enviarsolicitud($ficins->id_institucion)' value='Enviar solicitud!'></input></td>";
-				echo  "<td id='googlemaps'>". CHtml::link('Google Maps!',array('FichaInstitucion/GoogleMaps','nombre'=>$ficins->nombre,'direccion'=>$ficins->direccion,'localidad'=>$localidad->localidad,'provincia'=>$provincia->provincia)) . "</td>";
 			}
 		}
 	}
