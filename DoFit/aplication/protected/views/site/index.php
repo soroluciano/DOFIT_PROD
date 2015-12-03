@@ -1,10 +1,7 @@
+<html>
+<head>
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
- <?php if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-	      $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	   $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-  }
- ?>
+</head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -22,12 +19,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido!  
-				                <?php if(!Yii::app()->user->isGuest){
-	                                    //Es un usuario logueado.
-	                                     $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	                                     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-                                     }
- 							   echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+	               <?php if(!Yii::app()->user->isGuest){
+	                         //Es un usuario logueado.
+	                         $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
+	                         $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+                                  echo $ficha->nombre."&nbsp".$ficha->apellido; 
+                                }?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
@@ -38,7 +35,7 @@
 <br>
 <br>
 <br>
-
+<body>
 <div class="container marketing">
     <!-- Three columns of text below the carousel -->
     <div class="row">
@@ -48,16 +45,16 @@
             <p>Inscribite a las actividades que te ofrece DoFit!</p>
         </div>	
         <?php if($Us->id_perfil == 1){
-          	echo "<div class='col-lg-4'>
-                  </div>"; 
-		        }?>  
+               echo "<div class='col-lg-4'>
+                </div>"; 
+              }?>  
         <div class="col-lg-4">
             <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2><a href="../actividadalumno/ListadoActividades" class="btn btn-primary">Actividades que estoy inscripto</a></h2>
             <p>Consulta el estado de tus actividades y pagalas con Mercado Pago. </p>
         </div>
    
-		<?php if($Us->id_perfil == 2){ ?>
+        <?php if($Us->id_perfil == 2){ ?>
 	    <div class="col-lg-4">
            <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
            <h2><a href="../ProfesorInstitucion/Adhesiongimnasio" class="btn btn-primary">Asociate a una Institución</a></h2>
@@ -83,55 +80,20 @@
         </div>  		
     </div>
 </div>	
-<?php
-   /* echo "<div class='form-group'>";
-      echo CHtml::beginForm('../actividad/InscripcionActividad','post'); 
-      echo CHtml::submitButton('Inscribite a una Actividad',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-   
-if($Us->id_perfil == 1){   
-   echo "<div class='form-group'>";
-      echo CHtml::beginForm('../actividadalumno/ListadoActividades','post'); 
-      echo CHtml::submitButton('Actividades a la que estoy inscripto',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-} 
- 
-if($Us->id_perfil == 2){
-   echo "<div class='form-group'>";
-      echo CHtml::beginForm('../ProfesorInstitucion/Adhesiongimnasio','post'); 
-      echo CHtml::submitButton('Asociate a un gimnasio como Profesor',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-   
-   echo "<div class='form-group'>";
-      echo CHtml::beginForm('../ProfesorInstitucion/ListadoActividades','post'); 
-      echo CHtml::submitButton('Actividades que dicto',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-}
-   echo "<div class='form-group'>";
-      echo CHtml::beginForm('../perfilSocial/','post'); 
-      echo CHtml::submitButton('Ir a la red social de Do Fit!',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
-   
-      echo "<div class='form-group'>";
-      echo CHtml::beginForm('../muro/','post'); 
-      echo CHtml::submitButton('Muro',array('class'=>'btn btn-primary'));                      
-      echo CHtml::endForm();      
-   echo "</div>";
- 
-?>
-
-  <a href="<?php echo Yii::app()->request->baseUrl; ?>/chat/index" class="btn btn-primary">Chatea con tus compañeros!</a>
-</div>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p>
+            &copy; 2015 DoFit.
+            &middot;
+            <a href="#">Privacidad</a>
+            &middot;
+            <a href="#">Terminos</a>
+        </p>
     </div>
 </footer>
-*/?>
+</html>
