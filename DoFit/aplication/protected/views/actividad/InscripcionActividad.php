@@ -149,8 +149,8 @@ $this->pageTitle=Yii::app()->name;
                                 $("#map").show();
                                 alert(response);
 
-                                var locations = JSON.stringify( "[" + response + "]" );
-                                locations = JSON.parse(locations);
+                                //var locations = JSON.stringify( "[" + response + "]" );
+                                locations = JSON.parse("["+response+"]");
                                 var map = new google.maps.Map(document.getElementById('map'), {
                                     zoom: 13,
                                     center: new google.maps.LatLng(locations[0][1], locations[0][2] ),
