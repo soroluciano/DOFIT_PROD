@@ -189,7 +189,12 @@ class ActividadController extends Controller
                 if($gim->acepta_mp == 'N'){
                     $gim->acepta_mp = 'No';
                 }
-                $locations = $locations . '["Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . ' Acepta Mercado Pago: ' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
+                if($locations == ""){
+                    $locations = $locations . '{"Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . ' Acepta Mercado Pago: ' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . '}';
+                }
+                else{
+                    $locations = $locations . ',{"Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . ' Acepta Mercado Pago: ' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . '}';
+                }
 
             }
             //$locations = $locations . ']';
