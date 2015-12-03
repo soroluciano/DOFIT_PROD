@@ -5,7 +5,9 @@
   }
  ?>
 <html>
+<head>
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
+</head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -62,9 +64,12 @@
                                 <div>
                                     <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control",'onchange'=>"ConsultarInstituciones();")); ?>
                                 </div>
-                            </div>
+							<br/>	
                             <div class="form-group" id="mostrargimnasios">
                             </div>
+							<br/>
+                            <a href="../site/index" class="btn btn-primary">Volver</a>
+							</div>
                         </div>
                     </div>
                 </div>
