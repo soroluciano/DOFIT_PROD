@@ -358,6 +358,7 @@ div.profile_img input{
 }
 div.profile_img:hover input{
 	display:block;
+  position:absolute;
 }
 
 

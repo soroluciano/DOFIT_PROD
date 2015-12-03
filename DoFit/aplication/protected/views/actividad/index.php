@@ -62,8 +62,8 @@ $this->pageTitle=Yii::app()->name;
         </div>
         <div class="col-lg-4">
             <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/3.jpg" alt="Generic placeholder image" width="140" height="140">
-            <h2><a href="../actividad/ListaActividades" class="btn btn-primary">Consultar Actividades</a></h2>
-            <p>Consulta las actividades creadas</p>
+            <h2><a href="../actividad/ModificarActividades" class="btn btn-primary">Modificar Actividades</a></h2>
+            <p>Modificá las actividades creadas</p>
         </div>
     </div>
 </div>

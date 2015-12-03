@@ -203,6 +203,7 @@ class PerfilSocialController extends Controller
 	}
 	
 	public function actionGetContactos(){
+		
 					$this->renderPartial('_contactos');
 	}
 	
