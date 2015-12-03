@@ -29,23 +29,8 @@ class SiteController extends Controller
     {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-        
-        if (!isset(Yii::app()->session['id_usuario'])){
-            if (isset(Yii::app()->session['admin'])) {
-                $this->redirect('indexAdmin');
-            }
-            else{
-                if(isset(Yii::app()->session['id_institucion'])){
-                    $this->redirect('../institucion/home');
-                }
-                else{
-                    $this->redirect('login');
-                }
-            }
-        }
-        else{
+
             $this->render('index');
-        }
 
     }
 
@@ -54,22 +39,8 @@ class SiteController extends Controller
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
         // IF(!isset($_SESSION['admin'])){
-        if (!isset(Yii::app()->session['admin'])){
-            if (isset(Yii::app()->session['id_usuario'])) {
-                $this->redirect('index');
-            }
-            else{
-                if(isset(Yii::app()->session['id_institucion'])){
-                    $this->redirect('../institucion/home');
-                }
-                else{
-                    $this->redirect('loginadmin');
-                }
-            }
-        }
-        else{
             $this->render('indexAdmin');
-        }
+
 
     }
 
@@ -83,19 +54,6 @@ class SiteController extends Controller
         $session = new CHttpSession;
         $errorCode = "";
 
-        if (!isset(Yii::app()->session['admin'])){
-            if (isset(Yii::app()->session['id_usuario'])) {
-                $this->redirect('../site/index');
-            }
-            else{
-                if(isset(Yii::app()->session['id_institucion'])){
-                    $this->redirect('../institucion/home');
-                }
-            }
-        }
-        else{
-            $this->redirect('../site/indexAdmin');
-        }
 
         // validate user input and redirect to the previous page if valid
         if (isset($_POST['LoginFormAdmin'])) {
@@ -116,12 +74,9 @@ class SiteController extends Controller
      */
     public function actionError()
     {
-        if ($error = Yii::app()->errorHandler->error) {
-            if (Yii::app()->request->isAjaxRequest)
-                echo $error['message'];
-            else
+
                 $this->render('error', $error);
-        }
+
     }
 
 
@@ -130,19 +85,6 @@ class SiteController extends Controller
     {
         $model = new LoginFormInstitucion;
 
-        if (!isset(Yii::app()->session['id_institucion'])){
-            if (isset(Yii::app()->session['admin'])) {
-                $this->redirect('indexAdmin');
-            }
-            else{
-                if(isset(Yii::app()->session['id_usuario'])){
-                    $this->redirect('index');
-                }
-            }
-        }
-        else{
-            $this->redirect('../institucion/home');
-        }
 
         // collect user input data
         if (isset($_POST['LoginFormInstitucion'])) {
@@ -173,20 +115,6 @@ class SiteController extends Controller
     public function actionLogin()
     {
         $model = new LoginForm();
-        //
-        if (!isset(Yii::app()->session['id_usuario'])){
-            if (isset(Yii::app()->session['admin'])) {
-                $this->redirect('indexAdmin');
-            }
-            else{
-                if(isset(Yii::app()->session['id_institucion'])){
-                    $this->redirect('../institucion/home');
-                }
-            }
-        }
-        else{
-            $this->redirect('index');
-        }
         //
         if (isset($_POST['email']) && isset($_POST['password']))// && $_POST['email']<>'' && $_POST['password']<>''
         {
