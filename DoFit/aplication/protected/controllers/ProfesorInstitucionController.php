@@ -18,15 +18,16 @@ class ProfesorInstitucionController extends Controller
 		$provincia = Provincia::model()->find('id_provincia=:id_provincia',array(':id_provincia'=>$id_provincia));
 		$criteria = new CDbCriteria;
 		$criteria->select = 't.id_institucion,t.nombre,t.cuit,t.direccion,t.id_localidad,t.telfijo,t.celular,t.depto,t.piso';
-		$criteria->condition = 't.id_localidad = ' . $localidadsel .' AND t.id_institucion NOT IN (SELECT id_institucion FROM profesor_institucion WHERE id_usuario = ' . $id_usuario . ')';
+		$criteria->condition = 't.id_localidad = ' . $localidadsel;
 		$ficinstituciones = FichaInstitucion::model()->findAll($criteria);
 
 		if($ficinstituciones != NULL){
 			echo "<table class='table table-hover'>
                      <thead>
                      <tr>
-				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th></th></tr></thead>";
+				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th>Estado</th></tr></thead>";
 			foreach($ficinstituciones as $ficins){
+				$profins = ProfesorInstitucion::model()->findByAttributes(array('id_usuario'=>$id_usuario,'id_institucion'=>$ficins->id_institucion));
 				echo "<tbody>
                       <tr>";
 				echo  "<td id='nombre'>" . $ficins->nombre . "</td>";
@@ -36,8 +37,21 @@ class ProfesorInstitucionController extends Controller
 				echo  "<td id='celular'>" . $ficins->celular . "</td>";
 				echo  "<td id='depto'>" . $ficins->depto . "</td>";
 				echo  "<td id='piso'>" .  $ficins->piso . "</td>";
-				echo  "<td id='ad'><input type='button' class='btn btn-primary' onclick='javascript:Enviarsolicitud($ficins->id_institucion)' value='Enviar solicitud!'></input></td>";
+				if($profins != NULL){
+					if($profins->id_estado == 0){
+						echo "<td id='solenv'> Solicitud enviada. </td>";
+					}
+					if($profins->id_estado == 1){
+						echo "<td id='solenv'> Estas registrado. </td>";
+					}
+				}
+				else{
+					echo  "<td id='ad'><input type='button' class='btn btn-primary' onclick='javascript:Enviarsolicitud($ficins->id_institucion)' value='Enviar solicitud!'></input></td>";
+				}
 			}
+		}
+		else {
+			echo "errorbusqueda";
 		}
 	}
 

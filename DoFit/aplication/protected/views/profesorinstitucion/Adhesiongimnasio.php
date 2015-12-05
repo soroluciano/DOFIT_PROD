@@ -1,12 +1,12 @@
- <?php if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-	      $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	   $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-  }
- ?>
+<?php if(!Yii::app()->user->isGuest){
+    //Es un usuario logueado.
+    $Us = Usuario::model()->findByPk(Yii::app()->user->id);
+    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+}
+?>
 <html>
 <head>
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
 </head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
@@ -24,7 +24,7 @@
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                  <li><a href="">Bienvenido! <?php echo $ficha->nombre ."&nbsp".$ficha->apellido; ?></a></li>
+                <li><a href="">Bienvenido! <?php echo $ficha->nombre ."&nbsp".$ficha->apellido; ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
@@ -64,12 +64,12 @@
                                 <div>
                                     <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control",'onchange'=>"ConsultarInstituciones();")); ?>
                                 </div>
-							<br/>	
-                            <div class="form-group" id="mostrargimnasios">
+                                <br/>
+                                <div class="form-group" id="mostrargimnasios">
+                                </div>
+                                <br/>
+                                <a href="../site/index" class="btn btn-primary">Volver</a>
                             </div>
-							<br/>
-                            <a href="../site/index" class="btn btn-primary">Volver</a>
-							</div>
                         </div>
                     </div>
                 </div>
@@ -112,11 +112,29 @@
         </div>
     </div>
 
+    <!-- Modal Error busqueda !-->
+    <div class='modal fade' id='errorbusqueda' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                    <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
+                </div>
+                <div class='modal-body'>
+                    No se encontro ninguna institución para la provincia y localidad solicitada.
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal' onclick="Resetarprovloc();">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php
 }
 else
 {
-    $this->render('../site/index');
+    $this->render('../site/login');
 }
 $this->endWidget();?>
 <script type="text/javascript">
@@ -138,7 +156,13 @@ $this->endWidget();?>
             dataType: "html",
             cache : false,
             success : function(response){
-                $('#mostrargimnasios').append(response);
+                if(response == "errorbusqueda"){
+                    $("#errorbusqueda").modal('show');
+
+                }
+                else {
+                    $('#mostrargimnasios').append(response);
+                }
             }
         })
     }
@@ -164,4 +188,11 @@ $this->endWidget();?>
             }
         })
     }
-</script>  
+</script>
+<script type="text/javascript">
+    function Resetarprovloc()
+    {
+        $('#Localidad_id_provincia').val("");
+        $('#Localidad_id_localidad').val("");
+    }
+</script> 

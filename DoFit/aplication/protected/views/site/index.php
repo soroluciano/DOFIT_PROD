@@ -1,6 +1,6 @@
 <html>
 <head>
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
 </head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
