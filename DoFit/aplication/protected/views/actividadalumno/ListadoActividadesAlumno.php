@@ -22,20 +22,20 @@ $this->pageTitle=Yii::app()->name;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
-            <a href="../" class="navbar-brand"></a>
+            <a href="../"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+            </a></img>
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                  <li><a href="">Bienvenido! <?php 
-				                  if(!Yii::app()->user->isGuest){
-	                                  //Es un usuario logueado.
-	                                  $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
-	                                 $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-                                    }
-								  echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+                <li><a href="">Bienvenido! <?php
+                        if(isset(Yii::app()->session['id_usuario'])){
+                            //Es un usuario logueado.
+                            $Us = Usuario::model()->findByPk(Yii::app()->user->id);
+                            $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+                        }
+                        echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
@@ -50,44 +50,71 @@ $this->pageTitle=Yii::app()->name;
         background-size: cover;
     }
 </style>
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
-            </div>
-            <div class="container">
-                <div class="form">
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <br/>
-							<?php if($instituciones != NULL){  ?>
-                            <h5><b>Instituci&oacute;n</b></h5>
-							<select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
-                                <?php
-                                    echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
-                                    foreach($instituciones as $ins){
-                                        echo $ins['nombre'];
-                                        echo "<option  value=".$ins['id_institucion']." name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
-                                    }
-							    }
-								else{
-						            echo "<h4><b>No estas inscripto en ninguna institución</b></h4>.";
-								}	
-                                ?>
-                            </select>
-                            <div class="form-group" id="mostraractividades">
+<?php if(isset(Yii::app()->session['id_usuario'])){?>
+    <?php if($instituciones != NULL){  ?>
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
+                    </div>
+                    <div class="container">
+                        <div class="form">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <br/>
+                                    <h5><b>Instituci&oacute;n</b></h5>
+                                    <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividades();">
+                                        <?php
+                                        echo "<option value='empty' class='form-control'>Seleccione una instituci&oacute;n</option>";
+                                        foreach($instituciones as $ins){
+                                            echo $ins['nombre'];
+                                            echo "<option  value=".$ins['id_institucion']." name=".$ins['id_institucion'].">".$ins['nombre']."</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                    <div class="form-group" id="mostraractividades">
+                                    </div>
+                                    <br/>
+                                    <a href="../site/index" class="btn btn-primary">Volver</a>
+                                </div>
                             </div>
-                            <br/>
-                            <a href="../site/index" class="btn btn-primary">Volver</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    <?php
+    }
+    else{
+    ?>
+        <div class='modal fade' id='inserror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+            <div class='modal-dialog' role='document'>
+                <div class='modal-content'>
+                    <div class='modal-header'>
+                        <button type='button' class='close' data-dismiss='modal' aria-label='Close' onclick="location.href='../site/index'";><span aria-hidden='true'>&times;</span></button>
+                        <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
+                    </div>
+                    <div class='modal-body'>
+                        No estas inscripto en ninguna institución.
+                    </div>
+                    <div class='modal-footer'>
+                        <button type='button' class='btn btn-primary' data-dismiss='modal' onclick="location.href='../site/index'";>Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('#inserror').modal('show');
+        </script>
+    <?php }
+}
+else
+{
+    $this->redirect("../aplication/");
+}
+?>
+?>
 </html>
 <script type="text/javascript">
     $(document).ready(function() {

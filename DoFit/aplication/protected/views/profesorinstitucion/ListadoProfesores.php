@@ -44,11 +44,11 @@ $this->pageTitle=Yii::app()->name;
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido!
                         <?php
-                        if(!Yii::app()->user->isGuest){
+                        if(isset(Yii::app()->session['id_institucion'])){
                             //Es un usuario logueado.
                             $ins = Institucion::model()->findByPk(Yii::app()->user->id);
                             $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
-                            echo $fichains->nombre;
+                            echo $fichains->nombre."&nbsp";
                         } ?></a></li>
                 <li><a href="../site/LoginInstitucion">Salir</a></li>
             </ul>
@@ -103,9 +103,9 @@ $this->pageTitle=Yii::app()->name;
                             <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
                             echo $fechanac;?>
                         </td>
-                        <td><a id="tel" href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                        <td><a id="dir" href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                        <td><a id="act" href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
+                        <td><a id="tel"  href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+                        <td><a id="dir"  href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+                        <td><a id="act"  href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
                         <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
                     </tr>
                     </tbody>
@@ -207,7 +207,7 @@ $this->pageTitle=Yii::app()->name;
             }
         }
         else {
-            $this->redirect(array('/institucion/home'));
+            $this->redirect(array('../aplication/site/LoginInstitucion'));
         }
         ?>
     </div>
