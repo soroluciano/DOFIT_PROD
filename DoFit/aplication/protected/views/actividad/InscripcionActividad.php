@@ -114,8 +114,8 @@ $this->pageTitle=Yii::app()->name;
         $("#map").show();
         var map;
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8,
+            center: {lat: -34.382365, lng: -64.315731},
+            zoom: 5,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
     });
@@ -140,8 +140,6 @@ $this->pageTitle=Yii::app()->name;
                         cache: false,
                         success: function (response) {
                             if (response == "error") {
-                                $("#map").hide();
-                                $("#boton").hide();
                                 $('#myModal').modal('show');
                             }
                             else {
@@ -174,6 +172,7 @@ $this->pageTitle=Yii::app()->name;
                                         return function() {
                                             infowindow.setContent(locations[i][0]);
                                             infowindow.open(map, marker);
+                                            alert("pepe");
                                         }
                                     })(marker, i));
 
