@@ -1,5 +1,4 @@
 <html>
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
 <?php
 /* @var $this SiteController */
 
@@ -23,7 +22,7 @@ $this->pageTitle=Yii::app()->name;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="../" class="navbar-brand"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+            <a href="../"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
             </a></img>
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
@@ -144,7 +143,6 @@ else
 }
 ?>
 </html>
-
 <script type="text/javascript">
     function ConsultarActividadesInscripto()
     {
