@@ -1,4 +1,8 @@
-
+<html>
+  <head>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/jquerydatatable.css"></link>
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/jquerydatatable.js"></script>
+  </head> 
 <?php
 /* @var $this SiteController */
 
@@ -44,11 +48,11 @@ $this->pageTitle=Yii::app()->name;
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Bienvenido!
                         <?php
-                        if(!Yii::app()->user->isGuest){
+                        if(isset(Yii::app()->session['id_institucion'])){
                             //Es un usuario logueado.
                             $ins = Institucion::model()->findByPk(Yii::app()->user->id);
                             $fichains = FichaInstitucion::model()->find('id_institucion=:id_institucion',array(':id_institucion'=>$ins->id_institucion));
-                            echo $fichains->nombre;
+                            echo $fichains->nombre."&nbsp";
                         } ?></a></li>
                 <li><a href="../site/LoginInstitucion">Salir</a></li>
             </ul>
@@ -70,7 +74,8 @@ $this->pageTitle=Yii::app()->name;
             if($profesores !=null){
                 echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
                 echo "<br/>";
-                echo "<table class='table table-hover'>
+				echo "<div class='table-resposive'>";
+                echo "<table  id='lisprofesores' class='display' cellspacing='0' width='100%'>
            <thead>
             <tr>
              <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th><th>Eliminar Profesor</th></tr></thead>";
@@ -103,9 +108,9 @@ $this->pageTitle=Yii::app()->name;
                             <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
                             echo $fechanac;?>
                         </td>
-                        <td><a id="tel" href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                        <td><a id="dir" href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                        <td><a id="act" href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
+                        <td><a id="tel"  href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+                        <td><a id="dir"  href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+                        <td><a id="act"  href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
                         <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
                     </tr>
                     </tbody>
@@ -196,6 +201,7 @@ $this->pageTitle=Yii::app()->name;
                 </div>";
                 }
                 echo "</table>";
+				echo "</div>";
             }
             else
             {
@@ -207,12 +213,41 @@ $this->pageTitle=Yii::app()->name;
             }
         }
         else {
-            $this->redirect(array('/institucion/home'));
+            $this->redirect(array('../aplication/site/LoginInstitucion'));
         }
         ?>
     </div>
 </div>
-
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#lisprofesores').DataTable( {
+		"language" : {
+                      "sProcessing":     "Procesando...",
+	                  "sLengthMenu":     "Mostrar _MENU_ registros",
+	                  "sZeroRecords":    "No se encontraron resultados",
+	                  "sEmptyTable":     "Ningún dato disponible en esta tabla",
+	                  "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+	                  "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+	                  "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+	                  "sInfoPostFix":    "",
+	                  "sSearch":         "Buscar:",
+	                  "sUrl":            "",
+	                  "sInfoThousands":  ",",
+	                  "sLoadingRecords": "Cargando...",
+	                 "oPaginate": {
+		                           "sFirst":    "Primero",
+		                           "sLast":     "Ultimo",
+		                           "sNext":     "Siguiente",
+		                           "sPrevious": "Anterior"
+	                              },
+	                "oAria": {
+		                      "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+		                      "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+	                    } 
+		        }	
+    } );
+ } );
+</script>
 <script type="text/javascript">
     function Borrarprofesor(idprofesor)
     {
@@ -220,7 +255,7 @@ $this->pageTitle=Yii::app()->name;
         var data = {"idprofesor":idprofesor};
         $.ajax({
             url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
-            type: "POST",
+            type: "POST", 
             dataType : "html",
             data : data,
             cache: false,
@@ -297,3 +332,4 @@ $this->pageTitle=Yii::app()->name;
         });
     }
 </script>			 
+</html>
