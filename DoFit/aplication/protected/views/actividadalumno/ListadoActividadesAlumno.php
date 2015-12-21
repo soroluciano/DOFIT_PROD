@@ -1,5 +1,4 @@
 <html>
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
 <?php
 /* @var $this SiteController */
 
@@ -34,8 +33,8 @@ $this->pageTitle=Yii::app()->name;
                             //Es un usuario logueado.
                             $Us = Usuario::model()->findByPk(Yii::app()->user->id);
                             $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-                        }
-                        echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+                            echo $ficha->nombre."&nbsp".$ficha->apellido; 
+					    } ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>

@@ -4,7 +4,9 @@ body{
 
 }
 
-
+.panel{
+  margin:0 !important;
+}
 .panel-shadow {
     box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
 }
@@ -233,10 +235,40 @@ border-left-color: #2dcb73;
 margin-right: 7px;
 }
 
+@media screen and (max-width: 1600px) {
+.contenedor-espaciado{
+  margin-bottom: 30px;
+  width:51%;
+  margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
 .contenedor-espaciado{
   margin-bottom: 10px;
-  
+  width:70%;
+  }
 }
+
+
+@media screen and (max-width: 700px) {
+.contenedor-espaciado{
+  margin-bottom: 10px;
+  width:80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+.contenedor-espaciado{
+  margin-bottom: 10px;
+  width:80%;
+  }
+}
+
+
+
+
+
 
 .btn-comment{
   border: medium none;
@@ -275,9 +307,13 @@ margin-right: 7px;
 .edicion{
   padding-right: 5px;
   padding-left: 10px;
-  width: 72%;
+  width: 100%;
   text-align: right;
   height: 30px !important;
+  position: absolute;
+  z-index: 1;
+  right: 22px;
+  top: 25px;
 }
 
 .btn-edit-post{
@@ -345,10 +381,20 @@ margin-right: 7px;
   height: auto;
   display: inherit;
   text-align: left;
-   word-break: break-all
+  word-break: break-all
 }
 
 
 .display-block{
   display: block;
+}
+
+.modal .fade{
+  width: 0 !important;
+  height: 0 !important;
+  
+}
+
+.espacio-paneles{
+  margin-bottom: 10px;
 }

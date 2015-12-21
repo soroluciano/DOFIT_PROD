@@ -342,8 +342,25 @@ div.profile_img:hover input{
 	display:block;
 /*  position:absolute;*/
   margin-bottom: 130px;
-  margin-left: 120px;
-  float: left;
+  margin-left: 10px;
+/*  float: left;*/
+}
+
+
+div.cabecera-perfil{
+    background-color:#1A9125;
+    color:white;
+    width:280px !important;
+    margin-left:1px;
+    height: auto;
+    text-align: left;
+}
+div.profile_img {
+    padding-bottom: 3%;
+    padding-top: 3%;
+    width:inherit;
+    height: inherit;
+        
 }
 
 
