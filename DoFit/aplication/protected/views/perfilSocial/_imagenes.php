@@ -1,66 +1,15 @@
-<?php
-      $posicion = 0;
 
-      
-      if(isset($perfilSocial->foto1)){
-          $posicion++;
-          $posArray[$posicion] = 1;
-      }
-      if(isset($perfilSocial->foto2)){
-          $posicion++;
-          $posArray[$posicion] = 2;
-      }
-      if(isset($perfilSocial->foto3)){
-          $posicion++;
-          $posArray[$posicion] = 3;
-      }
-      if(isset($perfilSocial->foto4)){
-          $posicion++;
-          $posArray[$posicion] = 4;
-      }
-      if(isset($perfilSocial->foto5)){
-          $posicion++;
-          $posArray[$posicion] = 5;
-      }
-      if(isset($perfilSocial->foto6)){
-          $posicion++;
-          $posArray[$posicion] = 6;
-      }
-												
-				
-      if($posicion==0){
-                  ?>
-                  
-                  <div id="im1" class="osvaldito">			
-                    <img src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" alt="" class="img-rounded img1" />
-                  </div>									
-            
-            <?php
-                  }
-            
-            for($i=1;$i<=$posicion;$i++){
-                    $property = 'foto'.$posArray[$i];
-                  
-                  ?>
-           
-                  <div id="im<?php echo $i; ?>" class="osvaldito show-image">
-                              <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" class="img-rounded img<?php echo $i; ?>" />
-                              <a href="#myDivId<?php echo $i;?>" class="btn btn-lg btn-default ver" id="fancyBoxLink<?php echo $i;?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-                              <button class="btn btn-lg btn-default delete" onclick="deleteImagen(<?php echo $posArray[$i];?>);"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-
-                              <div style="display:none">
-                                          <div id="myDivId<?php echo $i;?>">
-                                          <img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfilSocial->$property ?>" alt="" width="500px" heigh="500px" />
-                                          </div>
-                              </div>
-                  </div>
-                  <?php $j = $i+1;
-                      if($posicion == 1){
-                  ?>
-                  <div id="im"<?php echo $j; ?>" class="osvaldito">			
-                    <img src="<?php echo Yii::app()->request->baseUrl;echo "/images/new_pic.png"; ?>" alt="" class="img-rounded img<?php echo $j; ?>" />
-                  </div>		
-                  <?php
-                  }				
-      }
-?>
+<h1>hols</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://2.bp.blogspot.com/-H6MAoWN-UIE/TuRwLbHRSWI/AAAAAAAABBk/89iiEulVsyg/s400/Free%2BNature%2BPhoto.jpg" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://www.virginia.org/uploadedImages/virginiaorg/Images/OrgImages/H/HamptonConventionVisitorBureau/Grandview_Nature_Preserve.jpg?width=300&height=200&scale=upscalecanvas" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://th03.deviantart.net/fs70/200H/f/2010/256/0/9/painting_of_nature_by_dhikagraph-d2ynalq.jpg" /></div>
+    	<div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://www.virginia.org/uploadedImages/virginiaorg/Images/OrgImages/H/HamptonConventionVisitorBureau/Grandview_Nature_Preserve.jpg?width=300&height=200&scale=upscalecanvas" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://th03.deviantart.net/fs70/200H/f/2010/256/0/9/painting_of_nature_by_dhikagraph-d2ynalq.jpg" /></div>
+	    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://2.bp.blogspot.com/-H6MAoWN-UIE/TuRwLbHRSWI/AAAAAAAABBk/89iiEulVsyg/s400/Free%2BNature%2BPhoto.jpg" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg" /></div>
+    </div>
+</div>

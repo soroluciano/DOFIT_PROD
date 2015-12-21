@@ -16,7 +16,7 @@
 			echo "
 			<li class='comment'>
 				<a class='pull-left' href='#'>
-				      <img src='".Yii::app()->request->baseUrl."/uploads/".$respuesta['foto1']."' class='avatar' alt='avatar'>
+				      <img src='".Yii::app()->request->baseUrl."/uploads/".$respuesta['fotoPerfil']."' class='avatar' alt='avatar'>
 				</a>
 				<div class='comment-body'>
 					<div class='comment-heading'>

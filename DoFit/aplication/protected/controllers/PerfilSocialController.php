@@ -138,28 +138,23 @@ class PerfilSocialController extends Controller
 	}
 
 	public function actionSaveImagen(){
-		$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-		$fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$localidad = Localidad::model()->find('id_localidad=:id_localidad',array(':id_localidad'=>$fichaUsuario->id_localidad));
-		$perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-		$nombreImagen=$_POST['data'];
-		
-		$isnull=false;
-		$foto;
-		$fotoSave;
-		for($i=1;$i<=6;$i++){
-			$foto = "foto".$i;
-			$nombre =	$perfilSocial->$foto;
-			if($nombre==null && $isnull != true){
-				$fotoSave = "foto".$i;
-				$isnull = true;
-			}
-		}
-		
-		$perfilSocial->$fotoSave = $nombreImagen;		
-		$perfilSocial->update();
-		echo "grabado";
-
+      //modificar y poner la clase imagen
+		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+        $nombreImagen = $_POST['data'];
+        if($nombreImagen != null){
+          $imagen = new Imagen();
+          $imagen->id_usuario=$usuario->id_usuario;
+          $imagen->nombre=$nombreImagen;
+          $imagen->fhcreacion= new CDbExpression('NOW()');
+		  $imagen->cusuario="pepe";
+          if($imagen->save()){
+            echo "grabado";
+          }else{
+            echo "no se ha podido grabar_1";
+          }
+        }else{
+          echo "no se ha podido grabar_2";
+        }
 	}
 
 	
@@ -213,6 +208,10 @@ class PerfilSocialController extends Controller
       $this->render('_amigo',array('id'=>$id));
     }
     
+    public function actionLogout(){
+            Yii::app()->user->logout();
+            $this->redirect(Yii::app()->homeUrl);
+    }
 
 
 }

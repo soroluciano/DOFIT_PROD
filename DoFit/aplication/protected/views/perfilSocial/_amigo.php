@@ -76,21 +76,7 @@ if(!Yii::app()->user->isGuest){
 	if(!Yii::app()->user->isGuest){
 	    $fichaUsuario = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$id));
 	} 
-	//$nombre = $fichaUsuario->nombre;
-	//$apellido = $fichaUsuario->apellido;
-/*	$dni = $fichaUsuario->dni;
-	$sexo = $fichaUsuario->sexo;
-	$fechanac = $fichaUsuario->fechanac;
-	$telfijo = $fichaUsuario->telfijo;
-	$celular = $fichaUsuario->celular;
-	$contactoEmergencia = $fichaUsuario->conemer;
-	$telefonoEmergencia = $fichaUsuario->telemer;
-	$localidad = $localidad->localidad;
-	//falta la provincia
-	$direccion = $fichaUsuario->direccion;
-	$piso = $fichaUsuario->piso;
-	$depto = $fichaUsuario->depto;
- */
+
  ?>
 
 

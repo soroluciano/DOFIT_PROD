@@ -68,7 +68,7 @@
   <?php } ?>
 	    <div class="col-lg-4">
           <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/img/1.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2><a href="../perfilSocial/" class="btn btn-primary">Red Social de DoFit.</a></h2>
+          <h2><a href="../red/" class="btn btn-primary">Red Social de DoFit.</a></h2>
           <p>Ir a la red social de DoFit!</a></p>
         </div>
         <div class="col-lg-4">

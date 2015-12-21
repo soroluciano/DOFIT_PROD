@@ -1,12 +1,18 @@
 
-
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/red.css" rel="stylesheet">
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/contactos.css" rel="stylesheet">
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/muro.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <?php
-$baseUrl = Yii::app()->baseUrl;
+//archivos javascript
 
-$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-	
+$baseUrl = Yii::app()->baseUrl; 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/js/perfil.js');
+$cs->registerScriptFile($baseUrl.'/js/muroProfesor.js');
+$cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
+
 $canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 if($canal==null){
 	$canal = new Canal();
@@ -16,9 +22,6 @@ if($canal==null){
 	$canal->save();
 }
 
-
-$cs = Yii::app()->getClientScript();
-$cs->registerScriptFile($baseUrl.'/js/muroprofesor.js');	
 
 function getActividades($id){
 				
@@ -67,36 +70,39 @@ function getActividades($id){
 
 ?>
 
-<?php if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    //$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-
-	//$actividades = Yii::app()->db->createCommand("select distinct(act.id_actividad) from actividad act left join usuario us on act.id_usuario=us.id_usuario where us=".$usuario->id_usuario."")->queryAll();
-
-    //$actividad = Actividad::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-	
-}
-?>
 
 
-<script src="http://js.pusherapp.com/1.9/pusher.min.js"></script>
 
-<?php
-	
-	$this->pageTitle=Yii::app()->name;
-	
-	if(!Yii::app()->user->isGuest){
+<?php 
+
+if(!Yii::app()->user->isGuest){
 	//Es un usuario logueado.
-	$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-	$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-	}
+     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+     $perfil = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+     $nombre = $ficha->nombre;
+     $apellido = $ficha->apellido;
+  }
 ?>
 
-  
 
+<?php $this->renderPartial('_menu');?>
 
-	<h1>Soy profesor</h1>
-		<div class="col-md-8 contenedor-espaciado">
+<div class="container marketing">
+
+    <div class="row">
+		<?php $this->renderPartial('_cabecera',array('perfil'=>$perfil,'nombre'=>$nombre,'apellido'=>$apellido)); ?>
+	</div>
+    
+    <div class="row">
+        <div class="newposts col-lg-10"><button class="btn btn-info"><?php echo "10 "; ?> nuevas actualizaciones</button></div>
+    </div>
+    
+    <input type="hidden" id="canal" value="<?php echo $canal->nombre;?>"/>
+    <input type="hidden" id="id_canal" value="<?php echo $canal->id_canal;?>"/>
+    <input type="hidden" id="id_actividad_selected" value=""/>
+    
+	<div id="respuesta_ajax">
+        <div class=" col-lg-8 col-md-8 col-sm-5 contenedor-espaciado row">
 			<div class="widget-area no-padding blank">
 				<div class="status-upload">
 					<form action="" method="post">
@@ -117,13 +123,14 @@ function getActividades($id){
 			</div><!-- Widget Area -->
 		</div>
 	</div>
+    
     <div id="comentarios" class="row">
-		<?php $this->renderPartial('_posts',array('resultSet'=>$resultSet)); ?>
+		 <script> getMensajesFromBase();</script>
     </div>
-<!--	<input type="hidden" id="canal" value="<?php /*echo $canal->nombre;*/?>"/>
-	<input type="hidden" id="id_canal" value="<?php/* echo $canal->id_canal;*/?>"/>
-	<input type="hidden" id="id_actividad_selected" value=""/>-->
+       
+</div>
 
 
+</body>
 
-
+</html>

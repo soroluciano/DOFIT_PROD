@@ -37,7 +37,6 @@
   /*Traer las respuestas/comentarios por el id del post*/
 
   function getComentsByPost(idpost){  // trae los comentarios por id de post
-    debugger;
     var position = $("#position_post_"+idpost).val();
     $.ajax({
       url:  baseurl+'/muro/getComentarios',
@@ -107,7 +106,8 @@
       //}else{
       //  getMensajesConDelay();
       //}
-
+    
+      
 
     $('form').submit(function(){
       $.ajax({
@@ -152,6 +152,21 @@
     });
   }
   
+    function getMensajesFromBase2(){
+    $.ajax({
+      url: baseurl+"/muro/mensajes",
+      type: 'POST',
+      data: {},
+      success:function(response){
+        $('#respuesta_ajax').html(response);
+      },
+      error: function(e){
+        $('#logger').html(e.responseText);
+      }
+    });
+  }
+  
+  
   
   function editComment(idcoment) //funcion de la seleccion de edicion de comentario
   {
@@ -160,7 +175,15 @@
     $("#post-description-"+idcoment+" .details").css("display","none");
     $("#post-description-"+idcoment+" .btn-ed-fin").css("display","block");
     $("#post-description-"+idcoment+" .btn-cancel-comment").css("display","block");
-    $("#post-description-"+idcoment+" .div-ed-comment").css("display","block");
+    $("#post-description-"+idcoment+" .div-ed-comment").css("height","100px"); 
+    $("#post-description-"+idcoment+" .div-ed-comment").css("visibility","visible");
+
+    $("#post-description-"+idcoment+" div.div-btns-comment").show();
+    $("#post-description-"+idcoment+" post-description").show();
+
+
+    
+    
     $valor = ($("#post-description-"+idcoment+" .details").html());
     
     //$res = getHtmlDecoded($valor);
@@ -175,7 +198,8 @@
     $("#post-description-"+idcoment+" .details").css("display","block");
     $("#post-description-"+idcoment+" .btn-ed-fin").css("display","none");
     $("#post-description-"+idcoment+" .btn-cancel-comment").css("display","none");
-    $("#post-description-"+idcoment+" .div-ed-comment").css("display","none");
+    $("#post-description-"+idcoment+" .div-ed-comment").css("visibility","hidden");
+     $("#post-description-"+idcoment+" .div-ed-comment").css("height","1");
   }
   
   function updateComent(idposteo)
@@ -199,7 +223,9 @@
   }
   
   function  indicateIdPost(args) {
+    debugger;
     $postValue.valor=args;
+    appendModal();
   }
   
   
@@ -215,7 +241,11 @@
           alert( "Data deleted: " + response );
           window.$isNewMsg.value='true';
           pushearMensaje('deleted');
-      },
+        },
+        success:function(e){
+          deleteModal();
+          getMensajesFromBase();
+        },
         error: function(e){
           $('#logger').html(e.responseText);
         }
@@ -228,6 +258,64 @@
        setInterval("getMensajesFromBase()",50000);
    }
    
+   
+   function appendModal(){
+        var modal;
+        modal ="<div class='modal fade in' id='popborrar' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' data-backdrop='static' data-keyboard='true'>";
+        modal+="<div class='modal-dialog' role='document'>"
+        modal+="<div class='modal-content'>"
+        modal+="<div class='modal-header'>"
+        modal+="<button type='button' class='close' data-dismiss='modal' aria-label='Close' onclick=''><span aria-hidden='true'>&times;</span></button>"
+		modal+="<h4 class='modal-title' id='exampleModalLabel'><b>Eliminar publicaci&oacute;n</b></h4></div>";
+		modal+="<div class='modal-body'>";
+        modal+="<p>¿Seguro que quieres eliminar esto?</p>";
+        modal+="<form name='formulario' id='formulario' class='formulario'>";
+        modal+="<div class='modal-footer'>";
+        modal+="<button type='button'  class='btn btn-default' data-dismiss='modal' onclick='deleteModal();'>Cerrar</button>";
+        modal+="<button type='button'  onclick='deleteComent();' class='btn btn-success green' data-dismiss='modal'>Eliminar publicaci&oacute;n</button>";	
+        modal+="</div>";
+        modal+="</form>";
+        modal+="</div>";
+        modal+="</div>";
+        modal+="</div>";
+        modal+="</div>";
+        $("#coment_n_"+ $postValue.valor).append(modal);
+   }
+   
+   function deleteModal(){
+     $("#popborrar").remove();
+   }
+   
+  function ocultarEdicion(){
+    debugger;
+    $(".div-ed-comment").hide();
+    $(".edit-details-textarea").hide();
+    $(".btn-ed-fin").hide();
+    $(".btn-cancel-comment").hide();
+    $(".div-ed-comment").css("visibility","hidden");
+    $("div.div-btns-comment").hide();
+    $("post-description").hide();
+    $(".div-ed-comment").removeAttr("height");
+
+    
+    
+  }
+  
+    function ocultarEdicionInicial(){
+    debugger;
+    $(".div-ed-comment").hide();
+    $(".edit-details-textarea").hide();
+    $(".btn-ed-fin").hide();
+    $(".btn-cancel-comment").hide();
+    $(".div-ed-comment").css("visibility","hidden");
+    $("div.div-btns-comment").hide();
+    $("post-description").hide();
+    $(".div-ed-comment").css("height","1");
+
+    
+    
+  }
+  
    
     //function rechargeTimePusher(){
     //    debugger;
