@@ -26,6 +26,6 @@
 						<span class="enseno">Profesor en <?php // echo "10";?> deportes</span>		
 						<span class="hago">Alumno en <?php // echo "12";?> deportes</span>
 				</div>-->
-		</div>		
+		</div>	<!-- fin cabecera perfil -->	
        </div>
        <div>

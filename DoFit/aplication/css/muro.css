@@ -6,10 +6,11 @@ body{
 
 .panel{
   margin:0 !important;
+  margin-bottom: 10px !important;
 }
-.panel-shadow {
-    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
-}
+/*.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 3px;
+}*/
 .panel-white {
   border: 1px solid #dddddd;
 }
@@ -150,7 +151,7 @@ padding: 0;
   -o-border-radius: 4px;
   border-radius: 4px;
   float: left;
-  width: 100%;
+  width: 54%;
 }
 .status-upload form {
   float: left;
@@ -159,11 +160,11 @@ padding: 0;
 .status-upload form textarea {
   background: none repeat scroll 0 0 #fff;
   border: medium none;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  -ms-border-radius: 4px 4px 0 0;
-  -o-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0 !important;
+  -moz-border-radius: 4px 4px 0 0 !important;
+  -ms-border-radius: 4px 4px 0 0 !important;
+  -o-border-radius: 4px 4px 0 0 !important;
+  border-radius: 4px 4px 0 0 !important;
   color: #777777;
   float: left;
   font-family: Lato;
@@ -238,8 +239,8 @@ margin-right: 7px;
 @media screen and (max-width: 1600px) {
 .contenedor-espaciado{
   margin-bottom: 30px;
-  width:51%;
-  margin-left: 30px;
+  width:100%;
+  margin-left: 2px;
   }
 }
 
