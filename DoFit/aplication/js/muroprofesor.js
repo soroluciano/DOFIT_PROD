@@ -142,7 +142,7 @@
     $.ajax({
       url: baseurl+"/muro/mensajes",
       type: 'POST',
-      data: {},
+      data: {},//agregar cantidad
       success:function(response){
         $('#comentarios').html(response);
       },

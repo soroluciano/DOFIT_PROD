@@ -21,7 +21,7 @@ div.cabecera-perfil{
 
 
 @media screen and (max-width: 1600px) {
-.cabecera-perfil{ width:50%;padding-bottom: 10px;}
+.cabecera-perfil{ width:90%;padding-bottom: 10px;}
 }
 
 @media screen and (max-width: 800px) {
@@ -136,7 +136,9 @@ span.enseno{
 
 div.newposts{
     padding: 7px;
-    text-align: center;
+    z-index: 1;
+    left: 450px;
+    top: 10px;
 }
 
 #popborrar{    
@@ -164,4 +166,21 @@ div.newposts{
 .btn-comment{
     display:inherit !important;
     float: right;
+}
+
+.propaganda-muro-1{
+    width:410px;
+    height: 250px;
+    margin-left: 18px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+    float:left;
+    background-color: white;
+    display: block;
+/*    z-index: 1;*/
+    left: 790px;
+    top: 2%;
+}
+.size-panel{
+    width: 961px;
+    padding-left: 19px;
 }

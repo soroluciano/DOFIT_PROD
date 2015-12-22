@@ -5,7 +5,7 @@
       foreach($resultSet as $row) {
           echo "
 		  <script>ocultarEdicionInicial();</script>
-      <div class='col-lg-10 espacio-paneles'>
+      <div class='espacio-paneles size-panel'>
 	  <!--<div class='col-lg-2 col-md-2 col-sm-2'>
 		  
 	  </div>-->

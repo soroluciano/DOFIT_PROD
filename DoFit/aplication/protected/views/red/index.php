@@ -104,7 +104,7 @@ if(!Yii::app()->user->isGuest){
 	<div id="respuesta_ajax">
         <div class=" col-lg-8 col-md-8 col-sm-5 contenedor-espaciado row">
 			<div class="widget-area no-padding blank">
-				<div class="status-upload">
+				<div class="status-upload panel-shadow">
 					<form action="" method="post">
 						<textarea placeholder="¿Qué estas pensando?" id="input_mensaje"></textarea>
 						<ul>					
@@ -120,8 +120,10 @@ if(!Yii::app()->user->isGuest){
 					</form>
 					
 				</div><!-- Status Upload  -->
+				<div class='propaganda-muro-1'>Publicite aqui</div>
 			</div><!-- Widget Area -->
-		</div>
+
+		</div><!--fin contenedor espaciado -->
 	</div>
     
     <div id="comentarios" class="row">
