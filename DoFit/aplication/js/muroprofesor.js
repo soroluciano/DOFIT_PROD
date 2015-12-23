@@ -90,6 +90,7 @@
   $(function(){
       window.$postValue={}
       window.$isNewMsg={}
+      window.$sizeMsgs={} 
       var pusher = new Pusher('c48d59c4cb61c7183954');    
       var canalnom = $('#canal').val();
       var canal  = pusher.subscribe(canalnom);
@@ -142,9 +143,9 @@
     $.ajax({
       url: baseurl+"/muro/mensajes",
       type: 'POST',
-      data: {},//agregar cantidad
+      //data: 'size='+size,
       success:function(response){
-        $('#comentarios').html(response);
+          $('#comentarios').html(response);
       },
       error: function(e){
         $('#logger').html(e.responseText);
@@ -156,7 +157,7 @@
     $.ajax({
       url: baseurl+"/muro/mensajes",
       type: 'POST',
-      data: {},
+      data: 'size='+size,
       success:function(response){
         $('#respuesta_ajax').html(response);
       },
@@ -166,6 +167,11 @@
     });
   }
   
+  function getMoreMsgs(){//utilizar solo en el boton de + posts
+    var actualsize = $sizeMsgs.value;
+    actualsize+=4;
+    getMensajesFromBase2(actualsize);
+  }
   
   
   function editComment(idcoment) //funcion de la seleccion de edicion de comentario
@@ -316,6 +322,13 @@
     
   }
   
+  
+  
+  
+  
+
+  
+ 
    
     //function rechargeTimePusher(){
     //    debugger;

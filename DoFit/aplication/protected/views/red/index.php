@@ -10,7 +10,7 @@
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/perfil.js');
-$cs->registerScriptFile($baseUrl.'/js/muroProfesor.js');
+$cs->registerScriptFile($baseUrl.'/js/muroprofesor.js');
 $cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
 
 $canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
@@ -65,13 +65,7 @@ function getActividades($id){
 						
 }
 
-
-
-
 ?>
-
-
-
 
 <?php 
 
@@ -127,7 +121,7 @@ if(!Yii::app()->user->isGuest){
 	</div>
     
     <div id="comentarios" class="row">
-		 <script> getMensajesFromBase();</script>
+		 <script> getMensajesFromBase(4);</script>
     </div>
        
 </div>
