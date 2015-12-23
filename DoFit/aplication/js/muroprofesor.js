@@ -100,6 +100,7 @@
               debugger;
                if(window.$isNewMsg.value =='true') {
                   getMensajesFromBase();
+                  getQuantityPosts();
                }else{
                   getMensajesConDelay();
                }
@@ -153,7 +154,7 @@
     });
   }
   
-    function getMensajesFromBase2(){
+    function getMensajesFromBase2(size){
     $.ajax({
       url: baseurl+"/muro/mensajes",
       type: 'POST',
@@ -168,6 +169,7 @@
   }
   
   function getMoreMsgs(){//utilizar solo en el boton de + posts
+    debugger;
     var actualsize = $sizeMsgs.value;
     actualsize+=4;
     getMensajesFromBase2(actualsize);
@@ -293,7 +295,6 @@
    }
    
   function ocultarEdicion(){
-    debugger;
     $(".div-ed-comment").hide();
     $(".edit-details-textarea").hide();
     $(".btn-ed-fin").hide();
@@ -308,17 +309,33 @@
   }
   
     function ocultarEdicionInicial(){
-    debugger;
-    $(".div-ed-comment").hide();
-    $(".edit-details-textarea").hide();
-    $(".btn-ed-fin").hide();
-    $(".btn-cancel-comment").hide();
-    $(".div-ed-comment").css("visibility","hidden");
-    $("div.div-btns-comment").hide();
-    $("post-description").hide();
-    $(".div-ed-comment").css("height","1");
+      $(".div-ed-comment").hide();
+      $(".edit-details-textarea").hide();
+      $(".btn-ed-fin").hide();
+      $(".btn-cancel-comment").hide();
+      $(".div-ed-comment").css("visibility","hidden");
+      $("div.div-btns-comment").hide();
+      $("post-description").hide();
+      $(".div-ed-comment").css("height","1");
 
     
+    
+  }
+  
+  function getQuantityPosts(){
+    debugger;
+     $.ajax({
+        url:  baseurl+'/muro/quantityOfPosts',
+        type: 'POST',
+        data: {},
+        success:function(response){
+          $sizeMsgs.value=response;
+          alert($sizeMsgs.value);
+        },
+        error: function(e){
+          $('#logger').html(e.responseText);
+        }
+     });
     
   }
   

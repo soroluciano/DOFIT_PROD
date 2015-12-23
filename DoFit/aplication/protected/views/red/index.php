@@ -88,7 +88,7 @@ if(!Yii::app()->user->isGuest){
 	</div>
     
     <div class="row">
-        <div class="newposts col-lg-10"><button class="btn btn-info"><?php echo "10 "; ?> nuevas actualizaciones</button></div>
+        <div class="newposts col-lg-10"><button class="btn btn-info" onclick="getMensajesFromBase();"><?php echo "10 "; ?> nuevas actualizaciones</button></div>
     </div>
     
     <input type="hidden" id="canal" value="<?php echo $canal->nombre;?>"/>
@@ -102,9 +102,9 @@ if(!Yii::app()->user->isGuest){
 					<form action="" method="post">
 						<textarea placeholder="¿Qué estas pensando?" id="input_mensaje"></textarea>
 						<ul>					
-<!--					<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+<!--					<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>-->
 						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
-						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>-->
+		<!--				<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>-->
 						<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
 						</ul>
 
@@ -121,9 +121,9 @@ if(!Yii::app()->user->isGuest){
 	</div>
     
     <div id="comentarios" class="row">
-		 <script> getMensajesFromBase(4);</script>
+		 <script> getMensajesFromBase();</script>
     </div>
-       
+    <div id="boton_mas_comentarios"><input type='button' class='btn btn-custom' value='Cargar mas posts' onclick="getMoreMsgs()"/></div>   
 </div>
 
 
