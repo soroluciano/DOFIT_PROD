@@ -1,8 +1,5 @@
 
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet">
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/muro.css" rel="stylesheet">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
 
 <?php
 $baseUrl = Yii::app()->baseUrl;
@@ -94,16 +91,10 @@ function getActividades($id){
 	$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 	}
 ?>
-  
-<?php $this->renderPartial('_menu'); ?>
-  
-<body>
-  <div id="container" class="container">
-    <div>
-      <!--  <h1>Soy Profesor</h1>-->
-    </div>
 
-	<div class="row">
+  
+
+
 	<h1>Soy profesor</h1>
 		<div class="col-md-8 contenedor-espaciado">
 			<div class="widget-area no-padding blank">
@@ -129,10 +120,10 @@ function getActividades($id){
     <div id="comentarios" class="row">
 		<?php $this->renderPartial('_posts',array('resultSet'=>$resultSet)); ?>
     </div>
-	<input type="hidden" id="canal" value="<?php echo $canal->nombre;?>"/>
-	<input type="hidden" id="id_canal" value="<?php echo $canal->id_canal;?>"/>
-	<input type="hidden" id="id_actividad_selected" value=""/>
-</div>   
-</body>
+<!--	<input type="hidden" id="canal" value="<?php /*echo $canal->nombre;*/?>"/>
+	<input type="hidden" id="id_canal" value="<?php/* echo $canal->id_canal;*/?>"/>
+	<input type="hidden" id="id_actividad_selected" value=""/>-->
+
+
 
 

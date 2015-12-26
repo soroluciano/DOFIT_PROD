@@ -26,8 +26,8 @@ class MuroController extends Controller
 		public function actionIndex()// Action para llamar al index dependiendo el tipo de usuario
 		{	
 				$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-				$resultSetProf = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =".$usuario->id_usuario." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
-				$resultSetAl = Yii::app()->db->createCommand("select pm.id_posteo,pm.posteo,ps.foto1,fu.nombre,fu.apellido FROM perfil_muro_profesor pm,actividad_alumno aa, actividad a,ficha_usuario fu,perfil_social ps where pm.id_actividad=aa.id_actividad and aa.id_actividad = a.id_actividad and a.id_usuario=ps.id_usuario and aa.id_usuario=".$usuario->id_usuario )->queryAll();
+				$resultSetProf = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.fotoPerfil,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =".$usuario->id_usuario." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
+				$resultSetAl = Yii::app()->db->createCommand("select pm.id_posteo,pm.posteo,ps.fotoPerfil,fu.nombre,fu.apellido FROM perfil_muro_profesor pm,actividad_alumno aa, actividad a,ficha_usuario fu,perfil_social ps where pm.id_actividad=aa.id_actividad and aa.id_actividad = a.id_actividad and a.id_usuario=ps.id_usuario and aa.id_usuario=".$usuario->id_usuario )->queryAll();
 				
 				if($usuario->id_perfil == 1){
 					$this->render('indexAlumno',array('resultSet'=>$resultSetAl));
@@ -50,9 +50,26 @@ class MuroController extends Controller
 		public function actionMensajes() // action que trae los posteos
 		{
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-			$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.foto1,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc")->queryAll();
+			$size = null;
+			
+			if(isset($_POST['size'])){
+				 $size = $_POST['size'];	
+			}
+			if($size!=null){
+				$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.fotoPerfil,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc limit ".$size)->queryAll();			
+			}else{
+				$resultSet = Yii::app()->db->createCommand("select pmp.id_posteo,pmp.posteo,ps.fotoPerfil,fu.nombre,fu.apellido from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod desc limit 4")->queryAll();
+			}
+			
 			$this->renderPartial('_posts',array('resultSet'=>$resultSet));
 		}
+		
+		public function actionQuantityOfPosts(){
+			  $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+				$resultSet = Yii::app()->db->createCommand("select count(pmp.id_posteo) from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =". $usuario->id_usuario ." order by pmp.fhcreacion desc,pmp.fhultmod")->queryAll();			
+				echo $resultSet;
+		}
+		
 	
 		public function actionInsertarComentarioProfesor() //action que permite insertar los posteos
 		{
@@ -225,7 +242,7 @@ class MuroController extends Controller
 				
 				/*falta contar las posiciones para seguir avanzando de acuerdo*/
 				
-				$respuestas = Yii::app()->db->createCommand("select res.id_respuesta,res.respuesta,res.fhcreacion,res.fhultmod,fu.nombre,fu.apellido,ps.foto1 from respuesta res left join perfil_muro_profesor pm on res.id_posteo = pm.id_posteo left join ficha_usuario fu on res.id_usuario=fu.id_usuario left join perfil_social ps on ps.id_usuario=fu.id_usuario where pm.id_posteo =".$idposteo." order by res.fhcreacion desc, res.fhultmod desc limit ".$position)->queryAll();
+				$respuestas = Yii::app()->db->createCommand("select res.id_respuesta,res.respuesta,res.fhcreacion,res.fhultmod,fu.nombre,fu.apellido,ps.fotoPerfil from respuesta res left join perfil_muro_profesor pm on res.id_posteo = pm.id_posteo left join ficha_usuario fu on res.id_usuario=fu.id_usuario left join perfil_social ps on ps.id_usuario=fu.id_usuario where pm.id_posteo =".$idposteo." order by res.fhcreacion desc, res.fhultmod desc limit ".$position)->queryAll();
 				
 				$this->renderPartial('_respuestas',array('respuestas'=>$respuestas,'show'=>$show,'idposteo'=>$idposteo,'position'=>$position));
 						
