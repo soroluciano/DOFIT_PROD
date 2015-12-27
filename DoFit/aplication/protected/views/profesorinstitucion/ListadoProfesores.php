@@ -1,10 +1,10 @@
 <html>
-  <head>
+<head>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.jqueryui.min.css"></link>
-	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.smoothness.css"></link> 
-	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/dataTables.jqueryui.min.js"></script> 
- </head> 
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.smoothness.css"></link>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/dataTables.jqueryui.min.js"></script>
+</head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -59,53 +59,52 @@
     <div class='row'>
         <?php
         if(isset(Yii::app()->session['id_institucion'])){
-            $idinstitucion = Yii::app()->user->id;
-            $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
-            if($profesores !=null){
-                echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
-                echo "<br/>";
-				echo "<div class='table-responsive'>";
-               echo "<table id='lisprofesores' class='display' cellspacing='0' width='100%'>
+        $idinstitucion = Yii::app()->user->id;
+        $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
+        if($profesores !=null){
+        echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
+        echo "<br/>";
+        echo "<table id='lisprofesores' class='display' cellspacing='0' width='100%'>
                  <thead>
                  <tr>
                  <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th> Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th><th>Eliminar Profesor</th></tr></thead>
                  <tbody>";
-				foreach($profesores as $prof){
-                    $profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
-                    ?>
-                    <tr>
-                        <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor">
-                        </input>
-                        <input type="hidden" name="valor" id="valor"></input>
-                        <td id="nombre" class="success"><?php echo $profesor->nombre;?></td>
-                        <td id="apellido"><?php echo $profesor->apellido;?></td>
-                        <td id="dni"><?php echo $profesor->dni; ?></td>
-                        <td id="email">
-                            <?php
-                            $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
-                            echo $usuario->email;?></td>
-                        <td id="sexo">
-                            <?php
-                            if($profesor->sexo == 'M'){
-                                echo "Masculino";
-                            }
-                            if($profesor->sexo == 'F'){
-                                echo "Femenino";
-                            }
-                            ?>
-                        </td>
-                        <td id="fecnac">
-                            <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
-                            echo $fechanac;?>
-                        </td>
-                        <td><a id="tel"  href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-                        <td><a id="dir"  href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-                        <td><a id="act"  href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
-                        <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
-                    </tr>
-				</div>
-                    <?php
-                    echo "<div class='modal fade' id='borrarprofemodal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        foreach($profesores as $prof){
+        $profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
+        ?>
+        <tr>
+            <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor">
+            </input>
+            <input type="hidden" name="valor" id="valor"></input>
+            <td id="nombre" class="success"><?php echo $profesor->nombre;?></td>
+            <td id="apellido"><?php echo $profesor->apellido;?></td>
+            <td id="dni"><?php echo $profesor->dni; ?></td>
+            <td id="email">
+                <?php
+                $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
+                echo $usuario->email;?></td>
+            <td id="sexo">
+                <?php
+                if($profesor->sexo == 'M'){
+                    echo "Masculino";
+                }
+                if($profesor->sexo == 'F'){
+                    echo "Femenino";
+                }
+                ?>
+            </td>
+            <td id="fecnac">
+                <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
+                echo $fechanac;?>
+            </td>
+            <td><a id="tel"  href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
+            <td><a id="dir"  href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
+            <td><a id="act"  href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
+            <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
+        </tr>
+    </div>
+    <?php
+    echo "<div class='modal fade' id='borrarprofemodal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                            <div class='modal-dialog' role='document'>
                               <div class='modal-content'>
                                 <div class='modal-header'>
@@ -122,7 +121,7 @@
                             </div>
                         </div>
                     </div>";
-                    echo "<div class='modal fade'  id='mensajeerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+    echo "<div class='modal fade'  id='mensajeerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 				           <div class='modal-dialog' role='document'>
 					        <div class='modal-content'>
 						      <div class='modal-header'>
@@ -139,8 +138,8 @@
 					    </div>
 				    </div>
 			    </div>";
-                    // Modal telefonos
-                    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datostelefonos' aria-labelledby='myLargeModalLabel'>
+    // Modal telefonos
+    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datostelefonos' aria-labelledby='myLargeModalLabel'>
                     <div class='modal-dialog modal-lg'>
                         <div class='modal-content'>
                             <div class='container'>
@@ -155,8 +154,8 @@
                         </div>
                     </div>
                 </div>";
-                    // Modal Direccion
-                    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosdireccion' aria-labelledby='myLargeModalLabel'>
+    // Modal Direccion
+    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosdireccion' aria-labelledby='myLargeModalLabel'>
                     <div class='modal-dialog modal-lg'>
                         <div class='modal-content'>
                             <div class='container'>
@@ -172,8 +171,8 @@
                     </div>
                 </div>";
 
-                    // Modal Actividades
-                    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosactividades' aria-labelledby='myLargeModalLabel'>
+    // Modal Actividades
+    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosactividades' aria-labelledby='myLargeModalLabel'>
                     <div class='modal-dialog modal-lg'>
                         <div class='modal-content'>
                             <div class='container'>
@@ -188,53 +187,53 @@
                         </div>
                     </div>
                 </div>";
-                }
-            echo "</tbody>";   
-	    echo "</table>";
-            }
-            else{
-              echo "<div class='row'>
+    }
+    echo "</tbody>";
+    echo "</table>";
+    }
+    else{
+        echo "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
                             <h2 class='text-center'>No hay Profesores asociados a la instituci&oacute;n</h2>
                         </div>
                     </div>";
-            }
-        }
-        else {
-            $this->redirect(array('../aplication/site/LoginInstitucion'));
-        }
-        ?>
-    </div>
+    }
+    }
+    else {
+        $this->redirect(array('../aplication/site/LoginInstitucion'));
+    }
+    ?>
+</div>
 </div>
 <script type="text/javascript">
-$(document).ready(function() {
-    $('#lisprofesores').DataTable( {
-		"language" : {
-                      "sProcessing":     "Procesando...",
-	                  "sLengthMenu":     "Mostrar _MENU_ registros",
-	                  "sZeroRecords":    "No se encontraron resultados",
-	                  "sEmptyTable":     "Ningún dato disponible en esta tabla",
-	                  "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-	                  "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-	                  "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-	                  "sInfoPostFix":    "",
-	                  "sSearch":         "Buscar:",
-	                  "sUrl":            "",
-	                  "sInfoThousands":  ",",
-	                  "sLoadingRecords": "Cargando...",
-	                 "oPaginate": {
-		                           "sFirst":    "Primero",
-		                           "sLast":     "Ultimo",
-		                           "sNext":     "Siguiente",
-		                           "sPrevious": "Anterior"
-	                              },
-	                "oAria": {
-		                      "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-		                      "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-	                    } 
-		        }	
+    $(document).ready(function() {
+        $('#lisprofesores').DataTable( {
+            "language" : {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Ultimo",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                }
+            }
+        } );
     } );
- } );
 </script>
 <script type="text/javascript">
     function Borrarprofesor(idprofesor)
@@ -243,7 +242,7 @@ $(document).ready(function() {
         var data = {"idprofesor":idprofesor};
         $.ajax({
             url :  baseurl + "/ProfesorInstitucion/BorrarProfesor",
-            type: "POST", 
+            type: "POST",
             dataType : "html",
             data : data,
             cache: false,
@@ -319,5 +318,5 @@ $(document).ready(function() {
             }
         });
     }
-</script>			 
+</script>
 </html>
