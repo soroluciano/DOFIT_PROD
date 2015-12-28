@@ -90,20 +90,22 @@
   $(function(){
       window.$postValue={}
       window.$isNewMsg={}
-      window.$sizeMsgs={} 
+      window.$sizeMsgs={}
+      window.$actualSizeMsgs={}
+      window.$actualSizeMsgs.value=4;
       var pusher = new Pusher('c48d59c4cb61c7183954');    
       var canalnom = $('#canal').val();
       var canal  = pusher.subscribe(canalnom);
-      
+      getQuantityPosts();
       //if(window.$isNewMsg.value =='true') {
           canal.bind('nuevo_comentario', function(respuesta){
               debugger;
-               if(window.$isNewMsg.value =='true') {
+               //if(window.$isNewMsg.value =='true') {
                   getMensajesFromBase();
-                  getQuantityPosts();
-               }else{
-                  getMensajesConDelay();
-               }
+                  
+               //}else{
+               //   getMensajesConDelay();
+               //}
           });
       //}else{
       //  getMensajesConDelay();
@@ -160,7 +162,7 @@
       type: 'POST',
       data: 'size='+size,
       success:function(response){
-        $('#respuesta_ajax').html(response);
+        $('#comentarios').html(response);
       },
       error: function(e){
         $('#logger').html(e.responseText);
@@ -170,9 +172,18 @@
   
   function getMoreMsgs(){//utilizar solo en el boton de + posts
     debugger;
-    var actualsize = $sizeMsgs.value;
-    actualsize+=4;
-    getMensajesFromBase2(actualsize);
+    var size = window.$sizeMsgs.value;
+    var actualsize = window.$actualSizeMsgs.value;
+
+    if (actualsize<size) {
+        actualsize+=4;
+        window.$actualSizeMsgs.value=actualsize;
+        getMensajesFromBase2(actualsize);  
+    }
+    if (actualsize >= size) {
+      $("#boton_mas_comentarios").html("");
+    }
+    
   }
   
   
@@ -329,8 +340,9 @@
         type: 'POST',
         data: {},
         success:function(response){
-          $sizeMsgs.value=response;
-          alert($sizeMsgs.value);
+          debugger;
+          window.$sizeMsgs.value=response;
+          alert(window.$sizeMsgs.value);
         },
         error: function(e){
           $('#logger').html(e.responseText);

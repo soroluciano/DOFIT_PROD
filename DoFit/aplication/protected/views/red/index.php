@@ -17,7 +17,9 @@ $canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usu
 if($canal==null){
 	$canal = new Canal();
 	$canal->id_usuario=$usuario->id_usuario;
-	$nombre=md5($usuario->id_usuario."".$ficha->nombre."".$ficha->id_ficha);
+	//$nombre=md5($ficha->nombre);
+	$nombre=md5("sasarasas");
+	//$nombre=md5($usuario->id_usuario."".$ficha->nombre."".$ficha->id_ficha);
 	$canal->nombre=$nombre;
 	$canal->save();
 }
