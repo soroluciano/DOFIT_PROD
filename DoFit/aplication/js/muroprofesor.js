@@ -351,13 +351,19 @@
     
   }
   
-  
-  
+  function getCanales() {
+    $.ajax({
+      url: baseurl+'muro/getCanales',
+      type: 'POST',
+      data: {},
+      succes:function(response){
+        debugger;
+      }
+    });
+  }
   
   
 
-  
- 
    
     //function rechargeTimePusher(){
     //    debugger;

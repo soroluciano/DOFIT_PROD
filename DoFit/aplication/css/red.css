@@ -212,3 +212,16 @@ div.newposts{
     padding: 10px;
     text-align: center;
 }
+
+.alerta_new{
+    float: right;
+    background: #e74c3c;
+    width: 2em;
+    border-radius: 40%;
+    font-size: 0.60em;
+    line-height: 2;
+    text-align: center;
+    animation: notificationpulse 0.5s infinite;
+    -webkit-animation: notificationpulse 0.5s infinite;
+    -moz-animation: notificationpulse 0.5s infinite;
+}
