@@ -352,12 +352,23 @@
   }
   
   function getCanales() {
+    debugger;
     $.ajax({
-      url: baseurl+'muro/getCanales',
+      url: baseurl+'/muro/getCanales',
       type: 'POST',
+      dataType: 'application/json; charset=utf-8',
+      //data: {},
       data: {},
+      processData: false,
       succes:function(response){
         debugger;
+        alert(response.first);
+        //var returnedData = JSON.parse(response);
+  //      $("#can").html(response);
+
+      },
+      error: function(e){
+        alert(e);
       }
     });
   }
