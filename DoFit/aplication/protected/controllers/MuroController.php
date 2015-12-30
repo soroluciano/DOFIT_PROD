@@ -166,7 +166,7 @@ class MuroController extends Controller
 	
 		public function actionGetCanales(){
 				$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-				$resultSet = Yii::app()->db->createCommand("select distinct pmp.id_canal from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario left join actividad_alumno aa on ac.id_actividad=aa.id_actividad inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario where usu.id_usuario =".$usuario->id_usuario." or aa.id_usuario=".$usuario->id_usuario)->queryAll();
+				$resultSet = Yii::app()->db->createCommand("select distinct c.nombre from perfil_muro_profesor pmp inner join actividad ac on pmp.id_actividad=ac.id_actividad inner JOIN perfil_social ps on ps.id_usuario = ac.id_usuario inner join usuario usu on usu.id_usuario = ac.id_usuario left join actividad_alumno aa on ac.id_actividad=aa.id_actividad inner join ficha_usuario fu on fu.id_usuario= usu.id_usuario join canal c on pmp.id_canal=c.id_canal where usu.id_usuario =".$usuario->id_usuario." or aa.id_usuario=".$usuario->id_usuario)->queryAll();
 				
 				echo CJSON::encode($resultSet);
 				Yii::app()->end();
