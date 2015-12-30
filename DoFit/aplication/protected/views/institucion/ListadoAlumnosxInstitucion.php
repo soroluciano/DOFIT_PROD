@@ -148,7 +148,6 @@
                 }
                 echo"</tbody>";
                 echo "</table>";
-                echo "</div>";
             }
             else{
                 "<div class='row'>

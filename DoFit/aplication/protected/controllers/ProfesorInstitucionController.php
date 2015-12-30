@@ -239,33 +239,39 @@ class ProfesorInstitucionController extends Controller
 		$idactividad = $_POST['idactividad'];
 		$actividadalumno = ActividadAlumno::model()->findAllByAttributes(array('id_actividad'=>$idactividad,'id_estado'=>1));
 		if($actividadalumno != NULL){
+			echo "<table id='lisinscriptos' class='display' cellspacing='0' width='100%'>
+               <thead>
+                <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th></tr></thead>
+            <tbody>";
 			foreach($actividadalumno as $actalum){
 				$fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
 				$usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
-				echo "<h4><b>".$fichausuario->nombre ."&nbsp".$fichausuario->apellido. "</b></h4>";
-				echo "<h5> <b>Datos Personales </b></h5>";
-				echo "<div class='form-group'><b> Dni: </b>". $fichausuario->dni."&nbsp&nbsp";
-				echo "<b> E-mail: </b>" .$usuario->email . "&nbsp&nbsp";
-				echo "<b> Sexo: </b>";
+				echo "<tr>";
+				echo "<td id='nombre'>".$fichausuario->nombre ."</td>";
+				echo "<td id='apellido'>".$fichausuario->apellido. "</td>";
+				echo "<td id='dni'>".$fichausuario->dni . "</td>";
+				echo "<td id='email'>" .$usuario->email . "</td>";
+				echo "<td id='sexo'>";
 				if($fichausuario->sexo == 'M'){
 					echo "Masculino&nbsp&nbsp";
 				}
 				if($fichausuario->sexo == 'F'){
 					echo "Femenino&nbsp&nbsp";
 				}
+				echo "</td>";
 				$fechanac = date("d-m-Y",strtotime($fichausuario->fechanac));
-				echo "<b> Fecha Nacimiento: </b>". $fechanac ."</div>";
-				echo "<h5> <b>Datos Domiciliarios </b></h5>";
-				echo "<div class='form-group'><b> Direcci&oacute;n: </b>" . $fichausuario->direccion . "&nbsp&nbsp";
+				echo "<td id='fecnac'>". $fechanac ."</td>";
+				/*echo "<div class='form-group'><b> Direcci&oacute;n: </b>" . $fichausuario->direccion . "&nbsp&nbsp";
 				$localidad = Localidad::model()->findByAttributes(array('id_localidad'=>$fichausuario->id_localidad));
 				echo "<b> Localidad: </b>". $localidad->localidad . "&nbsp&nbsp";
 				$provincia = Provincia::model()->findByAttributes(array('id_provincia'=>$localidad->id_provincia));
-				echo "<b> Provincia: </b>". $provincia->provincia."</div>";
-				echo "<h5> <b> Tel&eacute;fonos </b></h5>";
-				echo "<div class='form-group'><b> Tel&eacute;fono fijo: </b>". $fichausuario->telfijo . "&nbsp&nbsp";
-				echo "<b> Celular: </b>". $fichausuario->celular . "</div>";
-				echo "</br>";
+				echo "<b> Provincia: </b>". $provincia->provincia."</div>";*/
+				echo "<td id='telfijo'>". $fichausuario->telfijo . "</td>";
+				echo "<td id='celular'>". $fichausuario->celular . "</td>";
+				echo "</tr>";
 			}
+			echo "</tbody>";
+			echo "</table>";
 		}
 	}
 }
