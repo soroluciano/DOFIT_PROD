@@ -7,26 +7,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide">
+            <a href="../site/login"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
             <a href="../" class="navbar-brand"></a>
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="../getting-started/">Getting started</a>
-                </li>
-                <li>
-                    <a href="../css/">CSS</a>
-                </li>
-                <li>
-                    <a href="../components/">Components</a>
-                </li>
-                <li>
-                    <a href="../javascript/">JavaScript</a>
-                </li>
-                <li>
-                     <?php echo CHtml::link('Salir', array('site/logout')); ?>
-                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <!-- <li><a href="javascript:onclick="getMensajesFromBase();" alt="mensajes"><span class="glyphicon glyphicon-envelope"></span><span class="alerta_new"><?php //echo "1";?></span></a></li>-->
+                <li><a onclick="getMensajesFromBase()" style="cursor:pointer;" alt="notificaciones"><span class="glyphicon glyphicon-globe"></span><span class="alerta_new" id="notificacion"><?php echo "1";?></span></a></li>
+                <li><a href="">Bienvenido!</a></li>
+                <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
     </div>

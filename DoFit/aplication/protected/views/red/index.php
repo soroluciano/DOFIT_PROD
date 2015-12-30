@@ -7,17 +7,36 @@
 <?php
 //archivos javascript
 
+
+if(!Yii::app()->user->isGuest){
+	//Es un usuario logueado.
+     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+     $perfil = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
+     $nombre = $ficha->nombre;
+     $apellido = $ficha->apellido;
+  }
+
+
+
+
+
+
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/perfil.js');
 $cs->registerScriptFile($baseUrl.'/js/muroprofesor.js');
 $cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
 
+
+
+//buscar todos los canales y grabarlos en  lista de memoria js
 $canal = Canal::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
 if($canal==null){
 	$canal = new Canal();
 	$canal->id_usuario=$usuario->id_usuario;
-	$nombre=md5($usuario->id_usuario."".$ficha->nombre."".$ficha->id_ficha);
+	//$nombre=md5($ficha->nombre);
+	//$nombre=md5("sasarasas");
+	$nombre=md5(strval($usuario->id_usuario)."".$ficha->nombre."".strval($ficha->id_ficha));
 	$canal->nombre=$nombre;
 	$canal->save();
 }
@@ -67,16 +86,6 @@ function getActividades($id){
 
 ?>
 
-<?php 
-
-if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-     $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-     $perfil = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$usuario->id_usuario));
-     $nombre = $ficha->nombre;
-     $apellido = $ficha->apellido;
-  }
-?>
 
 
 <?php $this->renderPartial('_menu');?>
@@ -87,10 +96,6 @@ if(!Yii::app()->user->isGuest){
 		<?php $this->renderPartial('_cabecera',array('perfil'=>$perfil,'nombre'=>$nombre,'apellido'=>$apellido)); ?>
 	</div>
     
-    <div class="row">
-        <div class="newposts col-lg-10"><button class="btn btn-info" onclick="getMensajesFromBase();"><?php echo "10 "; ?> nuevas actualizaciones</button></div>
-    </div>
-    
     <input type="hidden" id="canal" value="<?php echo $canal->nombre;?>"/>
     <input type="hidden" id="id_canal" value="<?php echo $canal->id_canal;?>"/>
     <input type="hidden" id="id_actividad_selected" value=""/>
@@ -99,6 +104,8 @@ if(!Yii::app()->user->isGuest){
         <div class=" col-lg-8 col-md-8 col-sm-5 contenedor-espaciado row">
 			<div class="widget-area no-padding blank">
 				<div class="status-upload panel-shadow">
+					<button  onclick="getCanales()">canales</button>
+					<div id="can"></div>
 					<form action="" method="post">
 						<textarea placeholder="¿Qué estas pensando?" id="input_mensaje"></textarea>
 						<ul>					

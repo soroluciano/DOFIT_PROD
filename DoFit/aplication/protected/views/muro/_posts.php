@@ -22,15 +22,17 @@
                 </div>
                 <!--<h6 class='text-muted time'>1 minute ago</h6>-->
               </div>
-			  <div class='pull-left edicion'>
-				<div class='dropdown'>
-				  <button class='btn-edit-post' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>...</button>
-				  <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-				  <li><a href='javascript:editComment(".$row['id_posteo'].")'>Editar</a></li><!--data-toggle='modal' data-target='#popborrar'-->
-				  <li><a href='javascript:indicateIdPost(".$row['id_posteo'].")' >Eliminar</a></li>
-				  </ul>
-				</div>
-			  </div>			
+			  <div class='pull-left edicion'>";
+        if($usuario==$row["id_usuario"]){
+          echo "<div class='dropdown'>
+            <button class='btn-edit-post' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>...</button>
+            <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
+            <li><a href='javascript:editComment(".$row['id_posteo'].")'>Editar</a></li><!--data-toggle='modal' data-target='#popborrar'-->
+            <li><a href='javascript:indicateIdPost(".$row['id_posteo'].")' >Eliminar</a></li>
+            </ul>
+          </div>";
+        }
+			 echo "</div>			
 			
             </div>
 

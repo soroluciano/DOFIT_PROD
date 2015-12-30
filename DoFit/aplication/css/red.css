@@ -58,6 +58,9 @@ div.cabecera-perfil{
 div.profile_img {
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-right:10px;
     height: auto;
     width:85px;
     float: left;
@@ -82,6 +85,7 @@ div.profile_friends_fotos{
     border-right:1px solid #ddd;
     width:30%;
     float:left;
+    padding-top:10px;
     padding-left:10px;
     padding-right:10px;
     height: 100%;
@@ -207,4 +211,17 @@ div.newposts{
     margin-left: 15px;
     padding: 10px;
     text-align: center;
+}
+
+.alerta_new{
+    float: right;
+    background: #e74c3c;
+    width: 2em;
+    border-radius: 40%;
+    font-size: 0.60em;
+    line-height: 2;
+    text-align: center;
+    animation: notificationpulse 0.5s infinite;
+    -webkit-animation: notificationpulse 0.5s infinite;
+    -moz-animation: notificationpulse 0.5s infinite;
 }
