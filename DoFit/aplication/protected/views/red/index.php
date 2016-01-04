@@ -101,6 +101,7 @@ function getActividades($id){
     <input type="hidden" id="id_actividad_selected" value=""/>
     
 	<div id="respuesta_ajax">
+	<?php	if($usuario->id_perfil==2){ ?>
         <div class=" col-lg-8 col-md-8 col-sm-5 contenedor-espaciado row">
 			<div class="widget-area no-padding blank">
 				<div class="status-upload panel-shadow">
@@ -123,9 +124,14 @@ function getActividades($id){
 			</div><!-- Widget Area -->
 
 		</div><!--fin contenedor espaciado -->
+		<?php }else{ ?>
+			<div id="spacer"></div>
+		<?php }?>
 	</div>
-    
-    <div id="comentarios" class="row">
+		<?php	if($usuario->id_perfil==1){ ?>
+    <div class='propaganda-muro-2'>Publicite aqui</div>
+    <?php	}?>
+		<div id="comentarios" class="row">
 		 <script> getMensajesFromBase();</script>
     </div>
     <div id="boton_mas_comentarios"><input type='button' class='btn btn-custom' value='Cargar mas posts' onclick="getMoreMsgs()"/></div>   

@@ -18,8 +18,8 @@
 				</div>
 				<div class='profile_friends_fotos'>
 						<ul>
-						<li><?php echo "60"?><a onclick="getContactos()";> Contactos</a>. Contacta con ellos</li>		
-						<li><a onclick="galeria();"> Fotografías.</a></li>
+						<li><?php echo "60"?><a onclick="getContactos()"; style="cursor:pointer;"> Contactos</a>. Contacta con ellos</li>		
+						<li><a onclick="galeria();" style="cursor:pointer;"> Fotografías.</a></li>
 						</ul>
 				</div>
 <!--				<div class='sports'>
