@@ -212,16 +212,16 @@
       debugger;
   
       $.ajax({
-            url: baseurl+'/red/deleteImagen',  
-            type: 'POST',
-            data: 'id='+id,
-            success:function(response){
-               debugger;
-              var respuesta = mostrarImagenes();
-               $('#imagenes').html(respuesta);
-            },
-            error: function(e){        
-            }
+      url: baseurl+'/red/deleteImagen',  
+      type: 'POST',
+      data: 'id='+id,
+      success:function(response){
+         debugger;
+        var respuesta = mostrarImagenes();
+         $('#imagenes').html(respuesta);
+      },
+      error: function(e){        
+      }
       });
    }
    
@@ -229,15 +229,15 @@
       debugger;$('#respuesta_ajax').html(response);
       var retVal;
       $.ajax({
-            url: baseurl+'/red/mostrarImagenes',  
-            type: 'POST',
-            data: {},
-            success:function(response){
-                  galeria();
-            },
-            error: function(e){
-               alert(e);
-            }
+      url: baseurl+'/red/mostrarImagenes',  
+      type: 'POST',
+      data: {},
+      success:function(response){
+            galeria();
+      },
+      error: function(e){
+         alert(e);
+      }
       });
    }
 
