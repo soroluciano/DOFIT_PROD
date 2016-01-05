@@ -56,34 +56,38 @@
   function insertarRespuesta(a) {  //insertar las respuestas en los comentarios
     var _a = a;
     var comment = $("#txt_post_"+_a).val();
-    var pusher = new Pusher('c48d59c4cb61c7183954');    
-    var canalnom = $('#canal').val();
-    var canal  = pusher.subscribe(canalnom);
-    canal.bind(comment, function(respuesta){
-    });
-  
-  
+    debugger;
+    //var pusher = new Pusher('c48d59c4cb61c7183954');    
+    //var canalnom = $('#canal').val();
+    //var canal  = pusher.subscribe(canalnom);
+ 
+    //canal.bind(comment, function(respuesta){
+    //});
+    //
+    //
     $.ajax({
       url:  baseurl+'/muro/insertarRespuesta',
       type: 'POST',
       data: 'respuesta='+comment+'&id_posteo='+_a,
       success:function(response){
+          debugger;
            window.$isNewMsg.value='true';
-        alert( "Data Saved: " + response );
+           alert( "Data Saved: " + response );
+           getComentsByPost(_a);
       },
       error: function(e){
         $('#logger').html(e.responseText);
       }
     });
-  
-    $.post(baseurl+'/php/ajax.php', {
-      msj : this.comment,
-      canal : $('#canal').val(),
-      socket_id : pusher.connection.socket_id
-    },function(respuesta){
-      showComents(this._a);
-    });
-      pusher.disconnect();
+    //
+    //$.post(baseurl+'/php/ajax.php', {
+    //  msj : this.comment,
+    //  canal : $('#canal').val(),
+    //  socket_id : pusher.connection.socket_id
+    //},function(respuesta){
+    //  showComents(this._a);
+    //});
+    //  pusher.disconnect();
     }
 
   
@@ -93,26 +97,36 @@
       window.$sizeMsgs={}
       window.$actualSizeMsgs={}
       window.$actualSizeMsgs.value=4;
-      var pusher = new Pusher('c48d59c4cb61c7183954');    
-      var canalnom = $('#canal').val();
-      var canal  = pusher.subscribe(canalnom);
-      getQuantityPosts();
-      //if(window.$isNewMsg.value =='true') {
-          canal.bind('nuevo_comentario', function(respuesta){
-              debugger;
-               //if(window.$isNewMsg.value =='true') {
-                  getMensajesFromBase();
-                  
-               //}else{
-               //   getMensajesConDelay();
-               //}
-          });
-      //}else{
-      //  getMensajesConDelay();
-      //}
-    
-      
+      window.$channels={}
+      window.$alertas={}
 
+      var pusher = new Pusher('c48d59c4cb61c7183954');    
+
+      getQuantityPosts();
+      getCanales();
+      debugger;
+      var canal;
+      var canalNom;
+      var canales = new Array();
+      if (window.$channels.length != 0) {
+        for( $i=0; $i<window.$channels.length; $i++ ){
+            canalNom = window.$channels[$i].nombre;
+            canales.push(pusher.subscribe(canalNom));
+            
+        }
+      }
+      
+      for( $j=0; $j<canales.length; $j++ ){
+        canales[$j].bind('nuevo_comentario', function(respuesta){
+          //validar si es mi id o el de otra persona
+          //alert("por canales");
+          //getMensajesFromBase();
+        
+          getAlertas();
+        
+        });
+      }
+      
     $('form').submit(function(){
       $.ajax({
         url:  baseurl+'/muro/insertarComentarioProfesor',
@@ -199,14 +213,7 @@
 
     $("#post-description-"+idcoment+" div.div-btns-comment").show();
     $("#post-description-"+idcoment+" post-description").show();
-
-
-    
-    
     $valor = ($("#post-description-"+idcoment+" .details").html());
-    
-    //$res = getHtmlDecoded($valor);
-  
     $("#post-description-"+idcoment+" .edit-details-textarea").html($valor);
   }
   
@@ -285,8 +292,8 @@
         modal+="<div class='modal-content'>"
         modal+="<div class='modal-header'>"
         modal+="<button type='button' class='close' data-dismiss='modal' aria-label='Close' onclick=''><span aria-hidden='true'>&times;</span></button>"
-		modal+="<h4 class='modal-title' id='exampleModalLabel'><b>Eliminar publicaci&oacute;n</b></h4></div>";
-		modal+="<div class='modal-body'>";
+        modal+="<h4 class='modal-title' id='exampleModalLabel'><b>Eliminar publicaci&oacute;n</b></h4></div>";
+        modal+="<div class='modal-body'>";
         modal+="<p>¿Seguro que quieres eliminar esto?</p>";
         modal+="<form name='formulario' id='formulario' class='formulario'>";
         modal+="<div class='modal-footer'>";
@@ -329,8 +336,6 @@
       $("post-description").hide();
       $(".div-ed-comment").css("height","1");
 
-    
-    
   }
   
   function getQuantityPosts(){
@@ -342,7 +347,6 @@
         success:function(response){
           debugger;
           window.$sizeMsgs.value=response;
-          alert(window.$sizeMsgs.value);
         },
         error: function(e){
           $('#logger').html(e.responseText);
@@ -352,28 +356,37 @@
   }
   
   function getCanales() {
-    debugger;
     $.ajax({
       url: baseurl+'/muro/getCanales',
       type: 'POST',
-      dataType: 'application/json; charset=utf-8',
-      //data: {},
+      dataType: "json",
+      async:false,
       data: {},
-      processData: false,
-      succes:function(response){
-        debugger;
-        alert(response.first);
-        //var returnedData = JSON.parse(response);
-  //      $("#can").html(response);
-
+      success:function(response){
+          window.$channels=response;  
       },
       error: function(e){
-        alert(e);
+        alert("error");
       }
     });
   }
   
+  function getAlertas(){
+      var alertas = window.$alertas.value;
+      if (alertas==null) {
+        alertas = 1;
+      }else{
+        alertas++;
+      }
+      window.$alertas.value=alertas;
+      //alert(alertas);
+      $("#notificacion").html(alertas);
+  }
   
+  function resetAlertas(){
+    window.$alertas.value=0;
+    $("#notificacion").html("");
+  }
 
    
     //function rechargeTimePusher(){

@@ -15,7 +15,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                <!-- <li><a href="javascript:onclick="getMensajesFromBase();" alt="mensajes"><span class="glyphicon glyphicon-envelope"></span><span class="alerta_new"><?php //echo "1";?></span></a></li>-->
-                <li><a onclick="getMensajesFromBase()" style="cursor:pointer;" alt="notificaciones"><span class="glyphicon glyphicon-globe"></span><span class="alerta_new" id="notificacion"><?php echo "1";?></span></a></li>
+                <li><a onclick="getMensajesFromBase();resetAlertas();" style="cursor:pointer;" alt="notificaciones"><span class="glyphicon glyphicon-globe"></span><span class="alerta_new" id="notificacion"></span></a></li>
                 <li><a href="">Bienvenido!</a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
