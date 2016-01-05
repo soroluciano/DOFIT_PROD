@@ -419,26 +419,34 @@ DELETE FROM DoFit.`Usuario`;
 
 INSERT INTO DoFit.`Usuario`(email                   , password       , id_perfil  , id_estado, fhcreacion, fhultmod, cusuario)
                    VALUES('monti.rober9@gmail.com', MD5('Monto123'), 1          , 1       , now()    , now()   , 'sysadmin'),
-				         ('programacionweb3@gmail.com', MD5('Lorena23'), 1          , 1       , now()    , now()   , 'sysadmin'),
-						 ('dcastellini89@gmail.com'   , MD5('Castellini123'),1      , 1       , now()    , now()   , 'sysadmin'),
-						 ('romina@gmail.com'          , MD5('Romina123')    ,1      , 1       , now()    , now()   , 'sysadmin'),  
-						 ('vernacci_elizabeth@gmail.com', MD5('Oberto345'), 2     , 1       , now()    , now()   , 'sysadmin'),
-						 ('monto_rober@yahoo.com.ar'    , MD5('Bautista12') , 2      , 1     , now()    , now()   , 'sysadmin'),
+                         ('programacionweb3@gmail.com', MD5('Lorena23'), 1          , 1       , now()    , now()   , 'sysadmin'),
+                         ('dcastellini89@gmail.com'   , MD5('Castellini123'),1      , 1       , now()    , now()   , 'sysadmin'),
+                         ('romina@gmail.com'          , MD5('Romina123')    ,1      , 1       , now()    , now()   , 'sysadmin'),  
+                         ('vernacci_elizabeth@gmail.com', MD5('Oberto345'), 2     , 1       , now()    , now()   , 'sysadmin'),
+                         ('monto_rober@yahoo.com.ar'    , MD5('Bautista12') , 2      , 1     , now()    , now()   , 'sysadmin'),
                          ('soro.luciano@gmail.com', MD5('Luciano34')       , 2       , 1      , now()    , now()  , 'sysadmin'),
-                         ('barbifranco23@gmail.com'  , MD5('Monto1987')   ,  1      , 0    , now()      , now()  , 'sysadmin'); 
-
+                         ('barbifranco23@gmail.com'  , MD5('Monto1987')   ,  1      , 0    , now()      , now()  , 'sysadmin'),
+                         ('jrodriguez@gmail.com'     , MD5('Jrodriguez12'), 1       , 1    , now()      , now()  , 'sysadmin'),
+                         ('laspinetta@gmail.com'       , MD5('Spinetta345'), 1        , 1    , now()      , now()  , 'sysadmin'),
+                         ('kperez@yahoo.com.ar'      , MD5('Karina123')  , 1        , 1    , now()      , now()  , 'sysadmin'),
+                         ('yjuarez@gmail.com'		 , MD5('Yazmin123')  , 1        , 1    , now()      , now()  , 'sysadmin'),      				 
+                         ('urodriguez@gmail.com'     , MD5('Urodriguez123'),1       , 1    , now()      , now()  , 'sysadmin');
 DELETE FROM DoFit.`ficha_usuario`;						 
 
 INSERT INTO DoFit.`ficha_usuario`(id_usuario, nombre    , apellido, dni, sexo, fechanac, telfijo, celular, conemer, telemer, id_localidad, direccion, piso, depto, fhcreacion, fhultmod, cusuario)
                          VALUES(1         , 'Roberto' , 'Montoto', '32823932', 'M', '1987-01-10', '54374616', '1558204125', 'Mercedes Alderte', '46971769',  1, 'Coronel Arenas 1151', '', '', now(), now(), 'sysadmin'),
-						       (2         , 'Rodolfo' , 'Lopez'  , '28067980', 'M', '1980-02-26', '469692030', '1567803450', 'Lorena Paola'   , '45678909',  4, 'Alsina 360', '', '', now(), now(), 'sysadmin'),
-							   (3         , 'Damian', 'Castellini','33405780', 'M', '1989-03-17', '56709809', '1545670980', 'Micaela Lopez'  , NULL      ,  4, 'Conesa 289', '2', 'B', now(), now(), 'sysadmin'),
-							   (4         , 'Romina'   , 'Gaetani','25098670', 'F', '1983-09-21', '56708900', '1567003410', 'Nicolas Gaetani' , '54309087', 5, 'Florencio Varela 1300', '', '', now(), now(), 'sysadmin'),
-							   (5         , 'Elizabeth'  , 'Vernacci', '27089780', 'F' , '1975-07-07', '54360986', '156700978', 'Luciano Vernacci', '54609007', 7, 'Pellegrini 1350' , '1' , 'A', now(), now(), 'sysadmin'),
-							   (6         , 'Carlos Alberto'  , 'Tevez', '22340678', 'M' , '1983-04-03', '54260967','151890078', 'Yamila Tevez', '67004500', 13, 'Parejas 340' , '' , '', now(), now(), 'sysadmin'),
-							   (7         , 'Luciano'         , 'Soro','30560781', 'M' , '1982-10-02','54260111','151456890', 'Lorena Soro', '678004500',5, 'Camino de cintura 340' , '' , '', now(), now(), 'sysadmin'),
-                               (8         , 'Barbara'         , 'Franco', '23109567', 'F' , '1986-09-21','54568991','156789077', 'Tamara Franco', '45603201', 7, 'Av. Cordoba 430'     , '' , '', now(), now(), 'sysadmin'); 
-
+                               (2         , 'Rodolfo' , 'Lopez'  , '28067980', 'M', '1980-02-26', '469692030', '1567803450', 'Lorena Paola'   , '45678909',  4, 'Alsina 360', '', '', now(), now(), 'sysadmin'),
+                               (3         , 'Damian', 'Castellini','33405780', 'M', '1989-03-17', '56709809', '1545670980', 'Micaela Lopez'  , NULL      ,  4, 'Conesa 289', '2', 'B', now(), now(), 'sysadmin'),
+                               (4         , 'Romina'   , 'Gaetani','25098670', 'F', '1983-09-21', '56708900', '1567003410', 'Nicolas Gaetani' , '54309087', 5, 'Florencio Varela 1300', '', '', now(), now(), 'sysadmin'),
+                               (5         , 'Elizabeth'  , 'Vernacci', '27089780', 'F' , '1975-07-07', '54360986', '156700978', 'Luciano Vernacci', '54609007', 7, 'Pellegrini 1350' , '1' , 'A', now(), now(), 'sysadmin'),
+                               (6         , 'Carlos Alberto'  , 'Tevez', '22340678', 'M' , '1983-04-03', '54260967','151890078', 'Yamila Tevez', '67004500', 13, 'Parejas 340' , '' , '', now(), now(), 'sysadmin'),
+                               (7         , 'Luciano'         , 'Soro','30560781', 'M' , '1982-10-02','54260111','151456890', 'Lorena Soro', '678004500',5, 'Camino de cintura 340' , '' , '', now(), now(), 'sysadmin'),
+                               (8         , 'Barbara'         , 'Franco', '23109567', 'F' , '1986-09-21','54568991','156789077', 'Tamara Franco', '45603201', 7, 'Av. Cordoba 430'     , '' , '', now(), now(), 'sysadmin'), 
+                               (9         , 'José'            , 'Rodriguez', '23450987', 'M', '1990-03-20','46978097','1567905600', 'Jose Peréz', '45670987', 1, 'Lanus 340'           , '','',now(), now(), 'sysadmin'), 
+                               (10        , 'Luis Alberto'    , 'Spinetta', '14506780', 'M', '1950-01-23','46780466','1567801230', 'Catalina Spinetta', '45671230', 7 , 'Av. Libertador 5600' , '5','C',now(), now(), 'sysadmin'),
+                               (11        , 'Karina'          , 'Perez'   , '23056709', 'F', '1980-03-24','43201240','1567803401', 'Lorena Perez', '45601230', 17 , 'Av. Rivadavia 340' , '','',now(), now(), 'sysadmin'), 
+                               (12        , 'Yazmin'          , 'Juarez'  , '29560340', 'F', '1988-09-21','43102300','1556903200', 'Jose Juarez', '44201200', 30 ,'Bariloche y catriel ' , '','',now(), now(), 'sysadmin'),							   							   
+                               (13        , 'Ulises'          , 'Gonzalez', '19708340', 'M', '1990-10-23', '41085600', '1546002300', 'Ulises Gonzalez', '42011600', 27, 'Colon 1764', '', '', now(), now(), 'sysadmin');                
 DELETE FROM DoFit.`institucion`;	
 						   
 INSERT INTO DoFit.`institucion`(email               , password          , fhcreacion, fhultmod, cusuario)
@@ -451,8 +459,8 @@ INSERT INTO DoFit.`institucion`(email               , password          , fhcrea
 DELETE FROM DoFit.`ficha_institucion`;
 
 INSERT INTO DoFit.`ficha_institucion`(id_institucion, nombre         , cuit, telfijo , celular      , id_localidad, direccion, piso, depto, coordenada_x, coordenada_y, acepta_mp, fhcreacion, fhultmod, cusuario)
-                		       VALUES(1             , 'Megatlon S.A.'                     , 30210009941, '0810-666-6496','1560203456', 7 , 'Reconquista 335', 'PB', ''  , '-34.603930', '-58.372369', 'S'     , now(), now(), 'sysadmin'),
-							         (2             , 'Universidad Nacional de La Matanza',  31345066691, '4480-8900', '1123905890', 5 , 'Florencio Varela 1903', NULL, NULL, '-34.670580', '-58.562751', 'N', now(), now(), 'sysadmin'),
+                               VALUES(1             , 'Megatlon S.A.'                     , 30210009941, '0810-666-6496','1560203456', 7 , 'Reconquista 335', 'PB', ''  , '-34.603930', '-58.372369', 'S'     , now(), now(), 'sysadmin'),
+                                     (2             , 'Universidad Nacional de La Matanza',  31345066691, '4480-8900', '1123905890', 5 , 'Florencio Varela 1903', NULL, NULL, '-34.670580', '-58.562751', 'N', now(), now(), 'sysadmin'),
                                      (3             , 'Club Atletico Boca Juniors '       , 30780910107, ' 5777-1200', '1543041212', 7 , 'Del Valle Iberlucea'  , ''  , ''  ,'-34.633399', '-58.365223',  'S', now(), now(), 'sysadmin'),
                                      (4             , 'Thaler S.A.'                , 20899909901, '4697-6008' , '1567803400', 1, 'Avenida Rivadavia 18037'       , ''  , ''  ,'-34.649347', '-58.617812', 'S', now(), now(), 'sysadmin'),
                                      (5             , 'Tu Gimansio'                , 30670890121, '5400-9008'	, '1567803200', 37, 'Gobernador Pedro Godoy 257'   , ''  , ''  , '-54.804559', '-68.303432', 'N', now(), now(), 'sysadmin');  
@@ -476,20 +484,20 @@ INSERT INTO DoFit.`actividad`(id_deporte, id_institucion, id_usuario, valor_acti
                              (1         ,   1           ,   6 	    ,  400.00        , now()     ,  now()  , 'sysadmin'),
                       	     (3         ,   2           ,   5 	    ,  390.00        , now()     ,  now()  , 'sysadmin'),
                              (12        ,   2           ,   5 	    ,  450.00        , now()     ,  now()  , 'sysadmin'),	
-                             (2         ,   5			,   7       ,  550.00        , now()     ,  now()  , 'sysadmin'),
-                             (16        ,   1			,   7       ,  400.00        , now()     ,  now()  , 'sysadmin'),
+                             (2         ,   5           ,   7       ,  550.00        , now()     ,  now()  , 'sysadmin'),
+                             (16        ,   1           ,   7       ,  400.00        , now()     ,  now()  , 'sysadmin'),
                              (17        ,   4           ,   6       ,  450.00        , now()     ,  now()  , 'sysadmin'),
-						     (21        ,   5           ,   7       ,  250.00        , now()     ,  now()  , 'sysadmin');
+                             (21        ,   5           ,   7       ,  250.00        , now()     ,  now()  , 'sysadmin');
 
 DELETE FROM DoFit.`actividad_horario`;
 							 
 INSERT INTO DoFit.`actividad_horario`(id_actividad, id_dia, hora, minutos, fhcreacion, fhultmod, cusuario)
                                VALUES(1          , 1      , 20 , 30     , now()      , now()   , 'sysadmin'),
-									 (1          , 4      , 19 , 00     , now()      , now()   , 'sysadmin'),
-									 (2          , 5      , 20 , 00     , now()      , now()   , 'sysadmin'),
-						             (2          , 6      , 15 , 30     , now()      , now()   , 'sysadmin'),   
-						             (3          , 2      , 18 , 00     , now()      , now()   , 'sysadmin'),
-									 (3          , 5      , 19 , 00     , now()      , now()   , 'sysadmin'),
+                                     (1          , 4      , 19 , 00     , now()      , now()   , 'sysadmin'),
+                                     (2          , 5      , 20 , 00     , now()      , now()   , 'sysadmin'),
+                                     (2          , 6      , 15 , 30     , now()      , now()   , 'sysadmin'),   
+                                     (3          , 2      , 18 , 00     , now()      , now()   , 'sysadmin'),
+                                     (3          , 5      , 19 , 00     , now()      , now()   , 'sysadmin'),
                                      (4          , 1      , 16 , 30     , now()      , now()   , 'sysadmin'),
                                      (4          , 2      , 17 , 45     , now()      , now()   , 'sysadmin'),
                                      (5          , 4      , 18 , 00     , now()      , now()   , 'sysadmin'),
@@ -506,9 +514,18 @@ INSERT INTO DoFit.`actividad_alumno`(id_actividad, id_usuario, id_estado, fhcrea
                                    (1           , 3         , 1        ,  now()    , now()   , 'sysadmin'),
                                    (2           , 2         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (2           , 1         , 1        ,  now()	  , now()   , 'sysadmin'),
-                                   (3           , 4         , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 1         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (3           , 2         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (3           , 3         , 1        ,  now()	  , now()   , 'sysadmin'),	
+                                   (3           , 4         , 1        ,  now()	  , now()   , 'sysadmin'),	
+                                   (3           , 5         , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 6         , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 7         , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 9         , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 10        , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 11        , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 12        , 1        ,  now()	  , now()   , 'sysadmin'),
+                                   (3           , 13        , 1        ,  now()   , now()   , 'sysadmin'), 
                                    (4           , 2         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (4           , 4         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (5           , 1         , 1        ,  now()	  , now()   , 'sysadmin'),
@@ -518,8 +535,7 @@ INSERT INTO DoFit.`actividad_alumno`(id_actividad, id_usuario, id_estado, fhcrea
                                    (7           , 1         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (7           , 4         , 1        ,  now()	  , now()   , 'sysadmin'),
                                    (8           , 3         , 1        ,  now()	  , now()   , 'sysadmin'),
-                                   (7           , 2         , 1        ,  now()    , now()   , 'sysadmin'),  
-							       (3           , 8         , 1        ,  now()    , now()   , 'sysadmin');
+                                   (7           , 2         , 1        ,  now()    , now()   , 'sysadmin');
 
 DELETE FROM DoFit.`Admin`;
 
@@ -539,7 +555,7 @@ INSERT INTO DoFit.`Pago`(id_actividad, id_usuario, mes, anio, monto, fhcreacion,
                   VALUES(1           , 1         , 2  , 2015, 300.00, now()   , now()   , 'sysadmin'),
                         (1           , 2         , 2  , 2015, 300.00, now()   , now()   , 'sysadmin'),  						
                         (2           , 2         , 1  , 2015, 400.00, now()   , now()   , 'sysadmin'),
-						(3           , 4         , 1  , 2015, 300.00, now()   , now()   , 'sysadmin');  
+                        (3           , 4         , 1  , 2015, 300.00, now()   , now()   , 'sysadmin');  
 
 DELETE FROM DoFit.`Perfil_muro_profesor`;						
 
@@ -551,5 +567,5 @@ DELETE FROM DoFit.`Respuesta`;
  
 INSERT INTO DoFit.`Respuesta`(id_posteo, id_respuesta, respuesta, id_usuario, fhcreacion, fhultmod, cusuario)
                        VALUES(1        , 1          , 'Si en todos los horarios', 5 , now() , now() , 'sysadmin'),
-					         (2        , 2          , '$300'                    , 6 , now() , now() , 'sysadmin');
+                             (2        , 2          , '$300'                    , 6 , now() , now() , 'sysadmin');
                      
