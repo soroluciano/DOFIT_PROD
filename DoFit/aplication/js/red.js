@@ -249,12 +249,24 @@
             data: {},
             success:function(response){
                   $('#respuesta_ajax').html(response);
+                  cleanComentarios();                  
+      
             },
             error: function(e){
                alert(e);
             }
             });
    }
+   
+   function cleanComentarios(){
+          $('#comentarios').html("");
+          $('#boton_mas_comentarios').html("");    
+   }
+   
+   function cleanCompaneros() {
+         $('#comentarios').html("");
+   }
+   
    
    function getProfileFriend (id){
           $.ajax({
