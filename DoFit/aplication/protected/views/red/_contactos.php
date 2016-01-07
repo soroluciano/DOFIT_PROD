@@ -1,9 +1,21 @@
-    <div class="row">
+    <div id='content-contacts'>
+		<div class="contacto-filter">
+			<span class="title">Contactos</span>
+			<div class="filter">
+				<input type="text" id="filter-contacto"/>
+				 <button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-search"></span> Buscar 
+				</button>
+			</div>
+			
+		</div>
+
+
 
             <div class="panel modified col-md-8 col-xs-8">
-                <div class="panel-heading c-list">
-                    <span class="title">Compa&ntilde;eros</span>
-                </div>
+<!--                <div class="panel-heading c-list">
+
+                </div>-->
                 
 				 <ul class="list-group" id="contact-list">
 						<?php
@@ -41,3 +53,4 @@
     <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
     
 </div>
+<div class='propaganda-muro-3'>Publicite aqui</div>
