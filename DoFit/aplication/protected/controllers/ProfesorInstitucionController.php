@@ -241,7 +241,7 @@ class ProfesorInstitucionController extends Controller
 		if($actividadalumno != NULL){
 			echo "<table id='lisinscriptos' class='display' cellspacing='0' width='100%'>
                <thead>
-                <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th></tr></thead>
+                <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th></tr></thead>
             <tbody>";
 			foreach($actividadalumno as $actalum){
 				$fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
@@ -250,15 +250,7 @@ class ProfesorInstitucionController extends Controller
 				echo "<td id='nombre'>".$fichausuario->nombre ."</td>";
 				echo "<td id='apellido'>".$fichausuario->apellido. "</td>";
 				echo "<td id='dni'>".$fichausuario->dni . "</td>";
-				echo "<td id='email'>" .$usuario->email . "</td>";
-				echo "<td id='sexo'>";
-				if($fichausuario->sexo == 'M'){
-					echo "Masculino&nbsp&nbsp";
-				}
-				if($fichausuario->sexo == 'F'){
-					echo "Femenino&nbsp&nbsp";
-				}
-				echo "</td>";
+				echo "<td id='email' width='50%'>" .$usuario->email . "</td>";
 				$fechanac = date("d-m-Y",strtotime($fichausuario->fechanac));
 				echo "<td id='fecnac'>". $fechanac ."</td>";
 				/*echo "<div class='form-group'><b> Direcci&oacute;n: </b>" . $fichausuario->direccion . "&nbsp&nbsp";
@@ -276,3 +268,32 @@ class ProfesorInstitucionController extends Controller
 	}
 }
 ?>
+<script type="text/javascript">
+	$('#lisinscriptos').DataTable( {
+		"language" : {
+			"sProcessing":     "Procesando...",
+			"sLengthMenu":     "Mostrar _MENU_ registros",
+			"sZeroRecords":    "No se encontraron resultados",
+			"sEmptyTable":     "Ningún dato disponible en esta tabla",
+			"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			"sInfoPostFix":    "",
+			"sSearch":         "Buscar:",
+			"sUrl":            "",
+			"sInfoThousands":  ",",
+			"sLoadingRecords": "Cargando...",
+
+			"oPaginate": {
+				"sFirst":    "Primero",
+				"sLast":     "Ultimo",
+				"sNext":     "Siguiente",
+				"sPrevious": "Anterior"
+			},
+			"oAria": {
+				"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+				"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			}
+		}
+	} );
+</script>				
