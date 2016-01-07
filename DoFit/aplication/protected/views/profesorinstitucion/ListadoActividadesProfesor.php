@@ -74,17 +74,11 @@
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../profesorinstitucion/ListadoActividades">&times;</a></span></button>
                         <h4 class="modal-title">Alumnos Inscriptos en la actividad</h4>
                     </div>
-                    <div class="container">
-
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <div id="actaluminsc">
-                                </div>
-                                <a href="../profesorinstitucion/ListadoActividades" class="btn btn-primary">Volver</a>
-                            </div>
-                        </div>
-
+                    <br/>
+                    <div id="actaluminsc">
                     </div>
+                    <br/>
+                    <a href="../profesorinstitucion/ListadoActividades" class="btn btn-primary">Volver</a>
                 </div>
             </div>
         </div>
@@ -131,7 +125,7 @@
 }
 else
 {
-    $this->redirect("../aplication/");
+    $this->redirect("../aplication/site/Login");
 }
 ?>
 </html>
@@ -172,35 +166,7 @@ else
             dataType: "html",
             cache : false,
             success : function(response){
-                $('#lisinscriptos').DataTable( {
-                    "language" : {
-                        "sProcessing":     "Procesando...",
-                        "sLengthMenu":     "Mostrar _MENU_ registros",
-                        "sZeroRecords":    "No se encontraron resultados",
-                        "sEmptyTable":     "Ningún dato disponible en esta tabla",
-                        "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-                        "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-                        "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-                        "sInfoPostFix":    "",
-                        "sSearch":         "Buscar:",
-                        "sUrl":            "",
-                        "sInfoThousands":  ",",
-                        "sLoadingRecords": "Cargando...",
-
-                        "oPaginate": {
-                            "sFirst":    "Primero",
-                            "sLast":     "Ultimo",
-                            "sNext":     "Siguiente",
-                            "sPrevious": "Anterior"
-                        },
-                        "oAria": {
-                            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-                            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-                        }
-                    }
-                } ),
-
-                    $('#actaluminsc').append(response);
+                $('#actaluminsc').append(response);
                 $('#principal').modal('show');
             }
         })
