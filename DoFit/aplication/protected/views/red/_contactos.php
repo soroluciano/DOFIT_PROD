@@ -2,7 +2,7 @@
 		<div class="contacto-filter">
 			<span class="title">Contactos</span>
 			<div class="filter">
-				<input type="text" id="filter-contacto" onkeypress="getSearcherContactos();"/>
+				<input type="text" id="filter-contacto" onkeypress="getSearcherContactos(this.value);"/>
 				 <button type="button" class="btn btn-default btn-sm">
 						<span class="glyphicon glyphicon-search"></span> Buscar 
 				</button>
