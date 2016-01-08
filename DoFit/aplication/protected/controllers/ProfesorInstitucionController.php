@@ -253,11 +253,6 @@ class ProfesorInstitucionController extends Controller
 				echo "<td id='email' width='50%'>" .$usuario->email . "</td>";
 				$fechanac = date("d-m-Y",strtotime($fichausuario->fechanac));
 				echo "<td id='fecnac'>". $fechanac ."</td>";
-				/*echo "<div class='form-group'><b> Direcci&oacute;n: </b>" . $fichausuario->direccion . "&nbsp&nbsp";
-				$localidad = Localidad::model()->findByAttributes(array('id_localidad'=>$fichausuario->id_localidad));
-				echo "<b> Localidad: </b>". $localidad->localidad . "&nbsp&nbsp";
-				$provincia = Provincia::model()->findByAttributes(array('id_provincia'=>$localidad->id_provincia));
-				echo "<b> Provincia: </b>". $provincia->provincia."</div>";*/
 				echo "<td id='telfijo'>". $fichausuario->telfijo . "</td>";
 				echo "<td id='celular'>". $fichausuario->celular . "</td>";
 				echo "</tr>";
