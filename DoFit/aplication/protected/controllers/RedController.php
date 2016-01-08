@@ -90,7 +90,11 @@ class RedController  extends Controller{
     }
     
 
-
+	 public function actionGetSearcherContactos(){
+			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+			$contactos = Yii::app()->db->createCommand("select distinct (id_usuario) from actividad_alumno acal where acal.id_actividad in (select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and  aa.id_usuario = ".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.")")->queryAll();
+			$this->renderPartial('_contactos',array('contactos'=>$contactos,'usuario'=>$usuario));
+	 }
 
 
 
