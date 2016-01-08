@@ -1,4 +1,11 @@
-
+<html>
+<head>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.jqueryui.min.css"></link>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.smoothness.css"></link>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/dataTables.jqueryui.min.js"></script>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/modal.css"></link>
+</head>
 <?php
 /* @var $this SiteController */
 
@@ -58,15 +65,15 @@ $this->pageTitle=Yii::app()->name;
         <br>
         <br>";
         if($actividades_alumno != null) {
-            echo "<table class='table table-hover'>
+            echo "<table id='veractividades' class='display' cellspacing='0' width='100%'>
 	            <thead>
 		          <tr><th>Deporte</th><th>Días y Horarios</th><th>Valor actividad</th><th>Desafectar actividad</th></tr>
 		        </thead>
 		        <tbody>";
             foreach ($actividades_alumno as $act_alum) {
-                echo "<tr>";
                 $act = Actividad::model()->findByAttributes(array('id_institucion' => $ins->id_institucion, 'id_actividad' => $act_alum->id_actividad));
                 if ($act != null) {
+					echo "<tr>";
                     echo "<input type='hidden' value='$act->id_actividad' id='idactividad'></input>";
                     echo "<input type='hidden' value='$act_alum->id_usuario' id='idalumno'></input>";
                     $deporte = Deporte::model()->findByAttributes(array('id_deporte' =>$act->id_deporte));
@@ -79,10 +86,12 @@ $this->pageTitle=Yii::app()->name;
                         echo $dias[$id_dia]."&nbsp;".$act_hor->hora .':'.($act_hor->minutos == '0' ? '0'.$act_hor->minutos : $act_hor->minutos)." - ";
                     }
                     echo "</td>";
+				
                     ?>
                     <td id='valor'><?php echo  $act->valor_actividad;?></td>
                     <td id='elim'><a href="" data-toggle="modal" data-target="#myModal">Desafectar actividad</a></td>
-                    <?php
+                    </tr>
+					<?php
                     echo "
                      <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 						<div class='modal-dialog' role='document'>
@@ -102,7 +111,6 @@ $this->pageTitle=Yii::app()->name;
             </div>
          </div>";
                 }
-                echo "</tr>";
             }
             echo "</tbody>
 	           </table>";
@@ -114,7 +122,7 @@ $this->pageTitle=Yii::app()->name;
         ?>
     </div>
 </div>
-
+</html>
 <script type="text/javascript">
     function desafectaractividad()
     {
@@ -141,5 +149,34 @@ $this->pageTitle=Yii::app()->name;
         });
 
     }
-</script>	
-			   
+</script>
+
+<script type="text/javascript">
+    $('#veractividades').DataTable( {
+        "language" : {
+            "sProcessing":     "Procesando...",
+            "sLengthMenu":     "Mostrar _MENU_ registros",
+            "sZeroRecords":    "No se encontraron resultados",
+            "sEmptyTable":     "Ningún dato disponible en esta tabla",
+            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix":    "",
+            "sSearch":         "Buscar:",
+            "sUrl":            "",
+            "sInfoThousands":  ",",
+            "sLoadingRecords": "Cargando...",
+
+            "oPaginate": {
+                "sFirst":    "Primero",
+                "sLast":     "Ultimo",
+                "sNext":     "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+        }
+    } );
+</script>			 
