@@ -73,8 +73,14 @@ class RedController  extends Controller{
     }
     
     public function actionGetContactos(){
+      $busqueda = $_POST['busqueda'];
+      
       $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-      $contactos = Yii::app()->db->createCommand("select distinct (id_usuario) from actividad_alumno acal where acal.id_actividad in (select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and  aa.id_usuario = ".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.")")->queryAll();
+      if($busqueda!=null){
+        $contactos = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario and fu.nombre like '%".$busqueda."%' or fu.apellido like '%".$busqueda."%' limit 4" )->queryAll();
+      }else{
+          $contactos = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario limit 4" )->queryAll();
+      }
       $this->renderPartial('_contactos',array('contactos'=>$contactos,'usuario'=>$usuario));
     }
     
@@ -92,9 +98,9 @@ class RedController  extends Controller{
 
 	 public function actionGetSearcherContactos(){
 			$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-     // $busqueda = $_POST['busqueda'];
-      //$resultSet = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario and fu.nombre like '%".$busqueda."%' or fu.apellido like '%".$busqueda."%' limit 4" )->queryAll();
-			$resultSet = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =5 or a.id_usuario =5) and acal.id_usuario=fu.id_usuario and fu.nombre like '%va%' or fu.apellido like '%va%' limit 4" )->queryAll();
+      $busqueda = $_POST['busqueda'];
+      $resultSet = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario and fu.nombre like '%".$busqueda."%' or fu.apellido like '%".$busqueda."%' limit 4" )->queryAll();
+			//$resultSet = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =5 or a.id_usuario =5) and acal.id_usuario=fu.id_usuario and fu.nombre like '%va%' or fu.apellido like '%va%' limit 4" )->queryAll();
       //$this->renderPartial('_contactos',array('contactos'=>$contactos,'usuario'=>$usuario));
 			//$resultSet = Yii::app()->db->createCommand("select distinct acal.id_usuario,fu.nombre,fu.apellido from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario" )->queryAll();
 			//$this->renderPartial('_contactos',array('contactos'=>$contactos,'usuario'=>$usuario));

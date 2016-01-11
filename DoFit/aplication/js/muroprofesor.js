@@ -99,7 +99,7 @@
       window.$actualSizeMsgs.value=4;
       window.$channels={}
       window.$alertas={}
-    
+
       var pusher = new Pusher('c48d59c4cb61c7183954');    
 
       getQuantityPosts();
