@@ -66,7 +66,6 @@
         echo "<br/>";
         echo "<table id='lisprofesores' class='display' cellspacing='0' width='100%'>
                  <thead>
-                 <tr>
                  <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th> Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th><th>Eliminar Profesor</th></tr></thead>
                  <tbody>";
         foreach($profesores as $prof){

@@ -72,20 +72,20 @@ class ActividadAlumnoController extends Controller
         if($actividadesalumno != NULL){
             echo "<br/>";
             echo "<br/>";
-            echo "<table class='table table-hover'>
-			       <thead>
+            echo "<table id='conactividades' class='display'  cellspacing='0' width='100%'>
+			       <thead class='fuente'>
 				     <tr>
-					 <td><b>Deporte</b></td><td><b>Días y Horarios</b></td><td><b>Profesor</b></td><td><b>Valor Mensual</b></td><td><b>Mercado Pago</b></td>
+					 <th>Deporte</th><th>Días y Horarios</th><th>Profesor</th><th>Valor Mensual</th><th>Mercado Pago</th>
 					 </tr>
 				   </thead>
-			      <tbody>";
+			      <tbody class='fuente'>";
             foreach($actividadesalumno as $actalum){
                 $mp = new MP('5074134695637543', 'JBGhJiQy7dn5BOUzIH2jNYEpQiY3L1hB');
                 $diashorarios = array();
                 $cont = 0;
-                echo "<tr>";
                 $act = Actividad::model()->findByAttributes(array('id_actividad'=>$actalum->id_actividad,'id_institucion'=>$id_institucion));
                 if( $act != NULL){
+                    echo "<tr>";
                     $diashorariosact = "";
                     $deporte = Deporte::model()->findByAttributes(array('id_deporte'=>$act->id_deporte));
                     $diashorarios = ActividadHorario::model()->findAllByAttributes(array('id_actividad'=>$act->id_actividad));
@@ -114,8 +114,8 @@ class ActividadAlumnoController extends Controller
                     );
                     $botonactividadmp = $mp->create_preference($datosactividadmp);
                     echo "<td><a href=". $botonactividadmp['response']['init_point']." class='btn btn-primary'>Pagar con Mercado Pago </a></td>";
+                    echo "</tr>";
                 }
-                echo "</tr>";
             }
             echo "</tbody>
 			     </table>";
@@ -123,3 +123,32 @@ class ActividadAlumnoController extends Controller
     }
 }
 ?>
+<script type="text/javascript">
+    $('#conactividades').DataTable( {
+        "language" : {
+            "sProcessing":     "Procesando...",
+            "sLengthMenu":     "Mostrar _MENU_ registros",
+            "sZeroRecords":    "No se encontraron resultados",
+            "sEmptyTable":     "Ningún dato disponible en esta tabla",
+            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix":    "",
+            "sSearch":         "Buscar:",
+            "sUrl":            "",
+            "sInfoThousands":  ",",
+            "sLoadingRecords": "Cargando...",
+
+            "oPaginate": {
+                "sFirst":    "Primero",
+                "sLast":     "Ultimo",
+                "sNext":     "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+        }
+    } );
+</script>
