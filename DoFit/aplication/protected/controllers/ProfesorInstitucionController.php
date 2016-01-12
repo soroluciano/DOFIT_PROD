@@ -239,9 +239,9 @@ class ProfesorInstitucionController extends Controller
 		$idactividad = $_POST['idactividad'];
 		$actividadalumno = ActividadAlumno::model()->findAllByAttributes(array('id_actividad'=>$idactividad,'id_estado'=>1));
 		if($actividadalumno != NULL){
-			echo "<table id='lisinscriptos' class='display' cellspacing='0' width='100%'>
+			echo "<table id='lisinscriptos' cellspacing='0' width='100%'>
                <thead>
-                <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th></tr></thead>
+                <th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th></thead>
             <tbody>";
 			foreach($actividadalumno as $actalum){
 				$fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
