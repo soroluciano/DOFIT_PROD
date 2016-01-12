@@ -1,28 +1,3 @@
-    <div id='content-contacts'>
-		<div class="contacto-filter">
-<!--			<span class="title">Contactos</span>
-			<div class="filter">
-				<input type="text" id="filter-contacto" style='text-transform:lowercase'/>
-				 <button type="button" class="btn btn-default btn-sm" onclick="actionGetContactos();">
-						<span class="glyphicon glyphicon-search"></span> Buscar 
-				</button>
-			</div>-->
-		<?php	
-			$this->widget('application.extensions.autocomplete.AutoComplete', array(
-    'theme' => 'facebook',
-    'name' => 'searchqueryid',
-    //'prePopulate' => CJavaScript::encode($array),
-    'sourceUrl' => Yii::app()->createUrl('red/pruebaAjax'),
-    'hintText' => 'Try Typing places',
-        //'htmlOptions' => array('class' => 'form-control', 'placeholder' => 'Try Typing Places'),
-        //'widthInput' => '50px',
-        //'widthToken' => '250px',
-			));
-		?>	
-			
-		</div>
-
-
 
             <div class="panel modified col-md-8 col-xs-8">
 <!--                <div class="panel-heading c-list">

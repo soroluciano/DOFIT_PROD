@@ -10,6 +10,9 @@
 
 (function ($) {
 // Default settings
+
+
+
 var DEFAULT_SETTINGS = {
 	// Search settings
     method: "GET",
@@ -172,7 +175,7 @@ $.TokenList = function (input, url_or_data, settings) {
 
 
     // Save the tokens
-    var saved_tokens = [];
+    window.$saved_tokens = [];
 
     // Keep track of the number of tokens in the list
     var token_count = 0;
@@ -414,7 +417,7 @@ $.TokenList = function (input, url_or_data, settings) {
     }
     
     this.getTokens = function() {
-   		return saved_tokens;
+   		return  window.$saved_tokens;
    	}
 
     //
@@ -469,11 +472,11 @@ $.TokenList = function (input, url_or_data, settings) {
         $.data(this_token.get(0), "tokeninput", item);
 
         // Save this token for duplicate checking
-        saved_tokens = saved_tokens.slice(0,selected_token_index).concat([token_data]).concat(saved_tokens.slice(selected_token_index));
+        window.$saved_tokens =  window.$saved_tokens.slice(0,selected_token_index).concat([token_data]).concat(window.$saved_tokens.slice(selected_token_index));
         selected_token_index++;
 
         // Update the hidden input
-        update_hidden_input(saved_tokens, hidden_input);
+        update_hidden_input(window.$saved_tokens, hidden_input);
 
         token_count += 1;
 
@@ -593,11 +596,11 @@ $.TokenList = function (input, url_or_data, settings) {
         input_box.focus();
 
         // Remove this token from the saved list
-        saved_tokens = saved_tokens.slice(0,index).concat(saved_tokens.slice(index+1));
+         window.$saved_tokens =  window.$saved_tokens.slice(0,index).concat(window.$saved_tokens.slice(index+1));
         if(index < selected_token_index) selected_token_index--;
 
         // Update the hidden input
-        update_hidden_input(saved_tokens, hidden_input);
+        update_hidden_input( window.$saved_tokens, hidden_input);
 
         token_count -= 1;
 

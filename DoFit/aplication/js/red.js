@@ -242,23 +242,7 @@
    }
 
    
-   function getContactos(value) {
-      debugger;
-        var busqueda = value;
-            $.ajax({
-            url: baseurl+'/red/getContactos',  
-            type: 'POST',
-            data: 'busqueda='+busqueda,
-            success:function(response){
-                  $('#respuesta_ajax').html(response);
-                  cleanComentarios();                  
-      
-            },
-            error: function(e){
-               alert(e);
-            }
-            });
-   }
+  
    
    function cleanComentarios(){
           $('#comentarios').html("");

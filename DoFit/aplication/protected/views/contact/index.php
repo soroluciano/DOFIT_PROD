@@ -40,10 +40,8 @@ $cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
 		<?php $this->renderPartial('_cabecera',array('perfil'=>$perfil,'nombre'=>$nombre,'apellido'=>$apellido)); ?>
 	</div>
     
-    
-	<div id="respuesta_ajax">
-
-		<div id='content-contacts'>
+		
+				<div id='content-contacts'>
 		<div class="contacto-filter">
 			<span class="title">Contactos</span>
 			<div class="filter">
@@ -62,10 +60,15 @@ $cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
 					));
 				?>
 				 
-				 <button type="button" class="btn btn-default btn-sm" onclick="actionGetContactos();">
+				 <button type="button" class="btn btn-default btn-sm" onclick="getContactos();">
 						<span class="glyphicon glyphicon-search"></span> Buscar 
 				</button>
 			</div>
+		
+    
+	<div id="respuesta_ajax">
+
+
 			
 		</div>
 

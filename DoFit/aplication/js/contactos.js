@@ -1,31 +1,30 @@
-
-$('#filter-contacto').load(function(){
-  alert("hola");
-});
-
-   function getSearcherContactos(value) {
+ function getContactos() {
+    
     debugger;
-      var busqueda = value;
-           if (busqueda!=null && busqueda != "" ) {
-              $.ajax({
-                url: baseurl+'/red/getSearcherContactos',  
-                type: 'POST',
-                data: 'busqueda='+busqueda,
-                dataType: "json",
-                success:function(response){
-                    debugger;
-                    this.resultado="";
-                    for(var i=0;i<response.length;i++){
-                      this.resultado+="<br>"+ response[i].nombre + response[i].apellido + "<br>";
-                    }
-                      alert (this.resultado);
-                      this.resultado = "";
-                      this.busqueda = "";
-                },
-                error: function(e){
-                   alert(e);
-                }
-              });
-           }
-            
-   }
+    var res = window.$saved_tokens;
+    var re = new Array;
+    
+    for(var j=0; j<res.length; j++){
+        re[j] = res[j].id; 
+    }
+    var delimiter = ",";
+    
+    //alert(resultado);
+    //
+    window.$res = null;
+    window.$res = re.join(delimiter);
+    $.ajax({
+    url: baseurl+'/contact/getContactos',  
+    type: 'POST',
+    data: 'busqueda='+window.$res,
+    success:function(response){
+      //alert(response);
+      alert(response);
+          //$('#respuesta_ajax').html(response);          
+    
+    },
+    error: function(e){
+       alert(e);
+    }
+    });
+}
