@@ -242,11 +242,13 @@
    }
 
    
-   function getContactos() {
+   function getContactos(value) {
+      debugger;
+        var busqueda = value;
             $.ajax({
             url: baseurl+'/red/getContactos',  
             type: 'POST',
-            data: {},
+            data: 'busqueda='+busqueda,
             success:function(response){
                   $('#respuesta_ajax').html(response);
                   cleanComentarios();                  

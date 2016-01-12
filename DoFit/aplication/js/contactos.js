@@ -3,9 +3,9 @@ $('#filter-contacto').load(function(){
   alert("hola");
 });
 
-   function getSearcherContactos() {
+   function getSearcherContactos(value) {
     debugger;
-      var busqueda = $('#filter-contacto').val();
+      var busqueda = value;
            if (busqueda!=null && busqueda != "" ) {
               $.ajax({
                 url: baseurl+'/red/getSearcherContactos',  

@@ -18,7 +18,7 @@
 				</div>
 				<div class='profile_friends_fotos'>
 						<ul>
-						<li><?php echo "60"?><a href='<?php echo Yii::app()->request->baseUrl;?>/contact/index' style="cursor:pointer;"> Contactos</a>. Contacta con ellos</li>		
+						<li><?php echo "60"?><a onclick="getContactos(null)"; style="cursor:pointer;"> Contactos</a>. Contacta con ellos</li>		
 						<li><a onclick="galeria();" style="cursor:pointer;"> Fotografías.</a></li>
 						</ul>
 				</div>
