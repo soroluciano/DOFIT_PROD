@@ -96,7 +96,7 @@ class RedController  extends Controller{
     $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
     $busqueda = $_GET['q'];
 
-    $resultSet = Yii::app()->db->createCommand("select distinct acal.id_usuario as id,concat(fu.nombre,' ',fu.apellido) as name from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario and fu.nombre like '%".$busqueda."%' or fu.apellido like '%".$busqueda."%' limit 4" )->queryAll(); 
+    $resultSet = Yii::app()->db->createCommand("select fu.id_usuario as id,concat(fu.nombre,' ',fu.apellido) as name from actividad_alumno acal join ficha_usuario fu where acal.id_actividad in(select distinct(a.id_actividad) from actividad_alumno aa,actividad a where aa.id_actividad=a.id_actividad and aa.id_usuario =".$usuario->id_usuario." or a.id_usuario =".$usuario->id_usuario.") and acal.id_usuario=fu.id_usuario and fu.nombre like '%".$busqueda."%' or fu.apellido like '%".$busqueda."%' limit 4" )->queryAll(); 
     if ($resultSet){
         echo CJSON::encode($resultSet);
     }else{

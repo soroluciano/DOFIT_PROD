@@ -492,7 +492,7 @@ $.TokenList = function (input, url_or_data, settings) {
     // Add a token to the token list based on user input
     function add_token (item) {
         var callback = settings.onAdd;
-
+      debugger;
         // See if the token already exists and select it if we don't want duplicates
         if(token_count > 0 && settings.preventDuplicates) {
             var found_existing_token = null;
@@ -668,6 +668,7 @@ $.TokenList = function (input, url_or_data, settings) {
 
     // Populate the results dropdown with some results
     function populate_dropdown (query, results) {
+      debugger;
         if(results && results.length) {
             dropdown.empty();
             var dropdown_ul = $("<ul>")
@@ -760,6 +761,7 @@ $.TokenList = function (input, url_or_data, settings) {
 
     // Do the actual search
     function run_search(query) {
+      debugger;
         var cache_key = query + computeURL();
         var cached_results = cache.get(cache_key);
         if(cached_results) {
