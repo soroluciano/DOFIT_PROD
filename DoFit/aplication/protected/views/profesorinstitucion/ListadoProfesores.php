@@ -50,60 +50,58 @@
     </div>
 </header>
 <div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class='row'>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
         <?php
         if(isset(Yii::app()->session['id_institucion'])){
-        $idinstitucion = Yii::app()->user->id;
-        $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
-        if($profesores !=null){
-        echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
-        echo "<br/>";
-        echo "<table id='lisprofesores' class='display' cellspacing='0' width='100%'>
-                 <thead>
-                 <tr><th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th> Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th><th>Eliminar Profesor</th></tr></thead>
-                 <tbody>";
-        foreach($profesores as $prof){
-        $profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
-        ?>
-        <tr>
-            <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor">
-            </input>
-            <input type="hidden" name="valor" id="valor"></input>
-            <td id="nombre" class="success"><?php echo $profesor->nombre;?></td>
-            <td id="apellido"><?php echo $profesor->apellido;?></td>
-            <td id="dni"><?php echo $profesor->dni; ?></td>
-            <td id="email">
-                <?php
-                $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
-                echo $usuario->email;?></td>
-            <td id="sexo">
-                <?php
-                if($profesor->sexo == 'M'){
-                    echo "Masculino";
-                }
-                if($profesor->sexo == 'F'){
-                    echo "Femenino";
-                }
-                ?>
-            </td>
-            <td id="fecnac">
-                <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
-                echo $fechanac;?>
-            </td>
-            <td><a id="tel"  href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver tel&eacute;fonos</a></td>
-            <td><a id="dir"  href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver direcci&oacute;n</a></td>
-            <td><a id="act"  href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
-            <td><a href="" data-toggle="modal" data-target="#borrarprofemodal" >Eliminar de la institución</a></td>
-        </tr>
-    </div>
-    <?php
-    echo "<div class='modal fade' id='borrarprofemodal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+            $idinstitucion = Yii::app()->user->id;
+            $profesores = ProfesorInstitucion::model()->findAll('id_institucion=:id_institucion',array(':id_institucion'=>$idinstitucion));
+            if($profesores !=null){
+                echo "<div><h2>Profesores inscriptos en la instituci&oacute;n</h2></div>";
+                echo "<br/>";
+                echo "<table id='lisprofesores' class='display' cellspacing='0' width='100%'>
+                 <thead class='fuente'>
+                 <th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Sexo</th><th>Fecha Nacimiento</th><th>Tel&eacute;fonos</th><th>Direcci&oacute;n</th><th>Actividades</th><th>Eliminar Profesor</th></thead>
+                 <tbody class='fuente'>";
+                foreach($profesores as $prof){
+                    $profesor = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$prof->id_usuario));
+                    ?>
+                    <tr>
+                        <input type="hidden" value="<?php echo $prof->id_usuario?>" name="idprofesor" id="idprofesor">
+                        </input>
+                        <input type="hidden" name="valor" id="valor"></input>
+                        <td id="nombre"><?php echo $profesor->nombre;?></td>
+                        <td id="apellido"><?php echo $profesor->apellido;?></td>
+                        <td id="dni"><?php echo $profesor->dni; ?></td>
+                        <td id="email">
+                            <?php
+                            $usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$prof->id_usuario));
+                            echo $usuario->email;?></td>
+                        <td id="sexo">
+                            <?php
+                            if($profesor->sexo == 'M'){
+                                echo "Masculino";
+                            }
+                            if($profesor->sexo == 'F'){
+                                echo "Femenino";
+                            }
+                            ?>
+                        </td>
+                        <td id="fecnac">
+                            <?php $fechanac = date("d-m-Y",strtotime($profesor->fechanac));
+                            echo $fechanac;?>
+                        </td>
+                        <td><a id="tel"  href="#" onClick="javascript:Mostrartelefonos(<?php echo $prof->id_usuario;?>);">Ver Tel&eacute;fonos</a></td>
+                        <td><a id="dir"  href="#" onClick="javascript:Mostrardireccion(<?php echo $prof->id_usuario;?>);")>Ver Direcci&oacute;n</a></td>
+                        <td><a id="act"  href="#" onClick="javascript:Mostraractividades(<?php echo $prof->id_usuario;?>);")>Ver Actividades</td>
+                        <td><a href="#" data-toggle="modal" data-target="#borrarprofemodal">Eliminar de la Institución</a></td>
+                    </tr>
+
+                    <?php
+                    echo "<div class='modal fade' id='borrarprofemodal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
                            <div class='modal-dialog' role='document'>
                               <div class='modal-content'>
                                 <div class='modal-header'>
@@ -120,7 +118,7 @@
                             </div>
                         </div>
                     </div>";
-    echo "<div class='modal fade'  id='mensajeerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+                    echo "<div class='modal fade'  id='mensajeerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 				           <div class='modal-dialog' role='document'>
 					        <div class='modal-content'>
 						      <div class='modal-header'>
@@ -135,10 +133,9 @@
 						    </div>
 					      </div>
 					    </div>
-				    </div>
-			    </div>";
-    // Modal telefonos
-    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datostelefonos' aria-labelledby='myLargeModalLabel'>
+				    </div>";
+                    // Modal telefonos
+                    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datostelefonos' aria-labelledby='myLargeModalLabel'>
                     <div class='modal-dialog modal-lg'>
                         <div class='modal-content'>
                             <div class='container'>
@@ -153,8 +150,8 @@
                         </div>
                     </div>
                 </div>";
-    // Modal Direccion
-    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosdireccion' aria-labelledby='myLargeModalLabel'>
+                    // Modal Direccion
+                    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosdireccion' aria-labelledby='myLargeModalLabel'>
                     <div class='modal-dialog modal-lg'>
                         <div class='modal-content'>
                             <div class='container'>
@@ -170,8 +167,8 @@
                     </div>
                 </div>";
 
-    // Modal Actividades
-    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosactividades' aria-labelledby='myLargeModalLabel'>
+                    // Modal Actividades
+                    echo "<div class='modal fade bs-example-modal-lg' tabindex='-1' role='dialog' id='datosactividades' aria-labelledby='myLargeModalLabel'>
                     <div class='modal-dialog modal-lg'>
                         <div class='modal-content'>
                             <div class='container'>
@@ -186,24 +183,25 @@
                         </div>
                     </div>
                 </div>";
-    }
-    echo "</tbody>";
-    echo "</table>";
-    }
-    else{
-        echo "<div class='row'>
+                }
+                echo "</tbody>";
+                echo "</table>";
+            }
+            else{
+                echo "<div class='row'>
                         <div class='.col-md-6 .col-md-offset-3'>
                             <h2 class='text-center'>No hay Profesores asociados a la instituci&oacute;n</h2>
                         </div>
                     </div>";
-    }
-    }
-    else {
-        $this->redirect(array('../aplication/site/LoginInstitucion'));
-    }
-    ?>
+            }
+        }
+        else {
+            $this->redirect(array('../aplication/site/LoginInstitucion'));
+        }
+        ?>
+    </div>
 </div>
-</div>
+</html>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#lisprofesores').DataTable( {
@@ -318,4 +316,3 @@
         });
     }
 </script>
-</html>

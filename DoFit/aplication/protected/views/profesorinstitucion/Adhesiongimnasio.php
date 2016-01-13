@@ -1,12 +1,9 @@
-<?php if(!Yii::app()->user->isGuest){
-    //Es un usuario logueado.
-    $Us = Usuario::model()->findByPk(Yii::app()->user->id);
-    $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-}
-?>
 <html>
 <head>
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/carrousel.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.jqueryui.min.css"></link>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/datatable/css/dataTables.smoothness.css"></link>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/datatable/js/dataTables.jqueryui.min.js"></script>
 </head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
@@ -24,7 +21,13 @@
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Bienvenido! <?php echo $ficha->nombre ."&nbsp".$ficha->apellido; ?></a></li>
+                <li><a href="">Bienvenido! <?php
+                        if(isset(Yii::app()->session['id_usuario'])){
+                            //Es un usuario logueado.
+                            $Us = Usuario::model()->findByPk(Yii::app()->user->id);
+                            $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+                            echo $ficha->nombre."&nbsp".$ficha->apellido;
+                        } ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
@@ -48,7 +51,7 @@
                 </div>
                 <div class="container">
                     <div class="form">
-                        <div class="col-md-8">
+                        <div class="col-md-9">
                             <div class="form-group">
                                 <br/>
                                 <?php $form=$this->beginWidget('CActiveForm', array('id'=>'usuario-form', 'enableAjaxValidation'=>false, 'enableClientValidation'=>true, 'clientOptions'=>array('validateOnSubmit'=>true,),));?>
@@ -65,7 +68,7 @@
                                     <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control",'onchange'=>"ConsultarInstituciones();")); ?>
                                 </div>
                                 <br/>
-                                <div class="form-group" id="mostrargimnasios">
+                                <div  id="mostrargimnasios">
                                 </div>
                                 <br/>
                                 <a href="../site/index" class="btn btn-primary">Volver</a>
@@ -137,6 +140,7 @@ else
     $this->render('../site/login');
 }
 $this->endWidget();?>
+</html>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#principal').modal('show');

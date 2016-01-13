@@ -66,10 +66,10 @@ $this->pageTitle=Yii::app()->name;
         <br>";
         if($actividades_alumno != null) {
             echo "<table id='veractividades' class='display' cellspacing='0' width='100%'>
-	            <thead>
+	            <thead class='fuente'>
 		          <tr><th>Deporte</th><th>Días y Horarios</th><th>Valor actividad</th><th>Desafectar actividad</th></tr>
 		        </thead>
-		        <tbody>";
+		        <tbody class='fuente'>";
             foreach ($actividades_alumno as $act_alum) {
                 $act = Actividad::model()->findByAttributes(array('id_institucion' => $ins->id_institucion, 'id_actividad' => $act_alum->id_actividad));
                 if ($act != null) {
