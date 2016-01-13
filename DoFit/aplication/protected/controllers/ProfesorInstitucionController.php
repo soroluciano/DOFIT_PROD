@@ -22,14 +22,14 @@ class ProfesorInstitucionController extends Controller
 		$ficinstituciones = FichaInstitucion::model()->findAll($criteria);
 
 		if($ficinstituciones != NULL){
-			echo "<table class='table table-hover'>
-                     <thead>
+			echo "<table id='mosinstituciones' class='display' cellspacing='0' width='100%'>
+                     <thead class='fuente'>
                      <tr>
-				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th>Estado</th></tr></thead>";
+				     <th>Nombre</th><th>Cuit</th><th>Direccion</th><th>Tel. Fijo</th><th>Celular</th><th>Depto.</th><th>Piso</th><th>Estado</th></tr></thead>
+			         <tbody class='fuente'>";
 			foreach($ficinstituciones as $ficins){
 				$profins = ProfesorInstitucion::model()->findByAttributes(array('id_usuario'=>$id_usuario,'id_institucion'=>$ficins->id_institucion));
-				echo "<tbody>
-                      <tr>";
+				echo  "<tr>";
 				echo  "<td id='nombre'>" . $ficins->nombre . "</td>";
 				echo  "<td id='cuit'>" . $ficins->cuit . "</td>";
 				echo  "<td id='direccion'>" . $ficins->direccion ."</td>";
@@ -144,7 +144,7 @@ class ProfesorInstitucionController extends Controller
 		$queryact = Yii::app()->db->createCommand('SELECT id_actividad,valor_actividad FROM actividad where id_institucion= '.$idinstitucion.' and id_usuario = '.$idusuario)->queryAll();
 		foreach($queryact as $act){
 			echo "<tr>
-						<td id='depo'>";
+				  <td id='depo'>";
 			$dep = Yii::app()->db->createCommand('SELECT deporte FROM deporte where id_deporte IN(SELECT id_deporte FROM actividad where id_actividad= '.$act['id_actividad'].')')->queryRow();
 			echo $dep['deporte'];
 			echo "</td>";
@@ -209,7 +209,8 @@ class ProfesorInstitucionController extends Controller
 		if($actividades != NULL){
 			echo "<table class='table table-hover'>
 	         <td><b>Deporte</b></td><td><b>Días y Horarios</b></td><td><b>Alumnos Inscriptos</b></td>
-	         </tr></thead>
+	         </tr>
+			 </thead>
 	         <tbody>";
 			foreach($actividades as $act){
 				echo "<tr>";
@@ -239,10 +240,10 @@ class ProfesorInstitucionController extends Controller
 		$idactividad = $_POST['idactividad'];
 		$actividadalumno = ActividadAlumno::model()->findAllByAttributes(array('id_actividad'=>$idactividad,'id_estado'=>1));
 		if($actividadalumno != NULL){
-			echo "<table id='lisinscriptos' cellspacing='0' width='100%'>
-               <thead>
+			echo "<table id='lisinscriptos'  class='display' cellspacing='0' width='100%'>
+               <thead class='fuente'>
                 <th>Nombre</th><th>Apellido</th><th>Dni</th><th>Email</th><th>Fecha Nacimiento</th><th>Tel&eacute;fono Fijo</th><th>Celular</th></thead>
-            <tbody>";
+            <tbody class='fuente'>";
 			foreach($actividadalumno as $actalum){
 				$fichausuario = FichaUsuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
 				$usuario = Usuario::model()->findByAttributes(array('id_usuario'=>$actalum->id_usuario));
@@ -263,6 +264,7 @@ class ProfesorInstitucionController extends Controller
 	}
 }
 ?>
+
 <script type="text/javascript">
 	$('#lisinscriptos').DataTable( {
 		"language" : {
@@ -291,4 +293,33 @@ class ProfesorInstitucionController extends Controller
 			}
 		}
 	} );
-</script>				
+</script>
+<script type="text/javascript">
+	$('#mosinstituciones').DataTable( {
+		"language" : {
+			"sProcessing":     "Procesando...",
+			"sLengthMenu":     "Mostrar _MENU_ registros",
+			"sZeroRecords":    "No se encontraron resultados",
+			"sEmptyTable":     "Ningún dato disponible en esta tabla",
+			"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			"sInfoPostFix":    "",
+			"sSearch":         "Buscar:",
+			"sUrl":            "",
+			"sInfoThousands":  ",",
+			"sLoadingRecords": "Cargando...",
+
+			"oPaginate": {
+				"sFirst":    "Primero",
+				"sLast":     "Ultimo",
+				"sNext":     "Siguiente",
+				"sPrevious": "Anterior"
+			},
+			"oAria": {
+				"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+				"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			}
+		}
+	} );
+</script>					
