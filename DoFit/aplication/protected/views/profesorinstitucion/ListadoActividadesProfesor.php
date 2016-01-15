@@ -34,6 +34,15 @@
         </nav>
     </div>
 </header>
+<!--<style type="text/css">
+    body {
+        background: url(../img/futbol.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>!-->
 <br/>
 <br/>
 <br/>
@@ -44,7 +53,7 @@
             <div class="form">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <h3> Actividades dictadas por <?php echo $ficha->nombre . "&nbsp" . $ficha->apellido; ?></h3>
+                        <h3>Actividades dictadas por <?php echo $ficha->nombre . "&nbsp" . $ficha->apellido; ?></h3>
                         <br/>
                         <h5><b>Instituci&oacute;n</b></h5>
                         <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividadesInscripto();">

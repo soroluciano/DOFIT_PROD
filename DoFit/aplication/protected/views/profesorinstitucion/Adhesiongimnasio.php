@@ -35,7 +35,7 @@
 </header>
 <style type="text/css">
     body {
-        background: url(../img/futbol.jpg) no-repeat center center fixed;
+        background: url(../img/27.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
