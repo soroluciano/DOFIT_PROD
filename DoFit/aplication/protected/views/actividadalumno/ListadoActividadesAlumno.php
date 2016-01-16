@@ -48,7 +48,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></h4>
+                <h4 class="modal-title"><b>Actividades de <?php echo $ficha->nombre . "&nbsp". $ficha->apellido;?></b></h4>
             </div>
             <div class="container">
                 <div class="form">
@@ -67,11 +67,12 @@
                             </select>
                             <div id="mostraractividades">
                             </div>
-                            <br/>
-                            <a href="../site/index" class="btn btn-primary">Volver</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class='modal-footer'>
+                <a href="../site/index" class="btn btn-primary">Volver</a>
             </div>
         </div>
         <?php

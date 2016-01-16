@@ -49,6 +49,15 @@
         </nav>
     </div>
 </header>
+<style type="text/css">
+    body {
+        background: url(../img/fondo1.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
 <div class="container">
     <div class='row'>
         <br>
