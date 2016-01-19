@@ -29,8 +29,6 @@ class ContactController extends Controller
       $res =  FichaUsuario::model()->findAll($criteria);
       $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
       $this->renderPartial('_contactos',array('contactos'=>$res,'usuario'=>$usuario));				
-				//echo CJSON::encode($res);
-				//Yii::app()->end();
     }
     
     public function actionAmigo(){

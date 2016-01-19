@@ -11,14 +11,13 @@
 										$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$cn['id_usuario']));
 									echo"<li class='list-group-item'>
 										<div class='col-xs-4 col-sm-3'>";
+										//$imagen = Imagen::model()->find('id_usuario=id_usuario',array(':id_usuario'=>$cn['id_usuario']));
 										$perfil = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$cn['id_usuario']));
-										//if($perfil->fotoPerfil!=null){
-										//		echo "<img src='".Yii::app()->request->baseUrl."/uploads/' onclick='getProfileFriend(".$cn['id_usuario'].")' width='120px' height='120px' class='img-circle' style='cursor:pointer' />";
-										//}else{
-										//		echo "<img src='".Yii::app()->request->baseUrl."/images/profile_defect_picture.png'  width='120px' height='120px' class='img-circle' style='cursor:pointer' />";
-										//}
-										echo "<img src='".Yii::app()->request->baseUrl."/images/profile_defect_picture.png'  width='120px' height='120px' class='img-circle' style='cursor:pointer' />";
-										
+										if($perfil->fotoperfil!=null){
+												echo "<img src='".Yii::app()->request->baseUrl."/uploads/".$perfil->fotoperfil."' onclick='getProfileFriend(".$cn['id_usuario'].")' width='120px' height='120px' class='img-circle' style='cursor:pointer' />";
+										}else{
+												echo "<img src='".Yii::app()->request->baseUrl."/images/profile_defect_picture.png'  width='120px' height='120px' class='img-circle' style='cursor:pointer' />";
+										}
 										
 									echo"</div>
 										<div class='col-xs-12 col-sm-9'>
