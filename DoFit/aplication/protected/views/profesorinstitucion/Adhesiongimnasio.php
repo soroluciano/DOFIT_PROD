@@ -35,7 +35,7 @@
 </header>
 <style type="text/css">
     body {
-        background: url(../img/futbol.jpg) no-repeat center center fixed;
+        background: url(../img/27.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -47,7 +47,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Adhirete a un gimnasio como profesor!</h4>
+                    <h4 class="modal-title"><b>Adhirete a un gimnasio como profesor!</b></h4>
                 </div>
                 <div class="container">
                     <div class="form">
@@ -68,14 +68,17 @@
                                     <?php echo $form->dropDownList($localidad,'id_localidad',array('empty'=>"Selecciona tu localidad"),array('class'=>"form-control",'onchange'=>"ConsultarInstituciones();")); ?>
                                 </div>
                                 <br/>
-                                <div  id="mostrargimnasios">
+                                <div id="mostrargimnasios">
                                 </div>
                                 <br/>
-                                <a href="../site/index" class="btn btn-primary">Volver</a>
                             </div>
                         </div>
                     </div>
                 </div>
+				<div class='modal-footer'>
+				     <a href="../site/index" class="btn btn-primary">Volver</a>
+				</div>	 
+				</div>   
             </div>
         </div>
     </div>

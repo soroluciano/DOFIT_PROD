@@ -81,14 +81,17 @@ return array(
 
 		'user'=>array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>false,
-
+			'allowAutoLogin'=>true,
+            'authTimeout' => 31104000, // A year
+            'absoluteAuthTimeout' => 31104000,
+            'autoRenewCookie'=>true,
         ),
 
         'session'=>array(
             'class' => 'CDbHttpSession',
             'connectionID' => 'db',
             'sessionTableName' => 'dbsession',
+            'timeout' => 31104000,
         ),
 
 		// uncomment the following to enable URLs in path-format

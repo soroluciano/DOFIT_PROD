@@ -34,18 +34,28 @@
         </nav>
     </div>
 </header>
+<style type="text/css">
+    body {
+        background: url(../img/futbol.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
 <br/>
 <br/>
 <br/>
 <br/>
 <?php  if(isset(Yii::app()->session['id_usuario'])){ ?>
     <?php if($instituciones != NULL){  ?>
-        <div class="container">
-            <div class="form">
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <h3> Actividades dictadas por <?php echo $ficha->nombre . "&nbsp" . $ficha->apellido; ?></h3>
-                        <br/>
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class='modal-title'><b>Actividades dictadas por <?php echo $ficha->nombre . "&nbsp" . $ficha->apellido; ?></b></h4>
+                    </div>
+                    <div class='modal-body'>
                         <h5><b>Instituci&oacute;n</b></h5>
                         <select id="idinstitucion" class="form-control" onchange="javascript:ConsultarActividadesInscripto();">
                             <?php
@@ -62,23 +72,29 @@
                         <div class="form-group" id="mostraractividades">
                         </div>
                         <br/>
-                        <a href="../site/index" class="btn btn-primary">Volver</a>
+                    </div>
+                    <div class='modal-footer'>
+                        <a href="../site/index" class="btn btn-primary" align="center">Volver</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="principal" aria-labelledby="myLargeModalLabel">
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="aluminsc" aria-labelledby="myLargeModalLabel">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../profesorinstitucion/ListadoActividades">&times;</a></span></button>
-                        <h4 class="modal-title">Alumnos Inscriptos en la actividad</h4>
+                        <h4 class="modal-title"><b>Alumnos Inscriptos en la actividad</b></h4>
                     </div>
                     <br/>
-                    <div id="actaluminsc">
+                    <div class='modal-body'>
+                        <div id="actaluminsc">
+                        </div>
                     </div>
                     <br/>
-                    <a href="../profesorinstitucion/ListadoActividades" class="btn btn-primary">Volver</a>
+                    <div class='modal-footer'>
+                        <a href="../profesorinstitucion/ListadoActividades" class="btn btn-primary">Cerrar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,7 +104,7 @@
                 <div class='modal-content'>
                     <div class='modal-header'>
                         <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                        <h4 class='modal-title' id='myModalLabel'>¡Error!</h4>
+                        <h4 class='modal-title' id='myModalLabel'>¡Atenci&oacute;n!</h4>
                     </div>
                     <div class='modal-body'>
                         No dictas ninguna actividad para esa Instituci&oacute;n
@@ -99,6 +115,9 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            $("#principal").modal('show');
+        </script>
     <?php }
     else{?>
         <div class='modal fade' id='inserror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
@@ -167,7 +186,7 @@ else
             cache : false,
             success : function(response){
                 $('#actaluminsc').append(response);
-                $('#principal').modal('show');
+                $('#aluminsc').modal('show');
             }
         })
     }

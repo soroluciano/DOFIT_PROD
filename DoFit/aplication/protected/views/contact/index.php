@@ -60,7 +60,7 @@ $cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
 					));
 				?>
 				 
-				 <button type="button" class="btn btn-default btn-sm" onclick="getContactos();">
+				 <button type="button" id ="btn_s" class="btn btn-default btn-sm" onclick="getContactos();">
 						<span class="glyphicon glyphicon-search"></span> Buscar 
 				</button>
 			</div>
