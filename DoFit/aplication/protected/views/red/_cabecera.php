@@ -19,7 +19,7 @@
 				<div class='profile_friends_fotos'>
 						<ul>
 						<li><?php echo "60"?><a href='<?php echo Yii::app()->request->baseUrl;?>/contact/index' style="cursor:pointer;"> Contactos</a>. Contacta con ellos</li>		
-						<li><a onclick="galeria();" style="cursor:pointer;"> Fotografías.</a></li>
+						<li><?php echo "60"?><a href='<?php echo Yii::app()->request->baseUrl;?>/galeria/index' style="cursor:pointer;"> .Imagenes</a></li>		
 						</ul>
 				</div>
 <!--				<div class='sports'>

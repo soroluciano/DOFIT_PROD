@@ -242,5 +242,15 @@ div.newposts{
   height: 15px;
 }
 
+.modal.fade{
+  margin-top: 500px;
+}
+
+.container_gallery{
+    margin: 30px;
+    background-color:white;
+    height: 900px;
+}
+
 
 

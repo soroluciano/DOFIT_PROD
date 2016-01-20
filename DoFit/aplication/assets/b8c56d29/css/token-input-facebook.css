@@ -4,7 +4,7 @@ ul.token-input-list-facebook {
     overflow-x: auto; 
     height: auto !important; 
     height: 1%;
-    width: 60%;
+    width: 80%;
     border: 1px solid #8496ba;
     cursor: text;
     font-size: 14px;
@@ -16,7 +16,7 @@ ul.token-input-list-facebook {
     background-color: #fff;
     list-style-type: none;
     clear: left;
-    margin-right: 10px;
+   /* margin-right: 10px;*/
 /*    margin-bottom: .5em;
     margin-top: .5em;*/
     float:left;
@@ -27,7 +27,7 @@ ul.token-input-list-facebook li input {
     width: 100px;
     padding: 3px 8px;
     background-color: white;
-    margin: 2px 0;
+  /*  margin: 2px 0;*/
     -webkit-appearance: caret;
 }
 

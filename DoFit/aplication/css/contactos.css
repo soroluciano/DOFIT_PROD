@@ -151,7 +151,7 @@ ul.c-controls li a:hover {
 }
 
 /*hamburguer*/
-
+/*
   .navbar-header {
       float: none;
   }
@@ -182,7 +182,7 @@ ul.c-controls li a:hover {
 .navbar-collapse.collapse.in{
     display: block!important;
 }
-
+*/
 #btn_s{
     float:left;
     margin-left: 10px;
