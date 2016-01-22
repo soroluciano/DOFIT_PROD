@@ -174,6 +174,7 @@ class ActividadController extends Controller
         $localidad = new Localidad();
         // echo "error";
         if (isset($_POST['deporte']) && isset($_POST['provincia']) && isset($_POST['localidad'])) {
+            $id_usuario = Yii::app()->user->id;
             $criteria = new CDbCriteria;
             $criteria->condition = 'id_localidad = :localidad and id_institucion IN (select id_institucion from actividad where id_deporte = :deporte)';
             $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte']);
@@ -183,19 +184,37 @@ class ActividadController extends Controller
             $locations = "";
 
             foreach ($gimnasio as $gim) {
-                if($gim->acepta_mp == 'S'){
+                if ($gim->acepta_mp == 'S') {
                     $gim->acepta_mp = 'Si';
                 }
-                if($gim->acepta_mp == 'N'){
+                if ($gim->acepta_mp == 'N') {
                     $gim->acepta_mp = 'No';
                 }
-                if($locations == ""){
-                    $locations = $locations . '["<u><center><b>' . $gim->nombre . '</center></b></u><br>'.' <b>Dirección: </b>' . $gim->direccion . '<br>'.' <b>Teléfono: </b>' . $gim->telfijo . '<br>'.'<b> Mercado Pago: </b>' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
-                }
-                else{
-                    $locations = $locations . ',["<u><center><b>' . $gim->nombre . '</center></b></u><br>'.' <b>Dirección: </b> ' . $gim->direccion . '<br>'.' <b>Teléfono: </b>' . $gim->telfijo . '<br>'.'<b> Mercado Pago: </b>' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
-                }
+                $list = Yii::app()->db->createCommand('select 1 from dual where (select count(*) from actividad where actividad.id_institucion =' . $gim->id_institucion . ' and  id_deporte = ' . $_POST['deporte'] . ')  - (select count(*) from actividad_alumno where id_usuario = ' . $id_usuario . ' and id_actividad in (select id_actividad from actividad where id_institucion = ' . $gim->id_institucion . ' and id_deporte = ' . $_POST['deporte'] . ')) > 0 ')->queryRow();
 
+                if ($list) {
+                    if ($locations == "") {
+                        $locations = $locations . '["<u><center><b>' . $gim->nombre . '</center></b></u><br>' .
+                            ' <b>Dirección: </b>' . $gim->direccion . '<br>' .
+                            ' <b>Teléfono: </b>' . $gim->telfijo . '<br>' .
+                            '<b> Mercado Pago: </b>' . $gim->acepta_mp . '"' . ',
+                                                  ' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',
+                                                  ' . $i++ . ']';
+                    }
+                    /* $locations = $locations . '["<u><center><b>' . $gim->nombre . '</center></b></u><br>'.
+                                                 ' <b>Dirección: </b>' . $gim->direccion . '<br>'.
+                                                 ' <b>Teléfono: </b>' . $gim->telfijo . '<br>'.
+                                                 '<b> Mercado Pago: </b>' . $gim->acepta_mp. '"'; */
+                    /* $criteria = new CDbCriteria;
+                     $criteria->condition = '';
+                     $criteria->params = array(':localidad' => $_POST['localidad'], ':deporte' => $_POST['deporte']);
+                     $gimnasio = FichaInstitucion:: model()->findAll($criteria); */
+
+
+                    else {
+                        $locations = $locations . ',["<u><center><b>' . $gim->nombre . '</center></b></u><br>' . ' <b>Dirección: </b> ' . $gim->direccion . '<br>' . ' <b>Teléfono: </b>' . $gim->telfijo . '<br>' . '<b> Mercado Pago: </b>' . $gim->acepta_mp . '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
+                    }
+                }
             }
 
             if ($gimnasio == null) {
