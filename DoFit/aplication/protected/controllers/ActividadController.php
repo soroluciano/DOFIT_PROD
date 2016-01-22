@@ -190,10 +190,10 @@ class ActividadController extends Controller
                     $gim->acepta_mp = 'No';
                 }
                 if($locations == ""){
-                    $locations = $locations . '["Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . ' Acepta Mercado Pago: ' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
+                    $locations = $locations . '["<u><center><b>' . $gim->nombre . '</center></b></u><br>'.' <b>Dirección: </b>' . $gim->direccion . '<br>'.' <b>Teléfono: </b>' . $gim->telfijo . '<br>'.'<b> Mercado Pago: </b>' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
                 }
                 else{
-                    $locations = $locations . ',["Gimnasio: ' . $gim->nombre . ' Dirección: ' . $gim->direccion . ' Telefono: ' . $gim->telfijo . ' Acepta Mercado Pago: ' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
+                    $locations = $locations . ',["<u><center><b>' . $gim->nombre . '</center></b></u><br>'.' <b>Dirección: </b> ' . $gim->direccion . '<br>'.' <b>Teléfono: </b>' . $gim->telfijo . '<br>'.'<b> Mercado Pago: </b>' . $gim->acepta_mp. '"' . ',' . $gim->coordenada_x . ',' . $gim->coordenada_y . ',' . $i++ . ']';
                 }
 
             }
