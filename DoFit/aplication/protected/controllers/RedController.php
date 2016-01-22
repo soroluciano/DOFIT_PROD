@@ -52,25 +52,15 @@ class RedController  extends Controller{
     
     public function actionDeleteImagen(){
         $Us = Usuario::model()->findByPk(Yii::app()->user->id);
-        $perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
         $id = $_POST['id'];	
-        
+        $imagen = Imagen::model()->find('id_imagen=:id_imagen and id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario,':id_imagen'=>$id));
+       
         if($id != null && $id != ""){
-      
-          $foto = "foto".$id;
-          $perfilSocial->$foto =	new CDbExpression('NULL');
-          $perfilSocial->update();
+          $imagen->delete();
         }
     }
     
-    public function actionMostrarImagenes(){
-        $Us = Usuario::model()->findByPk(Yii::app()->user->id);
-        $perfilSocial = PerfilSocial::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-        $this->render('_imagenes',array(
-          'Us'=>$Us,
-          'perfilSocial'=>$perfilSocial
-        ));	
-    }
+
     
      
     public function actionLogout(){

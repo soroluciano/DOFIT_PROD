@@ -105,7 +105,8 @@ function getActividades($id){
 	<div id="respuesta_ajax">
 	<?php	if($usuario->id_perfil==2){ ?>
         <div class=" col-lg-8 col-md-8 col-sm-5 contenedor-espaciado row">
-			<div class="widget-area no-padding blank">
+<!--			<div class="widget-area no-padding blank">-->
+				<div class="widgt-area">
 				<div class="status-upload panel-shadow">
 					<form action="" method="post">
 						<textarea placeholder="¿Qué estas pensando?" id="input_mensaje"></textarea>

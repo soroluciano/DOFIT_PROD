@@ -143,6 +143,11 @@ padding: 0;
   position: relative;
   width: 100%;
 }
+
+
+
+@media screen and (max-width: 1600px) {
+
 .status-upload {
   background: none repeat scroll 0 0 #f5f5f5;
   -webkit-border-radius: 4px;
@@ -151,8 +156,66 @@ padding: 0;
   -o-border-radius: 4px;
   border-radius: 4px;
   float: left;
-  width: 54%;
+   width:54.2% !important;
 }
+
+}
+
+@media screen and (max-width: 800px) {
+
+.status-upload {
+  background: none repeat scroll 0 0 #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  width: 70% !important;
+}
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+.status-upload {
+  background: none repeat scroll 0 0 #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  width: 535px !important;
+}
+
+}
+
+@media screen and (max-width: 500px) {
+
+.status-upload {
+  background: none repeat scroll 0 0 #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  width: 405px !important;
+}
+  .input-group-addon{
+    width: 20%;
+    padding-left: 1%;
+    height: 40px;
+  }
+  .btn-comment{
+    padding-left: 50px;
+  }
+}
+
+
+
 .status-upload form {
   float: left;
   width: 100%;

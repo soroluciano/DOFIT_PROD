@@ -5,11 +5,10 @@
       foreach($resultSet as $row) {
           echo "
 		  <script>ocultarEdicionInicial();</script>
-      <div class='espacio-paneles size-panel'>
-	  <!--<div class='col-lg-2 col-md-2 col-sm-2'>
-		  
-	  </div>-->
-	  <div class='col-lg-8 col-md-5'>
+      
+      <!--<div class='espacio-paneles size-panel'>-->
+
+	  <div class='panel-sized'>
         <div class='panel panel-white post panel-shadow' id='coment_n_".$row['id_posteo']."'>
         
             <div class='post-heading'>
@@ -62,8 +61,8 @@
                 </ul>
              </div>
              </div>
-           
-		   </div>
+		   
+       <!--</div>-->
 		   </div>";
                        
       }
