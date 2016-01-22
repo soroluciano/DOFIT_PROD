@@ -172,7 +172,6 @@ $this->pageTitle=Yii::app()->name;
                                         return function() {
                                             infowindow.setContent(locations[i][0]);
                                             infowindow.open(map, marker);
-                                            alert("pepe");
                                         }
                                     })(marker, i));
 
