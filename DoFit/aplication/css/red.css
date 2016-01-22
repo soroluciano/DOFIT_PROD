@@ -21,7 +21,13 @@ div.cabecera-perfil{
 
 
 @media screen and (max-width: 1600px) {
-.cabecera-perfil{ width:90%;padding-bottom: 10px;}
+.cabecera-perfil{ width:97.5%;padding-bottom: 10px;}
+.panel-sized{
+  width:53.5%;
+  margin:1px;
+  float:left;
+  padding-left:30px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -31,12 +37,26 @@ div.cabecera-perfil{
 
 @media screen and (max-width: 700px) {
 .cabecera-perfil{ width:80%;padding-bottom: 10px;}
+.panel-sized{
+  width:85% !important;
+  float:left;
+  }
 }
 
 @media screen and (max-width: 500px) {
-.cabecera-perfil{ width:80%;padding-bottom: 10px;height: 130px;}
+.cabecera-perfil{ width:90%;padding-bottom: 10px;height: 130px;}
+.panel-sized{
+  width:95% !important;
+
+  }
 }
 
+
+.widgt-area{
+  padding-top:10px;
+  padding-right:10px;
+  display:inherit;
+}
 
 
 /*@media screen and (min-width: 1200px) {
@@ -172,27 +192,65 @@ div.newposts{
     float: right;
 }
 
-.propaganda-muro-1{
-    width: 432px;
-    height: 600px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
-    background-color: white;
-    position:absolute;
-    z-index: 1;
-    left: 616px;
+
+@media screen and (max-width: 1600px) {
+
+  .propaganda-muro-1{
+      width: 432px;
+      height: 600px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+      background-color: white;
+      position:absolute;
+      z-index: 1;
+      left: 616px;
+  }
+  
+  .propaganda-muro-2{
+      width: 432px;
+      height: 600px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+      background-color: white;
+      position:absolute;
+      z-index: 1;
+      left: 740px;
+      top: 246px;
+  }
+
 }
 
-.propaganda-muro-2{
-    width: 432px;
-    height: 600px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
-    background-color: white;
-    position:absolute;
-    z-index: 1;
-    left: 740px;
-    top: 246px;
+@media screen and (max-width: 800px) {
+
+  .propaganda-muro-1{
+     display:none !important;
+  }
+  .propaganda-muro-2{
+    display:none !important;
+  }
+
 }
 
+
+@media screen and (max-width: 700px) {
+  .propaganda-muro-1{
+     display:none !important;
+  }
+  .propaganda-muro-2{
+    display:none !important;
+  }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .propaganda-muro-1{
+     display:none !important;
+  }
+  .propaganda-muro-2{
+    display:none !important;
+  }
+
+}
 
 .size-panel{
     width: 961px;
@@ -246,11 +304,40 @@ div.newposts{
   margin-top: 500px;
 }
 
-.container_gallery{
-    margin: 30px;
-    background-color:white;
-    height: 900px;
+.modal.fade.in{
+  margin-top: 100px;
 }
 
 
+.container_gallery{
+    margin: 30px;
+    background-color:white;
+    height: 900px;  
+}
 
+
+.img_class{
+  padding:3px; 
+  
+}
+
+#img-seccion{
+  padding-left: 30px;
+  background-color: white;
+}
+/*@media screen and (max-width: 1600px) {*/
+#seccion_imagenes{
+    background-color: white;
+    padding-left:1px;
+    padding-right:1px;
+    padding-top:1px;
+    margin-top:5px;
+/*    width:1052px;*/
+    margin-left:30px;
+}
+/*}*/
+/*  @media screen and (max-width: 1600px) {
+  .img_class{
+      width:245px;
+  }
+}*/

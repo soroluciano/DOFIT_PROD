@@ -157,6 +157,8 @@
                      setTimeout(function(){
                         saved=false;
                         closeModal();
+                        resetUploader();
+                     
                         }, 2000
                      );
                      
@@ -172,7 +174,10 @@
         });
     })
     
-    
+    function resetUploader(){
+      $(".showImage").html("");
+      
+    }
     
     function op1() {
       debugger;
@@ -204,7 +209,7 @@
          //$('.modal-backdrop').removeClass('in');
          $('.modal-backdrop').remove();
        //  $('#FORMULARIO-REGISTRO').modal()
-       galeria();
+           mostrarImagenes();
      
    }
    
@@ -218,7 +223,7 @@
       success:function(response){
          debugger;
         var respuesta = mostrarImagenes();
-         $('#imagenes').html(respuesta);
+         $('.imagenes').html(respuesta);
       },
       error: function(e){        
       }
@@ -226,14 +231,13 @@
    }
    
    function mostrarImagenes() {
-      debugger;$('#respuesta_ajax').html(response);
-      var retVal;
+
       $.ajax({
-      url: baseurl+'/red/mostrarImagenes',  
+      url: baseurl+'/galeria/mostrarImagenes',  
       type: 'POST',
       data: {},
       success:function(response){
-            galeria();
+            $('.imagenes').html(response);
       },
       error: function(e){
          alert(e);

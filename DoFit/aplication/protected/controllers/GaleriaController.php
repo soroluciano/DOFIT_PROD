@@ -24,7 +24,9 @@ class GaleriaController extends Controller
       $this->render('_amigo',array('id'=>$id));
     } 
 
-
+      public function actionMostrarImagenes(){
+        $this->render('_imagenes');	
+    }
 
   
 }

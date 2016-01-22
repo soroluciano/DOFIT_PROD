@@ -1,20 +1,16 @@
 <div id="seccion_imagenes">
-			<div class="text-left grey_color"><h1><span class="glyphicon glyphicon-camera"></span><?php echo "Mis Im&aacute;genes"; ?></h1>
+			<div id="img-seccion">
+				<h1>Mis Im&aacute;genes</h1>
 				
 				<?php
-				//if($perfilSocial->foto2!=null && $perfilSocial->foto3!=null 
-				//&&$perfilSocial->foto4!=null && $perfilSocial->foto5!=null &&
-				//$perfilSocial->foto6!=null){
 					echo "<button type='button' id='btnNuevo' title='Para subir una nueva imagen borre alguna de las existentes' class='btn btn-primary right btn-lg' data-toggle='modal' data-target='#FORMULARIO-REGISTRO' data-whatever'@getbootstrap'>Nueva Foto</button>";
-				//}else{
-				//	echo "<button type='button' title='Subir nueva Imagen' id='btnNuevo' class='btn btn-primary right btn-lg' data-toggle='modal' onclick='showModal();' data-target='#FORMULARIO-REGISTRO' data-whatever='@getbootstrap'>Nueva Foto</button>";	
-				//}
 				?>
+	
 			</div>
 			
 			<div class="imagenes">
 						
-						<?php $this->renderPartial('_imagenes', array('perfilSocial'=>$perfil)); ?>
+						<?php $this->renderPartial('_imagenes'); ?>
 						
 			</div>
 							

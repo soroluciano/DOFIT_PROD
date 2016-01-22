@@ -108,6 +108,9 @@ ul.c-controls li a:hover {
 }
 
 
+
+
+@media screen and (max-width: 1600px) {
 .propaganda-muro-3{
     width: 432px;
     height: 600px;
@@ -117,12 +120,6 @@ ul.c-controls li a:hover {
     z-index: 1;
     right: 17%;
     top: 35%;
-}
-
-@media screen and (max-width: 990px) {
-    .propaganda-muro-3{
-        display: none !important;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -137,6 +134,58 @@ ul.c-controls li a:hover {
         top: 34%;
     }
 }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .propaganda-muro-3{
+      display: none !important;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+
+    .propaganda-muro-3{
+      display: none !important;
+    }
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .propaganda-muro-3{
+      display: none !important;
+    }
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 990px) {
+    .propaganda-muro-3{
+        display: none !important;
+    }
+}
+
+
+
+
+
 
 
 .filter{

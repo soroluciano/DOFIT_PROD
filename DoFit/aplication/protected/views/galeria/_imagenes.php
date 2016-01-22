@@ -1,10 +1,24 @@
 
-<h1>hols</h1>
+<?php
+
+        $usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+        $imagenes = Yii::app()->db->createCommand("select * from imagen where id_usuario = ".$usuario->id_usuario )->queryAll(); 
+        
+        
+
+?>
+
 <div class="container_gallery">
 	<div class="row">
-        <div class="col-md-3 col-sm-4 col-xs-6 img_class" ><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
-        <div class="col-md-3 col-sm-4 col-xs-6 img_class"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
-        <div class="col-md-3 col-sm-4 col-xs-6 img_class"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
-        <div class="col-md-3 col-sm-4 col-xs-6 img_class"><img class="img-responsive" src="http://th03.deviantart.net/fs70/200H/f/2010/256/0/9/painting_of_nature_by_dhikagraph-d2ynalq.jpg" /></div>
+    
+    <?php
+      foreach( $imagenes as $img){
+      
+      echo "<div class='col-md-3 col-sm-4 col-xs-6 img_class' ><img class='img-responsive' src='".Yii::app()->request->baseUrl."/uploads/".$img["nombre"]."' /></div>";
+     
+      }
+    ?>
+
+  
   </div>
 </div>
