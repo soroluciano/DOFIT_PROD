@@ -12,7 +12,6 @@ div{
 div.cabecera-perfil{
     background-color:white;
     color:black;
-/*    width:760px;*/
     height: 120px;
     text-align: left;
     box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
@@ -21,7 +20,9 @@ div.cabecera-perfil{
 
 
 @media screen and (max-width: 1600px) {
-.cabecera-perfil{ width:97.5%;padding-bottom: 10px;}
+.cabecera-perfil{
+    width:88.5%;padding-bottom: 10px;
+}
 .panel-sized{
   width:53.5%;
   margin:1px;

@@ -1,0 +1,9 @@
+@media screen and (max-width: 1600px) {
+.cabecera-perfil{ width:97.5%;padding-bottom: 10px;}
+.panel-sized{
+  width:53.5%;
+  margin:1px;
+  float:left;
+  padding-left:30px;
+  }
+}

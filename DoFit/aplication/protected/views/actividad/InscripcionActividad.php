@@ -30,7 +30,7 @@ $this->pageTitle=Yii::app()->name;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="../site/LoginInstitucion"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
+            <a href="../"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
             <a href="../" class="navbar-brand"></a>
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
