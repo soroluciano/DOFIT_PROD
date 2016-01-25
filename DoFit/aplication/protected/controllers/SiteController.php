@@ -75,8 +75,7 @@ class SiteController extends Controller
     public function actionError()
     {
 
-                $this->render('error', $error);
-
+      $this->render('error', $error);
     }
 
 

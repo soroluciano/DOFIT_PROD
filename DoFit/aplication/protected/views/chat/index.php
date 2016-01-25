@@ -1,7 +1,4 @@
 <html>
-<head>
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/chat.css"></link>
-</head>
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -23,8 +20,9 @@
 	                                  //Es un usuario logueado.
 	                                  $Us = Usuario::model()->findByPk(Yii::app()->user->id); 
 	                                 $ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-                                    }
-								  echo $ficha->nombre."&nbsp".$ficha->apellido; ?></a></li>
+								  echo $ficha->nombre."&nbsp".$ficha->apellido;
+								  
+								} ?></a></li>
                 <li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
             </ul>
         </nav>
@@ -130,7 +128,7 @@
                                         $idprofant[0] = 0;
                                         foreach($profesor_institucion as $prof_ins){
                                             $criteria = new CDbCriteria;
-                                            $criteria->condition = 'id_institucion =:idinstitucion AND id_usuario !=:idusuario AND :idestado';
+                                            $criteria->condition = 'id_institucion =:idinstitucion AND id_usuario !=:idusuario AND :idestado = 1';
                                             $criteria->params = array(':idinstitucion'=>$prof_ins->id_institucion,':idusuario'=>Yii::app()->user->id,':idestado'=>1);
                                             $profesores = ProfesorInstitucion::model()->findAll($criteria);
                                             if($profesores != NULL){
