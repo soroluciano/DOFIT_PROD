@@ -18,16 +18,13 @@ if(!Yii::app()->user->isGuest){
   }
 
 
-
-
-
-
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/perfil.js');
 $cs->registerScriptFile($baseUrl.'/js/muroprofesor.js');
 $cs->registerScriptFile($baseUrl.'/js/red.js');
 $cs->registerScriptFile($baseUrl.'/js/contactos.js');
+$cs->registerScriptFile($baseUrl.'/js/galeria.js');
 $cs->registerScriptFile("http://js.pusherapp.com/1.9/pusher.min.js");
 
 
@@ -112,6 +109,8 @@ function getActividades($id){
 						<?php $this->renderPartial('galeria',array('perfil'=>$perfil)); ?>
     </div>
     
+	</div>
+	
 </div>
 
 

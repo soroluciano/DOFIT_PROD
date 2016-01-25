@@ -27,6 +27,9 @@ class GaleriaController extends Controller
       public function actionMostrarImagenes(){
         $this->render('_imagenes');	
     }
-
+    
+   
+    
+    
   
 }
