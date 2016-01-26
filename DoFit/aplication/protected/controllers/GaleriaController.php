@@ -28,8 +28,42 @@ class GaleriaController extends Controller
         $this->render('_imagenes');	
     }
     
-   
-    
-    
-  
-}
+	public function actionGetPage(){
+		$page = $_POST['page'];
+		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+        $imagenes = Yii::app()->db->createCommand("select * from imagen where id_usuario = ".$usuario->id_usuario." limit ".$page.",8" )->queryAll(); 
+		 $mensaje="";
+          foreach($imagenes as $img){
+				$mensaje.= "<div class='col-md-3 col-sm-4 col-xs-6 img_class' ><img class='img-responsive' style='overflow:hidden;width=250px;height:250px' src='".Yii::app()->request->baseUrl."/uploads/".$img["nombre"]."' /></div>";
+          }
+		  echo $mensaje;
+		}
+		
+	public function actionGetLinks(){
+		$page = $_POST['page'];
+		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
+        $imagenes = Yii::app()->db->createCommand("select * from imagen where id_usuario = ".$usuario->id_usuario )->queryAll(); 
+        $count = count ($imagenes);
+		$max = 8;
+		$paginas = ceil ($count/$max);
+		$resultado = "";
+		$j = 0;
+		for($i=0; $i<$paginas; $i++){	
+		  $j = $i+1;
+		  if($page == $i){
+			$resultado.= "<li class='active'><a onclick='getPage(".$i.")'>".$j."</a></li>";
+		  	
+		  }else{
+				$resultado.= "<li class><a onclick='getPage(".$i.")'>".$j."</a></li>";
+		  
+		  }
+		  $j = 0;
+		
+		}
+		$res = "<ul class='pagination'>".$resultado."</ul>";
+		echo $res;
+		
+   }	
+		
+}	
+		

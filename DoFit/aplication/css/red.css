@@ -302,11 +302,16 @@ div.newposts{
 }
 
 .modal.fade{
-  margin-top: 500px;
+/*  margin-top: 500px;*/
+  width:1px;
+  height: 1px;
 }
 
 .modal.fade.in{
   margin-top: 100px;
+  width:50%;
+  height:50%;
+  margin-left:25%;
 }
 
 
