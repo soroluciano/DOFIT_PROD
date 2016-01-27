@@ -1,70 +1,50 @@
-<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="../../"><img class="navbar-brand-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_blanco.png" alt="First slide"></a>
-            <a href="../" class="navbar-brand"></a>
-        </div>
-        <nav id="bs-navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="../getting-started/"></a>
-                </li>
-                <li>
-                    <a href="../css/"></a>
-                </li>
-                <li>
-                    <a href="../components/"></a>
-                </li>
-                <li>
-                    <a href="../javascript/"></a>
-                </li>
-                <li>
-                    <a href="../customize/"></a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../../">Principal</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div class="form">
-    <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- <p class="note">Campos con <span class="required">*</span> son requeridos.</p>  -->
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class="bs-docs-featurette-title">Recuperar contraseña</h2>
-                <br>
-                <div class="form-group">
-                    <div> Ingrese la contraseña que desea establecer para su cuenta</div>
-                    <br/>
-                    <?php $email = $_GET['email'];?>
-                    <form action="">
-                        <input type="password" id="pass" name="pass" class="form-control" placeholder="Contraseña"></input>
-                        <input type="hidden" id="email" value="<?php echo $email?>"></input>
-                        <br>
-                        <br>
-                        <input type="button" value="Enviar" id="recuperarpass" name="recpass" class="btn btn-primary"></input>
-                    </form>
-                    <br/>
+<html>
+<style type="text/css">
+    body {
+        background: url(../../img/28.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<body>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><a href="../site/login">&times;</a></span></button>
+                <h4 class="modal-title">Recuperá tu contraseña</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <br/>
+                            <div> Ingrese la contraseña que desea establecer para su cuenta</div>
+                            <?php $email = $_GET['email'];?>
+                            <br>
+                            <div class="form-group">
+                                <form action="">
+                                    <input type="password" id="pass" name="pass" class="form-control" placeholder="Contraseña"></input>
+                                    <input type="hidden" id="email" value="<?php echo $email?>"></input>
+                                    <br>
+                                    <input type="button" value="Enviar" id="recuperarpass" name="recpass" class="btn btn-primary"></input>
+                                </form>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <input type="button"  value="Volver" class="btn btn-primary" id="volver" name="volver"></input>
+            </div>
         </div>
-        <?php
-        echo "<div class='modal fade'  id='mensajepassblanco' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+    </div>
+</div>
+<?php
+echo "<div class='modal fade'  id='mensajepassblanco' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 		  <div class='modal-dialog' role='document'>
 			 <div class='modal-content'>
 			   <div class='modal-header'>
@@ -81,9 +61,9 @@
 		  </div>
 		</div>
 	  </div>";
-        ?>
-        <?php
-        echo "<div class='modal fade'  id='mensajelongerronea' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+?>
+<?php
+echo "<div class='modal fade'  id='mensajelongerronea' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 		  <div class='modal-dialog' role='document'>
 			 <div class='modal-content'>
 			   <div class='modal-header'>
@@ -100,9 +80,9 @@
 		  </div>
 		</div>
 	  </div>";
-        ?>
-        <?php
-        echo "<div class='modal fade'  id='mensajeexpregerronea' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+?>
+<?php
+echo "<div class='modal fade'  id='mensajeexpregerronea' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 		  <div class='modal-dialog' role='document'>
 			 <div class='modal-content'>
 			   <div class='modal-header'>
@@ -119,9 +99,9 @@
 		  </div>
 		</div>
 	  </div>";
-        ?>
-        <?php
-        echo "<div class='modal fade'  id='mensajepassok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+?>
+<?php
+echo "<div class='modal fade'  id='mensajepassok' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 		  <div class='modal-dialog' role='document'>
 			 <div class='modal-content'>
 			   <div class='modal-header'>
@@ -138,9 +118,21 @@
 		  </div>
 		</div>
 	  </div>";
-        ?>
-    </div>
-</div>
+?>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#myModal').modal('show');
+    });
+</script>
+
+<script type="text/javascript">
+    $("#volver").on("click",function(){
+        location.href="../../";
+    });
+</script>
+
 <script type="text/javascript">
     $("#recuperarpass").on("click",function(){
         var pass = $('#pass').val();
