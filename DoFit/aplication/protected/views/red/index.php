@@ -90,7 +90,7 @@ function getActividades($id){
 
 
 
-<?php $this->renderPartial('_menu');?>
+<?php $this->renderPartial('_menuNew');?>
 
 <div class="container marketing">
 
