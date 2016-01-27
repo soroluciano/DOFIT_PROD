@@ -55,29 +55,36 @@ function getActividades($id){
 	$dia;
 	switch($act['id_dia']){
 		case 1:{
-			$dia="Lunes";	
+			$dia="Lunes";
+            break;			
 		}
 		case 2:{
 			$dia="Martes";
+			break;
 		}
 			case 3:{
 			$dia="Miercoles";
+			break;
 		}
 		case 4:{
-			$dia="Jueves";		
+			$dia="Jueves";
+            break; 			
 		}
 		case 5:{
 			$dia="Viernes";
+			break;
 		}
 		case 6:{
 			$dia="Sabado";
+			break;
 		}
 		case 7:{
 			$dia="Domingo";
+			break;
 		}
 		
 	}
-
+    $act['minutos'] = ($act['minutos'] == '0' ? '0'.$act['minutos'] : $act['minutos']);
 	$respuesta.="<option id='".$act['id_actividad']."'><a href='#'>".$act['deporte']."-".$act['nombre']."-".$dia."(".$act['hora'].":".$act['minutos']." hs".")</a></li>";
   }
 	$respuesta.="</select>";
