@@ -61,6 +61,7 @@ echo "<div class='modal fade'  id='mensajemailblanco' tabindex='-1' role='dialog
 		        </div>
 		    </div>
 	    </div>";
+		
 echo "<div class='modal fade'  id='mensajemailerror' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 		    <div class='modal-dialog' role='document'>
 			    <div class='modal-content'>
@@ -77,6 +78,7 @@ echo "<div class='modal fade'  id='mensajemailerror' tabindex='-1' role='dialog'
 				</div>
 			</div>
 		</div>";
+		
 echo "<div class='modal fade'  id='mensajemailexitoso' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
 			<div class='modal-dialog' role='document'>
 			    <div class='modal-content'>
