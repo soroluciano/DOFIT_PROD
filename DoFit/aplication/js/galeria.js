@@ -22,6 +22,7 @@
     }
     
     function getPage(page){
+      debugger;
         $.ajax({
           url: baseurl+'/galeria/getPage', 
           type: 'POST',

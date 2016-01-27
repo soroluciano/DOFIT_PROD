@@ -31,7 +31,21 @@ class GaleriaController extends Controller
 	public function actionGetPage(){
 		$page = $_POST['page'];
 		$usuario = Usuario::model()->findByPk(Yii::app()->user->id);
-        $imagenes = Yii::app()->db->createCommand("select * from imagen where id_usuario = ".$usuario->id_usuario." limit ".$page.",8" )->queryAll(); 
+    $limita = "";
+    $limitb = "";
+   
+   if($page!=0){
+    $limita = ($limita+1)*8; 
+    $limitb = $limita*2;
+   }else{
+    $limita = $page;
+    $limitb = 8;
+   }
+   
+   
+    
+
+    $imagenes = Yii::app()->db->createCommand("select * from imagen where id_usuario = ".$usuario->id_usuario." limit ".$limita.",".$limitb."")->queryAll(); 
 		 $mensaje="";
           foreach($imagenes as $img){
 				$mensaje.= "<div class='col-md-3 col-sm-4 col-xs-6 img_class' ><img class='img-responsive' style='overflow:hidden;width=250px;height:250px' src='".Yii::app()->request->baseUrl."/uploads/".$img["nombre"]."' /></div>";

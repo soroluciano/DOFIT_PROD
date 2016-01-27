@@ -16,3 +16,19 @@
 }
 
 
+
+	#galeria-images{
+    width:auto;
+    height: auto;
+    float:left;
+  }
+    
+		
+	#menu-links{
+    margin-top:15px;
+    float: left;
+  }
+		
+    #container_gallery{
+      height: auto;
+    }

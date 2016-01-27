@@ -318,7 +318,7 @@ div.newposts{
 .container_gallery{
     margin: 30px;
     background-color:white;
-    height: 900px;  
+    height: auto;  
 }
 
 
@@ -331,6 +331,9 @@ div.newposts{
   padding-left: 30px;
   background-color: white;
 }
+#respuesta_ajax{
+  height: auto;
+}
 /*@media screen and (max-width: 1600px) {*/
 #seccion_imagenes{
     background-color: white;
@@ -340,6 +343,7 @@ div.newposts{
     margin-top:5px;
 /*    width:1052px;*/
     margin-left:30px;
+    height: auto;
 }
 /*}*/
 /*  @media screen and (max-width: 1600px) {
