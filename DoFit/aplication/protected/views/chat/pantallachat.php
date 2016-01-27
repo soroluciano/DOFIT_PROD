@@ -3,25 +3,46 @@
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/chat.js"></script>
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl;?>/css/chat.css"></link>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body {
+			background: url(../img/fondo1.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	</style>
 </head>
-<?php
-if(!Yii::app()->user->isGuest){
-	//Es un usuario logueado.
-	$Us = Usuario::model()->findByPk(Yii::app()->user->id);
-	$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
-}
-?>
-<style type="text/css">
-	body {
-		background: url(../img/fondo1.jpg) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-</style>
+<header class="navbar navbar-static-top bs-docs-nav" id="bloque" role="banner">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../chat/index" class="navbar-brand">Chat - Do Fit</a>
+		</div>
+		<nav id="bs-navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="">Bienvenido! <?php
+						if(!Yii::app()->user->isGuest){
+							//Es un usuario logueado.
+							$Us = Usuario::model()->findByPk(Yii::app()->user->id);
+							$ficha = FichaUsuario::model()->find('id_usuario=:id_usuario',array(':id_usuario'=>$Us->id_usuario));
+							echo $ficha->nombre."&nbsp".$ficha->apellido;
+
+						} ?></a></li>
+				<li><?php echo CHtml::link('Salir', array('site/logout')); ?></li>
+			</ul>
+		</nav>
+	</div>
+</header>
 <body>
-<?php  echo $ficha->nombre."&nbsp".$ficha->apellido; ?>
 <div class="container">
 	<form id="formChat" name="formChat">
 		<div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
@@ -64,7 +85,6 @@ if(!Yii::app()->user->isGuest){
 			</div>
 	</form>
 </div>
-
 <div class="btn-group dropup">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		<span class="glyphicon glyphicon-cog"></span>
@@ -129,4 +149,3 @@ if(!Yii::app()->user->isGuest){
 
 	});
 </script>
-
