@@ -5,12 +5,12 @@ Luciano
 -arreglar el css del buscador
 -modificar el buscador para que solo permita 2 personas
 
--poner el menu burguer
+
 -arreglar boton de mas posts en muro
 -agregar mas opciones o datos dentro de la cabecera
 -mejorar el css de la cabecera
 -agregar eliminacion de imagen y ampliacion
-
+-terminar la modificacion de perfil
 
 Si se llega con el tiempo
 -crear una tabla para imagenes del muro
@@ -19,6 +19,8 @@ Si se llega con el tiempo
 
 trabajando en :
 
--terminar la modificacion de perfil  26/01/2016
+-poner el menu burguer  26/01/2016
 
 Terminado
+
+paginacion de imagenes
