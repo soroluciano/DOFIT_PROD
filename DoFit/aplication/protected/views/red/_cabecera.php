@@ -1,31 +1,33 @@
-		<div class="cabecera-perfil">
+<div class="cabecera-perfil">
 		<?php if($perfil->fotoperfil){ ?>
 				<div class="profile_img">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfil->fotoperfil; ?>" alt="Generic placeholder image" width="80" height="80" class="img-circle">
-			<!--	<input type="button" value="Cambiar foto"/>-->
+				<img src="<?php echo Yii::app()->request->baseUrl;echo "/uploads/".$perfil->fotoperfil; ?>" alt="Generic placeholder image" class="img-circle img-profile">
 				</div>
 		<?php } else{ ?>
 				<div class="profile_img">
-				<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/profile_defect_picture.png"; ?>" alt="Generic placeholder image" width="80" height="80" class="img-circle profile_img">
-				<!--<input type="button" value="Cambiar foto"/>-->
+						<img src="<?php echo Yii::app()->request->baseUrl;echo "/images/profile_defect_picture.png"; ?>" alt="Generic placeholder image" width="60" height="60" class="img-circle img-profile">
 				</div>	
 		<?php } ?>
 
-				<div class="profile_info">
-					<span class="nombre"><?php echo $nombre." ".$apellido; ?></span>
-					<span>Profesor y deportista</span>
-					<span><a href="javascript:info();" >Edita tu perfil</a></span>
-				</div>
-				<div class='profile_friends_fotos'>
-						<ul>
-						<li><?php echo "60"?><a href='<?php echo Yii::app()->request->baseUrl;?>/contact/index' style="cursor:pointer;"> Contactos</a>. Contacta con ellos</li>		
-						<li><?php echo "60"?><a href='<?php echo Yii::app()->request->baseUrl;?>/galeria/index' style="cursor:pointer;"> .Imagenes</a></li>		
-						</ul>
-				</div>
-<!--				<div class='sports'>
-						<span class="enseno">Profesor en <?php // echo "10";?> deportes</span>		
-						<span class="hago">Alumno en <?php // echo "12";?> deportes</span>
-				</div>-->
-		</div>	<!-- fin cabecera perfil -->	
+		<div class="profile_info">	
+				<ul>
+						<li><span><?php echo $nombre." ".$apellido; ?></span></li>		
+						<li><span><a href="javascript:info();" >Edita tu perfil</a></span></li>		
+				</ul>
+		</div>
+		<div class='profile_publicaciones'>
+				<ul>
+						<li><a href='<?php echo Yii::app()->request->baseUrl;?>/contact/index' style="cursor:pointer;"><span class="glyphicon glyphicon-user red"></span>Contactos</a></li>		
+						<li><a href='<?php echo Yii::app()->request->baseUrl;?>/galeria/index' style="cursor:pointer;"><span class="glyphicon glyphicon-picture light-green"></span>Imagenes</a></li>		
+				</ul>
+		</ul>		
+		<div class='profile_friends_fotos'>
+				<ul>
+						<li><a href='<?php echo Yii::app()->request->baseUrl;?>/contact/index' style="cursor:pointer;"><span class="glyphicon glyphicon-user red"></span>Contactos</a></li>		
+						<li><a href='<?php echo Yii::app()->request->baseUrl;?>/galeria/index' style="cursor:pointer;"><span class="glyphicon glyphicon-picture light-green"></span>Imagenes</a></li>		
+				</ul>
+		</div>
+
+</div>	<!-- fin cabecera perfil -->	
        </div>
        <div>
