@@ -1,5 +1,6 @@
 Luciano 
 
+-tkm amigo ♥
 -crear un perfil que pueda verse desde la lista de compañeros.
 -enlazar el boton de mensaje al chat de montoto
 -arreglar el css del buscador
@@ -24,3 +25,18 @@ trabajando en :
 Terminado
 
 paginacion de imagenes
+
+
+
+Damian
+
+-Que un alumno de una vez por todas se pueda inscribir y dejar de hacer insert a mano
+
+
+
+Roberto Montoto
+
+-Arreglar actividades donde dicto (es decir no traer los gimnasios donde no hay actividades creadas)
+-Data table en el inicio de login institucion (aceptar profesores y aceptar alumnos)
+-Agregar datatable gimnasios a los que estoy adherido y en lista de espera
+-Traer el importe exacto de la actividad
