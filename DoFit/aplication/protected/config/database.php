@@ -3,10 +3,10 @@
 // This is the database connection configuration.
 return array(
 
-	'connectionString' => 'mysql:host=localhost;dbname=dofit',
+	'connectionString' => 'mysql:host=mysql.hostinger.com.ar;dbname=u985398542_dofit',
 	'emulatePrepare' => true,
-	'username' => 'root',
-	'password' => '',
+	'username' => 'u985398542_dofit',
+	'password' => 'passdofit123',
 	'charset' => 'utf8',
 
 );
